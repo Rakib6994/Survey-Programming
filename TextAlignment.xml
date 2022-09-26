@@ -1,0 +1,43 @@
+<radio 
+  label="D1"
+  builderHint="{&quot;rocochoName&quot;:&quot;radiogrid&quot;}"
+  shuffle="rows"
+  values="order">
+  <title>${this.label + ". " if showQID.r1 else ""}Listed below are some claims that can be made by a new treatment product based on the ingredients in this new product. How important are each of these claims in your decision to buy this new product?</title>
+  <comment>Please select any one response.</comment>
+  <row label="r1" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Assistant to improve sleep</p></row>
+  <row label="r2" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Relieve physical fatigue</p></row>
+  <row label="r3" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Assistant to antioxidant</p></row>
+  <row label="r4" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Assistant to improve memory</p></row>
+  <row label="r5" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Relieve the symptom of insomnia</p></row>
+  <row label="r6" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Relieve the symptom of dreaminess</p></row>
+  <row label="r7" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Relieve anxiety and become calm before sleep</p></row>
+  <row label="r8" cond="A1.r1 and A11hid.r1"><p style="text-align: center;">Helps to improve fatigue</p></row>
+  <row label="r9" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Helps to improve the quality of sleep</p></row>
+  <row label="r10" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Helps to relieve the tension from stress</p></row>
+  <row label="r11" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Used for difficulties in falling asleep</p></row>
+  <row label="r12" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Used for staying asleep</p></row>
+  <row label="r13" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Used for restful sleep</p></row>
+  <row label="r14" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Used for nervousness</p></row>
+  <row label="r15" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Used for state of tension</p></row>
+  <row label="r16" cond="A1.r2 and A11hid.r2"><p style="text-align: center;">Used for restlessness</p></row>
+  <row label="r17" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Relieve visual fatigue</p></row>
+  <row label="r18" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Relieve of dry eye syndrome</p></row>
+  <row label="r19" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Relieve of eye fatigue</p></row>
+  <row label="r20" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Protect the eyes from macula</p></row>
+  <row label="r21" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Improve visual acuity</p></row>
+  <row label="r22" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Improve to be clear and bright eyes</p></row>
+  <row label="r23" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Prevent diminution of vision</p></row>
+  <row label="r24" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Block blue light</p></row>
+  <row label="r25" cond="A1.r1 and A11hid.r3"><p style="text-align: center;">Reduce red eyes</p></row>
+  <row label="r26" cond="A1.r2 and A11hid.r3"><p style="text-align: center;">Helps to maintain eye health by keeping the macular pigment that can be reduced by aging.</p></row>
+  <row label="r27" cond="A1.r2 and A11hid.r3"><p style="text-align: center;">Helps to prevent hesperanopia and xerophthalmus by supporting the formation of rhodopsin.</p></row>
+  <row label="r28" cond="A1.r2 and A11hid.r3"><p style="text-align: center;">Helps to improve fatigue degree with the effect of antioxidation.</p></row>
+  <col label="c5" value="5">Very important</col>
+  <col label="c4" value="4">Somewhat important</col>
+  <col label="c3" value="3">Neither important nor unimportant</col>
+  <col label="c2" value="2">Somewhat unimportant</col>
+  <col label="c1" value="1">Very unimportant</col>
+</radio>
+
+<suspend/>

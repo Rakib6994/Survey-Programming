@@ -1,0 +1,8 @@
+<style label="autoatm1d" mode="after" name="respview.client.js" with="S_Gender,S_Ethnicity,ShoppingList" wrap="ready"><![CDATA[
+if($ (".radio .sq-atm1d-button").length){
+    $ ("#btn_continue").hide();
+  } 
+$ (document).on('click', '.radio .sq-atm1d-button', function() {
+  $ ("#btn_continue").click();
+})
+]]></style>

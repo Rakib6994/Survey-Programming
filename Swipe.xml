@@ -1,0 +1,43 @@
+<radio 
+  label="swipe_B"
+  rowCond="hidleastfill[row]"
+  rowShuffle="rotate"
+  shuffle="rows"
+  uses="swipelr.12">
+  <title>&amp;nbsp;</title>
+  <style name="page.head"><![CDATA[
+<style>
+.countdown {
+    display: none;
+}
+.swipelr-block{
+  height: 500px !important;
+}
+.swipelr-block {
+  text-align: center;
+}
+
+.swipelr-slider-item::after {
+  display:none
+  }
+</style>
+]]></style>
+  <row label="r1" alt="Australia's Own Barista Oat Iced Latte"><img src="[rel concept1.PNG]" /></row>
+  <row label="r2" alt="Australia's Own Plant Power Blends"><img src="[rel concept2.PNG]" /></row>
+  <row label="r3" alt="Australia's Own Plant Protein Smoothies"><img src="[rel concept3.PNG]" /></row>
+  <row label="r4" alt="Australia's Own Hazelnut Milk"><img src="[rel concept4.PNG]" /></row>
+  <row label="r5" alt="Australia's Own Walnut Milk"><img src="[rel concept5.PNG]" /></row>
+  <row label="r6" alt="Australia's Own Cashew Milk"><img src="[rel concept6.PNG]" /></row>
+  <row label="r7" alt="Australia's Own Original Oat Milk"><img src="[rel concept7.PNG]" /></row>
+  <row label="r8" alt="Australia's Own Organic Oat Milk"><img src="[rel concept8.PNG]" /></row>
+  <row label="r9" alt="Australia's Own a2 Pro Protein"><img src="[rel concept9.PNG]" /></row>
+  <row label="r10" alt="Australia's Own a2 Lactose Free Milk"><img src="[rel concept10final.PNG]" /></row>
+  <row label="r11" alt="Vitasoy Oat Milk"><img src="[rel concept11.PNG]" /></row>
+  <row label="r12" alt="Oatly Oat Milk"><img src="[rel concept12.PNG]" /></row>
+  <row label="r13" alt="So Good Oat Milk"><img src="[rel concept13.PNG]" /></row>
+  <row label="r14" alt="Pure Harvest Oat Milk"><img src="[rel concept14.PNG]" /></row>
+  <col label="c1" value="1">Not appealing</col>
+  <col label="c2" value="2">Appealing</col>
+</radio>
+
+<suspend/>

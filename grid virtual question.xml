@@ -1,0 +1,233 @@
+<exec>
+if Q1_cleaner_1.r1.c1:
+  Q1_virtual_cleaner.r1.val = 0
+
+if Q1_cleaner_1.r1.c2:
+  Q1_virtual_cleaner.r1.val = 1
+  
+  
+if Q1_cleaner_1.r2.c1:
+  Q1_virtual_cleaner.r2.val = 0
+
+if Q1_cleaner_1.r2.c2:
+  Q1_virtual_cleaner.r2.val = 1
+  
+  
+    
+if Q1_cleaner_1.r3.c1:
+  Q1_virtual_cleaner.r3.val = 0
+
+if Q1_cleaner_1.r3.c2:
+  Q1_virtual_cleaner.r3.val = 1
+  
+  
+  
+if Q1_cleaner_1.r4.c1:
+  Q1_virtual_cleaner.r4.val = 0
+
+if Q1_cleaner_1.r4.c2:
+  Q1_virtual_cleaner.r4.val = 1  
+ 
+ 
+if Q1_cleaner_1.r5.c1:
+  Q1_virtual_cleaner.r5.val = 0
+
+if Q1_cleaner_1.r5.c2:
+  Q1_virtual_cleaner.r5.val = 1  
+  
+  
+if Q1_cleaner_1.r6.c1:
+  Q1_virtual_cleaner.r6.val = 0
+
+if Q1_cleaner_1.r6.c2:
+  Q1_virtual_cleaner.r6.val = 1    
+  
+
+
+  
+  
+
+if Q1_cleaner_1.r7.c1:
+  Q1_virtual_cleaner.r7.val = 0
+
+if Q1_cleaner_1.r7.c2:
+  Q1_virtual_cleaner.r7.val = 1
+  
+  
+
+if Q1_cleaner_2.r8.c1:
+  Q1_virtual_cleaner.r8.val = 0
+if Q1_cleaner_2.r8.c2:
+  Q1_virtual_cleaner.r8.val = 1
+  
+
+if Q1_cleaner_2.r9.c1:
+  Q1_virtual_cleaner.r9.val = 0
+if Q1_cleaner_2.r9.c2:
+  Q1_virtual_cleaner.r9.val = 1  
+                   
+
+if Q1_cleaner_2.r10.c1:
+  Q1_virtual_cleaner.r10.val = 0
+if Q1_cleaner_2.r10.c2:
+  Q1_virtual_cleaner.r10.val = 1  
+                   
+if Q1_cleaner_2.r11.c1:
+  Q1_virtual_cleaner.r11.val = 0
+if Q1_cleaner_2.r11.c2:
+  Q1_virtual_cleaner.r11.val = 1  
+                   
+  
+if Q1_cleaner_2.r12.c1:
+  Q1_virtual_cleaner.r12.val = 0
+if Q1_cleaner_2.r12.c2:
+  Q1_virtual_cleaner.r12.val = 1  
+                   
+  
+if Q1_cleaner_2.r13.c1:
+  Q1_virtual_cleaner.r13.val = 0
+if Q1_cleaner_2.r13.c2:
+  Q1_virtual_cleaner.r13.val = 1  
+                   
+  
+if Q1_cleaner_2.r14.c1:
+  Q1_virtual_cleaner.r14.val = 0
+if Q1_cleaner_2.r14.c2:
+  Q1_virtual_cleaner.r14.val = 1  
+                   
+  
+if Q1_cleaner_3.r15.c1:
+  Q1_virtual_cleaner.r15.val = 0
+if Q1_cleaner_3.r15.c2:
+  Q1_virtual_cleaner.r15.val = 1  
+                   
+  
+  
+if Q1_cleaner_3.r16.c1:
+  Q1_virtual_cleaner.r16.val = 0
+if Q1_cleaner_3.r16.c2:
+  Q1_virtual_cleaner.r16.val = 1  
+                   
+  
+  
+if Q1_cleaner_3.r17.c1:
+  Q1_virtual_cleaner.r17.val = 0
+if Q1_cleaner_3.r17.c2:
+  Q1_virtual_cleaner.r17.val = 1  
+                   
+  
+  
+if Q1_cleaner_3.r18.c1:
+  Q1_virtual_cleaner.r18.val = 0
+if Q1_cleaner_3.r18.c2:
+  Q1_virtual_cleaner.r18.val = 1  
+                   
+  
+  
+if Q1_cleaner_3.r19.c1:
+  Q1_virtual_cleaner.r19.val = 0
+if Q1_cleaner_3.r19.c2:
+  Q1_virtual_cleaner.r19.val = 1  
+                   
+  
+  
+if Q1_cleaner_3.r20.c1:
+  Q1_virtual_cleaner.r20.val = 0
+if Q1_cleaner_3.r20.c2:
+  Q1_virtual_cleaner.r20.val = 1  
+                   
+  
+  
+if Q1_cleaner_3.r21.c1:
+  Q1_virtual_cleaner.r21.val = 0
+if Q1_cleaner_3.r21.c2:
+  Q1_virtual_cleaner.r21.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r22.c1:
+  Q1_virtual_cleaner.r22.val = 0
+if Q1_cleaner_4.r22.c2:
+  Q1_virtual_cleaner.r22.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r23.c1:
+  Q1_virtual_cleaner.r23.val = 0
+if Q1_cleaner_4.r23.c2:
+  Q1_virtual_cleaner.r23.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r24.c1:
+  Q1_virtual_cleaner.r24.val = 0
+if Q1_cleaner_4.r24.c2:
+  Q1_virtual_cleaner.r24.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r25.c1:
+  Q1_virtual_cleaner.r25.val = 0
+if Q1_cleaner_4.r25.c2:
+  Q1_virtual_cleaner.r25.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r26.c1:
+  Q1_virtual_cleaner.r26.val = 0
+if Q1_cleaner_4.r26.c2:
+  Q1_virtual_cleaner.r26.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r27.c1:
+  Q1_virtual_cleaner.r27.val = 0
+if Q1_cleaner_4.r27.c2:
+  Q1_virtual_cleaner.r27.val = 1  
+                   
+  
+  
+if Q1_cleaner_4.r28.c1:
+  Q1_virtual_cleaner.r28.val = 0
+if Q1_cleaner_4.r28.c2:
+  Q1_virtual_cleaner.r28.val = 1
+  </exec>
+
+  <radio 
+   label="Q1_virtual_cleaner"
+   optional="1"
+   where="execute,survey,report">
+    <title>Statement agreements!</title>
+    <row label="r1">More than 20% of my working time is spent cleaning and refilling hygiene dispensers</row>
+    <row label="r2">If dispensers were quicker and easier to refill, I would have more time for other cleaning tasks</row>
+    <row label="r3">Moving refill supplies for hygiene dispensers around the building takes too long</row>
+    <row label="r4">8 out of 10 times I open a dispenser to check it, I find I don't need to refill it</row>
+    <row label="r5">My manager doesn't know just how long I spend checking dispensers and refills</row>
+    <row label="r6">During my cleaning rounds I often come across dispensers that are empty</row>
+    <row label="r7">I often find that I am supposed to clean a room that have not been used since I last cleaned them</row>
+    <row label="r8">If dispensers could be completely filled at every cleaning visit, I would find fewer dispensers empty on my cleaning rounds</row>
+    <row label="r9">If I could easily put extra hand towels in the dispensers without them jamming, I could fill them less often</row>
+    <row label="r10">If towel dispensers were closer to the basins there would be less water on the floor and washrooms would look cleaner for longer</row>
+    <row label="r11">If the waste bin was closer to the exit door there would be less mess on the floor, which could cut complaints</row>
+    <row label="r12">I often have to leave some of my cleaning tasks to the next day</row>
+    <row label="r13">I often open dispensers and find that they are still nearly full</row>
+    <row label="r14">I feel concerned when I find a dispenser has run out before I was able to refill it</row>
+    <row label="r15">I would prefer to work in an office where I could more quickly react to urgent needs and avoid complaints</row>
+    <row label="r16">I would be happier if I could spend more time cleaning where it is really needed</row>
+    <row label="r17">If I only had to open the dispensers that actually needed refilling, I could have more time for other cleaning tasks</row>
+    <row label="r18">I open every dispenser to see if I can refill it even if there is a window on the side</row>
+    <row label="r19">Most people would do a better job if they received more recognition for their work</row>
+    <row label="r20">If I could be told when someone had left a mess, I could clean it up faster and avoid complaints</row>
+    <row label="r21">if I knew which rooms had been busiest it would be easier to know where cleaning was most needed</row>
+    <row label="r22">Cleaning rounds would be faster if I could tell which dispensers needed refilling, so I didn't need to open them all</row>
+    <row label="r23">In my ideal job there would be less admin/dispenser checks so I could more easily complete all my cleaning tasks</row>
+    <row label="r24">I could spend more time on other cleaning tasks if hygiene dispensers were quicker and easier to refill</row>
+    <row label="r25">I would be happier at work if I could get on with actual cleaning rather than moving boxes or dealing with dispensers for hand towel and soap</row>
+    <row label="r26">Carrying big boxes of refill supplies for hygiene dispensers to different storage rooms is difficult</row>
+    <row label="r27">Having many different keys for different dispensers slows down refilling, especially for people new to the facility</row>
+    <row label="r28">If I could easily put extra hand towels in the dispensers without them jamming, I could refill less often</row>
+    <col label="c1">Yes</col>
+    <col label="c2">No</col>
+  </radio>
+
+  <suspend/>

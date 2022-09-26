@@ -1,0 +1,21 @@
+
+        <exec>
+        looked_longer.val=0
+        
+for x in P_Duration.rows:
+     if (x.val gt 20000):
+        looked_longer.val=1
+        break;
+    </exec>
+    
+    
+  
+<radio
+  label="looked_longer"
+  where="execute,survey,report">
+  <title>If looked at any product longer than 20s!</title>
+  
+  <row label="r1">Did not look longer than 20s</row>
+<row label="r2">Looked longer than 20s</row>
+</radio>
+<suspend/>  

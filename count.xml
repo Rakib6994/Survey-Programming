@@ -1,0 +1,25 @@
+<checkbox 
+  label="S1"
+  optional="1">
+  <title>Question 1</title>
+  <comment>Select all that apply</comment>
+  <row label="r1">A</row>
+  <row label="r2">B</row>
+  <row label="r3">C</row>
+  <row label="r4">D</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="S2"
+  cond="(S1.count&gt;2)">
+  <title>Question2</title>
+  <comment>Select one</comment>
+  <row label="r1">A</row>
+  <row label="r2">B</row>
+  <row label="r3">C</row>
+  <row label="r4">D</row>
+</radio>
+
+<suspend/>

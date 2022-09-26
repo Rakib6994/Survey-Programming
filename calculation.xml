@@ -1,0 +1,49 @@
+<exec>
+val_q9=5000
+mainval=0
+val1=0
+val2=0
+
+if Q11.r1:
+   val1=val_q9*2
+   val2=0.05*val1
+   mainval= val1-val2
+
+elif Q11.r2:
+   val1=val_q9*3
+   val2=0.1*val1
+   mainval= val1-val2
+        
+elif Q11.r3:
+   val1=val_q9*4
+   val2=0.15*val1
+   mainval= val1-val2
+
+elif Q11.r4:
+   val1=val_q9*5
+   val2=0.2*val1
+   mainval= val1-val2
+
+elif Q11.r5:
+   val1=val_q9*6
+   val2=0.25*val1
+   mainval= val1-val2
+</exec>
+
+<suspend/>
+
+<exec>
+calculation.r1.val= mainval
+</exec>
+
+<suspend/>
+
+<float 
+  label="calculation"
+  size="7"
+  where="execute,survey,report">
+  <title>Calculation from Q11.</title>
+  <row label="r1"/>
+</float>
+
+<suspend/>

@@ -1,0 +1,10 @@
+  <samplesource list="42">
+    <title>PureProfile</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and (SC.r1 or (FlatLiner_A1.r1 or FlatLiner_B1.r1))" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/08742c49-0eb6-4604-aa14-795acc7bc305">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="terminated" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/fd34f17e-5cf2-4a73-a925-9c93b4f35ee1">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/819cac3b-7313-4b14-acb7-2c7b8f950400">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/b991a283-96c2-4c8c-8c1d-50f086fe9642">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>

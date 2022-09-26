@@ -1,0 +1,20 @@
+    <number 
+    label="D10_[loopvar: label]"
+    optional="0"
+    randomize="0"
+    size="3"
+    surveyDisplay="desktop">
+      <title><div align="center">[loopvar: concept]</div><br /><br />Based on this description and your own expectations on what you think it would cost, at what price would this product be for a <strong>[loopvar: pack_size]</strong></title>
+      <comment>Please enter a whole number for each.</comment>
+      <validate>
+if (D10_[loopvar: label].r2.val) &lt;= (D10_[loopvar: label].r1.val) or (D10_[loopvar: label].r3.val) &lt;= (D10_[loopvar: label].r2.val) or (D10_[loopvar: label].r4.val) &lt;= (D10_[loopvar: label].r3.val):
+    error("First value is less than Second value, Second value is less than Third value and Third value is less than Fourth value. Please check your input values.")
+      </validate>
+
+      <row label="r1">Too cheap that you would question the quality</row>
+      <row label="r2">Good value for money</row>
+      <row label="r3">Starting to get expensive but still worth buying</row>
+      <row label="r4">Too expensive and not worth buying</row>
+    </number>
+
+    <suspend/>

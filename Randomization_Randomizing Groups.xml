@@ -1,0 +1,33 @@
+<exec when="init">
+def group_rows( question, grouped_rows ):
+    first_item_index = None
+    shuffle_order = [row.index for row in question.rows.order]
+
+    for index, row in enumerate( shuffle_order ):
+        if question.rows[row].label in grouped_rows:
+            if first_item_index == None:
+                first_item_index = index
+            else:
+                first_item_index += 1
+                shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+
+    question.rows.order = shuffle_order
+</exec>
+
+<radio label="Q1" shuffle="rows" exec="group_rows(Q1, ['r5', 'r6', 'r7'])">
+    <title>Standard radio question</title>
+    <comment>Please choose one.</comment>
+    <row label="r1">r1</row>
+    <row label="r2">r2</row>
+    <row label="r3">r3</row>
+    <row label="r4">r4</row>
+    <row label="r5">r5</row>
+    <row label="r6">r6</row>
+    <row label="r7">r7</row>
+    <row label="r8">r8</row>
+</radio>
+
+
+
+
+Result: You can assert that your function is working correctly by verifying that each time the question is loaded, rows 5, 6, and 7 are randomized together.

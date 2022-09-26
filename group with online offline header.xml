@@ -1,0 +1,50 @@
+<radio 
+  label="B15"
+  grouping="cols"
+  randomize="0"
+  shuffle="rows,groups"
+  surveyDisplay="desktop">
+  <title>${this.label + ". " if showQID.r1 else ""}Where do you usually buy this treatment product?<br /><br />[pipe: B11hid]</title>
+  <comment>Please select one in each row.</comment>
+  <row label="r1" cond="A1.r1" groups="g1">Pharmacy mini apps</row>
+  <row label="r2" cond="A1.r1" groups="g1">E-commerce website (e.g. Taobao, Jingdong, Pingduoduo, Tmall, JD Health, Ali Health etc.)</row>
+  <row label="r3" cond="A1.r1" groups="g1">WeChat business</row>
+  <row label="r4" cond="A1.r1" groups="g1">O2O platform:Meituan（美团）, Elema(饿了吗）</row>
+  <row label="r5" cond="A1.r1" groups="g1" open="1" openSize="25" randomize="0">Other online stores (specify )</row>
+  <row label="r6" cond="A1.r1" groups="g2">Independent and/or retail pharmacy</row>
+  <row label="r7" cond="A1.r1 and (A2.r1 or A2.r2)" groups="g2">Modern Pharmacy (e.g. TongRen Tang, JinXiang, DingDang etc.)</row>
+  <row label="r8" cond="A1.r1 and (A2.r1 or A2.r2)" groups="g2">Modern Pharmacy (e.g. DenRen Tang, RongJI Tang etc.)</row>
+  <row label="r9" cond="A1.r1" groups="g2">Non-pharmacy store (beauty store, personal care store etc such as Watson's, Mannings)</row>
+  <row label="r10" cond="A1.r1" groups="g2">Supermarket</row>
+  <row label="r11" cond="A1.r1" groups="g2">Hospital or clinic I visited</row>
+  <row label="r12" cond="A1.r1" groups="g2">Direct sales (e.g. Amway)</row>
+  <row label="r13" cond="A1.r1" groups="g2" open="1" openSize="25" randomize="0">Others offline places (specify)</row>
+  <row label="r14" cond="A1.r2" groups="g3">SNS (facebook, instagram, café, community)</row>
+  <row label="r15" cond="A1.r2" groups="g3">Online live streaming (online live shopping)</row>
+  <row label="r16" cond="A1.r2" groups="g3">Hypermarket website (e.g. E-mart mall, Lotte mart mall etc.)</row>
+  <row label="r17" cond="A1.r2" groups="g3">Department store website (e.g. Shinsegae mall, Hyundai mall, Lotte mall etc.)</row>
+  <row label="r18" cond="A1.r2" groups="g3">Social commerce (e.g. Coupang, T-mon, Wemakeprice etc.)</row>
+  <row label="r19" cond="A1.r2" groups="g3">Manufacturer's online shopping mall</row>
+  <row label="r20" cond="A1.r2" groups="g3">Online open market (e.g. Naver shopping, 11st, Auction, G-market etc.)</row>
+  <row label="r21" cond="A1.r2" groups="g3">Homeshopping</row>
+  <row label="r22" cond="A1.r2" groups="g3">Overseas direct purchase website</row>
+  <row label="r23" cond="A1.r2" groups="g3" open="1" openSize="25" randomize="0">Other online stores (specify )</row>
+  <row label="r24" cond="A1.r2" groups="g4">Pharmacy</row>
+  <row label="r25" cond="A1.r2" groups="g4">Non-pharmacy store  (health &amp; beauty store such as Olive Young, etc.)  "</row>
+  <row label="r26" cond="A1.r2" groups="g4">Supermarket</row>
+  <row label="r27" cond="A1.r2" groups="g4">Hypermarket (e.g. E-mart, Home-plus, Lotte mart etc.)</row>
+  <row label="r28" cond="A1.r2" groups="g4">Costco/E-mart traders</row>
+  <row label="r29" cond="A1.r2" groups="g4">Department store (e.g. Shinsegae mall, Hyundai mall, Lotte mall etc.)</row>
+  <row label="r30" cond="A1.r2" groups="g4">Branded shop (GNC Store/ Junkwanjang store)</row>
+  <row label="r31" cond="A1.r2" groups="g4" open="1" openSize="25" randomize="0">Others offline places (specify)</row>
+  <group label="g1" builder:axis="row">Online channels</group>
+  <group label="g2" builder:axis="row">Offline channels</group>
+  <group label="g3" builder:axis="row">Online channels</group>
+  <group label="g4" builder:axis="row">Offline channels</group>
+  <col label="c1" cond="B11hid.r1">Used a prescription drug</col>
+  <col label="c2" cond="B11hid.r2">Used an OTC (over-the-counter) product</col>
+  <col label="c3" cond="B11hid.r3">Used a health supplement, vitamin or functional food</col>
+  <col label="c4" cond="B11hid.r4">Used a herbal treatment bought from a pharmacy/store/online</col>
+</radio>
+
+<suspend/>

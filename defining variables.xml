@@ -1,0 +1,5 @@
+<exec when="init">
+constantA = 0.1
+constantB = 0.2
+constantC = 0.3
+</exec>

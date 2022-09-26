@@ -1,0 +1,14 @@
+  <select 
+   label="S_GroceryShop"
+   randomize="0"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>How much of your personal cosmetics shopping do you, yourself, do?</title>
+    <choice label="r1"><span style="font-size: 10pt;" align="center">None of it<br /><img src="[rel Cart0.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r2"><span style="font-size: 10pt;" align="center">Less than half of it<br /><img src="[rel Cart1.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r3"><span style="font-size: 10pt;" align="center">Half of it or more<br /><img src="[rel Cart3.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r4"><span style="font-size: 10pt;" align="center">All of it<br /><img src="[rel Cart4.png]" constrain="true" title="image" height="50" /></span></choice>
+  </select>
+  <suspend/>
+  <term label="TERM_Shopping" cond="(S_GroceryShop.r1 or S_GroceryShop.r2)">Household Grocery Shopping</term>
+   <suspend/>

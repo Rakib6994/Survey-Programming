@@ -1,0 +1,179 @@
+<checkbox 
+  label="Q_PurchaseDecision_Impulse"
+  cond="Q_PurchaseDecision.r2"
+  atleast="1"
+  atm1d:large_buttonAlign="center"
+  atm1d:showInput="0"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>What made you decide to purchase <b>[pipe: type_hidlist]</b> <u><em>while you were shopping?</em></u></title>
+  <comment>Select all that apply.</comment>
+  <row label="r1">On good deal/price/special offer (two-fer, BOGO, etc.)</row>
+  <row label="r2">my usual brand of choice</row>
+  <row label="r3">A brand that I like</row>
+  <row label="r4">Food pairings (goes well with chicken, cheese, etc.)</row>
+  <row label="r5">Country of origin (US, Germany, Belgium, etc.)</row>
+  <row label="r6">Ingredients (gluten reduced, organic, etc.)</row>
+  <row label="r7">Tasting notes (dry, light, smooth, crisp, hoppy, etc.)</row>
+  <row label="r8">Packaging caught my attention</row>
+  <row label="r9">Flavor (Fruity, etc.)</row>
+  <row label="r10">Container Type (can, bottle, etc.)</row>
+  <row label="r11">Size of product (Number of Ounces or Number of units)</row>
+  <row label="r12">Health specifications (Calories/Carbs/Sugar)</row>
+  <row label="r13">Alcohol type(Wine/Beer/Liquor)</row>
+  <row label="r14">Good price/value</row>
+  <row label="r15">Wanted to try something new</row>
+  <row label="r16">Level of alcohol content (ABV)</row>
+  <row label="r17">Popular/Trendy</row>
+  <row label="r18">Limited-edition product</row>
+  <row label="r19">Fits my mood</row>
+  <row label="r20">Shopping list item</row>
+  <row label="r21">Received a text message request while I was shopping</row>
+  <row label="r22">Highly recommended</row>
+  <row label="r23">I have had it before and liked it</row>
+  <row label="r24" cond="online_instore.r2">Saw it on display</row>
+  <row label="r25" cond="online_instore.r2">Staff Recommendation</row>
+  <row label="r26" cond="online_instore.r2">Could quickly grab and go</row>
+  <row label="r27" cond="online_instore.r1">Photos of the product</row>
+  <row label="r28" cond="online_instore.r1">Good reviews/high ratings</row>
+  <row label="r29" cond="online_instore.r1">Had a "buy-now" button on social media</row>
+  <row label="r30" cond="online_instore.r1">recommended to add to cart/'You might also like'/'Other people also bought'</row>
+  <row label="r31" cond="online_instore.r1">advertisement/banner online</row>
+  <row label="r32" cond="online_instore.r1">can be delivered</row>
+  <row label="r33" randomize="0">Other</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+if Q_PurchaseDecision_Impulse.count==1:
+  Q_PurchaseDecision_Impulse_2.minRanks=1
+if Q_PurchaseDecision_Impulse.count==2:
+  Q_PurchaseDecision_Impulse_2.minRanks=2
+if Q_PurchaseDecision_Impulse.count==3:
+  Q_PurchaseDecision_Impulse_2.minRanks=3
+if Q_PurchaseDecision_Impulse.count==4:
+  Q_PurchaseDecision_Impulse_2.minRanks=4
+if Q_PurchaseDecision_Impulse.count==5:
+  Q_PurchaseDecision_Impulse_2.minRanks=5
+if Q_PurchaseDecision_Impulse.count==6:
+  Q_PurchaseDecision_Impulse_2.minRanks=6
+if Q_PurchaseDecision_Impulse.count==7:
+  Q_PurchaseDecision_Impulse_2.minRanks=7
+if Q_PurchaseDecision_Impulse.count==8:
+  Q_PurchaseDecision_Impulse_2.minRanks=8
+if Q_PurchaseDecision_Impulse.count==9:
+  Q_PurchaseDecision_Impulse_2.minRanks=9
+if Q_PurchaseDecision_Impulse.count==10:
+  Q_PurchaseDecision_Impulse_2.minRanks=10
+if Q_PurchaseDecision_Impulse.count==11:
+  Q_PurchaseDecision_Impulse_2.minRanks=11
+if Q_PurchaseDecision_Impulse.count==12:
+  Q_PurchaseDecision_Impulse_2.minRanks=12
+if Q_PurchaseDecision_Impulse.count==13:
+  Q_PurchaseDecision_Impulse_2.minRanks=13
+if Q_PurchaseDecision_Impulse.count==14:
+  Q_PurchaseDecision_Impulse_2.minRanks=14
+if Q_PurchaseDecision_Impulse.count==15:
+  Q_PurchaseDecision_Impulse_2.minRanks=15
+if Q_PurchaseDecision_Impulse.count==16:
+  Q_PurchaseDecision_Impulse_2.minRanks=16
+if Q_PurchaseDecision_Impulse.count==17:
+  Q_PurchaseDecision_Impulse_2.minRanks=17
+if Q_PurchaseDecision_Impulse.count==18:
+  Q_PurchaseDecision_Impulse_2.minRanks=18
+if Q_PurchaseDecision_Impulse.count==19:
+  Q_PurchaseDecision_Impulse_2.minRanks=19
+if Q_PurchaseDecision_Impulse.count==20:
+  Q_PurchaseDecision_Impulse_2.minRanks=20
+if Q_PurchaseDecision_Impulse.count==21:
+  Q_PurchaseDecision_Impulse_2.minRanks=21
+if Q_PurchaseDecision_Impulse.count==22:
+  Q_PurchaseDecision_Impulse_2.minRanks=22
+if Q_PurchaseDecision_Impulse.count==23:
+  Q_PurchaseDecision_Impulse_2.minRanks=23
+if Q_PurchaseDecision_Impulse.count==24:
+  Q_PurchaseDecision_Impulse_2.minRanks=24
+</exec>
+
+<suspend/>
+
+<select 
+  label="Q_PurchaseDecision_Impulse_2"
+  minRanks="1"
+  optional="1"
+  rowCond="Q_PurchaseDecision_Impulse[row.index]"
+  shuffle="rows"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>Please Rank these factors that made you decide to purchase <strong>[pipe: type_hidlist]</strong> <u><em>while you were shopping?</em></u></title>
+  <comment>Please Rank these factors from the most important to the least.</comment>
+  <row label="r1">On good deal/price/special offer (two-fer, BOGO, etc.)</row>
+  <row label="r2">my usual brand of choice</row>
+  <row label="r3">A brand that I like</row>
+  <row label="r4">Food pairings (goes well with chicken, cheese, etc.)</row>
+  <row label="r5">Country of origin (US, Germany, Belgium, etc.)</row>
+  <row label="r6">Ingredients (gluten reduced, organic, etc.)</row>
+  <row label="r7">Tasting notes (dry, light, smooth, crisp, hoppy, etc.)</row>
+  <row label="r8">Packaging caught my attention</row>
+  <row label="r9">Flavor (Fruity, etc.)</row>
+  <row label="r10">Container Type (can, bottle, etc.)</row>
+  <row label="r11">Size of product (Number of Ounces or Number of units)</row>
+  <row label="r12">Health specifications (Calories/Carbs/Sugar)</row>
+  <row label="r13">Alcohol type(Wine/Beer/Liquor)</row>
+  <row label="r14">Good price/value</row>
+  <row label="r15">Wanted to try something new</row>
+  <row label="r16">Level of alcohol content (ABV)</row>
+  <row label="r17">Popular/Trendy</row>
+  <row label="r18">Limited-edition product</row>
+  <row label="r19">Fits my mood</row>
+  <row label="r20">Shopping list item</row>
+  <row label="r21">Received a text message request while I was shopping</row>
+  <row label="r22">Highly recommended</row>
+  <row label="r23">I have had it before and liked it</row>
+  <row label="r24">Saw it on display</row>
+  <row label="r25">Staff Recommendation</row>
+  <row label="r26">Could quickly grab and go</row>
+  <row label="r27">Photos of the product</row>
+  <row label="r28">Good reviews/high ratings</row>
+  <row label="r29">Had a "buy-now" button on social media</row>
+  <row label="r30">recommended to add to cart/'You might also like'/'Other people also bought'</row>
+  <row label="r31">advertisement/banner online</row>
+  <row label="r32">can be delivered</row>
+  <row label="r33" randomize="0">Other</row>
+  <choice label="ch1" cond="Q_PurchaseDecision_Impulse.count ge 1">1 - Most Important</choice>
+  <choice label="ch2" cond="Q_PurchaseDecision_Impulse.count ge 2">2</choice>
+  <choice label="ch3" cond="Q_PurchaseDecision_Impulse.count ge 3">3</choice>
+  <choice label="ch4" cond="Q_PurchaseDecision_Impulse.count ge 4">4</choice>
+  <choice label="ch5" cond="Q_PurchaseDecision_Impulse.count ge 5">5</choice>
+  <choice label="ch6" cond="Q_PurchaseDecision_Impulse.count ge 6">6</choice>
+  <choice label="ch7" cond="Q_PurchaseDecision_Impulse.count ge 7">7</choice>
+  <choice label="ch8" cond="Q_PurchaseDecision_Impulse.count ge 8">8</choice>
+  <choice label="ch9" cond="Q_PurchaseDecision_Impulse.count ge 9">9</choice>
+  <choice label="ch10" cond="Q_PurchaseDecision_Impulse.count ge 10">10</choice>
+  <choice label="ch11" cond="Q_PurchaseDecision_Impulse.count ge 11">11</choice>
+  <choice label="ch12" cond="Q_PurchaseDecision_Impulse.count ge 12">12</choice>
+  <choice label="ch13" cond="Q_PurchaseDecision_Impulse.count ge 13">13</choice>
+  <choice label="ch14" cond="Q_PurchaseDecision_Impulse.count ge 14">14</choice>
+  <choice label="ch15" cond="Q_PurchaseDecision_Impulse.count ge 15">15</choice>
+  <choice label="ch16" cond="Q_PurchaseDecision_Impulse.count ge 16">16</choice>
+  <choice label="ch17" cond="Q_PurchaseDecision_Impulse.count ge 17">17</choice>
+  <choice label="ch18" cond="Q_PurchaseDecision_Impulse.count ge 18">18</choice>
+  <choice label="ch19" cond="Q_PurchaseDecision_Impulse.count ge 19">19</choice>
+  <choice label="ch20" cond="Q_PurchaseDecision_Impulse.count ge 20">20</choice>
+  <choice label="ch21" cond="Q_PurchaseDecision_Impulse.count ge 21">21</choice>
+  <choice label="ch22" cond="Q_PurchaseDecision_Impulse.count ge 22">22</choice>
+  <choice label="ch23" cond="Q_PurchaseDecision_Impulse.count ge 23">23</choice>
+  <choice label="ch24" cond="Q_PurchaseDecision_Impulse.count ge 24">24</choice>
+  <choice label="ch25" cond="Q_PurchaseDecision_Impulse.count ge 25">25</choice>
+  <choice label="ch26" cond="Q_PurchaseDecision_Impulse.count ge 26">26</choice>
+  <choice label="ch27" cond="Q_PurchaseDecision_Impulse.count ge 27">27</choice>
+  <choice label="ch28" cond="Q_PurchaseDecision_Impulse.count ge 28">28</choice>
+  <choice label="ch29" cond="Q_PurchaseDecision_Impulse.count ge 29">29</choice>
+  <choice label="ch30" cond="Q_PurchaseDecision_Impulse.count ge 30">30</choice>
+  <choice label="ch31" cond="Q_PurchaseDecision_Impulse.count ge 31">31</choice>
+  <choice label="ch32" cond="Q_PurchaseDecision_Impulse.count ge 32">32</choice>
+  <choice label="ch33" cond="Q_PurchaseDecision_Impulse.count ge 33">33 - Least Important</choice>
+</select>
+
+<suspend/>

@@ -1,0 +1,19 @@
+<exec>
+p.scf = timeSpent()   
+if p.scf lt 400:    
+  SC.val = 0  
+else:   
+  SC.val = 1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="SC"
+  where="execute,survey,report">
+  <title>Speeder checks</title>
+  <row label="r1" value="1">Speeder</row>
+  <row label="r2" value="2">Not Speeder</row>
+</radio>
+
+<suspend/>

@@ -1,0 +1,64 @@
+<exec when="init">
+def group_rows( question, grouped_rows ):
+    first_item_index = None
+    shuffle_order = [row.index for row in question.rows.order]
+
+    for index, row in enumerate( shuffle_order ):
+        if question.rows[row].label in grouped_rows:
+            if first_item_index == None:
+                first_item_index = index
+            else:
+                first_item_index += 1
+                shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+
+    question.rows.order = shuffle_order
+</exec>
+
+<radio 
+  label="A1"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>Please select your level of agreement or disagreement for the following statements.</title>
+  <comment>Please select one response for each statement.</comment>
+  <exec>
+group_rows(A1, ['r1','r2','r3','r4'])
+group_rows(A1, ['r5','r6','r7'])
+group_rows(A1, ['r8','r9','r10','r11'])
+group_rows(A1, ['r12','r13'])
+  </exec>
+
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <row label="r1">I struggle to breastfeed my baby</row>
+  <row label="r2">I feel like a failure as a mum feeding my baby with formula</row>
+  <row label="r3">I love the convenience and freedom that formula gives me as a mum</row>
+  <row label="r4">There are so many brands of formula on the market - it's hard to know what's best for my baby</row>
+  <row label="r5">I only buy organic formula for my baby</row>
+  <row label="r6">My baby has dietary requirements so I need to be very selective in which formula I buy</row>
+  <row label="r7">I'm not too fussed about the specific ingredients of the formula as long as my baby tolerates it</row>
+  <row label="r8">I do extensive research when it comes to which formula is best for my baby</row>
+  <row label="r9">I mainly rely on recommendations from friends / other mums when it comes to choosing formula</row>
+  <row label="r10">Advertising from formula brands has helped me choose a brand for my baby</row>
+  <row label="r11">I just stuck to the formula brand my baby was introduced to in the hospital</row>
+  <row label="r12">I'm happy to pay more for premium formula</row>
+  <row label="r13">I buy whatever formula is cheapest / on special</row>
+  <col label="c1"><strong>Agree<br />strongly</strong></col>
+  <col label="c2"><strong>Agree</strong></col>
+  <col label="c3"><strong>Neither agree nor disagree</strong></col>
+  <col label="c4"><strong>Disagree</strong></col>
+  <col label="c5"><strong>Disagree strongly</strong></col>
+</radio>
+
+<suspend/>

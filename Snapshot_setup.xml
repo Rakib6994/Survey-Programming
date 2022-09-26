@@ -1,0 +1,91 @@
+<exec>
+askSnapshot.val=0
+</exec>
+
+<suspend/>
+
+<radio 
+  label="askSnapshot"
+  cond="0">
+  <title>Record the Snapshot or not</title>
+  <row label="r1" value="1">ask Snapshot</row>
+  <row label="r2" value="2">not ask Snapshot</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="S_SnapshotOptIn"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  fir="off"
+  uses="atm1d.9">
+  <title>We need your help, please! We are trying to understand how people like you shop for <b>Writing Instruments</b>.<br /><br />For this research only, we would greatly appreciate if you could share your past 90-day web browsing data. <strong>No personal details or products purchased will be collected, and you will receive an <u>additional incentive of $10 Ten Dollars</u></strong>.<br /><br />This will only take one minute of your time. All we need to do is download a <strong>temporary plugin</strong> to your computer, collect your past 90-day web browsing data, and then the <strong>plugin will delete itself</strong> immediately after.<br /><br />Would you like to proceed? Thanks in advance for your help!</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<quota label="inter_quota" overquota="noqual" sheet="interlock"/>
+
+<suspend/>
+
+<html label="placeholderredirect1" cond="S_SnapshotOptIn.r1" where="none">Redirect placeholder so that the redirect executes</html>
+
+<suspend cond="S_SnapshotOptIn.r1" sst="0" url="https://instant.py-insights.com/qualify/redir.html?orgId=beh_146&amp;participantId=${uuid}&amp;rew=$10"/>
+
+<number 
+  label="Q_statusD"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  size="3"
+  style="dev">
+  <title>record statusD</title>
+</number>
+
+<suspend/>
+
+<exec when="returning">
+Q_statusD.val = gv.request.get("Q_statusD") or "999"
+</exec>
+
+<suspend/>
+
+<exec>
+Q_Snapshot.val=0
+
+if Q_statusD.val==3:
+  Q_Snapshot.val=1
+  
+if Q_statusD.val==2:
+  Q_Snapshot.val=2
+    
+  
+if Q_statusD.val==4:
+  Q_Snapshot.val=3
+    
+if Q_statusD.val==5:
+  Q_Snapshot.val=4
+    
+if Q_statusD.val==6:
+  Q_Snapshot.val=5
+</exec>
+
+<suspend/>
+
+<radio 
+  label="Q_Snapshot"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record Complete Snapshot or not </title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1">Not complete Snapshot</row>
+  <row label="r2">Complete Snapshot</row>
+  <row label="r3">Qualify manually uninstalled by respondent</row>
+  <row label="r4">respondent's device doesn't meet the minimum data thresholds</row>
+  <row label="r5">respondent's device runs into any other errors, uncommon occurrence</row>
+  <row label="r6">Not qualified</row>
+</radio>
+
+<suspend/>

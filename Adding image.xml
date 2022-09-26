@@ -1,0 +1,6 @@
+<radio label="Q1" optional="0" shuffle="rows">
+  <title>Which of these toothbrush designs do you prefer?</title>
+  <row label="r1"><img src="[rel toothbrush-1.jpg]" /></row>
+  <row label="r2"><img src="[rel toothbrush-2.jpg]" /></row>
+  <row label="r3"><img src="[rel our-toothbrush.png]" class="tbrush-img" /></row>
+</radio>

@@ -1,0 +1,6 @@
+<autofill label="concept_B13" where="execute,survey,report">
+  <title>will be hidden</title>
+  <row label="r1" autofill="Device.r1"><div align="center" id="imgclk"><img width="200" style="max-width:250px;height: 100px;" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 350, height:450, title: &amp;quot;pop-up&amp;quot;} );" src="/survey/selfserve/202d/211052/concept3.png" /><div style="display: none;"><img src="/survey/selfserve/202d/211052/concept3.png" /></div><br /><i style="font-size:14px">You may click on the image to view again in detail. </i></div></row>
+  
+  <row label="r2" autofill="Device.r2"><div align="center" id="imgclk"><img width="300" style="max-width:350px;height: 300px;" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 850, height:650, title: &amp;quot;pop-up&amp;quot;} );" src="/survey/selfserve/202d/211052/concept3.png" /><div style="display: none;"><img src="/survey/selfserve/202d/211052/concept3.png" /></div><br /><i style="font-size:14px">You may click on the image to view again in detail. </i></div></row>
+</autofill>

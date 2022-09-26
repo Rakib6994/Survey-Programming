@@ -1,0 +1,6 @@
+<autofill label="changelog" where="execute,survey,report">
+  <title>Change-log!</title>
+  <row label="r1" autofill="1">Score_category/Score_quota</row>
+</autofill>
+
+<suspend/>

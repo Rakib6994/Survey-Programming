@@ -1,0 +1,26 @@
+<radio 
+  label="A1"
+  ss:legendColWidth="260px"
+  uses="ratingscale.5">
+  <title>Using a 1-10 scale where 1 means you disagree strongly and 10 means you agree strongly, please rate your evaluation of the ad with this character.</title>
+  <comment>Please rate each option by moving the button to a rating position.</comment>
+  <row label="r1">Motivates me to push my limits</row>
+  <row label="r2">Catches my attention</row>
+  <row label="r3">Makes me feel sad</row>
+  <row label="r4">I will tell my friends about this ad</row>
+  <row label="r5">Is someone that inspires me</row>
+  <row label="r6">Makes me more interested to buy Rexona Men products</row>
+  <row label="r7">Is believable in the context of the storyline</row>
+  <col label="c1">1- disagree strongly</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">5</col>
+  <col label="c6">6</col>
+  <col label="c7">7</col>
+  <col label="c8">8</col>
+  <col label="c9">9</col>
+  <col label="c10">10- agree strongly</col>
+</radio>
+
+<suspend/>

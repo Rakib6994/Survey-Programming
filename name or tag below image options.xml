@@ -1,0 +1,27 @@
+ <checkbox 
+    label="AUTO8"
+    cond="(hid_SC6.r1)"
+    atleast="1"
+    fir="off"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>Prior to the purchase for your latest car, did you have any specific body types of car in mind?</title>
+      <comment>Please select all that apply.&amp;nbsp;</comment>
+      <row label="r1"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_1_Hatchback_4_doors.png" /><br /><strong>Hatchback (4-doors)</strong></p></row>
+      <row label="r2"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_2_2_door_hatchback.coup.png" /><br /><strong>Hatchback (2-doors) / Coupe</strong></p></row>
+      <row label="r3"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_3_Light_truck.PNG" /><br /><strong>Light Truck</strong></p></row>
+      <row label="r4"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_4_2_door_ute.png" /><br /><strong>Ute (2-doors)</strong></p></row>
+      <row label="r5"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_5_4_door_ute.PNG" /><br /><strong>Ute (4-doors)</strong></p></row>
+      <row label="r6"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_6_Van.png" /><br /><strong>Van</strong></p></row>
+      <row label="r7"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_7_Sedan.png" /><br /><strong>Sedan</strong></p></row>
+      <row label="r8"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_8_Small_SUV.png" /><br /><strong>Small SUV</strong></p></row>
+      <row label="r9"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_9_Large_SUV.png" /><br /><strong>Large SUV</strong></p></row>
+      <row label="r10"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_10_People_Mover.png" /><br /><strong>People Mover</strong></p></row>
+      <row label="r11"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_11_Station_Wagon.png" /><br /><strong>Stationwagon</strong></p></row>
+      <row label="r12"><p style="text-align: center;"><img src="/survey/selfserve/202d/211293/AUTO8_12_Convertable.png" /><br /><strong>Convertible</strong></p></row>
+      <row label="r98" open="1" openSize="25" randomize="0">Other (Please specify)</row>
+      <row label="r99" exclusive="1" randomize="0">I did not have a specific body type in mind</row>
+    </checkbox>
+
+    <suspend/>

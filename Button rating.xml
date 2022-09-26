@@ -1,0 +1,8 @@
+<number label="Q1" optional="0" size="2" verify="range(0, 10)" uses="atmrating.5">
+  <title>
+    How likely is it that you would recommend the following social networks to a friend of colleague?
+  </title>
+  <row label="r1">Google+</row>
+  <row label="r2">Diaspora*</row>
+  <row label="r3">MySpace</row>
+</number>

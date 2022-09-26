@@ -1,0 +1,22 @@
+<select 
+  label="Q2"
+  minRanks="3"
+  optional="1"
+  unique="cols"
+  uses="ranksort_oe.2">
+  <title>In a typical week, what are your top 3 services you spend the most time using.</title>
+  <comment>Please click or drag each item into a rank position.</comment>
+  <row label="r1">Video Gaming (subscriptions, new games, etc)</row>
+  <row label="r2">Movies (streaming, purchasing, etc)</row>
+  <row label="r3">Music (streaming services, internet radio)</row>
+  <row label="r4">Sport (pay per view or online streaming)</row>
+  <row label="r5">Streaming Video (i.e. Netflix, Hulu, Amazon)</row>
+  <row label="r6">Cable or Satellite TV</row>
+  <choice label="ch1">1</choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3</choice>
+</select>
+
+
+
+Email address: 

@@ -1,0 +1,510 @@
+<loop label="L1" builderSource="HidlistA" vars="HidlistArows,Var1">
+  <block label="b1" builder:title="default loop block">
+    <suspend/>
+
+    <select 
+    label="A1_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, have you consumed it in the last month?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">Yes</choice>
+      <choice label="r2">No</choice>
+    </select>
+
+    <select 
+    label="A2_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, do you hope to consume more or less of it in the next month?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">Much more</choice>
+      <choice label="r2">A little more</choice>
+      <choice label="r3">The same</choice>
+      <choice label="r4">A little less</choice>
+      <choice label="r5">Much less</choice>
+    </select>
+
+    <select 
+    label="A3_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, to what extent does it fit with your idea of the McDonald’s menu?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">It fits really well on the McDonald's menu</choice>
+      <choice label="r2">It fits fairly well on the McDonald's menu</choice>
+      <choice label="r3">I don't know/don't have an opinion</choice>
+      <choice label="r4">It doesn't fit that well on the McDonald's menu</choice>
+      <choice label="r5">It doesn't fit at all well on the McDonald's menu</choice>
+    </select>
+
+    <select 
+    label="A4_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, if it was added to, or featured more on the McDonald’s menu, to what extent would this impact your likelihood to go to McDonald’s?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">I'd be much more likely to go to McDonalds</choice>
+      <choice label="r2">I'd be somewhat more likely to go to McDonald's</choice>
+      <choice label="r3">It would have no effect</choice>
+      <choice label="r4">I'd be somewhat less likely to go to McDonald's</choice>
+      <choice label="r5">I'd be much less likely to go to McDonald's</choice>
+    </select>
+  </block>
+
+  <looprow label="Lr1" cond="(HidlistA.r1)">
+    <loopvar name="HidlistArows">Plant Based</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(HidlistA.r2)">
+    <loopvar name="HidlistArows">Flexitarian</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(HidlistA.r3)">
+    <loopvar name="HidlistArows">Vegetarian</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(HidlistA.r4)">
+    <loopvar name="HidlistArows">Vegan</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(HidlistA.r5)">
+    <loopvar name="HidlistArows">Gluten free</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(HidlistA.r6)">
+    <loopvar name="HidlistArows">Low Carb</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr7" cond="(HidlistA.r7)">
+    <loopvar name="HidlistArows">High Protein</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr8" cond="(HidlistA.r8)">
+    <loopvar name="HidlistArows">Low Sugar/Sugar Free</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr9" cond="(HidlistA.r9)">
+    <loopvar name="HidlistArows">Indulgent Treats</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr10" cond="(HidlistA.r10)">
+    <loopvar name="HidlistArows">Food with 100% Australian Ingredients</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr11" cond="(HidlistA.r11)">
+    <loopvar name="HidlistArows">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr12" cond="(HidlistA.r12)">
+    <loopvar name="HidlistArows">Recyclable Packaging</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr13" cond="(HidlistA.r13)">
+    <loopvar name="HidlistArows">RSPCA Approved</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr14" cond="(HidlistA.r14)">
+    <loopvar name="HidlistArows">Free Range Chicken/Eggs</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr15" cond="(HidlistA.r15)">
+    <loopvar name="HidlistArows">Sustainably Sourced Coffee Beans</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr16" cond="(HidlistA.r16)">
+    <loopvar name="HidlistArows">American BBQ</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr17" cond="(HidlistA.r17)">
+    <loopvar name="HidlistArows">Mexican/Tex Mex</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr18" cond="(HidlistA.r18)">
+    <loopvar name="HidlistArows">Thai</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr19" cond="(HidlistA.r19)">
+    <loopvar name="HidlistArows">Italian</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr20" cond="(HidlistA.r20)">
+    <loopvar name="HidlistArows">Japanese</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr21" cond="(HidlistA.r21)">
+    <loopvar name="HidlistArows">Middle Eastern</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr22" cond="(HidlistA.r22)">
+    <loopvar name="HidlistArows">Australian BBQ</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr23" cond="(HidlistA.r23)">
+    <loopvar name="HidlistArows">Asian Fusion</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr24" cond="(HidlistA.r24)">
+    <loopvar name="HidlistArows">Korean</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr25" cond="(HidlistA.r25)">
+    <loopvar name="HidlistArows">Street Food</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr26" cond="(HidlistA.r26)">
+    <loopvar name="HidlistArows">Traditional Family Favourites</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr27" cond="(HidlistA.r27)">
+    <loopvar name="HidlistArows">Marinated Meats</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr28" cond="(HidlistA.r28)">
+    <loopvar name="HidlistArows">Food With Miso</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr29" cond="(HidlistA.r29)">
+    <loopvar name="HidlistArows">Food With Caramelised Flavours</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr30" cond="(HidlistA.r30)">
+    <loopvar name="HidlistArows">Food With Charred/Blackened Flavours</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr31" cond="(HidlistA.r31)">
+    <loopvar name="HidlistArows">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr32" cond="(HidlistA.r32)">
+    <loopvar name="HidlistArows">Loaded Shakes</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr33" cond="(HidlistA.r33)">
+    <loopvar name="HidlistArows">Food in Sharing Boxes</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr34" cond="(HidlistA.r34)">
+    <loopvar name="HidlistArows">Gourmet Beef Burgers</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr35" cond="(HidlistA.r35)">
+    <loopvar name="HidlistArows">Large Chicken Burgers</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr36" cond="(HidlistA.r36)">
+    <loopvar name="HidlistArows">Chicken Waffle</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr37" cond="(HidlistA.r37)">
+    <loopvar name="HidlistArows">Fried Chicken with Gravy</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr38" cond="(HidlistA.r38)">
+    <loopvar name="HidlistArows">Fried Food</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr39" cond="(HidlistA.r39)">
+    <loopvar name="HidlistArows">Sweet Potato Fries</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr40" cond="(HidlistA.r40)">
+    <loopvar name="HidlistArows">Chicken Wraps</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr41" cond="(HidlistA.r41)">
+    <loopvar name="HidlistArows">Tacos</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr42" cond="(HidlistA.r42)">
+    <loopvar name="HidlistArows">Oat Milk</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr43" cond="(HidlistA.r43)">
+    <loopvar name="HidlistArows">Nitro Coffee</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr44" cond="(HidlistA.r44)">
+    <loopvar name="HidlistArows">Cold Brew</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr45" cond="(HidlistA.r45)">
+    <loopvar name="HidlistArows">Kombucha</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr46" cond="(HidlistA.r46)">
+    <loopvar name="HidlistArows">Coconut Water</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr47" cond="(HidlistA.r47)">
+    <loopvar name="HidlistArows">Immunity Boosting Drink</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr48" cond="(HidlistA.r48)">
+    <loopvar name="HidlistArows">Probiotic drink</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr49" cond="(HidlistA.r49)">
+    <loopvar name="HidlistArows">Milo</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr50" cond="(HidlistA.r50)">
+    <loopvar name="HidlistArows">Bubble Tea</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr51" cond="(HidlistA.r51)">
+    <loopvar name="HidlistArows">Smoothies</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr52" cond="(HidlistA.r52)">
+    <loopvar name="HidlistArows">Craft Sodas</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr53" cond="(HidlistA.r53)">
+    <loopvar name="HidlistArows">Milk Chocolate</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr54" cond="(HidlistA.r54)">
+    <loopvar name="HidlistArows">Chocolate Brownie</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr55" cond="(HidlistA.r55)">
+    <loopvar name="HidlistArows">Nutella</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr56" cond="(HidlistA.r56)">
+    <loopvar name="HidlistArows">Lotus Biscoff</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr57" cond="(HidlistA.r57)">
+    <loopvar name="HidlistArows">Mango</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr58" cond="(HidlistA.r58)">
+    <loopvar name="HidlistArows">Blueberry</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr59" cond="(HidlistA.r59)">
+    <loopvar name="HidlistArows">Coconut</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr60" cond="(HidlistA.r60)">
+    <loopvar name="HidlistArows">Matcha</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr61" cond="(HidlistA.r61)">
+    <loopvar name="HidlistArows">Pavlova</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr62" cond="(HidlistA.r62)">
+    <loopvar name="HidlistArows">Tiramisu</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr63" cond="(HidlistA.r63)">
+    <loopvar name="HidlistArows">Smokey BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr64" cond="(HidlistA.r64)">
+    <loopvar name="HidlistArows">Texan BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr65" cond="(HidlistA.r65)">
+    <loopvar name="HidlistArows">Spicy BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr66" cond="(HidlistA.r66)">
+    <loopvar name="HidlistArows">BBQ Rib Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr67" cond="(HidlistA.r67)">
+    <loopvar name="HidlistArows">Korean BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr68" cond="(HidlistA.r68)">
+    <loopvar name="HidlistArows">Memphis BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr69" cond="(HidlistA.r69)">
+    <loopvar name="HidlistArows">Aioli</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr70" cond="(HidlistA.r70)">
+    <loopvar name="HidlistArows">Smoky Mayo</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr71" cond="(HidlistA.r71)">
+    <loopvar name="HidlistArows">Spicy Mayo</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr72" cond="(HidlistA.r72)">
+    <loopvar name="HidlistArows">Truffle Aioli</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr73" cond="(HidlistA.r73)">
+    <loopvar name="HidlistArows">Lemon Herb Aioli</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr74" cond="(HidlistA.r74)">
+    <loopvar name="HidlistArows">Burger Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr75" cond="(HidlistA.r75)">
+    <loopvar name="HidlistArows">Ranch Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr76" cond="(HidlistA.r76)">
+    <loopvar name="HidlistArows">Pepper Mayo</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr77" cond="(HidlistA.r77)">
+    <loopvar name="HidlistArows">Signature Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr78" cond="(HidlistA.r78)">
+    <loopvar name="HidlistArows">Jalapeno Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr79" cond="(HidlistA.r79)">
+    <loopvar name="HidlistArows">Sriracha</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr80" cond="(HidlistA.r80)">
+    <loopvar name="HidlistArows">Chipotle</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr81" cond="(HidlistA.r81)">
+    <loopvar name="HidlistArows">Buffalo Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr82" cond="(HidlistA.r82)">
+    <loopvar name="HidlistArows">Mighty Hot Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr83" cond="(HidlistA.r83)">
+    <loopvar name="HidlistArows">Free Range Chicken</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr84" cond="(HidlistA.r84)">
+    <loopvar name="HidlistArows">Free Range Eggs</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr85" cond="(HidlistA.r85)">
+    <loopvar name="HidlistArows">Flavoured Hot Coffee</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr86" cond="(HidlistA.r86)">
+    <loopvar name="HidlistArows">Flavoured Cold Coffee</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr87" cond="(HidlistA.r87)">
+    <loopvar name="HidlistArows">Potato Scallops</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+
+  <looprow label="Lr88" cond="(HidlistA.r88)">
+    <loopvar name="HidlistArows">Mozzarella Sticks</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+
+  <looprow label="Lr89" cond="(HidlistA.r89)">
+    <loopvar name="HidlistArows">Mac &amp; Cheese Bites</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+
+  <looprow label="Lr90" cond="(HidlistA.r90)">
+    <loopvar name="HidlistArows">Sweet Potato Fries</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+</loop>
+
+<suspend/>

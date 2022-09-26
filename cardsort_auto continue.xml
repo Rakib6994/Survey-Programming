@@ -1,0 +1,23 @@
+>>PASTE IT WITH OTHER STYLES WITHOUT ANY LINEBREAK!
+
+
+
+<style label="disable_continue" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ ('.sq-cardsort-next').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').on("drop",function(e) {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+function cardSortNext() {
+  if ($ ('.sq-cardsort-completion').is(':visible')) {
+    $ ("#btn_continue").click();
+  }
+}
+]]></style>

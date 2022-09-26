@@ -1,0 +1,29 @@
+<radio 
+   label="Q15_1"
+   shuffle="rows"
+   ss:legendColWidth="100px"
+   surveyDisplay="desktop">
+    <title>Based on your experiences with <b>[pipe:hidlist]</b> in the past 12 months, how much do you agree that the following statements describes <b>[pipe:hidlist]</b>? <br />
+<b>There are some statements with a ‘Not applicable’ option provided. For these statements, if you have no past experience to rate <b>[pipe:hidlist]</b> on a particular statement, please select ‘Not applicable’.</b></title>
+    <comment>Please select one answer per row.</comment>
+    <style cols="c6" copy="hideElements" rows="r1"/>
+    <style cols="c6" copy="hideElements" rows="r2"/>
+    <style cols="c6" copy="hideElements" rows="r3"/>
+    <style cols="c6" copy="hideElements" rows="r6"/>
+    <style cols="c6" copy="hideElements" rows="r7"/>
+    <col label="c1">1–Completely disagree</col>
+    <col label="c2">2–Somewhat disagree</col>
+    <col label="c3">3–Neither agree nor disagree</col>
+    <col label="c4">4–Somewhat agree</col>
+    <col label="c5">5–Completely agree</col>
+    <col label="c6" cond="not(Q5.r9)">6–Not applicable</col>
+    <row label="r1">Ensures service is of high quality and reliable (e.g., strong signal / connectivity, doesn't drop calls or disconnect)</row>
+    <row label="r2">Offers products and services that are catered to my needs</row>
+    <row label="r3">Provides a large enough network that covers the area where I need to use my device</row>
+    <row label="r4">Ensures the charges on my monthly bill are correct</row>
+    <row label="r5">Makes it easy to pay my bills (e.g., offers multiple payment methods)</row>
+    <row label="r6">Makes it easy to compare different plans / service packages</row>
+    <row label="r7">Offers convenient ways to schedule an appointment (e.g., through mobile app)</row>
+  </radio>
+
+  <suspend/>

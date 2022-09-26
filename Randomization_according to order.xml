@@ -1,0 +1,4 @@
+<exec>
+	S2.cols.order = S1.rows.order
+	S3.choices.order = S1.rows.order
+</exec>

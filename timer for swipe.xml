@@ -1,0 +1,63 @@
+<radio 
+  label="Q8"
+  shuffle="rows"
+  sw:savetime="1"
+  uses="swipelr.15">
+  <title>Swipe right → for ‘Yes’ and swipe left ← for ‘No’</title>
+  <style name="page.head"><![CDATA[
+<style>
+
+.swipelr-slider-item::after {
+  display:none
+}
+.swipelr-block {
+  height: 370px !important;
+}
+</style>
+]]></style>
+  <row label="r1" alt="Sophisticated technology"><img src="[rel img1.png]" /></row>
+  <row label="r2" alt="Innovative"><img src="[rel img2.png]" /></row>
+  <row label="r3" alt="Unique (Different from other glucose monitoring options)"><img src="[rel img3.png]" /></row>
+  <row label="r4" alt="Helps me stay healthy"><img src="[rel img4.png]" /></row>
+  <row label="r5" alt="Makes me feel safe"><img src="[rel img5.png]" /></row>
+  <row label="r6" alt="Convenient"><img src="[rel img6.png]" /></row>
+  <row label="r7" alt="Efficient"><img src="[rel img7.png]" /></row>
+  <row label="r8" alt="Accurate"><img src="[rel img8.png]" /></row>
+  <row label="r9" alt="Painless"><img src="[rel img9.png]" /></row>
+  <row label="r10" alt="Easy to Use"><img src="[rel img10.png]" /></row>
+  <row label="r11" alt="Medical grade"><img src="[rel img11.png]" /></row>
+  <row label="r12" alt="Intended for people like me"><img src="[rel img12.png]" /></row>
+  <row label="r13" alt="Easy Access to data via free mobile app"><img src="[rel img13.png]" /></row>
+  <row label="r14" alt="Continuous"><img src="[rel img14.png]" /></row>
+  <row label="r15" alt="Modern "><img src="[rel img15.png]" /></row>
+  <row label="r16" alt="Good value"><img src="[rel img16.png]" /></row>
+  <row label="r17" alt="Reliable"><img src="[rel img17.png]" /></row>
+  <row label="r18" alt="Trustworthy"><img src="[rel img18.png]" /></row>
+  <col label="c1" value="1">No</col>
+  <col label="c2" value="2">Yes</col>
+</radio>
+
+<text 
+  label="Q8_timeSpent">
+  <title>Q8 Time Spent.</title>
+  <row label="r1">concept 1</row>
+  <row label="r2">concept 2</row>
+  <row label="r3">concept 3</row>
+  <row label="r4">concept 4</row>
+  <row label="r5">concept 5</row>
+  <row label="r6">concept 6</row>
+  <row label="r7">concept 7</row>
+  <row label="r8">concept 8</row>
+  <row label="r9">concept 9</row>
+  <row label="r10">concept 10</row>
+  <row label="r11">concept 11</row>
+  <row label="r12">concept 12</row>
+  <row label="r13">concept 13</row>
+  <row label="r14">concept 14</row>
+  <row label="r15">concept 15</row>
+  <row label="r16">concept 16</row>
+  <row label="r17">concept 17</row>
+  <row label="r18">concept 18</row>
+</text>
+
+<suspend/>

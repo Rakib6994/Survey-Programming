@@ -1,0 +1,16 @@
+<text 
+  label="film"
+  optional="0"
+  size="25"
+  sst="0"
+  uses="videoplayer.1"
+  videoplayer:account_id="2280166212001"
+  videoplayer:allow_fullscreen="1"
+  videoplayer:autostart="1"
+  videoplayer:player_id="WxkzMz4Kr"
+  videoplayer:replay_enable="1"
+  videoplayer:video_id="6292876340001">
+  <title><span style="color:white">Video</span></title>
+</text>
+
+<suspend/>

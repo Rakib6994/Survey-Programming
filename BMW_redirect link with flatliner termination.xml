@@ -1,0 +1,10 @@
+  <samplesource list="2">
+    <title>Live link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <exit cond="terminated and FlatLiner_Q9.r1" url="https://message.insight.rakuten.com/survey/Passback.do?pid=f3363e9b97189482&amp;uid=${uid}&amp;st=t"/>
+    <exit cond="terminated" url="https://message.insight.rakuten.com/survey/Passback.do?pid=f3363e9b97189482&amp;uid=${uid}&amp;st=s"/>
+    <exit cond="overquota" url="https://message.insight.rakuten.com/survey/Passback.do?pid=f3363e9b97189482&amp;uid=${uid}&amp;st=q"/>
+    <exit cond="qualified" url="https://message.insight.rakuten.com/survey/Passback.do?pid=f3363e9b97189482&amp;uid=${uid}&amp;st=c "/>
+  </samplesource>

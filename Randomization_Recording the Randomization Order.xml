@@ -1,0 +1,14 @@
+<radio label="Q1" shuffle="rows">
+    <title>Please select one item.</title>
+    <row label="r1">Item 1</row>
+    <row label="r2">Item 2</row>
+    <row label="r3">Item 3</row>
+    <row label="r4">Item 4</row>
+</radio>
+
+<number label="Q1_ROW_ORDER" size="1" onLoad="copy('Q1', rows=True)">
+    <title>Q1 Row Order</title>
+    <virtual>
+assignRandomOrder('Q1', 'rows')
+    </virtual>
+</number>

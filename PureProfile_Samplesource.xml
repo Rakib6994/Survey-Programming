@@ -1,0 +1,10 @@
+<samplesource list="42">
+    <title>PureProfile</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and (checkQC.r2 or checkQC.r3 or checkQC.r4 or checkQC.r5 or checkQC.r6 or QC2.r2)" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/7ef406c2-89c6-48ec-8b63-705913aab6d3">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="terminated" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/d911450d-5852-4012-8755-a42a31ad60eb">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/e76f00b7-ff54-4d92-a2b6-ea6ec1c39ff2">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota" url="https://surveyengine.pureprofile.com/api/v1/pp-au/external-payment/05e8bd1e-1346-453b-bb1d-7491cf8d407a">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>

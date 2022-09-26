@@ -1,0 +1,51 @@
+<radio 
+  label="DM4"
+  atm1d:showInput="0"
+  uses="atm1d.9">
+  <title>Which of the following categories best represents your monthly <strong>personal</strong> income?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">More than Rp. 7.500.000</row>
+  <row label="r2">Rp. 7.000.001 – Rp. 7.500.000</row>
+  <row label="r3">Rp. 6.000.001 – Rp. 7.000.000</row>
+  <row label="r4">Rp. 5.000.001 – Rp. 6.000.000</row>
+  <row label="r5">Rp. 4.500.001 – Rp. 5.000.000</row>
+  <row label="r6">Rp. 4.000.001 – Rp. 4.500.000</row>
+  <row label="r7">Rp. 3.000.001 – Rp. 4.000.000</row>
+  <row label="r8">Rp. 2.500.001 – Rp. 3.000.000</row>
+  <row label="r9">Rp. 2.000.001 – Rp. 2.500.000</row>
+  <row label="r10">Rp. 1.750.001 – Rp. 2.000.000</row>
+  <row label="r11">Rp. 1.500.001 – Rp. 1.750.000</row>
+  <row label="r12">Rp. 1.250.001 – Rp. 1.500.000</row>
+  <row label="r13">Rp. 900.001 – Rp. 1.250.000</row>
+  <row label="r14">Rp. 750.001 – Rp. 900.000</row>
+  <row label="r15">Less than Rp. 700.000</row>
+  <row label="r16">I don't have income</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="DM5"
+  atm1d:showInput="0"
+  uses="atm1d.9">
+  <title>Which of the following categories best represents your monthly household income?</title>
+  <comment>Please select one</comment>
+  <row label="r1" cond="(DM4.r1) or (DM4.r2) or (DM4.r3) or (DM4.r4) or (DM4.r5) or (DM4.r6) or (DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">More than Rp. 7.500.000</row>
+  <row label="r2" cond="(DM4.r2) or (DM4.r3) or (DM4.r4) or (DM4.r5) or (DM4.r6) or (DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 7.000.001 – Rp. 7.500.000</row>
+  <row label="r3" cond="(DM4.r3) or (DM4.r4) or (DM4.r5) or (DM4.r6) or (DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 6.000.001 – Rp. 7.000.000</row>
+  <row label="r4" cond="(DM4.r4) or (DM4.r5) or (DM4.r6) or (DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 5.000.001 – Rp. 6.000.000</row>
+  <row label="r5" cond="(DM4.r5) or (DM4.r6) or (DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 4.500.001 – Rp. 5.000.000</row>
+  <row label="r6" cond="(DM4.r6) or (DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 4.000.001 – Rp. 4.500.000</row>
+  <row label="r7" cond="(DM4.r7) or (DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 3.000.001 – Rp. 4.000.000</row>
+  <row label="r8" cond="(DM4.r8) or (DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 2.500.001 – Rp. 3.000.000</row>
+  <row label="r9" cond="(DM4.r9) or (DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 2.000.001 – Rp. 2.500.000</row>
+  <row label="r10" cond="(DM4.r10) or (DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 1.750.001 – Rp. 2.000.000</row>
+  <row label="r11" cond="(DM4.r11) or (DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 1.500.001 – Rp. 1.750.000</row>
+  <row label="r12" cond="(DM4.r12) or (DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 1.250.001 – Rp. 1.500.000</row>
+  <row label="r13" cond="(DM4.r13) or (DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 900.001 – Rp. 1.250.000</row>
+  <row label="r14" cond="(DM4.r14) or (DM4.r15) or (DM4.r16)">Rp. 750.001 – Rp. 900.000</row>
+  <row label="r15" cond="(DM4.r15) or (DM4.r16)">Less than Rp. 700.000</row>
+  <row label="r16">I don't have income</row>
+</radio>
+
+<suspend/>

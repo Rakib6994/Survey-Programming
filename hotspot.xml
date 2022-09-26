@@ -1,0 +1,57 @@
+<checkbox 
+  label="Skin_Tone"
+  atleast="1"
+  atmost="3"
+  hotspot:fillColor="#00ff00"
+  hotspot:image="face.PNG"
+  hotspot:strokeColor="#00ff00"
+  randomize="0"
+  uses="hotspot.3">
+  <title>From the images below, please select which skin tone description best fits your facial skin.</title>
+  <comment>Please click on image to select.</comment>
+  <row label="r1" hotspot:coordinates="1,2,57,158" hotspot:shape="rect">LIGHT</row>
+  <row label="r2" hotspot:coordinates="56,2,87,156" hotspot:shape="rect">LIGHT</row>
+  <row label="r3" hotspot:coordinates="86,3,137,157" hotspot:shape="rect">LIGHT</row>
+  <row label="r4" hotspot:coordinates="136,4,190,156" hotspot:shape="rect">MEDIUM</row>
+  <row label="r5" hotspot:coordinates="187,4,230,156" hotspot:shape="rect">MEDIUM</row>
+  <row label="r6" hotspot:coordinates="228,1,263,156" hotspot:shape="rect">MEDIUM</row>
+  <row label="r7" hotspot:coordinates="260,3,305,157" hotspot:shape="rect">DARK</row>
+  <row label="r8" hotspot:coordinates="301,3,343,156" hotspot:shape="rect">DARK</row>
+  <row label="r9" hotspot:coordinates="341,4,410,156" hotspot:shape="rect">DARK</row>
+  <row label="r10" hotspot:coordinates="409,2,463,155" hotspot:shape="rect">DARK</row>
+  <row label="r11" hotspot:coordinates="462,3,530,156" hotspot:shape="rect">DARK</row>
+  <row label="r12" hotspot:coordinates="528,4,582,157" hotspot:shape="rect">DARK</row>
+</checkbox>
+
+<suspend/>
+
+
+
+
+--------------------SR------------------
+
+
+  <radio 
+  label="Skin_Tone"
+  hotspot:fillColor="#00ff00"
+  hotspot:image="face.PNG"
+  hotspot:strokeColor="#00ff00"
+  randomize="0"
+  uses="hotspot.3">
+  <title>From the images below, please select which skin tone description best fits your facial skin.</title>
+  <comment>Please click on image to select.</comment>
+  <row label="r1" hotspot:coordinates="19,16,81,78" hotspot:shape="rect">LIGHT</row>
+  <row label="r2" hotspot:coordinates="95,17,157,79" hotspot:shape="rect">LIGHT</row>
+  <row label="r3" hotspot:coordinates="170,17,232,79" hotspot:shape="rect">LIGHT</row>
+  <row label="r4" hotspot:coordinates="246,16,308,78" hotspot:shape="rect">MEDIUM</row>
+  <row label="r5" hotspot:coordinates="322,17,384,79" hotspot:shape="rect">MEDIUM</row>
+  <row label="r6" hotspot:coordinates="397,17,459,79" hotspot:shape="rect">MEDIUM</row> 
+  <row label="r7" hotspot:coordinates="19,125,81,187" hotspot:shape="rect">DARK</row>
+  <row label="r8" hotspot:coordinates="94,126,156,188" hotspot:shape="rect">DARK</row>
+  <row label="r9" hotspot:coordinates="170,126,232,188" hotspot:shape="rect">DARK</row>
+  <row label="r10" hotspot:coordinates="246,126,308,188" hotspot:shape="rect">DARK</row>
+  <row label="r11" hotspot:coordinates="323,126,385,188" hotspot:shape="rect">DARK</row>
+  <row label="r12" hotspot:coordinates="399,126,461,188" hotspot:shape="rect">DARK</row>
+</radio>
+<suspend/>
+

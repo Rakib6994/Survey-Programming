@@ -1,0 +1,91 @@
+<select 
+  label="Q1_TH"
+  hottext:atleast="0"
+  optional="1"
+  uses="hottext.3">
+  <title><b><br />TEXT HIGHLIGHTER<br /><br />How do you feel about the following statement?</b></title>
+  <comment>Please make a selection.</comment>
+  <choice label="ch1">Like</choice>
+  <choice label="ch2">Neutral</choice>
+  <choice label="ch3">Dislike</choice>
+  <row label="r1" translateable="0">It</row>
+  <row label="r2" translateable="0">was</row>
+  <row label="r3" translateable="0">pretty</row>
+  <row label="r4" translateable="0">devastating5</row>
+  <row label="r5" translateable="0">because</row>
+  <row label="r6" translateable="0">other</row>
+  <row label="r7" translateable="0">children</row>
+  <row label="r8" translateable="0">constantly</row>
+  <row label="r9" translateable="0">made</row>
+  <row label="r10" translateable="0">fun</row>
+  <row label="r11" translateable="0">of</row>
+  <row label="r12" translateable="0">her,</row>
+  <row label="r13" translateable="0">and</row>
+  <row label="r14" translateable="0">sadly,</row>
+  <row label="r15" translateable="0">even</row>
+  <row label="r16" translateable="0">a</row>
+  <row label="r17" translateable="0">teacher</row>
+  <row label="r18" translateable="0">teased</row>
+  <row label="r19" translateable="0">her.</row>
+  <row label="r20" translateable="0">When</row>
+  <row label="r21" translateable="0">the</row>
+  <row label="r22" translateable="0">tics</row>
+  <row label="r23" translateable="0">were</row>
+  <row label="r24" translateable="0">especially</row>
+  <row label="r25" translateable="0">bad,</row>
+  <row label="r26" translateable="0">Kendall</row>
+  <row label="r27" translateable="0">had</row>
+  <row label="r28" translateable="0">to</row>
+  <row label="r29" translateable="0">wear</row>
+  <row label="r30" translateable="0">a</row>
+  <row label="r31" translateable="0">neck</row>
+  <row label="r32" translateable="0">brace6.</row>
+  <row label="r33" translateable="0">She</row>
+  <row label="r34" translateable="0">only</row>
+  <row label="r35" translateable="0">had</row>
+  <row label="r36" translateable="0">one</row>
+  <row label="r37" translateable="0">or</row>
+  <row label="r38" translateable="0">two</row>
+  <row label="r39" translateable="0">friends,</row>
+  <row label="r40" translateable="0">but</row>
+  <row label="r41" translateable="0">that</row>
+  <row label="r42" translateable="0">was</row>
+  <row label="r43" translateable="0">okay</row>
+  <row label="r44" translateable="0">because</row>
+  <row label="r45" translateable="0">they</row>
+  <row label="r46" translateable="0">were</row>
+  <row label="r47" translateable="0">--</row>
+  <row label="r48" translateable="0">and</row>
+  <row label="r49" translateable="0">continue</row>
+  <row label="r50" translateable="0">to</row>
+  <row label="r51" translateable="0">be</row>
+  <row label="r52" translateable="0">--</row>
+  <row label="r53" translateable="0">real,</row>
+  <row label="r54" translateable="0">the</row>
+  <row label="r55" translateable="0">kind</row>
+  <row label="r56" translateable="0">who</row>
+  <row label="r57" translateable="0">stick</row>
+  <row label="r58" translateable="0">by</row>
+  <row label="r59" translateable="0">her,</row>
+  <row label="r60" translateable="0">no</row>
+  <row label="r61" translateable="0">matter</row>
+  <row label="r62" translateable="0">what.</row>
+  <row label="r63" translateable="0">Through</row>
+  <row label="r64" translateable="0">all</row>
+  <row label="r65" translateable="0">this,</row>
+  <row label="r66" translateable="0">Kendall</row>
+  <row label="r67" translateable="0">continued</row>
+  <row label="r68" translateable="0">to</row>
+  <row label="r69" translateable="0">sing</row>
+  <row label="r70" translateable="0">and</row>
+  <row label="r71" translateable="0">entertain.</row>
+  <row label="r72" translateable="0">Remarkably7,</row>
+  <row label="r73" translateable="0">her</row>
+  <row label="r74" translateable="0">tics</row>
+  <row label="r75" translateable="0">disappeared</row>
+  <row label="r76" translateable="0">when</row>
+  <row label="r77" translateable="0">she</row>
+  <row label="r78" translateable="0">sang.</row>
+</select>
+
+<suspend/>

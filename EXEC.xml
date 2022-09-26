@@ -1,0 +1,117 @@
+<number 
+  label="S1a"
+  optional="0"
+  size="3"
+  verify="range(1,99)">
+  <title>How old are you?</title>
+  <comment>Please enter your age below.</comment>
+</number>
+
+<suspend/>
+
+<exec>
+if S1a.check('&lt;18'):  S1b.val = 0
+if S1a.check('18-24'):  S1b.val = 1
+if S1a.check('25-29'):  S1b.val =2
+if S1a.check('30-34'):  S1b.val =3
+if S1a.check('35-39'):  S1b.val =4
+if S1a.check('40-45'):  S1b.val =5
+if S1a.check('46-49'):  S1b.val =6
+if S1a.check('50-54'):  S1b.val =7
+if S1a.check('55-59'):  S1b.val =8
+if S1a.check('60-65'):  S1b.val =9
+if S1a.check('66-69'):  S1b.val =10
+if S1a.check('70-74'):  S1b.val =11
+if S1a.check('&gt;=75'):  S1b.val =12
+</exec>
+
+<suspend/>
+
+<radio 
+  label="S1b"
+  where="execute,survey,report">
+  <title>Age Group.</title>
+  <row label="r1">Under 18 years</row>
+  <row label="r2">18-24</row>
+  <row label="r3">25-29</row>
+  <row label="r4">30-34</row>
+  <row label="r5">35-39</row>
+  <row label="r6">40-45</row>
+  <row label="r7">46-49</row>
+  <row label="r8">50-54</row>
+  <row label="r9">55-59</row>
+  <row label="r10">60-65</row>
+  <row label="r11">66-69</row>
+  <row label="r12">70-74</row>
+  <row label="r13">75+</row>
+</radio>
+
+<suspend/>
+
+
+
+<exec>
+if S3a.r1:
+     S3b.val=1
+</exec>
+
+<suspend/>
+
+<number 
+  label="S3b"
+  cond="(S3a.r2)"
+  optional="0"
+  size="3"
+  verify="range(01,10)">
+  <title>How many children do you have that live at home with you?</title>
+  <comment> Please type in below.</comment>
+  <validate>
+if S3a.r2 and S3b.val==1:
+     error("Previously, you said you have more than 1 child.")
+  </validate>
+
+</number>
+
+<suspend/>
+
+
+<exec>
+if S4.r1.any:
+     S4_autocode2.r1.val=1
+     
+
+elif S4.r2.any:
+     S4_autocode2.r2.val=1
+
+elif S4.r3.any:
+     S4_autocode2.r3.val=1
+
+elif S4.r4.any:
+     S4_autocode2.r4.val=1
+
+elif S4.r5.any:
+     S4_autocode2.r5.val=1
+
+elif S4.r6.any:
+     S4_autocode2.r6.val=1
+
+elif S4.r7.any:
+     S4_autocode2.r7.val=1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="S4_autocode2"
+  where="execute,survey,report">
+  <title>Children Age</title>
+  <row label="r1">0-1 months</row>
+  <row label="r2">2-3 months</row>
+  <row label="r3">4-6 months</row>
+  <row label="r4">7-9 months</row>
+  <row label="r5">10-12 months</row>
+  <row label="r6">13-18 months</row>
+  <row label="r7">19-24 months</row>
+</checkbox>
+
+<suspend/>

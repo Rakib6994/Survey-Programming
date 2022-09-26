@@ -1,0 +1,32 @@
+<!--TIMER1-->
+
+<style label="disable_continue" arg:timeout="3" mode="after" name="respview.client.js" with="INTRO_B" wrap="ready"><![CDATA[
+var $submitButton = $ ("#btn_continue, #btn_finish");
+ $submitButton.prop("disabled", true);
+ setTimeout( function() {
+ $submitButton.prop("disabled", false);
+ }, $(timeout) * 1000);
+]]></style>
+
+
+
+<!--TIMER2-->
+
+
+<suspend/>
+
+<html label="INTRO_C" where="survey">Next you will see a concept of a womenswear brand. Please take your time to look at it and read the 3 pages. We will then ask you some questions about what you think about it.</html>
+
+<suspend/>
+
+<html label="con1" ss:commentClassNames="timer delay_5" where="survey"><img class="survey_image survey-image-original fit" src="/survey/selfserve/202d/211191/n1.png" alt="n1.png" title="n1.png" /></html>
+
+<suspend/>
+
+<html label="con2" ss:commentClassNames="timer delay_5" where="survey"><img class="survey_image survey-image-original fit" src="/survey/selfserve/202d/211191/n2.png" alt="n2.png" title="n2.png" /></html>
+
+<suspend/>
+
+<html label="con3" ss:commentClassNames="timer delay_5" where="survey"><img class="survey_image survey-image-original fit" src="/survey/selfserve/202d/211191/n3.png" alt="n3.png" title="n3.png" /></html>
+
+<suspend/>

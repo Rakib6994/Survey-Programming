@@ -1,0 +1,280 @@
+ <exec>
+p.startTime = timeSpent()
+  </exec>
+
+  <number 
+   label="P_QuantityPurchased"
+   mgshelf:cancel_text="${pipe.shop_cancel_text}"
+   mgshelf:completed_text="${pipe.continue_text}"
+   mgshelf:currency_position="before"
+   mgshelf:currency_sign="£"
+   mgshelf:findability="0"
+   mgshelf:magnifier_border_radius="50%"
+   mgshelf:magnifier_height="275"
+   mgshelf:magnifier_image="[rel ${pipe.ShelfImage}_HR.jpeg]"
+   mgshelf:magnifier_style="follow"
+   mgshelf:magnifier_width="275"
+   mgshelf:name_text=""
+   mgshelf:popup_show_name="1"
+   mgshelf:popup_show_price="1"
+   mgshelf:popup_show_quantity="1"
+   mgshelf:popup_show_subtotal="1"
+   mgshelf:price_text="${pipe.shop_price_text}"
+   mgshelf:purchase_text="${pipe.shop_purchase}"
+   mgshelf:quantity_text="${pipe.shop_quantity_text}"
+   mgshelf:shelf_image="[rel ${pipe.ShelfImage}_LR.jpeg]"
+   mgshelf:shelf_width="1000"
+   mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+   randomize="0"
+   size="10"
+   uses="prsshelf2.5">
+    <title>Please go shopping for <b>carbonated soft drinks</b> assuming you are on a typical shopping trip.<br /><br /><strong>Please be patient as it may take a moment to load the shelf.</strong></title>
+    <comment><div align="left"><ul>
+
+<li />If you would like to see a close-up of a product, hover your mouse over the product.
+<li />If you would like to purchase a product, click on the product and use the "+/-" buttons to add quantity and click "Purchase"
+<li />To change your mind about purchasing a product, click on the "back" button or click on the shopping cart to remove products.
+<li />When finished with the shopping trip, click the "continue" button on the bottom of your screen.
+<li />Please be sure to view the entire shelf before proceeding. You may need to scroll over/down to do so.
+</ul></div></comment>
+    <col label="c1">Quantity</col>
+    <col label="c2">Order of click</col>
+    <col label="c3">Time opened</col>
+    <row label="r1" mgshelf:coord="36,44,210,206" mgshelf:image="[rel 5000112656732.png]" mgshelf:price="1.45" mgshelf:width="200">Diet Coke 500ml</row>
+    <row label="r2" mgshelf:coord="215,47,346,206" mgshelf:image="[rel ${pipe.ae180behaviorallypepsiuk712220713t1244sFU4OBlcY1productid}]" mgshelf:price="1.30" mgshelf:width="200">Diet Pepsi 500ml</row>
+    <row label="r3" mgshelf:coord="350,113,436,206" mgshelf:image="[rel 5449000053879.png]" mgshelf:price="0.95" mgshelf:width="200">Diet Coke 330ml</row>
+    <row label="r4" mgshelf:coord="441,115,526,206" mgshelf:image="[rel ${pipe.ae180behaviorallypepsiuk712220713t1244sFU4OBlcY3productid}]" mgshelf:price="0.85" mgshelf:width="200">Pepsi Max 330ml</row>
+    <row label="r5" mgshelf:coord="531,115,616,206" mgshelf:image="[rel 5000112552508.png]" mgshelf:price="0.90" mgshelf:width="200">Coke Reg 330ml</row>
+    <row label="r6" mgshelf:coord="619,115,664,206" mgshelf:image="[rel 4060800306593.png]" mgshelf:price="0.90" mgshelf:width="200">7up Reg 330ml</row>
+    <row label="r7" mgshelf:coord="666,115,752,206" mgshelf:image="[rel 7UPFree330ml.png]" mgshelf:price="0.80" mgshelf:width="200">7UP Free 330ml</row>
+    <row label="r8" mgshelf:coord="755,115,800,206" mgshelf:image="[rel Sprite_330ml_NoSugar.png]" mgshelf:price="0.80" mgshelf:width="200">Sprite Zero 330ml</row>
+    <row label="r9" mgshelf:coord="802,115,888,206" mgshelf:image="[rel 5000112628937.png]" mgshelf:price="0.80" mgshelf:width="200">Fanta 330ml</row>
+    <row label="r10" mgshelf:coord="38,219,125,381" mgshelf:image="[rel 5449000226457.png]" mgshelf:price="1.45" mgshelf:width="200">Coke Zero Vanilla 500ml</row>
+    <row label="r11" mgshelf:coord="132,219,266,381" mgshelf:image="[rel 5449000214744.png]" mgshelf:price="1.45" mgshelf:width="200">Coke Zero Cherry 500ml</row>
+    <row label="r12" mgshelf:coord="273,219,460,381" mgshelf:image="[rel 5000112656749.png]" mgshelf:price="1.45" mgshelf:width="200">Coke Zero 500ml</row>
+    <row label="r13" mgshelf:coord="467,222,650,381" mgshelf:image="[rel ${pipe.ae180behaviorallypepsiuk712220713t1244sFU4OBlcY12productid}]" mgshelf:price="1.30" mgshelf:width="200">Pepsi Max 500ml</row>
+    <row label="r14" mgshelf:coord="657,222,792,381" mgshelf:image="[rel ${pipe.ae180behaviorallypepsiuk712220713t1244sFU4OBlcY13productid}]" mgshelf:price="1.30" mgshelf:width="200">Pepsi Max Cherry 500ml</row>
+    <row label="r15" mgshelf:coord="799,221,886,381" mgshelf:image="[rel ${pipe.ae180behaviorallypepsiuk712220713t1244sFU4OBlcY14productid}]" mgshelf:price="1.30" mgshelf:width="200">Pepsi Max Raspberry</row>
+    <row label="r16" mgshelf:coord="39,393,221,555" mgshelf:image="[rel 5000112644753.png]" mgshelf:price="1.65" mgshelf:width="200">Coke Regular Cherry 500ml</row>
+    <row label="r17" mgshelf:coord="228,394,553,555" mgshelf:image="[rel 5000112656169.png]" mgshelf:price="1.65" mgshelf:width="200">Coke Regular 500ml</row>
+    <row label="r18" mgshelf:coord="560,397,694,555" mgshelf:image="[rel ${pipe.ae180behaviorallypepsiuk712220713t1244sFU4OBlcY17productid}]" mgshelf:price="1.60" mgshelf:width="200">Pepsi Regular 500ml</row>
+    <row label="r19" mgshelf:coord="702,395,885,555" mgshelf:image="[rel 5000112658125.png]" mgshelf:price="1.65" mgshelf:width="200">Dr Pepper 500ml</row>
+    <row label="r20" mgshelf:coord="39,569,221,732" mgshelf:image="[rel 5000112658163.png]" mgshelf:price="1.50" mgshelf:width="200">Fanta Fruit Twist 500ml</row>
+    <row label="r21" mgshelf:coord="228,569,459,732" mgshelf:image="[rel 5000112649932.png]" mgshelf:price="1.50" mgshelf:width="200">Fanta Orange 500ml</row>
+    <row label="r22" mgshelf:coord="466,568,555,732" mgshelf:image="[rel 54491397.png]" mgshelf:price="1.45" mgshelf:width="200">Fanta Orange Zero 500ml</row>
+    <row label="r23" mgshelf:coord="563,574,649,732" mgshelf:image="[rel 50411887.png]" mgshelf:price="1.30" mgshelf:width="200">Tango Orange 500ml</row>
+    <row label="r24" mgshelf:coord="656,575,743,732" mgshelf:image="[rel 5010102244030.png]" mgshelf:price="1.30" mgshelf:width="200">Tango Berry Peach 500ml</row>
+    <row label="r25" mgshelf:coord="750,574,838,732" mgshelf:image="[rel 4060800109798.png]" mgshelf:price="1.30" mgshelf:width="200">7UP Free 500ml</row>
+    <row label="r26" mgshelf:coord="842,570,889,732" mgshelf:image="[rel 5449000109613.png]" mgshelf:price="1.30" mgshelf:width="200">Sprite Zero 500ml</row>
+    <row label="r27" mgshelf:coord="40,744,177,906" mgshelf:image="[rel 5000382112686.png]" mgshelf:price="1.35" mgshelf:width="200">Iron bru 500ml</row>
+    <row label="r28" mgshelf:coord="185,760,313,906" mgshelf:image="[rel 5054267012165.png]" mgshelf:price="1.60" mgshelf:width="200">Lucozade Orange 500ml</row>
+    <row label="r29" mgshelf:coord="321,761,404,906" mgshelf:image="[rel 5054267012172.png]" mgshelf:price="1.60" mgshelf:width="200">Lucozade Original 500ml</row>
+    <row label="r30" mgshelf:coord="412,745,502,906" mgshelf:image="[rel 5054267011960.png]" mgshelf:price="1.60" mgshelf:width="200">Lucoazde Sport Orange 500ml</row>
+    <row label="r31" mgshelf:coord="510,746,602,906" mgshelf:image="[rel 5054267000704.png]" mgshelf:price="1.60" mgshelf:width="200">Lucozade Sport Raspberry 500ml</row>
+    <row label="r32" mgshelf:coord="610,771,743,906" mgshelf:image="[rel 5410438042995.png]" mgshelf:price="1.10" mgshelf:width="200">Yazoo Strawberry 400ml</row>
+    <row label="r33" mgshelf:coord="752,771,884,906" mgshelf:image="[rel 5410438042971.png]" mgshelf:price="1.10" mgshelf:width="200">Yazoo Chocolate 400ml</row>
+    <style name="question.after"><![CDATA[
+<style type="text/css">
+  .bs-btn-primary {
+    background-color: #0091DA;
+    border-color: #0091DA;
+   }
+  .bs-btn-warning{
+    background-color: #8031A7;
+    border-color: #8031A7;
+   }
+   .bs-btn-warning:hover{
+    background-color: #702694;
+    border-color: #702694;
+   }     
+      </style>
+]]></style>
+  </number>
+
+  <suspend/>
+
+  <exec>
+p.endTime = timeSpent()
+ShopTime.val = p.endTime - p.startTime
+  </exec>
+
+  <float 
+   label="ShopTime"
+   optional="0"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Shop Time</title>
+    <comment>Time it took for Shopping</comment>
+  </float>
+
+  <suspend/>
+
+  <number 
+   label="P1_Total_Products"
+   optional="0"
+   randomize="0"
+   size="3">
+    <title>Total Products Purchased</title>
+    <virtual>
+data.val = sum([int(r.c1.val) for r in P_QuantityPurchased.rows if r.c1.val and int(r.c1.val) gt 0])
+    </virtual>
+
+  </number>
+
+  <number 
+   label="P1_Number_Bought_Per_Product"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   size="3">
+    <title>Total Quantity Purchased Per Product</title>
+    <virtual>
+for eachRow in P_QuantityPurchased.rows:
+  if eachRow.c1.val:
+    if int(eachRow.c1.val) &gt; 0:
+                 data.rows[eachRow.index].val = int(eachRow.c1.val or 0)
+    </virtual>
+
+  </number>
+
+  <checkbox 
+   label="P1_Items_Bought"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   optional="1"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Bought</title>
+    <exec>
+for r in P_QuantityPurchased.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      P1_Items_Bought.rows[r.index].val = 1
+    </exec>
+
+  </checkbox>
+
+  <checkbox 
+   label="P1_Items_ClickedOn"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   optional="1"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Clicked On</title>
+    <exec>
+for r in P_QuantityPurchased.rows:
+  if r.c2.val:
+    if int(r.c2.val) &gt; 0:
+      P1_Items_ClickedOn.rows[r.index].val = 1
+    </exec>
+
+  </checkbox>
+
+  <suspend/>
+
+  <exec>
+for eachRow in P_QuantityPurchased.rows:
+    if eachRow.c2.val &gt; 0 and eachRow.c1.val &lt; 1: P1_Items_ClickedOn_NotPurchased.rows[eachRow.index].val = 1
+else:                         P1_Items_ClickedOn_NotPurchased.r99.val = 1
+  </exec>
+
+  <checkbox 
+   label="P1_Items_ClickedOn_NotPurchased"
+   optional="1"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Clicked On, but Not Purchased</title>
+    <row label="r1">Diet Coke 500ml</row>
+    <row label="r2">Diet Pepsi 500ml</row>
+    <row label="r3">Diet Coke 330ml</row>
+    <row label="r4">Pepsi Max 330ml</row>
+    <row label="r5">Coke Reg 330ml</row>
+    <row label="r6">7up Reg 330ml</row>
+    <row label="r7">7UP Free 330ml</row>
+    <row label="r8">Sprite Zero 330ml</row>
+    <row label="r9">Fanta 330ml</row>
+    <row label="r10">Coke Zero Vanilla 500ml</row>
+    <row label="r11">Coke Zero Cherry 500ml</row>
+    <row label="r12">Coke Zero 500ml</row>
+    <row label="r13">Pepsi Max 500ml</row>
+    <row label="r14">Pepsi Max Cherry 500ml</row>
+    <row label="r15">Pepsi Max Raspberry 500ml</row>
+    <row label="r16">Coke Regular Cherry 500ml</row>
+    <row label="r17">Coke Regular 500ml</row>
+    <row label="r18">Pepsi Regular 500ml</row>
+    <row label="r19">Dr Pepper 500ml</row>
+    <row label="r20">Fanta Fruit Twist 500ml</row>
+    <row label="r21">Fanta Orange 500ml</row>
+    <row label="r22">Fanta Orange Zero 500ml</row>
+    <row label="r23">Tango Orange 500ml</row>
+    <row label="r24">Tango Berry Peach 500ml</row>
+    <row label="r25">7UP Free 500ml</row>
+    <row label="r26">Sprite Zero 500ml</row>
+    <row label="r27">Iron bru 500ml</row>
+    <row label="r28">Lucozade Orange 500ml</row>
+    <row label="r29">Lucozade Original 500ml</row>
+    <row label="r30">Lucoazde Sport Orange 500ml</row>
+    <row label="r31">Lucozade Sport Raspberry 500ml</row>
+    <row label="r32">Yazoo Strawberry 400ml</row>
+    <row label="r33">Yazoo Chocolate 400ml</row>
+    <row label="r99">All Items Clicked On Were Purchased</row>
+  </checkbox>
+
+  <suspend/>
+
+  <number 
+   label="P1_Number_UniqueProducts_Purchased"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title># of Unique Products Purchased</title>
+    <exec>
+P1_Number_UniqueProducts_Purchased.val = P1_Items_Bought.count
+    </exec>
+
+  </number>
+
+  <number 
+   label="P1_Number_ClickedOn_Products"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title># of Products Clicked On</title>
+    <exec>
+P1_Number_ClickedOn_Products.val = P1_Items_ClickedOn.count
+    </exec>
+
+  </number>
+
+  <number 
+   label="P1_Number_ClickedOn_Products_NotPurchased"
+   cond="not(P1_Items_ClickedOn_NotPurchased.r99)"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title># of Products Clicked On but NOT Purchased</title>
+    <exec>
+P1_Number_ClickedOn_Products_NotPurchased.val = P1_Items_ClickedOn.count - P1_Items_Bought.count
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <autofill label="vProductsBought" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="TB" autofill="P_QuantityPurchased.c1.r2.val &gt;0 or P_QuantityPurchased.c1.r4.val &gt;0 or P_QuantityPurchased.c1.r13.val &gt;0 or P_QuantityPurchased.c1.r14.val &gt;0 or P_QuantityPurchased.c1.r15.val &gt;0">TestBrand Purchased</row>
+    <row label="No" autofill="vProductsBought.count==0">TestBrand NOT Purchased</row>
+  </autofill>
+
+  <autofill label="vProductsBoughtComp1" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="Yes">Comp1 Brand Purchased</row>
+    <row label="No" autofill="vProductsBoughtComp1.count==0">Main Competitor 1 NOT Purchased</row>
+  </autofill>
+
+  <autofill label="vProductsBoughtComp2" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="Yes">Comp2 Brand Purchased</row>
+    <row label="No" autofill="vProductsBoughtComp2.count==0">Main Competitor 2  NOT Purchased</row>
+  </autofill>
+
+  <suspend/>

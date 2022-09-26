@@ -1,0 +1,46 @@
+<exec>
+if (A2.r9):
+   TermAll.A2.val=1
+if A4B.r1 or A4B.r6:
+    TermAll.A4B.val=1
+if A1.r1 and (A2.r1 or A2.r2) and (A5.r1 or A5.r2 or A5.r3 or A5.r99):
+    TermAll.A5B.val=1
+if A1.r1 and (A2.r3 or A2.r4) and (A5.r1 or A5.r2 or A5.r99):
+    TermAll.A5C.val=1
+if A1.r2 and (A5.r10 or A5.r11 or A5.r99):
+    TermAll.A5K.val=1
+if A6.r99 or not(A6.r2 or A6.r7 or A6.r8 or A6.r9):
+    TermAll.A6.val=1
+if A7_hid.none:
+    TermAll.A7.val=1
+if A8.none:
+    TermAll.A8.val=1
+if A10.r3:
+    TermAll.A10.val=1
+if A11.none:
+    TermAll.A11.val=1
+</exec>
+
+<checkbox 
+  label="TermAll"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1">
+  <title>Summary the respondents termianted place.</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="A2">A2_Term</row>
+  <row label="A4B">A4B_Term</row>
+  <row label="A5B">China - Beijing/Shanghai</row>
+  <row label="A5C">China - Chengdu/ Guangzhou</row>
+  <row label="A5K">Korea</row>
+  <row label="A6">A6</row>
+  <row label="A7">A7</row>
+  <row label="A8">A8</row>
+  <row label="A10">A10</row>
+  <row label="A11">A11</row>
+</checkbox>
+
+<suspend/>
+
+<term label="termination" cond="TermAll.any">TermAll termination.</term>
+
+<suspend/>

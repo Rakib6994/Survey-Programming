@@ -1,0 +1,79 @@
+<loop label="L1" builderSource="hidconcept" vars="hidconceptrows,var2">
+  <title>CT1 Loop</title>
+  <block label="b1" builder:title="default loop block">
+    <suspend/>
+
+    <html label="cm1_[loopvar: label]" ss:commentClassNames="demo v1" where="survey"><div align="center" style="text-align: left;"><br /><br />&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;[loopvar: hidconceptrows]</div></html>
+
+    <suspend/>
+
+    <checkbox 
+    label="CT1_[loopvar: label]"
+    atleast="1"
+    ss:questionClassNames="demo"
+    uses="atm1d.9">
+      <title>After seeing this, which of the following would you say is true?<br /><br />[loopvar: var2]</title>
+      <comment><em>Please select all that apply.</em></comment>
+      <row label="r1">This makes me want to find out more about travel vaccines</row>
+      <row label="r2">This makes me feel more comfortable about getting travel vaccines</row>
+      <row label="r3">This makes me feel like it is important that I get travel vaccinations before travelling</row>
+      <row label="r4">It is clear</row>
+      <row label="r5">It is attention grabbing</row>
+      <row label="r6">It is credible</row>
+      <row label="r7">It is distinctive</row>
+      <row label="r8">It is memorable</row>
+      <row label="r9">I would talk about this with friends or family members</row>
+
+         [>>>--------------------------------------->>  CONDITION INSIDE LOOP  >>>----------------------------------------------------------->>]
+
+      <row label="r10" cond="'[loopvar: label]' == 'Lr1'">I believe this business is trying to increase the safety of its customers</row>  
+      <row label="r11" cond="'[loopvar: label]' == 'Lr1'">I believe this company is highly socially responsible</row>
+      <row label="r12" exclusive="1" randomize="0">None of the above</row>
+    </checkbox>
+
+    <suspend/>
+
+    <select 
+    label="CT2_[loopvar: label]"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>After seeing this idea, how likely would you be to book a travel consult with a GP?<br /><br />[loopvar: var2]</title>
+      <comment><em>Please select one.</em></comment>
+      <choice label="r1">Very unlikely</choice>
+      <choice label="r2">Somewhat unlikely</choice>
+      <choice label="r3">Neither likely nor unlikely</choice>
+      <choice label="r4">Somewhat likely</choice>
+      <choice label="r5">Very likely</choice>
+    </select>
+  </block>
+
+  <looprow label="Lr1" cond="(hidconcept.r1)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept1.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept1.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 236px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept1.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(hidconcept.r2)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept2.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept2.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 242px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept2.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(hidconcept.r3)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept3.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept3.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 243px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept3.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(hidconcept.r4)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept4.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept4.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 239px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept4.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(hidconcept.r5)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept5.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept5.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 242px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept5.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(hidconcept.r6)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept6.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept6.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 703, title: &amp;quot;pop-up&amp;quot;} );" style="height: 352px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept6.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+</loop>

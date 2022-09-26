@@ -1,0 +1,12 @@
+<radio 
+  label="profession"
+  atm1d:large_buttonAlign="center"
+  atm1d:showInput="0"
+  uses="atm1d.9">
+  <title>I am a/an...</title>
+  <comment>Select one response.</comment>
+  <row label="r1">Cleaner</row>
+  <row label="r2">Employee</row>
+</radio>
+
+<suspend/>

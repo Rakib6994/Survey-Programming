@@ -1,0 +1,38 @@
+<loop label="l1" randomizeChildren="1" vars="q1">
+  <title>L1 Loop</title>
+  <block label="b1" builder:title="default loop block">
+    <text 
+    label="q2_[loopvar: label]"
+    optional="0"
+    randomize="0"
+    size="25">
+      <title>What do you like about [loopvar: q1]?</title>
+      <comment>be specific</comment>
+    </text>
+  </block>
+
+  <looprow label="r1" cond="(q1.r1)">
+    <loopvar name="q1">Brand 1</loopvar>
+  </looprow>
+
+  <looprow label="r2" cond="(q1.r2)">
+    <loopvar name="q1">Brand 2</loopvar>
+  </looprow>
+
+  <looprow label="r3" cond="(q1.r3)">
+    <loopvar name="q1">Brand 3</loopvar>
+  </looprow>
+</loop>
+
+<number 
+  label="l1_LOOP_ORDER"
+  size="1">
+  <title>l1 Loop Order</title>
+  <virtual>
+assignRandomOrder('l1_expanded', 'children')
+  </virtual>
+
+  <row label="l1_r1_expanded">Loop 1</row>
+  <row label="l1_r2_expanded">Loop 2</row>
+  <row label="l1_r3_expanded">Loop 3</row>
+</number>

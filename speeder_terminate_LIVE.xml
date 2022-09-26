@@ -1,0 +1,23 @@
+<exec>
+p.scf = timeSpent()   
+if p.scf lt 240:    
+  SC.val = 0  
+else:   
+  SC.val = 1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="SC"
+  where="execute,survey,report">
+  <title>Speeder checks</title>
+  <comment>Please select one..</comment>
+  <row label="r1" value="1">Speeder</row>
+  <row label="r2" value="2">Not Speeder</row>
+</radio>
+
+<suspend/>
+
+<term cond="SC.r1 and (not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing))">Speeder terminate.</term>
+</survey>

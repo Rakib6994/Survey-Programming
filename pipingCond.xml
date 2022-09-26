@@ -1,0 +1,5 @@
+ rowCond="B1[row.index]"   <!--Row Piping-->
+ colCond="A8.rows[col.index]"  <!--Column Piping-->
+ rowCond="not Q5[row.index]"
+
+

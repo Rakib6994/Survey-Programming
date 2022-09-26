@@ -1,0 +1,6 @@
+<exec>
+print Q10_1.r1.val # prints True
+print Q10_1.r2.val # prints None  [if ival is used it will return 0 instead of None]
+print Q10_2.r1.val # prints 0
+print Q10_2.r2.val # prints 0
+</exec>

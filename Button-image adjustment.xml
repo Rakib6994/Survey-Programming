@@ -1,0 +1,36 @@
+<radio 
+  label="A8"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  uses="atm1d.9">
+  <title>Lastly, we would like to show you 2 product claims.</title>
+  <comment> Please select the one that is most attractive to you.</comment>
+  <style name="page.head"><![CDATA[
+<style>
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 480px;
+    min-width: 400px;
+}
+
+\@if not device.desktop
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 450px;
+    min-width: 400px;
+}
+
+\@endif
+
+</style>
+]]></style>
+  <row label="r1"><img class="survey_image survey-image-original fit" src="/survey/selfserve/202d/220138/Claim_A_3X_Stronger_Protection.png" alt="Claim_A_3X_Stronger_Protection.png" title="Claim_A_3X_Stronger_Protection.png" /></row>
+  <row label="r2"><img class="survey_image survey-image-original fit" src="/survey/selfserve/202d/220138/Claim_B_72H_Non_Stop_Protection.png" alt="Claim_B_72H_Non_Stop_Protection.png" title="Claim_B_72H_Non_Stop_Protection.png" /></row>
+</radio>
+
+<suspend/>
+------------------------------------------|
+
+
+   atm1d:large_maxHeight="520px"
+   atm1d:large_maxWidth="340px"
+   atm1d:large_minHeight="520px"
+   atm1d:large_minWidth="340px"

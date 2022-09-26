@@ -1,0 +1,210 @@
+  <block label="FlashExposure" builder:title="FlashExposure">
+    <html label="PracticeIntro1" where="survey">You are now going to be shown a picture on the screen. Please pay attention as it’s going to be a very short exposure.</html>
+
+    <suspend/>
+
+    <checkbox 
+    label="F_Practice"
+    optional="1"
+    randomize="0"
+    ss:questionClassNames="sq-timertest"
+    timertest:image="[rel ShoppingCartNew.jpg]"
+    timertest:timerLimit="1500"
+    uses="prstimer.2">
+      <title>Please review the image below. After 1/2 second, you will automatically be advanced to the next page.</title>
+      <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+<style>
+.sq-timertest .sq-timertestContainer {
+  background-color:white;
+}
+
+</style>
+]]></style>
+    </checkbox>
+
+    <suspend/>
+
+    <textarea 
+    label="F_Practice_OE"
+    height="5"
+    optional="0"
+    randomize="0"
+    width="80">
+      <title>Please describe everything you saw, even if you are not sure about it.</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <html label="F_FlashIntro1" where="survey">You are now going to be shown another picture on the screen. Please pay attention as it’s going to be a very short exposure.</html>
+
+    <suspend/>
+
+    <checkbox 
+    label="F_Flash1"
+    optional="1"
+    randomize="0"
+    ss:questionClassNames="sq-timertest"
+    timertest:image="[rel ${pipe.FEImage}.jpg]"
+    timertest:timerLimit="1000"
+    uses="prstimer.2">
+      <title>Please review the image below. After 1 seconds, you will automatically be advanced to the next page.</title>
+      <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+<style>
+.sq-timertest .sq-timertestContainer {
+  background-color:white;
+}
+
+</style>
+]]></style>
+    </checkbox>
+
+    <suspend/>
+
+    <textarea 
+    label="F_Flash1_OE"
+    height="5"
+    optional="0"
+    randomize="0"
+    width="80">
+      <title>Please describe everything you saw, even if you are not sure about it.</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <note>REMOVING FLASH 2 from all PF. Aug 1, 2022 as per new architecture</note>
+    <html label="F_FlashIntro2" where="survey">You will now see the same picture again. Pay attention as it’s going to be a short exposure.</html>
+
+    <suspend/>
+
+    <checkbox 
+    label="F_Flash2"
+    optional="1"
+    randomize="0"
+    ss:questionClassNames="sq-timertest"
+    timertest:image="[rel ${pipe.FEImage}.jpg]"
+    timertest:timerLimit="2000"
+    uses="prstimer.2">
+      <title>Please review the image below. After 2 second, you will automatically be advanced to the next page.</title>
+      <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+<style>
+.sq-timertest .sq-timertestContainer {
+  background-color:white;
+}
+</style>
+]]></style>
+    </checkbox>
+
+    <suspend/>
+
+    <textarea 
+    label="F_Flash2_OE"
+    height="5"
+    optional="0"
+    randomize="0"
+    width="80">
+      <title>What <u>else</u> have you seen?</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <exec where="execute,survey,report">
+p.startTime = timeSpent()
+    </exec>
+
+    <note>PROGRAMMER NOTE: IF Fit, Und and Usual are included - they must be choice 1, 2, 3 and NOT randomized. Labels must stay as is for Norms</note>
+    <note>PROGRAMMER NOTE: Usual - ask if Past buyers Past purchased selectes Test Brand  -- logic is built in: cond="S_Brand_PastPurchased.TB"</note>
+    <suspend/>
+
+    <radio 
+    label="F_Flash3"
+    colLegend="both"
+    randomize="0"
+    shuffle="rows"
+    uses="onerowatatime.3">
+      <title>How much do you agree or disagree that the following phrases apply to this product based on what you have just seen?</title>
+      <comment><div align="left">
+<ul>
+<ul>
+<li />10 means that you strongly agree with the statement
+<li />1 means that you strongly disagree with the statement
+</ul>
+</ul>
+<strong>You may choose any number from 1 to 10 that best describes your opinion.</strong></div>
+<br /><br /><strong><span style="font-size: 14pt;">Based on what you have just seen, would you say that….</span></strong></comment>
+      <net labels="c1">TB</net>
+      <net labels="c1,c2">T2B</net>
+      <net labels="c1,c2,c3">T2B</net>
+      <net labels="c10">BB</net>
+      <net labels="c9,c10">B2B</net>
+      <net labels="c8,c9,c10">B3B</net>
+      <col label="c1" value="10">10<br /><span style="font-size: 8pt;">Strongly<br />Agree</span></col>
+      <col label="c2" value="9">9</col>
+      <col label="c3" value="8">8</col>
+      <col label="c4" value="7">7</col>
+      <col label="c5" value="6">6</col>
+      <col label="c6" value="5">5</col>
+      <col label="c7" value="4">4</col>
+      <col label="c8" value="3">3</col>
+      <col label="c9" value="2">2</col>
+      <col label="c10" value="1">1<br /><span style="font-size: 8pt;">Strongly<br />Disagree</span></col>
+      <row label="r1">It is easy to understand what flavor/variety the product is</row>
+      <row label="r2">Would be great tasting</row>
+      <row label="r3" cond="S_Brand_PastPurchased2.r4 or S_Brand_PastPurchased2.r5 or S_Brand_PastPurchased2.r6 or S_Brand_PastPurchased2.r7 or S_Brand_PastPurchased2.r8">You recognize this as your usual product/brand</row>
+      <row label="r4">Is the right size to fit my needs</row>
+      <row label="r5">It is easy to understand what size the product is</row>
+    </radio>
+
+    <exec where="execute,survey,report">
+p.endTime = timeSpent()
+    </exec>
+
+    <suspend/>
+
+    <float 
+    label="Flash3_Time"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Flash3 Time</title>
+      <comment>Time it Took for Flash3</comment>
+      <exec>
+Flash3_Time.val = p.endTime - p.startTime
+      </exec>
+
+    </float>
+
+    <suspend/>
+
+    <radio 
+    label="Straightliner_Flash3"
+    randomize="0"
+    where="execute,survey,report">
+      <title>DO NOT REMOVE OR MODIFY - Straightliner Punch - Just Tracking for Flash3</title>
+      <exec>
+if not(gv.isSST()) and p.endTime - p.startTime le 7 and (F_Flash3.c1.all or F_Flash3.c2.all or F_Flash3.c3.all or F_Flash3.c4.all or F_Flash3.c5.all or F_Flash3.c6.all or F_Flash3.c7.all or F_Flash3.c8.all or F_Flash3.c9.all or F_Flash3.c10.all):
+  Straightliner_Flash3.val = 0
+else:
+  Straightliner_Flash3.val = 1
+      </exec>
+
+      <row label="r1">Straightliner</row>
+      <row label="r2">Non-Straightliner</row>
+    </radio>
+
+    <suspend/>
+  </block>

@@ -1,0 +1,13 @@
+<checkbox 
+  label="B5_Intro"
+  audio:enable_replay="1"
+  audio:file="https://paralleldata.decipherinc.com//survey/selfserve/53b/220602/220505_DHS_Youth_30s_Radio_MASTER_DB.mp3"
+  keepWith="B5a"
+  ss:questionClassNames="custom-qcaudio"
+  uses="audio.3">
+  <title>We are now going to play you a radio ad. This will only be played once. Please make sure that your speakers are turned up so that you can hear the sound and the whole radio ad has finished playing before moving to the next question.
+	</title>
+  <comment>
+		Please click the speaker to play the audio.
+	</comment>
+</checkbox>

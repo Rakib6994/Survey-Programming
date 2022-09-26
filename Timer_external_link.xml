@@ -1,0 +1,23 @@
+    <exec>
+a = datetime.datetime.now().replace(microsecond=0)
+    </exec>
+
+
+
+-----------------------------------------------
+
+    <exec>
+b = datetime.datetime.now().replace(microsecond=0)
+ShopTime.val= b-a
+    </exec>
+
+    <suspend/>
+
+    <text 
+    label="ShopTime"
+    size="40"
+    where="execute,survey,report">
+      <title>Shopping Time.</title>
+    </text>
+
+    <suspend/>

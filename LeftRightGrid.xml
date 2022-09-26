@@ -1,0 +1,19 @@
+ <radio 
+  label="Q_LeftRightGrid"
+  grouping="rows"
+  optional="1"
+  rowLegend="both"
+  uses="leftright.1">
+  <title>Left-Right grid Question (Support PCs)<br />Please select the word that describes your personality best.</title>
+  <comment>Select one for each.</comment>
+  <row label="r1" rightLegend="Unmotivated">Ambitious</row>
+  <row label="r2" rightLegend="Rebellious">Co-operative</row>
+  <row label="r3" rightLegend="Indecisive">Determined</row>
+  <row label="r4" rightLegend="Stubborn">Felxible</row>
+  <col label="c1">1</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">5</col>
+</radio>
+<suspend/>

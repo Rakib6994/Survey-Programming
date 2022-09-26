@@ -1,0 +1,16 @@
+Redirect links are:
+
+Complete Snapshot
+https://emea.focusvision.com/survey/selfserve/1da7/ad664?participantId=xxxxxx&state=ssssss&Q_statusD=3
+
+Qualify manually uninstalled by respondent
+https://emea.focusvision.com/survey/selfserve/1da7/ad664?participantId=xxxxxx&state=ssssss&Q_statusD=2
+
+respondent's device doesn't meet the minimum data thresholds
+https://emea.focusvision.com/survey/selfserve/1da7/ad664?participantId=xxxxxx&state=ssssss&Q_statusD=4
+
+respondent's device runs into any other errors, uncommon occurrence
+https://emea.focusvision.com/survey/selfserve/1da7/ad664?participantId=xxxxxx&state=ssssss&Q_statusD=5
+
+respondent's answering yes to opt in but not qualifying
+https://emea.focusvision.com/survey/selfserve/1da7/ad664?participantId=xxxxxx&state=ssssss&Q_statusD=6

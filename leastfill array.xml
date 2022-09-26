@@ -1,0 +1,14 @@
+<!--PROGLEASTFILL autocode here-->
+
+
+<quota label="leastfill1" cond="proglist.any" overquota="noqual" sheet="concept_quota"/>
+
+
+<exec>
+arr =['Concept1','Concept2','Concept3','Concept4']
+for itr in range(len(arr)):
+  if (hasMarker('/concept_quota/' + arr[itr])):
+     hidlist.rows[itr].val = 1
+</exec>
+
+<!--HIDLEASTFILL autocodeD here-->

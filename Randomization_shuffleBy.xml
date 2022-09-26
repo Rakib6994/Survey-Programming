@@ -1,0 +1,23 @@
+<radio label="Q1" shuffle="rows">
+    <title>Please choose one.</title>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+    <row label="r4">4</row>
+    <row label="r5">5</row>
+    <row label="r6">6</row>
+</radio>
+
+<radio label="Q2" shuffle="rows" shuffleBy="Q1">
+    <title>Please choose one.</title>
+    <row label="r1">1</row>
+    <row label="r2" where="none">2</row>
+    <row label="r3">3</row>
+    <row label="r4" where="none">4</row>
+    <row label="r5">5</row>
+    <row label="r6" where="none">6</row>
+</radio>
+
+
+
+<exec>Q2.rows.order = Q1.rows.order</exec>

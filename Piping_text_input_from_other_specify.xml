@@ -1,0 +1,64 @@
+<checkbox 
+  label="Q3a"
+  atleast="1"
+  atm1d:large_maxHeight="100%"
+  atm1d:large_minHeight="50px"
+  atm1d:showInput="0"
+  atm1d:small_minHeight="50px"
+  atm1d:viewMode="horizontal"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>Below is a list of factors that car owners may consider when choosing a car servicing centre to go for the first time. <br />Please select all the factors that you would consider when choosing which car servicing centre to go with when servicing the <b>[pipe: S2b]</b> car that you drive most often.</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Price of servicing</row>
+  <row label="r2">Proximity to my home</row>
+  <row label="r3">Close relationship with service centre owner</row>
+  <row label="r4">Authorisation of service centre by car maker</row>
+  <row label="r5">Customer review / rating</row>
+  <row label="r6">Recommendation from family / friends</row>
+  <row label="r7">Close relationship with service centre staff</row>
+  <row label="r8">Complimentary services included during servicing</row>
+  <row label="r9">Provision of warranty for replaced parts</row>
+  <row label="r10">Use of original parts for replacement</row>
+  <row label="r11">Use of certified technicians</row>
+  <row label="r98" open="1" openSize="25" randomize="0">Others, please specify:</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q3b"
+  cond="(Q3a.count&gt;3)"
+  atleast="3"
+  atm1d:large_maxHeight="100%"
+  atm1d:large_minHeight="80px"
+  atm1d:showInput="0"
+  atm1d:small_minHeight="80px"
+  atm1d:viewMode="vertical"
+  atmost="3"
+  rowCond="Q3a[row.index]"
+  shuffle="rows"
+  shuffleBy="Q3a"
+  uses="atm1d.9">
+  <title>Below is a list of factors that car owners may consider when choosing a car servicing centre to go for the first time.<br />Among these factors, please select the top 3 most important factors in your consideration.</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Price of servicing</row>
+  <row label="r2">Proximity to my home</row>
+  <row label="r3">Close relationship with service centre owner</row>
+  <row label="r4">Authorisation of service centre by car maker</row>
+  <row label="r5">Customer review / rating</row>
+  <row label="r6">Recommendation from family / friends</row>
+  <row label="r7">Close relationship with service centre staff</row>
+  <row label="r8">Complimentary services included during servicing</row>
+  <row label="r9">Provision of warranty for replaced parts</row>
+  <row label="r10">Use of original parts for replacement</row>
+  <row label="r11">Use of certified technicians</row>
+  <row label="r98">${Q3a.r98.open}</row>
+</checkbox>
+
+<suspend/>
+
+
+
+
+

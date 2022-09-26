@@ -1,0 +1,22 @@
+ Style 1:
+
+ <radio label="q1" uses=”atmtable.6”>
+    <title>How was the weather during your vacation?</title>
+    <col label="c1">Terrible&lt;br /&gt; 1</col>
+    <col label="c2">2</col>
+    <col label="c3">3</col>
+    <col label="c4">4</col>
+    <col label="c5">Awesome&lt;br /&gt; 5</col>
+  </radio>
+
+
+   Style 2:
+
+   <radio label="q1" uses=”atmtable.6”>
+    <title>How was the weather during your vacation?</title>
+    <col atmtable:col_legend_text="Terrible" label="c1">1</col>
+    <col label="c2">2</col>
+    <col label="c3">3</col>
+    <col label="c4">4</col>
+    <col atmtable:col_legend_text="Awesome" label="c5">5</col>
+  </radio>

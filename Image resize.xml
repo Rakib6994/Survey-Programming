@@ -1,0 +1,23 @@
+<autofill label="Q20C1" where="execute,survey,report">
+  <title>Q20 column 1.</title>
+  <row label="r1" autofill="Q18.r1"><img width="180" style="height: 120px;"  src="/survey/selfserve/202d/211258/AD_1.png" alt="AD_1.png" title="AD_1.png" /></row>
+  <row label="r2" autofill="Q18.r2"><img width="180" style="height: 120px;"  src="/survey/selfserve/202d/211258/AD_4.png" alt="AD_4.png" title="AD_4.png" /></row>
+</autofill>
+
+<suspend/>
+
+<autofill label="Q20C2" where="execute,survey,report">
+  <title>Q20 column 2.</title>
+  <row label="r1" autofill="Q18.r1"><img width="180" style="height: 120px;" src="/survey/selfserve/202d/211258/AD_2.png" alt="AD_2.png" title="AD_2.png" /></row>
+  <row label="r2" autofill="Q18.r2"><img width="180" style="height: 120px;" src="/survey/selfserve/202d/211258/AD_5.png" alt="AD_5.png" title="AD_5.png" /></row>
+</autofill>
+
+<suspend/>
+
+<autofill label="Q20C3" where="execute,survey,report">
+  <title>Q20 column 3.</title>
+  <row label="r1" autofill="Q18.r1"><img width="180" style="height: 120px;"  src="/survey/selfserve/202d/211258/AD_3.png" alt="AD_3.png" title="AD_3.png" /></row>
+  <row label="r2" autofill="Q18.r2"><img width="180" style="height: 120px;"  src="/survey/selfserve/202d/211258/AD_6.png" alt="AD_6.png" title="AD_6.png" /></row>
+</autofill>
+
+<suspend/>

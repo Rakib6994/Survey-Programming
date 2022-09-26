@@ -1,0 +1,7 @@
+<condition label="maleTV" cond="Q1.r1 and Q2.r3 and (Q3.r1 or Q3.r2 or Q3.r3)">Males who frequently watch TV</condition>
+
+<condition label="maleGamers" cond="Q1.r1 and (Q2.r4 or Q2.r5)">Males who game via console or PC</condition>
+
+<condition label="femaleTV" cond="Q1.r2 and Q2.r3 and (Q3.r1 or Q3.r2 or Q3.r3)">Females who frequently watch TV</condition>
+
+<condition label="femaleGamers" cond="Q1.r2 and (Q2.r4 or Q2.r5)">Females who game via console or PC</condition>

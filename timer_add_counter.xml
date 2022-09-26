@@ -1,0 +1,19 @@
+
+<style label="disable_continue" arg:timeout="3" mode="after" name="respview.client.js" with="con3" wrap="ready"><![CDATA[
+var $submitButton = $ ("#btn_continue, #btn_finish");
+ $submitButton.prop("disabled", true);
+ setTimeout( function() {
+ $submitButton.prop("disabled", false);
+ }, $(timeout) * 4500);
+]]></style>
+
+
+
+<html label="con1" where="survey"><div align="center"><img src="/survey/selfserve/202d/211191/con1.png" alt="con1.png" class="survey_image survey-image-original fit" title="con1.png" /></div></html>
+
+<html label="con2" where="survey"><div align="center"><img src="/survey/selfserve/202d/211191/con2.png" alt="con2.png" class="survey_image survey-image-original fit" title="con2.png" /></div></html>
+
+<html label="con3" ss:commentClassNames="timer delay_15" where="survey"><div align="center"><img src="/survey/selfserve/202d/211191/con3.png" alt="con3.png" class="survey_image survey-image-original fit" title="con3.png" /></div></html>
+
+<suspend/>
+

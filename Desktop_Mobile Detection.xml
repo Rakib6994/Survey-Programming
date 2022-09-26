@@ -1,0 +1,17 @@
+<exec>
+if device.desktop:
+	QhidDevice.val=0
+else:
+	QhidDevice.val=1
+</exec>
+
+<radio 
+  label="QhidDevice"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1">
+  <title>QhidSample</title>
+  <row label="r1">Desktop</row>
+  <row label="r2">Mobile</row>
+</radio>
+
+<suspend/>

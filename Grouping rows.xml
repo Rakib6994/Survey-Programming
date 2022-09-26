@@ -1,0 +1,26 @@
+<!--Before Question-->
+<exec when="init">
+def group_rows( question, grouped_rows ):
+    first_item_index = None
+    shuffle_order = [row.index for row in question.rows.order]
+
+    for index, row in enumerate( shuffle_order ):
+        if question.rows[row].label in grouped_rows:
+            if first_item_index == None:
+                first_item_index = index
+            else:
+                first_item_index += 1
+                shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+
+    question.rows.order = shuffle_order
+</exec>
+
+
+
+
+<!--After Comment-->
+
+<exec>
+group_rows(B14, ['r4', 'r5']); group_rows(B14, ['r13', 'r14', 'r15']); group_rows(B14, ['r17', 'r18', 'r19']);group_rows(B14, ['r21', 'r22', 'r23','r24','r25']);
+group_rows(B14, ['r31', 'r32']); group_rows(B14, ['r40', 'r41', 'r42']); group_rows(B14, ['r44', 'r45', 'r46']);group_rows(B14, ['r48', 'r49']);
+  </exec>

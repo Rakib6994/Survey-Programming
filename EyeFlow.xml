@@ -1,0 +1,43 @@
+<textarea 
+  label="E_Flow_Ex_Pack1">
+  <title>&amp;nbsp;</title>
+  <style name="question.after"><![CDATA[
+<link href="[rel eyeflow.css]" rel="stylesheet">
+
+     <script type="text/javascript" src="[rel vague.js]"></script>
+     <script type="text/javascript" src="[rel eyeflow.json.js]"></script>
+     
+
+<script type="text/javascript">
+
+          $ (document).ready(function(){
+
+
+                var clickedOnce = false;
+            var qn = ${jsexport()};
+            console.log(qn);
+
+           //Hide the textarea box and continue button
+           $ ("#question_"+qn.label).hide();
+           $ (".survey-buttons").hide();           
+
+           //Script used to create the spotlight and record the mouse movement at a sample of 10/s
+           eyeflow('[rel ${pipe.img_test}.jpg]', '${resp_id.val}', qn, 10000, 100);
+                
+
+            /*Using vague.js to make blurred image*/
+            var vague = $ ("#container img").Vague({intensity:5});
+            vague.blur();
+            /**************************************/
+
+          });
+
+        </script>
+
+
+        <div id="container">
+            <img id="et_img" alt="follow mouse" draggable="false" />
+            <div class="revealPic" draggable="false" ></div>
+        </div>
+]]></style>
+</textarea>

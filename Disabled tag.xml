@@ -1,0 +1,6 @@
+Disabled is used to hide row/col/question labels.
+
+<exec>
+Q10.r2.disabled = True
+Q10.c2.disabled = True
+</exec>

@@ -1,0 +1,19 @@
+<radio 
+  label="Language">
+  <title>Please select language</title>
+  <comment>keep only for testing purposes</comment>
+  <row label="r1">English</row>
+  <row label="r2">Indonesian</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if Language.r1:
+  setLanguage('english')
+if Language.r2:
+  setLanguage('indonesian')
+  setExtra('decLang','english')
+</exec>
+
+<suspend/>

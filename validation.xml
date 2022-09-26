@@ -1,0 +1,100 @@
+
+<!-- After Title-->
+
+<validate>
+if (B1.r1.c1 and B1.r2.c1) or (B1.r1.c2 and B1.r2.c2)  or (B1.r1.c5 and B1.r2.c5)  :
+     error("Sorry, but that answer combination contradicts itself – please make sure your answers for each statement are different")
+</validate>
+
+
+
+<!--Postcode validation.-->
+
+<text 
+  label="S3a"
+  fwidth="1024"
+  optional="0"
+  size="5">
+  <title>Please enter your postcode:</title>
+  <validate>
+if not this.val.isdigit():
+  error(res.Errpostcode)
+if (len(this.val) lt 3) or (len(this.val) gt 4):
+  error(res.Errpostcode)
+  </validate>
+
+  <style arg:mlen="4" copy="QNumstyle" name="el.text"/>
+</text>
+
+<suspend/>
+
+
+
+<!-- Income Validation-->
+
+
+<radio 
+  label="S4a"
+  uses="atm1d.9"
+  values="order">
+  <title>Which of the following best describes your <strong><u>personal</u> annual household income</strong>, before tax?</title>
+  <comment>Please select one.</comment>
+  <row label="r1" value="1">Under $30,000</row>
+  <row label="r2" value="2">$30,000 - $39,999</row>
+  <row label="r3" value="3">$40,000 - $59,999</row>
+  <row label="r4" value="4">$60,000 - $79,999</row>
+  <row label="r5" value="5">$80,000 - $99,999</row>
+  <row label="r6" value="6">$100,000 – $119,999</row>
+  <row label="r7" value="7">$120,000 - $149,999</row>
+  <row label="r8" value="8">$150,000 or more</row>
+  <row label="r99" value="99">Prefer not to say</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="S4b"
+  uses="atm1d.9"
+  values="order">
+  <title>And which of the following best describes your <strong><u>total</u> annual household income</strong>, before tax?</title>
+  <comment>Please select one.</comment>
+  <validate>
+if not(S4a.r99) and (S4b.val &lt; S4a.val) :
+     error("Household Income must be equal or greater than Personal income.")
+  </validate>
+
+  <row label="r1" value="1">Under $30,000</row>
+  <row label="r2" value="2">$30,000 - $39,999</row>
+  <row label="r3" value="3">$40,000 - $59,999</row>
+  <row label="r4" value="4">$60,000 - $79,999</row>
+  <row label="r5" value="5">$80,000 - $99,999</row>
+  <row label="r6" value="6">$100,000 – $119,999</row>
+  <row label="r7" value="7">$120,000 - $149,999</row>
+  <row label="r8" value="8">$150,000 or more</row>
+  <row label="r99" value="99">Prefer not to say</row>
+</radio>
+
+<suspend/>
+
+
+
+    <number 
+    label="D10_[loopvar: label]"
+    optional="0"
+    randomize="0"
+    size="3"
+    surveyDisplay="desktop">
+      <title><div align="center">[loopvar: concept]</div><br /><br />Based on this description and your own expectations on what you think it would cost, at what price would this product be for a <strong>[loopvar: pack_size]</strong></title>
+      <comment>Please enter a whole number for each.</comment>
+      <validate>
+if (D10_[loopvar: label].r2.val) &lt;= (D10_[loopvar: label].r1.val) or (D10_[loopvar: label].r3.val) &lt;= (D10_[loopvar: label].r2.val) or (D10_[loopvar: label].r4.val) &lt;= (D10_[loopvar: label].r3.val):
+    error("First value is less than Second value, Second value is less than Third value and Third value is less than Fourth value. Please check your input values.")
+      </validate>
+
+      <row label="r1">Too cheap that you would question the quality</row>
+      <row label="r2">Good value for money</row>
+      <row label="r3">Starting to get expensive but still worth buying</row>
+      <row label="r4">Too expensive and not worth buying</row>
+    </number>
+
+    <suspend/>

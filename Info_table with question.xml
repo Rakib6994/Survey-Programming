@@ -1,0 +1,47 @@
+<radio 
+  label="SEC2"
+  atm1d:showInput="0"
+  uses="atm1d.9">
+  <title><strong>Only for classification purposes, with this showcard,</strong> how much is your average household expenditure in a month? (Coming from purchases, own production and giving).<br /><br />
+<table style="width:90%">
+<tbody>
+<tr>
+<td style="text-align: left; border:1px solid black; padding-left: 10px; padding-top: 25px; padding-bottom: 20px;"><u><strong>For food expenditures including:</strong></u> <br />Rice, corn, wheat, rice flour, cornflour, cassava,<br /> sweet potato, potato, taro, sago,<br /> Fish/shrimp/squid/mussels<br /> fresh/salted/preserved, meat, eggs, milk,<br /> vegetables, nuts, fruits,<br /> Oil, beverage ingredients (sugar, tea, coffee, etc.),<br /> seasonings, instant noodles, crackers, bread,<br /> biscuits, porridge, meatballs,<br /> soft drinks, ice syrup, mineral water, alcohol,<br /> tobacco sticks, hand-rolled cigarettes, etc.</td>
+<td style="text-align: left; border:1px solid black; padding-left: 10px; padding-top: 0px; padding-bottom: 20px;"><u><strong>For non-food expenditures including:<br /></strong></u> Lease, contract, estimates of the rent per month,<br /> Electricity bills, telephone, gas, kerosene,<br /> Account home phone, toll-HP, public telephones,<br /> kiosks,<br /> Bath soap/shampoo, cosmetics, hair care/face,<br /> tissue,<br /> Cost of Education, transportation, gasoline, diesel<br /> fuel, lubricating oils,<br /> Levies/charges, insurance paid per month</td>
+</tr>
+</tbody>
+</table></title>
+  <comment>Please select one.</comment>
+  <row label="r1">Up to Rp 300,000</row>
+  <row label="r2">Rp 300,001 - Rp   400,000</row>
+  <row label="r3">Rp 400,001 - Rp   500,000</row>
+  <row label="r4">Rp 500,001 - Rp   600,000</row>
+  <row label="r5">Rp 600,001 - Rp   700,000</row>
+  <row label="r6">Rp 700,001 - 750,000</row>
+  <row label="r7">Rp 750,001 - 800,000</row>
+  <row label="r8">Rp 800,001 - 900,000</row>
+  <row label="r9">Rp 900,001 - 1,000,000</row>
+  <row label="r10">Rp 1,000,001 - 1,250,000</row>
+  <row label="r11">Rp 1,250,001 - 1,500,000</row>
+  <row label="r12">Rp 1,500,001 - 1,750,000</row>
+  <row label="r13">Rp 1,750,001 - 2,000,000</row>
+  <row label="r14">Rp 2,000,001 - 2,250,000</row>
+  <row label="r15">Rp 2,250,001 - 2,500,000</row>
+  <row label="r16">Rp 2,500,001 - 2,750,000</row>
+  <row label="r17">Rp 2,750,001 - 3,000,000</row>
+  <row label="r18">Rp 3,000,001 - 3,250,000</row>
+  <row label="r19">Rp 3,250,001 - 3,500,000</row>
+  <row label="r20">Rp 3,500,001 - Rp 4,000,000</row>
+  <row label="r21">Rp 4,000,001 - Rp 4,500,000</row>
+  <row label="r22">Rp 4,500,001 - Rp 5,000,000</row>
+  <row label="r23">Rp 5,000,001 - Rp 6,000,000</row>
+  <row label="r24">Rp 6,000,001 - Rp  7,000,000</row>
+  <row label="r25">Rp 7,000,001 - Rp 8,000,000</row>
+  <row label="r26">Rp 8,000,001 - Rp 9,000,000</row>
+  <row label="r27">Rp 9,000,001 - Rp 10,000,000</row>
+  <row label="r28">Rp 10,000,001 - 12,500,000</row>
+  <row label="r29">Rp 12,500,001 - 15,000,000</row>
+  <row label="r30">More than  Rp 15,000,000</row>
+</radio>
+
+<suspend/>

@@ -1,0 +1,11 @@
+<number 
+  label="DMDMPA1"
+  optional="0"
+  size="3"
+  verify="range(1,99)">
+  <title>How old are you?</title>
+  <comment>Please type in your age below.</comment>
+  <style arg:mlen="3" copy="QNumstyle" name="el.text"/>
+</number>
+
+<suspend/>

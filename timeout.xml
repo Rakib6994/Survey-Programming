@@ -1,0 +1,1 @@
+<exit cond="qualified" timeout="3" url="http://your.site.com/survey?uid=${uid}">Thanks! You are being redirected in 3 seconds.</exit>

@@ -1,0 +1,208 @@
+[KEEP THE MIDITEMS BEFORE SAMPLESOURCES OF THE CODE]
+
+
+
+
+<res label="A1_mditem1">Packed full of nutritional good stuff</res>
+<res label="A1_mditem2">Made with clean ingredients</res>
+<res label="A1_mditem3">Certified organic</res>
+<res label="A1_mditem4">Organic</res>
+<res label="A1_mditem5">Pure goodness from the Australian land</res>
+<res label="A1_mditem6">We work with closely with Australian farmers</res>
+<res label="A1_mditem7">Made from natural ingredientsr</res>
+<res label="A1_mditem8">100% Australian ingredients</res>
+<res label="A1_mditem9">Low in fat</res>
+<res label="A1_mditem10">No artificial colours, flavours or preservatives</res>
+<res label="A1_mditem11">A source of vitamins</res>
+<res label="A1_mditem12">Ingredients grown without the use of any pesticides</res>
+<res label="A1_mditem13">No GM (genetically modified) processing</res>
+
+
+
+
+
+
+[MAXDIFF QUESTION STARTS]
+[REPLACE THE LABEL NAME LIKE A8>A1]
+
+
+
+<exec when="init">
+def setupMaxDiffFile(fname, fileDelimiter="\t"):
+    try:
+        f = open("%s/%s" % (gv.survey.path, fname))
+        mdObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]
+        d = dict( ("v%s_t%s" % (row[0], row[1]), row[2:]) for row in mdObj )
+    except IOError:
+        d = {}
+    return d
+
+def setupMaxDiffItemsA(d, vt, question, parentLabel):
+    items = d[vt]
+
+    print "*****STAFF ONLY*****"
+    print "Version_Task: %s" % vt
+    for r in question.rows:
+        r.text = res[ "%s_mditem%s" % (parentLabel, items[r.index]) ]
+        print "Item %s: %s" % (r.index+1, items[r.index])
+</exec>
+
+<exec when="init">
+A1_md = setupMaxDiffFile("design.dat")
+</exec>
+
+<quota label="A1_quota" overquota="noqual" sheet="A1_MaxDiff"/>
+
+<number 
+  label="A1_Version"
+  size="3"
+  verify="range(1,10)"
+  where="execute,survey,report">
+  <title>A1 - MaxDiff Version</title>
+  <exec>
+print p.markers
+for x in p.markers:
+    if "/A1_MaxDiff/ver_" in x:
+        A1_Version.val = int(x.split("_")[-1])
+        break
+  </exec>
+
+</number>
+
+<suspend/>
+
+<exec>
+p.startTime = timeSpent()
+</exec>
+
+<loop label="A1_md_loop" vars="task">
+  <title>A1 - MaxDiff Loop</title>
+  <block label="A1_md_block" randomize="1">
+    <radio 
+    label="A1_[loopvar: task]"
+    adim="cols"
+    grouping="cols"
+    ss:questionClassNames="A1_MaxDiff"
+    unique="1">
+      <title>We’re going to show you a number of different ways that Australia’s Own could talk about their range of plant based milks. In each scenario, please choose which of these would be MOST LIKELY to influence you to buy Australia’s Own over another brand, and which would LEAST influence you to buy Australia’s Own</title>
+      <comment>Please select one</comment>
+      <exec>
+setupMaxDiffItemsA( A1_md, "v%d_t%d" % (A1_Version.val, [loopvar: task]), A1_[loopvar: task], "A1")
+p.MDcount = str(A1_md_loop_expanded.order.index([loopvar: task]-1)+1)
+      </exec>
+
+      <col label="best">Most Important</col>
+      <col label="worst">Least Important</col>
+      <row label="item1">Option 1</row>                                             >>>>>>>>>>[NUMBER OF ITEMS HERE]
+      <row label="item2">Option 2</row>
+      <row label="item3">Option 3</row>
+      <row label="item4">Option 4</row>
+      <style mode="before" name="question.header"><![CDATA[
+<style type="text/css">
+    .A1_maxdiff tr.maxdiff-header-legend {
+        background-color: transparent;
+        border-bottom: 2px solid #d9d9d9;
+    }
+    .A1_maxdiff tr.maxdiff-header-legend th.legend {
+        background-color: transparent;
+        border: none;
+    }
+    .A1_maxdiff tr.maxdiff-row td.element {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    .A1_maxdiff tr.maxdiff-row th.row-legend {
+        background-color: transparent;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    </style>
+]]></style>
+      <style name="question.top-legend"><![CDATA[
+\@if ec.simpleList
+    $(legends)
+\@else
+    <$(tag) class="maxdiff-header-legend row row-col-legends row-col-legends-top ${"mobile-top-row-legend " if mobileOnly else ""}${"GtTenColumns " if ec.colCount > 10 else ""}colCount-$(colCount)">
+        ${"%s%s" % (legends.split("</th>")[0],"</th>")}
+       $(left)
+        ${"%s%s" % (legends.split("</th>")[1],"</th>")}
+    </$(tag)>
+    \@if not simple
+  </tbody>
+  <tbody>
+    \@endif
+\@endif
+]]></style>
+      <style name="question.row"><![CDATA[
+\@if ec.simpleList
+    $(elements)
+\@else
+    <$(tag) class="maxdiff-row row row-elements $(style) colCount-$(colCount)">
+        ${"%s%s" % (elements.split("</td>")[0],"</td>")}
+        $(left)
+        ${"%s%s" % (elements.split("</td>")[1],"</td>")}
+    </$(tag)>
+\@endif
+]]></style>
+    </radio>
+  </block>
+
+  <looprow label="1">
+    <loopvar name="task">1</loopvar>
+  </looprow>
+
+  <looprow label="2">
+    <loopvar name="task">2</loopvar>
+  </looprow>
+
+  <looprow label="3">
+    <loopvar name="task">3</loopvar>
+  </looprow>
+
+  <looprow label="4">
+    <loopvar name="task">4</loopvar>
+  </looprow>
+
+  <looprow label="5">
+    <loopvar name="task">5</loopvar>                                   
+  </looprow>
+
+  <looprow label="6">
+    <loopvar name="task">6</loopvar>
+  </looprow>
+
+  <looprow label="7">
+    <loopvar name="task">7</loopvar>
+  </looprow>
+
+  <looprow label="8">
+    <loopvar name="task">8</loopvar>
+  </looprow>
+
+  <looprow label="9">
+    <loopvar name="task">9</loopvar>
+  </looprow>
+
+  <looprow label="10">
+    <loopvar name="task">10</loopvar>
+  </looprow>
+</loop>
+
+<float 
+  label="A1_Timer"
+  size="15"
+  where="execute,survey,report">
+  <title>A1 - MaxDiff Timer (Minutes)</title>
+  <exec>
+A1_Timer.val = (timeSpent() - p.startTime) / 60.0
+  </exec>
+
+</float>
+
+<suspend/>

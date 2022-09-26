@@ -1,0 +1,19 @@
+<number 
+  label="S9b"
+  optional="0"
+  rowCond="S9[row.index]"
+  size="10"
+  surveyDisplay="desktop"
+  verify="range(1,10)">
+  <title>How many of each of the below do you currently have?</title>
+  <comment>Please select all that apply.</comment>
+  <col label="c1"/>
+  <row label="r1">Everyday transaction account (with EFTPOS or Debit Card)</row>
+  <row label="r2">Credit card</row>
+  <row label="r3">High interest savings account</row>
+  <row label="r4">Term deposit</row>
+  <row label="r5">Personal loan</row>
+  <row label="r6">Home loan</row>
+  <row label="r7">Superannuation</row>
+  <row label="r99" cond="0">None of the above</row>
+</number>
