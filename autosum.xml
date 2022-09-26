@@ -1,3 +1,5 @@
+uses="autosum.5"
+
 <number 
   label="KID2"
   cond="(KID1.check('&gt; 0'))"
@@ -27,3 +29,4 @@ if ((KID2.sum) lt (KID1.val)) or ((KID2.sum) gt (KID1.val)):
 </number>
 
 <suspend/>
+
