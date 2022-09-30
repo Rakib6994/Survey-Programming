@@ -17,3 +17,34 @@
 </select>
 
 <suspend/>
+
+
+
+ <select 
+   label="Q_Rank"
+   minRanks="3"
+   optional="1"
+   randomize="0"
+   ranksort:bucketCSS="height: 200px;"
+   ranksort:cardCSS="height: 200px;"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>Please rank the following based on your overall preference.</title>
+    <comment>Click or drag each item into a rank position.</comment>
+    <choice label="ch1">First choice</choice>
+    <choice label="ch2">Second choice</choice>
+    <choice label="ch3">Third choice</choice>
+    <choice label="ch4">Fourth choice</choice>
+    <choice label="ch5">Fifth choice</choice>
+    <choice label="ch6">Sixth choice</choice>
+    <choice label="ch7">Seventh choice</choice>
+    <row label="r1"><img src="[rel PACK1.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r2"><img src="[rel PACK2.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r3"><img src="[rel PACK3.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r4"><img src="[rel PACK4.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r5"><img src="[rel PACK5.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r6"><img src="[rel PACK6.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r7"><img src="[rel PACK7.jpg]" title="" height="200" alt="" constrain="true" /></row>
+  </select>
+
+  <suspend/>
