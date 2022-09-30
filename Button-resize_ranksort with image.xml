@@ -1,0 +1,19 @@
+<select 
+  label="CQ2_Ranking2"
+  minRanks="3"
+  optional="1"
+  ranksort:bucketCSS="height: 200px;"
+  ranksort:cardCSS="height: 200px;"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>Based on what you see here, please rank the packages from most premium to least premium.</title>
+  <comment><em><em>Click or drag each item into a rank position. </em>Please be sure to view all product lines before proceeding. You may need to scroll over/down to do so.</em></comment>
+  <row label="r1">[pipe:realpackA]</row>
+  <row label="r2">[pipe:realpackB]</row>
+  <row label="r3">[pipe:realpackC]</row>
+  <choice label="ch1">1 -&amp;nbsp;<em>Most Premium</em></choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3 - <em>Least&amp;nbsp;Premium</em></choice>
+</select>
+
+<suspend/>
