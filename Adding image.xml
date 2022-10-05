@@ -4,3 +4,30 @@
   <row label="r2"><img src="[rel toothbrush-2.jpg]" /></row>
   <row label="r3"><img src="[rel our-toothbrush.png]" class="tbrush-img" /></row>
 </radio>
+
+
+
+
+ <select 
+   label="CQ2_Ranking"
+   minRanks="5"
+   optional="1"
+   ranksort:bucketCSS="height: 200px;"
+   ranksort:cardCSS="height: 200px;"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>Based on what you see here, please rank the packages from most premium to least premium.</title>
+    <comment><em><em>Click or drag each item into a rank position. </em>Please be sure to view all product lines before proceeding. You may need to scroll over/down to do so.</em></comment>
+    <row label="r1"><img src="[rel LINE1.jpg]" title="" height="100" alt="" constrain="true" /></row>
+    <row label="r2"><img src="[rel LINE2.jpg]" title="" height="100" alt="" constrain="true" /></row>
+    <row label="r3"><img src="[rel LINE3.jpg]" title="" height="100" alt="" constrain="true" /></row>
+    <row label="r4"><img src="[rel LINE4.jpg]" title="" height="100" alt="" constrain="true" /></row>
+    <row label="r5"><img src="[rel LINE5.jpg]" title="" height="100" alt="" constrain="true" /></row>
+    <choice label="ch1">1 -&amp;nbsp;<em>Most Premium</em></choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+    <choice label="ch4">4</choice>
+    <choice label="ch5">5 - <em>Least&amp;nbsp;Premium</em></choice>
+  </select>
+
+  <suspend/>
