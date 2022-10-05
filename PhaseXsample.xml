@@ -1,0 +1,61 @@
+<block label="SETQuotas" builder:title="Quotas">
+    <autofill label="PhaseQ" randomize="0" where="execute,survey,report">
+      <title>PhaseQ</title>
+      <row label="r1" autofill="hasMarker('ph1sam1*')">ph1sam1</row>
+      <row label="r2" autofill="hasMarker('ph2sam1*')">ph2sam1</row>
+      <row label="r3" autofill="hasMarker('ph1sam2*')">ph1sam2</row>
+      <row label="r4" autofill="hasMarker('ph2sam2*')">ph2sam2</row>
+      <row label="r5" autofill="hasMarker('ph1sam3*')">ph1sam3</row>
+      <row label="r6" autofill="hasMarker('ph2sam3*')">ph2sam3</row>
+      <row label="r7" autofill="hasMarker('ph1sam4*')">ph1sam4</row>
+      <row label="r8" autofill="hasMarker('ph2sam4*')">ph2sam4</row>
+    </autofill>
+
+    <checkbox 
+    label="SampleQ"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Sample randomly select one </title>
+      <row label="r1" autofill="hasMarker('ph1sam1') or hasMarker('ph2sam1')">Category Shoppers</row>
+      <row label="r2" autofill="hasMarker('ph1sam2') or hasMarker('ph2sam2')">Regular Pepsi Drinkers</row>
+      <row label="r3" autofill="hasMarker('ph1sam3') or hasMarker('ph2sam3')">Gen-Z Pepsi Drinkers</row>
+      <row label="r4" autofill="hasMarker('ph1sam4') or hasMarker('ph2sam4')">Cola Brand Switchers</row>
+    </checkbox>
+  </block>
+
+  <suspend/>
+
+  <exec>
+if PhaseQ.r1 or PhaseQ.r3 or PhaseQ.r5 or PhaseQ.r7:  Phase.val=0
+if PhaseQ.r2 or PhaseQ.r4 or PhaseQ.r6 or PhaseQ.r8:  Phase.val=1
+  </exec>
+
+  <radio 
+   label="Phase"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Phase</title>
+    <row label="r1">Phase1</row>
+    <row label="r2">Phase2</row>
+  </radio>
+
+  <exec>
+if SampleQ.r1:  Sample.val=0
+if SampleQ.r2:  Sample.val=1
+if SampleQ.r3:  Sample.val=2
+if SampleQ.r4:  Sample.val=3
+  </exec>
+
+  <radio 
+   label="Sample"
+   randomize="0"
+   where="execute,survey,report">
+    <title>4 group of sample</title>
+    <row label="r1">Category Shoppers</row>
+    <row label="r2">Regular Pepsi Drinkers</row>
+    <row label="r3">Gen-Z Pepsi Drinkers</row>
+    <row label="r4">Cola Brand Switchers</row>
+  </radio>
+
+  <suspend/>
+</block>
