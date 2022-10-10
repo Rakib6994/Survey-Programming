@@ -58,8 +58,8 @@ jQuery(document).ready(function()
   <row label="r2">Playful</row>
   <row label="r3">Needy</row>
   <row label="r4">Loyal</row>
-  <col label="c1" alt="yes">[pipe: pipeYes]</col>
-  <col label="c2" alt="no">[pipe: pipeNo]</col>
+  <col label="c1" alt="yes">Yes</col>
+  <col label="c2" alt="no">No</col>
 </radio>
 
 <suspend/>

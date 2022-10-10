@@ -1,0 +1,25 @@
+ <checkbox 
+   label="Q_PackAtt"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   shuffle="rows"
+   uses="atm1d.9">
+    <title>[pipe: PH_IMG]<br /> You will now see some words and phrases that could be used to describe the appearance of various products. Do you think the <b>[pipe: Brand]</b> packaging is…</title>
+    <comment>Select all that apply. </comment>
+    <row label="r1">Appetizing</row>
+    <row label="r2">Confusing</row>
+    <row label="r3">Outdated</row>
+    <row label="r4">Stands out</row>
+    <row label="r5">Current</row>
+    <row label="r6">Makes it easy to find information I need</row>
+    <row label="r7" cond="0">Confusing</row>
+    <row label="r8" cond="0">Outdated</row>
+    <row label="r9">Familiar</row>
+    <row label="r10">Fun</row>
+    <row label="r11">High quality</row>
+    <row label="r12" exclusive="1" randomize="0">None of these</row>
+  </checkbox>
+
+  <suspend/>
