@@ -1,0 +1,3569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AE358 - eCom Writing Trial"
+  autoRecover="1"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="144"
+  desktopNotAllowedMessage="The device you are using is not allowed to take this survey."
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="mobileOnly"
+  mobileDevices="smartphone"
+  name="Survey"
+  otherLanguages="french"
+  remerged="20211130_20:14"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png"
+  ss:logoPosition="left"
+  state="closed"
+  theme="frozen:company/behaviorally-theme-2-1"
+  unusedLanguages="french"
+  version="3">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<res label="sys_surveyCompleted"/>
+<res label="loadimg">[
+"[rel WT1_A.jpg]",
+"[rel WT2_A.jpg]",
+"[rel WT3_A.jpg]",
+"[rel WT4_A.jpg]",
+"[rel WT5_A.jpg]",
+"[rel WT6_A.jpg]",
+"[rel WT7_A.jpg]",
+"[rel WT8_A.jpg]",
+"[rel WT9_A.jpg]",
+"[rel WT10_A.jpg]",
+"[rel WT11_A.jpg]",
+"[rel WT12_A.jpg]",
+"[rel WT13_A.jpg]",
+"[rel WT14_A.jpg]",
+"[rel WT15_A.jpg]",
+"[rel WT16_A.jpg]",
+"[rel WT17_A.jpg]",
+"[rel WT18_A.jpg]",
+"[rel WT19_A.jpg]",
+"[rel WT20_A.jpg]",
+"[rel WT21_A.jpg]",
+"[rel WT22_A.jpg]",
+"[rel WT23_A.jpg]",
+"[rel WT24_A.jpg]",
+"[rel WT25_A.jpg]",
+"[rel WT26_A.jpg]",
+"[rel WT27_A.jpg]",
+"[rel WT28_A.jpg]",
+"[rel WT29_A.jpg]",
+"[rel WT30_A.jpg]",
+"[rel WT31_A.jpg]",
+"[rel WT32_A.jpg]",
+"[rel WT33_A.jpg]",
+"[rel WT34_A.jpg]",
+"[rel WT35_A.jpg]",
+"[rel WT36_A.jpg]",
+"[rel WT37_A.jpg]",
+"[rel WT38_A.jpg]",
+"[rel WT39_A.jpg]",
+"[rel WT40_A.jpg]",
+"[rel WT41_A.jpg]",
+"[rel WT42_A.jpg]",
+"[rel WT43_A.jpg]",
+"[rel WT44_A.jpg]",
+"[rel WT45_A.jpg]",
+"[rel WT46_A.jpg]",
+"[rel WT47_A.jpg]",
+"[rel WT48_A.jpg]",
+"[rel WT49_A.jpg]",
+"[rel WT50_A.jpg]",
+"[rel WT51_A.jpg]",
+"[rel WT52_A.jpg]",
+"[rel WT53_A.jpg]",
+"[rel WT54_A.jpg]",
+"[rel WT55_A.jpg]",
+"[rel WT56_A.jpg]",
+"[rel WT57_A.jpg]",
+"[rel WT58_A.jpg]",
+"[rel WT59_A.jpg]",
+"[rel WT60_A.jpg]",
+"[rel WT61_A.jpg]",
+"[rel WT62_A.jpg]",
+"[rel WT63_A.jpg]",
+"[rel WT64_A.jpg]",
+"[rel WT65_A.jpg]",
+"[rel WT66_A.jpg]",
+"[rel WT67_A.jpg]",
+"[rel WT68_A.jpg]",
+"[rel WT69_A.jpg]",
+"[rel WT70_A.jpg]",
+"[rel WT71_A.jpg]",
+"[rel WT72_A.jpg]",
+"[rel WT73_A.jpg]",
+"[rel WT74_A.jpg]",
+"[rel WT75_A.jpg]",
+"[rel WT76_A.jpg]",
+"[rel WT77_A.jpg]",
+"[rel WT78_A.jpg]",
+"[rel WT79_A.jpg]",
+"[rel WT80_A.jpg]",
+"[rel WT81_A.jpg]",
+"[rel WT82_A.jpg]",
+"[rel WT83_A.jpg]",
+"[rel WT84_A.jpg]",
+"[rel WT85_A.jpg]",
+"[rel WT86_A.jpg]",
+"[rel WT87_A.jpg]",
+"[rel WT88_A.jpg]",
+"[rel WT89_A.jpg]",
+"[rel WT90_A.jpg]",
+"[rel WT91_A.jpg]",
+"[rel WT92_A.jpg]",
+"[rel WT93_A.jpg]",
+"[rel WT94_A.jpg]",
+"[rel WT95_A.jpg]",
+"[rel WT96_A.jpg]",
+"[rel WT97_A.jpg]",
+"[rel WT98_A.jpg]",
+"[rel WT99_A.jpg]",
+"[rel WT100_A.jpg]",
+"[rel WT101_A.jpg]",
+"[rel WT102_A.jpg]",
+"[rel WT103_A.jpg]",
+"[rel WT104_A.jpg]",
+"[rel WT105_A.jpg]",
+"[rel WT106_A.jpg]",
+"[rel WT107_A.jpg]",
+"[rel WT108_A.jpg]",
+"[rel WT109_A.jpg]",
+"[rel WT110_A.jpg]",
+"[rel WT111_A.jpg]",
+"[rel WT112_A.jpg]",
+"[rel WT113_A.jpg]",
+"[rel WT114_A.jpg]",
+"[rel WT115_A.jpg]",
+"[rel WT116_A.jpg]",
+"[rel WT117_A.jpg]",
+"[rel WT118_A.jpg]",
+"[rel WT119_A.jpg]",
+"[rel WT120_A.jpg]",
+"[rel WT121_A.jpg]",
+"[rel WT122_A.jpg]",
+"[rel WT123_A.jpg]",
+"[rel WT124_A.jpg]",
+"[rel WT125_A.jpg]",
+"[rel WT126_A.jpg]",
+"[rel WT127_A.jpg]",
+"[rel WT128_A.jpg]",
+"[rel WT129_A.jpg]",
+"[rel WT130_A.jpg]",
+"[rel WT131_A.jpg]",
+"[rel WT132_A.jpg]",
+"[rel WT133_A.jpg]",
+"[rel WT134_A.jpg]",
+"[rel WT135_A.jpg]",
+"[rel WT136_A.jpg]",
+"[rel WT137_A.jpg]",
+"[rel WT138_A.jpg]",
+"[rel WT139_A.jpg]",
+"[rel WT140_A.jpg]",
+"[rel WT141_A.jpg]",
+"[rel WT142_A.jpg]",
+"[rel WT143_A.jpg]",
+"[rel WT144_A.jpg]",
+"[rel WT145_A.jpg]",
+"[rel WT146_A.jpg]",
+"[rel WT147_A.jpg]",
+"[rel WT148_A.jpg]",
+"[rel WT149_A.jpg]",
+"[rel WT150_A.jpg]",
+"[rel WT1_B.jpg]",
+"[rel WT2_B.jpg]",
+"[rel WT3_B.jpg]",
+"[rel WT4_B.jpg]",
+"[rel WT5_B.jpg]",
+"[rel WT6_B.jpg]",
+"[rel WT7_B.jpg]",
+"[rel WT8_B.jpg]",
+"[rel WT9_B.jpg]",
+"[rel WT10_B.jpg]",
+"[rel WT11_B.jpg]",
+"[rel WT12_B.jpg]",
+"[rel WT13_B.jpg]",
+"[rel WT14_B.jpg]",
+"[rel WT15_B.jpg]",
+"[rel WT16_B.jpg]",
+"[rel WT17_B.jpg]",
+"[rel WT18_B.jpg]",
+"[rel WT19_B.jpg]",
+"[rel WT20_B.jpg]",
+"[rel WT21_B.jpg]",
+"[rel WT22_B.jpg]",
+"[rel WT23_B.jpg]",
+"[rel WT24_B.jpg]",
+"[rel WT25_B.jpg]",
+"[rel WT26_B.jpg]",
+"[rel WT27_B.jpg]",
+"[rel WT28_B.jpg]",
+"[rel WT29_B.jpg]",
+"[rel WT30_B.jpg]",
+"[rel WT31_B.jpg]",
+"[rel WT32_B.jpg]",
+"[rel WT33_B.jpg]",
+"[rel WT34_B.jpg]",
+"[rel WT35_B.jpg]",
+"[rel WT36_B.jpg]",
+"[rel WT37_B.jpg]",
+"[rel WT38_B.jpg]",
+"[rel WT39_B.jpg]",
+"[rel WT40_B.jpg]",
+"[rel WT41_B.jpg]",
+"[rel WT42_B.jpg]",
+"[rel WT43_B.jpg]",
+"[rel WT44_B.jpg]",
+"[rel WT45_B.jpg]",
+"[rel WT46_B.jpg]",
+"[rel WT47_B.jpg]",
+"[rel WT48_B.jpg]",
+"[rel WT49_B.jpg]",
+"[rel WT50_B.jpg]",
+"[rel WT51_B.jpg]",
+"[rel WT52_B.jpg]",
+"[rel WT53_B.jpg]",
+"[rel WT54_B.jpg]",
+"[rel WT55_B.jpg]",
+"[rel WT56_B.jpg]",
+"[rel WT57_B.jpg]",
+"[rel WT58_B.jpg]",
+"[rel WT59_B.jpg]",
+"[rel WT60_B.jpg]",
+"[rel WT61_B.jpg]",
+"[rel WT62_B.jpg]",
+"[rel WT63_B.jpg]",
+"[rel WT64_B.jpg]",
+"[rel WT65_B.jpg]",
+"[rel WT66_B.jpg]",
+"[rel WT67_B.jpg]",
+"[rel WT68_B.jpg]",
+"[rel WT69_B.jpg]",
+"[rel WT70_B.jpg]",
+"[rel WT71_B.jpg]",
+"[rel WT72_B.jpg]",
+"[rel WT73_B.jpg]",
+"[rel WT74_B.jpg]",
+"[rel WT75_B.jpg]",
+"[rel WT76_B.jpg]",
+"[rel WT77_B.jpg]",
+"[rel WT78_B.jpg]",
+"[rel WT79_B.jpg]",
+"[rel WT80_B.jpg]",
+"[rel WT81_B.jpg]",
+"[rel WT82_B.jpg]",
+"[rel WT83_B.jpg]",
+"[rel WT84_B.jpg]",
+"[rel WT85_B.jpg]",
+"[rel WT86_B.jpg]",
+"[rel WT87_B.jpg]",
+"[rel WT88_B.jpg]",
+"[rel WT89_B.jpg]",
+"[rel WT90_B.jpg]",
+"[rel WT91_B.jpg]",
+"[rel WT92_B.jpg]",
+"[rel WT93_B.jpg]",
+"[rel WT94_B.jpg]",
+"[rel WT95_B.jpg]",
+"[rel WT96_B.jpg]",
+"[rel WT97_B.jpg]",
+"[rel WT98_B.jpg]",
+"[rel WT99_B.jpg]",
+"[rel WT100_B.jpg]",
+"[rel WT101_B.jpg]",
+"[rel WT102_B.jpg]",
+"[rel WT103_B.jpg]",
+"[rel WT104_B.jpg]",
+"[rel WT105_B.jpg]",
+"[rel WT106_B.jpg]",
+"[rel WT107_B.jpg]",
+"[rel WT108_B.jpg]",
+"[rel WT109_B.jpg]",
+"[rel WT110_B.jpg]",
+"[rel WT111_B.jpg]",
+"[rel WT112_B.jpg]",
+"[rel WT113_B.jpg]",
+"[rel WT114_B.jpg]",
+"[rel WT115_B.jpg]",
+"[rel WT116_B.jpg]",
+"[rel WT117_B.jpg]",
+"[rel WT118_B.jpg]",
+"[rel WT119_B.jpg]",
+"[rel WT120_B.jpg]",
+"[rel WT121_B.jpg]",
+"[rel WT122_B.jpg]",
+"[rel WT123_B.jpg]",
+"[rel WT124_B.jpg]",
+"[rel WT125_B.jpg]",
+"[rel WT126_B.jpg]",
+"[rel WT127_B.jpg]",
+"[rel WT128_B.jpg]",
+"[rel WT129_B.jpg]",
+"[rel WT130_B.jpg]",
+"[rel WT131_B.jpg]",
+"[rel WT132_B.jpg]",
+"[rel WT133_B.jpg]",
+"[rel WT134_B.jpg]",
+"[rel WT135_B.jpg]",
+"[rel WT136_B.jpg]",
+"[rel WT137_B.jpg]",
+"[rel WT138_B.jpg]",
+"[rel WT139_B.jpg]",
+"[rel WT140_B.jpg]",
+"[rel WT141_B.jpg]",
+"[rel WT142_B.jpg]",
+"[rel WT143_B.jpg]",
+"[rel WT144_B.jpg]",
+"[rel WT145_B.jpg]",
+"[rel WT146_B.jpg]",
+"[rel WT147_B.jpg]",
+"[rel WT148_B.jpg]",
+"[rel WT149_B.jpg]",
+"[rel WT150_B.jpg]",
+"[rel WT1_C.jpg]",
+"[rel WT2_C.jpg]",
+"[rel WT3_C.jpg]",
+"[rel WT4_C.jpg]",
+"[rel WT5_C.jpg]",
+"[rel WT6_C.jpg]",
+"[rel WT7_C.jpg]",
+"[rel WT8_C.jpg]",
+"[rel WT9_C.jpg]",
+"[rel WT10_C.jpg]",
+"[rel WT11_C.jpg]",
+"[rel WT12_C.jpg]",
+"[rel WT13_C.jpg]",
+"[rel WT14_C.jpg]",
+"[rel WT15_C.jpg]",
+"[rel WT16_C.jpg]",
+"[rel WT17_C.jpg]",
+"[rel WT18_C.jpg]",
+"[rel WT19_C.jpg]",
+"[rel WT20_C.jpg]",
+"[rel WT21_C.jpg]",
+"[rel WT22_C.jpg]",
+"[rel WT23_C.jpg]",
+"[rel WT24_C.jpg]",
+"[rel WT25_C.jpg]",
+"[rel WT26_C.jpg]",
+"[rel WT27_C.jpg]",
+"[rel WT28_C.jpg]",
+"[rel WT29_C.jpg]",
+"[rel WT30_C.jpg]",
+"[rel WT31_C.jpg]",
+"[rel WT32_C.jpg]",
+"[rel WT33_C.jpg]",
+"[rel WT34_C.jpg]",
+"[rel WT35_C.jpg]",
+"[rel WT36_C.jpg]",
+"[rel WT37_C.jpg]",
+"[rel WT38_C.jpg]",
+"[rel WT39_C.jpg]",
+"[rel WT40_C.jpg]",
+"[rel WT41_C.jpg]",
+"[rel WT42_C.jpg]",
+"[rel WT43_C.jpg]",
+"[rel WT44_C.jpg]",
+"[rel WT45_C.jpg]",
+"[rel WT46_C.jpg]",
+"[rel WT47_C.jpg]",
+"[rel WT48_C.jpg]",
+"[rel WT49_C.jpg]",
+"[rel WT50_C.jpg]",
+"[rel WT51_C.jpg]",
+"[rel WT52_C.jpg]",
+"[rel WT53_C.jpg]",
+"[rel WT54_C.jpg]",
+"[rel WT55_C.jpg]",
+"[rel WT56_C.jpg]",
+"[rel WT57_C.jpg]",
+"[rel WT58_C.jpg]",
+"[rel WT59_C.jpg]",
+"[rel WT60_C.jpg]",
+"[rel WT61_C.jpg]",
+"[rel WT62_C.jpg]",
+"[rel WT63_C.jpg]",
+"[rel WT64_C.jpg]",
+"[rel WT65_C.jpg]",
+"[rel WT66_C.jpg]",
+"[rel WT67_C.jpg]",
+"[rel WT68_C.jpg]",
+"[rel WT69_C.jpg]",
+"[rel WT70_C.jpg]",
+"[rel WT71_C.jpg]",
+"[rel WT72_C.jpg]",
+"[rel WT73_C.jpg]",
+"[rel WT74_C.jpg]",
+"[rel WT75_C.jpg]",
+"[rel WT76_C.jpg]",
+"[rel WT77_C.jpg]",
+"[rel WT78_C.jpg]",
+"[rel WT79_C.jpg]",
+"[rel WT80_C.jpg]",
+"[rel WT81_C.jpg]",
+"[rel WT82_C.jpg]",
+"[rel WT83_C.jpg]",
+"[rel WT84_C.jpg]",
+"[rel WT85_C.jpg]",
+"[rel WT86_C.jpg]",
+"[rel WT87_C.jpg]",
+"[rel WT88_C.jpg]",
+"[rel WT89_C.jpg]",
+"[rel WT90_C.jpg]",
+"[rel WT91_C.jpg]",
+"[rel WT92_C.jpg]",
+"[rel WT93_C.jpg]",
+"[rel WT94_C.jpg]",
+"[rel WT95_C.jpg]",
+"[rel WT96_C.jpg]",
+"[rel WT97_C.jpg]",
+"[rel WT98_C.jpg]",
+"[rel WT99_C.jpg]",
+"[rel WT100_C.jpg]",
+"[rel WT101_C.jpg]",
+"[rel WT102_C.jpg]",
+"[rel WT103_C.jpg]",
+"[rel WT104_C.jpg]",
+"[rel WT105_C.jpg]",
+"[rel WT106_C.jpg]",
+"[rel WT107_C.jpg]",
+"[rel WT108_C.jpg]",
+"[rel WT109_C.jpg]",
+"[rel WT110_C.jpg]",
+"[rel WT111_C.jpg]",
+"[rel WT112_C.jpg]",
+"[rel WT113_C.jpg]",
+"[rel WT114_C.jpg]",
+"[rel WT115_C.jpg]",
+"[rel WT116_C.jpg]",
+"[rel WT117_C.jpg]",
+"[rel WT118_C.jpg]",
+"[rel WT119_C.jpg]",
+"[rel WT120_C.jpg]",
+"[rel WT121_C.jpg]",
+"[rel WT122_C.jpg]",
+"[rel WT123_C.jpg]",
+"[rel WT124_C.jpg]",
+"[rel WT125_C.jpg]",
+"[rel WT126_C.jpg]",
+"[rel WT127_C.jpg]",
+"[rel WT128_C.jpg]",
+"[rel WT129_C.jpg]",
+"[rel WT130_C.jpg]",
+"[rel WT131_C.jpg]",
+"[rel WT132_C.jpg]",
+"[rel WT133_C.jpg]",
+"[rel WT134_C.jpg]",
+"[rel WT135_C.jpg]",
+"[rel WT136_C.jpg]",
+"[rel WT137_C.jpg]",
+"[rel WT138_C.jpg]",
+"[rel WT139_C.jpg]",
+"[rel WT140_C.jpg]",
+"[rel WT141_C.jpg]",
+"[rel WT142_C.jpg]",
+"[rel WT143_C.jpg]",
+"[rel WT144_C.jpg]",
+"[rel WT145_C.jpg]",
+"[rel WT146_C.jpg]",
+"[rel WT147_C.jpg]",
+"[rel WT148_C.jpg]",
+"[rel WT149_C.jpg]",
+"[rel WT150_C.jpg]"
+]</res>
+<res label="loadimg1">[
+"[rel WT96_C.jpg]",
+"[rel WT97_C.jpg]",
+"[rel WT98_C.jpg]",
+"[rel WT99_C.jpg]",
+"[rel WT100_C.jpg]",
+"[rel WT101_C.jpg]",
+"[rel WT102_C.jpg]",
+"[rel WT103_C.jpg]",
+"[rel WT104_C.jpg]",
+"[rel WT105_C.jpg]",
+"[rel WT106_C.jpg]",
+"[rel WT107_C.jpg]",
+"[rel WT108_C.jpg]",
+"[rel WT109_C.jpg]",
+"[rel WT110_C.jpg]",
+"[rel WT111_C.jpg]",
+"[rel WT112_C.jpg]",
+"[rel WT113_C.jpg]",
+"[rel WT114_C.jpg]",
+"[rel WT115_C.jpg]",
+"[rel WT116_C.jpg]",
+"[rel WT117_C.jpg]",
+"[rel WT118_C.jpg]",
+"[rel WT119_C.jpg]",
+"[rel WT120_C.jpg]",
+"[rel WT121_C.jpg]",
+"[rel WT122_C.jpg]",
+"[rel WT123_C.jpg]",
+"[rel WT124_C.jpg]",
+"[rel WT125_C.jpg]",
+"[rel WT126_C.jpg]",
+"[rel WT127_C.jpg]",
+"[rel WT128_C.jpg]",
+"[rel WT129_C.jpg]",
+"[rel WT130_C.jpg]",
+"[rel WT131_C.jpg]",
+"[rel WT132_C.jpg]",
+"[rel WT133_C.jpg]",
+"[rel WT134_C.jpg]",
+"[rel WT135_C.jpg]",
+"[rel WT136_C.jpg]",
+"[rel WT137_C.jpg]",
+"[rel WT138_C.jpg]",
+"[rel WT139_C.jpg]",
+"[rel WT140_C.jpg]",
+"[rel WT141_C.jpg]",
+"[rel WT142_C.jpg]",
+"[rel WT143_C.jpg]",
+"[rel WT144_C.jpg]",
+"[rel WT145_C.jpg]",
+"[rel WT146_C.jpg]",
+"[rel WT147_C.jpg]",
+"[rel WT148_C.jpg]",
+"[rel WT149_C.jpg]",
+"[rel DI1.jpg]",
+"[rel DI2.jpg]",
+"[rel DI3.jpg]",
+"[rel DI4.jpg]",
+"[rel DI5.jpg]",
+"[rel WT150_C.jpg]"
+]</res>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+.sq-mgshelf-cart-view-content table td input {
+  width: 50px !important;
+}  
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}   
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+#comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  border-radius: 30px;
+}
+.sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+}
+.grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+  $ (".clickable").addClass( "hvr-underline-from-center" )
+  $ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+  
+  if(!$ (".sq-cardsort-Q_PackAtt").length){
+    $ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+  }
+  
+  if($ (".p1").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");      
+      $ (".comment-text").css("color", "black");
+      $ (".comment-text").css("background-color","lightgrey");
+      $ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");
+      $ (".question").css("background-color","lightgrey");
+      $ (".question-text").css("color","black");
+      $ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+  if($ (".radio .sq-atm1d-button").length){
+      $ ("#btn_continue").hide();
+    } 
+  $ (document).on('click', '.radio .sq-atm1d-button', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmtable-btn', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-sliderpoints-container', function() {
+    $ ("#btn_continue").click();
+  })
+       
+/*Textbox*/
+  $ ('.element').css('text-align','center');
+  
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmrating-container', function() {
+    $ ("#btn_continue").click();
+  })
+*/
+
+/*Change Font*/
+  $ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+</script>
+]]></style>
+<samplesources>
+  <samplesource list="23">
+    <title>Research for Good</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="http://www.surveyunion.com/api/fa/screenout/idy_sid=${sid}"/>
+    <exit cond="overquota" url="http://www.surveyunion.com/api/fa/quotafull/idy_sid=${sid}"/>
+    <exit cond="qualified" url="http://www.surveyunion.com/api/fa/complete/idy_sid=${sid}"/>
+  </samplesource>
+
+  <samplesource list="22">
+    <title>Union Panel</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="http://www.surveyunion.com/api/fa/screenout/idy_sid=${sid}"/>
+    <exit cond="overquota" url="http://www.surveyunion.com/api/fa/quotafull/idy_sid=${sid}"/>
+    <exit cond="qualified" url="http://www.surveyunion.com/api/fa/complete/idy_sid=${sid}"/>
+  </samplesource>
+
+  <samplesource list="21">
+    <title>Phoenix Data Innov</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="xpid" unique="1"/>
+    <exit cond="terminated" url="http://globaldial.surveybackoffice.com/endcapture.php?cada=NTAxOS1aMnh2WW1Gc1pHbGhiQT09&amp;st=222"/>
+    <exit cond="overquota" url="http://globaldial.surveybackoffice.com/endcapture.php?cada=NTAxOS1aMnh2WW1Gc1pHbGhiQT09&amp;st=333"/>
+    <exit cond="qualified" url="http://globaldial.surveybackoffice.com/endcapture.php?cada=NTAxOS1aMnh2WW1Gc1pHbGhiQT09&amp;st=111"/>
+  </samplesource>
+
+  <samplesource list="20">
+    <title>GMO Research (JPN)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=2&amp;id=${id}"/>
+    <exit cond="overquota" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=3&amp;id=${id}"/>
+    <exit cond="qualified" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=1&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="138">
+    <title>Philomath Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey.philomathresearch.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey.philomathresearch.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey.philomathresearch.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="137">
+    <title>Research Cart</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="respid" unique="1"/>
+    <exit cond="terminated" url="http://www.researchcart.com/terminated-entry.php?projectid=RC230321B&amp;respid=${respid}"/>
+    <exit cond="overquota" url="http://www.researchcart.com/quotafull-entry.php?projectid=RC230321B&amp;respid=${respid}"/>
+    <exit cond="qualified" url="http://www.researchcart.com/completed-entry.php?projectid=RC230321B&amp;respid=${respid}"/>
+  </samplesource>
+
+  <samplesource list="19">
+    <title>Acuity </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="study" required="1"/>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://emea.focusvision.com/survey/selfserve/581/g008/210100?RID=${RID}&amp;state=18f32280-f20c-4b77-a88d-2279008b4fd8&amp;st=1&amp;study=${study}"/>
+    <exit cond="overquota" url="https://emea.focusvision.com/survey/selfserve/581/g008/210100?RID=${RID}&amp;state=561151fa-4c57-47fb-8208-fb7a6e750f0a&amp;st=2&amp;study=${study}"/>
+    <exit cond="qualified" url="https://emea.focusvision.com/survey/selfserve/581/g008/210100?RID=${RID}&amp;state=ae6158e0-9a11-4e8e-a11d-6b3579b1a981&amp;st=3&amp;study=${study}"/>
+  </samplesource>
+
+  <samplesource list="136">
+    <title>DISQO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tid" unique="1"/>
+    <exit cond="terminated" url="https://go.activemeasure.com?status=12615&amp;tid=${tid}"/>
+    <exit cond="overquota" url="https://go.activemeasure.com?status=9526&amp;tid=${tid}"/>
+    <exit cond="qualified" url="https://go.activemeasure.com?status=17787&amp;tid=${tid}"/>
+  </samplesource>
+
+  <samplesource list="18">
+    <title>Dynamic field new (copy)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ExtCode" unique="1"/>
+    <exit cond="terminated" url="https://dynamicfieldwork.dubinterviewer.com/scripts/dubinterviewer.dll/Frames?Quest=100117&amp;Resp=${ExtCode}&amp;Rst=2"/>
+    <exit cond="overquota" url="https://dynamicfieldwork.dubinterviewer.com/scripts/dubinterviewer.dll/Frames?Quest=100117&amp;Resp=${ExtCode}&amp;Rst=3"/>
+    <exit cond="qualified" url="https://dynamicfieldwork.dubinterviewer.com/scripts/dubinterviewer.dll/Frames?Quest=100117&amp;Resp=${ExtCode}&amp;Rst=1"/>
+  </samplesource>
+
+  <samplesource list="17">
+    <title>Splendid-Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.mobrog.com/?m=6006&amp;return=screenout&amp;i_survey=${ID}"/>
+    <exit cond="overquota" url="https://surveys.mobrog.com/?m=6006&amp;return=quotafull&amp;i_survey=${ID}"/>
+    <exit cond="qualified" url="https://surveys.mobrog.com/?m=6006&amp;return=complete&amp;i_survey=${ID}"/>
+  </samplesource>
+
+  <samplesource list="16">
+    <title>Market T Plus</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="eid" unique="1"/>
+    <exit cond="terminated" url="http://smart.markettplus.com/landingpage.aspx?pid=291101&amp;cid=46412&amp;st=s&amp;smode=3&amp;eid=${eid}"/>
+    <exit cond="overquota" url="http://smart.markettplus.com/landingpage.aspx?pid=291101&amp;cid=46412&amp;st=q&amp;smode=3&amp;eid=${eid}"/>
+    <exit cond="qualified" url="http://smart.markettplus.com/landingpage.aspx?pid=291101&amp;cid=46412&amp;st=c&amp;smode=3&amp;eid=${eid}"/>
+  </samplesource>
+
+  <samplesource list="15">
+    <title>Pure Spectrum </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="14">
+    <title>Think Now Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=e9c0a39a-e543-47f6-a636-8239b080278f&amp;RID=${RID}"/>
+  </samplesource>
+
+  <samplesource list="13">
+    <title>Cognitive Intelligence</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://kesurvey.sawtoothsoftware.com/ST011/cgi-bin/ciwweb.pl?studyname=ST011&amp;id=${id}&amp;status=2&amp;co=1&amp;sample=1"/>
+    <exit cond="overquota" url="https://kesurvey.sawtoothsoftware.com/ST011/cgi-bin/ciwweb.pl?studyname=ST011&amp;id=${id}&amp;status=3&amp;co=1&amp;sample=1"/>
+    <exit cond="qualified" url="https://kesurvey.sawtoothsoftware.com/ST011/cgi-bin/ciwweb.pl?studyname=ST011&amp;id=${id}&amp;status=1&amp;co=1&amp;sample=1"/>
+  </samplesource>
+
+  <samplesource list="12">
+    <title>Capgemini (Nestle ONLY)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://link.annik.com/rd?status=s&amp;id=${id}"/>
+    <exit cond="overquota" url="https://link.annik.com/rd?status=q&amp;id=${id}"/>
+    <exit cond="qualified" url="https://link.annik.com/rd?status=c&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Samplenomics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UI" unique="1"/>
+    <exit cond="terminated" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndTerm&amp;UI=${UI}"/>
+    <exit cond="overquota" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndOverQ&amp;UI=${UI}"/>
+    <exit cond="qualified" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=END&amp;UI=${UI}"/>
+  </samplesource>
+
+  <samplesource list="104">
+    <title>LightSpeed</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <var name="table" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${table}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${table}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${table}"/>
+  </samplesource>
+
+  <samplesource list="10">
+    <title>Kantar</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <var name="ProjectToken" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+  </samplesource>
+
+  <samplesource list="9">
+    <title>Bilendi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="http://survey.maximiles.com/static-screenout?l=189173&amp;ID=${ID}"/>
+    <exit cond="overquota" url="http://survey.maximiles.com/static-quotasfull?l=189172&amp;ID={ID}"/>
+    <exit cond="qualified" url="http://survey.maximiles.com/static-complete?l=189174&amp;ID={ID}"/>
+  </samplesource>
+
+  <samplesource list="8">
+    <title>Respondi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tic" unique="1"/>
+    <exit cond="terminated" url="https://mingle.respondi.com/s/1277088/ospe.php3?c_0002=0&amp;tic=${tic}"/>
+    <exit cond="overquota" url="https://mingle.respondi.com/s/1277088/ospe.php3?c_0002=2&amp;tic=${tic}"/>
+    <exit cond="qualified" url="https://mingle.respondi.com/s/1277088/ospe.php3?c_0002=1&amp;tic=${tic}"/>
+  </samplesource>
+
+  <samplesource list="7">
+    <title>Lucid - USE THIS</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=5f160ff5-0278-4427-803e-0d4bca070945&amp;RID=${RID}"/>
+  </samplesource>
+
+  <samplesource list="6">
+    <title>Rakuten (AIP)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <exit cond="terminated" url="https://panel.aipsurveys.com/survey/Passback.do?pid=32e39092b25a3992&amp;uid=${uid}&amp;st=s"/>
+    <exit cond="overquota" url="https://panel.aipsurveys.com/survey/Passback.do?pid=32e39092b25a3992&amp;uid=${uid}&amp;st=q"/>
+    <exit cond="qualified" url="https://panel.aipsurveys.com/survey/Passback.do?pid=32e39092b25a3992&amp;uid=${uid}&amp;st=c"/>
+  </samplesource>
+
+  <samplesource list="5">
+    <title>EMI - new</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="EMI" unique="1"/>
+    <exit cond="terminated" url="https://survey.emi-rs.com/end/quotafull/?scb=OPFvOzn710y7"/>
+    <exit cond="overquota" url="https://survey.emi-rs.com/end/quotafull/?scb=OPFvOzn710y7"/>
+    <exit cond="qualified" url="https://survey.emi-rs.com/end/complete/?scb=12u5Hj6rSVD5"/>
+  </samplesource>
+
+  <samplesource keyring="sys/rn" list="101" sign="out">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <exit cond="terminated" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://dkr1.ssisurveys.com/projects/end?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://dkr1.ssisurveys.com/projects/end?rst=1&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="4">
+    <title>OI Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://api.dynata.com/respondent/exit?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://api.dynata.com/respondent/exit?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://api.dynata.com/respondent/exit?rst=1&amp;psid=${psid}&amp;high=${int(high.val)}"/>
+  </samplesource>
+
+  <samplesource list="3">
+    <title>Wise Works 10/23/2019</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="wspid" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;wspid=${wspid}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;wspid=${wspid}"/>
+    <exit cond="qualified" url="https://pollrouting.com/router/mme7W4F1Pw160PiVkz0id1xhUPCC3fxj7/passback.php?deal=smpl&amp;st=uWIA5wFAuED0&amp;wspid=${wspid}"/>
+  </samplesource>
+
+  <samplesource list="134">
+    <title>Prodege</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=3"/>
+    <exit cond="overquota" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=2"/>
+    <exit cond="qualified" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=1"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Market-Cube (NEW Standard Re-directs) 10/29/2019</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending/?RS=3&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending/?RS=2&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending/?RS=1&amp;RID=${RID}&amp;secret=606"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder - do not add Resp</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #C6007E">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<note>Image per loading</note>
+<style name="global.page.head"><![CDATA[
+<script type="text/javascript" src="/survey/${gv.survey.path}/loadimg.js"></script>
+  <script type="text/javascript">
+  var loadimgopt = ${this.stylesjs.loadimg};
+  $.extend(loadimgopt, {
+    loadimg:${res.loadimg},
+  });
+  $ (function() {
+        Survey.question.loadimg.setup(loadimgopt);
+    });
+  </script>
+]]></style>
+<style name="global.page.head"><![CDATA[
+<script type="text/javascript" src="/survey/${gv.survey.path}/loadimg.js"></script>
+  <script type="text/javascript">
+  var loadimgopt = ${this.stylesjs.loadimg};
+  $.extend(loadimgopt, {
+    loadimg:${res.loadimg1},
+  });
+  $ (function() {
+        Survey.question.loadimg.setup(loadimgopt);
+    });
+  </script>
+]]></style>
+<suspend/>
+
+<exec cond="list == '4'">
+if gv.isSST():
+  high1=1111111
+if not gv.isSST():
+  high1=(35799 * int(pid) - 32863)
+high.val=high1
+</exec>
+
+<suspend/>
+
+<float 
+  label="high"
+  cond="list == '4'"
+  translateable="0"
+  where="execute,survey">
+  <title>High</title>
+</float>
+
+<block label="Logistics" builder:title="Logistics">
+  <radio 
+   label="Location"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Sample Source (web) / Location (web to clt)</title>
+    <row label="US166" cond="list=='3'" value="592487365">Wise Works</row>
+    <row label="US167" cond="list=='2'" value="592490403">Market-Cube</row>
+    <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+    <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+    <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+    <row label="IN014" cond="list=='12'" value="592505378">Capgemini</row>
+    <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+    <row label="GB017" cond="list=='7'" value="595370772">Lucid Holdings UK Limited</row>
+    <row label="US170" cond="list=='5'" value="595372438">EMI Research Solutions</row>
+    <row label="GB018" cond="list=='8'" value="595377573">RESPONDI LIMITED</row>
+    <row label="GB019" cond="list=='9'" value="595382531">Bilendi Ltd.</row>
+    <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+    <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+    <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+    <row label="IN015" cond="list=='13'" value="692643881">Cognitive Intelligence</row>
+    <row label="US191" cond="list=='14'" value="786180997">Think Now Research ()</row>
+    <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+    <row label="US196" cond="list=='16'" value="913308096">Market T Plus ()</row>
+    <row label="GB021" cond="list=='18'" value="848715950">Dynamic Fieldwork (NO ET)</row>
+    <row label="US197" cond="list=='17'" value="913561750">Splendid Research ()</row>
+    <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+    <row label="US194" cond="list=='19'" value="828016042">Acuity (NO ET)</row>
+    <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+    <row label="IN019" cond="list=='137'" value="1154268554">Research Cart</row>
+    <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+    <row label="CN038" cond="list=='22'" value="1285284313">Union Panels (Kadence)</row>
+    <row label="GB022" cond="list=='21'" value="1219137790">Phoenix Data Innov UK ()</row>
+    <row label="US208" cond="list=='23'" value="1312675875">Research for Good</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>H0199 - eCom Initiative (Men's Deodorant)</title>
+    <row label="r1" autofill="True">h0199h</row>
+  </autofill>
+
+  <text 
+   label="LocationCode"
+   cond="not(gv.isSST())"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+  LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Intro" where="survey"><p class="p1">HELLO AND WELCOME TO OUR SURVEY!<br /><br />THANK YOU IN ADVANCE FOR YOUR PARTICIPATION.  THIS STUDY IS VERY IMPORTANT TO US AND WE ASK THAT YOU ANSWER EACH QUESTION CAREFULLY AND COMPLETELY.<br /><br />WHILE GOING THROUGH THE SURVEY, PLEASE USE THE SCROLL BAR ON THE RIGHT AND BOTTOM OF YOUR SCREEN TO MOVE UP AND DOWN THROUGH QUESTIONS AND IMAGES.  PLEASE REMEMBER THAT THERE ARE NO RIGHT OR WRONG ANSWERS.  WE ARE ONLY INTERESTED IN YOUR OPINIONS.<br /><br /><strong>LET’S BEGIN…</strong></p></html>
+
+  <suspend/>
+</block>
+
+<block label="Screener" builder:title="Screener">
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please state your gender.</title>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3">Non-Binary</row>
+  </radio>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="3"
+   verify="range(0,99)">
+    <title>Please type in your age below.</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('18-99'))">Age</term>
+
+  <radio 
+   label="S_Retailer"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>In the past year, have you shopped at Amazon.com?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Retailer" cond="S_Retailer.r2">Retailer</term>
+
+  <radio 
+   label="S_Frequency"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>Did you purchase products from the following categories <u>online</u>? If so, how often?</title>
+    <row label="r1">Salty snacks like potato or tortilla chips</row>
+    <row label="TB">Pens, pencils, markers, or other writing utensils</row>
+    <row label="r2">Home HVAC air filters</row>
+    <col label="c1">Once a week</col>
+    <col label="c2">Once every 2 weeks</col>
+    <col label="c3">Once a month</col>
+    <col label="c4">Once every 2 or 3 months</col>
+    <col label="c5">Once every 6 months</col>
+    <col label="c6">Once a year</col>
+    <col label="c7">Never</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+      $ ("#btn_continue").hide();
+    }
+  
+  var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+  var num_attr = qn.rows.length
+  console.log(num_attr);
+  var iteration = 1 
+  
+   $ (document).on('click', '.sq-cardrating-buttons', function() {
+          if(iteration == num_attr){
+            $ ("#btn_continue").click();
+          }
+          iteration++;
+        })
+  </script>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone 
+.label_S_Frequency .sq-cardrating-button {
+    height: 60.5px !important;
+}
+\@endif
+</style>
+]]></style>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Freq" cond="S_Frequency.TB.c7">Category Frequency</term>
+
+  <suspend/>
+
+  <autofill label="FreqQual" randomize="0" where="execute,survey,report">
+    <title>Frequency Qualifier</title>
+    <row label="r1" autofill="not(S_Frequency.TB.c7)">Pens, pencils, markers, or other writing utensils</row>
+    <row label="r2" autofill="not(S_Frequency.r1.c7)">Salty snacks like potato or tortilla chips</row>
+    <row label="r3" autofill="not(S_Frequency.r2.c7)">ome HVAC air filters</row>
+  </autofill>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Pen"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which types of pens, pencils, markers, or writing utensils did you purchase online in the past year?</title>
+    <comment>Select All that apply.</comment>
+    <row label="r1">Pens</row>
+    <row label="r2">Pencils</row>
+    <row label="r3">Markers</row>
+    <row label="r4">Highlighters</row>
+    <row label="r5">Dry-Erase Markers</row>
+    <row label="r6">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <block label="Category2" builder:title="Chocolate">
+    <checkbox 
+    label="S_Brand_PastPurchased"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>Please select all the brands of pens, pencils, markers, or writing utensils you bought in the past year online.</title>
+      <row label="r1">Amazon Basics</row>
+      <row label="r2">Arteza</row>
+      <row label="r3">BIC</row>
+      <row label="r4">Crayola</row>
+      <row label="r5">Expo</row>
+      <row label="r6">iBayam</row>
+      <row label="r7">Paper Mate</row>
+      <row label="r8">Parker</row>
+      <row label="r9">Pentel</row>
+      <row label="r10">Pilot</row>
+      <row label="r11">Primacolor</row>
+      <row label="r12">Reynolds</row>
+      <row label="r13">Rotring</row>
+      <row label="r14">Sharpie</row>
+      <row label="r15">Ticonderoga</row>
+      <row label="r16">Uniball</row>
+      <row label="r17">Waterman</row>
+      <row label="r18">Zebra pens</row>
+      <row label="r19">Other</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="S_BUMO"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Brand_PastPurchased[row.index]"
+    uses="atm1d.9">
+      <title>Please select the one brand of pens, pencils, markers, or writing utensils you bought most often in the past year online.</title>
+      <row label="r1">Amazon Basics</row>
+      <row label="r2">Arteza</row>
+      <row label="r3">BIC</row>
+      <row label="r4">Crayola</row>
+      <row label="r5">Expo</row>
+      <row label="r6">iBayam</row>
+      <row label="r7">Paper Mate</row>
+      <row label="r8">Parker</row>
+      <row label="r9">Pentel</row>
+      <row label="r10">Pilot</row>
+      <row label="r11">Primacolor</row>
+      <row label="r12">Reynolds</row>
+      <row label="r13">Rotring</row>
+      <row label="r14">Sharpie</row>
+      <row label="r15">Ticonderoga</row>
+      <row label="r16">Uniball</row>
+      <row label="r17">Waterman</row>
+      <row label="r18">Zebra pens</row>
+      <row label="r19">Other</row>
+    </radio>
+
+    <suspend/>
+  </block>
+</block>
+
+<suspend/>
+
+<block label="Quotas" builder:title="Quotas">
+  <autofill label="Age" randomize="0" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="S_Age.check('18-34')">18-34</row>
+    <row label="r2" autofill="S_Age.check('35-44')">35-44</row>
+    <row label="r3" autofill="S_Age.check('45-64')">45-64</row>
+    <row label="r4" autofill="S_Age.check('65-99')">65+</row>
+  </autofill>
+
+  <autofill label="Gender" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r1" autofill="(S_Gender.r1)">Male</row>
+    <row label="r2" autofill="(S_Gender.r2)">Female</row>
+    <row label="r3" autofill="(S_Gender.r3)">Non-Binary</row>
+  </autofill>
+
+  <autofill label="Usage" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P1Y)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased.r1">Amazon Basics</row>
+    <row label="r2" autofill="S_Brand_PastPurchased.r2">Arteza</row>
+    <row label="r3" autofill="S_Brand_PastPurchased.r3">BIC</row>
+    <row label="r4" autofill="S_Brand_PastPurchased.r4">Crayola</row>
+    <row label="r5" autofill="S_Brand_PastPurchased.r5">Expo</row>
+    <row label="r6" autofill="S_Brand_PastPurchased.r6">iBayam</row>
+    <row label="r7" autofill="S_Brand_PastPurchased.r7">Paper Mate</row>
+    <row label="r8" autofill="S_Brand_PastPurchased.r8">Parker</row>
+    <row label="r9" autofill="S_Brand_PastPurchased.r9">Pentel</row>
+    <row label="r10" autofill="S_Brand_PastPurchased.r10">Pilot</row>
+    <row label="r11" autofill="S_Brand_PastPurchased.r11">Primacolor</row>
+    <row label="r12" autofill="S_Brand_PastPurchased.r12">Reynolds</row>
+    <row label="r13" autofill="S_Brand_PastPurchased.r13">Rotring</row>
+    <row label="r14" autofill="S_Brand_PastPurchased.r14">Sharpie</row>
+    <row label="r15" autofill="S_Brand_PastPurchased.r15">Ticonderoga</row>
+    <row label="r16" autofill="S_Brand_PastPurchased.r16">Uniball</row>
+    <row label="r17" autofill="S_Brand_PastPurchased.r17">Waterman</row>
+    <row label="r18" autofill="S_Brand_PastPurchased.r18">Zebra pens</row>
+    <row label="r19" autofill="S_Brand_PastPurchased.r19">Other</row>
+  </autofill>
+
+  <autofill label="BUMO" randomize="0" where="execute,survey,report">
+    <title>BUMO</title>
+    <row label="r1" autofill="S_BUMO.r1">Amazon Basics</row>
+    <row label="r2" autofill="S_BUMO.r2">Arteza</row>
+    <row label="r3" autofill="S_BUMO.r3">BIC</row>
+    <row label="r4" autofill="S_BUMO.r4">Crayola</row>
+    <row label="r5" autofill="S_BUMO.r5">Expo</row>
+    <row label="r6" autofill="S_BUMO.r6">iBayam</row>
+    <row label="r7" autofill="S_BUMO.r7">Paper Mate</row>
+    <row label="r8" autofill="S_BUMO.r8">Parker</row>
+    <row label="r9" autofill="S_BUMO.r9">Pentel</row>
+    <row label="r10" autofill="S_BUMO.r10">Pilot</row>
+    <row label="r11" autofill="S_BUMO.r11">Primacolor</row>
+    <row label="r12" autofill="S_BUMO.r12">Reynolds</row>
+    <row label="r13" autofill="S_BUMO.r13">Rotring</row>
+    <row label="r14" autofill="S_BUMO.r14">Sharpie</row>
+    <row label="r15" autofill="S_BUMO.r15">Ticonderoga</row>
+    <row label="r16" autofill="S_BUMO.r16">Uniball</row>
+    <row label="r17" autofill="S_BUMO.r17">Waterman</row>
+    <row label="r18" autofill="S_BUMO.r18">Zebra pens</row>
+    <row label="r19" autofill="S_BUMO.r19">Other</row>
+  </autofill>
+
+  <suspend/>
+
+  <quota label="Quota" doit="1" overquota="noqual" sheet="Quota"/>
+
+  <suspend/>
+
+  <block label="SETQuotas" builder:title="Quotas">
+    <autofill label="PhaseQ" randomize="0" where="execute,survey,report">
+      <title>PhaseQ</title>
+      <row label="r1" autofill="hasMarker('ph01*')">1</row>
+      <row label="r2" autofill="hasMarker('ph02*')">2</row>
+      <row label="r3" autofill="hasMarker('ph03*')">3</row>
+      <row label="r4" autofill="hasMarker('ph04*')">4</row>
+      <row label="r5" autofill="hasMarker('ph05*')">5</row>
+      <row label="r6" autofill="hasMarker('ph06*')">6</row>
+      <row label="r7" autofill="hasMarker('ph07*')">7</row>
+      <row label="r8" autofill="hasMarker('ph08*')">8</row>
+      <row label="r9" autofill="hasMarker('ph09*')">9</row>
+      <row label="r10" autofill="hasMarker('ph10*')">10</row>
+      <row label="r11" autofill="hasMarker('ph11*')">11</row>
+      <row label="r12" autofill="hasMarker('ph12*')">12</row>
+      <row label="r13" autofill="hasMarker('ph13*')">13</row>
+      <row label="r14" autofill="hasMarker('ph14*')">14</row>
+      <row label="r15" autofill="hasMarker('ph15*')">15</row>
+    </autofill>
+
+    <autofill label="Sample" randomize="0" where="execute,survey,report">
+      <title>Sample</title>
+      <row label="r1" autofill="True">Category Rep</row>
+    </autofill>
+  </block>
+
+  <suspend/>
+
+  <exec>
+if PhaseQ.r1:  Phase.val=0
+if PhaseQ.r2:  Phase.val=1
+if PhaseQ.r3:  Phase.val=2
+if PhaseQ.r4:  Phase.val=3
+if PhaseQ.r5:  Phase.val=4
+if PhaseQ.r6:  Phase.val=5
+if PhaseQ.r7:  Phase.val=6
+if PhaseQ.r8:  Phase.val=7
+if PhaseQ.r9:  Phase.val=8
+if PhaseQ.r10:  Phase.val=9
+if PhaseQ.r11:  Phase.val=10
+if PhaseQ.r12:  Phase.val=11
+if PhaseQ.r13:  Phase.val=12
+if PhaseQ.r14:  Phase.val=13
+if PhaseQ.r15:  Phase.val=14
+  </exec>
+
+  <radio 
+   label="Phase"
+   randomize="0"
+   where="report">
+    <title>Phase</title>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+    <row label="r4">4</row>
+    <row label="r5">5</row>
+    <row label="r6">6</row>
+    <row label="r7">7</row>
+    <row label="r8">8</row>
+    <row label="r9">9</row>
+    <row label="r10">10</row>
+    <row label="r11">11</row>
+    <row label="r12">12</row>
+    <row label="r13">13</row>
+    <row label="r14">14</row>
+    <row label="r15">15</row>
+  </radio>
+
+  <suspend/>
+
+  <pipe label="SKU1" capture="">
+    <case label="r1" cond="Phase.r1">1</case>
+    <case label="r2" cond="Phase.r2">11</case>
+    <case label="r3" cond="Phase.r3">21</case>
+    <case label="r4" cond="Phase.r4">31</case>
+    <case label="r5" cond="Phase.r5">41</case>
+    <case label="r6" cond="Phase.r6">51</case>
+    <case label="r7" cond="Phase.r7">61</case>
+    <case label="r8" cond="Phase.r8">71</case>
+    <case label="r9" cond="Phase.r9">81</case>
+    <case label="r10" cond="Phase.r10">91</case>
+    <case label="r11" cond="Phase.r11">101</case>
+    <case label="r12" cond="Phase.r12">111</case>
+    <case label="r13" cond="Phase.r13">121</case>
+    <case label="r14" cond="Phase.r14">131</case>
+    <case label="r15" cond="Phase.r15">141</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU2" capture="">
+    <case label="r1" cond="Phase.r1">2</case>
+    <case label="r2" cond="Phase.r2">12</case>
+    <case label="r3" cond="Phase.r3">22</case>
+    <case label="r4" cond="Phase.r4">32</case>
+    <case label="r5" cond="Phase.r5">42</case>
+    <case label="r6" cond="Phase.r6">52</case>
+    <case label="r7" cond="Phase.r7">62</case>
+    <case label="r8" cond="Phase.r8">72</case>
+    <case label="r9" cond="Phase.r9">82</case>
+    <case label="r10" cond="Phase.r10">92</case>
+    <case label="r11" cond="Phase.r11">102</case>
+    <case label="r12" cond="Phase.r12">112</case>
+    <case label="r13" cond="Phase.r13">122</case>
+    <case label="r14" cond="Phase.r14">132</case>
+    <case label="r15" cond="Phase.r15">142</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU3" capture="">
+    <case label="r1" cond="Phase.r1">3</case>
+    <case label="r2" cond="Phase.r2">13</case>
+    <case label="r3" cond="Phase.r3">23</case>
+    <case label="r4" cond="Phase.r4">33</case>
+    <case label="r5" cond="Phase.r5">43</case>
+    <case label="r6" cond="Phase.r6">53</case>
+    <case label="r7" cond="Phase.r7">63</case>
+    <case label="r8" cond="Phase.r8">73</case>
+    <case label="r9" cond="Phase.r9">83</case>
+    <case label="r10" cond="Phase.r10">93</case>
+    <case label="r11" cond="Phase.r11">103</case>
+    <case label="r12" cond="Phase.r12">113</case>
+    <case label="r13" cond="Phase.r13">123</case>
+    <case label="r14" cond="Phase.r14">133</case>
+    <case label="r15" cond="Phase.r15">143</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU4" capture="">
+    <case label="r1" cond="Phase.r1">4</case>
+    <case label="r2" cond="Phase.r2">14</case>
+    <case label="r3" cond="Phase.r3">24</case>
+    <case label="r4" cond="Phase.r4">34</case>
+    <case label="r5" cond="Phase.r5">44</case>
+    <case label="r6" cond="Phase.r6">54</case>
+    <case label="r7" cond="Phase.r7">64</case>
+    <case label="r8" cond="Phase.r8">74</case>
+    <case label="r9" cond="Phase.r9">84</case>
+    <case label="r10" cond="Phase.r10">94</case>
+    <case label="r11" cond="Phase.r11">104</case>
+    <case label="r12" cond="Phase.r12">114</case>
+    <case label="r13" cond="Phase.r13">124</case>
+    <case label="r14" cond="Phase.r14">134</case>
+    <case label="r15" cond="Phase.r15">144</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU5" capture="">
+    <case label="r1" cond="Phase.r1">5</case>
+    <case label="r2" cond="Phase.r2">15</case>
+    <case label="r3" cond="Phase.r3">25</case>
+    <case label="r4" cond="Phase.r4">35</case>
+    <case label="r5" cond="Phase.r5">45</case>
+    <case label="r6" cond="Phase.r6">55</case>
+    <case label="r7" cond="Phase.r7">65</case>
+    <case label="r8" cond="Phase.r8">75</case>
+    <case label="r9" cond="Phase.r9">85</case>
+    <case label="r10" cond="Phase.r10">95</case>
+    <case label="r11" cond="Phase.r11">105</case>
+    <case label="r12" cond="Phase.r12">115</case>
+    <case label="r13" cond="Phase.r13">125</case>
+    <case label="r14" cond="Phase.r14">135</case>
+    <case label="r15" cond="Phase.r15">145</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU6" capture="">
+    <case label="r1" cond="Phase.r1">6</case>
+    <case label="r2" cond="Phase.r2">16</case>
+    <case label="r3" cond="Phase.r3">26</case>
+    <case label="r4" cond="Phase.r4">36</case>
+    <case label="r5" cond="Phase.r5">46</case>
+    <case label="r6" cond="Phase.r6">56</case>
+    <case label="r7" cond="Phase.r7">66</case>
+    <case label="r8" cond="Phase.r8">76</case>
+    <case label="r9" cond="Phase.r9">86</case>
+    <case label="r10" cond="Phase.r10">96</case>
+    <case label="r11" cond="Phase.r11">106</case>
+    <case label="r12" cond="Phase.r12">116</case>
+    <case label="r13" cond="Phase.r13">126</case>
+    <case label="r14" cond="Phase.r14">136</case>
+    <case label="r15" cond="Phase.r15">146</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU7" capture="">
+    <case label="r1" cond="Phase.r1">7</case>
+    <case label="r2" cond="Phase.r2">17</case>
+    <case label="r3" cond="Phase.r3">27</case>
+    <case label="r4" cond="Phase.r4">37</case>
+    <case label="r5" cond="Phase.r5">47</case>
+    <case label="r6" cond="Phase.r6">57</case>
+    <case label="r7" cond="Phase.r7">67</case>
+    <case label="r8" cond="Phase.r8">77</case>
+    <case label="r9" cond="Phase.r9">87</case>
+    <case label="r10" cond="Phase.r10">97</case>
+    <case label="r11" cond="Phase.r11">107</case>
+    <case label="r12" cond="Phase.r12">117</case>
+    <case label="r13" cond="Phase.r13">127</case>
+    <case label="r14" cond="Phase.r14">137</case>
+    <case label="r15" cond="Phase.r15">147</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU8" capture="">
+    <case label="r1" cond="Phase.r1">8</case>
+    <case label="r2" cond="Phase.r2">18</case>
+    <case label="r3" cond="Phase.r3">28</case>
+    <case label="r4" cond="Phase.r4">38</case>
+    <case label="r5" cond="Phase.r5">48</case>
+    <case label="r6" cond="Phase.r6">58</case>
+    <case label="r7" cond="Phase.r7">68</case>
+    <case label="r8" cond="Phase.r8">78</case>
+    <case label="r9" cond="Phase.r9">88</case>
+    <case label="r10" cond="Phase.r10">98</case>
+    <case label="r11" cond="Phase.r11">108</case>
+    <case label="r12" cond="Phase.r12">118</case>
+    <case label="r13" cond="Phase.r13">128</case>
+    <case label="r14" cond="Phase.r14">138</case>
+    <case label="r15" cond="Phase.r15">148</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU9" capture="">
+    <case label="r1" cond="Phase.r1">9</case>
+    <case label="r2" cond="Phase.r2">19</case>
+    <case label="r3" cond="Phase.r3">29</case>
+    <case label="r4" cond="Phase.r4">39</case>
+    <case label="r5" cond="Phase.r5">49</case>
+    <case label="r6" cond="Phase.r6">59</case>
+    <case label="r7" cond="Phase.r7">69</case>
+    <case label="r8" cond="Phase.r8">79</case>
+    <case label="r9" cond="Phase.r9">89</case>
+    <case label="r10" cond="Phase.r10">99</case>
+    <case label="r11" cond="Phase.r11">109</case>
+    <case label="r12" cond="Phase.r12">119</case>
+    <case label="r13" cond="Phase.r13">129</case>
+    <case label="r14" cond="Phase.r14">139</case>
+    <case label="r15" cond="Phase.r15">149</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="SKU10" capture="">
+    <case label="r1" cond="Phase.r1">10</case>
+    <case label="r2" cond="Phase.r2">20</case>
+    <case label="r3" cond="Phase.r3">30</case>
+    <case label="r4" cond="Phase.r4">40</case>
+    <case label="r5" cond="Phase.r5">50</case>
+    <case label="r6" cond="Phase.r6">60</case>
+    <case label="r7" cond="Phase.r7">70</case>
+    <case label="r8" cond="Phase.r8">80</case>
+    <case label="r9" cond="Phase.r9">90</case>
+    <case label="r10" cond="Phase.r10">100</case>
+    <case label="r11" cond="Phase.r11">110</case>
+    <case label="r12" cond="Phase.r12">120</case>
+    <case label="r13" cond="Phase.r13">130</case>
+    <case label="r14" cond="Phase.r14">140</case>
+    <case label="r15" cond="Phase.r15">150</case>
+    <case label="r99" cond="1"/></pipe></block>
+
+<suspend/>
+
+<block label="ImageAvailable" builder:title="IMAGES AVAILABLE">
+  <autofill label="SKU1_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU1: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU1_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU2_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU2: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU2_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU3_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU3_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU4_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU4_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU5_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU5_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU6_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU6_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU7_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU7_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU8_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU8_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU9_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU9_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <autofill label="SKU10_Q1_ImageAvailable" randomize="0" where="execute,survey,report">
+    <title>SKU3: Q1 Image Available</title>
+    <row label="r1" autofill="True">Yes</row>
+    <row label="r2" autofill="SKU10_Q1_ImageAvailable.count==0">No</row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<block label="Images" builder:title="IMAGES">
+  <autofill label="SKU1_A" randomize="0" where="execute,survey,report">
+    <title>SKU 1: Hero Image</title>
+    <row label="r1" autofill="SKU1_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU1}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU1_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU2_A" randomize="0" where="execute,survey,report">
+    <title>SKU 2: Hero Image</title>
+    <row label="r1" autofill="SKU2_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU2}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU2_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU3_A" randomize="0" where="execute,survey,report">
+    <title>SKU 3: Hero Image</title>
+    <row label="r1" autofill="SKU3_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU3}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU3_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU4_A" randomize="0" where="execute,survey,report">
+    <title>SKU 4: Hero Image</title>
+    <row label="r1" autofill="SKU4_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU4}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU4_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU5_A" randomize="0" where="execute,survey,report">
+    <title>SKU 5: Hero Image</title>
+    <row label="r1" autofill="SKU5_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU5}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU5_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU6_A" randomize="0" where="execute,survey,report">
+    <title>SKU 6: Hero Image</title>
+    <row label="r1" autofill="SKU6_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU6}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU6_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU7_A" randomize="0" where="execute,survey,report">
+    <title>SKU 7: Hero Image</title>
+    <row label="r1" autofill="SKU7_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU7}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU7_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU8_A" randomize="0" where="execute,survey,report">
+    <title>SKU 8: Hero Image</title>
+    <row label="r1" autofill="SKU8_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU8}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU8_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU9_A" randomize="0" where="execute,survey,report">
+    <title>SKU 9: Hero Image</title>
+    <row label="r1" autofill="SKU9_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU9}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU9_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU10_A" randomize="0" where="execute,survey,report">
+    <title>SKU 10: Hero Image</title>
+    <row label="r1" autofill="SKU10_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU10}_A.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU10_A.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU1_B" randomize="0" where="execute,survey,report">
+    <title>SKU 1: Hero Image</title>
+    <row label="r1" autofill="SKU1_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU1}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU1_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU2_B" randomize="0" where="execute,survey,report">
+    <title>SKU 2: Hero Image</title>
+    <row label="r1" autofill="SKU2_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU2}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU2_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU3_B" randomize="0" where="execute,survey,report">
+    <title>SKU 3: Hero Image</title>
+    <row label="r1" autofill="SKU3_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU3}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU3_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU4_B" randomize="0" where="execute,survey,report">
+    <title>SKU 4: Hero Image</title>
+    <row label="r1" autofill="SKU4_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU4}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU4_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU5_B" randomize="0" where="execute,survey,report">
+    <title>SKU 5: Hero Image</title>
+    <row label="r1" autofill="SKU5_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU5}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU5_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU6_B" randomize="0" where="execute,survey,report">
+    <title>SKU 6: Hero Image</title>
+    <row label="r1" autofill="SKU6_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU6}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU6_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU7_B" randomize="0" where="execute,survey,report">
+    <title>SKU 7: Hero Image</title>
+    <row label="r1" autofill="SKU7_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU7}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU7_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU8_B" randomize="0" where="execute,survey,report">
+    <title>SKU 8: Hero Image</title>
+    <row label="r1" autofill="SKU8_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU8}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU8_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU9_B" randomize="0" where="execute,survey,report">
+    <title>SKU 9: Hero Image</title>
+    <row label="r1" autofill="SKU9_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU9}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU9_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU10_B" randomize="0" where="execute,survey,report">
+    <title>SKU 10: Hero Image</title>
+    <row label="r1" autofill="SKU10_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU10}_B.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU10_B.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU1_C" randomize="0" where="execute,survey,report">
+    <title>SKU 1: Hero Image</title>
+    <row label="r1" autofill="SKU1_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU1}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU1_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU2_C" randomize="0" where="execute,survey,report">
+    <title>SKU 2: Hero Image</title>
+    <row label="r1" autofill="SKU2_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU2}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU2_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU3_C" randomize="0" where="execute,survey,report">
+    <title>SKU 3: Hero Image</title>
+    <row label="r1" autofill="SKU3_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU3}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU3_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU4_C" randomize="0" where="execute,survey,report">
+    <title>SKU 4: Hero Image</title>
+    <row label="r1" autofill="SKU4_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU4}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU4_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU5_C" randomize="0" where="execute,survey,report">
+    <title>SKU 5: Hero Image</title>
+    <row label="r1" autofill="SKU5_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU5}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU5_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU6_C" randomize="0" where="execute,survey,report">
+    <title>SKU 6: Hero Image</title>
+    <row label="r1" autofill="SKU6_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU6}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU6_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU7_C" randomize="0" where="execute,survey,report">
+    <title>SKU 7: Hero Image</title>
+    <row label="r1" autofill="SKU7_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU7}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU7_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU8_C" randomize="0" where="execute,survey,report">
+    <title>SKU 8: Hero Image</title>
+    <row label="r1" autofill="SKU8_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU8}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU8_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU9_C" randomize="0" where="execute,survey,report">
+    <title>SKU 9: Hero Image</title>
+    <row label="r1" autofill="SKU9_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU9}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU9_C.count==0">No Image Available</row>
+  </autofill>
+
+  <autofill label="SKU10_C" randomize="0" where="execute,survey,report">
+    <title>SKU 10: Hero Image</title>
+    <row label="r1" autofill="SKU10_Q1_ImageAvailable.r1"><img src="[rel WT${pipe.SKU10}_C.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="None" autofill="SKU10_C.count==0">No Image Available</row>
+  </autofill>
+</block>
+
+<suspend/>
+
+<block label="Variables" builder:title="VARIABLES">
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Category</title>
+    <row label="r1" autofill="True"><strong>Pens, pencils, markers, or other writing utensils</strong></row>
+  </autofill>
+</block>
+
+<suspend/>
+
+<block label="AgreementBlock" builder:title="Agree">
+  <suspend/>
+
+  <note>THIS QUESTION SHOULD BE LEFT IN TO ENSURE QUALITY OF INTERVIEWING AND THAT IT'S NOT A BOT TAKING THE SURVEY</note>
+  <radio 
+   label="RedHerringCheck"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following is not a color?</title>
+    <row label="r1">Red</row>
+    <row label="r2">Blue</row>
+    <row label="r3">Yellow</row>
+    <row label="r4">Pizza</row>
+    <row label="r5">Green</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_RedHerring" cond="not(RedHerringCheck.r4)">Failed Red Herring</term>
+
+  <suspend/>
+
+  <radio 
+   label="Agreement"
+   atm1d:large_buttonAlign="center"
+   atm1d:large_contentAlign="center"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="center"
+   atm1d:small_contentAlign="center"
+   randomize="0"
+   uses="atm1d.9">
+    <title><strong><em>Congratulations! You qualify!</em></strong><hr />Thank you for agreeing to participate in this consumer study on behalf of Behaviorally (formerly PRS). Before you can participate in this research, we would like you to understand that it will involve products which may be confidential. By signing this agreement you agree as follows:
+<div align="left">
+<ul>
+<li /><span style="font-size: 12pt;">You will hold in confidence any information about the products or packaging that may be disclosed to you directly or indirectly by participating in this research.</span>
+<li /><span style="font-size: 12pt;">You will use information disclosed to you only for the purpose of participating in this consumer study, and you will not otherwise use the information for your own benefit or the benefit of any third party.</span>
+</ul>
+</div>
+<br /><strong><em>GDPR Disclaimer:</em></strong><hr />We take every reasonable precaution to ensure the privacy and security of your information during the market research survey.
+<div align="left">
+<ul>
+<li /><span style="font-size: 12pt;">At no time will the information you provided be used for any purpose other than research and you will in no way be adversely affected by taking part.</span>
+<li /><span style="font-size: 12pt;">Behaviorally does not capture or store personal information, but merely logs the user’s IP address which is automatically recognized by the web server.</span>
+<li /><span style="font-size: 12pt;">This information is destroyed 2 months after you have taken this survey.</span>
+</ul>
+</div>
+<br />You will be compensated for your time, commitment, and confidential obligation.<br /><strong>Please confirm your acceptance of these terms by checking the agreement below.</strong></title>
+    <row label="r1"><b>I hereby acknowledge and agree to the terms.</b></row>
+  </radio>
+
+  <text 
+   label="DateTime"
+   optional="0"
+   randomize="0"
+   size="25"
+   where="report">
+    <title>DateTime</title>
+    <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+    </exec>
+
+  </text>
+</block>
+
+<suspend/>
+
+<block label="CarouselBlock" builder:title="PDP CAROUSEL IMAGES ">
+  <html label="infoQ0" where="survey">Please imagine you’re shopping for chocolate online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if you would buy</b> the product based on the image or <b>swipe left if you would not buy it</b>.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q99"
+   shuffle="rows">
+    <title>Swipe right → for ‘I <b>would buy</b> this product’ and <br />swipe left ← for ‘I <b>would not buy</b> this product’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" randomize="0"><img src="[rel DI1.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="r2" randomize="0"><img src="[rel DI2.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="r3" randomize="0"><img src="[rel DI3.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="r4" randomize="0"><img src="[rel DI4.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <row label="r5" randomize="0"><img src="[rel DI5.jpg]" constrain="true" class="pdSwiped" alt="" title="" /></row>
+    <col label="c1">I <b>would not buy</b> this product</col>
+    <col label="c2">I <b>would buy</b> this product</col>
+  </radio>
+
+  <text 
+   label="Q99time">
+    <title>Record Q1 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ1" where="survey">Please imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if you would buy</b> the product based on the image or <b>swipe left if you would not buy it</b>.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_1"
+   shuffle="rows">
+    <title>Swipe right → for ‘I <b>would buy</b> this product’ and <br />swipe left ← for ‘I <b>would not buy</b> this product’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_A]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_A]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_A]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_A]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_A]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_A]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_A]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_A]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_A]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_A]</row>
+    <col label="c1">I <b>would not buy</b> this product</col>
+    <col label="c2">I <b>would buy</b> this product</col>
+  </radio>
+
+  <text 
+   label="Q_1time">
+    <title>Record Q1 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ2" where="survey">Please continue to imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if</b> you think the product is a <b>high-quality product</b> or <b>swipe left if it not a high-quality product</b>.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_2"
+   shuffle="rows">
+    <title>Swipe right → for ‘<b>Is a high quality</b> product’ and <br />swipe left ← for ‘<b>Is not a high quality</b> product’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_A]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_A]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_A]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_A]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_A]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_A]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_A]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_A]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_A]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_A]</row>
+    <col label="c1"><b>Is not a high quality</b> product</col>
+    <col label="c2"><b>Is a high quality</b> product</col>
+  </radio>
+
+  <text 
+   label="Q_2time">
+    <title>Record Q2 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ3" where="survey">Please continue to imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if can easily see the brand name, variety and number of items included</b> or <b>swipe left if you cannot easily see</b> the brand name, variety and number.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_3"
+   shuffle="rows">
+    <title>Swipe right → for ‘I <b>can</b> easily see the brand name, variety and number of items included’ and <br />swipe left ← for ‘ I <b>cannot</b> easily see the brand name, variety and number of items included’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 70px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+    padding-top: 70px !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_A]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_A]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_A]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_A]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_A]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_A]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_A]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_A]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_A]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_A]</row>
+    <col label="c1">I <b>cannot</b> easily see the brand name, variety and number of items included</col>
+    <col label="c2">I <b>can</b> easily see the brand name, variety and number of items included</col>
+  </radio>
+
+  <text 
+   label="Q_3time">
+    <title>Record Q3 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ4" where="survey">Please imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if</b> you think this product is <b>for someone like you</b> or <b>swipe left if you do not think</b> it is for someone like you.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_4"
+   shuffle="rows">
+    <title>Swipe right → for ‘For someone <b>like</b> me’ and <br />swipe left ← for ‘Is <b>not</b> for someone <b>like</b> me’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_B]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_B]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_B]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_B]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_B]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_B]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_B]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_B]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_B]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_B]</row>
+    <col label="c1">Is <b>not</b> for someone <b>like</b> me</col>
+    <col label="c2">For someone <b>like</b> me</col>
+  </radio>
+
+  <text 
+   label="Q_4time">
+    <title>Record Q4 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ5" where="survey">Please continue to imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if</b> you think the product is a <b>high-quality product</b> or <b>swipe left if it not a high-quality product</b>.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_5"
+   shuffle="rows">
+    <title>Swipe right → for ‘<b>Is a high quality</b> product’ and <br />swipe left ← for ‘<b>Is not a high quality</b> product’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_B]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_B]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_B]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_B]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_B]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_B]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_B]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_B]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_B]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_B]</row>
+    <col label="c1"><b>Is not a high quality</b> product</col>
+    <col label="c2"><b>Is a high quality</b> product</col>
+  </radio>
+
+  <text 
+   label="Q_5time">
+    <title>Record Q5 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ6" where="survey">Please continue to imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if you think</b> the image <b>helps you understand what the product looks like and its features or swipe left if it does not</b>.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_6"
+   shuffle="rows">
+    <title>Swipe right → for ‘<b>Helps</b> me understand what the product looks like and its features’ and <br />swipe left ← for ‘<b>Does not help</b> me understand what the product looks like and its features’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+    padding-top: 50px !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_B]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_B]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_B]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_B]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_B]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_B]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_B]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_B]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_B]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_B]</row>
+    <col label="c1"><b>Does not help</b> me understand what the product looks like and its features</col>
+    <col label="c2"><b>Helps</b> me understand what the product looks like and its features</col>
+  </radio>
+
+  <text 
+   label="Q_6time">
+    <title>Record Q6 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ7" where="survey">Please imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if</b> you think the product <b>can be used for a variety of occasions</b> or <b>swipe left if you do not think </b>it can be used for a variety of occasions.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_7"
+   shuffle="rows">
+    <title>Swipe right → for ‘<b>Can</b> be used for a variety of occasions’ and <br />swipe left ← for ‘<b>Not</b> for a variety of occasions’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_C]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_C]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_C]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_C]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_C]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_C]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_C]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_C]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_C]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_C]</row>
+    <col label="c1"><b>Not</b> for a variety of occasions</col>
+    <col label="c2"><b>Can</b> be used for a variety of occasions</col>
+  </radio>
+
+  <text 
+   label="Q_7time">
+    <title>Record Q7 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ8" where="survey">Please continue to imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if</b> you think <b>you can take these products anywhere</b>, or <b>swipe left if you don’t think</b> you can take them anywhere.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_8"
+   shuffle="rows">
+    <title>Swipe right → for ‘I <b>can</b> take them anywhere’ and <br />swipe left ← for ‘I <b>can’t</b> take them anywhere’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_C]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_C]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_C]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_C]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_C]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_C]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_C]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_C]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_C]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_C]</row>
+    <col label="c1">I <b>can’t</b> take them anywhere</col>
+    <col label="c2">I <b>can</b> take them anywhere</col>
+  </radio>
+
+  <text 
+   label="Q_8time">
+    <title>Record Q8 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+
+  <html label="infoQ9" where="survey">Please continue to imagine you’re shopping for pens, pencils, markers, or writing utensils online. We’ll show you a series of pictures and we would like you to look at them as you normally would while shopping online. As you look at each picture, <b>swipe right if you think the product would be comfortable to use</b> or <b>swipe left if you do not think</b> it would be comfortable to use.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_9"
+   shuffle="rows">
+    <title>Swipe right → for ‘Would be <b>comfortable</b> to use’ and <br />swipe left ← for ‘Would <b>not be comfortable</b> to use’</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">
+
+      \@if this.styles.ss.enableNavigation
+        <back>BACK</back>
+      \@endif
+      <next>NEXT</next> 
+
+      <div class="loadding-open"></div>
+
+      <div class="swipelr-other dn">
+          <em class="iconfont icon-right-arrow" con="0"></em>
+          <p>
+              <s class="ind">1</s>
+              /
+              <s class="end"></s>
+          </p>
+          <em class="iconfont icon-right-arrow"></em>
+      </div>
+
+      <div class="swipelr-body swipelr-${this.label}">
+          <div class="swipelr-list">
+              \@for swipelrR in ec.enabledRows
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">
+                  ${swipelrR.text}
+              </div>      
+              \@end
+          </div>
+          <div class="swipelr-block" drag>
+
+          </div>
+
+          <div class="swipelr-slider">
+        \@for swipelrC in ec.enabledCols 
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">
+                  ${swipelrC.text}    
+              </div>
+              \@end
+          </div>
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>
+\@if device.smartphone
+.logo {
+    display: none;
+}
+.survey-header {
+    min-height: 0.5em !important;
+}
+.question {
+    padding: 2px 0 !important;
+}
+.question-text{
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+  font-size: 1.1rem !important;
+}
+.swipelr-slider-item p {
+    padding-top: 50px !important;
+}
+.swipelr-slider-item:nth-of-type(1) p{
+    text-align: left !important;
+}
+.swipelr-slider-item:nth-of-type(2) p{
+    text-align: right !important;
+}
+.swipelr-block {
+    border: 0px solid #ddd !important;
+    background-color: transparent !important;
+}
+\@endif
+</style>
+]]></style>
+    <row label="r1" cond="SKU1_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU1_C]</row>
+    <row label="r2" cond="SKU2_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU2_C]</row>
+    <row label="r3" cond="SKU3_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU3_C]</row>
+    <row label="r4" cond="SKU4_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU4_C]</row>
+    <row label="r5" cond="SKU5_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU5_C]</row>
+    <row label="r6" cond="SKU6_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU6_C]</row>
+    <row label="r7" cond="SKU7_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU7_C]</row>
+    <row label="r8" cond="SKU8_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU8_C]</row>
+    <row label="r9" cond="SKU9_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU9_C]</row>
+    <row label="r10" cond="SKU10_Q1_ImageAvailable.r1" randomize="0">[pipe: SKU10_C]</row>
+    <col label="c1">Would <b>not be comfortable</b> to use</col>
+    <col label="c2">Would be <b>comfortable</b> to use</col>
+  </radio>
+
+  <text 
+   label="Q_9time">
+    <title>Record Q9 time spend</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4">SKU 4</row>
+    <row label="r5">SKU 5</row>
+    <row label="r6">SKU 6</row>
+    <row label="r7">SKU 7</row>
+    <row label="r8">SKU 8</row>
+    <row label="r9">SKU 9</row>
+    <row label="r10">SKU 10</row>
+  </text>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<radio 
+  label="vSKU1">
+  <title>SKU1 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">1</row>
+  <row label="r2">11</row>
+  <row label="r3">21</row>
+  <row label="r4">31</row>
+  <row label="r5">41</row>
+  <row label="r6">51</row>
+  <row label="r7">61</row>
+  <row label="r8">71</row>
+  <row label="r9">81</row>
+  <row label="r10">91</row>
+  <row label="r11">101</row>
+  <row label="r12">111</row>
+  <row label="r13">121</row>
+  <row label="r14">131</row>
+  <row label="r15">141</row>
+</radio>
+
+<radio 
+  label="vSKU2">
+  <title>SKU2 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">2</row>
+  <row label="r2">12</row>
+  <row label="r3">22</row>
+  <row label="r4">32</row>
+  <row label="r5">42</row>
+  <row label="r6">52</row>
+  <row label="r7">62</row>
+  <row label="r8">72</row>
+  <row label="r9">82</row>
+  <row label="r10">92</row>
+  <row label="r11">102</row>
+  <row label="r12">112</row>
+  <row label="r13">122</row>
+  <row label="r14">132</row>
+  <row label="r15">142</row>
+</radio>
+
+<radio 
+  label="vSKU3">
+  <title>SKU3 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">3</row>
+  <row label="r2">13</row>
+  <row label="r3">23</row>
+  <row label="r4">33</row>
+  <row label="r5">43</row>
+  <row label="r6">53</row>
+  <row label="r7">63</row>
+  <row label="r8">73</row>
+  <row label="r9">83</row>
+  <row label="r10">93</row>
+  <row label="r11">103</row>
+  <row label="r12">113</row>
+  <row label="r13">123</row>
+  <row label="r14">133</row>
+  <row label="r15">143</row>
+</radio>
+
+<radio 
+  label="vSKU4">
+  <title>SKU4 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">4</row>
+  <row label="r2">14</row>
+  <row label="r3">24</row>
+  <row label="r4">34</row>
+  <row label="r5">44</row>
+  <row label="r6">54</row>
+  <row label="r7">64</row>
+  <row label="r8">74</row>
+  <row label="r9">84</row>
+  <row label="r10">94</row>
+  <row label="r11">104</row>
+  <row label="r12">114</row>
+  <row label="r13">124</row>
+  <row label="r14">134</row>
+  <row label="r15">144</row>
+</radio>
+
+<radio 
+  label="vSKU5">
+  <title>SKU5 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">5</row>
+  <row label="r2">15</row>
+  <row label="r3">25</row>
+  <row label="r4">35</row>
+  <row label="r5">45</row>
+  <row label="r6">55</row>
+  <row label="r7">65</row>
+  <row label="r8">75</row>
+  <row label="r9">85</row>
+  <row label="r10">95</row>
+  <row label="r11">105</row>
+  <row label="r12">115</row>
+  <row label="r13">125</row>
+  <row label="r14">135</row>
+  <row label="r15">145</row>
+</radio>
+
+<radio 
+  label="vSKU6">
+  <title>SKU6 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">6</row>
+  <row label="r2">16</row>
+  <row label="r3">26</row>
+  <row label="r4">36</row>
+  <row label="r5">46</row>
+  <row label="r6">56</row>
+  <row label="r7">66</row>
+  <row label="r8">76</row>
+  <row label="r9">86</row>
+  <row label="r10">96</row>
+  <row label="r11">106</row>
+  <row label="r12">116</row>
+  <row label="r13">126</row>
+  <row label="r14">136</row>
+  <row label="r15">146</row>
+</radio>
+
+<radio 
+  label="vSKU7">
+  <title>SKU7 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">7</row>
+  <row label="r2">17</row>
+  <row label="r3">27</row>
+  <row label="r4">37</row>
+  <row label="r5">47</row>
+  <row label="r6">57</row>
+  <row label="r7">67</row>
+  <row label="r8">77</row>
+  <row label="r9">87</row>
+  <row label="r10">97</row>
+  <row label="r11">107</row>
+  <row label="r12">117</row>
+  <row label="r13">127</row>
+  <row label="r14">137</row>
+  <row label="r15">147</row>
+</radio>
+
+<radio 
+  label="vSKU8">
+  <title>SKU8 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">8</row>
+  <row label="r2">18</row>
+  <row label="r3">28</row>
+  <row label="r4">38</row>
+  <row label="r5">48</row>
+  <row label="r6">58</row>
+  <row label="r7">68</row>
+  <row label="r8">78</row>
+  <row label="r9">88</row>
+  <row label="r10">98</row>
+  <row label="r11">108</row>
+  <row label="r12">118</row>
+  <row label="r13">128</row>
+  <row label="r14">138</row>
+  <row label="r15">148</row>
+</radio>
+
+<radio 
+  label="vSKU9">
+  <title>SKU9 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">9</row>
+  <row label="r2">19</row>
+  <row label="r3">29</row>
+  <row label="r4">39</row>
+  <row label="r5">49</row>
+  <row label="r6">59</row>
+  <row label="r7">69</row>
+  <row label="r8">79</row>
+  <row label="r9">89</row>
+  <row label="r10">99</row>
+  <row label="r11">109</row>
+  <row label="r12">119</row>
+  <row label="r13">129</row>
+  <row label="r14">139</row>
+  <row label="r15">149</row>
+</radio>
+
+<radio 
+  label="vSKU10">
+  <title>SKU10 - Image #</title>
+  <virtual>
+if Phase.r1:     data.val=0
+if Phase.r2:     data.val=1
+if Phase.r3:     data.val=2
+if Phase.r4:     data.val=3
+if Phase.r5:     data.val=4
+if Phase.r6:     data.val=5
+if Phase.r7:     data.val=6
+if Phase.r8:     data.val=7
+if Phase.r9:     data.val=8
+if Phase.r10:    data.val=9
+if Phase.r11:    data.val=10
+if Phase.r12:    data.val=11
+if Phase.r13:    data.val=12
+if Phase.r14:    data.val=13
+if Phase.r15:    data.val=14
+  </virtual>
+
+  <row label="r1">10</row>
+  <row label="r2">20</row>
+  <row label="r3">30</row>
+  <row label="r4">40</row>
+  <row label="r5">50</row>
+  <row label="r6">60</row>
+  <row label="r7">70</row>
+  <row label="r8">80</row>
+  <row label="r9">90</row>
+  <row label="r10">100</row>
+  <row label="r11">110</row>
+  <row label="r12">120</row>
+  <row label="r13">130</row>
+  <row label="r14">140</row>
+  <row label="r15">150</row>
+</radio>
+
+<suspend/>
+</survey>
