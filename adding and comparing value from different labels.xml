@@ -1,0 +1,32 @@
+ <number 
+   label="C_PplInHH"
+   optional="0"
+   size="3"
+   ss:listDisplay="0"
+   verify="range(1,10)">
+    <title>Including yourself, how many people are currently living in your household?</title>
+    <comment>Please enter a number.</comment>
+    <row label="r1">Number of people</row>
+  </number>
+
+  <suspend/>
+
+  <number 
+   label="C_AgeRangesInHH"
+   optional="0"
+   size="3"
+   ss:listDisplay="0">
+    <title>Including yourself, how many people are currently living in your household in each of the following age ranges?</title>
+    <comment>Please enter a number.</comment>
+    <validate>
+if (this.r1.val or 0)+(this.r2.val or 0)+(this.r3.val or 0)+(this.r4.val or 0)!=C_PplInHH.val: error("THE TOTAL NUMBER OF PEOPLE IN YOUR HOUSEHOLD MUST MATCH THE RESPONSES GIVEN TO THE AGE RANGES")
+if (this.r1 or 0) lt 1:  error("THERE MUST BE AT LEAST ONE PERSON 18 AND OVER LIVING IN YOUR HOUSEHOLD")
+    </validate>
+
+    <row label="r1">18 and over</row>
+    <row label="r2" optional="1">13-17</row>
+    <row label="r3" optional="1">6-12</row>
+    <row label="r4" optional="1">under 6</row>
+  </number>
+
+  <suspend/>
