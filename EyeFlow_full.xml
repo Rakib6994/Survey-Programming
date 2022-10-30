@@ -1,0 +1,112 @@
+ <block label="EyeFlowShelf" builder:title="EyeFlow">
+    <suspend/>
+
+    <html label="QNR_EFShelf_Text_Hidden" cond="False" where="survey">Shelf View Exercise Explanation:<br /><br />
+A blurred shelf of the test category is shown to shoppers. Respondents are asked to mouse over the image and un-blur the products that first catch their attention so they can see the products of interest more clearly. The heatmaps and data generated from this exercise will indicate how much attention each product or brand was able to generate.</html>
+
+    <suspend/>
+
+    <html label="Maximize" where="survey"><strong>Throughout this survey, you are going to be shown several pictures. Please be sure that you maximize your window at this time, such that you can see these pictures with as much clarity as possible. You can also mouse over the images to see them magnified at any time. <br /><br />Press F11 for full screen.</strong></html>
+
+    <suspend/>
+
+    <html label="EyeFlow1" where="survey"><strong>Please assume you are doing your shopping from the category shown on your screen.<br />On this shopping trip, you can navigate the shelf and un-blur products which catch your attention. <br />To start the navigation, please click on the 1<sup>st</sup> product that attracts you. You can then continue to navigate the shelf by un-blurring further products of interest. Please scroll to see the whole shelf.</strong><br />When finished with the exercise, all you need to do is click on the image one more time. If you are ready, please click on the “next” button.</html>
+
+    <suspend/>
+
+    <html label="EF1_Practice" where="survey">Remember to click/touch the image to start the exercise. Please scroll to see the whole shelf.</html>
+
+    <textarea 
+    label="EF_Shelf_Practice">
+      <title>&amp;nbsp;</title>
+      <style name="question.after"><![CDATA[
+<link href="[rel eyeflow.css]" rel="stylesheet">
+
+     <script type="text/javascript" src="[rel vague.js]"></script>
+     <script type="text/javascript" src="[rel eyeflow.json.js]"></script>
+     
+     
+<script type="text/javascript">
+
+          $ (document).ready(function(){
+
+
+                var clickedOnce = false;
+            var qn = ${jsexport()};
+            console.log(qn);
+
+           //Hide the textarea box and continue button
+           $ ("#question_"+qn.label).hide();
+           $ (".survey-buttons").hide();           
+
+           //Script used to create the spotlight and record the mouse movement at a sample of 10/s
+           eyeflow('[rel EF_PracticeShelf.jpg]', '${resp_id.val}', qn, 10000, 100);
+                
+
+            /*Using vague.js to make blurred image*/
+            var vague = $ ("#container img").Vague({intensity:5});
+            vague.blur();
+            /**************************************/
+
+          });
+
+        </script>
+
+
+        <div id="container">
+            <img id="et_img" alt="follow mouse" draggable="false" />
+            <div class="revealPic" draggable="false" ></div>
+        </div>
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <html label="EF1" where="survey">Here is another image. Remember to click/touch the image to start the exercise. Please scroll to see the whole shelf.</html>
+
+    <suspend/>
+
+    <textarea 
+    label="E_Flow_Ex_Shelf1">
+      <title>&amp;nbsp;</title>
+      <style name="question.after"><![CDATA[
+<link href="[rel eyeflow.css]" rel="stylesheet">
+
+     <script type="text/javascript" src="[rel vague.js]"></script>
+     <script type="text/javascript" src="[rel eyeflow.json.js]"></script>
+     
+     
+<script type="text/javascript">
+
+          $ (document).ready(function(){
+
+
+                var clickedOnce = false;
+            var qn = ${jsexport()};
+            console.log(qn);
+
+           //Hide the textarea box and continue button
+           $ ("#question_"+qn.label).hide();
+           $ (".survey-buttons").hide();           
+
+           //Script used to create the spotlight and record the mouse movement at a sample of 10/s
+           eyeflow('[rel ${pipe.ShelfImage}_LR.jpeg]', '${resp_id.val}', qn, 10000, 100);
+                
+
+            /*Using vague.js to make blurred image*/
+            var vague = $ ("#container img").Vague({intensity:5});
+            vague.blur();
+            /**************************************/
+
+          });
+
+        </script>
+
+
+        <div id="container">
+            <img id="et_img" alt="follow mouse" draggable="false" />
+            <div class="revealPic" draggable="false" ></div>
+        </div>
+]]></style>
+    </textarea>
+  </block>

@@ -1,0 +1,36 @@
+  <block label="F_HighlightBlock" cond="vFindCorrect.r1 or vFindCorrect2.r1" builder:title="F_Highlight_ImageMap">
+    <loop label="F_Highlight_Loop" vars="image">
+      <title>Findability- Heatmap</title>
+      <block label="F_Highlight_Block" builder:title="F_Highlight Heatmap Block">
+        <textarea 
+      label="F_Highlight_[loopvar: label]"
+      imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+      optional="0"
+      sst="0"
+      uses="imgmap.2020">
+          <title>When finding <b>[pipe: Finda]</b>, which one part of the packaging was most useful in helping you find what you were looking for? </title>
+          <comment>Using your mouse, highlight the single part of the packaging that was most useful.<br /><img src="/survey/selfserve/1da7/220614/clickNdragcrop.gif" alt="" width="200px" /></comment>
+          <col label="c1" imgmap:color="#32CD32" optional="1">most useful</col>
+        </textarea>
+
+        <suspend/>
+      </block>
+
+      <looprow label="1" cond="Phase.r1 and Version.r1">
+        <loopvar name="image">PACK1A.jpg</loopvar>
+      </looprow>
+
+      <looprow label="2" cond="Phase.r1 and Version.r2">
+        <loopvar name="image">PACK1B.jpg</loopvar>
+      </looprow>
+
+      <looprow label="3" cond="Phase.r2 and Version.r1">
+        <loopvar name="image">PACK2A.jpg</loopvar>
+      </looprow>
+
+      <looprow label="4" cond="Phase.r2 and Version.r2">
+        <loopvar name="image">PACK2B.jpg</loopvar>
+      </looprow>
+    </loop>
+  </block>
+<suspend/>
