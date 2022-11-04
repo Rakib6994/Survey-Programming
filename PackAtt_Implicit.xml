@@ -1,0 +1,373 @@
+<block label="Implicit" builder:title="Implicit">
+    <pipe label="JobNumberI" capture="">
+      <case label="r1" cond="True">[pipe: JobNumber]</case>
+      <case label="r11" cond="1"/></pipe>
+      
+      
+    <pipe label="ImplicitImage" capture="">
+    <case label="r1" cond="(Phase.r1 and version.r1)"> LINE1</case>
+    <case label="r2" cond="(Phase.r2 and version.r1)"> LINE2</case>
+    <case label="r3" cond="(Phase.r3 and version.r1)"> LINE3</case>
+    <case label="r4" cond="(Phase.r4 and version.r1)"> LINE4</case>
+    <case label="r5" cond="(Phase.r5 and version.r1)"> LINE5</case>
+    <case label="r6" cond="(Phase.r6 and version.r1)"> LINE6</case>
+    <case label="r7" cond="(Phase.r1 and version.r2)"> LINE1</case>
+    <case label="r8" cond="(Phase.r2 and version.r2)"> LINE2</case>
+    <case label="r9" cond="(Phase.r3 and version.r2)"> LINE3</case>
+    <case label="r10" cond="(Phase.r4 and version.r2)">LINE4</case>
+    <case label="r11" cond="(Phase.r5 and version.r2)">LINE5</case>
+    <case label="r12" cond="(Phase.r6 and version.r2)">LINE6</case>
+    <case label="r99" cond="1"/></pipe>
+  
+<suspend/>
+
+    <html label="ImplicitInstructions" where="survey">You will now see some words and phrases that could be used to describe the appearance of various products. Please determine which of the words or phrases below describe the design and appearance of this <strong>Cheetos Flamin’ Hot</strong> packaging. <br /><br /><br />When the product appears, use your left/right arrows on your keyboard to select which phrase best describes that product. Please go as fast as you can while selecting the appropriate phrase.<br /><br /><img src="/survey/selfserve/1da7/arrows.gif" class="" title="" /><br /><br />Click "continue" to begin.</html>
+
+    <suspend/>
+
+    <number 
+    label="Q_PackAtt_Implicit"
+    randomize="0"
+    size="5">
+      <title><strong>You will now see some words and phrases that could be used to describe the appearance of various products. Do you think the Cheetos Flamin’ Hot packaging is…</strong></title>
+      <col label="c1">Attractive</col>
+      <col label="c2">Unattractive</col>
+      <col label="c3">Premium</col>
+      <col label="c4">Cheap</col>
+      <col label="c5">Unique</col>
+      <col label="c6">Ordinary</col>
+      <col label="c7">Modern</col>
+      <col label="c8">Outdated</col>
+      <col label="c9">Appetizing</col>
+      <col label="c10">Not Appetizing</col>
+      <col label="c11">Fun</col>
+      <col label="c12">Boring</col>
+      <col label="c13">Straightforward</col>
+      <col label="c14">Cluttered</col>
+      <col label="c15">Easy to understand</col>
+      <col label="c16">Hard to understand</col>
+      <col label="c17">Bold</col>
+      <col label="c18">Dull</col>
+      <col label="c19">Energetic</col>
+      <col label="c20">Calm</col>
+      <row label="r1">USE THE LEFT AND RIGHT ARROW KEYS TO MOVE THE PRODUCT TO THE ATTRIBUTE.<br />Do you think the <b>Cheetos Flamin’ Hot</b> packaging is…</row>
+      <style name="question.after"><![CDATA[
+<script src="https://emea.focusvision.com/survey/selfserve/1da7/1811119/hammer.js"></script>
+<style>
+  #middle {
+                height:70%; 
+                width:100%; 
+                //overflow:auto; 
+                margin-top: 20vh;
+                position:absolute; 
+                top: 0; 
+                left: 0; 
+                bottom: 0; 
+                right: 0;
+            }
+
+            #container {
+                min-height:800px;
+                width:100%;
+                background-size: contain;
+            }
+            
+            .survey-page {
+              padding: 0;
+              
+            }
+
+            .survey-body {
+              width: 100%;
+              background-color: white;
+              border: 0;
+              box-shadow: none !important;
+              -webkit-box-shadow: none !important;
+              margin: 0;
+              padding: 0;
+              
+            }
+            #product img {
+                vertical-align: middle;
+                max-width: 85%;
+                max-height:500px;
+                position:relative;
+                z-index:10;
+            }   
+            
+            #right, #left {
+            }
+            .arrow-right {
+          border-top: 22vh solid transparent;
+          border-bottom: 22vh solid transparent;
+          border-left: 25vw solid rgba(106, 90, 205, .5);
+      }
+      .arrow-left {
+          border-top: 22vh solid transparent;
+          border-bottom: 22vh solid transparent;
+          border-right: 25vw solid rgba(106, 90, 205, .5);
+      }
+      
+      .text-div {
+        position: absolute;
+          color: white;
+          font-size: 2rem;
+          top: 0;
+          width: 19vw;
+          height: 44vh;
+          display: flex;
+          justify-content: center;
+                align-items: center;
+            flex-wrap: wrap;
+          overflow-wrap: break-word;
+      }
+      .arrow-text {
+        padding: 3%;
+      }
+      .text-left {
+        left: 5vw;
+        text-align: right;
+      }
+      .text-right {
+        right: 5vw;
+        text-align: left;
+      }
+</style>
+    </head>
+    <body>
+    <div id="count" style="display:none">0</div>
+            <div id="container">
+            <p style="text-align:center; font-size:1.5em; margin-top: 2%;">
+                ${Q_PackAtt_Implicit.r1.text}
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        <div id="middle">
+            <div id="left" style="width:25%; float:left; overflow: hidden;">
+                <div class="arrow-left arrow">
+          <div class="text-div text-left">
+                    <span id="leftTxt" class="arrow-text">test</span>
+          </div>
+                </div>
+            </div>
+            <div id="product" style="float:left; width:48%;text-align:center"></div>
+            <div id="right" style="width:25%; float:right;overflow:hidden;">
+                <div class="arrow-right arrow">
+                  <div class="text-div text-right">
+                    <span id="rightTxt" class="arrow-text">test</span>
+                  </div>
+                </div>
+            </div>
+        </div>
+            <p style="clear:both;">&nbsp;</p>
+        </div>
+        <script>
+        try{
+        var hammer    = new Hammer.Manager(document.getElementById('middle'));
+    hammer.add(new Hammer.Swipe());
+        hammer.on("swipeleft swiperight", function(ev) {
+          if(ev.pointerType === 'mouse') { return; }
+            if(ev.type === 'swipeleft'){
+        jQuery.event.trigger({ type : 'keydown', which: 37, keyCode: 37 });
+            } else {
+              jQuery.event.trigger({ type : 'keydown', which: 39, keyCode: 39 });
+            }
+        });
+       } catch (err) {
+                console.log(err);
+        }
+
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+images = ['${pipe.ImplicitImage}.jpg'];
+
+var qn = ${jsexport()}; //returns json object of the question
+console.log(qn)
+
+// Create a list from columns of question
+
+var responses = [];
+
+for (var i = 0; i < qn.cols.length; i=i+2) {
+  var left = qn.cols[i].text;
+  var right = qn.cols[i+1].text;
+  responses.push(left + "|" + right);
+}
+
+console.log(responses)
+
+
+
+combinedarray = [];
+
+for (i=0;i<images.length;i++){
+  for (r=0;r<responses.length;r++){
+    combinedarray.push([images[i],responses[r]]);
+    }
+}
+
+
+window.array = shuffle(combinedarray);
+
+  $ ('#leftTxt').html(window.array[0][1].split('|')[0]);
+  $ ('#rightTxt').html(window.array[0][1].split('|')[1]);
+  $ ('#product').html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[0][0]+'"/>');
+
+            //var audioElement = document.createElement('audio');
+            //audioElement.setAttribute('src', '1606121/Laser2.mp3');
+
+            $ (document).ready(function() {
+          $ ('.question').hide();
+          $ ('.survey-header').hide();
+          $ ('.survey-buttons').hide();
+            });
+    start = $.now();
+    moved = false;
+            $ (document).keydown(function(e) {
+              count = parseInt($ ('#count').html());
+              row = $.inArray(window.array[count][0],images);
+            if((e.which == 37 || e.which == 39) && moved == false) {
+              $ ('#count').html(count+1);
+              moved = true;
+              time = $.now()-start;
+          //audioElement.play();
+                    if (e.keyCode == 37) { //left arrow
+                  col = $.inArray(window.array[count][1],responses)*2;
+                        $ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                        $ ("#product img").animate({
+                            left: '-600px',
+                              height: '40px',
+                            top: '+200px',
+                            opacity: '0'
+                        }, 500, function() {
+                            if (count+1==window.array.length){
+                                  $ ('#btn_continue').click();
+                              return false;
+                            }
+                            $ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+                              moved = false;
+                      });
+                    }
+                    else if (e.keyCode == 39) { //right arrow
+                  col = $.inArray(window.array[count][1],responses)*2+1;
+                        $ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                        $ ("#product img").animate({
+                            left: '600px',
+                              height: '40px',
+                            top: '+200px',
+                            opacity: '0'
+                        }, 500, function() {
+                            if (count+1==window.array.length){
+                                  $ ('#btn_continue').click();
+                              return false;
+                            }
+                            $ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+                                moved = false;
+                      });
+                    }
+            start = $.now();
+              }
+              });
+
+</script>
+]]></style>
+    </number>
+
+    <suspend/>
+
+    <float 
+    label="Q_PackAtt_Implicit_Seconds"
+    onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+    randomize="0"
+    size="3">
+      <title>PackAtt in Seconds</title>
+      <virtual>
+for col in Q_PackAtt_Implicit.cols:
+  if (Q_PackAtt_Implicit.cols[col.index].ival gt 0 and Q_PackAtt_Implicit.cols[col.index].ival lt 10001):
+    data.cols[col.index].val = Q_PackAtt_Implicit.cols[col.index].ival / 1000.0
+      </virtual>
+
+    </float>
+
+    <float 
+    label="Implicit_TotalTimeSpent"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>PackAtt Total Time Spent in Seconds</title>
+      <virtual>
+Implicit_TotalTimeSpent.val =  (Q_PackAtt_Implicit.sum) / 1000.0
+      </virtual>
+
+    </float>
+
+    <checkbox 
+    label="vPackAtt_unfiltered"
+    atleast="1"
+    onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+    randomize="0">
+      <title>Pack Att Data</title>
+      <virtual>
+for col in Q_PackAtt_Implicit.cols:
+  if Q_PackAtt_Implicit.cols[col.index].ival gt 0:
+    data.cols[col.index].val=1
+      </virtual>
+
+    </checkbox>
+
+    <suspend/>
+
+    <checkbox 
+    label="vPackAtt_filtered"
+    atleast="1"
+    onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+    randomize="0">
+      <title>Pack Att Data omiting those more than 10 seconds</title>
+      <virtual>
+for col in Q_PackAtt_Implicit.cols:
+  if (Q_PackAtt_Implicit.cols[col.index].ival gt 0 and Q_PackAtt_Implicit.cols[col.index].ival lt 10001):
+    data.cols[col.index].val=1
+      </virtual>
+
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="ImplicitStraightliner"
+    randomize="0">
+      <title>Straightlined Responses</title>
+      <virtual>
+if vPackAtt_unfiltered.c3 and vPackAtt_unfiltered.c17 and vPackAtt_unfiltered.c19 and vPackAtt_unfiltered.c7 and vPackAtt_unfiltered.c11 and vPackAtt_unfiltered.c20 :  data.val=0
+elif vPackAtt_unfiltered.c4 and vPackAtt_unfiltered.c18 and vPackAtt_unfiltered.c6 and vPackAtt_unfiltered.c8 and vPackAtt_unfiltered.c12 and vPackAtt_unfiltered.c16:  data.val=1
+else:  data.val = 2
+      </virtual>
+
+      <row label="r1">Left straightliner</row>
+      <row label="r2">Right straightliner</row>
+      <row label="r3">Non straightliner</row>
+    </radio>
+  </block>
