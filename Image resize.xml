@@ -21,3 +21,13 @@
 </autofill>
 
 <suspend/>
+
+
+
+ <autofill label="SHELF_IMG" randomize="0" where="execute,survey,report">
+    <title>Shelf Image</title>
+    <row label="r1" autofill="(Phase.r1)"><img src="[rel SHELF1_HR.jpg]" title="" height="500" constrain="true" alt="" class="jloupeme" /></row>
+    <row label="r2" autofill="(Phase.r2)"><img src="[rel SHELF2_HR.jpg]" title="" height="500" constrain="true" alt="" class="jloupeme" /></row>
+    <row label="r3" autofill="(Phase.r3)"><img src="[rel SHELF3_HR.jpg]" title="" height="500" constrain="true" alt="" class="jloupeme" /></row>
+    <row label="r4" autofill="(Phase.r4)"><img src="[rel SHELF4_HR.jpg]" title="" height="500" constrain="true" alt="" class="jloupeme" /></row>
+  </autofill>

@@ -1,0 +1,36 @@
+<exec>
+for x in product.rows:
+    if product[x] and (S_OnlineChannel[x].c1 or S_BMChannel[x].c1): retailer.val = 0
+    if product[x] and (S_OnlineChannel[x].c2 or S_BMChannel[x].c2): retailer.val = 1
+    if product[x] and (S_OnlineChannel[x].c3 or S_BMChannel[x].c3): retailer.val = 2
+    if product[x] and (S_OnlineChannel[x].c4 or S_BMChannel[x].c4): retailer.val = 3
+    if product[x] and (S_OnlineChannel[x].c5 or S_BMChannel[x].c5): retailer.val = 4
+    if product[x] and (S_OnlineChannel[x].c6 or S_BMChannel[x].c6): retailer.val = 5
+    if product[x] and (S_OnlineChannel[x].c7 or S_BMChannel[x].c7): retailer.val = 6
+    if product[x] and (S_OnlineChannel[x].c8 or S_BMChannel[x].c8): retailer.val = 7
+    if product[x] and (S_OnlineChannel[x].c9 or S_BMChannel[x].c9): retailer.val = 8
+    if product[x] and (S_OnlineChannel[x].c10 or S_BMChannel[x].c10): retailer.val = 9
+    if product[x] and (S_OnlineChannel[x].c11): retailer.val = 10
+    if product[x] and (S_BMChannel[x].c11): retailer.val = 11
+</exec>
+
+<radio 
+  label="retailer"
+  optional="1"
+  where="execute,survey,report">
+  <title>Qualified Store</title>
+  <row label="r1">Walmart</row>
+  <row label="r2">Target</row>
+  <row label="r3">Kroger</row>
+  <row label="r4">Albertson</row>
+  <row label="r5">Amazon</row>
+  <row label="r6">Costco</row>
+  <row label="r7">Sam's Club</row>
+  <row label="r8">Dollar General</row>
+  <row label="r9">Instacart</row>
+  <row label="r10">[pipe: Typical10_Other]</row>
+  <row label="r11">an online store</row>
+  <row label="r12">a physical store</row>
+</radio>
+
+<suspend/>
