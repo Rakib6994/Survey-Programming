@@ -1,0 +1,9 @@
+pp=""
+X=pp.split()
+y=[]
+for items in X:
+    if items.startswith(""):
+          y.append(items)
+
+for items in y:
+    print(items)

@@ -34,3 +34,24 @@
    atm1d:large_maxWidth="340px"
    atm1d:large_minHeight="520px"
    atm1d:large_minWidth="340px"
+
+
+
+
+ <radio 
+   label="Q_Secondary_Forced_Preference"
+   atm1d:large_maxHeight="310px"
+   atm1d:large_maxWidth="450px"
+   atm1d:large_minHeight="310px"
+   atm1d:large_minWidth="450px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>If you were shopping for light beer, which of the two packages below would you prefer to purchase?</title>
+    <comment>Select one response.<br /></comment>
+    <row label="r1"><img src="[rel AE757_PACK1b.png]" title="" height="299" width="440" alt="" constrain="true" class="jloupeme" /></row>
+    <row label="r2"><img src="[rel AE757_PACK2b.png]" title="" height="299" width="440" alt="" constrain="true" class="jloupeme" /></row>
+  </radio>
+
+  <suspend/>
