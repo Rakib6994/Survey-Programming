@@ -1,0 +1,78 @@
+
+<exec when="init">
+def group_rows_with_order( question, grouped_rows ):
+    current_order = [row.index for row in question.rows.order]
+    new_order     = []
+
+    grouped_rows     = [question.attr(row).index for row in grouped_rows]
+    first_item_index = current_order.index(grouped_rows[0])
+
+    current_order.insert(first_item_index, grouped_rows)
+
+    for row in current_order:
+        if row == grouped_rows:
+            new_order = new_order + row
+        elif row not in grouped_rows:
+            new_order.append(row)
+
+    question.rows.order = new_order
+</exec>
+
+
+
+
+
+    <suspend/>
+
+<checkbox 
+    label="S_Brand_PastPurchased1"
+    atleast="1"
+    atm1d:large_maxHeight="400px"
+    atm1d:large_maxWidth="400px"
+    atm1d:large_minHeight="400px"
+    atm1d:large_minWidth="400px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>Please indicate which brand or brands of Air Care/Freshener products you have purchased over the past 6 months in a grocery, supermarket or retail store? </title>
+
+ <exec>
+group_rows_with_order(S_Brand_PastPurchased1, ['r1', 'r2', 'r3', 'r4'])
+group_rows_with_order(S_Brand_PastPurchased1, ['r5', 'r6', 'r7', 'r8'])
+group_rows_with_order(S_Brand_PastPurchased1, ['r9', 'r10', 'r11', 'r12', 'r13', 'r14'])
+group_rows_with_order(S_Brand_PastPurchased1, ['r15', 'r16', 'r17'])
+group_rows_with_order(S_Brand_PastPurchased1, ['r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25'])
+
+
+  </exec>
+
+      <row label="r1"  ><img src="[rel AE745_LINE1aa.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r2"  ><img src="[rel AE745_LINE1bb.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r3"  ><img src="[rel AE745_LINE1cc.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r4"  >Other brand instant action aerosol sprays</row>
+      <row label="r5"  ><img src="[rel AE745_LINE1ee.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r6"  ><img src="[rel AE745_LINE1ff.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r7"  ><img src="[rel AE745_LINE1gg.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r8"  >Other brand battery operated automatic sprays</row>
+      <row label="r9"  ><img src="[rel AE745_LINE1ii.jpg]" title="" height="100" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r10" ><img src="[rel AE745_LINE1jj.jpg]" title="" width="380" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r11" ><img src="[rel AE745_LINE1kk.jpg]" title="" width="380" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r12" ><img src="[rel AE745_LINE1ll.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r13" ><img src="[rel AE745_LINE1mm.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r14" >Other brand candles</row>
+      <row label="r15" ><img src="[rel AE745_LINE1oo.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r16" >Store brand essential oil diffusers</row>
+      <row label="r17" >Other brand essential oil diffusers</row>
+      <row label="r18" ><img src="[rel AE745_LINE1rr.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r19" ><img src="[rel AE745_LINE1ss.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r20" ><img src="[rel AE745_LINE1tt.jpg]" title="" width="380" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r21" ><img src="[rel AE745_LINE1uu.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r22" ><img src="[rel AE745_LINE1vv.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r23" ><img src="[rel AE745_LINE1ww.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r24" ><img src="[rel AE745_LINE1xx.jpg]" title="" height="120" constrain="true" alt="" class="jloupeme" /></row>
+      <row label="r25" >Other brand scented oil plug-ins</row>
+      <row label="r26"  randomize="0">Other</row>
+    </checkbox>
+
+    <suspend/>

@@ -36,3 +36,63 @@
 
 
 ss:questionClassNames="demo"
+
+
+cardrating:lrg_maxwidth="120px"
+
+
+  <radio 
+   label="Q_Custom3"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>How much do you agree or disagree with each of the following statements for the Excedrin Cooling Head Patch and the Excedrin Cooling Head Mask? </title>
+    <comment>[pipe: PH_IMG]</comment>
+    <row label="r1"><span style="font-size: 18pt;">These products fulfill different needs and are complementary to each other</span></row>
+    <row label="r2"><span style="font-size: 18pt;">The Head Patch allows me to move around and get things done</span></row>
+    <row label="r3"><span style="font-size: 18pt;">The Head Patch allows me to sit/lay down and rest</span></row>
+    <row label="r4"><span style="font-size: 18pt;">The Head Mask allows me to move around and get things done</span></row>
+    <row label="r5"><span style="font-size: 18pt;">The Head Mask allows me to sit/lay down and rest</span></row>
+    <col label="c1" value="7">Agree Strongly</col>
+    <col label="c2" value="6">6</col>
+    <col label="c3" value="5">5</col>
+    <col label="c4" value="4">Neither Agree Nor Disagree</col>
+    <col label="c5" value="3">3</col>
+    <col label="c6" value="2">2</col>
+    <col label="c7" value="1">Strongly Disagree</col>
+    <style name="question.after"><![CDATA[
+<script>
+$ ('.question-text').insertAfter($ ('.sq-cardrating-carousel'));
+$ ('.sq-cardrating-card').css('font-size','18pt');
+$ ('.instruction-text').css('font-size','14pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+      $ ("#btn_continue").hide();
+    }
+  
+  var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+  var num_attr = qn.rows.length
+  console.log(num_attr);
+  var iteration = 1
+  
+  
+   $ (document).on('click', '.sq-cardrating-buttons', function() {
+          if(iteration == num_attr){
+            $ ("#btn_continue").click();
+          }
+          iteration++;
+          
+        })
+
+  </script>
+]]></style>
+  </radio>
+
+  <suspend/>
