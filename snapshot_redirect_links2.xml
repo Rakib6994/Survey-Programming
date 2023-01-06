@@ -1,0 +1,49 @@
+Redirect links are:
+
+
+For Desktop
+
+Complete Snapshot
+
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=3
+
+Qualify manually uninstalled by respondent
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=2
+
+respondent's device doesn't meet the minimum data thresholds
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=4
+
+respondent's device runs into any other errors, uncommon occurrence
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=5
+
+respondent's answering yes to opt in but not qualifying
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=6
+
+
+respondent's answering yes to opt in but Quota Full
+
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=7
+
+
+
+
+
+For Android
+
+Complete Snapshot
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=13
+
+Qualify manually uninstalled by respondent
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=12
+
+respondent's device doesn't meet the minimum data thresholds
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=14
+
+respondent's device runs into any other errors, uncommon occurrence
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=15
+
+respondent's answering yes to opt in but not qualifying
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=16
+
+respondent's answering yes to opt in but Quota Full
+https://emea.focusvision.com/survey/selfserve/1da7/ae265?participantId=xxxxxx&state=ssssss&reta=yyyyyy&Q_statusD=17
