@@ -1,0 +1,19 @@
+  <radio 
+   label="Q_Trip_Driver"
+   atm1d:large_buttonAlign="left"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="left"
+   shuffle="rows"
+   uses="atm1d.9">
+    <title>Again thinking back to your most recent purchase of [pipe: User], what was the general purpose of your visit to [pipe: Typical_Retailer]?</title>
+    <comment>Please select one.</comment>
+    <row label="r1"><b>Category-focused [pipe: Store_Qualify] Trip:</b> The main purpose was to purchase <b>[pipe: User]</b></row>
+    <row label="r2"><b>Quick Trip:</b> The main purpose was to quickly purchase a few products (under 5), including <b>[pipe: User]</b></row>
+    <row label="r3"><b>Fill-In Trip:</b> It was a fill-in visit between major shopping trips where I purchased 5-10 items, including <b>[pipe: User]</b></row>
+    <row label="r4"><b>Stock-Up Trip:</b> It was a major shopping visit where I purchased a large number of items</row>
+    <row label="r5"><b>On Sale Trip:</b> I visited <b>[pipe: Typical_Retailer]</b> mainly to buy items that I knew were on sale</row>
+    <row label="r6"><b>Browsing/Exploration Trip:</b> I was there to explore/try something new</row>
+    <row label="r98" open="1" openSize="25" randomize="0">Other (please specify)</row>
+  </radio>
+
+  <suspend/>
