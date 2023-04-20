@@ -1,0 +1,45 @@
+ <radio 
+   label="S_Frequency"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>How often have you purchase products in each of the following categories?</title>
+    <row label="r1">Carbonated beverages (seltzer, soda, etc.)</row>
+    <row label="r2">Vitamins and Supplements (letter vitamins, multivitamins, etc.)</row>
+    <row label="TB">Condiments/Sauces (Ketchup, Mustard, Ranch, BBQ Sauce, Honey Mustard, etc.)</row>
+    <row label="r3">Dressings (Italian, Ranch, Caesar, etc.)</row>
+    <col label="c1">Once a week</col>
+    <col label="c2">Once every 2 weeks</col>
+    <col label="c3">Once a month</col>
+    <col label="c4">Once every 2 or 3 months</col>
+    <col label="c5">Once every 6 months</col>
+    <col label="c6">Once a year</col>
+    <col label="c7">Never</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+      $ ("#btn_continue").hide();
+    }
+  
+  var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+  var num_attr = qn.rows.length
+  console.log(num_attr);
+  var iteration = 1 
+  
+   $ (document).on('click', '.sq-cardrating-buttons', function() {
+          if(iteration == num_attr){
+            $ ("#btn_continue").click();
+          }
+          iteration++;
+        })
+  </script>
+]]></style>
+  </radio>
+
+  <suspend/>
