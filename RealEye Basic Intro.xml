@@ -8,3 +8,8 @@ Now you are going to see products from your local store. Spend as much or as lit
 
 
 
+[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:sample],phase-[pipe:Phase]
+
+Q_Likes_1 is for Phase1, Q_Likes_2 is for Phase2, Q_Likes_3 is for Phase3, Q_Likes_4 is for Phase4, Q_Likes_5 is for Phase5 and Q_Likes_6 is for Phase6.
+
+If you don't want to see the heatmap in crosstab, please change the segment, select a different Phase and apply.

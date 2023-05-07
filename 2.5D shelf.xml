@@ -1,0 +1,131 @@
+-----------------------------------------------------------------------------SHOPPING-------------------------------------------------------------------------
+
+
+ <pipe label="ShoppingExScenario" capture="">
+    <case label="r1" cond="(Phase.r1)">1-base-vbiuuRAqo</case>
+    <case label="r2" cond="(Phase.r2)">2-test1-eM2TRXod8</case>
+    <case label="r3" cond="(Phase.r3)">3-test2-COO02uXAu</case>
+    <case label="r4" cond="(Phase.r4)">4-test3-UKuSwJb3k</case>
+    <case label="r99" cond="1"/></pipe>
+  <suspend/>
+
+  <html label="shoppingRedreict1" where="none">Redirect to shopping questions</html>
+
+  <suspend sst="0" url="https://virtual.storetrials.com/?trial=Vo6XLWaG1&amp;scenario=${pipe.ShoppingExScenario}&amp;id=${uuid}"/>
+
+
+
+----------------------------------------------------------------------------SCENARIO--------------------------------------------------------------------------
+
+
+<html label="SituationalPurchasedText" where="survey">Thank you for your purchase(s). On the next few screens you will see the <strong>[pipe: Category]</strong> products on shelf again.<br /><br />For each of the following situations, please select the single item that best fits the situation.</html>
+
+<suspend/>
+
+<pipe label="SituationalScenariotrial1" capture="">
+  <case label="r1" cond="(Phase.r1)">1-base-aI9CnJMDa</case>
+  <case label="r2" cond="(Phase.r2)">2-test1-SkmTL3N6C</case>
+  <case label="r3" cond="(Phase.r3)">3-test2-9T1L2Eysb</case>
+  <case label="r4" cond="(Phase.r4)">4-test3-kM48NYyGe</case>
+  <case label="r99" cond="1"/></pipe>
+<suspend/>
+
+<pipe label="SituationalScenariotrial2" capture="">
+  <case label="r1" cond="(Phase.r1)">1-base-Yps5f4VQR</case>
+  <case label="r2" cond="(Phase.r2)">2-test1-4Ll2aQ7RA</case>
+  <case label="r3" cond="(Phase.r3)">3-test2-UxrpYvu3U</case>
+  <case label="r4" cond="(Phase.r4)">4-test3-TCUJhCkZs</case>
+  <case label="r99" cond="1"/></pipe>
+<suspend/>
+
+<block label="BLKST" randomizeChildren="1">
+  <block label="blkST1" randomize="1">
+    <html label="SituationalRedreict1" where="none">Redirect to shopping questions</html>
+
+    <suspend sst="0" url="https://virtual.storetrials.com/?trial=Vo6XLWaG1fi&amp;scenario=${pipe.SituationalScenariotrial1}&amp;id=${uuid}"/>
+  </block>
+
+  <block label="blkST2" randomize="1">
+    <html label="SituationalRedreict3" where="none">Redirect to shopping questions</html>
+
+    <suspend sst="0" url="https://virtual.storetrials.com/?trial=Vo6XLWaG1fi&amp;scenario=${pipe.SituationalScenariotrial2}&amp;id=${uuid}"/>
+  </block>
+</block>
+
+
+----------------------------------------------------------------------------FINDABILITY--------------------------------------------------------------------------
+
+
+
+<pipe label="FindaScenariotrial2" capture="">
+  <case label="r1" cond="Phase.r1">1-base-vbiuuRAqo</case>
+  <case label="r2" cond="Phase.r2">2-test1-eM2TRXod8</case>
+  <case label="r3" cond="Phase.r3">3-test2-COO02uXAu</case>
+  <case label="r4" cond="Phase.r4">4-test3-UKuSwJb3k</case>
+  <case label="r99" cond="1"/></pipe>
+<suspend/>
+
+<pipe label="Correctsku" capture="">
+  <case label="r1" cond="Phase.r1">72030018423</case>
+  <case label="r2" cond="Phase.r2">oneac</case>
+  <case label="r3" cond="Phase.r3">twoac</case>
+  <case label="r4" cond="Phase.r4">threeac</case>
+  <case label="r99" cond="1"/></pipe>
+<suspend/>
+
+<block label="Findability_Section" builder:title="Findability Section">
+  <html label="F1Text" where="survey">Next, you are going to see the display of pre-packaged snack products again. This time, you will be looking for one particular item.<br /><br />
+When you see the display, please find [pipe: Finda].<br /><br />
+When you find this product, please use your mouse, and click on the center of the product to select it. When you are ready, click continue to begin.</html>
+
+  <suspend/>
+
+  <exec where="execute,survey,report">
+p.startTime = timeSpent()
+  </exec>
+
+  <suspend/>
+
+  <html label="FindabilityRedreict1" where="none">Redirect to Findability questions</html>
+
+  <suspend sst="0" url="https://virtual.storetrials.com/?trial=Vo6XLWaG1fi&amp;scenario=${pipe.FindaScenariotrial2}&amp;id=${uuid}&amp;correctsku=${pipe.Correctsku}"/>
+
+  <exec when="returning">
+vFindStatus.val = gv.request.get('findstatus') or 'NO DATA'
+  </exec>
+
+  <suspend/>
+
+  <text 
+   label="vFindStatus"
+   optional="0"
+   size="40"
+   where="execute,survey,report">
+    <title>record the findstatus from link</title>
+  </text>
+
+  <suspend/>
+
+
+ <radio 
+   label="vFindCorrect"
+   randomize="0"
+   where="execute,survey,report">
+    <title><b>Correct Product Found?</b></title>
+    <exec>
+if (Phase.r1 and (F1.c1.r19.val &gt;0) or (F1.c1.r21.val &gt;0)) or (Phase.r2 and (F1.c1.r19.val &gt;0) or (F1.c1.r21.val &gt;0)) or (Phase.r3 and (F1.c1.r19.val &gt;0) or (F1.c1.r21.val &gt;0)) or (Phase.r4 and (F1.c1.r19.val &gt;0) or (F1.c1.r21.val &gt;0)):
+    vFindCorrect.val = 0
+else:
+    vFindCorrect.val = 1
+vFindCorrect.val = 1
+if vFindStatus.val=='true':
+  vFindCorrect.val = 0
+if vFindStatus.val=='false':
+  vFindCorrect.val = 1
+    </exec>
+
+    <row label="r1">Correct</row>
+    <row label="r2">Incorrect</row>
+  </radio>
+
+  <suspend/>

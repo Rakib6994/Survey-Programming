@@ -21,3 +21,33 @@ ShopTime.val= b-a
     </text>
 
     <suspend/>
+
+
+
+
+
+
+
+    ----------------------
+
+
+<exec where="execute,survey,report">
+p.startTime = timeSpent()
+  </exec>
+  <suspend/>
+
+
+
+
+
+   <exec where="execute,survey,report">
+p.endTime = timeSpent()
+  </exec>
+
+  <suspend/>
+
+
+
+  <exec>
+Communication_Time.val = p.endTime - p.startTime
+    </exec>

@@ -30,3 +30,16 @@ var $submitButton = $ ("#btn_continue, #btn_finish");
 <html label="con3" ss:commentClassNames="timer delay_5" where="survey"><img class="survey_image survey-image-original fit" src="/survey/selfserve/202d/211191/n3.png" alt="n3.png" title="n3.png" /></html>
 
 <suspend/>
+
+
+Need the following style- 
+
+<style mode="after" name="respview.client.js"><![CDATA[
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/211191/hideContinue.js"></script>
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/211191/AutoContinue.js"></script>
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/211191/unctrl.js"></script>
+]]></style>
+<style name="survey.header"><![CDATA[
+<link rel="stylesheet" type="text/css" href="https://paralleldata.decipherinc.com/survey/selfserve/202d/211191/custom.css"/>
+<script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/202d/211191/custom.js"></script>
+]]></style>
