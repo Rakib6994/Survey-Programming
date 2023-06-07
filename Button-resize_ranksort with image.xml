@@ -48,3 +48,38 @@
   </select>
 
   <suspend/>
+
+
+
+
+
+
+
+    <select 
+   label="Q_Custom1"
+   minRanks="3"
+   optional="1"
+   randomize="0"
+   ranksort:bucketCSS="width: 400px; height: 80px;"
+   
+   ranksort:cardCSS="width: 300px; height: 270px;"
+   
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>Please rank which product best fits the usage occasion shown.</title>
+    <row label="r1">[pipe:Comp_1]</row>
+    <row label="r2">[pipe:pack_1]</row>
+    <row label="r3">[pipe:Comp_2]</row>
+    <choice label="ch1">After School Snack</choice>
+    <choice label="ch2">Dinner</choice>
+    <choice label="ch3">Post workout meal</choice>
+    <choice label="ch4">Special occasion / celebration</choice>
+    <choice label="ch5">Late Night Snack</choice>
+    <choice label="ch6">Game time Snack</choice>
+    <choice label="ch7">Made for tweens/teens</choice>
+    <choice label="ch8">Made for toddlers</choice>
+    <choice label="ch9">Makes a great side dish</choice>
+    <choice label="ch10">For Lunch</choice>
+  </select>
+
+  <suspend/>

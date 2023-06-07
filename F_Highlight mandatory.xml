@@ -1,0 +1,62 @@
+  <block label="F_HighlightBlock" cond="hid_differ.any" builder:title="F_Highlight_ImageMap">
+        <loop label="F_Highlight_Loop" vars="image">
+          <title>Findability- Heatmap</title>
+          <block label="F_Highlight_Block" builder:title="F_Highlight Heatmap Block">
+            <textarea 
+        label="F_Highlight_[loopvar: label]"
+        imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+        optional="1"
+        sst="0"
+        uses="imgmap.2020">
+              <title>You answered that it is <b>[pipe:hid_differ]</b> between these Barilla products. Using your mouse, highlight the single part of the packaging that was most useful. </title>
+              <comment>Using your mouse, highlight the <b>single part</b> of the packaging that was <b>most useful</b>.<br /><img src="/survey/selfserve/1da7/220614/clickNdragcrop.gif" alt="" width="200px" /></comment>
+              
+<validate>
+if F_Highlight_[loopvar: label].c1.val == "":      error("Please highlight the single part of the packaging that was most useful.")
+</validate>
+
+              <col label="c1" imgmap:color="#32CD32" optional="1">most useful</col>
+            </textarea>
+
+            <suspend/>
+          </block>
+
+          <looprow label="1" cond="Phase.r1 and Version.r1">
+            <loopvar name="image">PACK1A.jpg</loopvar>
+          </looprow>
+
+          <looprow label="2" cond="Phase.r1 and Version.r2">
+            <loopvar name="image">PACK1B_resized.jpg</loopvar>
+          </looprow>
+
+          <looprow label="3" cond="Phase.r1 and Version.r3">
+            <loopvar name="image">PACK1C.jpg</loopvar>
+          </looprow>
+
+          <looprow label="4" cond="Phase.r2 and Version.r1">
+            <loopvar name="image">PACK2A.jpg</loopvar>
+          </looprow>
+
+          <looprow label="5" cond="Phase.r2 and Version.r2">
+            <loopvar name="image">PACK2B_resized.jpg</loopvar>
+          </looprow>
+
+          <looprow label="6" cond="Phase.r2 and Version.r3">
+            <loopvar name="image">PACK2C.jpg</loopvar>
+          </looprow>
+
+          <looprow label="7" cond="Phase.r3 and Version.r1">
+            <loopvar name="image">PACK2A.jpg</loopvar>
+          </looprow>
+
+          <looprow label="8" cond="Phase.r3 and Version.r2">
+            <loopvar name="image">PACK3B_resized.jpg</loopvar>
+          </looprow>
+
+          <looprow label="9" cond="Phase.r3 and Version.r3">
+            <loopvar name="image">PACK2C.jpg</loopvar>
+          </looprow>
+        </loop>
+      </block>
+
+      <suspend/>

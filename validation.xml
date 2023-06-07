@@ -1,4 +1,29 @@
+<checkbox 
+   label="Q_PI_B"
+   cond="Q_PI.r3 or Q_PI.r4 or Q_PI.r5"
+   shuffle="rows">
+    <title>you mentioned that you <b>[pipe: Q_PI_Text]</b> the Mrs. T’s products shown. What reason(s) made you feel like you wouldn’t buy them?</title>
+    <comment>[pipe: PH_IMG]<br /></comment>
+    <validate>
+if (Q_PI_B.c1.count != 1): error("Please select only one response for the 1ST Reason cited column")
+if (Q_PI_B.c1.count == 1 and ((Q_PI_B.r1.c1 and Q_PI_B.r1.c2) or (Q_PI_B.r2.c1 and Q_PI_B.r2.c2) or (Q_PI_B.r3.c1 and Q_PI_B.r3.c2) or (Q_PI_B.r4.c1 and Q_PI_B.r4.c2) or (Q_PI_B.r5.c1 and Q_PI_B.r5.c2) or (Q_PI_B.r6.c1 and Q_PI_B.r6.c2) or (Q_PI_B.r7.c1 and Q_PI_B.r7.c2) or (Q_PI_B.r8.c1 and Q_PI_B.r8.c2) or (Q_PI_B.r9.c1 and Q_PI_B.r9.c2))): error("You can not select a response for both first and the next reason at the same time.")
+    
+    
+    </validate>
+    <col label="c1">1ST Reason cited</col>
+    <col label="c2">All next reasons cited</col>
+    <row label="r1">I prefer another brand</row>
+    <row label="r2">I'm not familiar with this product/ never tried</row>
+    <row label="r3">Not enough value at that price point</row>
+    <row label="r4">The packaging does not look appealing to me</row>
+    <row label="r5">The product does not appear appetizing</row>
+    <row label="r6">I don't like the flavor{s}</row>
+    <row label="r7">I don't know what to do with it</row>
+    <row label="r8">My kids would not like it</row>
+    <row label="r9" open="1" openSize="25" randomize="0">Other (Please specify):</row>
+  </checkbox>
 
+  <suspend/>
 <!-- After Title-->
 
 <validate>
