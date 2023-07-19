@@ -1,0 +1,42 @@
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+  </autofill>
+
+  <suspend/>
