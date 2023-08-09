@@ -1,0 +1,3904 @@
+@compat: 144;
+@fir-border: #c7c7c7;
+@fir-base: #ffffff;
+@fir-hover: #c5d600;
+@fir-selected: #2bbdb9;
+@fir-size: 20px;
+
+// static/support/font-awesome-4.2.0/less/font-awesome.less 
+/*!
+ * Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@import url("@{static-path}/support/font-awesome-4.2.0/less/variables.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/mixins.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/path.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/core.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/larger.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/fixed-width.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/list.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/bordered-pulled.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/spinning.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/rotated-flipped.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/stacked.less");
+@import url("@{static-path}/support/font-awesome-4.2.0/less/icons.less");
+
+
+
+// static/support/select2-4.0.1/select2.min.css 
+.select2-container{box-sizing:border-box;display:inline-block;margin:0;position:relative;vertical-align:middle}.select2-container .select2-selection--single{box-sizing:border-box;cursor:pointer;display:block;height:28px;user-select:none;-webkit-user-select:none}.select2-container .select2-selection--single .select2-selection__rendered{display:block;padding-left:8px;padding-right:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.select2-container .select2-selection--single .select2-selection__clear{position:relative}.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered{padding-right:8px;padding-left:20px}.select2-container .select2-selection--multiple{box-sizing:border-box;cursor:pointer;display:block;min-height:32px;user-select:none;-webkit-user-select:none}.select2-container .select2-selection--multiple .select2-selection__rendered{display:inline-block;overflow:hidden;padding-left:8px;text-overflow:ellipsis;white-space:nowrap}.select2-container .select2-search--inline{float:left}.select2-container .select2-search--inline .select2-search__field{box-sizing:border-box;border:none;font-size:100%;margin-top:5px;padding:0}.select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button{-webkit-appearance:none}.select2-dropdown{background-color:white;border:1px solid #aaa;border-radius:4px;box-sizing:border-box;display:block;position:absolute;left:-100000px;width:100%;z-index:1051}.select2-results{display:block}.select2-results__options{list-style:none;margin:0;padding:0}.select2-results__option{padding:6px;user-select:none;-webkit-user-select:none}.select2-results__option[aria-selected]{cursor:pointer}.select2-container--open .select2-dropdown{left:0}.select2-container--open .select2-dropdown--above{border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-container--open .select2-dropdown--below{border-top:none;border-top-left-radius:0;border-top-right-radius:0}.select2-search--dropdown{display:block;padding:4px}.select2-search--dropdown .select2-search__field{padding:4px;width:100%;box-sizing:border-box}.select2-search--dropdown .select2-search__field::-webkit-search-cancel-button{-webkit-appearance:none}.select2-search--dropdown.select2-search--hide{display:none}.select2-close-mask{border:0;margin:0;padding:0;display:block;position:fixed;left:0;top:0;min-height:100%;min-width:100%;height:auto;width:auto;opacity:0;z-index:99;background-color:#fff;filter:alpha(opacity=0)}.select2-hidden-accessible{border:0 !important;clip:rect(0 0 0 0) !important;height:1px !important;margin:-1px !important;overflow:hidden !important;padding:0 !important;position:absolute !important;width:1px !important}.select2-container--default .select2-selection--single{background-color:#fff;border:1px solid #aaa;border-radius:4px}.select2-container--default .select2-selection--single .select2-selection__rendered{color:#444;line-height:28px}.select2-container--default .select2-selection--single .select2-selection__clear{cursor:pointer;float:right;font-weight:bold}.select2-container--default .select2-selection--single .select2-selection__placeholder{color:#999}.select2-container--default .select2-selection--single .select2-selection__arrow{height:26px;position:absolute;top:1px;right:1px;width:20px}.select2-container--default .select2-selection--single .select2-selection__arrow b{border-color:#888 transparent transparent transparent;border-style:solid;border-width:5px 4px 0 4px;height:0;left:50%;margin-left:-4px;margin-top:-2px;position:absolute;top:50%;width:0}.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear{float:left}.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow{left:1px;right:auto}.select2-container--default.select2-container--disabled .select2-selection--single{background-color:#eee;cursor:default}.select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear{display:none}.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{border-color:transparent transparent #888 transparent;border-width:0 4px 5px 4px}.select2-container--default .select2-selection--multiple{background-color:white;border:1px solid #aaa;border-radius:4px;cursor:text}.select2-container--default .select2-selection--multiple .select2-selection__rendered{box-sizing:border-box;list-style:none;margin:0;padding:0 5px;width:100%}.select2-container--default .select2-selection--multiple .select2-selection__placeholder{color:#999;margin-top:5px;float:left}.select2-container--default .select2-selection--multiple .select2-selection__clear{cursor:pointer;float:right;font-weight:bold;margin-top:5px;margin-right:10px}.select2-container--default .select2-selection--multiple .select2-selection__choice{background-color:#e4e4e4;border:1px solid #aaa;border-radius:4px;cursor:default;float:left;margin-right:5px;margin-top:5px;padding:0 5px}.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{color:#999;cursor:pointer;display:inline-block;font-weight:bold;margin-right:2px}.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover{color:#333}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice,.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder,.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline{float:right}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice{margin-left:5px;margin-right:auto}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove{margin-left:2px;margin-right:auto}.select2-container--default.select2-container--focus .select2-selection--multiple{border:solid #000 1px;outline:0}.select2-container--default.select2-container--disabled .select2-selection--multiple{background-color:#eee;cursor:default}.select2-container--default.select2-container--disabled .select2-selection__choice__remove{display:none}.select2-container--default.select2-container--open.select2-container--above .select2-selection--single,.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple{border-top-left-radius:0;border-top-right-radius:0}.select2-container--default.select2-container--open.select2-container--below .select2-selection--single,.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-container--default .select2-search--dropdown .select2-search__field{border:1px solid #aaa}.select2-container--default .select2-search--inline .select2-search__field{background:transparent;border:none;outline:0;box-shadow:none;-webkit-appearance:textfield}.select2-container--default .select2-results>.select2-results__options{max-height:200px;overflow-y:auto}.select2-container--default .select2-results__option[role=group]{padding:0}.select2-container--default .select2-results__option[aria-disabled=true]{color:#999}.select2-container--default .select2-results__option[aria-selected=true]{background-color:#ddd}.select2-container--default .select2-results__option .select2-results__option{padding-left:1em}.select2-container--default .select2-results__option .select2-results__option .select2-results__group{padding-left:0}.select2-container--default .select2-results__option .select2-results__option .select2-results__option{margin-left:-1em;padding-left:2em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-2em;padding-left:3em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-3em;padding-left:4em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-4em;padding-left:5em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-5em;padding-left:6em}.select2-container--default .select2-results__option--highlighted[aria-selected]{background-color:#5897fb;color:white}.select2-container--default .select2-results__group{cursor:default;display:block;padding:6px}.select2-container--classic .select2-selection--single{background-color:#f7f7f7;border:1px solid #aaa;border-radius:4px;outline:0;background-image:-webkit-linear-gradient(top, #fff 50%, #eee 100%);background-image:-o-linear-gradient(top, #fff 50%, #eee 100%);background-image:linear-gradient(to bottom, #fff 50%, #eee 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)}.select2-container--classic .select2-selection--single:focus{border:1px solid #5897fb}.select2-container--classic .select2-selection--single .select2-selection__rendered{color:#444;line-height:28px}.select2-container--classic .select2-selection--single .select2-selection__clear{cursor:pointer;float:right;font-weight:bold;margin-right:10px}.select2-container--classic .select2-selection--single .select2-selection__placeholder{color:#999}.select2-container--classic .select2-selection--single .select2-selection__arrow{background-color:#ddd;border:none;border-left:1px solid #aaa;border-top-right-radius:4px;border-bottom-right-radius:4px;height:26px;position:absolute;top:1px;right:1px;width:20px;background-image:-webkit-linear-gradient(top, #eee 50%, #ccc 100%);background-image:-o-linear-gradient(top, #eee 50%, #ccc 100%);background-image:linear-gradient(to bottom, #eee 50%, #ccc 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0)}.select2-container--classic .select2-selection--single .select2-selection__arrow b{border-color:#888 transparent transparent transparent;border-style:solid;border-width:5px 4px 0 4px;height:0;left:50%;margin-left:-4px;margin-top:-2px;position:absolute;top:50%;width:0}.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear{float:left}.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__arrow{border:none;border-right:1px solid #aaa;border-radius:0;border-top-left-radius:4px;border-bottom-left-radius:4px;left:1px;right:auto}.select2-container--classic.select2-container--open .select2-selection--single{border:1px solid #5897fb}.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow{background:transparent;border:none}.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b{border-color:transparent transparent #888 transparent;border-width:0 4px 5px 4px}.select2-container--classic.select2-container--open.select2-container--above .select2-selection--single{border-top:none;border-top-left-radius:0;border-top-right-radius:0;background-image:-webkit-linear-gradient(top, #fff 0%, #eee 50%);background-image:-o-linear-gradient(top, #fff 0%, #eee 50%);background-image:linear-gradient(to bottom, #fff 0%, #eee 50%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)}.select2-container--classic.select2-container--open.select2-container--below .select2-selection--single{border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0;background-image:-webkit-linear-gradient(top, #eee 50%, #fff 100%);background-image:-o-linear-gradient(top, #eee 50%, #fff 100%);background-image:linear-gradient(to bottom, #eee 50%, #fff 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0)}.select2-container--classic .select2-selection--multiple{background-color:white;border:1px solid #aaa;border-radius:4px;cursor:text;outline:0}.select2-container--classic .select2-selection--multiple:focus{border:1px solid #5897fb}.select2-container--classic .select2-selection--multiple .select2-selection__rendered{list-style:none;margin:0;padding:0 5px}.select2-container--classic .select2-selection--multiple .select2-selection__clear{display:none}.select2-container--classic .select2-selection--multiple .select2-selection__choice{background-color:#e4e4e4;border:1px solid #aaa;border-radius:4px;cursor:default;float:left;margin-right:5px;margin-top:5px;padding:0 5px}.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove{color:#888;cursor:pointer;display:inline-block;font-weight:bold;margin-right:2px}.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover{color:#555}.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice{float:right}.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice{margin-left:5px;margin-right:auto}.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove{margin-left:2px;margin-right:auto}.select2-container--classic.select2-container--open .select2-selection--multiple{border:1px solid #5897fb}.select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple{border-top:none;border-top-left-radius:0;border-top-right-radius:0}.select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple{border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-container--classic .select2-search--dropdown .select2-search__field{border:1px solid #aaa;outline:0}.select2-container--classic .select2-search--inline .select2-search__field{outline:0;box-shadow:none}.select2-container--classic .select2-dropdown{background-color:#fff;border:1px solid transparent}.select2-container--classic .select2-dropdown--above{border-bottom:none}.select2-container--classic .select2-dropdown--below{border-top:none}.select2-container--classic .select2-results>.select2-results__options{max-height:200px;overflow-y:auto}.select2-container--classic .select2-results__option[role=group]{padding:0}.select2-container--classic .select2-results__option[aria-disabled=true]{color:grey}.select2-container--classic .select2-results__option--highlighted[aria-selected]{background-color:#3875d7;color:#fff}.select2-container--classic .select2-results__group{cursor:default;display:block;padding:6px}.select2-container--classic.select2-container--open .select2-dropdown{border-color:#5897fb}
+
+
+
+// static/survey.respondent-post143.less 
+/*
+  Global Respondent View Stylesheet
+*/
+
+/* ================================================== (Path Variables) ================================================== */
+
+// Required for Theme Editor to function.
+
+@static-path: '/static';
+@survey-start-path: '';
+@survey-static-path: '/static';
+
+/* ================================================== (Theme Variables) ================================================== */
+
+
+// These are normally set by themes. They were originally added so unit tests without themes will still function, but
+// they can also serve as "defaults" for when new variables are introduced and old custom themes haven't had them added
+// yet. DO NOT add defaults that are not backwards-compatible with custom themes, ONLY add 100% harmless variables.
+
+// Background Padding (USE PX UNITS!)
+@background-padding-left-right-mobile:  0;
+@background-padding-left-right-desktop: 0;
+
+// Foreground Measurements (USE PX UNITS!)
+@foreground-width:                      960px;
+  // ^ Sets min-width of the foreground.
+  //   We set a min-width instead of a normal width because tables need to be able to grow in certain cases.
+@foreground-padding-top-bottom:         1em;
+@foreground-padding-left-right-mobile:  14px;
+@foreground-padding-left-right-desktop: 18px;
+@foreground-border:                     0;
+@foreground-inner-width:                (@foreground-width - (@foreground-padding-left-right-desktop * 2) - (@foreground-border * 2));
+  // ^ Keeps survey-level elements (like logos and comments) from growing past this limit, excludes questions.
+
+@foreground-width-plus-bg-padding:      (@foreground-width + (@background-padding-left-right-desktop * 2));
+  // ^ Min-widths are only applied to the foreground, custom page header, footer, grids when the screen is above
+  //   this size. Otherwise, all those elements are set to width: 100%.
+
+// Question Measurements (USE PX UNITS!)
+@question-padding-top-bottom:           0;
+@question-padding-left-right-mobile:    @question-padding-top-bottom;
+@question-padding-left-right-desktop:   @question-padding-top-bottom;
+@question-border:                       0;
+@question-inner-width:                  (@foreground-inner-width - (@question-padding-left-right-desktop * 2) - (@question-border * 2));
+  // ^ Keeps question-level elements (like question-text) from growing past this limit, excludes tables and lists.
+
+// Focusvision Logo displayed in all free surveys
+@footer-fv-logo: "2Col.png";
+
+/* ================================================= (Common Mixins) ================================================ */
+
+.webfontImport(@url) when not (@url = '') {
+  @import url('@{url}');
+}
+.backgroundImport(@url) when not (@url = '') {
+  background-image: url(@url);
+}
+.safeFadeout(@color, @value) {
+  @alphaColor: fadeout(@color, @value);
+  @ieAlphaColor: argb(@alphaColor);
+
+  background-color: @color; // Fallback for older browsers.
+  background-color: @alphaColor;
+
+  .lte-ie8 & { // Formatting for IE8 and earlier only
+    zoom: 1; // hasLayout
+    background-color: transparent;
+    filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColor}, endColorstr=@{ieAlphaColor})";
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColor}, endColorstr=@{ieAlphaColor})";
+  }
+}
+
+/* ================================================== (AQ Colors) ================================================== */
+.survey-theme-colors {
+  color: @dq-button-text-color;
+  background-color: @dq-button-bg-color;
+}
+.survey-theme-colors-selected {
+  color: @dq-button-text-color-selected;
+  background-color: @dq-button-bg-color-selected;
+}
+.decontrast(@text-color, @color1, @color2) when (abs(lightness(@color1) - lightness(@text-color)) <= abs(lightness(@color2) - lightness(@text-color))) {
+  background-color: @color1;
+}
+.decontrast(@text-color, @color1, @color2) when (abs(lightness(@color1) - lightness(@text-color)) > abs(lightness(@color2) - lightness(@text-color))) {
+  background-color: @color2;
+}
+.survey-theme-colors-disabled {
+  @disabled-text-color: mix(desaturate(@dq-button-text-color, 25%), grey);
+  @disabled-bg-color: desaturate(@dq-button-bg-color, 50%);
+  color: @disabled-text-color;
+  .decontrast(@disabled-text-color, lighten(@disabled-bg-color, 25%), darken(@disabled-bg-color, 25%));
+}
+
+/* ======================================================= (Common) ========================================================*/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: 0;
+  outline: 0;
+}
+
+// Correct 'block' display not defined for HTML5 elements.
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+// Prevent mobile text size adjust after orientation change, without disabling user zoom.
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+// Common resets.
+body {
+  line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+.question, .comment {
+  ul {
+    list-style-type: disc;
+    // overwrites a reset in global.css
+    li { list-style: disc; }
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    padding-bottom: 7px;
+  }
+  ul, ol {
+    padding: 0 0 0 2.3em;
+    margin-bottom: 7px;
+    &.list li:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: .83em;
+}
+
+sup {
+  vertical-align: super;
+  font-size: .83em;
+}
+
+// Remove auto-generated quotes from quote-related tags.
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 80%;
+}
+
+button {
+  overflow: visible;
+}
+
+/**
+ * 2. Correct font properties not being inherited.
+ */
+
+button,
+input,
+optgroup,
+select:not(.input),
+textarea {
+  font: inherit; /* 2 */
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="password"],
+textarea {
+    cursor: text;
+    }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/* br that tinymce might add */
+br[_mce_bogus] { display: none; }
+
+.hidden { display: none; }
+
+@media @desktop {
+  #detectBreakpoint { display: none; }
+}
+
+/* ================================================== (Reusable Classes) ===================================================*/
+
+/* Follow-Up Questions - Questions that should appear closer to the question above. */
+.question.followUpQuestion {
+  margin-top: -1em;
+}
+/* Programmers have the option to hide the respondent question and instruction text */
+.hideQuestionText .question-text, .hideInstructionText .instructions {
+  display: none;
+}
+
+/* ================================================== (Survey Container) ===================================================*/
+.survey-container, .survey-section {
+  text-align: center;
+}
+.survey-body, .page-header {
+  text-align: left;
+}
+.survey-body {
+  min-height: 200px;
+}
+.survey-body, .page-header, .footer {
+  margin: 0 auto;
+  min-width: @foreground-width;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+
+@media (max-width: @foreground-width-plus-bg-padding) {
+  .survey-body, .page-header, .footer {
+    display: block;
+    min-width: 0;
+  }
+}
+
+/* ============================================== (Primary Container Defaults) ============================================*/
+
+.logo,
+.comment,
+.survey-error,
+.survey-warning,
+.survey-info,
+.survey-extra-approval,
+.autosave-restart,
+.exit-message,
+.survey-buttons {
+
+    /* DOES NOT APPLY TO ".answers" and it's children */
+    max-width: @foreground-inner-width;
+    }
+
+.question-text,
+.instruction-text,
+.question-error {
+    max-width: @question-inner-width;
+    }
+
+.question, .comment {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.answers-table {
+  display: table;
+  min-width: @question-inner-width;
+  .noCols & {
+    display: block;
+  }
+  @media (max-width: @foreground-width-plus-bg-padding) {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Auto Width */
+.customWidth .survey-q-error,
+.customWidth .question-text,
+.customWidth .instruction-text { width: auto; }
+
+/* Auto Width */
+.customWidth .answers,
+.flexGrid .answers { min-width: 1px; }
+
+
+/* ==================================================== (Survey Header) =================================================== */
+
+/*
+    FUTURE USE:
+    This container will allow client branding outside of actual survey content area (.survey-body)
+*/
+
+.page-header {
+  display: none;
+}
+
+
+/* =================================================== (Survey Content) =================================================== */
+
+.survey-body > form,
+.survey-info,
+.survey-warning {
+  clear: both;
+}
+
+/* ================================================= (Survey Content > Logo) ===============================================*/
+
+
+/*
+    This element will not get written to the page if a logo is not selected in builder
+*/
+
+.logo-image {
+  max-width: 100%;
+  max-height: 5em;
+  @media @desktop {
+    max-height: 8em;
+  }
+}
+
+/* ===================================== (Survey Content > Form Image Replacement (FIR)) ===================================*/
+// These can be overridden via themevars/attributes
+@fir-radio: "circle-o";
+@fir-radio-selected: "dot-circle-o";
+@fir-checkbox: "square-o";
+@fir-checkbox-selected: "check-square-o";
+
+// These are the default FA icons to use for IE8/Android 2.3
+@fir-fallback-radio: "circle-o";
+@fir-fallback-radio-selected: "dot-circle-o";
+@fir-fallback-checkbox: "square-o";
+@fir-fallback-checkbox-selected: "check-square-o";
+/*********************************************
+ STYLE SETTINGS: ROUNDED, SQUARE
+ *********************************************/
+/*********************************************
+ DESKTOP-SPECIFIC RESPONDENT VIEW SETTINGS LOCATED IN FIR.DESKTOP.LESS
+ *********************************************/
+/*********************************************
+ STYLE SETTINGS: ROUNDED, SQUARE
+ *********************************************/
+.fir-icon .rounded,
+.fir-icon .square {
+  & .fir-base {
+    fill: @fir-border;
+  }
+  & .fir-bg {
+    fill: @fir-base;
+  }
+  & .fir-selected {
+    fill: @fir-inner;
+  }
+}
+
+.fir-icon.selected .rounded,
+.fir-icon.selected .square {
+  & .fir-base {
+    fill: @fir-border-selected;
+  }
+  & .fir-bg {
+    fill: @fir-base-selected;
+  }
+  & .fir-selected {
+    fill: @fir-inner-selected;
+  }
+}
+
+.fir-icon.disabled .rounded,
+.fir-icon.disabled .square {
+  & .fir-base {
+    fill: @fir-border;
+  }
+  & .fir-bg {
+    fill: @fir-base;
+  }
+  & .fir-selected {
+    fill: @fir-inner;
+  }
+}
+
+/*********************************************
+ STYLE SETTINGS: SCALE
+ *********************************************/
+.fir-icon .scale .fir-large,
+.fir-icon .scale .fir-medium,
+.fir-icon.selected .scale .fir-medium,
+.fir-icon.selected .scale .fir-small {
+  fill: transparent;
+}
+
+.fir-icon .scale .fir-small {
+  fill: @fir-inner-hover;
+}
+
+.fir-icon.selected .scale .fir-large {
+  fill: @fir-inner-selected;
+}
+
+.fir-icon.disabled .scale .fir-medium {
+  fill: transparent;
+}
+
+/*********************************************
+ RESPONDENT VIEW SETTINGS
+ *********************************************/
+.fir-icon {
+  width: @fir-size;
+  height: @fir-size;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fir-icon svg,
+.fir-icon i {
+  width: 1em;
+  height: 1em;
+  font-size: @fir-size;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.fir-icon.disabled svg,
+.fir-icon.disabled i {
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+  -moz-opacity: 0.25;
+}
+
+.fir-icon i.fa-icon-check-square-o,
+.grid-table-mode .fir-icon i.fa-icon-check-square-o {
+  margin-left: 3px;
+}
+.grid-list-mode .fir-icon i.fa-icon-check-square-o {
+  margin-left: 0px;
+}
+
+.fir-icon i {
+  color: @fir-inner-hover;
+}
+.fir-icon.selected i {
+  color: @fir-inner-selected;
+}
+.fir-hidden {
+  position: absolute !important;
+  left: -9999px !important;
+}
+body.dir-rtl .fir-hidden {
+  left: auto !important;
+  right: -9999px !important;
+}
+
+/*********************************************
+ HIDE FIR FOR THE FOLLOWING DQs
+ *********************************************/
+.sq-ratingscale  .fir-icon,
+.sq-fancyboxes   .fir-icon {
+  display: none;
+}
+.naCell .fir-icon, .cell-no-answer .fir-icon {
+  display: inline-block;
+}
+/* THESE DQs ALWAYS HIDE FIR -- NOT EVEN SHOWN IN NOANSWER */
+.sq-fir       .fir-icon,
+.sq-atmtable  .fir-icon {
+  display: none;
+}
+
+/*********************************************
+ DESKTOP-SPECIFIC RESPONDENT VIEW SETTINGS (FOR HOVERING, ACTIVE, ETC..)
+ *********************************************/
+.non-touch {
+  .fir-icon.focus,
+  .fir-select.focus,
+  .fir-select .select2-container--focus,
+  .survey-buttons .button:focus,
+  .footer a:focus {
+    box-shadow: 0 0 3px 2px @primary-button-bg-color-hover;
+  }
+
+  .cell-text label,
+  .cell-input .checkbox,
+  .cell-input .radio { cursor: pointer; }
+
+
+  /* todo: find css for non-svg fir, and hover crap */
+
+  /***** ROUNDED/SQUARE  *****/
+  .fir-icon:hover .rounded,
+  .fir-icon:hover .square,
+  .grid-table-mode .clickableCell:hover .fir-icon .rounded,
+  .grid-table-mode .clickableCell:hover .fir-icon .square {
+
+
+    & .fir-base {
+      fill: @fir-border-hover;
+    }
+    & .fir-bg {
+      fill: @fir-base-hover;
+    }
+    & .fir-selected {
+      fill: @fir-inner-hover;
+    }
+  }
+
+  .fir-icon.selected:hover .rounded,
+  .fir-icon.selected:hover .square,
+  .grid-table-mode .clickableCell:hover .fir-icon.selected .rounded,
+  .grid-table-mode .clickableCell:hover .fir-icon.selected .square {
+    & .fir-base {
+      fill: @fir-border-selected;
+    }
+    & .fir-bg {
+      fill: @fir-base-selected;
+    }
+    & .fir-selected {
+      fill: @fir-inner-selected;
+    }
+  }
+
+  .fir-icon.disabled:hover .rounded,
+  .fir-icon.disabled:hover .square,
+  .grid-table-mode .clickableCell:hover .fir-icon.disabled .rounded,
+  .grid-table-mode .clickableCell:hover .fir-icon.disabled .square {
+    & .fir-base {
+      fill: @fir-border;
+    }
+    & .fir-bg {
+      fill: @fir-base;
+    }
+    & .fir-selected {
+      fill: @fir-inner;
+    }
+  }
+
+  /***** SCALE *****/
+  .fir-icon:hover .scale .fir-medium,
+  .grid-table-mode .clickableCell:hover .fir-icon .scale .fir-medium,
+  .fir-icon .scale:hover .fir-medium {
+    fill: @fir-inner-hover;
+  }
+
+  .fir-icon:hover:active .scale .fir-large,
+  .grid-table-mode .clickableCell:hover:active .fir-icon .scale .fir-large,
+  .fir-icon .scale:hover:active .fir-large {
+    fill: @fir-inner-selected;
+  }
+
+  .fir-icon.selected:hover .scale .fir-medium,
+  .fir-icon.selected:hover .scale .fir-small,
+
+  .fir-icon.disabled:hover .scale .fir-medium,
+  .fir-icon.disabled:hover:active .scale .fir-large,
+
+  .fir-icon:hover:active .scale .fir-medium,
+  .fir-icon:hover:active .scale .fir-small,
+
+  .grid-table-mode .clickableCell:hover .fir-icon.selected .scale .fir-medium,
+  .grid-table-mode .clickableCell:hover .fir-icon.selected .scale .fir-small,
+  .grid-table-mode .clickableCell:hover .fir-icon.disabled .scale .fir-medium,
+
+  .grid-table-mode .clickableCell:hover:active .fir-icon.disabled .scale .fir-large,
+  .grid-table-mode .clickableCell:hover:active .fir-icon .scale .fir-medium,
+  .grid-table-mode .clickableCell:hover:active .fir-icon .scale .fir-small,
+
+  .fir-icon .scale:hover:active .fir-medium,
+  .fir-icon .scale:hover:active .fir-small,
+  .fir-icon.selected .scale:hover .fir-medium,
+  .fir-icon.disabled .scale:hover:active .fir-large {
+    fill: transparent;
+  }
+
+  .fir-icon.disabled:hover:active .scale .fir-small,
+  .grid-table-mode .clickableCell:hover:active .fir-icon.disabled .scale .fir-small,
+  .fir-icon.disabled .scale:hover:active .fir-small {
+    fill: @fir-inner-hover;
+  }
+}
+
+/*********************************************
+ FIR FONT-AWESOME
+ *********************************************/
+@fir-var-radio: 'fa-var-@{fir-radio}';
+@fir-var-radio-selected: 'fa-var-@{fir-radio-selected}';
+@fir-var-checkbox: 'fa-var-@{fir-checkbox}';
+@fir-var-checkbox-selected: 'fa-var-@{fir-checkbox-selected}';
+
+.fa-icon-fir-radio:before { content: @@fir-var-radio; }
+.fa-icon-fir-radio-selected:before { content: @@fir-var-radio-selected; }
+.fa-icon-fir-checkbox:before { content: @@fir-var-checkbox; }
+.fa-icon-fir-checkbox-selected:before { content: @@fir-var-checkbox-selected; }
+
+@fir-var-fallback-radio: 'fa-var-@{fir-fallback-radio}';
+@fir-var-fallback-radio-selected: 'fa-var-@{fir-fallback-radio-selected}';
+@fir-var-fallback-checkbox: 'fa-var-@{fir-fallback-checkbox}';
+@fir-var-fallback-checkbox-selected: 'fa-var-@{fir-fallback-checkbox-selected}';
+
+.fa-icon-fir-fallback-radio:before { content: @@fir-var-fallback-radio; }
+.fa-icon-fir-fallback-radio-selected:before { content: @@fir-var-fallback-radio-selected; }
+.fa-icon-fir-fallback-checkbox:before { content: @@fir-var-fallback-checkbox; }
+.fa-icon-fir-fallback-checkbox-selected:before { content: @@fir-var-fallback-checkbox-selected; }
+/*********************************************
+ STYLING FOR STANDARD HTML SELECT ELEMENTS
+ *********************************************/
+@fir-select-background-color: #fff;
+@fir-select-border-color: #ddd;
+@fir-select-font-color: #444;
+@fir-select-arrow-color: #888;
+
+html:not(.lte-ie9) .fir-select {
+  position: relative;
+  font-family: fontawesome;
+  display: inline-block;
+  &:after {
+    position: absolute;
+    content: "\f107";
+    height: 1em;
+    font-size: 1em;
+    line-height: 1;
+    right: .5em;
+    top: 50%;
+    margin-top: -.5em;
+    color: @fir-select-arrow-color;
+    pointer-events: none;
+  }
+  .input.dropdown {
+    min-width: 100px;
+    font-family: inherit;
+    font-size: 1em;
+    background: @fir-select-background-color;
+    color: @fir-select-font-color;
+    padding: .5em 1.1em .5em .5em;
+    white-space: normal;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid @fir-select-border-color;
+    border-radius: .25em;
+    cursor: pointer;
+  }
+  // Hides duplicate arrows on IE select boxes.
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+/*********************************************
+ HIDE FIR SELECT FOR THESE DQS
+ *********************************************/
+.sq-starrating {
+  .select2 { display: none; }
+}
+
+/*********************************************
+ END FIR
+ *********************************************/
+
+
+
+
+
+/* ================================= (Survey Content > Survey Question > Answers > Grid) ===================================*/
+
+/* Keep in mind this is a MOBILE-FIRST (list-first) layout. CSS applies to both list and table view, unless table view is explicitly mentioned */
+
+// Display all table elements as blocks, set defaults
+.grid,
+.grid thead,
+.grid tbody,
+.row,
+.cell,
+.cell-sub-wrapper,
+.mobile-group-legend {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: 0;
+    outline: 0;
+    }
+.lte-ie9 .grid-list-mode { // IE9 and earlier does not support display:block on table elements, so simulate a similar effect
+    &,
+    thead,
+    tbody,
+    .row,
+    .cell,
+    .mobile-group-legend {
+        float: left;
+        clear: left;
+        width: 100%;
+        }
+    }
+.lte-ie8 .survey-body form { // IE8 and earlier does not automatically set a width on display:block form elements
+    width: 100%;
+    }
+
+
+// These should not be visible on list view...
+.unused,
+.row-col-legends,
+.row-col-legends-bottom,
+.grid[data-settings*='group-by-col'] .row-legend,
+.grid[data-settings*='single-col'] .row-legend,
+.grid-multi-col .separator,
+.grid[data-settings*='force-top-legend'] .col-legend-bottom {
+     display: none;
+     }
+// ...with these exceptions.
+.grid[data-settings*='group-by-col'] .row-col-legends, .grid[data-settings*='single-col'] .row-col-legends {
+     display: block;
+     }
+
+/* There is no border collapsing when cells are in mobile-view, so we simulate it by:
+    1. Assuming people set borders on the .cell or .nonempty class
+    2. Adding the class border-collapse to all cells.
+    3. Add a blank cell to the top of tables, which has the .cell and .nonempty classes,
+       but no .border-collapse class.
+    4. Remove border-top from all .border-collapse cells, effectively stripping borders
+       from every cell except our special top cell. */
+
+// Remove top grid-lines from all cells, except .mobile-top-border-cell.
+.grid-list-mode .border-collapse {
+    border-top: 0;
+}
+.mobile-top-border-cell {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 0 !important;
+}
+
+// Force multi-col grids to use auto widths, top alignment, separator spacing, and proper borders.
+.multi-col-parent-cell {
+    vertical-align: top !important;
+    padding: 3px;
+    }
+.grid-multi-col-subgrid, .multi-col-parent-cell {
+    border-width: 0 !important;
+}
+.multi-col-separator {
+    width: 6px;
+}
+.grid-list-mode .multi-col-parent-cell, .grid-list-mode .multi-col-separator {
+    padding: 0;
+}
+/* bug 20743: hiding duplicate NA label from respondents */
+.row-no-answer span.cell-text {
+    display:none;
+}
+/* end bug 20743 */
+.grid-multi-col-subgrid {
+    display: table;
+}
+.grid-table-mode.grid-multi-col .grid-multi-col-subgrid {
+    width: 100%;
+}
+.mobile-group-legend-space, .row-legend-both-space, .row-legend-group-space, .col-legend-space {
+  margin-top: 1em;
+}
+
+.autosave-restart {
+  display: block;
+}
+
+input[type="text"] {
+  max-width: 100%;
+  outline: none;
+}
+textarea {
+  min-width: 135px;
+  outline: none;
+}
+textarea.input,
+input[type='text'] {
+  width: auto;
+  @media @mobile {
+    width: 100%;
+  }
+}
+
+// Inner cell components should be tables
+.cell-sub-wrapper {
+    display: table;
+    }
+.cell-sub-column {
+    display: table-cell;
+    }
+.cell-legend-above, .cell-legend-above .cell-sub-column {
+    display: block;
+    }
+.cell-legend-none .cell-text {
+    display: none;
+    }
+
+// Cell contents should be centered vertically.
+.cell-text {
+    line-height: normal;
+    }
+.input, .cell-sub-column, .mobile-oe-legend, .cell img {
+    vertical-align: middle;
+    }
+
+.noRows.noCols {
+    .answers-list, .row {
+        background: transparent;
+    }
+}
+
+// Single-col elements should be aligned left.
+.grid[data-settings*='single-col'] .cell {
+    text-align: left;
+}
+
+// Mobile labels for repeated OE data should be stylized.
+.mobile-oe-legend {
+    font-style: italic;
+}
+
+// Grids with devContainers in QA mode need special colors/backgrounds (bug 19376).
+// Note that more .devContainer formatting is also set in static/survey.qa.css
+.devContainer {
+  .question {
+    background: transparent; // For themes that set this, override it so the below color changes work.
+    position: relative; // A position must be set to keep this above the .devContainer .corner graphic
+  }
+
+  .grid {
+    background-color: @foreground-color; // Set grids to match the foreground color. This prevents devContainer's ugly bg from being seen inside cells.
+  }
+
+  .question-text {
+    color: contrast(#fffbc7, @text-color, #454545); // Use default text colors if it's legible against the background. Otherwise, use dark grey.
+  }
+
+  h3 {
+    color: contrast(#fffbc7, @instruction-text-color, #454545);
+  }
+}
+
+/* Set a width for lists */
+.answers-list {
+  width: @question-inner-width;
+  display: table;
+  @media (max-width: @foreground-width-plus-bg-padding) {
+    width: 100%;
+  }
+}
+
+/* Auto Width on custom grids and no-row no-col non-list grids */
+.customWidth .grid,
+.flexGrid .grid,
+.noRows.noCols .grid-table-mode { width: auto; }
+
+/* DESKTOP-ONLY formatting */
+.grid.grid-table-mode {
+    // Display all table-elements as normal table-elements
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    tbody {
+       display: table-row-group;
+       }
+    .row {
+       display: table-row;
+       }
+    .cell {
+       display: table-cell;
+       }
+    .cell-sub-wrapper, .cell-sub-column {
+       display: inline-block;
+       }
+
+    // Clickable elements should have a pointer cursor.
+    .clickableCell { cursor: pointer; }
+
+  // These elements should not be visible on desktop view.
+  .cell-text, .mobile-group-legend, .mobile-left-row-legend, .mobile-top-row-legend, .mobile-top-border-row, &.grid-list-mode .row-legend-basic, &.grid-list-mode .unused, &.grid-list-mode .cell-legend-none .cell-text {
+       display: none;
+       }
+  .mobile-oe-legend {
+      display: none !important;
+      }
+
+  // Remove grid-lines from col-separators.
+  .col-separator {
+    border-width: 0;
+  }
+
+  // Set default alignments for cells
+  .cell {
+    vertical-align: middle;
+  }
+  .row-legend {
+      text-align: left;
+      }
+  .col-legend, .element, .cell-sub-column {
+      text-align: center;
+      vertical-align: middle;
+      }
+  .col-legend-bottom {
+      vertical-align: top;
+      }
+  .row-legend-both.row-legend-left {
+      text-align: right;
+      }
+
+  /* Set table width class -- ".setWidth" is added to table.grid dynamically via JS for questions with less that ten cols */
+  &.setWidth {
+    /* Set width for questions with less than ten cols */
+    width: @question-inner-width;
+  }
+
+  @media (max-width: @foreground-width-plus-bg-padding) {
+    &.setWidth {
+        width: 100%;
+    }
+  }
+
+      /* Auto Width */
+      .customWidth &.setWidth,
+      .flexGrid &.setWidth { width: auto; max-width: none; }
+
+
+  /* no explicit cols or rows*/
+  .noRows.noCols.grid-table-mode &,
+  .noRows.noCols.grid-table-mode &.setWidth { width: auto; }
+
+  /* ===================== One Column ===================== */
+
+
+  /* Question column elements (col-legends and elements) - questions WITH row col-legends */
+  .colCount-1 .col-legend,
+  .colCount-1 .element { width: 32%; }
+
+    /* Auto Width */
+    .customWidth & .colCount-1 .col-legend,
+    .flexGrid & .colCount-1 .col-legend,
+    .customWidth & .colCount-1 .element,
+    .flexGrid & .colCount-1 .element { width: auto; }
+
+    /* Multicol AND clearColWidths (for when col widths are specified with inline CSS) - Set Auto Width */
+    &.grid-multi-col .colCount-1 .element,
+    .clearColWidths & .colCount-1 .element { width: auto; }
+
+  /* Question column elements (col-legends and elements) - questions WITHOUT row col-legends */
+  .noRows &.grid-table-mode .colCount-1 .element,
+  .noRows &.grid-table-mode .colCount-1 .col-legend { width: 99%; text-align: left; }
+
+    /* Auto Width */
+    .noRows.customWidth & .colCount-1 .element,
+    .noRows.flexWidth & .colCount-1 .element,
+    .noRows.customWidth & .colCount-1 .col-legend,
+    .noRows.flexWidth & .colCount-1 .col-legend { width: auto; }
+
+    /* Lists - Set Auto Width */
+    &.grid-list-mode .colCount-1 {
+        .element, .legend { width: auto; }
+    }
+
+  /* ===================== Two to Four Columns ===================== */
+
+
+  /* Question column col-legends - questions WITH row col-legends */
+  .colCount-2 .col-legend { width: 22%; }
+  .colCount-3 .col-legend { width: 16.5%; }
+  .colCount-4 .col-legend { width: 14.5%; }
+
+    /* Auto Width */
+    .customWidth & .colCount-2 .col-legend,
+    .flexGrid & .colCount-2 .col-legend,
+    .customWidth & .colCount-3 .col-legend,
+    .flexGrid & .colCount-3 .col-legend,
+    .customWidth & .colCount-4 .col-legend,
+    .flexGrid & .colCount-4 .col-legend { width: auto; }
+
+  /* Question column col-legends - questions WITHOUT row col-legends */
+  .noRows & .colCount-2 .col-legend { width: 49%; }
+  .noRows & .colCount-3 .col-legend { width: 33%; }
+  .noRows & .colCount-4 .col-legend { width: 24%; }
+
+    /* Auto Width */
+    .noRows.customWidth & .colCount-2 .col-legend,
+    .noRows.flexWidth & .colCount-2 .col-legend,
+    .noRows.customWidth & .colCount-3 .col-legend,
+    .noRows.flexWidth & .colCount-3 .col-legend,
+    .noRows.customWidth & .colCount-4 .col-legend,
+    .noRows.flexWidth & .colCount-4 .col-legend { width: auto; }
+
+
+  /* ===================== Five to Seven Columns ===================== */
+
+
+  /* Question column col-legends - questions WITH row col-legends */
+  .colCount-5 .col-legend { width: 12%; }
+  .colCount-6 .col-legend { width: 10.5%; }
+  .colCount-7 .col-legend { width: 9.5%; }
+
+    /* Auto Width */
+    .customWidth & .colCount-5 .col-legend,
+    .flexGrid & .colCount-5 .col-legend,
+    .customWidth & .colCount-6 .col-legend,
+    .flexGrid & .colCount-6 .col-legend,
+    .customWidth & .colCount-7 .col-legend,
+    .flexGrid & .colCount-7 .col-legend { width: auto; }
+
+  /* Question column col-legends - questions WITHOUT row col-legends */
+  .noRows & .colCount-5 .col-legend { width: 20%; }
+  .noRows & .colCount-6 .col-legend { width: 16%; }
+  .noRows & .colCount-7 .col-legend { width: 14%; }
+
+    /* Auto Width */
+    .noRows.customWidth & .colCount-5 .col-legend,
+    .noRows.flexWidth & .colCount-5 .col-legend,
+    .noRows.customWidth & .colCount-6 .col-legend,
+    .noRows.flexWidth & .colCount-6 .col-legend,
+    .noRows.customWidth & .colCount-7 .col-legend,
+    .noRows.flexWidth & .colCount-7 .col-legend { width: auto; }
+
+
+  /* ===================== Eight to Ten Columns ===================== */
+
+
+  /* Question column col-legends - questions WITH row col-legends */
+  .colCount-8 .col-legend { width: 8.5%; }
+  .colCount-9 .col-legend { width: 7.9%; }
+  .colCount-10 .col-legend { width: 7.3%; }
+
+    /* Auto Width */
+    .customWidth & .colCount-8 .col-legend,
+    .flexGrid & .colCount-8 .col-legend,
+    .customWidth & .colCount-9 .col-legend,
+    .flexGrid & .colCount-9 .col-legend,
+    .customWidth & .colCount-10 .col-legend,
+    .flexGrid & .colCount-10 .col-legend { width: auto; }
+
+  /* Question column col-legends - questions WITHOUT row col-legends */
+  .noRows & .colCount-8 .col-legend { width: 12%; }
+  .noRows & .colCount-9 .col-legend { width: 11%; }
+  .noRows & .colCount-10 .col-legend { width: 10%; }
+
+    /* Auto Width */
+    .noRows.customWidth & .colCount-8 .col-legend,
+    .noRows.flexWidth & .colCount-8 .col-legend,
+    .noRows.customWidth & .colCount-9 .col-legend,
+    .noRows.flexWidth & .colCount-9 .col-legend,
+    .noRows.customWidth & .colCount-10 .col-legend,
+    .noRows.flexWidth & .colCount-10 .col-legend { width: auto; }
+
+
+  /* ===================== Eleven Columns ===================== */
+
+
+  /* Question column col-legends - questions WITH row col-legends */
+  .colCount-11 .col-legend { width: 7%; }
+
+    /* Auto Width */
+    .customWidth & .colCount-11 .col-legend,
+    .flexGrid & .colCount-11 .col-legend { width: auto; }
+
+  /* Question column col-legends - questions WITHOUT row col-legends */
+  .noRows & .colCount-11 .col-legend { width: 9%; }
+
+    /* Auto Width */
+    .noRows.customWidth & .colCount-11 .col-legend,
+    .noRows.flexWidth & .colCount-11 .col-legend { width: auto; }
+
+
+  /* ===================== 12-17 Columns ===================== */
+
+
+  .colCount-12 .col-legend { width: 7%; }
+  .colCount-13 .col-legend { width: 6%; }
+  .colCount-14 .col-legend { width: 5.5%; }
+  .colCount-15 .col-legend { width: 5.3%; }
+  .colCount-16 .col-legend { width: 5%; }
+  .colCount-17 .col-legend { width: 4.5%; }
+
+    /* Auto Width */
+    .customWidth & .col-legend,
+    .flexGrid & .col-legend { width: auto; }
+
+}
+
+/* ========================================= (Survey Content > Survey Complete) ============================================*/
+
+
+/* =============================================== (Survey Content > Buttons) ==============================================*/
+
+
+/* ==================================================== (Survey Footer) =================================================== */
+
+.footer {
+  .fv-logo {
+    background: url("/s/images/fv_logos/@{footer-fv-logo}") center no-repeat;
+    background-size: 300px;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
+
+
+/* ==================================================== (special styles) ================================================== */
+
+.screen-readers-only {
+  /* Makes content invisible on the screen but visible to screen readers.
+    http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Show inline content on mouseover (formerly referred to as "dfn") */
+
+.survey-body a.show_inlineContent { position: relative; }
+
+.survey-body a.show_inlineContent span.content {
+
+    position: absolute;
+    background-color: #EFEFEF;
+    border: 1px solid;
+    cursor: default;
+    display: none;
+    left: 1.5em;
+    padding: 0.5em;
+    text-align: left;
+    top: 1.5em;
+    }
+
+.survey-body a.show_inlineContent:hover span.content { display: block; z-index: 1; }
+
+.ui-effects-transfer { border: 2px dotted gray; }
+
+
+/* AQ Colors */
+
+.survey-theme-colors {
+    color: #FFFFFF;
+    background-color: #FFCC66;
+}
+
+.survey-theme-colors-disabled {
+    color: #FFFFFF;
+    background-color: rgb(222, 222, 222);
+}
+
+.survey-theme-colors-selected {
+    color: #FFFFFF;
+    background-color: #FF8800;
+}
+
+
+/* ========================================================= (hacks) ====================================================== */
+
+.clearfix:after {
+
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+    }
+
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.cati-comment {
+    text-transform: uppercase;
+    background-color: #FFFCD2;
+    padding: 10px;
+}
+
+/* ================================================== (Survey Images, pre-defined sizes) ================================================== */
+.survey_image.survey-image-small {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.survey_image.survey-image-medium {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.survey_image.survey-image-large {
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.survey_image.survey-image-xlarge {
+    max-height: 900px;
+    max-width: 900px;
+}
+.survey_image.fit,
+.fit {
+    width: auto;
+    max-width: 100%;
+}
+
+table.logic-debug {
+  background: #eee;
+  padding: 2px;
+  // border: 2px solid black;
+  tbody tr {
+    // border-right: 2px solid black;
+  }
+  th, td {
+    text-align: center;
+  }
+}
+
+.survey-inaccessible {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.survey-inaccessible .survey-inaccessible-text {
+  font-size: 24px;
+}
+.survey-inaccessible .open-app {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #0098b4;
+  }
+}
+.survey-inaccessible .download {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #898989;
+}
+.survey-inaccessible .app-store-logo {
+  width: 135px;
+  height: 40px;
+}
+.survey-inaccessible .store-links {
+  padding-top: 20px;
+  a {
+    display: inline-block;
+  }
+}
+
+.answers-accordion {
+
+  .row-elements {
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px rgba(22, 38, 59, 0.25);
+    padding: 7px;
+
+    .row-legend {
+      background: #fff;
+      margin-bottom: 14px;
+
+      .accordion-row-legend {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .accordion-header-answer {
+        display: none;
+        margin-top: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: .9em;
+        font-weight: bold;
+        color: #FFF;
+        background: #2473DB;
+        border-radius: 4px;
+        padding: 10px 14px 10px 7px;
+
+        .accordion-checkmark {
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          vertical-align: middle;
+        }
+        span {
+          display: inline-block;
+          line-height: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .element {
+      display: none;
+      border-radius: 4px;
+      background: #ededed;
+      margin-bottom: 5px;
+
+      .cell-sub-wrapper {
+        display:block;
+        width: 100%;
+
+        .cell-input {
+          width: 25px;
+          display: inline-block;
+          padding: .4em .2em;
+        }
+
+        .cell-text {
+          width: 100% - 20px;
+          display: inline-block;
+
+          label {
+            width: 100%;
+            display: inline-block;
+            padding: 1em .4em;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+
+
+// selfserve/1da7/themes/behaviorally-theme-2-1/theme.less 
+// Theme: <Behaviorally Theme 2>
+
+
+/* ================================================ READ ME! ================================================ */
+/*
+  This file is...
+    A minimally styled boilerplate LESS file for making a Beacon survey theme.
+    This single file constitutes a theme.
+    It overrides all other Beacon LESS files except survey-specific overrides (such as ss:includeLESS and themevars).
+
+  Rules of thumb are...
+    • Use 'rem' units for font sizes (ex. font-size: 1.125em;). This way the user can increase or decrease all font sizes
+      proportionally by adjusting the @desktop-font-size variable. It also helps surveys remain accessible to the
+      visually impaired.
+    • USE THE VARIABLES.
+        - The variables are piped into the theme editor and used for making adjustments using the UI, so DON'T DELETE
+          ANY OF THE PRESET VARIABLES (except the "theme-specific variables" at the end).
+        - In general, avoid messing with any of the styles that are using the variables in the theme file.
+        - You can add theme specific variables at the bottom of the variables list if you want to provide some
+          customization controls or for your own convenience.
+        - You will see the contrast() mixin used throughout this file, it's used to to automatically calculate which of
+          two colors (a dark and a light color) will contrast better with the element behind it. Feel free to replace it
+          with an exact color if you have one in mind.
+    • Stay flat.
+        - Avoid too much style nesting. By keeping things flat, you'll make it much easier for users to perform simple
+          overrides in the theme editor's css/less injector. Wouldn't you rather override ".instructions" instead of
+          ".survey-body .question .instructions"?
+    • Stay Responsive. The responsive strategy is as follows..
+        - Mobile first. Style the survey with a narrow viewport in mind first.
+        - Then apply Desktop styling using media queries. You can use the "@media @desktop {}" media query in any
+          selector to apply its styling over the @breakpoint (there are examples of this scattered about).
+        - BUT TABLES ARE SPECIAL. Tables attempt to stay a table for as long as possible before collapsing into a list
+          for narrow viewports, therefore they don't use media queries. There are separate sections (see table of
+          contents below) for styling the list & table modes exclusively.
+*/
+/* ============================================ TABLE OF CONTENTS ============================================ */
+/*
+    --- Variables
+    --- Survey Page (html, body, etc)
+    --- Hyperlinks
+    --- Input Fields
+    --- Logo
+    --- Progress Bar
+    --- Comment
+    --- Question
+    --- Question > Question Text
+    --- Question > Instructions
+    --- Question > Answers
+    --- Question > Answers > Table List Mode Styles
+    --- Question > Answers > Table Grid Mode Styles
+    --- Buttons
+    --- Exit Page
+    --- Errors
+    --- Extra Info
+    --- Footer
+*/
+
+/* ============================================= ( Variables ) ============================================= */
+
+// **************** Color Palette Chips **************** //
+
+// Use these to allow the user to change the color palette for the theme and get a nice result. The colors you set here
+// will be used by default when selecting your theme. IN GENERAL, PRETEND THAT THESE ARE THE ONLY COLORS YOU CAN USE,
+// as they all have a recommended purpose. You might not even need them all.
+
+@background-color:  #fff; //white
+@foreground-color:  #fff; //white
+@text-color:        rgb(73, 73, 72); //almost black
+
+
+@color-1: #5A5A5A;             //graphite
+@color-2: #0091DA;             //blue
+@color-3: rgb(73, 73, 72);     //dark grey
+@color-4: #E0E0E0;             //light grey unused
+@color-5: #C6007E;             //fuchsia
+@color-6: rgba(0, 0, 0, 0);    //unused in this theme
+@color-6: rgba(0, 0, 0, 0);    //unused in this theme
+
+
+@border-color:                @background-color;
+@question-background:         transparent;
+@button-color:                @background-color;
+@button-hover-color:          @background-color;   //darken(@button-color, 5%)
+@button-selected-color:       lighten(@color-2, 10%);
+@button-text-color:           @text-color;
+@button-text-hover-color:     @color-2;  //was button-text-color
+@button-text-selected-color:  @background-color;
+@link-color:                  @color-5;  //support link
+@link-color-hover:            darken(@link-color, 10%);
+
+
+// Other colors (OK to use non-variables here, as these are not part of the color palette) //
+@error-color:   @color-5; // Usually a shade of red
+@warning-color: lighten(@color-5, 10%);
+@info-color:    #cf6;
+@dq-like:       #c5d600;
+@dq-neutral:    #00b4d6;
+@dq-dislike:    #ba0000;
+
+
+
+// ********************** Fonts ********************** //
+
+// Replace this URL with any webfont URL. Whatever @webfont equals will be the imported font.
+// Preferably use a font that supports italic, bold, and bold italic formatting.
+// DO NOT USE "HTTP://" OR "HTTPS://" AT THE BEGINNING OF THIS URL, ALWAYS START WITH "//"
+@webfont: '//fonts.googleapis.com/css?family=Hind';
+.webfontImport(@webfont);
+
+@primary-font-family:   Hind, sans-serif;  // Questions / Comments
+@secondary-font-family: Hind, sans-serif;  // Answers, footer, button text, progress, etc.
+
+@large-text:    1.7rem;     // 20px
+@normal-text:   1.5rem;       // 16px
+@small-text:    1.3rem;    // 14px
+
+
+
+// ********************** Helper Variables ************************* //
+@page-background-image:     ""; // Replace this URL with any image URL.
+@border-radius:             7px; // Default border radius for the foreground and all buttons.
+@foreground-border-radius:  @border-radius;
+
+
+
+// **************** Structural Controls **************** //
+// Breakpoint
+@breakpoint:  768px; // Set the breakpoint here, then use "@media @desktop {}" for desktop styles in your theme.
+@desktop:     ~"(min-width: @{breakpoint})";
+@mobile:     ~"(max-width: @{breakpoint})";
+
+// Base font sizes
+@desktop-font-size: 0.750em; // See the readme above for explanation on what em units are.
+// Use a multiplier for mobile font size so the user only has to change desktop font size to get proportional resizing.
+@mobile-font-size:  (@desktop-font-size * 7/6);
+
+
+// Foreground Measurements (use px units!)
+@foreground-width:    960px;
+  // ^ Sets min-width of the foreground when the screen is above this size. Otherwise, foreground stays at width:100%
+  // We set a min-width instead of a normal width because tables need to be able to extend their width in certain cases.
+@foreground-padding-top-bottom:         0;
+@foreground-padding-left-right-mobile:  14px;
+@foreground-padding-left-right-desktop: 18px;
+@foreground-border:                     0;
+@foreground-inner-width:                (@foreground-width - (@foreground-padding-left-right-desktop * 2) - (@foreground-border * 2));
+  // ^ Keeps survey-level elements (like logos and comments) from expanding the fg width, excludes questions.
+
+// Question Measurements (use px units!)
+@question-padding-top-bottom:         36px;
+@question-padding-left-right-mobile:  0;
+@question-padding-left-right-desktop: 0;
+@question-border:                     0;
+@question-inner-width:                (@foreground-inner-width - (@question-padding-left-right-desktop * 2) - (@question-border * 2));
+  // ^ Keeps question-level elements (like question-text) from expanding the fg width, excludes tables and lists.
+
+// ******************** Progress Bar ******************** //
+@progress-position:     right;
+@progress-border-color: transparent;
+@progress-empty-color:  @table-row-group-bg-color;
+@progress-fill-color:   transparent;
+@progress-text-color:   @text-color;
+@progress-font-size:    @small-text;
+@progress-font-family:  @secondary-font-family;
+
+
+
+// ******************* Comment Text ******************* //
+@comment-text-color:    @text-color;
+@comment-font-size:     @large-text;
+@comment-font-family:   @primary-font-family;
+
+
+
+// ******************* Question Text ******************* //
+@question-text-color:   @text-color;
+@question-font-size:    @large-text;
+@question-font-family:  @primary-font-family;
+
+// ****************** Instruction Text ****************** //
+@instruction-text-color:  @text-color;
+@instruction-font-size:   @small-text;
+@instruction-font-family: @secondary-font-family;
+
+// ********************** Answers ********************** //
+@answer-text-color:   @text-color;
+@answer-font-size:    @normal-text;
+@answer-font-family:  @secondary-font-family;
+
+// Tables
+@table-border-color:        @border-color;
+@table-legend-bg-color:     darken(@background-color, 3%);
+@table-row-legend-bg-color: @table-legend-bg-color;
+@table-col-legend-bg-color: @table-legend-bg-color;
+@table-row-group-bg-color:  darken(@table-legend-bg-color, 3%);
+@table-col-group-bg-color:  @table-row-group-bg-color;
+@table-cell-hover-color:    @row-bg-color;
+
+// Rows (overrides @table-legend-bg-color on row legends)
+@row-bg-color:      darken(@background-color, 3%);
+@row-bg-color-alt:  @row-bg-color;
+
+
+
+// Text Inputs
+@input-text-color:          @text-color;
+@input-font-size:           @normal-text;
+@input-bg-color:            @background-color;
+@input-bg-color-active:     @input-bg-color;
+@input-border-color:        @dq-button-border-color;
+@input-border-color-active: @color-1;
+
+
+
+// ********************** Buttons ********************** //
+// Primary Survey Button (Continue, Finish, etc..)
+@primary-button-text-color:         @button-text-color;
+@primary-button-text-color-hover:   @button-text-selected-color;
+@primary-button-font-size:          @normal-text;
+@primary-button-font-family:        @secondary-font-family;
+@primary-button-bg-color:           @button-color;
+@primary-button-bg-color-hover:     @dq-button-bg-color-selected;
+@primary-button-border-color:       @dq-button-border-color;
+@primary-button-border-color-hover: transparent;
+@primary-button-border-radius:      @border-radius;
+
+// Secondary Survey Button ('Go Back', 'Randomize')
+@secondary-button-text-color:         @primary-button-text-color;
+@secondary-button-text-color-hover:   @primary-button-text-color-hover;
+@secondary-button-font-size:          @primary-button-font-size;
+@secondary-button-font-family:        @primary-button-font-family;
+@secondary-button-bg-color:           @primary-button-bg-color;
+@secondary-button-bg-color-hover:     @primary-button-bg-color-hover;
+@secondary-button-border-color:       @primary-button-border-color;
+@secondary-button-border-color-hover: @primary-button-border-color-hover;
+@secondary-button-border-radius:      @primary-button-border-radius;
+
+// DQ Buttons (in-survey buttons like Button Select)
+@dq-button-font-size:             @normal-text;
+@dq-button-font-family:           @secondary-font-family;
+@dq-button-text-color:            @button-text-color;
+@dq-button-text-color-hover:      @button-text-hover-color;
+@dq-button-text-color-selected:   @button-text-selected-color;
+@dq-button-bg-color:              @button-color;
+@dq-button-bg-color-hover:        @button-hover-color;
+@dq-button-bg-color-selected:     @button-selected-color;
+@dq-button-border-color:          @color-2;
+@dq-button-border-color-hover:    @dq-button-border-color;
+@dq-button-border-color-selected: transparent;
+@dq-button-border-radius:         @border-radius;
+
+
+// FIR ("Form Image Replacement", the svg radios & checkboxes)
+@fir-border:             @dq-button-border-color;
+@fir-border-hover:       @fir-border;
+@fir-border-selected:    @fir-border;
+@fir-base:               @background-color;
+@fir-base-hover:         @background-color;
+@fir-base-selected:      @background-color;
+@fir-inner:              @background-color;
+@fir-inner-hover:        @fir-border;
+@fir-inner-selected:     @button-selected-color; // DO NOT MAKE THIS THE SAME COLOR AS @FIR-INNER-HOVER
+@fir-size:               1.65em;
+
+
+
+// *********************** Footer *********************** //
+@footer-text-color:       @text-color;
+@footer-font-size:        @small-text;
+@footer-font-family:      @secondary-font-family;
+@footer-link-color:       @link-color;
+@footer-link-color-hover: @link-color-hover;
+
+
+
+// ********************* Exit Page ********************* //
+@exit-header-text-color:  @text-color;
+@exit-header-font-size:   @large-text;
+@exit-header-font-family: @primary-font-family;
+@exit-body-text-color:    @text-color;
+@exit-body-font-size:     @normal-text;
+@exit-body-font-family:   @secondary-font-family;
+
+
+
+// ********************* Messaging ********************* //
+// Survey Errors (error messaging at the page level)
+@survey-error-text-color:   @background-color;
+@survey-error-font-size:    @large-text;
+@survey-error-font-family:  @secondary-font-family;
+@survey-error-bg-color:     @error-color;
+
+// Question Errors (error messaging at the question level)
+@question-error-text-color:    @error-color;
+@question-error-font-size:     @normal-text;
+@question-error-font-family:   @secondary-font-family;
+@question-error-bg-color:      transparent;
+@answer-error-highlight-color: lighten(@error-color, 60%);
+
+// Survey Info
+@survey-info-text-color:   @text-color;
+@survey-info-font-size:    @normal-text;
+@survey-info-font-family:  @secondary-font-family;
+@survey-info-bg-color:     @info-color;
+
+// Survey Warning
+@survey-warning-text-color:   @text-color;
+@survey-warning-font-size:    @normal-text;
+@survey-warning-font-family:  @secondary-font-family;
+@survey-warning-bg-color:     @warning-color;
+
+
+// Buttons Select Questions
+@btn-select-default-max-width:  @foreground-width / 3; // Widest a button can be by default (fit 3 buttons on screen by default)
+@btn-select-spacing:            0 2px 4px; // Set padding around buttons when in grid mode, Left/right are stripped in list mode.
+@btn-select-border-radius:      @dq-button-border-radius;
+
+
+
+// ******************* Theme Editor Options ******************* //
+
+/*
+  Font Sizes
+
+  Override the default font sizes used by Theme Editor. Provide a comma-separated list of 5 values, sorted from
+  smallest to largest. The middle value will be used as the default size.
+*/
+
+//@font-sizes: 0.65em, 0.7em, 0.75em, 0.85em, 0.95em;
+
+/*
+  Font Families
+
+  Override the default font families used by Theme Editor. You may provide up to 9 entries. A @font-family-X variable
+  must always be followed by a @webfont-X variable.
+
+  @font-family-X variables should ALWAYS have quotation marks around font names that contains a whitespace. It's
+  recommended that they end with 'serif' or 'sans-serif'.
+  @webfont-X variable must be set to empty quotes "" if you don't need a webfont.
+*/
+//@font-family-1: Arial, sans-serif;
+//@webfont-1: "";
+//@font-family-2: Arial, sans-serif;
+//@webfont-2: "";
+//@font-family-3: "Open Sans", sans-serif;
+//@webfont-3: "http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700";
+//@font-family-4: Arial, sans-serif;
+//@webfont-4: "";
+//@font-family-5: Arial, sans-serif;
+//@webfont-5: "";
+//@font-family-6: Arial, sans-serif;
+//@webfont-6: "";
+//@font-family-7: Arial, sans-serif;
+//@webfont-7: "";
+//@font-family-8: Arial, sans-serif;
+//@webfont-8: "";
+//@font-family-0: Arial, sans-serif;
+//@webfont-9: "";
+
+/*
+  Color Palettes
+
+  Specify some recommended color palettes for this theme. You may provide up to 9 palettes. Provide a comma-separated
+  list of 6 values.
+*/
+@theme-palette-1: @color-1, @color-2, @color-3, @color-4, @color-5, @color-6;
+//@theme-palette-2: red, orange, yellow, green, blue, violet;
+//@theme-palette-3: red, orange, yellow, green, blue, violet;
+//@theme-palette-4: red, orange, yellow, green, blue, violet;
+//@theme-palette-5: red, orange, yellow, green, blue, violet;
+//@theme-palette-6: red, orange, yellow, green, blue, violet;
+//@theme-palette-7: red, orange, yellow, green, blue, violet;
+//@theme-palette-8: red, orange, yellow, green, blue, violet;
+//@theme-palette-9: red, orange, yellow, green, blue, violet;
+
+// ******************* Theme Specific ******************* //
+/*
+  Add additional theme specific variables below.
+  Use a prefix, something like "@contemporary-fg-border-radius" if the theme was named "contemporary".
+  Creating variables allows the user to easily change things, they may appear in the theme editor UI as controls.
+*/
+
+
+
+/* ============================================ ( Survey Page ) ============================================ */
+html {
+  font-family:  @primary-font-family;
+  font-size:    @mobile-font-size;
+  @media @desktop {
+    font-size:  @desktop-font-size;
+  }
+}
+
+.survey-page {
+  // Background
+  background-color:   @background-color;
+  color:              @text-color;
+  @media @desktop {
+    background-color: @background-color;
+    .backgroundImport(@page-background-image);
+  }
+}
+
+.survey-body {
+  // Foreground
+  padding:                @foreground-padding-top-bottom @foreground-padding-left-right-mobile;
+  background-color:       transparent;
+  position:               relative;
+  border:                 @foreground-border none transparent;
+  -webkit-border-radius:  @foreground-border-radius;
+  -moz-border-radius:     @foreground-border-radius;
+  border-radius:          @foreground-border-radius;
+  @media @desktop {
+    padding-left:         @foreground-padding-left-right-desktop;
+    padding-right:        @foreground-padding-left-right-desktop;
+  }
+}
+
+.survey-header {
+  margin-bottom:  1.5em;
+  min-height:     2.5em;
+}
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}  
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+
+/* ================================================= ( Hyperlinks ) =============================================== */
+a {
+  color:    @link-color;
+  &:hover {
+    color:  @link-color-hover;
+  }
+}
+
+/* ================================================= ( Input Fields ) =============================================== */
+
+// This selector affects all text, radio, checkbox, select, and textarea fields.
+.input {
+  margin: 0;
+}
+
+input[type="text"], textarea {
+  background:             @input-bg-color;
+  border:                 1px solid @input-border-color;
+  color:                  @input-text-color;
+  font-size:              @input-font-size;
+  -moz-border-radius:     @border-radius;
+  -webkit-border-radius:  @border-radius;
+  border-radius:          @border-radius;
+  &:focus {
+    background:           @input-bg-color-active;
+    border:               1px solid @input-border-color-active;
+  }
+}
+
+input[type="text"] {
+  padding: 0.25em 0.5em;
+  .noRows.noCols & {
+    // When a text element is the only form element in a question
+    padding: 0.5em 0.75em;
+  }
+}
+
+textarea {
+  padding: 0.75em 0.5em;
+  width: 100%;
+  cursor: text;
+  -moz-border-radius:     .75em;
+  -webkit-border-radius:  .75em;
+  border-radius:          .75em;
+}
+
+select {
+  font-size: @large-text;
+}
+
+.oe-inline, .oe-left {
+  margin-left: 0.5em;
+}
+.oe-right {
+  margin-right: 0.5em;
+}
+
+/* ================================================= ( Logo ) =============================================== */
+.logo { // Container around logo
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.logo-left {
+  text-align: left;
+}
+
+.logo-middle {
+  text-align: center;
+}
+
+.logo-right {
+  text-align: right;
+}
+
+.logo-image { // Actual logo image
+}
+
+
+/* ============================================ ( Progress Bar ) ============================================ */
+/*
+  Left a basic progress bar built in, but feel to make your own!
+*/
+
+.progress-bar-position() when (@progress-position = right) {
+    text-align: right;
+    float:      right;
+    .logo-left + &, .logo-middle + & {
+      position: absolute;
+      top:      0;
+      right:    0;
+      float:    none;
+    }
+}
+.progress-bar-position() when (@progress-position = left) {
+    text-align: left;
+    float:      left;
+    .logo-right + &, .logo-middle + & {
+      position: absolute;
+      top:      0;
+      left:     0;
+      float:    none;
+    }
+}
+.progress-bar {
+  width:          100%;
+  margin-bottom:  2em;
+  text-align:     center;
+
+  @media @desktop {
+    .progress-bar-position();
+    width:        100%;
+    &:after {
+      content:    " ";
+      display:    table;
+      clear:      both;
+    }
+  }
+}
+
+.progress-bottom {
+  // When the progress bar is placed at the bottom of the page
+  margin-top:     1em;
+  margin-bottom:  0;
+}
+
+.progress-box-outer, .progress-text {
+  // Vertically aligns bar and text
+  display:        inline-block;
+  vertical-align: top;
+}
+
+// Progress Bar Empty Box
+.progress-box-outer {
+  background-color: @progress-empty-color;
+  border:           none;
+  width:            100%;
+  max-width:        100%;
+  text-align:       right;
+  height:           .85em;
+  display:          inline-block;
+}
+
+// Progress Bar Fill (full)
+.progress-box-completed {
+  background-color: @progress-fill-color;
+  width:            0;
+  height:           100%;
+  display:          block;
+}
+
+// Progress Bar Text
+.progress-text {
+  color:        @progress-text-color;
+  font-family:  @progress-font-family;
+  font-size:    @progress-font-size;
+  line-height:  1em;
+  padding-left: 0.5em;
+  display:      none;
+}
+
+
+/* ============================================== ( Comment ) =============================================== */
+.comment {
+    background:    @question-background;
+    margin-top:    1em;
+    margin-bottom: 0;
+    padding:       @question-padding-top-bottom @question-padding-left-right-mobile;
+    @media @desktop {
+      padding:     @question-padding-top-bottom @question-padding-left-right-desktop;
+    }
+}
+
+.comment-text {
+  color:        @comment-text-color;
+  font-size:    @comment-font-size;
+  line-height:  normal;
+  font-family:  @comment-font-family;
+}
+
+
+/* ============================================= ( Question ) ============================================== */
+// Question Container
+.question {
+  background:     @question-background;
+  margin-top:     1em;
+  margin-bottom:  0;
+  clear:          both;
+  padding:        @question-padding-top-bottom @question-padding-left-right-mobile;
+  border-top:     1px solid @color-2;
+  @media @desktop {
+    padding:      @question-padding-top-bottom @question-padding-left-right-desktop;
+  }
+}
+
+
+/* ====================================== ( Question > Question Text ) ===================================== */
+.question-text {
+  color:          @question-text-color;
+  font-size:      @question-font-size;
+  font-family:    @question-font-family;
+  margin-bottom:  0.75em;
+  line-height:    normal;
+}
+
+
+/* ====================================== ( Question > Instructions ) ====================================== */
+.instruction-text {
+  color:          @instruction-text-color;
+  font-size:      @instruction-font-size;
+  font-family:    @instruction-font-family;
+  margin-bottom:  1.5em;
+}
+
+
+/* ========================================= ( Question > Answers ) ========================================= */
+// Container that wraps around all grids/lists in a question, If several grids were merged together,
+// this would wrap around all of them.
+.answers,
+.fir-select2-dropdown {
+  color:        @answer-text-color;
+  font-size:    @answer-font-size;
+  font-family:  @answer-font-family;
+}
+
+/* ============================ ( Question > Answers > Table List Mode Styles ) ============================ */
+
+// Mobile-only column legends
+.mobile-spacing(@spacing1, @spacing2) {
+  padding:    @spacing1;
+  .checkbox &, .radio & {
+    padding:  @spacing2;
+  }
+}
+.cell-text {
+  .mobile-spacing(0 0 0 0.4em, 0 0 0 0.25em);
+
+  .cell-legend-left & {
+    .mobile-spacing(0 0.6em 0 0, 0 0.6em 0 0);
+  }
+  .cell-legend-above & {
+    .mobile-spacing(0 0 0.25em 1px, 0 0 0.25em 1px);
+  }
+}
+
+// All legends (row and col)
+.legend {
+  font-weight:  normal;
+  padding:      0.5em;
+}
+
+// Wrapper that goes around inputs
+.element {
+  padding: 0.4em 0.4em 0.4em 0;
+}
+
+// Indentation levels on mobile exclusively
+// Cells need extra indentation to show hierarchy.
+.indent-1 {
+  padding-left: 1.167em;
+}
+.indent-2 {
+  padding-left: 1.750em;
+}
+.indent-3 {
+  padding-left: 2.333em;
+}
+
+// Legend formatting on mobile exclusively
+// Parents of element cells (such as groups) need extra formatting to show hierarchy.
+.legend-level-1 {
+  font-size: 1em;
+}
+.legend-level-2 {
+  font-size: 1.23em;
+}
+.legend-level-3 {
+  font-size: 1.3em;
+}
+
+// Row and legend formatting on mobile and desktop
+.row-no-answer {}
+.row-elements, .answers-list {
+  background:       @row-bg-color;
+}
+.answers-list {
+  background:       @background-color;
+}
+.odd when not (@row-bg-color-alt = @row-bg-color) {
+  background:       @row-bg-color-alt;
+}
+.row-legend when (@row-bg-color = transparent) and (@row-bg-color-alt = transparent) {
+  background-color: @table-row-legend-bg-color;
+}
+.col-legend {
+  background-color: @table-col-legend-bg-color;
+}
+.row-legend-group {
+  font-size:        1.2em;
+  background-color: @table-row-group-bg-color;
+}
+.col-legend-group {
+  background-color: @table-col-group-bg-color;
+}
+
+// Row spacing on lists exclusively
+.row-elements + .row-elements, .row-elements + .row-group {
+  margin-top: 2em;
+}
+.zeroHeight + .row-elements, .zeroHeight + .row-group {
+  margin-top: 0;
+}
+
+/* ============================ ( Question > Answers > Table Grid Mode Styles ) ============================ */
+/*
+  All the desktop grid styles need to have the .grid-desktop-mode prefixed before
+  These take place until a table absolutely must collapse.. It's a long story.
+*/
+.grid-table-mode {
+  .legend {
+    padding:    0.4em 0.5em;
+    font-size:  1em; // Overrides the effects of .legend-level-X
+  }
+  input[type="text"], textarea {
+    padding: 0.25em 0.5em;
+  }
+  .nonempty {
+    // Apply cell borders and backgrounds to this selector, as it excludes blank corner cells.
+    border: 1px solid @table-border-color;
+  }
+  .row-legend-group {
+    font-size: @answer-font-size;
+    padding:   1em .5em;
+  }
+  .col-legend-group {}
+  .element {
+    // Reset padding to remove earlier list-mode indenting.
+    padding: 0.4em;
+    &:hover, &:focus, &:active {
+      background-color: @table-cell-hover-color;
+    }
+  }
+  .row-elements + .row-elements, .row-elements + .row-group {
+    // Reset margin to remove earlier list-mode spacing.
+    margin-top: 0;
+  }
+  .col-legend {
+      padding: 0.75em 0.5em;
+  }
+}
+
+
+/* =============================================== ( Buttons ) ============================================== */
+/*
+  "Continue", "Finish", etc.
+*/
+
+// Buttons area container
+.survey-buttons {
+  margin:           1em 0 0;
+  text-align:       center;
+  @media @desktop {
+    padding-right:  1em;
+    text-align:     right;
+  }
+}
+
+// Primary button formatting
+.button {
+  background-color: @primary-button-bg-color;
+  color:            @primary-button-text-color;
+  font-size:        @primary-button-font-size;
+  font-family:      @primary-button-font-family;
+  border:           1px solid @primary-button-border-color;
+
+  -webkit-appearance:     none;
+  -webkit-border-radius:  @primary-button-border-radius;
+  -moz-border-radius:     @primary-button-border-radius;
+  border-radius:          @primary-button-border-radius;
+
+  cursor:   pointer;
+  padding:  0.7em 1em;
+  margin:   0.111em;
+
+  &:hover, &:focus {
+    background-color: @primary-button-bg-color-hover;
+    border-color:     @primary-button-border-color-hover;
+    color:            @primary-button-text-color-hover;
+  }
+  &:active {
+    background-color: darken(@primary-button-bg-color-hover, 3);
+  }
+  &[disabled] {
+    .safeFadeout(@primary-button-bg-color, 40%);
+  }
+  &.continue {}
+  &.finish {}
+  &.back, &.randomize { // Secondary buttons. Randomize only appears in QA Mode.
+    background-color:       @secondary-button-bg-color;
+    color:                  @secondary-button-text-color;
+    font-size:              @secondary-button-font-size;
+    font-family:            @secondary-button-font-family;
+    border:                 1px solid @secondary-button-border-color;
+    -webkit-border-radius:  @secondary-button-border-radius;
+    -moz-border-radius:     @secondary-button-border-radius;
+    border-radius:          @secondary-button-border-radius;
+    &:hover, &:focus {
+      background-color:     @secondary-button-bg-color-hover;
+      border-color:         @secondary-button-border-color-hover;
+      color:                @secondary-button-text-color-hover;
+    }
+    &:active {
+      background-color: darken(@secondary-button-bg-color-hover, 3);
+    }
+    &[disabled] {
+      .safeFadeout(@secondary-button-bg-color, 40%);
+    }
+  }
+}
+
+/* ============================================ ( Exit Page ) =============================================== */
+// Page Container
+.exit-message {}
+
+// Header Text
+.exit-message-header {
+  color:          @exit-header-text-color;
+  font-size:      @exit-header-font-size;
+  font-family:    @exit-header-font-family;
+  margin-bottom:  0.75em;
+}
+
+// Additional Text/Messages
+.exit-message-text {
+  color:        @exit-body-text-color;
+  font-size:    @exit-body-font-size;
+  font-family:  @exit-body-font-family;
+}
+
+
+/* =============================================== ( Errors ) =============================================== */
+/*
+    Survey page errors are displayed at the top of the page and are wrapped in a .survey-page-error container
+    Survey question errors are displayed WITHIN a question and are wrapped in .survey-q-error containers
+*/
+
+.survey-error {
+  padding:               1em;
+  margin-bottom:         1em;
+  background-color:      @survey-error-bg-color;
+  color:                 @survey-error-text-color;
+  font-size:             @survey-error-font-size;
+  font-family:           @survey-error-font-family;
+  border-radius:         0;
+  -moz-border-radius:    0;
+  -webkit-border-radius: 0;
+}
+
+.survey-error-text {}
+
+.question-error {
+  margin:                0.5em 0;
+  background-color:      @question-error-bg-color;
+  color:                 @question-error-text-color;
+  font-size:             @question-error-font-size;
+  font-family:           @question-error-font-family;
+  border-radius:         0;
+  -moz-border-radius:    0;
+  -webkit-border-radius: 0;
+}
+
+.question-error-text {}
+
+.cell.hasError, .answers-list .element.hasError, .element.hasError:hover, // Answers in an error state. Note the hover override.
+.rowLegendErr .oe, .colLegendErr .oe {
+  background-color: @answer-error-highlight-color;
+}
+
+
+/* ============================================ ( Extra Info ) ============================================== */
+/*
+    This is mainly used in QA mode for:
+        - page breaks
+        - "show question attributes"
+        - "show source code"
+        - and other messages
+    But these messages will also show if a survey is in testing mode and sent to a non-logged-in user to test,
+    so they do need some styling.
+*/
+
+.survey-info, .survey-warning {
+  font-weight:           bold;
+}
+.survey-info, .survey-warning, .autosave-restart {
+  padding:               0.714em;
+  margin-bottom:         1em;
+  border-radius:         0;
+  -moz-border-radius:    0;
+  -webkit-border-radius: 0;
+}
+
+// Extra Info Container
+.survey-info {
+  background-color: @survey-info-bg-color;
+  color:            @survey-info-text-color;
+  font-size:        @survey-info-font-size;
+  font-family:      @survey-info-font-family;
+}
+.survey-info-text {}
+
+// Warning container
+.survey-warning {
+  background-color: @survey-warning-bg-color;
+  color:            @survey-warning-text-color;
+  font-size:        @survey-warning-font-size;
+  font-family:      @survey-warning-font-family;
+}
+.survey-warning-text {}
+
+// Autosave Restart Message
+.autosave-restart {
+  background-color: @survey-info-bg-color;
+  color:            @survey-info-text-color;
+  font-size:        @survey-info-font-size;
+  font-family:      @survey-info-font-family;
+  text-align:       center;
+  text-decoration:  none;
+  &:hover {
+    background: darken(@survey-info-bg-color, 10%);
+    color: @survey-info-text-color;
+  }
+}
+
+
+/* =============================================== ( Footer ) ============================================== */
+.footer {
+  color:        @color-1;
+  font-size:    @footer-font-size;
+  font-family:  @footer-font-family;
+  text-align:   center;
+  margin:       2em 0;
+  a {
+    color:      @footer-link-color;
+    &:hover, &:focus, &:active {
+      color:    @footer-link-color-hover;
+    }
+  }
+}
+
+// Workaround for bug #21884, should be permanently fixed in compat 132.
+.bugfix-21884() when (@compat < 132) {
+  .survey-info, .survey-warning, .survey-extra-approval, .autosave-restart, .logo, .survey-error, .survey-buttons {
+    max-width: @foreground-inner-width;
+  }
+  .question-text, .instruction-text {
+    max-width: @question-inner-width;
+  }
+  .answers-table {
+    min-width: @question-inner-width;
+    @media (max-width: @foreground-width) {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+  .grid.grid-table-mode.setWidth {
+    width: @question-inner-width;
+    @media (max-width: @foreground-width) {
+      width: 100%;
+    }
+  }
+}
+.bugfix-21884();
+
+
+// lib/steam/atm1d/v9/static/atm1d.less 
+@mobile: ~'(max-width: @{breakpoint})';
+
+
+
+.fitting {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.compressed {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+
+
+.sq-atm1d-widget {
+    max-width: @foreground-inner-width;
+    .compressed();
+    position: relative;
+    @media @mobile {
+        max-width: 100%;
+    }
+}
+
+/* breakpoint element for tracking view size */
+/* <= breakpoint is small */
+/* > breakpoint is large */
+.sq-atm1d-breakpoint {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    width: @breakpoint;
+    z-index: -1;
+}
+
+/* begin fix pointer cursor issue */
+/* not sure why every element has a pointer cursor */
+/* need to limit pointer cursor to elements with clickable class and all its children */
+.sq-atm1d-widget * {
+    cursor: default;
+}
+
+.sq-atm1d-widget .clickable, .sq-atm1d-widget .clickable * {
+    cursor: pointer;
+}
+
+.sq-atm1d-widget .oe {
+    cursor: auto;
+}
+/* end fix pointer cursor issue */
+
+.sq-atm1d-widget + .answers {
+    display: none;
+}
+.sq-atm1d-debug + .answers {
+    display: block;
+}
+
+.sq-atm1d-debug + .sq-atm1d-survey-info {
+    margin: 50px auto 30px auto;
+}
+
+.sq-atm1d-block {
+    display: block;
+    .compressed();
+}
+
+.sq-atm1d-loading-cover {
+    background-color: @foreground-color;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    .compressed();
+    top: 0;
+}
+.sq-atm1d-loading .sq-atm1d-loading-cover {
+    display: block;
+}
+
+.sq-atm1d .sq-atm1d-buttons {
+    .compressed();
+    display: inline-block;
+}
+
+.sq-atm1d-vertical {
+    width: 100%;
+}
+
+/* begin accommodate buttonAlign stylevar */
+/* these selectors are same level as sq-atm1d-block */
+.sq-atm1d-button-align-left {
+    .sq-atm1d-buttons {
+        text-align: left;
+    }
+    .sq-atm1d-vertical .sq-atm1d-button {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    text-align: left;
+}
+
+.sq-atm1d-button-align-center {
+    .sq-atm1d-buttons {
+        text-align: center;
+    }
+    .sq-atm1d-vertical .sq-atm1d-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    text-align: center;
+}
+
+.sq-atm1d-button-align-right {
+    .sq-atm1d-buttons {
+        text-align: right;
+    }
+    .sq-atm1d-vertical .sq-atm1d-button {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    text-align: right;
+}
+/* end accommodate buttonAlign stylevar */
+
+/* begin button states */
+/* these selectors are at the same level as sq-atm1d-button */
+.sq-atm1d .sq-atm1d-button {
+    background-color: @dq-button-bg-color;
+    border-color: @dq-button-border-color;
+    border-radius: @dq-button-border-radius;
+    border-style: solid;
+    border-width: 1px;
+    color: @dq-button-text-color;
+    font-family: @dq-button-font-family;
+    font-size: @dq-button-font-size;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 3px 8px 3px 8px;
+}
+
+.sq-atm1d .sq-atm1d-hovered {
+    background-color: @dq-button-bg-color-hover;
+    border-color: @dq-button-border-color-hover;
+    color: @dq-button-text-color-hover;
+}
+
+.sq-atm1d .sq-atm1d-selected {
+    background-color: @dq-button-bg-color-selected;
+    border-color: @dq-button-border-color-selected;
+    color: @dq-button-text-color-selected;
+}
+/* end button states */
+
+/* begin internal frame of button styles */
+/* internal frame must have a minimum height applied */
+.sq-atm1d .sq-atm1d-table {
+    height: 100%;
+    max-height: none;
+    min-height: 40px;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+.sq-atm1d-td {
+    vertical-align: middle;
+}
+/* end internal frame of button styles */
+
+/* begin internal frame content cell */
+/* need sq-atm1d-buttons parent selector to override default styling */
+/* default styling is based on view mode */
+.sq-atm1d-buttons .sq-atm1d-content {
+    &.sq-atm1d-content-align-left {
+        text-align: left;
+    }
+
+    &.sq-atm1d-content-align-center {
+        text-align: center;
+    }
+
+    &.sq-atm1d-content-align-right {
+        text-align: right;
+    }
+}
+/* end internal frame content cell */
+
+/* begin horizontal rule inside internal frame content to space elements */
+.sq-atm1d-hr {
+    background-color: transparent;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    color: transparent;
+}
+/* begin horizontal rule inside internal frame content to space elements */
+
+/* begin fir styling */
+/* begin custom padding */
+.sq-atm1d-widget .sq-atm1d-icon {
+    padding: 4px 8px 4px 8px;
+}
+
+.sq-atm1d-fir-on .sq-atm1d-icon {
+    padding: 4px 6px 4px 6px;
+}
+/* end custom padding */
+
+/* icon container */
+.sq-atm1d-tr-bottom {
+    display: none;
+}
+.sq-atm1d-icon {
+    display: none;
+    position: relative;
+    /* icon */
+    .fir-icon {
+        display: inline;
+        height: auto;
+        width: auto;
+        input {
+            display: inline;
+        }
+    }
+    /* transparent icon cover to block events */
+    .fir-cover {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+/* end fir styling */
+
+/* begin label displayed in qa mode */
+.sq-atm1d-widget .grid {
+    display: none;
+}
+
+.sq-atm1d-debug .grid {
+    display: inline-block;
+    .qaCode {
+        margin: 0 0 0 0;
+    }
+}
+/* end label displayed in qa mode */
+
+/* begin open-end */
+.sq-atm1d-openEnd {
+    display: none;
+}
+.sq-atm1d-open .sq-atm1d-openEnd {
+    display: block;
+    margin: 8px 0 0 0;
+}
+.sq-atm1d-open .oe {
+    display: inline-block;
+    padding: 2px 4px 2px 4px;
+    width: 80%;
+}
+.sq-atm1d-oe-align-left {
+    text-align: left;
+}
+.sq-atm1d-oe-align-center {
+    text-align: center;
+}
+.sq-atm1d-oe-align-right {
+    text-align: right;
+}
+/* end open-end */
+
+.sq-atm1d-vertical {
+    .sq-atm1d-hr {
+        display: none;
+        margin: 0 2px 0 2px;
+    }
+    .sq-atm1d-button {
+        display: block;
+    }
+    .sq-atm1d-button {
+        max-width: 100%;
+        min-width: 280px;
+    }
+    .sq-atm1d-td, .oe {
+        text-align: left;
+    }
+}
+
+/* vertical view for smaller screen sizes */
+.sq-atm1d-small {
+    .sq-atm1d-vertical {
+        .sq-atm1d-button {
+            min-width: 75%;
+        }
+    }
+}
+
+/* sq-atm1d-show-input-1 is showInput=yes */
+/* sq-atm1d-show-input-2 is showInput=when selected */
+.sq-atm1d-show-input-1, .sq-atm1d-show-input-2 {
+    .sq-atm1d-vertical .sq-atm1d-icon-left {
+        display: table-cell;
+        width: @fir-size;
+    }
+}
+.sq-atm1d-vertical {
+    .sq-atm1d-empty, .sq-atm1d-icon-bottom {
+        display: none;
+        height: 0;
+    }
+}
+.sq-atm1d-multicol, .sq-atm1d-tiled, .sq-atm1d-horizontal {
+    .sq-atm1d-hr {
+        display: block;
+        margin: 2px 0 2px 0;
+    }
+    .sq-atm1d-button {
+        display: inline-block;
+    }
+    .sq-atm1d-button {
+        max-width: 150px;
+    }
+    .sq-atm1d-td, .oe {
+        text-align: center;
+    }
+    .sq-atm1d-empty, .sq-atm1d-icon-left {
+        display: none;
+        width: 0;
+    }
+}
+
+/* multicol, tiled, horizontal view for smaller screen sizes */
+.sq-atm1d-small {
+    .sq-atm1d-multicol, .sq-atm1d-tiled, .sq-atm1d-horizontal {
+        .sq-atm1d-button {
+            max-width: 100%;
+        }
+    }
+}
+
+/* sq-atm1d-show-input-1 is showInput=yes */
+/* sq-atm1d-show-input-2 is showInput=when selected */
+.sq-atm1d-show-input-1, .sq-atm1d-show-input-2 {
+    .sq-atm1d-multicol, .sq-atm1d-tiled, .sq-atm1d-horizontal {
+        .sq-atm1d-tr-bottom {
+            display: table-row;
+        }
+        .sq-atm1d-icon-bottom {
+            display: table-cell;
+            height: @fir-size;
+        }
+    }
+}
+.sq-atm1d-vertical, .sq-atm1d-horizontal {
+    .sq-atm1d-button {
+        margin: 3px 3px 3px 3px;
+    }
+}
+.sq-atm1d-multicol {
+    .sq-atm1d-button {
+        margin: 2px 12px 2px 12px;
+    }
+}
+.sq-atm1d-tiled {
+    .sq-atm1d-button {
+        margin: 10px 3px 10px 3px;
+    }
+}
+
+
+
+/* sq-atm1d-show-input-1 is showInput=yes */
+/* sq-atm1d-show-input-2 is showInput=when selected */
+.sq-atm1d-show-input-1, .sq-atm1d-show-input-2 {
+    /* icon to display for unselected button */
+    .sq-atm1d-button {
+        .sq-atm1d-icon-selected {
+            display: none;
+        }
+        .sq-atm1d-icon-unselected {
+            display: inline-block;
+        }
+    }
+
+    /* icon to display for selected button */
+    .sq-atm1d-selected {
+        .sq-atm1d-icon-selected {
+            display: inline-block;
+        }
+        .sq-atm1d-icon-unselected {
+            display: none;
+        }
+    }
+}
+
+/* hide unselected button for sq-atm1d-show-input-2 */
+.sq-atm1d-show-input-2 {
+    .sq-atm1d-button {
+        .sq-atm1d-icon-unselected {
+            visibility: hidden;
+        }
+    }
+}
+
+/* form control icon sizes should be bigger than text */
+.sq-atm1d-icon-selected, .sq-atm1d-icon-unselected {
+    font-size: 1.35em;
+}
+
+
+
+/* as of 20150615, no more error styling */
+/*
+.error-style {
+    border-color: @question-error-text-color;
+    border-style: solid;
+    border-width: 1px;
+    font-family: @question-error-font-family;
+    font-size: @question-error-font-size;
+}
+.hasError {
+    // begin question error
+    // error class for buttons container
+    // the question has an error, so all
+    //   buttons should be red
+    .sq-atm1d-error-buttons {
+        .sq-atm1d-button {
+            .error-style;
+            color: @question-error-text-color;
+        }
+    }
+    // end question error
+
+    // begin row error
+    // error class for button
+    // the button has an error, so only
+    //   that button should be red
+    .sq-atm1d-error-button {
+        .error-style;
+        color: @question-error-text-color;
+    }
+    // end row error
+
+    // begin open-end error
+    // error class for open-end
+    // the open-end has an error, so
+    //   the open-end needs to be red
+    .sq-atm1d-error-open-end {
+        .error-style;
+        .oe {
+            .error-style;
+            color: @question-error-text-color;
+        }
+    }
+    // end open-end error
+}
+*/
+
+/* as of 20150522, no more fir integration */
+/* use font-awesome only now */
+.add-fir {
+    display: none;
+}
+
+
+
+// lib/steam/cardrating/v1/static/cardrating.less 
+
+@breaksmall: 425px;
+@breaklarge: @breakpoint;
+
+.sq-cardrating-table {
+  display: table;
+}
+
+.sq-cardrating-itable {
+  display: inline-table;
+}
+
+.sq-cardrating-tcell {
+  display: table-cell;
+}
+
+.sq-cardrating-block {
+  display: block;
+}
+
+.sq-cardrating-iblock {
+  display: inline-block;
+}
+
+.sq-cardrating-relative {
+  position: relative;
+}
+
+.sq-cardrating-absolute {
+  position: absolute;
+}
+
+.sq-cardrating-hcover {
+  .sq-cardrating-absolute();
+  bottom: 0;
+  top: 0;
+}
+
+.sq-cardrating-wcover {
+  .sq-cardrating-absolute();
+  left: 0;
+  right: 0;
+}
+
+.sq-cardrating-cover {
+  .sq-cardrating-hcover();
+  .sq-cardrating-wcover();
+}
+
+.sq-cardrating-hfill {
+  height: 100%;
+}
+
+.sq-cardrating-wfill {
+  width: 100%;
+}
+
+.sq-cardrating-fill {
+  .sq-cardrating-hfill();
+  .sq-cardrating-wfill();
+}
+
+.sq-cardrating-hcenter {
+  text-align: center;
+}
+
+.sq-cardrating-vcenter {
+  vertical-align: middle;
+}
+
+.sq-cardrating-center {
+  .sq-cardrating-hcenter();
+  .sq-cardrating-vcenter();
+}
+
+.sq-cardrating-responsive-image {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  width: 100%;
+}
+
+// hide answers table in respondent view
+.sq-cardrating-qa-view {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+
+  // show answers table in QA view
+  [data-debug] + & {
+    height: auto;
+    overflow: auto;
+    visibility: visible;
+  }
+}
+
+// qa codes should be slightly transparent at the top-left
+.sq-cardrating-qa-code {
+  left: 0.25em;
+  opacity: 0.5;
+  top: 0.25em;
+}
+
+.sq-cardrating-hsep {
+  padding: 0 0.5em;
+}
+
+.sq-cardrating-vsep {
+  padding: 0.5em 0;
+}
+
+.sq-cardrating-widget {
+  margin: 2em 0;
+  max-width: 100%;
+  min-width: 262px;
+  overflow: hidden;
+  text-align: center;
+
+  ul, ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// if the card precedes the current card,
+//   tag it as negative (-)
+[data-position^='-'] {
+  opacity: 0;
+  -moz-transform: scale(0) translate(150%, 50%);
+  -ms-transform: scale(0) translate(150%, 50%);
+  -o-transform: scale(0) translate(150%, 50%);
+  -webkit-transform: scale(0) translate(150%, 50%);
+  transform: scale(0) translate(150%, 50%);
+  z-index: 0;
+}
+
+// if the card is the current card,
+//   tag it as neutral (0)
+[data-position='0'] {
+  opacity: 1;
+  -moz-transform: scale(1) translate(0, 0);
+  -ms-transform: scale(1) translate(0, 0);
+  -o-transform: scale(1) translate(0, 0);
+  -webkit-transform: scale(1) translate(0, 0);
+  transform: scale(1) translate(0, 0);
+  z-index: 30;
+}
+
+// if the card follows the current card,
+//   tag it as positive (+)
+[data-position^='+'] {
+  opacity: 0;
+  -moz-transform: scale(0) translate(-150%, 50%);
+  -ms-transform: scale(0) translate(-150%, 50%);
+  -o-transform: scale(0) translate(-150%, 50%);
+  -webkit-transform: scale(0) translate(-150%, 50%);
+  transform: scale(0) translate(-150%, 50%);
+  z-index: 0;
+}
+
+// hide loading overlay if not loading
+.sq-cardrating-loading {
+  background-color: @foreground-color;
+  bottom: 100%;
+
+  // show loading overlay when loading
+  [data-loading] & {
+    bottom: 0;
+    z-index: 8;
+  }
+}
+
+// hide completion message if not done
+.sq-cardrating-completion {
+  background-color: @foreground-color;
+  bottom: 100%;
+  overflow: hidden;
+
+  // show completion message when done
+  [data-atend] & {
+    bottom: 0;
+    z-index: 6;
+  }
+}
+
+// if animation is supported
+// data-animate is attr for children of widget
+// data-animation is attr for widget only
+[data-animate], [data-animate]::before, [data-animate]::after {
+  [data-animation='slow'] &, [data-animation='medium'] &, [data-animation='fast'] & {
+    -moz-transition-delay: 0;
+    -ms-transition-delay: 0;
+    -o-transition-delay: 0;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -moz-transition-property: background, color, opacity, transform;
+    -ms-transition-property: background, color, opacity, transform;
+    -o-transition-property: background, color, opacity, transform;
+    -webkit-transition-property: background, color, opacity, transform;
+    transition-property: background, color, opacity, transform;
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+
+  [data-animation='slow'] & {
+    -moz-transition-duration: 750ms;
+    -ms-transition-duration: 750ms;
+    -o-transition-duration: 750ms;
+    -webkit-transition-duration: 750ms;
+    transition-duration: 750ms;
+  }
+
+  [data-animation='medium'] & {
+    -moz-transition-duration: 500ms;
+    -ms-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+  }
+
+  [data-animation='fast'] & {
+    -moz-transition-duration: 250ms;
+    -ms-transition-duration: 250ms;
+    -o-transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+  }
+}
+
+.sq-cardrating-prev, .sq-cardrating-next {
+  color: @question-text-color;
+  z-index: 25;
+
+  [data-fullwidth] & {
+    background-color: @foreground-color;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    // this z-index must be higher than the current card
+    z-index: 31;
+  }
+
+  [data-fullwidth] &[data-disabled] {
+    opacity: 0.25;
+  }
+
+  &[data-hovered] {
+    color: lighten(@question-text-color, 10%);
+  }
+}
+
+.sq-cardrating-prev {
+  padding: 0 1em 0 0;
+  text-align: left;
+
+  [data-fullwidth] & {
+    -moz-border-bottom-right-radius: @dq-button-border-radius;
+    -webkit-border-bottom-right-radius: @dq-button-border-radius;
+    border-bottom-right-radius: @dq-button-border-radius;
+    -moz-border-top-right-radius: @dq-button-border-radius;
+    -webkit-border-top-right-radius: @dq-button-border-radius;
+    border-top-right-radius: @dq-button-border-radius;
+    left: 1px;
+    padding: 0.25em 1em;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  [data-atend] & {
+    max-height: 200px;
+  }
+}
+
+.sq-cardrating-next {
+  padding: 0 0 0 1em;
+  text-align: right;
+
+  [data-fullwidth] & {
+    -moz-border-bottom-left-radius: @dq-button-border-radius;
+    -webkit-border-bottom-left-radius: @dq-button-border-radius;
+    border-bottom-left-radius: @dq-button-border-radius;
+    -moz-border-top-left-radius: @dq-button-border-radius;
+    -webkit-border-top-left-radius: @dq-button-border-radius;
+    border-top-left-radius: @dq-button-border-radius;
+    padding: 0.25em 1em;
+    right: 1px;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  [data-atend] & {
+    max-height: 200px;
+    visibility: hidden;
+  }
+}
+
+.sq-cardrating-wrap {
+  max-width: 100%;
+}
+
+.sq-cardrating-carousel {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  width: auto;
+}
+
+.sq-cardrating-cardset {
+  height: auto;
+  // no navigation buttons means card can
+  //   take up entire width of screen
+  max-width: 100%;
+  width: auto;
+
+  // with navigation means card must save
+  //   space for the navigation buttons
+  [data-navigation] & {
+    max-width: 100%;
+  }
+
+  // reduce height when completion message
+  //   is shown, so submit button is visible
+  [data-atend] & {
+    max-height: 200px;
+    visibility: hidden;
+  }
+}
+
+.sq-cardrating-cards {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  min-width: 200px;
+}
+
+.sq-cardrating-card {
+  background-color: @foreground-color;
+  border-color: @question-text-color;
+  border-style: solid;
+  border-width: 1px;
+  color: @question-text-color;
+  font-family: @question-font-family;
+  font-size: @question-font-size;
+  overflow: hidden;
+
+  &[data-hasimage] {
+    border-color: transparent;
+  }
+
+  img {
+    .sq-cardrating-responsive-image();
+  }
+}
+
+.sq-cardrating-content {
+  height: auto;
+  padding: 0.25em 0.5em;
+  width: auto;
+
+  [data-fullwidth] & {
+    padding: 0 3em;
+  }
+
+  [data-fullwidth] [data-hasimage] & {
+    padding: 0;
+  }
+}
+
+.sq-cardrating-progress {
+  line-height: 0;
+  overflow: hidden;
+
+  // hide progress set when completion message is shown
+  [data-atend] & {
+    height: 0;
+  }
+}
+
+.sq-cardrating-bar {
+  background-color: @dq-button-bg-color;
+  height: 100%;
+  min-height: 0.25em;
+  min-width: 0.25em;
+  opacity: 0.25;
+
+  &[data-selected] {
+    opacity: 1;
+  }
+
+  &[data-active] {
+    background-color: @dq-button-bg-color-selected;
+    opacity: 1;
+  }
+}
+
+.sq-cardrating-breakpoint {
+  [data-viewmode='horizontal'] + & {
+    width: 0;
+  }
+
+  [data-viewmode='tiled'] + & {
+    width: @breaksmall;
+  }
+
+  [data-viewmode='vertical'] + & {
+    width: @breaklarge;
+  }
+}
+
+.sq-cardrating-buttonset {
+  overflow: hidden;
+
+  // hide button set when completion message shown
+  [data-atend] & {
+    height: 0;
+  }
+}
+
+.sq-cardrating-button {
+  background-color: @dq-button-bg-color;
+  border-color: @dq-button-border-color;
+  -moz-border-radius: @dq-button-border-radius;
+  -webkit-border-radius: @dq-button-border-radius;
+  border-radius: @dq-button-border-radius;
+  border-style: solid;
+  border-width: 1px;
+  color: @dq-button-text-color;
+  font-family: @dq-button-font-family;
+  font-size: @dq-button-font-size;
+  vertical-align: top;
+
+  img {
+    .sq-cardrating-responsive-image();
+  }
+
+  [data-loading] & img {
+    height: auto;
+    max-height: auto;
+    max-width: auto;
+    width: auto;
+  }
+
+  &[data-hovered] {
+    background-color: @dq-button-bg-color-hover;
+    border-color: @dq-button-border-color-hover;
+    color: @dq-button-text-color-hover;
+  }
+
+  &[data-selected] {
+    background-color: @dq-button-bg-color-selected;
+    border-color: @dq-button-border-color-selected;
+    color: @dq-button-text-color-selected;
+  }
+}
+
+// begin base view size and view mode settings
+.large-vertical {
+  display: block;
+  // max-height: auto;
+  margin: 0.25em auto;
+  max-width: 100%;
+  min-width: 280px;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+.small-vertical {
+  display: block;
+  margin: 0.25em auto;
+  // max-height: auto;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+.large-tiled {
+  display: inline-block;
+  margin: 0.25em;
+  // max-height: auto;
+  max-width: 150px;
+  // min-height: auto;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.small-tiled {
+  .small-vertical();
+}
+
+.large-horizontal {
+  display: inline-block;
+  margin: 0.25em;
+  // max-height: auto;
+  max-width: 150px;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.small-horizontal {
+  .small-vertical();
+}
+// begin base view size and view mode settigns
+
+// default settings for button layout large view
+[data-viewsize='large'] {
+  [data-viewmode='vertical'] {
+    .sq-cardrating-button {
+      .large-vertical();
+    }
+  }
+
+  [data-viewmode='tiled'] {
+    .sq-cardrating-button {
+      .large-tiled();
+    }
+  }
+
+  [data-viewmode='horizontal'] {
+    .sq-cardrating-button {
+      .large-horizontal();
+    }
+  }
+}
+
+// default settings for button layout small view
+[data-viewsize='small'] {
+  [data-viewmode='vertical'] {
+    .sq-cardrating-button {
+      .small-vertical();
+    }
+  }
+
+  [data-viewmode='tiled'] {
+    .sq-cardrating-button {
+      .small-tiled();
+    }
+  }
+
+  [data-viewmode='horizontal'] {
+    .sq-cardrating-button {
+      .small-horizontal();
+    }
+  }
+}
+
+// when resizing, buttons and button should be auto-sized
+[data-resizing] {
+  [data-viewsize] {
+    [data-viewmode] {
+      display: inline-block;
+    }
+
+    .sq-cardrating-button {
+      display: inline-block;
+    }
+  }
+}
+
+[data-hidden] {
+  display: none;
+}
+
+[data-invisible] {
+  visibility: hidden;
+}
+
+[data-clickable] {
+  cursor: pointer;
+}
+
+[data-draggable] {
+  // only the current card is draggable
+  &[data-position='0'] {
+    cursor: move;
+  }
+
+  // when dragging a card
+  &.ui-draggable-dragging {
+    opacity: 0.25;
+    z-index: 99;
+  }
+}
+
+[data-droppable] {
+  //
+}
+
+[data-disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+
+
+// selfserve/1da7/lib/imgmap/v2020/static/dq_styles.less 
+.sq-imgmap {
+	@sq-imgmap-qa-background: #3581C8;
+	@sq-imgmap-qa-foreground: white;
+
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+	
+	ul {
+		padding: 0px;
+		margin-bottom: 0px;
+
+		li {
+			padding-bottom: 0px;
+			list-style-type: none;
+		}
+	}
+
+	textarea {
+		margin-top: 0.5em;
+		resize: none;
+	}
+
+	hr {
+		border    : 0px none transparent;
+		border-top: 1px solid gray;
+	}
+
+	/* These classes won't appear in the rendered CSS; their properties are copied each time as they're used in this LESS file. */
+	.not-text() {
+		cursor: default;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+			 -o-user-select: none;
+			    user-select: none;
+	}
+
+	.selectable() {
+		cursor: pointer;
+	}
+
+	.faded() {
+		-moz-opacity: 0.5;
+		opacity		: 0.5;
+		filter		: alpha(opacity=50);
+	}
+
+	/* Draggable, dragging */
+
+	/* Used for simple buttons, where the DQ colors are darker */
+	.button() {
+		.not-text();
+		.selectable();
+		box-sizing: border-box;
+		background-color: @button-color;
+		color: @button-text-color;
+
+		border-radius: 0.25em;
+		padding: 0.5em;
+		margin: 0.25em;
+
+		&:hover, &.sq-imgmap-state-hover { background-color: @button-hover-color; }
+		&.sq-imgmap-state-selected { background-color: @button-selected-color; }
+		&.sq-imgmap-state-disabled { background-color: fadeout(@button-color, 50%); }
+	}
+
+	/* Similar to button, except it uses lighter colors, ideal for shopping cart items where more complex information is displayed */
+	.panel() {
+		.not-text();
+		padding: 0.5em;
+		margin: 0.25em;
+
+		&:hover, .sq-imgmap-state-hover, .sq-imgmap-state-selected {
+			background-color: fadeout(@button-selected-color, 50%);
+		}
+		.sq-imgmap-state-disabled {
+			.faded;
+		}
+	}
+
+	.qaCode {
+		border: 2px solid @sq-imgmap-qa-foreground;
+		border-radius: 8px;
+
+		background-color: @sq-imgmap-qa-background;
+		color: @sq-imgmap-qa-foreground;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 2px 4px;
+
+		&:before { content: "["; }
+		&:after { content: "]"; }
+	}
+
+	.sq-imgmap-template { display: none; }
+
+	.sq-imgmap-loading-screen {
+		position: absolute;
+		
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+
+		background-color: white;
+		
+		div {
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			div {
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+				font-size: 16px;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.sq-imgmap-container {
+		position: relative;
+		display: inline-block;
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+	.sq-imgmap-subwrap {
+		display: inline-block;
+	}
+
+	.sq-imgmap-image {
+		display: block;
+		max-width: 100%;
+		.not-text();
+	}
+
+	.sq-imgmap-selection {
+		position: absolute;
+		outline: 3px solid blue;
+	}
+
+		/* Close button and scored resize thing are in a -region by-product from selection */
+
+	.sq-imgmap-dialog {
+		position: absolute;
+		border: 1px solid gray;
+		border-radius: 0.5em;
+		padding: 0.75em 0.75em 0.5em;
+		width: 200px;
+		background-color: white;
+		z-index: 9;
+
+		/* Triangles CSS white triangle on border-colored triangle */
+
+		/* Behavior changes based on mobile/desktop mode */
+		@media (max-width: @breakpoint) {
+			position: fixed !important;
+			left: 50% !important;
+			top: 50% !important;
+			transform: translate(-50%, -50%) !important;
+		}
+
+		.sq-imgmap-error {
+			color: red;
+		}
+
+		.sq-imgmap-button {
+			margin-bottom: 0.25em;
+		}
+	}
+
+	.sq-imgmap-openend {
+		margin: 0.5em 0;
+	}
+
+	.sq-imgmap-button {
+		.button();
+		display: inline-block;
+		margin: 0px;
+	}
+
+	.sq-imgmap-rating-box {
+		margin-top: 0.5em;
+	}
+
+	.sq-imgmap-rating {
+		.not-text();
+		.selectable();
+		display: inline-block;
+		font-size: 2em;
+
+		&:not(.sq-imgmap-state-selected) { color: #AAA !important; }
+
+		&:not(:last-child) {
+			margin-right: 0.25em;
+		}
+	}
+
+	.sq-imgmap-point {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: gray;
+		transform: translate(-50%,-50%);
+		z-index: 2;
+	}
+
+	.sq-imgmap-region {
+		position: absolute;
+		outline: 2px solid red;
+		background-color: rgba(255,0,0,0.25);
+		cursor: move;
+		box-sizing: border-box;
+
+		.sq-imgmap-region-remove {
+			position: absolute;
+			right: 0.2em;
+			top: 0.2em;
+			font-size: 18px;
+			width: 18px;
+			height: 18px;
+			display: block;
+			color: white;
+			cursor: pointer;
+		}
+
+		.ui-resizable-handle.ui-icon-gripsmall-diagonal-se {
+			width: 13px;
+			height: 13px;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			mix-blend-mode: overlay;
+		}
+	}
+
+	.sq-imgmap-toolbar {
+		font-size: 18px;
+		border: 1px solid #888;
+		background-color: #EEE;
+		border-radius: 3px 3px 0 0;
+		padding: 0.2em;
+		
+		.sq-imgmap-marker-button {
+			.not-text();
+			border: 1px solid #888;
+			display: inline-block;
+			padding: 0.4em;
+			border-radius: 3px;
+			cursor: pointer;
+
+			&.sq-imgmap-state-selected {
+				background-color: white;
+			}
+
+			.sq-imgmap-marker-icon {
+				padding: 0.15em 0.23em;
+				font-size: 0.75em;
+				border-radius: 3px;
+				color: black;
+				background-color: #AAA;
+				border: 1px solid #888;
+			}
+		}
+	}
+}
+
+
