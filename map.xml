@@ -1,0 +1,10 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>> MAP >>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Q10.map(r1=5, r2=10, r3=15, r4=20)
+# returns 15 if "r3" selected at Q10
+
+Q11.val = Q10.map(c1=1, c2=3, c3=5, c4=7)
+# equivalent to:
+# Q11.val = 1 if Q10.c1 else 3 if Q10.c2 else 5 if Q10.c3 else 7 if Q10.c4
+

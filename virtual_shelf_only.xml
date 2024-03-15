@@ -1,0 +1,410 @@
+<block label="shopping" cond="1" builder:title="shopping">
+  <html label="intro_shopping" where="survey"><strong>Assume that you have come to our store today to purchase Chocolate for yourself, to share with others or as a gift. Please shop for products in the following aisle. When done, please click the cart icon to check out.<br /><br /><span style="color: #ff0000;">NOTE: This exercise may take a minute or two to load. Thank you for your patience.</span> <br /><br />Please press continue. </strong></html>
+
+  <suspend/>
+
+  <block label="Shopping">
+    <exec>
+a = datetime.datetime.now().replace(microsecond=0)
+    </exec>
+
+    <suspend/>
+
+    <pipe label="param_id" capture="">
+      <case label="r1" cond="Phase.r1">PRMS01GAV5J8Y3W0QPP18PPE74Y6PT</case>
+      <case label="r2" cond="Phase.r2">PRMS01GAV5XX2W965GFW4Y32C54VYG</case>
+      <case label="r3" cond="Phase.r3">PRMS01GAV61HN1CJH15N7XZ1JT6SQX</case>
+      <case label="r99" cond="1"/></pipe>
+    <exec cond="not gv.isSST()">
+if Phase.r1:
+  spparam_id='PRMS01GAV5J8Y3W0QPP18PPE74Y6PT'
+if Phase.r2:
+  spparam_id='PRMS01GAV5XX2W965GFW4Y32C54VYG'
+if Phase.r3:
+  spparam_id='PRMS01GAV61HN1CJH15N7XZ1JT6SQX'
+  
+
+surveyDir = "https://emea.focusvision.com/survey/%(first)s?state=[state]" % {"first": gv.survey.path}
+redirectTarget = "https://survey.rose.conceptsauce.io/?param_id=%(first)s&amp;respondent_id=%(second)s&amp;link=%(third)s" % {"first": spparam_id, "second": record, "third": surveyDir}
+
+
+suspendExternal(redirectTarget)
+    </exec>
+
+    <textarea 
+    label="apiRequest_1"
+    where="execute,survey,report">
+      <title>hidden: api request 1</title>
+      <exec>
+if Phase.r1:
+  spparam_id='PRMS01GAV5J8Y3W0QPP18PPE74Y6PT'
+if Phase.r2:
+  spparam_id='PRMS01GAV5XX2W965GFW4Y32C54VYG'
+if Phase.r3:
+  spparam_id='PRMS01GAV61HN1CJH15N7XZ1JT6SQX'
+
+createJson = {
+  "event_type": "params_crud",
+  "action": "get_params",
+  "data": {
+    "params_id": spparam_id
+  }
+}
+
+thisQuestion.val = str(createJson).replace("'",'*').replace('*','"')
+      </exec>
+
+    </textarea>
+
+    <suspend/>
+
+    <logic label="logic_apiRequest_1" api:data="apiRequest_1.unsafe_val" api:method="POST" api:url="https://better-params-api.rose.conceptsauce.io/api" uses="api.1"/>
+    <suspend/>
+
+    <textarea 
+    label="hResult_apiPurchases_1"
+    where="execute,survey,report">
+      <title>hidden: api request 1 response</title>
+      <exec>
+findApi = logic_apiRequest_1
+
+if findApi.status == 200:
+  response = findApi.r
+  survey_id = str(response["data"]["params"]["survey_id"])
+  
+  createJson = {
+    "event_type": "survey_data_request",
+    "action": "get_shop_shelf_detail_purchases",
+    "data": {
+      "target": {
+        "survey_id": survey_id,
+        "respondent_id": record,
+        "block_id": "shelf"
+      }
+    }
+  }
+
+  thisQuestion.val = str(createJson).replace("'",'*').replace('*','"')
+      </exec>
+
+    </textarea>
+
+    <suspend/>
+
+    <logic label="logic_apiPurchases_1" cond="hResult_apiPurchases_1.val not in ['', None]" api:data="hResult_apiPurchases_1.unsafe_val" api:method="POST" api:url="https://public-survey-data-api.rose.conceptsauce.io/api" uses="api.1"/>
+    <textarea 
+    label="hResult_apiLooked_1"
+    where="execute,survey,report">
+      <title>hidden: api request 1 response</title>
+      <exec>
+findApi = logic_apiRequest_1
+
+if findApi.status == 200:
+  response = findApi.r
+  survey_id = str(response["data"]["params"]["survey_id"])
+  
+  createJson = {
+    "event_type": "survey_data_request",
+    "action": "get_shop_shelf_summary_items_looked_at",
+    "data": {
+      "target": {
+        "survey_id": survey_id,
+        "respondent_id": record,
+        "block_id": "shelf"
+      }
+    }
+  }
+
+  thisQuestion.val = str(createJson).replace("'",'*').replace('*','"')
+      </exec>
+
+    </textarea>
+
+    <suspend/>
+
+    <logic label="logic_apiLooked_1" cond="hResult_apiLooked_1.val not in ['', None]" api:data="hResult_apiLooked_1.unsafe_val" api:method="POST" api:url="https://public-survey-data-api.rose.conceptsauce.io/api" uses="api.1"/>
+    <exec>
+findApi = logic_apiPurchases_1
+findItems=""
+if findApi.status == 200:
+  response = findApi.r
+  findItems = response["data"]["basket_details"]["raw_purchase_details"]
+
+skuArr = []
+quantityArr = []
+priceArr = []
+
+for item in findItems:
+  skuArr.append(item["sku"])
+  quantityArr.append(item["quantity"])
+  priceArr.append(item["price_for_one"])
+  
+
+for x in range(len(skuArr)):
+  eval("P_QuantityPurchased.r" + skuArr[x]).val=1
+  eval("P_Quantity.r" + skuArr[x]).val=quantityArr[x]
+  eval("P_Price.r" + skuArr[x]).val=priceArr[x]
+    </exec>
+
+    <suspend/>
+
+    <checkbox 
+    label="P_QuantityPurchased"
+    optional="1"
+    where="execute,survey,report">
+      <title>Purchased</title>
+      <row label="ru1122800016">CELLAS MILK CHOC CHRY GIFT BOX 16 CT 8 OZ</row>
+      <row label="ru3129011341">GODIVA ASST CHOC CAKE GIFT BOX 3.9 OZ</row>
+      <row label="ru3129011354">GODIVA MASTERPIECES DARK CHOC GANCH BAR 3 OZ</row>
+      
+    </checkbox>
+
+    <suspend/>
+
+    <checkbox 
+    label="P_QuantityPurchased_net"
+    optional="1">
+      <title>Purchased</title>
+      <virtual>
+for x in P_QuantityPurchased.rows:
+  if P_QuantityPurchased.rows[x.index]:
+    P_QuantityPurchased_net.rows[x.index].val = 1
+      </virtual>
+
+      <row label="ru1122800016">CELLAS MILK CHOC CHRY GIFT BOX 16 CT 8 OZ</row>
+      <row label="ru3129011341">GODIVA ASST CHOC CAKE GIFT BOX 3.9 OZ</row>
+      <row label="ru3129011354">GODIVA MASTERPIECES DARK CHOC GANCH BAR 3 OZ</row>
+      <net labels="ru1122800016,ru3129011341,ru3129011354">All</net>
+      
+      
+    </checkbox>
+
+    <suspend/>
+
+    <number 
+    label="P_Quantity"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    size="3"
+    where="execute,survey,report">
+      <title>Purchased Quantity.</title>
+    </number>
+
+    <suspend/>
+
+    <number 
+    label="P_TotalQuantity"
+    size="3"
+    where="execute,survey,report">
+      <title>Total Purchased Quantity.</title>
+      <exec>
+P_TotalQuantity.val=P_Quantity.sum
+      </exec>
+
+    </number>
+
+    <suspend/>
+
+    <float 
+    label="P_Price"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    size="10"
+    where="execute,survey,report">
+      <title>Price for one.</title>
+    </float>
+
+    <exec>
+for x in P_Quantity.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (x.ival ge 1):
+      P_SpendPerProduct.rows[x.index].val=(x.ival*1.0)*y.val
+    </exec>
+
+    <float 
+    label="P_SpendPerProduct"
+    size="10"
+    where="execute,survey,report">
+      <title>Price Per Product.</title>
+      <row label="ru1122800016">CELLAS MILK CHOC CHRY GIFT BOX 16 CT 8 OZ</row>
+      <row label="ru3129011341">GODIVA ASST CHOC CAKE GIFT BOX 3.9 OZ</row>
+      <row label="ru3129011354">GODIVA MASTERPIECES DARK CHOC GANCH BAR 3 OZ</row>
+      
+      
+    </float>
+
+    <suspend/>
+
+    <float 
+    label="P_SpendPerProduct_net"
+    size="10">
+      <title>Price Per Product.</title>
+      <virtual>
+for x in P_Quantity.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (x.ival ge 1):
+      P_SpendPerProduct_net.rows[x.index].val=(x.ival*1.0)*y.val
+      </virtual>
+
+      <row label="ru1122800016">CELLAS MILK CHOC CHRY GIFT BOX 16 CT 8 OZ</row>
+      <row label="ru3129011341">GODIVA ASST CHOC CAKE GIFT BOX 3.9 OZ</row>
+      <row label="ru3129011354">GODIVA MASTERPIECES DARK CHOC GANCH BAR 3 OZ</row>
+      <net labels="ru1122800016,ru3129011341,ru3129011354">All</net>
+     
+      
+    </float>
+
+    <suspend/>
+
+    <exec>
+sumP_TotalSpend=0
+for x in P_Quantity.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (x.ival ge 1):
+      sumP_TotalSpend=sumP_TotalSpend+(x.ival*1.0)*y.val
+      P_TotalSpend.val=sumP_TotalSpend
+    </exec>
+
+    <float 
+    label="P_TotalSpend"
+    size="10"
+    where="execute,survey,report">
+      <title>Total amount spent.</title>
+      <row label="total">Total</row>
+    </float>
+
+    <suspend/>
+
+    <exec>
+findApi = logic_apiLooked_1
+findItems=""
+if findApi.status == 200:
+  response = findApi.r
+  findItems = response["data"]["items_looked_at"]
+
+skuArr = []
+durationArr = []
+
+for item in findItems:
+  skuArr.append(item["sku"])
+  durationArr.append(item["total_duration_looking"])
+
+for x in range(len(skuArr)):
+  eval("P_lookat.r" + skuArr[x]).val=1
+  eval("P_Duration.r" + skuArr[x]).val=durationArr[x]
+  eval("P_PickupOrder.r" + skuArr[x]).val=int(skuArr.index(skuArr[x]))+1
+    </exec>
+
+    <suspend/>
+
+    <checkbox 
+    label="P_lookat"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    optional="1"
+    where="execute,survey,report">
+      <title>Pickup</title>
+    </checkbox>
+
+    <suspend/>
+
+    <float 
+    label="P_Duration"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    size="10"
+    where="execute,survey,report">
+      <title>total_duration_looking</title>
+    </float>
+
+    <suspend/>
+
+    <radio 
+    label="looked_longer"
+    where="execute,survey,report">
+      <title>If looked at any product longer than 20s!</title>
+      <virtual>
+looked_longer.val=0
+        
+for x in P_Duration.rows:
+     if (x.val gt 20000):
+        looked_longer.val=1
+        break;
+      </virtual>
+
+      <row label="r1">Did not look longer than 20s</row>
+      <row label="r2">Looked longer than 20s</row>
+    </radio>
+
+    <suspend/>
+
+    <number 
+    label="P_PickupOrder"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    size="3"
+    where="execute,survey,report">
+      <title>Product picking order.</title>
+    </number>
+
+    <suspend/>
+
+    <exec>
+for x in P_lookat.rows:
+  if x and not P_QuantityPurchased.rows[x.index]:
+    P1_Items_ClickedOn_NotPurchased.rows[x.index].val = 1
+    </exec>
+
+    <checkbox 
+    label="P1_Items_ClickedOn_NotPurchased"
+    atleast="1"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Products Clicked On, but Not Purchased</title>
+     
+      <row label="ru1122800016">CELLAS MILK CHOC CHRY GIFT BOX 16 CT 8 OZ</row>
+      <row label="ru3129011341">GODIVA ASST CHOC CAKE GIFT BOX 3.9 OZ</row>
+      <row label="ru3129011354">GODIVA MASTERPIECES DARK CHOC GANCH BAR 3 OZ</row>
+      <row label="r99" autofill="thisQuestion.count == 0">All Items Clicked On Were Purchased</row>
+    </checkbox>
+
+    <suspend/>
+
+    <number 
+    label="P1_Number_ClickedOn_Products_NotPurchased"
+    cond="not(P1_Items_ClickedOn_NotPurchased.r99)"
+    optional="0"
+    randomize="0"
+    size="3"
+    where="execute,survey,report">
+      <title># of Products Clicked On but NOT Purchased</title>
+      <exec>
+P1_Number_ClickedOn_Products_NotPurchased.val = P_lookat.count - P_QuantityPurchased.count
+      </exec>
+
+    </number>
+
+    <suspend/>
+
+    <exec cond="1">
+b = datetime.datetime.now().replace(microsecond=0)
+ShopTime.val= b-a
+    </exec>
+
+    <suspend/>
+
+    <text 
+    label="ShopTime"
+    size="40"
+    where="execute,survey,report">
+      <title>Shopping Time.</title>
+    </text>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <autofill label="vProductsBought" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="TB" autofill="1">TestBrand Purchased</row>
+    <row label="No" autofill="vProductsBought.count==0">TestBrand NOT Purchased</row>
+  </autofill>
+</block>
+
+<suspend/>

@@ -1,0 +1,115 @@
+<block label="RealEyeExercise" cond="0" builder:title="Real Eye Exercise">
+    <pipe label="ProjectID" capture="">
+      <case label="r1" cond="True">d1ae74aa-2754-456c-9913-99eaf273127b</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <pipe label="EF_PracticeShelf" capture="">
+      <case label="r1" cond="True">EF_PracticeShelf</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <pipe label="REShelf" capture="">
+      <case label="r1" cond="Phase.r1">SHELF1_HR</case>
+      <case label="r2" cond="Phase.r2">SHELF2_HR</case>
+      <case label="r3" cond="Phase.r3">SHELF3_HR</case>
+      <case label="r4" cond="Phase.r4">SHELF4_HR</case>
+      <case label="r5" cond="Phase.r5">SHELF5_HR</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <pipe label="REPACK" capture="">
+      <case label="r1" cond="Phase.r1">REALPACK1</case>
+      <case label="r2" cond="Phase.r2">REALPACK2</case>
+      <case label="r3" cond="Phase.r3">REALPACK3</case>
+      <case label="r4" cond="Phase.r4">REALPACK4</case>
+      <case label="r5" cond="Phase.r5">REALPACK5</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <pipe label="RECOMPPACK1" capture="">
+      <case label="r1" cond="True">REALPACKCOMP1</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <pipe label="RECOMPPACK2" capture="">
+      <case label="r1" cond="True">REALPACKCOMP2</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <html label="placeholderredirect" where="none">Redirect placeholder so that the redirect executes</html>
+
+    <suspend sst="0" url="https://www.realeye.io/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B0%5D=${pipe.EF_PracticeShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B2%5D=${pipe.RECOMPPACK1}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B3%5D=${pipe.REPACK}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B4%5D=${pipe.RECOMPPACK2}.jpg&amp;participantId=${uuid}?&amp;realeye-tester-tags=bumo-[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:sample],phase-[pipe:Phase],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>
+
+    <number 
+    label="RealEye_Status"
+    randomize="0"
+    size="3"
+    where="execute,survey,report">
+      <title>Real Eye: Status</title>
+      <exec>
+RE_Status= gv.request.get("ef_status")
+
+RealEye_Status.val = RE_Status
+      </exec>
+
+    </number>
+
+    <number 
+    label="RealEye_Quality"
+    randomize="0"
+    size="3"
+    where="execute,survey,report">
+      <title>Real Eye: Quality</title>
+      <exec>
+RE_Quality= gv.request.get("realeye-tester-quality_grade")
+
+RealEye_Quality.val = RE_Quality
+      </exec>
+
+    </number>
+
+    <text 
+    label="RealEye_ID"
+    randomize="0"
+    size="25"
+    where="execute,survey,report">
+      <title>Real Eye: ID</title>
+      <exec>
+RE_ID= gv.request.get("realeye-tester-id")
+
+RealEye_ID.val = RE_ID
+      </exec>
+
+    </text>
+
+    <suspend/>
+
+    <autofill label="EF_Status" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Status</title>
+      <row label="r1" autofill="RealEye_Status.check('1')">Qualified</row>
+      <row label="r2" autofill="RealEye_Status.check('2')">Skip (I don't want to participate in this test)</row>
+      <row label="r3" autofill="RealEye_Status.check('3')">Quota Full</row>
+      <row label="r4" autofill="RealEye_Status.check('4')">Screen Out</row>
+      <row label="None" autofill="EF_Status.count==0">No Status</row>
+    </autofill>
+
+    <autofill label="EF_Quality" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Quality</title>
+      <row label="net1" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5')">T2B</row>
+      <row label="net2" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5') or RealEye_Quality.check('4')">T3B</row>
+      <row label="net3" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2')">B2B</row>
+      <row label="net4" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2') or RealEye_Quality.check('3')">B3B</row>
+      <row label="r1" autofill="RealEye_Quality.check('1')">Very Low</row>
+      <row label="r2" autofill="RealEye_Quality.check('2')">Low</row>
+      <row label="r3" autofill="RealEye_Quality.check('3')">Average</row>
+      <row label="r4" autofill="RealEye_Quality.check('4')">Good</row>
+      <row label="r5" autofill="RealEye_Quality.check('5')">Very Good</row>
+      <row label="r6" autofill="RealEye_Quality.check('6')">Perfect</row>
+      <row label="None" autofill="EF_Quality.count==0">No Quality</row>
+    </autofill>
+
+    <term label="TERM_RealEye_OptOut" cond="not(EF_Status.r1) and not(gv.isSST()) and False">Real Eye: Skip/ Screen Out/ RealEye OQ</term>
+
+    <suspend/>
+  </block>

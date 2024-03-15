@@ -1,0 +1,239 @@
+  <number 
+   label="P1_Total_Products"
+   optional="0"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title>Total Products Purchased</title>
+    <exec>
+P1_Total_Products.val = sum([int(r.c1.val) for r in P_QuantityPurchased.rows if r.c1.val and int(r.c1.val) gt 0])
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <exec>
+c=0
+p.arr1 = [45.00,39.99,30.00,45.00,40.00,45.00,39.99,22.00,30.00,15.99,29.99,29.99,24.99,34.99,21.99,26.99,18.99,12.99,10.00,12.97,11.99,10.00,11.99,13.00]
+    
+for x in P_QuantityPurchased.rows:
+  if P_QuantityPurchased[x].c1.val &gt;0:
+      P_Price[x].val=p.arr1[c]
+  c=c+1
+  </exec>
+
+  <float 
+   label="P_Price"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   size="10"
+   where="execute,survey,report">
+    <title>Price for one.</title>
+  </float>
+
+  <suspend/>
+
+  <number 
+   label="P1_Number_Bought_Per_Product"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   size="3">
+    <title>Total Quantity Purchased Per Product</title>
+    <virtual>
+for eachRow in P_QuantityPurchased.rows:
+  if eachRow.c1.val:
+    if int(eachRow.c1.val) &gt; 0:
+                 data.rows[eachRow.index].val = int(eachRow.c1.val or 0)
+    </virtual>
+
+  </number>
+
+  <number 
+   label="P1_Number_Bought_Per_Product2"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title>Total Quantity Purchased Per Product</title>
+    <exec>
+for eachRow in P_QuantityPurchased.rows:
+  if eachRow.c1.val:
+    if int(eachRow.c1.val) &gt; 0:
+                P1_Number_Bought_Per_Product2.rows[eachRow.index].val = int(eachRow.c1.val or 0)
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <checkbox 
+   label="P1_Items_Bought"
+   atleast="1"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Bought</title>
+    <exec>
+for r in P_QuantityPurchased.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      P1_Items_Bought.rows[r.index].val = 1
+    </exec>
+
+  </checkbox>
+
+  <suspend/>
+
+  <exec>
+for x in P1_Number_Bought_Per_Product2.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (P1_Number_Bought_Per_Product2[x].val ge 1):
+      P_SpendPerProduct.rows[x.index].val=(x.ival*1.0)*y.val
+  </exec>
+
+  <float 
+   label="P_SpendPerProduct"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   size="10"
+   where="execute,survey,report">
+    <title>Spent Per product.</title>
+  </float>
+
+  <suspend/>
+
+  <exec>
+sumP_TotalSpend=0
+for x in P1_Number_Bought_Per_Product2.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (x.ival ge 1):
+      sumP_TotalSpend=sumP_TotalSpend+(x.ival*1.0)*y.val
+      P_TotalSpend.val=sumP_TotalSpend
+  </exec>
+
+  <float 
+   label="P_TotalSpend"
+   size="10"
+   where="execute,survey,report">
+    <title>Total Spent</title>
+    <row label="total">Total</row>
+  </float>
+
+  <suspend/>
+
+  <checkbox 
+   label="P1_Items_ClickedOn"
+   atleast="1"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Clicked On</title>
+    <exec>
+for r in P_QuantityPurchased.rows:
+  if r.c2.val:
+    if int(r.c2.val) &gt; 0:
+      P1_Items_ClickedOn.rows[r.index].val = 1
+    </exec>
+
+  </checkbox>
+
+  <exec>
+for eachRow in P_QuantityPurchased.rows:
+    if eachRow.c2.val &gt; 0 and eachRow.c1.val &lt; 1: P1_Items_ClickedOn_NotPurchased.rows[eachRow.index].val = 1
+  </exec>
+
+  <checkbox 
+   label="P1_Items_ClickedOn_NotPurchased"
+   atleast="1"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Clicked On, but Not Purchased</title>
+    <row label="A1">Angel's Envy 750ml</row>
+    <row label="A2">Basil Hayden's Classic 750ml</row>
+    <row label="A3">Knob Creek 750ml</row>
+    <row label="A4">Four Roses Small Batch 750ml</row>
+    <row label="A5">Woodford Reserve 750ml</row>
+    <row label="A6">Michter's Bourbon 750ml</row>
+    <row label="A7">Russell's Reserve 10YO 750ml</row>
+    <row label="B1">Four Roses Bourbon 750ml</row>
+    <row label="B2">Buffalo Trace 750ml</row>
+    <row label="B3">Jim Beam White 750ml</row>
+    <row label="B4">Bulleit Bourbon 750ml</row>
+    <row label="B5">Bulleit Bourbon 10 Year 750ml</row>
+    <row label="B6">Maker's Mark 750ml</row>
+    <row label="B7">Maker's 46 750ml</row>
+    <row label="B8">Wild Turkey Straight Bourbon 750ml</row>
+    <row label="B9">Wild Turkey 101  750ml</row>
+    <row label="B10">Jack Daniel's No7 750ml</row>
+    <row label="C1">Evan Williams 750ml</row>
+    <row label="C2">Heaven Hill 750ml</row>
+    <row label="C3">Old Grandad 750ml</row>
+    <row label="C4">Early Times 750ml</row>
+    <row label="C5">Old Crow 750ml</row>
+    <row label="C6">Ancient Age 750ml</row>
+    <row label="C7">Ezra Brooks 750ml</row>
+    <row label="r99" autofill="thisQuestion.count ==0">All Items Clicked On Were Purchased</row>
+  </checkbox>
+
+  <suspend/>
+
+  <number 
+   label="P1_Number_UniqueProducts_Purchased"
+   optional="0"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title># of Unique Products Purchased</title>
+    <exec>
+P1_Number_UniqueProducts_Purchased.val = P1_Items_Bought.count
+    </exec>
+
+  </number>
+
+  <number 
+   label="P1_Number_ClickedOn_Products"
+   optional="0"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title># of Products Clicked On</title>
+    <exec>
+P1_Number_ClickedOn_Products.val = P1_Items_ClickedOn.count
+    </exec>
+
+  </number>
+
+  <number 
+   label="P1_Number_ClickedOn_Products_NotPurchased"
+   cond="not(P1_Items_ClickedOn_NotPurchased.r99)"
+   optional="0"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title># of Products Clicked On but NOT Purchased</title>
+    <exec>
+P1_Number_ClickedOn_Products_NotPurchased.val = P1_Items_ClickedOn.count - P1_Items_Bought.count
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <autofill label="vProductsBought" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="TB" autofill="(P_QuantityPurchased.B8.c1.val &gt;0) or (P_QuantityPurchased.B9.c1.val &gt;0)">TestBrand Purchased</row>
+    <row label="No" autofill="vProductsBought.count==0">TestBrand NOT Purchased</row>
+  </autofill>
+
+  <autofill label="vProductsBoughtComp1" cond="0" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="Yes">Comp1 Brand Purchased</row>
+    <row label="No" autofill="vProductsBoughtComp1.count==0">Main Competitor 1 NOT Purchased</row>
+  </autofill>
+
+  <autofill label="vProductsBoughtComp2" cond="0" where="execute,survey,report">
+    <title>TestBrand Purchased/Bought</title>
+    <row label="Yes">Comp2 Brand Purchased</row>
+    <row label="No" autofill="vProductsBoughtComp2.count==0">Main Competitor 2  NOT Purchased</row>
+  </autofill>
+
+  <suspend/>

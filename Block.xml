@@ -1,0 +1,13 @@
+<block label="Block_label" builder:title="Block">
+
+  <radio 
+   label="hhh"
+   randomize="0">
+    <title>New Single Select Question</title>
+    <comment>Select one</comment>
+    <row label="r1">Sample Row #1</row>
+    <row label="r2">Sample Row #2</row>
+  </radio>
+  
+</block>
+<suspend/>

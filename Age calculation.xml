@@ -1,0 +1,34 @@
+<number 
+  label="S_Age"
+  optional="0"
+  size="10"
+  uses="multicol.7">
+  <title> Please enter the month and year you were born?</title>
+  <comment>Please enter your date of birth.</comment>
+  <row label="r1" verify="range(1,12)">Month</row>
+  <row label="r2" verify="range(1920,2022)">Year</row>
+</number>
+
+<suspend/>
+
+<exec>
+p.x = S_Age.r1.val
+p.y = S_Age.r2.val
+p.years = 2023 - p.y
+p.TotalMonths =  (p.years * 12) + 6 - p.x
+p.age = (p.TotalMonths/12)
+
+print(p.age)
+age_calc.val= p.age
+</exec>
+
+<suspend/>
+
+<float 
+  label="age_calc"
+  size="3"
+  where="execute,survey,report">
+  <title>Age</title>
+</float>
+
+<suspend/>

@@ -1,0 +1,37 @@
+
+<exec>
+p.times1 = time.time()
+</exec>
+<suspend/>
+
+
+<!--SECTION HERE!-->
+
+
+<exec>
+p.times2= time.time()   
+VAR_TIME_A.r1.val = ("%.2f" % ((p.times2- p.times1) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_A"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">SECTION A</row>
+</float>
+
+<suspend/>
+
+
+
+
+[-------------------------------ANOTHER WAY----------------------]
+
+
+<exec>
+sst.E.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>

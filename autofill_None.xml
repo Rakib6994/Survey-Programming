@@ -1,0 +1,9 @@
+
+<autofill label="Q8" where="execute,survey,report">
+  <title>New Autofill</title>
+  <row label="r1" autofill="(Q5.r1)">a</row>
+  <row label="r2" autofill="(Q5.r2)">b</row>
+  <row label="r3" autofill="(Q5.r3)">c</row>
+  <row label="none" autofill="thisQuestion.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+</autofill>
+<suspend/>

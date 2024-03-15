@@ -1,0 +1,52 @@
+<radio 
+  label="S5_Besitz_Schliebfach">
+  <title>Haben oder hatten Sie ein Bank- oder Wertschließfach?</title>
+  <validate>
+if (S5_Besitz_Schliebfach.r2) and S5.val=="": error("You selected 'Nein', please specify Why you selected it.")
+
+  </validate>    
+  
+  <row label="r1" ss:rowClassNames="ja">Ja</row>
+  <row label="r2" ss:rowClassNames="nein">Nein</row>
+</radio>
+
+<textarea
+  label="S5"
+  height="10"
+  keepWith="S5_Besitz_Schliebfach"
+  width="50">
+  <title>Warum nicht?</title>
+  <validate>
+if (S5_Besitz_Schliebfach.r2) and this.val=="": error("Please answer this question")
+  </validate>  
+<style name="question.after" wrap="ready"><![CDATA[
+var S5_Besitz_Schliebfach = $ ("#question_S5_Besitz_Schliebfach");
+var S5 = $ ("#question_S5");
+
+
+document.querySelector(".nein").appendChild(document.querySelector("#question_S5"));
+
+
+function hideQuestions()
+{
+  S5.hide();
+
+}
+
+hideQuestions();
+
+S5_Besitz_Schliebfach.change(function () {
+  if ($ (".nein").find("input").is(":checked"))
+  {
+    S5.show(1000);
+  }
+  else if($ (".ja").find("input").is(":checked"))
+  {        
+    S5.hide();
+      $ ('#question_S5 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');    
+  }
+    
+});
+]]></style>
+</textarea>
+<suspend/>

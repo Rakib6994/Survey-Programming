@@ -1,0 +1,42 @@
+<checkbox
+  label="S_Social6"
+  atleast="1"
+  uses="atm1d.9">
+  <title>Thinking back to your visit(s) to the stores you just mentioned, please indicate all the things you did related to <micro category> at those stores. </title>
+  <comment>Please select all that apply.</comment>
+   <style name="page.head"><![CDATA[
+<style type="text/css">
+.row-legend-group {
+    background-color: #aaa;
+    color: #fff;
+}
+</style>
+]]></style>
+  <group label="g1">Displays/in-store advertising </group>
+  <group label="g2">Promotions</group>
+  <group label="g3">Smartphone</group>
+  <group label="g4">Pricing</group>
+  <group label="g5">Product</group>
+  <row label="r1" groups="g1">saw a special display</row>
+  <row label="r2" groups="g1">saw shelf advertising (e.g. headers, tags)</row>
+  <row label="r3" groups="g1">saw window/wall posters</row>
+  <row label="r4" groups="g1">saw floor decals/signs</row>
+  <row label="r5" groups="g1">saw advertising on the shopping cart</row>
+  <row label="r6" groups="g1">read leaflets/brochures</row>
+  <row label="r7" groups="g1">saw/heard in-store digital/TV/radio-advertising</row>
+  <row label="r8" groups="g1">asked/received help from a store employee</row>
+  <row label="r9" groups="g1">received recommendation from a store employee</row>
+  <row label="r10" groups="g1">read "fact cards" that give information about specific <micro category> products</row>
+  <row label="r11" groups="g2">saw/received a multi-pack deal</row>
+  <row label="r12" groups="g2">saw/received a price reduction/instant rebate/discount</row>
+  <row label="r13" groups="g2">saw/received free samples</row>
+  <row label="r14" groups="g2">received a free gift with purchase</row>
+  <row label="r15" groups="g2">saw/received extra loyalty card points or advantages</row>
+  <row label="r16" groups="g2">saw/received other type of discount</row>
+  <row label="r17" groups="g3">used my smartphone in the store to help me with my shopping</row>
+  <row label="r18" groups="g4">checked prices</row>
+  <row label="r19" groups="g5">Touch/Try out the products to see if it fit my needs</row>
+  <row label="r20" open="1" openSize="25" randomize="0" groups="g5">other (specify)</row>
+  <row label="r21" exclusive="1" groups="g5">none of these</row>
+</checkbox>
+<suspend/>

@@ -1,0 +1,43 @@
+atm1d:large_maxHeight="200%"
+atm1d:large_maxWidth="200px"
+
+
+
+<checkbox 
+  label="A6"
+  atleast="1"
+  atm1d:large_maxHeight="100%"
+  atm1d:large_minHeight="80px"
+  atm1d:small_minHeight="80px"
+  atm1d:viewMode="horizontal"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>${this.label + ". " if showQID.r1 else ""}Which of these conditions, if any, have you experienced over the past 1 year?</title>
+  <comment>Please select all applicable responses.</comment>
+  <row label="r1">Diabetes</row>
+  <row label="r2">Dry eyes/ tired eyes/eye fatigue condition (symptoms may include burning, redness, irritation or feeling of heaviness in the eyes or sometimes even back, neck and shoulder pain)</row>
+  <row label="r3">Difficulty remembering things</row>
+  <row label="r4">High blood pressure</row>
+  <row label="r5">High cholesterol levels</row>
+  <row label="r6">Joint or muscle pain</row>
+  <row label="r7">Physical or mental fatigue</row>
+  <row label="r8">Sleeping difficulty</row>
+  <row label="r9">Stress</row>
+  <row label="r99" exclusive="1" randomize="0">None of these</row>
+</checkbox>
+
+
+
+-------------------------------
+
+atm1d:large_maxHeight="100%"
+atm1d:large_minHeight="50px"
+atm1d:small_minHeight="50px"
+atm1d:viewMode="horizontal"
+
+------------------------------
+
+atm1d:large_maxHeight="520px"
+atm1d:large_maxWidth="340px"
+atm1d:large_minHeight="520px"
+atm1d:large_minWidth="340px"

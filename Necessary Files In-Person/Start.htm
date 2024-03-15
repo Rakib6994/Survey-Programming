@@ -1,0 +1,124 @@
+<html>
+<head>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<script>
+//#########################################################################
+//################## Edit these Variables for each study###################
+//#########################################################################
+
+var projectName = "Connects 360 US - 5 Cells";
+var prsJobNumber = "AF122";
+var List = 1;
+var Lang = "english";
+var projectID = "af122";
+var country = "US" //US (US and all auto generated Resp IDs for tablet) or OUS (OUS with preassigned resp IDs- NO TABLET)
+
+//#########################################################################
+//#########################################################################
+
+
+function redirectToSurvey() {
+
+	var RespInit = document.getElementById("Resp").value;
+
+	if (country=="US" && RespInit.length > 4){
+		var Resp = RespInit.slice(-4);
+	}
+	else{
+		var Resp = RespInit;
+	}
+
+	//Is numeric
+	if(parseInt(Resp) != Resp) {
+		document.getElementById("showErr").innerHTML = "<em><font size=4 color=red>Must enter a valid Resp ID to continue.</font></em>";
+		return false;
+	}
+
+	//Is width greater than 5 or less than 3
+	if(Resp.length < 3 || Resp.length > 5) {
+		document.getElementById("showErr").innerHTML = "<em><font size=4 color=red>Must enter a valid Resp ID to continue.</font></em>";
+		return false;
+	}
+
+	if (country=="US"){
+		location.href = "https://emea.focusvision.com/survey/selfserve/1da7/"+projectID+"?list="+List+"&decLang="+Lang+"&record=" + parseInt(Resp);
+	}
+	else{
+		location.href = "https://emea.focusvision.com/survey/selfserve/1da7/"+projectID+"?list="+List+"&decLang="+Lang+"&Resp=" + Resp;
+	}
+}
+
+function setTitle() {
+document.getElementById("projectInfo").innerHTML = prsJobNumber + " &#149; " + projectName;
+}
+</script>
+
+<title>Survey</title>
+<link rel="stylesheet" href="/s/exp/reset.css?fb87f3f0ea"/>
+
+
+<!-- respview.css -->
+<link rel="stylesheet" href="/s/exp/support/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.min.css?ad7753b880" />
+<link rel="stylesheet" href="/s/exp/support/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.beacon.css?bda5419a68" />
+<link rel="stylesheet" href="/s/exp/support/fontawesome/css/font-awesome.css?3a71fc6faf"/>
+<link rel="stylesheet" href="/s/exp/fonts/iconFonts.css?70b7432318"/>
+<link rel="stylesheet" href="/s/exp/survey.respondent.css?e8a4861c5c"/>
+
+<!--[if IE 8]><link rel="stylesheet" href="/s/exp/survey.respondent.ie8.css?ec74f8bf13" media="all"/><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/s/exp/survey.respondent.ie7.css?cbacd3c153" media="all"/><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/s/exp/survey.respondent.ie6.css?d41d8cd98f" media="all"/><![endif]-->
+
+<!-- Theme by Theme Builder -->
+<link rel="stylesheet" href="/survey/selfserve/1da7/140200/theme.css?131122-Michele528fdb46"/>
+<style>
+
+.titleStyle {
+	padding: 8px 0 0 0;
+	margin: 0 0 18px 0;
+	font-family:Georgia, 'Times New Roman', Times, serif
+	width: 600px;
+	color: #000066;
+	font-size: 30px;
+	font-weight:900;
+	line-height: 36px;
+  background:#ffffff;
+  border:0px solid black;
+  text-align: center;
+  box-shadow: 0 5px 5px -5px #333;
+  -moz-border-radius:1px;
+  -webkit-border-radius:1px;
+  -khtml-border-radius:1px;
+  border-radius:10px;
+}
+
+.logo {
+	padding: 8px 0 0 0;
+	margin: 0 0 18px 0;
+	width: 600px;
+  background:#ffffff;
+}
+</style>
+
+</head>
+
+<body>
+<BR>
+<table width=650 align=center cellpadding=12 cellspacing=0 bgcolor="#fcfcfc">
+ <tr>
+   <td align=center width=650>
+     <div id="logo" align=left class="logo"><img src="https://emea.focusvision.com/survey/selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png" style="
+    width: 220px;">
+       <div id="projectInfo" class="titleStyle">
+         </div>
+      </div>
+   </td>
+ </tr>
+
+<tr><td><div id="showErr"></div></td></tr>
+<tr><td style="font-size: 18px;font-weight:500;" >Resp ID: &nbsp; &nbsp; <input type="text" name="Resp" style="font-size: 16px;font-weight:400;" id="Resp" size=7 maxlength=5><BR><BR></td></tr>
+<tr><td><input type="submit" name="continue" id="btn_continue" class="btn continue survey-button" value="Continue &raquo;" onClick="redirectToSurvey();"/>
+
+</table>
+<script>setTitle();</script>
+</body>
+</html>

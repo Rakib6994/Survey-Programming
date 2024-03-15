@@ -1,0 +1,18 @@
+    <checkbox 
+    label="REsample"
+    where="execute,survey,report">
+      <title>Samples for RealEye</title>
+      <virtual>
+if (Sample.r1 or Sample.r2 or Sample.r3): REsample.r1.val = 1
+if (S_Brand_PastPurchased2.r1 or S_Brand_PastPurchased2.r2 or S_Brand_PastPurchased2.r3): REsample.r2.val = 1
+if (Sample.r2 or Sample.r7): REsample.r3.val = 1
+if (Sample.r3 or Sample.r8): REsample.r4.val = 1
+      </virtual>
+
+      <row label="r1">sample-category</row>
+      <row label="r2">sample-angel</row>
+      <row label="r3">sample-walmart</row>
+      <row label="r4">sample-dollar</row>
+    </checkbox>
+
+    <suspend/>

@@ -1,0 +1,13 @@
+<exec>
+if pipeCountry.cn:  A1.val = 0
+if pipeCountry.sk:  A1.val = 1
+</exec>
+
+<radio 
+  label="A1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punching country</title>
+  <row label="r1">China</row>
+  <row label="r2">Korea</row>
+</radio>

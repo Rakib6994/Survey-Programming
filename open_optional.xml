@@ -1,0 +1,17 @@
+    <radio 
+    label="Clinique_Past_Purchase"
+    randomize="0"
+    shuffle="rows">
+      <title>Which of these Clinique foundations have you purchased within the past 24 months?</title>
+      <row label="r1">Clinique Even Better Makeup Broad Spectrum SPF 15</row>
+      <row label="r2">Even Better Clinical Serum Foundation Broad Spectrum SPF 25</row>
+      <row label="r3">Clinique Beyond Perfecting Foundation + Concealer</row>
+      <row label="r4">Clinique Even Better Refresh Hydrating and Repairing Makeup</row>
+      <row label="r5" open="1" openOptional="1" openSize="25" randomize="0">Other</row>
+      <col label="c1">Within the Past 6 Months</col>
+      <col label="c2">7-12 months ago</col>
+      <col label="c3">13-24 months ago</col>
+      <col label="none">None of these</col>
+    </radio>
+
+    <suspend/>

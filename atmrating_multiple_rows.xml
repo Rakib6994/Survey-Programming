@@ -1,0 +1,13 @@
+  <number 
+   label="Q15"
+   ignoreValues="99"
+   size="10"
+   uses="atmrating.5"
+   verify="range(0,10)">
+    <title><b>Button Rating - Multiple Rows<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+    <comment>Select an answer for each</comment>
+    <row label="r1">Friendliness</row>
+    <row label="r2">Ability to answer your questions</row>
+    <row label="r3">Quality of service</row>
+  </number>
+<suspend/>

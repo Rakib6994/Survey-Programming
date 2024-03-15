@@ -1,0 +1,18 @@
+Style 1:
+
+<radio label="q3" atmtable:table_css="width: 30%;" uses="atmtable.6">
+    <title>Are you...?</title>
+    <col label="c1">&lt;img class="survey_image" src="[rel male-2.png]" title="survey image" constrain="true" alt="male-2.png" height="178" width="83" /&gt;</col>
+    <col label="c2">&lt;img class="survey_image" src="[rel female-2.png]" title="survey image" constrain="true" alt="female-2.png" height="178" width="83" /&gt;</col>
+  </radio>
+
+
+
+Style 2:
+
+
+<radio label="q4"
+atmtable:btn_css="background: #fff; border: 1px solid #f80; border-radius: 100px;"
+atmtable:btn_selected_css="background: #f80"
+atmtable:table_css="width: 35%;"
+uses="atmtable.6">

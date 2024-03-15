@@ -1,0 +1,5 @@
+<style label="disable_continue1A" arg:timeout="3" mode="after" name="survey.respview.footer" with="P_QuantityPurchased1A" wrap="ready"><![CDATA[
+var b = $ ("#btn_continue, #btn_finish");
+b.disable();
+setTimeout(function() { b.enable()} , $(timeout)*1000);
+]]></style>

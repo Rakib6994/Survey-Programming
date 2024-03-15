@@ -1,0 +1,46 @@
+S_Frequency.r1.c1: 100%
+(S_Age.check('18-99'): 100%
+S_StoreType.c1.r2: 100%
+
+Working-
+For a one-dimensional Single Select question like this:
+q1: r2
+q2: r2 r3 r4
+
+For a two-dimensional Single Select question like this:
+
+q1.r1: c1
+q1.r2: c1 c2
+
+For a one-dimensional Multi-Select question like this:
+
+q2.r2: 100%
+q2.r3: 0%
+q3.r2: 50%
+q3.r3: 50%
+q3.r4: 25%
+
+For a two-dimensional Multi-Select question like this:
+
+q1.r1.c1: 100%
+q1.r1.c2: 0%
+
+For a one-dimensional Text question like this:
+
+q4: "Hello, world!" & '"quotes"'
+q5: 42 "foo" bars
+
+For a two-dimensional Text question like this:
+
+Q1.r1.c1: Hello World
+Q1.r1.c2: ""
+
+For a one-dimensional Drop-down question like this:
+
+q6.r1: ch1
+q6.r2: ch2 ch3
+
+For a two-dimensional Select question like this:
+
+q6.r1.c1: ch1
+q6.r1.c2: ch2 ch3

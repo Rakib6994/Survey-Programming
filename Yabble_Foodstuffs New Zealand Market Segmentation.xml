@@ -1,0 +1,2413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="Yabble_Foodstuffs New Zealand Market Segmentation"
+  atm1d:showInput="0"
+  autoRecover="1"
+  autosaveKey="yabbleid,psid,pid,transaction_id,CID"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="141"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  otherLanguages="simplifiedchinese,tagalog"
+  remerged="20231208_17:43"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="0"
+  ss:listDisplay="1"
+  ss:logoAlt=""
+  ss:logoFile=""
+  ss:logoPosition=""
+  state="testing"
+  theme="frozen:survey"
+  trackVars="checkbox"
+  version="48">
+
+<res label="startbtn">START</res>
+<res label="errAFFIN1">Please select at least 1 answer.</res>
+<res label="errXDFRN_2">Please provide valid name of the child.</res>
+<res label="errXDFRN">You have entered an age the same as a previous child – is this correct.</res>
+<res label="errSSQ4">Please review your response. Expenditure on toys cannot be more than the total expenditure.</res>
+<res label="errHQ1x1">Please select an answer.</res>
+<res label="errHQ1x2">Please select an answer only if browse website on computer or use Internet on mobile phone.</res>
+<res label="continuebtn">NEXT</res>
+<res label="cardbtn">&amp;nbsp;</res>
+<res label="Errpostcode">Please check your postcode!</res>
+<res label="S9ar1">e.g., Gauze Bandage, Adhesive Bandage, Blister Cushions</res>
+<res label="S9ar2">e.g., Disposable (vinyl, latex, nitrile, natural rubber), Reusable (leather, cotton, dipped)</res>
+<res label="S9ar3">e.g., Antibiotic ointment, Antiseptic ointment, Antifungal ointment</res>
+<res label="S9ar4">e.g., Multi-surface wipes, Grill wipes, Glass wipes</res>
+<res label="S9ar6">e.g., Sunscreen, After sun lotion</res>
+<res label="S9ar7">e.g., Body lotion, Face lotion, Hand lotion</res>
+<res label="S9ar9">e.g., liquid, bar, foam, etc.</res>
+<res label="S9ar10">e.g., Spray hand sanitizer, Foam hand sanitizer, Gel hand sanitizer</res>
+<res label="S9ar15">e.g., Adult incontinence briefs, Adult protective underwear, Adult diapers</res>
+<res label="S9ar16">e.g., Incontinence bed pads, Pet potty training pads</res>
+<res label="S9ar20">e.g., stick, spray, roll-on, wipes</res>
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="20">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <var name="pid" unique="1"/>
+    <exit cond="terminated" url="https://api.dynata.com/respondent/exit?rst=2&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://api.dynata.com/respondent/exit?rst=1&amp;psid=${psid}&amp;basic=95072"/>
+    <exit cond="overquota" url="https://api.dynata.com/respondent/exit?rst=3&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>Customer Link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" required="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://analyticsify.com/">Thank you for taking our survey.</exit>
+    <exit cond="terminated" url="https://analyticsify.com/">Thank you for taking our survey.</exit>
+    <exit cond="qualified" url="https://analyticsify.com/">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota" url="https://analyticsify.com/">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Panel link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>AU - Supplier 1</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <var name="co" required="1" values="it,us,de,es,fr,uk"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://surveys.sample-cube.com/ending?RS=4&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending?RS=3&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending?RS=1&amp;RID=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending?RS=2&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="12">
+    <title>AU - Supplier 2</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://samplicio.us/s/ClientCallBack.aspx?RIS=30&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated" url="https://samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=8614a8ab-cdc8-4a95-abef-ec75a02179e4&amp;RID=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="https://samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="13">
+    <title>AU - Supplier 3</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://spectrumsurveys.com/surveydone?st=20&amp;transaction_id=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="21">
+    <title>NZ - Supplier 1</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://surveys.sample-cube.com/ending?RS=4&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending?RS=3&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending?RS=1&amp;RID=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending?RS=2&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="22">
+    <title>NZ - Supplier 2</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://samplicio.us/s/ClientCallBack.aspx?RIS=30&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated" url="https://samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=8614a8ab-cdc8-4a95-abef-ec75a02179e4&amp;RID=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="https://samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="23">
+    <title>NZ - Supplier 3</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and hasMarker('QCterminate')" url="https://spectrumsurveys.com/surveydone?st=20&amp;transaction_id=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="3">
+    <title>PS</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}&amp;ps_hash=pYndVZ5Y"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+    <exit cond="SC.r1" url="https://spectrumsurveys.com/surveydone?st=20&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="29">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="CID" unique="1"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=e96f3c9a-0068-cb45-b03f-ce1f571d67ba&amp;CID=${CID}"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=cca01932-eda7-44de-b907-1958a8f8827f&amp;CID=${CID}"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=e96f3c9a-0068-cb45-b03f-ce1f571d67ba&amp;CID=${CID}"/>
+    <exit cond="SC.r1" url="https://s.cint.com/Survey/Finished?ProjectToken=e96f3c9a-0068-cb45-b03f-ce1f571d67ba&amp;CID=${CID}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<style cond="1" name="survey.respview.footer.support"><![CDATA[
+<div style="text-align: center;" jstcache="0"><a href="/support?decLang=english" target="_blank" jstcache="0">Help</a></div>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+.rnkclass1 {
+  display: inline-block;
+}
+.rnkclass {
+  list-style:none;
+  background-color: #57585b;
+  border-color: #57585b;
+  color: #fff;
+  min-height: 170px;
+  margin: 10px;
+  padding: 10px;
+  \@if (gv.request.device.properties["isMobileDevice"] == "0")
+  width: 20%;
+  \@endif
+  font-size: 14px;
+  text-align:center;
+  float: left;
+}
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+  </style>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+html:not(.lte-ie9) .fir-select .input.dropdown {
+    font-family: Arial,sans-serif;
+}
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+.sq-atmrating .atmrating_rightPosition {
+    text-align: left;
+}
+.sq-atmrating .atmrating_leftPosition {
+    text-align: right;
+}
+.grid.grid-table-mode .row-legend {
+    line-height: 20px;
+}
+.table1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 100%
+}
+
+.td1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 15%;
+      background-color: lightgrey;
+}
+.td2 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 200px;
+}
+.td3 {
+     border: 0.5px solid black;
+     padding: 5px;
+     text-align: center;
+     width: 300px;
+}
+.td_Image {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: center;
+     width: 300px;
+}
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+.instruction-text {
+    font-style: italic;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-large .sq-atm1d-button {      
+    min-width: 150px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: auto !important;
+    min-width: 200px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-width: 165px;
+}
+.sq-atm1d .sq-atm1d-buttons {
+    display: block;
+}
+
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+ body { direction: rtl; }
+ .survey-buttons { text-align: left !important; }
+ #surveyContent, .survey-body, .question-text, .instruction-text,
+ .grid.grid-table-mode .row-legend, .grid-desktop-mode.grid-list-mode .cell-section,
+ .grid-single-col .cell, .grid[data-settings*='single-col'] .cell,
+ .noRows .grid.grid.grid-table-mode .colCount-1 .element,
+ .noRows .grid.grid.grid-table-mode .colCount-1 .col-legend { text-align: right !important; }
+ .survey-body .fir-hidden { left: auto !important; right: -9999px !important; }
+
+</style>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+.table1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 100%
+}
+.grid.grid-table-mode .row-legend {
+    line-height: 20px;
+}
+.td1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 15%;
+      background-color: lightgrey;
+}
+.td2 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 200px;
+}
+.td3 {
+     border: 0.5px solid black;
+     padding: 5px;
+     text-align: center;
+     width: 300px;
+}
+.td_Image {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: center;
+     width: 300px;
+}
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+.instruction-text {
+    font-style: italic;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-large .sq-atm1d-button {      
+    min-width: 150px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: auto !important;
+    min-width: 200px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-width: 165px;
+}
+.sq-atm1d .sq-atm1d-buttons {
+    display: block;
+}
+
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+</style>
+]]></style>
+<style label="QNumstyle" arg:mlen="2" name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="$(name)" value="$(value)" maxLength="$(mlen)" size="$(size)" onkeypress="return isNumberKey(event)" style="height:40px; font-size:16px;border-radius:10px;text-align:center;" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+<script>
+function isNumberKey(evt)
+{
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+               return false;
+
+       return true;
+}
+</script>
+]]></style>
+<style label="disable_continue" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ ('.sq-cardsort-next').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').on("drop",function(e) {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+function cardSortNext() {
+  if ($ ('.sq-cardsort-completion').is(':visible')) {
+    $ ("#btn_continue").click();
+  }
+}
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script src="https://au.focusvision.com/survey/selfserve/6a7/231000/hideContinue.js"></script>
+<script src="https://au.focusvision.com/survey/selfserve/6a7/231000/AutoContinue.js"></script>
+]]></style>
+<style name="button.continue"><![CDATA[
+<input type="submit" name="continue" id="btn_continue" class="button continue nextbtn" value="${res.continuebtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+]]></style>
+<style name="button.finish"><![CDATA[
+<div class="wrap">
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="Finish" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+</div>
+]]></style>
+<suspend/>
+
+<checkbox 
+  label="changeLog"
+  optional="1"
+  style="dev">
+  <title>Record the changes log</title>
+  <comment>SP use only.</comment>
+  <row label="r1">change S7, S8</row>
+</checkbox>
+
+<suspend/>
+
+<text 
+  label="sst"
+  cond="0"
+  size="40">
+  <title>section time</title>
+  <row label="S">screener</row>
+  <row label="A">section A</row>
+  <row label="B">section B</row>
+  <row label="C">section C</row>
+  <row label="D">section D</row>
+  <row label="E">section E</row>
+  <row label="F">section F</row>
+  <row label="G">section G</row>
+  <row label="Z">section Z</row>
+</text>
+
+<suspend/>
+
+<exec>
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+if list=="1":
+  qhidxSupplier.val=0
+else:
+  qhidxSupplier.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="qhidxSupplier"
+  optional="1"
+  style="dev"
+  where="execute,survey,report">
+  <title>Record the Supplier</title>
+  <row label="r1" value="1">Customer sample</row>
+  <row label="r2" value="2">Panel sample</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if list=="1" or list=="11" or list=="12" or list=="13" :
+  qhid.val=0
+else:
+  qhid.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="qhid"
+  cond="0"
+  optional="1"
+  style="dev,testing">
+  <title>Sample</title>
+  <row label="r1">AUS</row>
+  <row label="r2">NZ</row>
+</radio>
+
+<suspend/>
+
+<exec>
+p.times1 = time.time()
+</exec>
+
+<suspend/>
+
+<exec>
+for eachRow in pipeCountry.rows:
+  if eachRow.label == co:
+    pipeCountry.val = eachRow.index
+    break
+
+if gv.isSST():
+  pipeCountry.val = random.randrange(0,48)
+</exec>
+
+<suspend/>
+
+<radio 
+  label="pipeCountry"
+  optional="1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punchin country code</title>
+  <comment>Please select one answer.</comment>
+  <row label="au">Australia</row>
+  <row label="at">Austria</row>
+  <row label="be">Belgium</row>
+  <row label="ca">Canada</row>
+  <row label="cn">China</row>
+  <row label="cz">Czech Republic</row>
+  <row label="dk">Denmark</row>
+  <row label="fn">Finland</row>
+  <row label="fr">France</row>
+  <row label="de">Germany</row>
+  <row label="gr">Greece</row>
+  <row label="hk">Hong Kong</row>
+  <row label="hu">Hungary</row>
+  <row label="il">Israel</row>
+  <row label="it">Italy</row>
+  <row label="jp">Japan</row>
+  <row label="ksa">KSA</row>
+  <row label="lt">Lithuania</row>
+  <row label="my">Malaysia</row>
+  <row label="mx">Mexico</row>
+  <row label="nl">Netherlands</row>
+  <row label="no">Norway</row>
+  <row label="pl">Poland</row>
+  <row label="pt">Portugal</row>
+  <row label="ro">Romania</row>
+  <row label="ru">Russia</row>
+  <row label="rs">Serbia</row>
+  <row label="sg">Singapore</row>
+  <row label="kr">South Korea</row>
+  <row label="es">Spain</row>
+  <row label="sw">Sweden</row>
+  <row label="ch">Switzerland</row>
+  <row label="tw">Taiwan</row>
+  <row label="tr">Turkey</row>
+  <row label="ae">UAE</row>
+  <row label="uk">UK</row>
+  <row label="ua">Ukraine</row>
+  <row label="us">USA</row>
+  <row label="br">Brazil</row>
+  <row label="bg">Bulgaria</row>
+  <row label="hr">Croatia</row>
+  <row label="ee">Estonia</row>
+  <row label="ie">Ireland</row>
+  <row label="lv">Latvia</row>
+  <row label="nz">New Zealand</row>
+  <row label="sk">Slovakia</row>
+  <row label="si">Slovenia</row>
+  <row label="za">South Africa</row>
+  <row label="ph">Philippines</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if pipeCountry.us:  dCountry.val = 0
+if pipeCountry.uk:  dCountry.val = 1
+if pipeCountry.fr:  dCountry.val = 2
+if pipeCountry.de:  dCountry.val = 3
+if pipeCountry.it:  dCountry.val = 4
+if pipeCountry.es:  dCountry.val = 5
+</exec>
+
+<radio 
+  label="dCountry"
+  optional="1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punching country</title>
+  <row label="r1">United States</row>
+  <row label="r2">UK</row>
+  <row label="r3">France</row>
+  <row label="r4">Germany</row>
+  <row label="r5">Italy</row>
+  <row label="r6">Spain</row>
+</radio>
+
+<exec>
+if pipeCountry.us:  LNG.val = 0
+if pipeCountry.uk:  LNG.val = 1
+if pipeCountry.fr:  LNG.val = 2
+if pipeCountry.de:  LNG.val = 3
+if pipeCountry.it:  LNG.val = 4
+if pipeCountry.es:  LNG.val = 5
+</exec>
+
+<radio 
+  label="LNG"
+  optional="1"
+  uses="atm1d.10"
+  where="execute,survey,report">
+  <title>Please select the language which you would like to answer this survey in.</title>
+  <comment><em>Please select one answer.</em></comment>
+  <row label="r1" cond="pipeCountry.us">United States</row>
+  <row label="r2" cond="pipeCountry.uk">UK</row>
+  <row label="r3" cond="pipeCountry.fr">France</row>
+  <row label="r4" cond="pipeCountry.de">German</row>
+  <row label="r5" cond="pipeCountry.it">English</row>
+  <row label="r6" cond="pipeCountry.es">Spain</row>
+</radio>
+
+<suspend/>
+
+<exec sst="0">
+if LNG.r1:
+  setLanguage('english')
+if LNG.r2:
+  setLanguage('english')
+if LNG.r3:
+  setLanguage('english')
+if LNG.r4:
+  setLanguage('english')  
+if LNG.r5:
+  setLanguage('english')
+if LNG.r6:
+  setLanguage('english')
+</exec>
+
+<suspend/>
+
+<logic label="ln1" uses="recaptcha.1">
+  <title>Please verify rCaptcha before clicking continue?</title></logic>
+<suspend/>
+
+<radio 
+  label="ln1_results"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Results</title>
+  <comment>Select one</comment>
+  <exec>
+ln1_results.val = int(not ln1.human)
+  </exec>
+
+  <row label="r1">Human</row>
+  <row label="r2">Not Human</row>
+</radio>
+
+<suspend/>
+
+<term cond="(ln1_results.r2)">Term : Captcha</term>
+
+<suspend/>
+
+<radio 
+  label="DQC11"
+  cond="0"
+  uses="atm1d.10">
+  <title><b>Our commitment to data quality.</b><br /><br />The research that you are taking part in is conducted to help organisations make important decisions that impact the products and services that they can deliver to you. It is therefore important that the answers you provide are thoughtful and correct.<br /><br />
+As you complete the survey, we will ask some questions that are designed to ensure you are paying attention.<br /><br />
+It is critical that you answer these questions correctly. If you do not, you will be excluded from the survey, and you may lose the right to receive any incentive offered.<br /><br />
+If you are happy to proceed with the survey on this basis, please select ‘Yes’ from the options below. Selecting no will result in the termination of this survey.</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<term label="T1" cond="0">Code 2</term>
+
+<suspend/>
+
+<html label="Info" where="survey">Hello.  Thank you for agreeing to participate in this survey!  This survey should take about 10-15 minutes.  Please read all instructions carefully and answer all questions honestly.<br /><br />
+Click <b>next</b> to continue.</html>
+
+<suspend/>
+
+<checkbox 
+  label="S4"
+  atleast="1"
+  uses="atm1d.10">
+  <title>Do you or does anyone in your household work for any of the following?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">A manufacturer, distributor or wholesaler of consumer packaged goods or food products</row>
+  <row label="r2">A store that sells groceries</row>
+  <row label="r3">A marketing research company or department</row>
+  <row label="r4">An advertising agency or public relations firm</row>
+  <row label="r5">The media (television station, newspaper, radio station, or magazine publisher)</row>
+  <row label="r6" exclusive="1">None of the above</row>
+</checkbox>
+
+<suspend/>
+
+<term label="TermS4" cond="not(S4.r6)">S4</term>
+
+<suspend/>
+
+<exec when="init">
+def group_choice( question, grouped_choice ):
+    first_item_index = None
+    shuffle_order = [choice.index for row in question.choice.order]
+
+    for index, choice in enumerate( shuffle_order ):
+        if question.choice[choice].label in grouped_choice:
+            if first_item_index == None:
+                first_item_index = index
+            else:
+                first_item_index += 1
+                shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+
+    question.choice.order = shuffle_order
+</exec>
+
+<select 
+  label="S1"
+  sortChoices="asc,survey">
+  <title>In which region do you live?</title>
+  <comment>Please select one.</comment>
+  <choice label="ch1">Northland</choice>
+  <choice label="ch2">Auckland</choice>
+  <choice label="ch3">Waikato</choice>
+  <choice label="ch4">Bay of Plenty</choice>
+  <choice label="ch5">Gisborne</choice>
+  <choice label="ch6">Hawkes Bay</choice>
+  <choice label="ch7">Taranaki</choice>
+  <choice label="ch8">Manawatu – Wanganui</choice>
+  <choice label="ch9">Wellington</choice>
+  <choice label="ch10">Christchurch (Canterbury)</choice>
+  <choice label="ch11">Canterbury (Outside of Christchurch)</choice>
+  <choice label="ch12">Nelson</choice>
+  <choice label="ch13">Tasman</choice>
+  <choice label="ch14">Marlborough</choice>
+  <choice label="ch15">West Coast</choice>
+  <choice label="ch16">Otago</choice>
+  <choice label="ch17">Southland</choice>
+</select>
+
+<suspend/>
+
+<checkbox 
+  label="S1_ISLAND"
+  where="execute,survey,report">
+  <title>S1_ISLAND</title>
+  <row label="r1" autofill="S1.ch1 or S1.ch2 or S1.ch3 or S1.ch4 or S1.ch5 or S1.ch6 or S1.ch7 or S1.ch8 or S1.ch9">NORTH ISLAND</row>
+  <row label="r2" autofill="S1.ch10 or S1.ch11 or S1.ch12 or S1.ch13 or S1.ch14 or S1.ch15 or S1.ch16 or S1.ch17">SOUTH ISLAND</row>
+</checkbox>
+
+<suspend/>
+
+<select 
+  label="S2">
+  <title>Which year were you born?</title>
+  <comment>Please select one.</comment>
+  <choice label="ch1">1924</choice>
+  <choice label="ch2">1925</choice>
+  <choice label="ch3">1926</choice>
+  <choice label="ch4">1927</choice>
+  <choice label="ch5">1928</choice>
+  <choice label="ch6">1929</choice>
+  <choice label="ch7">1930</choice>
+  <choice label="ch8">1931</choice>
+  <choice label="ch9">1932</choice>
+  <choice label="ch10">1933</choice>
+  <choice label="ch11">1934</choice>
+  <choice label="ch12">1935</choice>
+  <choice label="ch13">1936</choice>
+  <choice label="ch14">1937</choice>
+  <choice label="ch15">1938</choice>
+  <choice label="ch16">1939</choice>
+  <choice label="ch17">1940</choice>
+  <choice label="ch18">1941</choice>
+  <choice label="ch19">1942</choice>
+  <choice label="ch20">1943</choice>
+  <choice label="ch21">1944</choice>
+  <choice label="ch22">1945</choice>
+  <choice label="ch23">1946</choice>
+  <choice label="ch24">1947</choice>
+  <choice label="ch25">1948</choice>
+  <choice label="ch26">1949</choice>
+  <choice label="ch27">1950</choice>
+  <choice label="ch28">1951</choice>
+  <choice label="ch29">1952</choice>
+  <choice label="ch30">1953</choice>
+  <choice label="ch31">1954</choice>
+  <choice label="ch32">1955</choice>
+  <choice label="ch33">1956</choice>
+  <choice label="ch34">1957</choice>
+  <choice label="ch35">1958</choice>
+  <choice label="ch36">1959</choice>
+  <choice label="ch37">1960</choice>
+  <choice label="ch38">1961</choice>
+  <choice label="ch39">1962</choice>
+  <choice label="ch40">1963</choice>
+  <choice label="ch41">1964</choice>
+  <choice label="ch42">1965</choice>
+  <choice label="ch43">1966</choice>
+  <choice label="ch44">1967</choice>
+  <choice label="ch45">1968</choice>
+  <choice label="ch46">1969</choice>
+  <choice label="ch47">1970</choice>
+  <choice label="ch48">1971</choice>
+  <choice label="ch49">1972</choice>
+  <choice label="ch50">1973</choice>
+  <choice label="ch51">1974</choice>
+  <choice label="ch52">1975</choice>
+  <choice label="ch53">1976</choice>
+  <choice label="ch54">1977</choice>
+  <choice label="ch55">1978</choice>
+  <choice label="ch56">1979</choice>
+  <choice label="ch57">1980</choice>
+  <choice label="ch58">1981</choice>
+  <choice label="ch59">1982</choice>
+  <choice label="ch60">1983</choice>
+  <choice label="ch61">1984</choice>
+  <choice label="ch62">1985</choice>
+  <choice label="ch63">1986</choice>
+  <choice label="ch64">1987</choice>
+  <choice label="ch65">1988</choice>
+  <choice label="ch66">1989</choice>
+  <choice label="ch67">1990</choice>
+  <choice label="ch68">1991</choice>
+  <choice label="ch69">1992</choice>
+  <choice label="ch70">1993</choice>
+  <choice label="ch71">1994</choice>
+  <choice label="ch72">1995</choice>
+  <choice label="ch73">1996</choice>
+  <choice label="ch74">1997</choice>
+  <choice label="ch75">1998</choice>
+  <choice label="ch76">1999</choice>
+  <choice label="ch77">2000</choice>
+  <choice label="ch78">2001</choice>
+  <choice label="ch79">2002</choice>
+  <choice label="ch80">2003</choice>
+  <choice label="ch81">2004</choice>
+  <choice label="ch82">2005</choice>
+  <choice label="ch83">2006</choice>
+  <choice label="ch84">2007</choice>
+  <choice label="ch85">2008</choice>
+  <choice label="ch86">2009</choice>
+  <choice label="ch87">2010</choice>
+  <choice label="ch88">Prefer not to share</choice>
+</select>
+
+<suspend/>
+
+<checkbox 
+  label="Age"
+  where="execute,survey,report">
+  <title>LIFESTAGE</title>
+  <row label="r1" autofill="S2.ch77 or S2.ch78 or S2.ch79 or S2.ch80 or S2.ch81 or S2.ch82 or S2.ch83">Age 18-24</row>
+  <row label="r2" autofill="S2.ch72 or S2.ch73 or S2.ch74 or S2.ch75 or S2.ch76">Age 25-29</row>
+  <row label="r3" autofill="S2.ch67 or S2.ch68 or S2.ch69 or S2.ch70 or S2.ch71">Age 30-34</row>
+  <row label="r4" autofill="S2.ch62 or S2.ch63 or S2.ch64 or S2.ch65 or S2.ch66">Age 35-39</row>
+  <row label="r5" autofill="S2.ch57 or S2.ch58 or S2.ch59 or S2.ch60 or S2.ch61">Age 40-44</row>
+  <row label="r6" autofill="S2.ch52 or S2.ch53 or S2.ch54 or S2.ch55 or S2.ch56">Age 45-49</row>
+  <row label="r7" autofill="S2.ch47 or S2.ch48 or S2.ch49 or S2.ch50 or S2.ch51">Age 50-54</row>
+  <row label="r8" autofill="S2.ch42 or S2.ch43 or S2.ch44 or S2.ch45 or S2.ch46">Age 55-59</row>
+  <row label="r9" autofill="S2.ch37 or S2.ch38 or S2.ch39 or S2.ch40 or S2.ch41">Age 60-64</row>
+  <row label="r10" autofill="S2.ch32 or S2.ch33 or S2.ch34 or S2.ch35 or S2.ch36">Age 65-69</row>
+  <row label="r11" autofill="S2.ch1 or S2.ch2 or S2.ch3 or S2.ch4 or S2.ch5 or S2.ch6 or S2.ch7 or S2.ch8 or S2.ch9 or S2.ch10 or S2.ch11 or S2.ch12 or S2.ch13 or S2.ch14 or S2.ch15 or S2.ch16 or S2.ch17 or S2.ch18 or S2.ch19 or S2.ch20 or S2.ch21 or S2.ch22 or S2.ch23 or S2.ch24 or S2.ch25 or S2.ch26 or S2.ch27 or S2.ch28 or S2.ch29 or S2.ch30 or S2.ch31">Age 70 years or older</row>
+</checkbox>
+
+<suspend/>
+
+<term label="TermS2" cond="S2.ch84 or S2.ch85 or S2.ch86 or S2.ch87">S2</term>
+
+<suspend/>
+
+<radio 
+  label="S3"
+  uses="atm1d.10">
+  <title>What is your gender?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Male</row>
+  <row label="r2">Female</row>
+  <row label="r3">Gender Diverse</row>
+  <row label="r4">Prefer not to share</row>
+</radio>
+
+<suspend/>
+
+<autofill label="Gender" randomize="0" where="execute,survey,report">
+  <title>Gender</title>
+  <row label="r1" autofill="(S3.r1)">Male</row>
+  <row label="r2" autofill="(S3.r2)">Female</row>
+  <row label="r3" autofill="(S3.r3 or S3.r4)">Other</row>
+</autofill>
+
+<suspend/>
+
+<radio 
+  label="S5"
+  uses="atm1d.10">
+  <title>Are you responsible for grocery shopping for your household, including deciding where to shop and what to buy?  By groceries we mean common food, beverage, and non-food items found in your typical grocery store, wholesale store, liquor store, or website. </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes, I am the sole person responsible</row>
+  <row label="r2">Yes, I share responsibility with someone else</row>
+  <row label="r3">No</row>
+</radio>
+
+<suspend/>
+
+<term label="TermS5" cond="S5.r3">S5</term>
+
+<suspend/>
+
+<label label="sect2" builder:title="NEEDS AND EXPRESSED BEHAVIORS "/>
+
+<exec>
+p.times2 = time.time()
+VAR_TIME_1.r1.val = ("%.2f" % ((p.times2- p.times1) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_1"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Screener section</row>
+</float>
+
+<suspend/>
+
+<style label="disable_continue" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ ('.sq-cardsort-next').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').on("drop",function(e) {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+function cardSortNext() {
+  if ($ ('.sq-cardsort-completion').is(':visible')) {
+    $ ("#btn_continue").click();
+  }
+}
+]]></style>
+<radio 
+  label="N1"
+  colLegendRows="8"
+  shuffle="rows">
+  <title>When choosing where to do your grocery shopping, <b>how important are the following factors to you</b>?  </title>
+  <comment>Please select one in each row.</comment>
+  <col label="c1">Not at all Important</col>
+  <col label="c2">A little important</col>
+  <col label="c3">Moderately Important</col>
+  <col label="c4">Very Important</col>
+  <col label="c5">Extremely Important</col>
+  <row label="r1">Their private/store brand products are high quality</row>
+  <row label="r2">Has great discounts/sales on items I buy regularly</row>
+  <row label="r3">Prices are lower than other retailers</row>
+  <row label="r4">Offers the highest quality products</row>
+  <row label="r5">Offers a wide variety of natural/organic products</row>
+  <row label="r6">The retailer helps me make healthy choices</row>
+  <row label="r7">The retailer has easy ways to shop online</row>
+  <row label="r8">The retailer rewards me for shopping with them</row>
+  <row label="r9">I can get my shopping done quickly</row>
+  <row label="r10">Has very convenient locations/ Closest to where I live</row>
+  <row label="r11">Has a wide variety of new and different products</row>
+  <row label="r12">Has a close connection with the local community</row>
+  <row label="r13">Positive experiences with store staff</row>
+  <row label="r14">Pleasant/enjoyable store ambiance/look/feel</row>
+  <row label="r15">A single store can be my destination for all types of grocery trips</row>
+  <row label="r16">Has a selection of items that are connected to my cultural/ethnic heritage</row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_N1.val = 1
+for itr in range(len(N1.cols)):
+  if N1.cols[itr].all:
+     FlatLiner_N1.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_N1"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="N2"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>Thinking about your recent grocery shopping habits, how often do you do the following?</title>
+  <comment>Please select one.</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <col label="c1">Never</col>
+  <col label="c2">Less than half the time</col>
+  <col label="c3">About half the time</col>
+  <col label="c4">Most of the time</col>
+  <col label="c5">All the time</col>
+  <row label="r1">Check prices online before/during my shop</row>
+  <row label="r2">Shop around at different stores to get all the products I need</row>
+  <row label="r3">Shop at stores where the prices are already low, without using special sales/deals</row>
+  <row label="r4">Order groceries online</row>
+  <row label="r5">Interact with a store's app (for anything related to your grocery shop)</row>
+  <row label="r6">Swipe, scan, or log-in when shopping in order to earn rewards</row>
+  <row label="r7">Redeem discounts or deals from a store's loyalty program</row>
+  <row label="r8">Consciously try to choose healthy foods when shopping</row>
+  <row label="r9">Read the diet and nutrition information on the pack before buying products</row>
+  <row label="r10">Select sustainable products/packaging when shopping</row>
+  <row label="r11">Choose organic or natural products</row>
+  <row label="r12">Instead of groceries, have restaurant-made meals (either at the restaurant or from take-away)</row>
+  <row label="r13">Look for new items/ingredients I haven't tried before</row>
+  <row label="r14">Buy food that is fast/easy to prepare and eat</row>
+  <row label="r15">Buy frozen produce instead of fresh</row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_N2.val = 1
+for itr in range(len(N2.cols)):
+  if N2.cols[itr].all:
+     FlatLiner_N2.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_N2"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="N3"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Are there any particular food trends or dietary approaches that you or anyone in your household are following?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Lower or sugar-free</row>
+  <row label="r2">Lower or fat free</row>
+  <row label="r3">Low salt</row>
+  <row label="r4">Vegetarian</row>
+  <row label="r5">Pescatarian</row>
+  <row label="r6">Vegan</row>
+  <row label="r7">Organic</row>
+  <row label="r8">Gluten-free</row>
+  <row label="r9">Dairy or lactose-free</row>
+  <row label="r10">Ketogenic</row>
+  <row label="r11">Paleo</row>
+  <row label="r12">Trying to eat less meat / flexitarian / eating meat-free alternatives</row>
+  <row label="r13">Sustainably sourced/produced foods</row>
+  <row label="r14" open="1" openSize="25" randomize="0">Other</row>
+  <row label="r15" exclusive="1" randomize="0">No, don't follow any particular food approach or trend</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+p.times3 = time.time()
+VAR_TIME_2.r1.val = ("%.2f" % ((p.times3- p.times2) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_2"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Section 2</row>
+</float>
+
+<suspend/>
+
+<label label="sect3" builder:title="SHOPPING BEHAVIORS "/>
+
+<exec when="init">
+def group_rows( question, grouped_rows ):
+    first_item_index = None
+    shuffle_order = [row.index for row in question.rows.order]
+
+    for index, row in enumerate( shuffle_order ):
+        if question.rows[row].label in grouped_rows:
+            if first_item_index == None:
+                first_item_index = index
+            else:
+                first_item_index += 1
+                shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+
+    question.rows.order = shuffle_order
+</exec>
+
+<checkbox 
+  label="A1"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>In a typical month, at which of the following stores do you shop at for groceries?  Again, by groceries we mean common food, beverage, and non-food items found in your typical grocery store, liquor store, or website.</title>
+  <comment>Please select all that apply.</comment>
+  <exec>
+group_rows(A1,['r11','r12'])
+  </exec>
+
+  <row label="r1">PAK'n SAVE</row>
+  <row label="r2">New World</row>
+  <row label="r3">Countdown/ Woolworths</row>
+  <row label="r4">Four Square</row>
+  <row label="r5">Fresh Choice</row>
+  <row label="r6">SuperValue</row>
+  <row label="r7">The Warehouse</row>
+  <row label="r8">Pharmacy (Chemist Warehouse, Bargain Chemist, Independent pharmacies)</row>
+  <row label="r9">Costco</row>
+  <row label="r10" cond="S1_ISLAND.r1">Liquorland</row>
+  <row label="r11">Independent liquor stores</row>
+  <row label="r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" randomize="0">Dairy / convenience stores</row>
+  <row label="r14" randomize="0">Fruits and vegetables stores</row>
+  <row label="r15" randomize="0">Independent bakery stores</row>
+  <row label="r16" randomize="0">Petrol service stations</row>
+  <row label="r17" randomize="0">Butchers</row>
+  <row label="r18" open="1" randomize="0">Other not mentioned above (please specify)</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="A1_LIST"
+  where="execute,survey,report">
+  <title>Autopunch based on A1 answers.  This will be the text to show to respondents at later questions where we pipe in retailers names based on A1 answers</title>
+  <row label="r1" autofill="A1.r1">PAK'n SAVE</row>
+  <row label="r2" autofill="A1.r2">New World</row>
+  <row label="r3" autofill="A1.r3">Countdown/ Woolworths</row>
+  <row label="r4" autofill="A1.r4">Four Square</row>
+  <row label="r5" autofill="A1.r5">Fresh Choice</row>
+  <row label="r6" autofill="A1.r6">SuperValue</row>
+  <row label="r7" autofill="A1.r7">The Warehouse</row>
+  <row label="r8" autofill="A1.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" autofill="A1.r9">Costco</row>
+  <row label="r10" autofill="A1.r10">Liquorland</row>
+  <row label="r11" autofill="A1.r11">Independent liquor stores</row>
+  <row label="r12" autofill="A1.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" autofill="A1.r13">Dairy / convenience stores</row>
+  <row label="r14" autofill="A1.r14">Fruits and vegetables stores</row>
+  <row label="r15" autofill="A1.r15">Independent bakery stores</row>
+  <row label="r16" autofill="A1.r16">Petrol service stations</row>
+  <row label="r17" autofill="A1.r17">Butchers</row>
+  <row label="r18" autofill="A1.r18">${A1.r18.open}</row>
+</checkbox>
+
+<suspend/>
+
+<number 
+  label="A2A"
+  optional="0"
+  size="5"
+  ss:preText="$"
+  verify="range(1,5000)">
+  <title>In a typical month, about how much money do you spend on groceries?  </title>
+  <comment>Please make your best guess.</comment>
+</number>
+
+<suspend/>
+
+<number 
+  label="A2B"
+  amount="100"
+  optional="0"
+  size="5"
+  ss:listDisplay="0"
+  ss:postText="%"
+  uses="autosum.5"
+  verify="range(1,100)">
+  <title>In a typical month, about how much of your grocery spending is done online versus in-store?</title>
+  <comment>Please make your best guess.</comment>
+  <row label="r1">In-store spent is</row>
+  <row label="r2">Online spent is</row>
+</number>
+
+<suspend/>
+
+<number 
+  label="A3"
+  amount="100"
+  grouping="cols"
+  optional="0"
+  rowCond="A1_LIST[row.index]"
+  size="3"
+  ss:listDisplay="0"
+  ss:postText="%"
+  uses="autosum.5"
+  verify="range(0,100)">
+  <title><b>As a percentage</b> of your total grocery spending in a typical month, about how much do you spend at each of the following stores?</title>
+  <comment>Please make your best guess.</comment>
+  <row label="r1">PAK'n SAVE</row>
+  <row label="r2">New World</row>
+  <row label="r3">Countdown/ Woolworths</row>
+  <row label="r4">Four Square</row>
+  <row label="r5">Fresh Choice</row>
+  <row label="r6">SuperValue</row>
+  <row label="r7">The Warehouse</row>
+  <row label="r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9">Costco</row>
+  <row label="r10">Liquorland</row>
+  <row label="r11">Independent liquor stores</row>
+  <row label="r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13">Dairy / convenience stores</row>
+  <row label="r14">Fruits and vegetables stores</row>
+  <row label="r15">Independent bakery stores</row>
+  <row label="r16">Petrol service stations</row>
+  <row label="r17">Butchers</row>
+  <row label="r18" >${A1.r18.open}</row>
+</number>
+
+<suspend/>
+
+<checkbox 
+  label="Top3"
+  where="execute,survey,report">
+  <title>Top3 retailers based on the percentages.</title>
+  <exec>
+val1  = 0
+val2  = 0
+val3  = 0
+val4  = 0
+val5  = 0
+val6  = 0
+val7  = 0
+val8  = 0
+val9  = 0
+val10 = 0
+val11 = 0
+val12 = 0
+val13 = 0
+val14 = 0
+val15 = 0
+val16 = 0
+val17 = 0
+val18 = 0
+
+
+if A3.r1:  val1 =  A3.r1.val
+if A3.r2:  val2 =  A3.r2.val
+if A3.r3:  val3 =  A3.r3.val
+if A3.r4:  val4 =  A3.r4.val
+if A3.r5:  val5 =  A3.r5.val
+if A3.r6:  val6 =  A3.r6.val
+if A3.r7:  val7 =  A3.r7.val
+if A3.r8:  val8 =  A3.r8.val
+if A3.r9:  val9 =  A3.r9.val
+if A3.r10: val10 = A3.r10.val
+if A3.r11: val11 = A3.r11.val
+if A3.r12: val12 = A3.r12.val
+if A3.r13: val13 = A3.r13.val
+if A3.r14: val14 = A3.r14.val
+if A3.r15: val15 = A3.r15.val
+if A3.r16: val16 = A3.r16.val
+if A3.r17: val17 = A3.r17.val
+if A3.r18: val18 = A3.r18.val
+
+arr1 = [val1,val2,val3,val4,val5,val6,val7,val8,val9,val10,val11,val12,val13,val14,val15,val16,val17,val18]
+
+arr1.sort(reverse=True)
+
+flag = [0,0,0]
+
+for x in range(3):
+  for y in A3.rows:
+     if (not(Top3[y]) and flag[x] == 0 and A3[y].val == arr1[x]):
+        Top3[y].val = 1
+        flag[x] = 1
+  </exec>
+
+  <row label="r1">PAK'n SAVE</row>
+  <row label="r2">New World</row>
+  <row label="r3">Countdown/ Woolworths</row>
+  <row label="r4">Four Square</row>
+  <row label="r5">Fresh Choice</row>
+  <row label="r6">SuperValue</row>
+  <row label="r7">The Warehouse</row>
+  <row label="r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9">Costco</row>
+  <row label="r10">Liquorland</row>
+  <row label="r11">Independent liquor stores</row>
+  <row label="r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13">Dairy / convenience stores</row>
+  <row label="r14">Fruits and vegetables stores</row>
+  <row label="r15">Independent bakery stores</row>
+  <row label="r16">Petrol service stations</row>
+  <row label="r17">Butchers</row>
+  <row label="r18">${A1.r18.open}</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="RETAILER_SELECTION"
+  where="execute,survey,report">
+  <title>Autopunch based on A1 answers.  This will be the text to show to respondents at later questions where we pipe in retailers names based on A1 answers</title>
+  <row label="r1" autofill="Top3.r1">PAK'n SAVE</row>
+  <row label="r2" autofill="Top3.r2">New World</row>
+  <row label="r3" autofill="Top3.r3">Countdown/ Woolworths</row>
+  <row label="r4" autofill="Top3.r4">Four Square</row>
+  <row label="r5" autofill="Top3.r5">Fresh Choice</row>
+  <row label="r6" autofill="Top3.r6">SuperValue</row>
+  <row label="r7" autofill="Top3.r7">The Warehouse</row>
+  <row label="r8" autofill="Top3.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" autofill="Top3.r9">Costco</row>
+  <row label="r10" autofill="Top3.r10">Liquorland</row>
+  <row label="r11" autofill="Top3.r11">Independent liquor stores</row>
+  <row label="r12" autofill="Top3.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" autofill="Top3.r13">Dairy / convenience stores</row>
+  <row label="r14" autofill="Top3.r14">Fruits and vegetables stores</row>
+  <row label="r15" autofill="Top3.r15">Independent bakery stores</row>
+  <row label="r16" autofill="Top3.r16">Petrol service stations</row>
+  <row label="r17" autofill="Top3.r17">Butchers</row>
+  <row label="r18" autofill="Top3.r18">${A1.r18.open}</row>
+</checkbox>
+
+<suspend/>
+
+<loop label="L0" vars="A5Arows">
+  <title>New Loop</title>
+  <block label="b" builder:title="default loop block">
+    <exec when="init">
+def group_rows( question, grouped_rows ):
+    first_item_index = None
+    shuffle_order = [row.index for row in question.rows.order]
+
+    for index, row in enumerate( shuffle_order ):
+        if question.rows[row].label in grouped_rows:
+            if first_item_index == None:
+                first_item_index = index
+            else:
+                first_item_index += 1
+                shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+
+    question.rows.order = shuffle_order
+    </exec>
+
+    <checkbox 
+    label="A5A_[loopvar: label]"
+    atleast="1"
+    shuffle="rows"
+    uses="atm1d.10">
+      <title>When you shop at <b>[loopvar: A5Arows]</b> , what types of products/services do you buy in a typical month?</title>
+      <comment>Please select all that apply.</comment>
+      <exec>
+group_rows(A5A_[loopvar: label],['r15','r16','r17'])
+      </exec>
+
+      <row label="r1">Bread and bakery</row>
+      <row label="r2">Ready-to-Eat Meals (fresh at the store or packaged for immediate use)</row>
+      <row label="r3">Common Household Products (paper towels, detergent, tin foil, etc.)</row>
+      <row label="r4">Alcoholic Beverages</row>
+      <row label="r5">Items from the Deli (sliced meats, cheeses, etc.)</row>
+      <row label="r6">Fresh Produce (Fruits and vegetables)</row>
+      <row label="r7">Fresh Meat or Seafood (Minced beef, chicken breasts, fish, prawn, etc.)</row>
+      <row label="r8">Frozen Food and Ice cream</row>
+      <row label="r9">Dairy products and Eggs (milk, butter, eggs, etc.)</row>
+      <row label="r10">Packaged Food (cereal, pasta, canned vegetables, etc.)</row>
+      <row label="r11">Non-alcoholic Beverages (soft drinks, sparking water, etc.)</row>
+      <row label="r12">Personal Care/Hygiene products (skin/hair/mouth care, cosmetics, etc.)</row>
+      <row label="r13">Pet products</row>
+      <row label="r14">Baby products</row>
+      <row label="r15">Health Care products (non-prescription medicines, vitamins, etc.)</row>
+      <row label="r16">Prescription Medicine</row>
+      <row label="r17">Other non-grocery products (General merchandise, batteries, insect repellents, toys, etc.)</row>
+      <row label="r18" open="1" openSize="25" randomize="0">Other Specify</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="A5B_[loopvar: label]"
+    cardsort:animationDuration="200"
+    cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+    cardsort:bucketsPerRow="5"
+    cardsort:completionHTML="&amp;nbsp;"
+    cardsort:displayCounter="0"
+    cardsort:displayNavigation="1"
+    cardsort:displayProgress="1"
+    randomize="0"
+    uses="cardsort.6">
+      <title>When you shop at <b>[loopvar: A5Arows]</b>, how many of each type of trip do you take in a typical month?</title>
+      <comment>Please select one.</comment>
+      <col label="c1">0 of these trips</col>
+      <col label="c2">1 to 2 trips</col>
+      <col label="c3">3 to 4 trips</col>
+      <col label="c4">5 or more of these trips</col>
+      <row label="r1">Full-shop trips (more products, more categories across the store)</row>
+      <row label="r2">Top-up trips (fewer products, fewer categories across the store)</row>
+      <row label="r3">Specific need trip (1 or 2 items, usually because you're running low and need it soon)</row>
+      <row label="r4">Meal for later trips (items for a meal later that day or in the next few days)</row>
+      <row label="r5">Food to eat right away (for breakfast, lunch or dinner)</row>
+    </radio>
+
+    <suspend/>
+  </block>
+
+  <looprow label="Lr1" cond="(RETAILER_SELECTION.r1)">
+    <loopvar name="A5Arows">PAK’n SAVE</loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(RETAILER_SELECTION.r2)">
+    <loopvar name="A5Arows">New World</loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(RETAILER_SELECTION.r3)">
+    <loopvar name="A5Arows">Countdown/ Woolworths</loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(RETAILER_SELECTION.r4)">
+    <loopvar name="A5Arows">Four Square</loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(RETAILER_SELECTION.r5)">
+    <loopvar name="A5Arows">Fresh Choice</loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(RETAILER_SELECTION.r6)">
+    <loopvar name="A5Arows">SuperValue</loopvar>
+  </looprow>
+
+  <looprow label="Lr7" cond="(RETAILER_SELECTION.r7)">
+    <loopvar name="A5Arows">The Warehouse</loopvar>
+  </looprow>
+
+  <looprow label="Lr8" cond="(RETAILER_SELECTION.r8)">
+    <loopvar name="A5Arows">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</loopvar>
+  </looprow>
+
+  <looprow label="Lr9" cond="(RETAILER_SELECTION.r9)">
+    <loopvar name="A5Arows">Costco</loopvar>
+  </looprow>
+
+  <looprow label="Lr10" cond="(RETAILER_SELECTION.r10)">
+    <loopvar name="A5Arows">Liquorland</loopvar>
+  </looprow>
+
+  <looprow label="Lr11" cond="(RETAILER_SELECTION.r11)">
+    <loopvar name="A5Arows">Independent liquor stores</loopvar>
+  </looprow>
+
+  <looprow label="Lr12" cond="(RETAILER_SELECTION.r12)">
+    <loopvar name="A5Arows">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang’s, Japan Mart, T-Mart, etc.)</loopvar>
+  </looprow>
+
+  <looprow label="Lr13" cond="(RETAILER_SELECTION.r13)">
+    <loopvar name="A5Arows">Dairy / convenience stores</loopvar>
+  </looprow>
+
+  <looprow label="Lr14" cond="(RETAILER_SELECTION.r14)">
+    <loopvar name="A5Arows">Fruits and vegetables stores</loopvar>
+  </looprow>
+
+  <looprow label="Lr15" cond="(RETAILER_SELECTION.r15)">
+    <loopvar name="A5Arows">Independent bakery stores</loopvar>
+  </looprow>
+
+  <looprow label="Lr16" cond="(RETAILER_SELECTION.r16)">
+    <loopvar name="A5Arows">Petrol service stations</loopvar>
+  </looprow>
+
+  <looprow label="Lr17" cond="(RETAILER_SELECTION.r17)">
+    <loopvar name="A5Arows">Butchers</loopvar>
+  </looprow>
+
+  <looprow label="Lr18" cond="(RETAILER_SELECTION.r18)">
+    <loopvar name="A5Arows">${A1.r18.open}</loopvar>
+  </looprow>
+</loop>
+
+<suspend/>
+
+<radio 
+  label="A6"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>In a typical month, when you shop at the following retailers for non-perishable food/beverages (boxed/canned food, bagged/packaged food, frozen food, etc.), how much of what you buy is private/store brand (versus name brand)?
+  </title>
+  <comment>Please select the answer that is closest to your behavior at each store. </comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+  <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+  <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+  <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+  <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+  <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+  <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+  <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+  <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+  <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+  <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+  <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+  <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+  <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+  <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+  <col label="c1">0% of non-perishables I buy there are private/store brand</col>
+  <col label="c2">1-10% are private/store brand</col>
+  <col label="c3">11-25% are private/store brand</col>
+  <col label="c4">26%-40% are private/store brand</col>
+  <col label="c5">41%-60% are private/store brand</col>
+  <col label="c6">61%-75% are private/store brand</col>
+  <col label="c7">76%-100% are private/store brand</col>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="A7"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>In a typical month, when you shop at the following retailers for non-perishable food/beverages (boxed/canned food, bagged/packaged food, frozen food, etc.), how much of what you buy is organic (versus non-organic/conventional)?
+  </title>
+  <comment>Please select the answer that is closest to your behavior at each store. </comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+  <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+  <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+  <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+  <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+  <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+  <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+  <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+  <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+  <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+  <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+  <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+  <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+  <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+  <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+  <col label="c1">0% of non-perishables I buy there are organic</col>
+  <col label="c2">1-10% are organic</col>
+  <col label="c3">11-25% are organic</col>
+  <col label="c4">26%-40% are organic</col>
+  <col label="c5">41%-60% are organic</col>
+  <col label="c6">61%-75% are organic</col>
+  <col label="c7">76%-100% are organic</col>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="A8"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>In a typical month, when you shop at the following retailers for non-perishable food/beverages (boxed/canned food, bagged/packaged food, frozen food, etc.), how much of what you buy is on a temporary sale/promotion/price reduction (versus regular price)?
+  </title>
+  <comment>Please select the answer that is closest to your behavior at each store. </comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+  <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+  <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+  <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+  <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+  <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+  <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+  <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+  <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+  <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+  <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+  <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+  <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+  <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+  <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+  <col label="c1">0% of non-perishables I buy there are on sale</col>
+  <col label="c2">1-10% are on sale</col>
+  <col label="c3">11-25% are on sale</col>
+  <col label="c4">26%-40% are on sale</col>
+  <col label="c5">41%-60% are on sale</col>
+  <col label="c6">61%-75% are on sale</col>
+  <col label="c7">76%-100% are on sale</col>
+</radio>
+
+<suspend/>
+
+<number 
+  label="A10A"
+  optional="0"
+  size="5"
+  ss:listDisplay="0"
+  ss:preText="$"
+  verify="range(0,5000)">
+  <title>Now, thinking of the <u>last week</u>, about how much do you spend at each retailer?</title>
+  <comment>Please make your best guess.  Enter “0” for any option you don’t. </comment>
+  <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+  <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+  <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+  <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+  <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+  <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+  <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+  <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+  <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+  <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+  <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+  <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+  <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+  <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+  <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+</number>
+
+<suspend/>
+
+<number 
+  label="A10B"
+  optional="0"
+  size="5"
+  ss:listDisplay="0"
+  ss:postText="trips"
+  verify="range(0,30)">
+  <title>Thinking still of <u>last week</u>, about how many <b>actual in-store trips</b> did you take to [pipe: RETAILER_SELECTION]?</title>
+  <comment>Please make your best guess.  Enter “0” for any option you don’t. </comment>
+  <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+  <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+  <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+  <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+  <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+  <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+  <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+  <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+  <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+  <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+  <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+  <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+  <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+  <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+  <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+</number>
+
+<suspend/>
+
+<number 
+  label="A9"
+  optional="0"
+  size="5"
+  ss:listDisplay="0"
+  verify="range(0,30)">
+  <title>In the <u>last week</u>, about how many times do you purchase products online at each store?  By purchase products online, we mean complete the purchase on the store’s website or app and either pick it up at the store or have it delivered to your house.  </title>
+  <comment>Please make your best guess.  Enter “0” for any option you don’t.</comment>
+  <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+  <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+  <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+  <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+  <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+  <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+  <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+  <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+  <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+  <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+  <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+  <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+  <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+  <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+  <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+  <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+  <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+</number>
+
+<suspend/>
+
+<checkbox 
+  label="Q11_SELECTION"
+  shuffle="rows"
+  where="execute,survey,report">
+  <title>Q11 statements</title>
+  <row label="r1" autofill="1">Their private/store brand products are high quality</row>
+  <row label="r2" autofill="1">Has great discounts/sales on items I buy regularly</row>
+  <row label="r3" autofill="1">Already has low prices, without lots of discounts/special sales</row>
+  <row label="r4" autofill="1">Offers the highest quality products</row>
+  <row label="r5" autofill="1">Offers a wide variety of natural/organic products</row>
+  <row label="r6" autofill="1">Helps me make healthy choices</row>
+  <row label="r7" autofill="1">Has easy ways to shop online</row>
+  <row label="r8" autofill="1">Rewards me for shopping with them</row>
+  <row label="r9" autofill="1">I can get my shopping done quickly</row>
+  <row label="r10" autofill="1">Has very convenient locations</row>
+  <row label="r11" autofill="1">Has a wide variety of new and different products</row>
+  <row label="r12" autofill="1">Has a close connection with the local community</row>
+  <row label="r13" autofill="1">Experiences with store staff are always positive</row>
+  <row label="r14" autofill="1">Store ambiance/look/feel is very pleasant/enjoyable</row>
+  <row label="r15" autofill="1">Has a wide variety of products that support environmental sustainability</row>
+  <row label="r16" autofill="1">This retailer could be a destination for all my grocery related trip types</row>
+  <row label="r17" autofill="1">Has a selection of items that are connected to my cultural/ethnic heritage</row>
+  <row label="r18" autofill="1">Offers a wide variety of products that are quick to prepare/eat</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+arrOrder=[];
+for itr in range(len(Q11_SELECTION.rows.order)):
+  if  Q11_SELECTION.rows[Q11_SELECTION.rows.order[itr].index].val:
+   arrOrder.append(Q11_SELECTION.rows[Q11_SELECTION.rows.order[itr].index].label)
+
+for itr in range(len(arrOrder)):
+  eval("HidLoopOrder." + str(arrOrder[itr])).val = itr + 1
+print arrOrder;
+</exec>
+
+<number 
+  label="HidLoopOrder"
+  shuffle="rows"
+  shuffleBy="Q11_SELECTION"
+  size="10"
+  where="execute,survey,report">
+  <title>Hidden for storing concept order - hidden_q</title>
+  <row label="r1">Their private/store brand products are high quality</row>
+  <row label="r2">Has great discounts/sales on items I buy regularly</row>
+  <row label="r3">Already has low prices, without lots of discounts/special sales</row>
+  <row label="r4">Offers the highest quality products</row>
+  <row label="r5">Offers a wide variety of natural/organic products</row>
+  <row label="r6">Helps me make healthy choices</row>
+  <row label="r7">Has easy ways to shop online</row>
+  <row label="r8">Rewards me for shopping with them</row>
+  <row label="r9">I can get my shopping done quickly</row>
+  <row label="r10">Has very convenient locations</row>
+  <row label="r11">Has a wide variety of new and different products</row>
+  <row label="r12">Has a close connection with the local community</row>
+  <row label="r13">Experiences with store staff are always positive</row>
+  <row label="r14">Store ambiance/look/feel is very pleasant/enjoyable</row>
+  <row label="r15">Has a wide variety of products that support environmental sustainability</row>
+  <row label="r16">This retailer could be a destination for all my grocery related trip types</row>
+  <row label="r17">Has a selection of items that are connected to my cultural/ethnic heritage</row>
+  <row label="r18">Offers a wide variety of products that are quick to prepare/eat</row>
+</number>
+
+<suspend/>
+
+<exec>
+L1_expanded.order = Q11_SELECTION.rows.order
+</exec>
+
+<suspend/>
+
+<html label="Q11_PROMPT" where="survey">On the next 18 screens, you will be shown one statement per screen.  Read each statement and rate whether you think it describes each retailer on a scale from 1 (Strongly Disagree) to 5 (Strongly Agree).</html>
+
+<suspend/>
+
+<loop label="L1" builderSource="Q11_SELECTION" vars="Q11rows">
+  <title>New Loop</title>
+  <block label="b1" builder:title="default loop block">
+    <radio 
+    label="Q11_[loopvar: label]"
+    shuffle="rows">
+      <title><p style="text-align: center;"><span style="color: #0000ff;"><strong><span style="font-size: 14pt;">[loopvar: Q11rows]</span></strong></span></p></title>
+      <comment>Please select one per retailer. </comment>
+      <row label="r1" cond="RETAILER_SELECTION.r1">PAK'n SAVE</row>
+      <row label="r2" cond="RETAILER_SELECTION.r2">New World</row>
+      <row label="r3" cond="RETAILER_SELECTION.r3">Countdown/ Woolworths</row>
+      <row label="r4" cond="RETAILER_SELECTION.r4">Four Square</row>
+      <row label="r5" cond="RETAILER_SELECTION.r5">Fresh Choice</row>
+      <row label="r6" cond="RETAILER_SELECTION.r6">SuperValue</row>
+      <row label="r7" cond="RETAILER_SELECTION.r7">The Warehouse</row>
+      <row label="r8" cond="RETAILER_SELECTION.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, independent pharmacies)</row>
+      <row label="r9" cond="RETAILER_SELECTION.r9">Costco</row>
+      <row label="r10" cond="RETAILER_SELECTION.r10">Liquorland</row>
+      <row label="r11" cond="RETAILER_SELECTION.r11">Independent liquor stores</row>
+      <row label="r12" cond="RETAILER_SELECTION.r12">Asian / Chinese supermarkets (Kosco, Tai Ping, Dahua, Wang's, Japan Mart, T-Mart, etc.)</row>
+      <row label="r13" cond="RETAILER_SELECTION.r13">Dairy / convenience stores</row>
+      <row label="r14" cond="RETAILER_SELECTION.r14">Fruits and vegetables stores</row>
+      <row label="r15" cond="RETAILER_SELECTION.r15">Independent bakery stores</row>
+      <row label="r16" cond="RETAILER_SELECTION.r16">Petrol service stations</row>
+      <row label="r17" cond="RETAILER_SELECTION.r17">Butchers</row>
+      <row label="r18" cond="RETAILER_SELECTION.r18">${A1.r18.open}</row>
+      <col label="c1">Strongly Disagree</col>
+      <col label="c2">Disagree</col>
+      <col label="c3">Neutral</col>
+      <col label="c4">Agree</col>
+      <col label="c5">Strongly Agree</col>
+    </radio>
+
+    <suspend/>
+  </block>
+
+  <looprow label="Lr1" cond="(Q11_SELECTION.r1)">
+    <loopvar name="Q11rows">Their private/store brand products are high quality</loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(Q11_SELECTION.r2)">
+    <loopvar name="Q11rows">Has great discounts/sales on items I buy regularly</loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(Q11_SELECTION.r3)">
+    <loopvar name="Q11rows">Already has low prices, without lots of discounts/special sales</loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(Q11_SELECTION.r4)">
+    <loopvar name="Q11rows">Offers the highest quality products</loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(Q11_SELECTION.r5)">
+    <loopvar name="Q11rows">Offers a wide variety of natural/organic products</loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(Q11_SELECTION.r6)">
+    <loopvar name="Q11rows">Helps me make healthy choices</loopvar>
+  </looprow>
+
+  <looprow label="Lr7" cond="(Q11_SELECTION.r7)">
+    <loopvar name="Q11rows">Has easy ways to shop online</loopvar>
+  </looprow>
+
+  <looprow label="Lr8" cond="(Q11_SELECTION.r8)">
+    <loopvar name="Q11rows">Rewards me for shopping with them</loopvar>
+  </looprow>
+
+  <looprow label="Lr9" cond="(Q11_SELECTION.r9)">
+    <loopvar name="Q11rows">I can get my shopping done quickly</loopvar>
+  </looprow>
+
+  <looprow label="Lr10" cond="(Q11_SELECTION.r10)">
+    <loopvar name="Q11rows">Has very convenient locations</loopvar>
+  </looprow>
+
+  <looprow label="Lr11" cond="(Q11_SELECTION.r11)">
+    <loopvar name="Q11rows">Has a wide variety of new and different products</loopvar>
+  </looprow>
+
+  <looprow label="Lr12" cond="(Q11_SELECTION.r12)">
+    <loopvar name="Q11rows">Has a close connection with the local community</loopvar>
+  </looprow>
+
+  <looprow label="Lr13" cond="(Q11_SELECTION.r13)">
+    <loopvar name="Q11rows">Experiences with store staff are always positive</loopvar>
+  </looprow>
+
+  <looprow label="Lr14" cond="(Q11_SELECTION.r14)">
+    <loopvar name="Q11rows">Store ambiance/look/feel is very pleasant/enjoyable</loopvar>
+  </looprow>
+
+  <looprow label="Lr15" cond="(Q11_SELECTION.r15)">
+    <loopvar name="Q11rows">Has a wide variety of products that support environmental sustainability</loopvar>
+  </looprow>
+
+  <looprow label="Lr16" cond="(Q11_SELECTION.r16)">
+    <loopvar name="Q11rows">This retailer could be a destination for all my grocery related trip types</loopvar>
+  </looprow>
+
+  <looprow label="Lr17" cond="(Q11_SELECTION.r17)">
+    <loopvar name="Q11rows">Has a selection of items that are connected to my cultural/ethnic heritage</loopvar>
+  </looprow>
+
+  <looprow label="Lr18" cond="(Q11_SELECTION.r18)">
+    <loopvar name="Q11rows">Offers a wide variety of products that are quick to prepare/eat</loopvar>
+  </looprow>
+</loop>
+
+<suspend/>
+
+<exec>
+p.times4 = time.time()
+VAR_TIME_3.r1.val = ("%.2f" % ((p.times4- p.times3) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_3"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Section 3</row>
+</float>
+
+<suspend/>
+
+<label label="sect4" builder:title="DEMOGRAPHICS "/>
+
+<html label="INTRO_TEXT" where="survey">Thank you for your responses.  The final few questions are just to ensure we are speaking to a cross-section of the population.
+<br /><br />Click <b>next</b> to continue.</html>
+
+<suspend/>
+
+<radio 
+  label="D1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Which of the following best describes where you live?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">City center</row>
+  <row label="r2">Suburban</row>
+  <row label="r3">Rural</row>
+  <row label="r4" randomize="0">Prefer not to share</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="D2"
+  atleast="1"
+  uses="atm1d.10">
+  <title>How would you describe yourself?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">NZ European</row>
+  <row label="r2">Other European</row>
+  <row label="r3">Maori</row>
+  <row label="r4">Samoan</row>
+  <row label="r5">Cook Island Maori</row>
+  <row label="r6">Tongan</row>
+  <row label="r7">Other Pacific Peoples</row>
+  <row label="r8">Chinese</row>
+  <row label="r9">Indian</row>
+  <row label="r10">Other Asian</row>
+  <row label="r11" open="1" openSize="25" randomize="0">Prefer to self-describe:</row>
+  <row label="r12" exclusive="1" randomize="0">Prefer not to share</row>
+</checkbox>
+
+<suspend/>
+
+<autofill label="Ethnicity" randomize="0" where="execute,survey,report">
+  <title>Ethnicity</title>
+  <row label="r1" autofill="D2.r1">NZ European</row>
+  <row label="r2" autofill="D2.r3">Maori</row>
+  <row label="r3" autofill="D2.r4">Samoan</row>
+  <row label="r4" autofill="D2.r5">Cook Island Maori</row>
+  <row label="r5" autofill="D2.r6">Tongan</row>
+  <row label="r6" autofill="D2.r7">Other Pacific Peoples</row>
+  <row label="r7" autofill="D2.r8">Chinese</row>
+  <row label="r8" autofill="D2.r10">Other Asian</row>
+  <row label="r9" autofill="D2.r9">Indian</row>
+  <row label="r10" autofill="D2.r2 or D2.r11 or D2.r12">Other</row>
+</autofill>
+
+<suspend/>
+
+<radio 
+  label="D2B"
+  uses="atm1d.10">
+  <title>Can you please tell me if you were born in New Zealand?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+  <row label="r3">Prefer not to share</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="D2C"
+  cond="D2B.r2"
+  uses="atm1d.10">
+  <title>How long have you been living in New Zealand?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Less than a year</row>
+  <row label="r2">1-2 years</row>
+  <row label="r3">3-5 years</row>
+  <row label="r4">6-10 years</row>
+  <row label="r5">More than 10 years</row>
+  <row label="r6">I prefer not to say</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="E3">
+  <title>Including yourself, how many people in each of the following age ranges live in your household?
+  </title>
+  <comment>Please select your answers.</comment>
+  <row label="r1">Under 6 years old</row>
+  <row label="r2">6 to 12 years old</row>
+  <row label="r3">13 to 19 years old</row>
+  <row label="r4">20 to 29 years old</row>
+  <row label="r5">30 to 65 years old</row>
+  <row label="r6">Over 65 years old</row>
+  <noanswer label="r7">Prefer not to share</noanswer>
+  <col label="c1">0 people</col>
+  <col label="c2">1 person</col>
+  <col label="c3">2 people</col>
+  <col label="c4">3 people</col>
+  <col label="c5">4 or more people</col>
+</radio>
+
+<suspend/>
+
+<exec>
+HHSize1=0
+HHSize2d1=0
+HHSize2d2=0
+HHSize2d3=0
+HHSize2d4=0
+HHSize2d5=0
+HHSize2d6=0
+HHSize2e1=0
+HHSize2e2=0
+HHSize2e3=0
+HHSize2e4=0
+HHSize2e5=0
+HHSize2e6=0
+HHSize2f1=0
+HHSize2f2=0
+HHSize2f3=0
+HHSize2f4=0
+HHSize2f5=0
+HHSize2f6=0
+HHSize2g1=0
+HHSize2g2=0
+HHSize2g3=0
+HHSize2g4=0
+HHSize2g5=0
+HHSize2g6=0
+
+
+
+
+if (E3.c1.r1 or E3.c1.r2 or E3.c1.r3 or E3.c1.r4 or E3.c1.r5 or E3.c1.r6):
+   HHSize1=0
+if (E3.c2.r1):
+   HHSize2d1=1
+if (E3.c2.r2):
+   HHSize2d2=1
+if (E3.c2.r3):
+   HHSize2d3=1
+if (E3.c2.r4):
+   HHSize2d4=1
+if (E3.c2.r5):
+   HHSize2d5=1
+if (E3.c2.r6):
+   HHSize2d6=1  
+if (E3.c3.r1):
+   HHSize2e1=2
+if (E3.c3.r2):
+   HHSize2e2=2
+if (E3.c3.r3):
+   HHSize2e3=2
+if (E3.c3.r4):
+   HHSize2e4=2
+if (E3.c3.r5):
+   HHSize2e5=2
+if (E3.c3.r6):
+   HHSize2e6=2
+if (E3.c4.r1):
+   HHSize2f1=3
+if (E3.c4.r2):
+   HHSize2f2=3
+if (E3.c4.r3):
+   HHSize2f3=3
+if (E3.c4.r4):
+   HHSize2f4=3
+if (E3.c4.r5):
+   HHSize2f5=3
+if (E3.c4.r6):
+   HHSize2f6=3
+if (E3.c5.r1):
+   HHSize2g1=4
+if (E3.c5.r2):
+   HHSize2g2=4
+if (E3.c5.r3):
+   HHSize2g3=4
+if (E3.c5.r4):
+   HHSize2g4=4
+if (E3.c5.r5):
+   HHSize2g5=4
+if (E3.c5.r6):
+   HHSize2g6=4
+
+
+Total1=HHSize1+HHSize2d1+HHSize2d2+HHSize2d3+HHSize2d4+HHSize2d5+HHSize2d6+HHSize2e1+HHSize2e2+HHSize2e3+HHSize2e4+HHSize2e5+HHSize2e6+HHSize2f1+HHSize2f2+HHSize2f3+HHSize2f4+HHSize2f5+HHSize2f6+HHSize2g1+HHSize2g2+HHSize2g3+HHSize2g4+HHSize2g5+HHSize2g6
+
+print Total1
+</exec>
+
+<exec>
+HHSize.val=Total1
+</exec>
+
+<number 
+  label="HHSize"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  size="10">
+  <title>Calculate point total based on responses at E3</title>
+  <comment><span style="color: #ca0b00;">This will be hidden after launch.</span></comment>
+</number>
+
+<suspend/>
+
+<exec>
+kidSize1=0
+kidSize1d1=0
+kidSize1d2=0
+kidSize1d3=0
+kidSize1e1=0
+kidSize1e2=0
+kidSize1e3=0
+kidSize1f1=0
+kidSize1f2=0
+kidSize1f3=0
+kidSize1g1=0
+kidSize1g2=0
+kidSize1g3=0
+
+
+
+if (E3.c1.r1 or E3.c1.r2 or E3.c1.r3):
+   kidSize1=0
+if (E3.c2.r1):
+   kidSize1d1=1
+if (E3.c2.r2):
+   kidSize1d2=1
+if (E3.c2.r3):
+   kidSize1d3=1
+if (E3.c3.r1):
+   kidSize1e1=2
+if (E3.c3.r2):
+   kidSize1e2=2
+if (E3.c3.r3):
+   kidSize1e3=2
+if (E3.c4.r1):
+   kidSize1f1=3
+if (E3.c4.r2):
+   kidSize1f2=3
+if (E3.c4.r3):
+   kidSize1f3=3
+if (E3.c5.r1):
+   kidSize1g1=4
+if (E3.c5.r2):
+   kidSize1g2=4
+if (E3.c5.r3):
+   kidSize1g3=4
+
+
+Total2=kidSize1+kidSize1d1+kidSize1d2+kidSize1d3+kidSize1e1+kidSize1e2+kidSize1e3+kidSize1f1+kidSize1f2+kidSize1f3+kidSize1g1+kidSize1g2+kidSize1g3
+
+print Total2
+</exec>
+
+<exec>
+KidsHH.val=Total2
+</exec>
+
+<suspend/>
+
+<number 
+  label="KidsHH"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  size="10">
+  <title>Calculate kidSize based on responses at E3</title>
+  <comment><span style="color: #ca0b00;">This will be hidden after launch.</span></comment>
+</number>
+
+<suspend/>
+
+<exec>
+if KidsHH.check('&gt;=1'):
+  KidsYes.val = 0
+else:
+  KidsYes.val = 1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="KidsYes"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1">
+  <title>Hidden question to capture SEL based on responses to E3</title>
+  <comment><span style="color: #ca0b00;">This will be hidden after launch.</span></comment>
+  <row label="r1" value="1">Yes</row>
+  <row label="r2" value="0">No</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="LIFESTAGE"
+  where="execute,survey,report">
+  <title>LIFESTAGE</title>
+  <row label="r1" autofill="(S2.ch71 or S2.ch72 or S2.ch73 or S2.ch74 or S2.ch75 or S2.ch76 or S2.ch77 or S2.ch78 or S2.ch79 or S2.ch80 or S2.ch81 or S2.ch82 or S2.ch83) and (KidsYes.r2)">Younger Millennials / Gen Z, Singles or Couple but no kids</row>
+  <row label="r2" autofill="(S2.ch58 or S2.ch59 or S2.ch60 or S2.ch61 or S2.ch62 or S2.ch63 or S2.ch64 or S2.ch65 or S2.ch66 or S2.ch67 or S2.ch68 or S2.ch69 or S2.ch70) and (KidsYes.r2)">Older Millennials, Single or Couple no kids</row>
+  <row label="r3" autofill="(S2.ch58 or S2.ch59 or S2.ch60 or S2.ch61 or S2.ch62 or S2.ch63 or S2.ch64 or S2.ch65 or S2.ch66 or S2.ch67 or S2.ch68 or S2.ch69 or S2.ch70 or S2.ch71 or S2.ch72 or S2.ch73 or S2.ch74 or S2.ch75 or S2.ch76 or S2.ch77 or S2.ch78 or S2.ch79 or S2.ch80 or S2.ch81 or S2.ch82 or S2.ch83) and (KidsYes.r1) and (E3.c2.any or E3.c3.any or E3.c4.any or E3.c5.any)">Millennials / Gen Z, growing family</row>
+  <row label="r4" autofill="(S2.ch43 or S2.ch44 or S2.ch45 or S2.ch46 or S2.ch47 or S2.ch48 or S2.ch49 or S2.ch50 or S2.ch51 or S2.ch52 or S2.ch53 or S2.ch54 or S2.ch55 or S2.ch56 or S2.ch57) and (KidsYes.r1)">Gen X, growing family</row>
+  <row label="r5" autofill="(S2.ch42 or S2.ch43 or S2.ch44 or S2.ch45 or S2.ch46 or S2.ch47 or S2.ch48 or S2.ch49 or S2.ch50 or S2.ch51 or S2.ch52 or S2.ch53 or S2.ch54 or S2.ch55 or S2.ch56 or S2.ch57) and (KidsYes.r2)">Gen X, SINK, DINK or Empty Nester</row>
+  <row label="r6" autofill="(S2.ch36 or S2.ch37 or S2.ch38 or S2.ch39 or S2.ch40 or S2.ch41) and (KidsYes.r2)">Young Boomers, SINK, DINK or Empty Nester</row>
+  <row label="r7" autofill="(S2.ch1 or S2.ch2 or S2.ch3 or S2.ch4 or S2.ch5 or S2.ch6 or S2.ch7 or S2.ch8 or S2.ch9 or S2.ch10 or S2.ch11 or S2.ch12 or S2.ch13 or S2.ch14 or S2.ch15 or S2.ch16 or S2.ch17 or S2.ch18 or S2.ch19 or S2.ch20 or S2.ch21 or S2.ch22 or S2.ch23 or S2.ch24 or S2.ch25 or S2.ch26 or S2.ch27 or S2.ch28 or S2.ch29 or S2.ch30 or S2.ch31 or S2.ch32 or S2.ch33 or S2.ch34 or S2.ch35) and (KidsYes.r2)">Elderly</row>
+  <row label="r8" autofill="LIFESTAGE.count==0">None of the above</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="E4"
+  atleast="1"
+  uses="atm1d.10">
+  <title>What is your current employment status?</title>
+  <comment>Please select any that apply.</comment>
+  <row label="r1">Employed full time</row>
+  <row label="r2">Employed part time</row>
+  <row label="r3">Student</row>
+  <row label="r4">Retired</row>
+  <row label="r5">Stay at home spouse/parent</row>
+  <row label="r6">Unable to work</row>
+  <row label="r7">Other</row>
+  <row label="r8" exclusive="1">Prefer not to share</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="E5"
+  uses="atm1d.10">
+  <title>What was your total household income last year, before taxes?</title>
+  <comment>Please select <u>only one</u> response.</comment>
+  <row label="r1">Under $25,000</row>
+  <row label="r2">$25,000 to $49,999</row>
+  <row label="r3">$50,000 to $74,999</row>
+  <row label="r4">$75,000 to $99,999</row>
+  <row label="r5">$100,000 to $149,999</row>
+  <row label="r6">$150,000 to $199,999</row>
+  <row label="r7">$200,000 or more</row>
+  <row label="r8">Prefer not to share</row>
+</radio>
+
+<suspend/>
+
+<quota label="q1" overquota="noqual" sheet="Quota"/>
+
+<quota label="q2" cond="qhidxSupplier.r1" overquota="noqual" sheet="customer"/>
+
+<quota label="q3" cond="qhidxSupplier.r2" overquota="noqual" sheet="panel"/>
+
+<radio 
+  label="Clubcard"
+  uses="atm1d.10">
+  <title>Do you have / have you ever had a <b>New World Clubcard</b>?</title>
+  <comment>Please select one response.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<exec>
+p.times5 = time.time()
+VAR_TIME_4.r1.val = ("%.2f" % ((p.times5- p.times4) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_4"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Section 4</row>
+</float>
+
+<suspend/>
+
+<html label="Thank_TEXT" where="survey">Thanks for your time, we really appreciate you taking the time to answer this survey!</html>
+
+<suspend/>
+
+<radio 
+  label="C1"
+  cond="Clubcard.r1 and qhidxSupplier.r1"
+  uses="atm1d.10">
+  <title>One more question before we finish.  This survey has been on behalf of Foodstuffs to help them provide you and other people like you with a better shopping experience.  As a current or New World Clubcard member, do you give Foodstuffs permission to link the answers you’ve provided in this survey to the information they hold on you as a New World Clubcard customer/member?
+<br />The information will not be used to directly market to you.
+</title>
+  <comment>Please select one only.</comment>
+  <row label="r1">Yes, happy to share my data to help improve the shopping experience for me and others like me</row>
+  <row label="r2">No, I’d rather not have my data linked to this survey</row>
+</radio>
+
+<suspend/>
+
+<text 
+  label="C2"
+  cond="(C1.r1) and qhidxSupplier.r1"
+  optional="0"
+  size="25">
+  <title><strong>You have indicated that you are happy to have your data linked. In order to ensure we are linking your accounts correctly can you please provide the following details:</strong></title>
+  <row label="r1" verify="email">Current Email Address:</row>
+  <row label="r2">First Name:</row>
+  <row label="r3">Last Name:</row>
+  <row label="r4" verify="number">Postcode:</row>
+</text>
+
+<suspend/>
+
+<html label="cm1" cond="qhidxSupplier.r1" where="survey"><strong>Thank you so much for your time<br /></strong><br /><strong>&amp;nbsp;</strong><br /><strong>Please click ‘Finish’ to complete the survey.</strong></html>
+
+<exec>
+p.scf = timeSpent()
+if p.scf lt 240:
+  SC.val = 0
+else:
+  SC.val = 1
+</exec>
+
+<radio 
+  label="SC"
+  where="execute,survey,report">
+  <title>Speeder checks</title>
+  <comment>Please select one..</comment>
+  <row label="r1" value="1">Speeder</row>
+  <row label="r2" value="2">Not Speeder</row>
+</radio>
+</survey>

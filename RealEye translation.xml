@@ -1,0 +1,3 @@
+<html label="placeholderredirect" where="none">Redirect placeholder so that the redirect executes</html>
+
+    <suspend sst="0" url="https://www.realeye.io/fr/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B0%5D=${pipe.EF_PracticeShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B2%5D=${pipe.RECOMPPACK1}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B3%5D=${pipe.REPACK}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B4%5D=${pipe.RECOMPPACK2}.jpg&amp;participantId=${uuid}?&amp;realeye-tester-tags=bumo-[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:Sample_Realeye],phase-[pipe:Phase],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>

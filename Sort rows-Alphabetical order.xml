@@ -1,0 +1,151 @@
+<checkbox 
+  label="S_Brand_PastPurchased"
+  atleast="1"
+  sortRows="asc,survey"
+  ss:legendColWidth="350px"
+  uses="multicol.7">
+  <title>Which [pipe:pipetext] of cough, cold, flu products and/or treatments did you purchase and use when you were most recently experiencing symptoms in the past month?  Please answer the question regarding you recent experienced symptoms: [pipe: S_Symptom]</title>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+.row-legend-group {
+background-color: #aaa;
+color: #fff;
+}
+</style>
+]]></style>
+  <group label="g1">Over the counter multi symptom cold/flu products/medications:</group>
+  <group label="g2">Behind-the-counter multi-symptom cold/flu products/medications:</group>
+  <group label="g3">Behind-the-counter allergy products/medications:</group>
+  <group label="g4">Prescribed cough, cold, or flu products/medications:</group>
+  <group label="g5">Saline nasal sprays:</group>
+  <group label="g6">Medicated nasal sprays:</group>
+  <group label="g7">Natural Cold Remedies:</group>
+  <group label="g8">Cough Drops:</group>
+  <group label="g9">Throat Sprays:</group>
+  <group label="g10">Vapor Rubs:</group>
+  <group label="g11">Lip Care Products:</group>
+  <group label="g12">Nasal Washes/Rinses:</group>
+  <group label="g13">Nasal Inhaler:</group>
+  <group label="g14">Devices:</group>
+  <group label="g15">Immune Support:</group>
+  <group label="g16">Homeopathic at-home remedies:</group>
+  <group label="g17">Other type of treatment:</group>
+  <group label="g18"><span style="color: #aaa;">None</span></group>
+  <row label="r1" groups="g1">Alka-Seltzer Plus</row>
+  <row label="r2" groups="g1">Coricidin</row>
+  <row label="r3" groups="g1">Cold-Eeze</row>
+  <row label="r4" groups="g1">DayQuil</row>
+  <row label="r5" groups="g1">Delsym</row>
+  <row label="r6" groups="g1">Mucinex</row>
+  <row label="r7" groups="g1">Nyquil</row>
+  <row label="r8" groups="g1">Robitussin</row>
+  <row label="r9" groups="g1">Theraflu</row>
+  <row label="r10" groups="g1">Tylenol Cold &amp; Flu</row>
+  <row label="r11" groups="g1">Advil Cold &amp; Sinus</row>
+  <row label="r12" groups="g1">Advil Cold &amp; Flu</row>
+  <row label="r13" groups="g1">Rompe Pecho</row>
+  <row label="r14" groups="g1">Sinex</row>
+  <row label="r15" groups="g1">Sudafed PE</row>
+  <row label="r16" groups="g1">Triaminic</row>
+  <row label="r17" groups="g1">Allegra</row>
+  <row label="r18" groups="g1">Claritin</row>
+  <row label="r19" groups="g1">Aleve</row>
+  <row label="r20" groups="g1">Benadryl</row>
+  <row label="r21" groups="g1">Zyrtec</row>
+  <row label="r22" groups="g1">Flonase</row>
+  <row label="r23" groups="g1">Walmart Equate Brand</row>
+  <row label="r24" groups="g1">Target Up &amp; Up Brand</row>
+  <row label="r25" groups="g1">CVS Health Brand</row>
+  <row label="r26" groups="g1">Walgreens Brand</row>
+  <row label="r27" groups="g1" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r28" groups="g1" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r29" groups="g2">Mucinex- D</row>
+  <row label="r30" groups="g2">Sudafed-D</row>
+  <row label="r31" groups="g2">Tylenol Cold</row>
+  <row label="r32" groups="g2">Advil Cold &amp; Sinus</row>
+  <row label="r33" groups="g2">Advil Cold &amp; Flu</row>
+  <row label="r34" groups="g2" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r35" groups="g2" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r36" groups="g3">Claritin-D</row>
+  <row label="r37" groups="g3">Allegra-D</row>
+  <row label="r38" groups="g3">Zyrtec-D</row>
+  <row label="r39" groups="g3" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r40" groups="g3" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r41" groups="g5">Arm &amp; Hammer Simply Saline</row>
+  <row label="r42" groups="g5" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r43" groups="g5" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r44" groups="g6">Sinex</row>
+  <row label="r45" groups="g6">Afrin</row>
+  <row label="r46" groups="g6">Nasonex</row>
+  <row label="r47" groups="g6">Astepro</row>
+  <row label="r48" groups="g6">Nasacort</row>
+  <row label="r49" groups="g6">Flonase</row>
+  <row label="r50" groups="g6">NeilMed</row>
+  <row label="r51" groups="g6">Ayr</row>
+  <row label="r52" groups="g6">Neo-Synephrine</row>
+  <row label="r53" groups="g6">Zicam</row>
+  <row label="r54" groups="g6">Mucinex Sinus Max</row>
+  <row label="r55" groups="g6">4Way</row>
+  <row label="r56" groups="g6" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r57" groups="g6" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r58" groups="g7">Zarbees</row>
+  <row label="r59" groups="g7">Sambucol</row>
+  <row label="r60" groups="g7">Maty's</row>
+  <row label="r61" groups="g7">Robitussin Naturals</row>
+  <row label="r62" groups="g7">Hyland's Natural</row>
+  <row label="r63" groups="g7">Boiron  Oscillococcinum</row>
+  <row label="r64" groups="g7">Zicam</row>
+  <row label="r65" groups="g7" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r66" groups="g7" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r67" groups="g8">Ricola</row>
+  <row label="r68" groups="g8">Mucinex Cough Drops</row>
+  <row label="r69" groups="g8">Vicks Cough Drops</row>
+  <row label="r70" groups="g8">Halls</row>
+  <row label="r71" groups="g8">Cepacol</row>
+  <row label="r72" groups="g8">Traditional Medicinals</row>
+  <row label="r73" groups="g8" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r74" groups="g8" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r75" groups="g9">Chloraseptic</row>
+  <row label="r76" groups="g9">Mucinex Throat Sprays</row>
+  <row label="r77" groups="g9">Throat Calm</row>
+  <row label="r78" groups="g9">Beekeeper's Natural</row>
+  <row label="r79" groups="g9">Vick's Vapocool</row>
+  <row label="r80" groups="g9" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r81" groups="g9" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r82" groups="g10">Vicks VapoRub</row>
+  <row label="r83" groups="g10" open="1" openSize="25" randomize="0">Other(Please specify:)</row>
+  <row label="r84" groups="g10" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r85" groups="g11">Abreva</row>
+  <row label="r86" groups="g11">Burt's Bees</row>
+  <row label="r87" groups="g11">Blistex</row>
+  <row label="r88" groups="g11">ChapStick</row>
+  <row label="r89" groups="g11">Herpecin L</row>
+  <row label="r90" groups="g11">Aquaphor</row>
+  <row label="r91" groups="g11" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r92" groups="g11" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r93" groups="g12">Neil Med Sinus Rinse</row>
+  <row label="r94" groups="g12">NetiPot</row>
+  <row label="r95" groups="g12">Navage</row>
+  <row label="r96" groups="g12" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r97" groups="g12" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r98" groups="g13">Vick's Vapo Stick</row>
+  <row label="r99" groups="g13" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r100" groups="g13" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r101" groups="g14">Vicks</row>
+  <row label="r102" groups="g14">Vick's Shower Tablets</row>
+  <row label="r103" groups="g14">Breathe Right</row>
+  <row label="r104" groups="g15">Airborne</row>
+  <row label="r105" groups="g15">Emergen-C</row>
+  <row label="r106" groups="g15">Pedialyte</row>
+  <row label="r107" groups="g15" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  <row label="r108" groups="g15" open="1" openSize="25" randomize="0">Store Brand (Please specify:)</row>
+  <row label="r109" groups="g16">Tea</row>
+  <row label="r110" groups="g16">Honey</row>
+  <row label="r111" groups="g16">Ginger</row>
+  <row label="r112" groups="g16">Essential oils</row>
+  <row label="r113" groups="g16">Taking a hot shower</row>
+  <row label="r114" groups="g17" randomize="0">${S_Products.r17.open}</row>
+  <row label="r115" exclusive="1" groups="g18" randomize="0">None of the above</row>
+</checkbox>
+
+<suspend/>

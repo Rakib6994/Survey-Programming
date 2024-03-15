@@ -1,0 +1,16 @@
+<exec>
+FlatLiner_AA5.val = 1
+for itr in range(len(AA5.cols)):
+  if AA5.cols[itr].all:
+     FlatLiner_AA5.val = 0
+</exec>
+<suspend/>
+<radio 
+  label="FlatLiner_AA5"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+<suspend/>

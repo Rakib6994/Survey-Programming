@@ -1,0 +1,3741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AE904g - J&amp;J  - External Pain"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="144"
+  delphi="1"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  remerged="20230829_18:20"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png"
+  ss:logoPosition="left"
+  state="testing"
+  theme="frozen:company/behaviorally-theme-2-1"
+  version="13">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<res label="sys_surveyCompleted"/>
+<res label="resAge">years old</res>
+<res label="S_ChildrenAge_1">Over 3 years</res>
+<res label="S_ChildrenAge_2">25-36 months</res>
+<res label="S_ChildrenAge_3">19-24 months</res>
+<res label="S_ChildrenAge_4">13-18 months</res>
+<res label="S_ChildrenAge_5">7-12 months</res>
+<res label="S_ChildrenAge_6">4-6 months</res>
+<res label="S_ChildrenAge_7">0-3 months</res>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+.sq-mgshelf-cart-view-content table td input {
+  width: 50px !important;
+}  
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}   
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+#comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  border-radius: 30px;
+}
+.sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+}
+.grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+
+.footer {
+  display: none;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+  $ (".clickable").addClass( "hvr-underline-from-center" )
+  $ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+  
+  if(!$ (".sq-cardsort-Q_PackAtt").length){
+    $ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+  }
+  
+  if($ (".p1").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");      
+      $ (".comment-text").css("color", "black");
+      $ (".comment-text").css("background-color","lightgrey");
+      $ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");
+      $ (".question").css("background-color","lightgrey");
+      $ (".question-text").css("color","black");
+      $ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+  if($ (".radio .sq-atm1d-button").length && !$ (".question").hasClass("noclick")){
+      $ ("#btn_continue").hide();
+    } 
+
+  $ (document).on('click', '.radio .sq-atm1d-button', function() {
+    if($ (".question").hasClass("noclick")){
+      $ ("#btn_continue").show();
+    }else{
+      $ ("#btn_continue").click();
+    }
+  })
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+      $ ("#btn_continue").hide();
+    }
+
+    $ (document).on('click', '.sq-atmtable-btn', function() {
+      $ ("#btn_continue").click();
+    })
+
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-sliderpoints-container', function() {
+    $ ("#btn_continue").click();
+  })
+       
+/*Textbox*/
+  $ ('.element').css('text-align','center');
+  
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmrating-container', function() {
+    $ ("#btn_continue").click();
+  })
+*/
+
+/*Change Font*/
+  $ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+</script>
+]]></style>
+<samplesources>
+  <samplesource list="190">
+    <title>Mirats</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://moonknight.miratsinsights.com/21df0c3543ff3bd23cecdaf921ff4a704a113d06dc1ec21045a186ad0f2f9a42?s=20&amp;id=${id}"/>
+    <exit cond="overquota" url="https://moonknight.miratsinsights.com/21df0c3543ff3bd23cecdaf921ff4a704a113d06dc1ec21045a186ad0f2f9a42?s=40&amp;id=${id}"/>
+    <exit cond="qualified" url="https://moonknight.miratsinsights.com/21df0c3543ff3bd23cecdaf921ff4a704a113d06dc1ec21045a186ad0f2f9a42?s=10&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="175">
+    <title>Walr</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="panelist_id" unique="1"/>
+    <exit cond="terminated" url="https://welcome.walr.com/surveyout/?P3=2&amp;P1=${panelist_id}"/>
+    <exit cond="overquota" url="https://welcome.walr.com/surveyout/?P3=3&amp;P1=${panelist_id}"/>
+    <exit cond="qualified" url="https://welcome.walr.com/surveyout/?P3=1&amp;P1=${panelist_id}"/>
+  </samplesource>
+
+  <samplesource list="160">
+    <title>Question Lab</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="arid" unique="1"/>
+    <exit cond="terminated" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=2&amp;arid=${arid}"/>
+    <exit cond="overquota" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=3&amp;arid=${arid}"/>
+    <exit cond="qualified" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=1&amp;arid=${arid}"/>
+  </samplesource>
+
+  <samplesource list="155">
+    <title>UBO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated" url="https://uboconsulting.com/redirect/terminate.html"/>
+    <exit cond="overquota" url="https://uboconsulting.com/redirect/over-quota.html"/>
+    <exit cond="qualified" url="https://uboconsulting.com/redirect/complete.html"/>
+  </samplesource>
+
+  <samplesource list="153">
+    <title>Veritolytics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="verito" unique="1"/>
+    <exit cond="terminated" url="http://panel.veritolytics.com/backuri/return.php?status=30&amp;verito=${verito}"/>
+    <exit cond="overquota" url="http://panel.veritolytics.com/backuri/return.php?status=40&amp;verito=${verito}"/>
+    <exit cond="qualified" url="http://panel.veritolytics.com/backuri/return.php?status=20&amp;verito=${verito}"/>
+  </samplesource>
+
+  <samplesource list="152">
+    <title>Bilendi &amp; Respondi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="m" unique="1"/>
+    <exit cond="terminated" url="https://survey.maximiles.com/screenout?p=qvs&amp;m=${m}&amp;p=qvs"/>
+    <exit cond="overquota" url="https://survey.maximiles.com/quotasfull?p=qvq&amp;m=${m}&amp;p=qvq"/>
+    <exit cond="qualified" url="https://survey.maximiles.com/complete?p=qvc&amp;m=${m}&amp;p=qvc"/>
+  </samplesource>
+
+  <samplesource list="150">
+    <title>Cognitive Intelligence</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=2&amp;co=3&amp;sample=1"/>
+    <exit cond="overquota" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=3&amp;co=3&amp;sample=1"/>
+    <exit cond="qualified" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=1&amp;co=3&amp;sample=1"/>
+  </samplesource>
+
+  <samplesource list="134">
+    <title>Prodege</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://api.prodegepeeq.com/prodegemr/transaction-completion?apik=PAT!HMpwEa8t$I&amp;completion_type=3&amp;signature=824e41f59eb55935a376&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://api.prodegepeeq.com/prodegemr/transaction-completion?apik=PAT!HMpwEa8t$I&amp;completion_type=2&amp;signature=e32890775c52f2a7d22d&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://api.prodegepeeq.com/prodegemr/transaction-completion?apik=PAT!HMpwEa8t$I&amp;completion_type=1&amp;signature=9d143bcb6f0cd19f821a&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Schlesinger (previously Market cube)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending/?RS=3&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending/?RS=2&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending/?RS=1&amp;RID=${RID}&amp;secret=606"/>
+  </samplesource>
+
+  <samplesource list="138">
+    <title>Philomath Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey.philomathresearch.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey.philomathresearch.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey.philomathresearch.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="6">
+    <title>Rakuten Insights (AIP)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=s"/>
+    <exit cond="overquota" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=q"/>
+    <exit cond="qualified" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=c"/>
+  </samplesource>
+
+  <samplesource list="141">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=02a08ede-c3f8-a497-a571-5dbb15c6da66"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=02a08ede-c3f8-a497-a571-5dbb15c6da66"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=2d612fdc-8a95-42b7-9aee-84fada79afa0"/>
+  </samplesource>
+
+  <samplesource list="24">
+    <title>SampleGurus</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=2"/>
+    <exit cond="overquota" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=3"/>
+    <exit cond="qualified" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="26">
+    <title>Orchidea Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ORGID" required="1"/>
+    <exit cond="terminated" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin629587&amp;ORGID=${ORGID}"/>
+    <exit cond="overquota" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin315610&amp;ORGID=${ORGID}"/>
+    <exit cond="qualified" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin921274&amp;ORGID=${ORGID}"/>
+  </samplesource>
+
+  <samplesource list="25">
+    <title>OMI Russia </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ac" unique="1"/>
+    <exit cond="terminated" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=2"/>
+    <exit cond="overquota" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=3"/>
+    <exit cond="qualified" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="20">
+    <title>GMO Research (JPN)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=2&amp;id=${id}"/>
+    <exit cond="overquota" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=3&amp;id=${id}"/>
+    <exit cond="qualified" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=1&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Samplenomics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ui" unique="1"/>
+    <exit cond="terminated" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndTerm&amp;ui=${ui}"/>
+    <exit cond="overquota" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndOverQ&amp;ui=${ui}"/>
+    <exit cond="qualified" url="http://host4.dotdata.nl/dotdata/start?u=EE4E2321A3984FD0BB88A3C5FD9F7977&amp;q=END&amp;ui=${ui}"/>
+  </samplesource>
+
+  <samplesource list="10">
+    <title>Kantar - China only</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <var name="ProjectToken" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+  </samplesource>
+
+  <samplesource list="4">
+    <title>OI Research - Online interactive research limited</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://api.dynata.com/respondent/exit?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://api.dynata.com/respondent/exit?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://api.dynata.com/respondent/exit?rst=1&amp;psid=${psid}&amp;high=${int(high.val)}"/>
+  </samplesource>
+
+  <samplesource list="136">
+    <title>DISQO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tid" unique="1"/>
+    <exit cond="terminated" url="https://go.activemeasure.com?status=12615&amp;tid=${tid}"/>
+    <exit cond="overquota" url="https://go.activemeasure.com?status=9526&amp;tid=${tid}"/>
+    <exit cond="qualified" url="https://go.activemeasure.com?status=17787&amp;tid=${tid}"/>
+  </samplesource>
+
+  <samplesource list="101">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <exit cond="terminated" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://dkr1.ssisurveys.com/projects/end?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://dkr1.ssisurveys.com/projects/end?rst=1&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="15">
+    <title>Pure Spectrum </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder - do not add Resp</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #C6007E">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+
+  <samplesource list="154">
+    <title>Paradigm</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="digid" unique="1"/>
+    <exit cond="terminated" url="https://dig.ps-di.com/exitlink?statusid=2&amp;digid=${digid}"/>
+    <exit cond="overquota" url="https://dig.ps-di.com/exitlink?statusid=3&amp;digid=${digid}"/>
+    <exit cond="qualified" url="https://dig.ps-di.com/exitlink?statusid=1&amp;digid=${digid}&amp;cmpid=25o5ROxZO358P7KGoLA5HivE"/>
+  </samplesource>
+
+  <samplesource list="104">
+    <title>Kantar - (LightSpeed + GMI) all of Asia except China</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="http://surveys.globaltestmarket.com/survey/selfserve/1ab8/2212255?state=${ID}&amp;sco=s"/>
+    <exit cond="overquota" url="http://surveys.globaltestmarket.com/survey/selfserve/1ab8/2212255?state=${ID}&amp;sco=o"/>
+    <exit cond="qualified" url="http://surveys.globaltestmarket.com/survey/selfserve/1ab8/2212255?state=${ID}&amp;sco=q"/>
+  </samplesource>
+
+  <samplesource list="3">
+    <title>Torfac - (Formerly Wise Works)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="resp" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;resp=${resp}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;resp=${resp}"/>
+    <exit cond="qualified" url="https://pollrouting.com/response/TrFc23119a656ace85b1e2fa19a6ce634e72c81/hf6uvk48n84jms7mhgrshafoxx7vu9.php?lvb=v&amp;ct=jNWCZ1WOhQaR&amp;resp=${resp}"/>
+  </samplesource>
+
+  <samplesource list="27">
+    <title>Data Diggers</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="memberid" unique="1"/>
+    <exit cond="terminated" url="https://api-icontrol.datadiggers-mr.com/processfinish?status=2&amp;memberid=${memberid}"/>
+    <exit cond="overquota" url="https://api-icontrol.datadiggers-mr.com/processfinish?status=3&amp;memberid=${memberid}"/>
+    <exit cond="qualified" url="https://api-icontrol.datadiggers-mr.com/processfinish?status=1&amp;dipe=1vdM4nYN&amp;memberid=${memberid}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<exec cond="list == '4'">
+if gv.isSST():
+  high1=1111111
+if not gv.isSST():
+  high1=(92153 * int(pid) - 83017)
+high.val=high1
+</exec>
+
+<suspend/>
+
+<float 
+  label="high"
+  cond="list == '4'"
+  translateable="0"
+  where="execute,survey">
+  <title>High</title>
+</float>
+
+<block label="Logistics" builder:title="Logistics">
+  <radio 
+   label="Location"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Sample Source (web) / Location (web to clt)</title>
+    <row label="US166" cond="list=='3'" value="592487365">Torfac (previously Wise Works)</row>
+    <row label="US167" cond="list=='2'" value="592490403">Schlesinger (previously Market cube)</row>
+    <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+    <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+    <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+    <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+    <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+    <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+    <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+    <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+    <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+    <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+    <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+    <row label="US213" cond="list=='24'" value="1314418229">SampleGurus</row>
+    <row label="RU007" cond="list=='25'" value="833513838">OMI (Online Market Intelligence)</row>
+    <row label="IN021" cond="list=='26'" value="1422500825">Orchidea Research ()</row>
+    <row label="US220" cond="list=='141'" value="7535526">Cint</row>
+    <row label="IN200" cond="list=='150'" value="7535529">Cognitive Intelligence</row>
+    <row label="GB030" cond="list=='152'" value="1244">Bilendi &amp; Respondi ()</row>
+    <row label="US215" cond="list=='153'" value="69019">Veritolytics</row>
+    <row label="US230" cond="list=='154'" value="30846">Paradigm Sample</row>
+    <row label="US234" cond="list=='160'" value="30816">Question Lab</row>
+    <row label="US237" cond="list=='175'" value="30867">Walr</row>
+    <row label="US238" cond="list=='190'" value="10867">Mirats</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="LocationCode"
+   cond="not(gv.isSST())"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+  LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="IP_ID"
+   optional="0"
+   randomize="0"
+   size="50"
+   where="execute,survey,report">
+    <title>IP ID</title>
+    <exec>
+IP_ID.val = gv.request.getRemote()
+    </exec>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+    <row label="BEL">Belgium</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>AE904g - J&amp;J  - External Pain</title>
+    <row label="r1" autofill="True">ae904g</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Intro" where="survey"><p class="p1"><b>HELLO AND WELCOME TO OUR SURVEY!<br /><br />
+
+YOUR OPINIONS ARE VERY IMPORTANT TO US AND THANK YOU IN ADVANCE FOR YOUR PARTICIPATION. <br />
+PLEASE ANSWER EACH QUESTION CAREFULLY AND COMPLETELY. REMEMBER THERE ARE NO RIGHT OR WRONG ANSWERS.<br /><br />
+
+USE THE SCROLL BAR ON THE RIGHT AND BOTTOM OF YOUR SCREEN TO MOVE UP AND DOWN THROUGH QUESTIONS AND IMAGES. <br /><br /> 
+
+LET’S BEGIN…
+
+</b></p></html>
+
+  <text 
+   label="Browser"
+   randomize="0">
+    <title>&amp;nbsp;</title>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(id)" value="$(value)" size="$(size)" class="input text-input" $(extra) hidden/>
+]]></style>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.even').hide();
+           var isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+           var isEdge = (navigator.userAgent.indexOf('Edge') >= 0);
+           var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+           var isSafari = (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+           console.log('The value for browser is ' + isEdge);
+           console.log(isChrome);
+           console.log(isFirefox);
+           console.log(isSafari);
+           if (isEdge)
+           {
+               $ ('input[type=text]').val('N');
+
+           }
+          else if (isChrome)
+           {
+               $ ('input[type=text]').val('Y');
+
+           }
+          else if(isFirefox)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+          else if(isSafari)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+         else {
+        $ ('input[type=text]').val('N');
+}
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <autofill label="CompatBrowser" where="execute,survey,report">
+    <title>Compatible Browser</title>
+    <row label="r1" autofill="Browser.val == 'Y'">Yes</row>
+    <row label="none" autofill="CompatBrowser.count == 0">No</row>
+  </autofill>
+
+  <suspend/>
+
+  <term label="TERM_Compat" cond="CompatBrowser.none and not(gv.isSST())">Incompatible Browser</term>
+
+  <term label="TERM_Device" cond="False">Incompatible Device</term>
+
+  <suspend/>
+</block>
+
+<block label="Screener" builder:title="Screener">
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following best describes how you identify?</title>
+    <comment>Select one response.</comment>
+    <row label="r1" value="1">Male</row>
+    <row label="r2" value="2">Female</row>
+    <row label="r3" value="3">Non-binary</row>
+    <row label="r4" value="4">Gender non-conforming</row>
+    <row label="r5" value="5">Gender fluid</row>
+    <row label="r6" randomize="0" value="6">Prefer to self-identify</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="SelfIdentifyGender_OE"
+   cond="S_Gender.r6"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your identity below:<br /><br />Prefer to self-identify (Please specify)</title>
+  </text>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="300px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you or does anyone in your family work for or have ever worked for any of the following companies or industries?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Market research firm</row>
+    <row label="r2">A marketing or research department of a company (including in-store sampling firms/promotional agencies, etc.)</row>
+    <row label="r3">Advertising agency or Public relations firm</row>
+    <row label="r4">Physical Retail or Online Retail store, such as a drugstore, grocery store, Walmart or Target</row>
+    <row label="r5">A graphic or packaging design firm</row>
+    <row label="r6">A Healthcare or Pharmaceutical company</row>
+    <row label="r7">State, local, or federal government agency</row>
+    <row label="r8">A manufacturer, sells, or distributes, medications, vitamins, minerals, or dietary supplements</row>
+    <row label="r9">Medical Profession, such as a doctor, nurse, dentist, pharmacist, nutritionist/dietician,</row>
+    <row label="r10">Chiropractor, acupuncturist, herbalist, physiotherapist, personal trainer, holistic/alternative health practitioner or psychologist</row>
+    <row label="r11" exclusive="1" randomize="0">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Industry" cond="not(S_Industry.r11)">Sensitive Industry</term>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="3"
+   ss:postText="${res.resAge}"
+   verify="range(0,99)">
+    <title>What is your age?</title>
+    <comment>Please enter a number.</comment>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('18-65'))">Age</term>
+
+  <suspend/>
+
+  <autofill label="Age" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="S_Age.check('18-28')">18-28</row>
+    <row label="r2" autofill="S_Age.check('29-40')">29-40</row>
+    <row label="r3" autofill="S_Age.check('41-57')">41-57</row>
+    <row label="r4" autofill="S_Age.check('58-65')">58-65</row>
+  </autofill>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Condition"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which, if any, of the following conditions do you currently suffer from on a regular basis</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Eczema</row>
+    <row label="r2">Psoriasis</row>
+    <row label="r3">Muscle or joint pain</row>
+    <row label="r4">Headaches</row>
+    <row label="r5">Dandruff</row>
+    <row label="r6">Asthma</row>
+    <row label="r7">Allergies</row>
+    <row label="r8" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_S_Condition" cond="not(S_Condition.r3)">S_Condition</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Remedy"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following remedies, if any, have you purchased and used in the past 3 months to treat your Muscle or Joint Pain?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Ice</row>
+    <row label="r2">Heating pad</row>
+    <row label="r3">Percussive massage device</row>
+    <row label="r4">Stretching and/or yoga</row>
+    <row label="r5">Exercise</row>
+    <row label="r6">Light therapy</row>
+    <row label="r7">Warm baths/warm compresses</row>
+    <row label="r8">Non-prescription  pain relief pills (i.e. Advil, Tylenol)</row>
+    <row label="r9">Prescription pain relief pills</row>
+    <row label="r10">Topical creams / ointments for pain relief</row>
+    <row label="r11">Visit a Chiropractor or Physical Therapist</row>
+    <row label="r12">Non-medicated pain relieving devices (to purchase and use at home)</row>
+    <row label="r13">I don't currently treat my muscle or joint pain.</row>
+    <row label="r14" open="1" openSize="25" randomize="0">Other (Specify:)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_S_Remedy" cond="not(S_Remedy.r10)">S_Remedy</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Remedy_Open"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following remedies would you be open to using in the future?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Ice</row>
+    <row label="r2">Heating pad</row>
+    <row label="r3">Percussive massage device</row>
+    <row label="r4">Stretching and/or yoga</row>
+    <row label="r5">Exercise</row>
+    <row label="r6">Light therapy</row>
+    <row label="r7">Warm baths/warm compresses</row>
+    <row label="r8">Non-prescription pain relief pills (i.e. Advil, Tylenol)</row>
+    <row label="r9">Prescription pain relief pills</row>
+    <row label="r10">Topical creams / ointments for pain relief</row>
+    <row label="r11">Visit a Chiropractor or Physical Therapist</row>
+    <row label="r12">Non-medicated pain relieving devices (to purchase and use at home)</row>
+    <row label="r13">I don't currently treat my knee and/or back pain.</row>
+    <row label="r14" open="1" openSize="25" randomize="0">Other (Specify:)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_S_Remedy_Open" cond="not(S_Remedy_Open.r10)">S_Remedy_Open</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_PAIN"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following statements best describes the muscle or joint pain you’ve been experiencing?</title>
+    <comment>Select one response</comment>
+    <row label="r1">Occasional or episodic muscle/joint pain or soreness</row>
+    <row label="r2">Recurring or consistent muscle/joint pain and soreness that has lasted more than 3 months in the same location</row>
+    <row label="r3">Arthritis pain</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_Pain_Statement">
+    <title>Please read the list of statements and select to what extent you agree or disagree with each regarding the pain you suffer from.</title>
+    <comment>Select one response for each statement.</comment>
+    <row label="r1">My pain episodes have become more frequent over the last 3 months.</row>
+    <row label="r2">My pain has become more severe over the last 3 months.</row>
+    <row label="r3">I have used more over-the-counter products (internal and external pain relief) in the last 3 months than the prior 3 months.</row>
+    <col label="c1">Strongly agree</col>
+    <col label="c2">Agree somewhat</col>
+    <col label="c3">Neither agree nor disagree</col>
+    <col label="c4">Disagree somewhat</col>
+    <col label="c5">Disagree strongly</col>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="PAIN_type" where="execute,survey,report">
+    <title>PAIN_type</title>
+    <row label="r1" autofill="S_Pain_Statement.c1.count ge 1">TRANSITIONAL</row>
+    <row label="r2" autofill="not S_Pain_Statement.c1.any and S_PAIN.r1">ACUTE</row>
+    <row label="r3" autofill="not S_Pain_Statement.c1.any and (S_PAIN.r2 or S_PAIN.r3)">CHRONIC</row>
+  </autofill>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Pain_Cause"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please read this list of potential causes of pain and please indicate all that you suffer from.</title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Sedentary Lifestyle</row>
+    <row label="r2">Extra-weight putting pressure on body</row>
+    <row label="r3">Heavy activity related to occupation/service e.g., military, fire fighters, delivery personnel, etc.</row>
+    <row label="r4">Chronic issue like osteoarthritis</row>
+    <row label="r5">Old injury to a joint or muscle</row>
+    <row label="r6">Stress and tension from daily life</row>
+    <row label="r7">Poor posture</row>
+    <row label="r8">Sleeping position</row>
+    <row label="r9">Arthritis</row>
+    <row label="r10" open="1" openSize="25" randomize="0">Other (please specify)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="S_ChannelShopper"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Where do you purchase your external pain relief (Topical creams, ointments, sprays, patches...etc.) most often?</title>
+    <comment>Select one</comment>
+    <row label="r1">In a physical store</row>
+    <row label="r2">In a physical store and online</row>
+    <row label="r3">Online</row>
+  </radio>
+
+  <suspend/>
+
+  <quota label="quota_quotaChannelShopper" overquota="noqual" sheet="quotaChannelShopper"/>
+
+  <suspend/>
+
+  <exec>
+if hasMarker("/quotaChannelShopper/instore"): ChannelShopper.val = 0
+if hasMarker("/quotaChannelShopper/online"): ChannelShopper.val = 1
+  </exec>
+
+  <suspend/>
+
+  <radio 
+   label="ChannelShopper"
+   cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+   style="dev">
+    <title>ChannelShopper</title>
+    <comment>Select one</comment>
+    <row label="r1">IN-STORE BUYER</row>
+    <row label="r2">ONLINE BUYER</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="S_ChannelShopper_pipe" where="execute,survey,report">
+    <title>S_ChannelShopper</title>
+    <row label="r1" autofill="ChannelShopper.r1">in-store</row>
+    <row label="r2" autofill="ChannelShopper.r2">either for delivery or to pick-up in store</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="S_Pain_Shop"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How much of the shopping for external pain relief (Topical creams, ointments, sprays, patches...etc.) do you do for yourself?</title>
+    <comment>Select one</comment>
+    <row label="r1">I do most of the shopping for myself</row>
+    <row label="r2">I do half of the shopping for myself</row>
+    <row label="r3">I do less than half of the shopping for myself</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_S_Pain_Shop" cond="S_Pain_Shop.r3">term S_Pain_Shop</term>
+
+  <suspend/>
+
+  <block label="blockInstore_stype" cond="ChannelShopper.r1">
+    <checkbox 
+    label="S_Typical10InStore"
+    atleast="1"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief from a physical store, which of the following do you purchase from?</title>
+      <comment>Select all that apply</comment>
+      <row label="r1">Walmart</row>
+      <row label="r2">Target</row>
+      <row label="r3">HEB</row>
+      <row label="r4">Meijer</row>
+      <row label="r5">Kroger</row>
+      <row label="r6">Publix</row>
+      <row label="r7">Albertson's</row>
+      <row label="r8">Walgreens</row>
+      <row label="r9">CVS</row>
+      <row label="r10">Family Dollar</row>
+      <row label="r11">Dollar General</row>
+      <row label="r98" open="1" openSize="25" randomize="0">Other (please specify)</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="S_Typical10MostInStore"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Typical10InStore[row]"
+    shuffle="rows"
+    shuffleBy="S_Typical10InStore"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief in a physical store, which do you purchase from most often?</title>
+      <comment>Select one response.</comment>
+      <row label="r1">Walmart</row>
+      <row label="r2">Target</row>
+      <row label="r3">HEB</row>
+      <row label="r4">Meijer</row>
+      <row label="r5">Kroger</row>
+      <row label="r6">Publix</row>
+      <row label="r7">Albertson's</row>
+      <row label="r8">Walgreens</row>
+      <row label="r9">CVS</row>
+      <row label="r10">Family Dollar</row>
+      <row label="r11">Dollar General</row>
+      <row label="r98" randomize="0">${S_Typical10InStore.r98.open}</row>
+    </radio>
+
+    <suspend/>
+
+    <term label="TERM_S_Typical10MostInStore" cond="S_Typical10MostInStore.r98">term S_Typical10MostInStore</term>
+
+    <suspend/>
+  </block>
+
+  <block label="blockOnline_stype" cond="ChannelShopper.r2">
+    <radio 
+    label="S_ExternalPain_Delivery"
+    cond="ChannelShopper.r2"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief online, how do you elect to receive it most often?</title>
+      <comment>Select one</comment>
+      <row label="r1" value="1">I pick it up in-store or curbside</row>
+      <row label="r2" value="2">I have it shipped to my house</row>
+      <row label="r3" value="3">Third party app/service to bring it to my house the same day I order it.</row>
+    </radio>
+
+    <suspend/>
+
+    <checkbox 
+    label="S_Typical10CCOnline"
+    cond="S_ExternalPain_Delivery.r1"
+    atleast="1"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief <b>online and go to the store to pick it up</b>, which store / website do you purchase from?</title>
+      <comment>Select all that apply</comment>
+      <row label="r1">Walmart.com</row>
+      <row label="r2">Target.com</row>
+      <row label="r3">HEB.com</row>
+      <row label="r4">Meijer.com</row>
+      <row label="r5">Kroger.com</row>
+      <row label="r6">Publix.com</row>
+      <row label="r7">Albertsons.com</row>
+      <row label="r8">Walgreens.com</row>
+      <row label="r9">CVS.com</row>
+      <row label="r10">FamilyDollar.com</row>
+      <row label="r11">DollarGeneral.com</row>
+      <row label="r98" open="1" openSize="25" randomize="0">Other (please specify)</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="S_Typical10MostCCOnline"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Typical10CCOnline[row]"
+    shuffle="rows"
+    shuffleBy="S_Typical10CCOnline"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief <b>online and go to the store to pick it up</b>  , which do you purchase from most often?</title>
+      <comment>Select one response.</comment>
+      <row label="r1">Walmart.com</row>
+      <row label="r2">Target.com</row>
+      <row label="r3">HEB.com</row>
+      <row label="r4">Meijer.com</row>
+      <row label="r5">Kroger.com</row>
+      <row label="r6">Publix.com</row>
+      <row label="r7">Albertsons.com</row>
+      <row label="r8">Walgreens.com</row>
+      <row label="r9">CVS.com</row>
+      <row label="r10">FamilyDollar.com</row>
+      <row label="r11">DollarGeneral.com</row>
+      <row label="r98" randomize="0">${S_Typical10CCOnline.r98.open}</row>
+    </radio>
+
+    <suspend/>
+
+    <term label="TERM_S_Typical10MostCCOnline" cond="S_Typical10MostCCOnline.r10 or S_Typical10MostCCOnline.r11 or S_Typical10MostCCOnline.r98">term S_Typical10MostCCOnline</term>
+
+    <suspend/>
+
+    <checkbox 
+    label="S_typical10SHOnline"
+    cond="S_ExternalPain_Delivery.r2"
+    atleast="1"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief online and ask to ship it to your home, which website do you purchase from?</title>
+      <comment>Select all that apply</comment>
+      <row label="r1">Walmart.com</row>
+      <row label="r2">Target.com</row>
+      <row label="r13">StopandShop.com</row>
+      <row label="r5">Kroger.com</row>
+      <row label="r6">Publix.com</row>
+      <row label="r7">Albertsons.com</row>
+      <row label="r8">Walgreens.com</row>
+      <row label="r9">CVS.com</row>
+      <row label="r10">FamilyDollar.com</row>
+      <row label="r11">DollarGeneral.com</row>
+      <row label="r12">Amazon.com</row>
+      <row label="r98" open="1" openSize="25" randomize="0">Other (please specify)</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="S_Typical10MostSHOnline"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_typical10SHOnline[row]"
+    shuffle="rows"
+    shuffleBy="S_typical10SHOnline"
+    uses="atm1d.9">
+      <title>When you purchase external pain relief and ask to ship it to your home, which website do you purchase from most often?</title>
+      <comment>Select one response.</comment>
+      <row label="r1">Walmart.com</row>
+      <row label="r2">Target.com</row>
+      <row label="r13">StopandShop.com</row>
+      <row label="r5">Kroger.com</row>
+      <row label="r6">Publix.com</row>
+      <row label="r7">Albertsons.com</row>
+      <row label="r8">Walgreens.com</row>
+      <row label="r9">CVS.com</row>
+      <row label="r10">FamilyDollar.com</row>
+      <row label="r11">DollarGeneral.com</row>
+      <row label="r12">Amazon.com</row>
+      <row label="r98" randomize="0">${S_typical10SHOnline.r98.open}</row>
+    </radio>
+
+    <suspend/>
+
+    <term label="TERM_S_Typical10MostSHOnline" cond="S_Typical10MostSHOnline.r9 or S_Typical10MostSHOnline.r10 or S_Typical10MostSHOnline.r11 or S_Typical10MostSHOnline.r98">term S_Typical10MostSHOnline</term>
+
+    <suspend/>
+  </block>
+
+  <autofill label="S_Typical10Most" where="execute,survey,report">
+    <title>S_Typical10Most</title>
+    <row label="r1" autofill="S_Typical10MostInStore.r1 or S_Typical10MostCCOnline.r1 or S_Typical10MostSHOnline.r1">Walmart</row>
+    <row label="r2" autofill="S_Typical10MostInStore.r2 or S_Typical10MostCCOnline.r2 or S_Typical10MostSHOnline.r2">Target</row>
+    <row label="r3" autofill="S_Typical10MostInStore.r3 or S_Typical10MostCCOnline.r3">HEB</row>
+    <row label="r4" autofill="S_Typical10MostInStore.r4 or S_Typical10MostCCOnline.r4">Meijer</row>
+    <row label="r5" autofill="S_Typical10MostInStore.r5 or S_Typical10MostCCOnline.r5 or S_Typical10MostSHOnline.r5">Kroger</row>
+    <row label="r6" autofill="S_Typical10MostInStore.r6 or S_Typical10MostCCOnline.r6 or S_Typical10MostSHOnline.r6">Publix</row>
+    <row label="r7" autofill="S_Typical10MostInStore.r7 or S_Typical10MostCCOnline.r7 or S_Typical10MostSHOnline.r7">Albertson's</row>
+    <row label="r8" autofill="S_Typical10MostInStore.r8 or S_Typical10MostCCOnline.r8 or S_Typical10MostSHOnline.r8">Walgreens</row>
+    <row label="r9" autofill="S_Typical10MostInStore.r9 or S_Typical10MostCCOnline.r9 or S_Typical10MostSHOnline.r9">CVS</row>
+    <row label="r10" autofill="S_Typical10MostInStore.r10 or S_Typical10MostCCOnline.r10 or S_Typical10MostSHOnline.r10">Family Dollar</row>
+    <row label="r11" autofill="S_Typical10MostInStore.r11 or S_Typical10MostCCOnline.r11 or S_Typical10MostSHOnline.r11">Dollar General</row>
+    <row label="r12" autofill="S_Typical10MostSHOnline.r12">Amazon.com</row>
+    <row label="r13" autofill="S_Typical10MostSHOnline.r13">StopandShop.com</row>
+    <row label="r98" autofill="S_Typical10MostInStore.r98 or S_Typical10MostCCOnline.r98 or S_Typical10MostSHOnline.r98">Other (please specify)</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="S_Typical10Most_group" where="execute,survey,report">
+    <title>S_Typical10Most group</title>
+    <row label="r1" autofill="S_Typical10Most.r1 or S_Typical10Most.r2">Mass Merch</row>
+    <row label="r2" autofill="S_Typical10Most.r3 or S_Typical10Most.r4 or S_Typical10Most.r5 or S_Typical10Most.r6 or S_Typical10Most.r7">GROCERY</row>
+    <row label="r3" autofill="S_Typical10Most.r8 or S_Typical10Most.r9">DRUG</row>
+    <row label="r4" autofill="S_Typical10Most.r10 or S_Typical10Most.r11">DOLLAR</row>
+    <row label="r5" autofill="S_Typical10Most.r12">Amazon</row>
+    <row label="r9" autofill="S_Typical10Most_group.count == 0">Other</row>
+  </autofill>
+
+  <suspend/>
+
+  <term label="TERM_S_Typical10Most_group" cond="S_Typical10Most_group.r9">term S_Typical10Most_group</term>
+
+  <suspend/>
+
+  <select 
+   label="S_Employment"
+   randomize="0">
+    <title>What is your current employment status?</title>
+    <comment>Select one response.</comment>
+    <choice label="ch1">Full-Time Homemaker</choice>
+    <choice label="ch2">Part or Full-Time Student</choice>
+    <choice label="ch3">Employed Part-Time</choice>
+    <choice label="ch4">Employed Full-Time</choice>
+    <choice label="ch5">Active military</choice>
+    <choice label="ch6">Disabled</choice>
+    <choice label="ch7">Retired</choice>
+    <choice label="ch8">Currently Seeking Employment</choice>
+  </select>
+
+  <suspend/>
+
+  <select 
+   label="S_Income"
+   randomize="0">
+    <title>What is your total annual household income?</title>
+    <comment>Select one response.</comment>
+    <choice label="ch1">Less than $25,000</choice>
+    <choice label="ch2">$25,000-$29,999</choice>
+    <choice label="ch3">$30,000-$34,999</choice>
+    <choice label="ch4">$35,000-$39,999</choice>
+    <choice label="ch5">$40,000-$44,999</choice>
+    <choice label="ch6">$45,000-$49,999</choice>
+    <choice label="ch7">$50,000-$74,999</choice>
+    <choice label="ch8">$75,000-$99,999</choice>
+    <choice label="ch9">$100,000-$149,999</choice>
+    <choice label="ch10">$150,000-$199,999</choice>
+    <choice label="ch11">$200,000 or more</choice>
+    <choice label="ch12">Prefer not to answer</choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERM_S_Income" cond="S_Income.ch12">term S_Income</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Presence_of_Children"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Are there any children of yours living in your household who are 17 years of age or younger?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">YES</row>
+    <row label="r2">NO</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_Number_of_Children"
+   cond="S_Presence_of_Children.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How many children live in your household?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+    <row label="r4">4 or more</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Children_Age"
+   cond="S_Presence_of_Children.r1"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How old are the children living in your household?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1">0 to 2 years old</row>
+    <row label="r2">3 to 5 years old</row>
+    <row label="r3">6 to 8 years old</row>
+    <row label="r4">9 to 11 years old</row>
+    <row label="r5">12 to 14 years old</row>
+    <row label="r6">15 to 17 years old</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="S_Number_of_Adults"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How many adults, including yourself, live in your household?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+    <row label="r4">4 or more</row>
+  </radio>
+
+  <suspend/>
+</block>
+
+<exec>
+p.household_size = 0
+
+if S_Number_of_Adults.any:
+  p.household_size = p.household_size + (S_Number_of_Adults.val + 1)
+if S_Number_of_Children.any:
+  p.household_size = p.household_size + (S_Number_of_Children.val + 1)
+
+if p.household_size == 1:
+  if S_Income.ch1: Income_Level.val = 0
+  if S_Income.ch2 or S_Income.ch3 or S_Income.ch4 or S_Income.ch5 or S_Income.ch6: Income_Level.val = 1
+  if S_Income.ch7 or S_Income.ch8 or S_Income.ch9 or S_Income.ch10 or S_Income.ch11: Income_Level.val = 2
+
+if p.household_size == 2:
+  if S_Income.ch1 or S_Income.ch2: Income_Level.val = 0
+  if S_Income.ch3 or S_Income.ch4 or S_Income.ch5 or S_Income.ch6: Income_Level.val = 1
+  if S_Income.ch7 or S_Income.ch8 or S_Income.ch9 or S_Income.ch10 or S_Income.ch11: Income_Level.val = 2
+
+if p.household_size == 3:
+  if S_Income.ch1 or S_Income.ch2 or S_Income.ch3: Income_Level.val = 0
+  if S_Income.ch4 or S_Income.ch5 or S_Income.ch6 or S_Income.ch7: Income_Level.val = 1
+  if S_Income.ch8 or S_Income.ch9 or S_Income.ch10 or S_Income.ch11: Income_Level.val = 2
+
+if p.household_size == 4:
+  if S_Income.ch1 or S_Income.ch2 or S_Income.ch3 or S_Income.ch4: Income_Level.val = 0
+  if S_Income.ch5 or S_Income.ch6 or S_Income.ch7: Income_Level.val = 1
+  if S_Income.ch8 or S_Income.ch9 or S_Income.ch10 or S_Income.ch11: Income_Level.val = 2
+
+if p.household_size == 5:
+  if S_Income.ch1 or S_Income.ch2 or S_Income.ch3 or S_Income.ch4 or S_Income.ch5: Income_Level.val = 0
+  if S_Income.ch6 or S_Income.ch7 or S_Income.ch8: Income_Level.val = 1
+  if S_Income.ch9 or S_Income.ch10 or S_Income.ch11: Income_Level.val = 2
+
+if p.household_size ge 6:
+  if S_Income.ch1 or S_Income.ch2 or S_Income.ch3 or S_Income.ch4 or S_Income.ch5 or S_Income.ch6: Income_Level.val = 0
+  if S_Income.ch7 or S_Income.ch8: Income_Level.val = 1
+  if S_Income.ch9 or S_Income.ch10 or S_Income.ch11: Income_Level.val = 2
+</exec>
+
+<suspend/>
+
+<radio 
+  label="Income_Level"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  style="dev">
+  <title>Combine HH size with Income</title>
+  <comment>Select one</comment>
+  <row label="r1">Low Incom</row>
+  <row label="r2">Medium Income</row>
+  <row label="r3">High Income</row>
+</radio>
+
+<suspend/>
+
+<quota label="quota_all" overquota="noqual" sheet="Quota"/>
+
+<suspend/>
+
+<html label="Intro_Main" where="survey">For the next set of questions, please think about when you last bought external pain relief products from a retailer <b>[pipe:S_ChannelShopper_pipe] </b>. <br /><br />
+  But before we get started, please tell us a little bit about the brands you know and use.</html>
+
+<suspend/>
+
+<define label="Usage_ExternalPain_Aware_list" builder:title="Usage_ExternalPain_Aware list">
+  <row label="r1">Bengay</row>
+  <row label="r2">Icy Hot</row>
+  <row label="r3">Biofreeze</row>
+  <row label="r4">Aspercreme</row>
+  <row label="r5">Tiger Balm</row>
+  <row label="r6">Vicks Vapopatch</row>
+  <row label="r7">Voltaren</row>
+  <row label="r8">Salonpas</row>
+  <row label="r9">Thermacare</row>
+  <row label="r10">Motrin</row>
+  <row label="r11">Arnicare</row>
+  <row label="r12">Theraworx</row>
+  <row label="r13">Generic or store brand external pain relief</row></define>
+<checkbox 
+  label="Usage_ExternalPain_Aware"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Which of the following brand(s) of external pain relief product are you aware of?</title>
+  <comment>Select all that apply.</comment>
+  <insert source="Usage_ExternalPain_Aware_list"/>
+  <row label="r98" open="1" openSize="25" randomize="0">Other (please specify)</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Usage_ExternalPain_BOUGHT"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  rowCond="Usage_ExternalPain_Aware[row]"
+  uses="atm1d.9">
+  <title>Which of the following brand(s) of external pain relief product have you purchased in the past 12 months for you personally?</title>
+  <comment>Select all that apply.</comment>
+  <insert source="Usage_ExternalPain_Aware_list"/>
+  <row label="r98" randomize="0">${Usage_ExternalPain_Aware.r98.open}</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Usage_ExternalPain_BOUGHT_KID"
+  cond="S_Presence_of_Children.r1"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  rowCond="Usage_ExternalPain_Aware[row]"
+  uses="atm1d.9">
+  <title>Which of the following brand(s) of external pain relief product have you purchased in the past 12 months for your child or children?</title>
+  <comment>Select all that apply.</comment>
+  <insert source="Usage_ExternalPain_Aware_list"/>
+  <row label="r98" randomize="0">${Usage_ExternalPain_Aware.r98.open}</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="Usage_ExternalPain_TYPICALLY_USE"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  rowCond="Usage_ExternalPain_BOUGHT[row]"
+  uses="atm1d.9">
+  <title>Which brand of external pain relief product do you typically use to treat your external pain?</title>
+  <comment>Select one response.</comment>
+  <insert source="Usage_ExternalPain_Aware_list"/>
+  <row label="r98" randomize="0">${Usage_ExternalPain_Aware.r98.open}</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="Usage_ExternalPain_TYPICALLY_USE_KID"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  rowCond="Usage_ExternalPain_BOUGHT_KID[row]"
+  uses="atm1d.9">
+  <title>Which brand of external pain relief product do your child/children typically use to treat external pain?</title>
+  <comment>Select one response.</comment>
+  <insert source="Usage_ExternalPain_Aware_list"/>
+  <row label="r98" randomize="0">${Usage_ExternalPain_Aware.r98.open}</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="S_Brand_Rejector"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Which of the following brands of pain relievers would you NOT consider purchasing and using in the future?</title>
+  <comment>Select all that apply</comment>
+  <row label="r1">Bengay</row>
+  <row label="r2">Icy Hot</row>
+  <row label="r3">Biofreeze</row>
+  <row label="r4">Aspercreme</row>
+  <row label="r5">Tiger Balm</row>
+  <row label="r6">Vicks Vapopatch</row>
+  <row label="r7">Voltaren</row>
+  <row label="r8">Salonpas</row>
+  <row label="r9">Thermacare</row>
+  <row label="r10">Motrin</row>
+  <row label="r11">Arnicare</row>
+  <row label="r12">Theraworx</row>
+  <row label="r13" exclusive="1" randomize="0">I would consider purchasing any of these brands in the future</row>
+  <row label="r14" exclusive="1" randomize="0">I would not purchase any of these brands in the future</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="S_Brand_Feeling"
+  adim="cols"
+  grouping="cols"
+  shuffle="cols">
+  <title>Thinking about each of the brands of pain reliever you see below. Please tell me which statement best matches how you feel about each brand. </title>
+  <comment>Please select one response for each brand.</comment>
+  <col label="c1">BENGAY</col>
+  <col label="c2">ICY HOT</col>
+  <col label="c3">BIOFREEZE</col>
+  <row label="r1">It is the only brand of pain reliever I use.</row>
+  <row label="r2">It is almost always the first brand I consider, but I also use others.</row>
+  <row label="r3">It is one of my favorite brands along with others.</row>
+  <row label="r4">It is a brand I use, but there are others I would consider before this one.</row>
+  <row label="r5">I don't typically use this brand but would be open to using it.</row>
+  <row label="r6">I have tried this brand, but I wouldn't use it again.</row>
+  <row label="r7">I have never tried this brand and never will.</row>
+  <row label="r8">It is a brand I would recommend to other people.</row>
+</radio>
+
+<suspend/>
+
+<html label="Intro3" where="survey">Great! For the next set of questions, please now think about when you last bought external pain relief from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>.</html>
+
+<suspend/>
+
+<radio 
+  label="Q_SHOP1"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Thinking about the most recent time you bought external pain relief products from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>, when did you decide to buy it?</title>
+  <comment>Select one response.</comment>
+  <row label="r1">Before I started shopping</row>
+  <row label="r2">As I was shopping</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="Q_SHOP2"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Did you do any research before deciding to buy external pain relief products from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>?</title>
+  <comment>Select one response.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="Q_SHOP_2A"
+  cond="Q_SHOP2.r1"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>When did you conduct research for external pain relief products to buy from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>?</title>
+  <comment>Select all that apply.</comment>
+  <row label="r1">At the store by looking at available products on the shelves</row>
+  <row label="r2">On my mobile phone while at the store</row>
+  <row label="r3">Online while at home or another place (not at a store)</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_SHOP3"
+  cond="Q_SHOP2.r1"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Which of these sources of did you use to do research for external pain relief products to buy from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>?</title>
+  <comment>Select all that apply. </comment>
+  <row label="r1">Recommendation from an expert (in-store associate, pharmacist, etc.)</row>
+  <row label="r2">Recommendation from a coach, trainer, or exercise/sports professional</row>
+  <row label="r3">Recommendation for a celebrity/professional athlete</row>
+  <row label="r4">Online search (e.g., google.com, bing.com, etc.)</row>
+  <row label="r5">Retailer websites (e.g., Walmart.com, Target.com, etc.)</row>
+  <row label="r6">On Amazon.com</row>
+  <row label="r7">Recommendation from a friends/family</row>
+  <row label="r8">Recommendation from influencers (e.g. content creators on Instagram or Youtube.com)</row>
+  <row label="r9">On social media (e.g., Facebook, Instagram, Twitter, TikTok, etc.)</row>
+  <row label="r10">Online review and information websites and articles (e.g., WebMD.com, Mayoclinic.com, etc.)</row>
+  <row label="r11">Brand websites (e.g. Bengay.com, IcyHot.com, etc.)</row>
+  <row label="r12">Coworker/colleague/classmate</row>
+  <row label="r13">Online groups and discussion boards (e.g., reddit)</row>
+  <row label="r14" open="1" openSize="25" randomize="0">Other (please specify)</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="Q_SHOP4"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  rowCond="Q_SHOP3[row]"
+  uses="atm1d.9">
+  <title>Who/what do you TRUST MOST when researching/learning about external pain relief products to buy from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>?</title>
+  <comment>Select one response.</comment>
+  <row label="r1">Recommendation from an expert (in-store associate, pharmacist, etc.)</row>
+  <row label="r2">Recommendation from a coach, trainer, or exercise/sports professional</row>
+  <row label="r3">Recommendation for a celebrity/professional athlete</row>
+  <row label="r4">Online search (e.g., google.com, bing.com, etc.)</row>
+  <row label="r5">Retailer websites (e.g., Walmart.com, Target.com, etc.)</row>
+  <row label="r6">On Amazon.com</row>
+  <row label="r7">Recommendation from a friends/family</row>
+  <row label="r8">Recommendation from influencers (e.g. content creators on Instagram or Youtube.com)</row>
+  <row label="r9">On social media (e.g., Facebook, Instagram, Twitter, TikTok, etc.)</row>
+  <row label="r10">Online review and information websites and articles (e.g., WebMD.com, Mayoclinic.com, etc.)</row>
+  <row label="r11">Brand websites (e.g. Bengay.com, IcyHot.com, etc.)</row>
+  <row label="r12">Coworker/colleague/classmate</row>
+  <row label="r13">Online groups and discussion boards (e.g., reddit)</row>
+  <row label="r14" randomize="0">${Q_SHOP3.r14.open}</row>
+</radio>
+
+<suspend/>
+
+<style mode="after" name="respview.client.js" with="dcm_1,dcm_2,dcm_3,dcm_4,dcm_5,dcm_6,dcm_7,dcm_8,dcm_9,dcm_10,dcm_11,dcm_12,dcm_13,dcm_14,dcm_15"><![CDATA[
+<style>
+
+\@if not device.desktop
+html {
+    font-size: 8px;
+}
+\@endif
+.comment{
+  padding:0;
+}
+.comment-text table tr td{
+    border: 1px solid black;
+}
+
+.comment-text {
+    min-width: 1200px;
+    padding:0;
+}
+\@if not device.desktop
+.comment-text {
+    min-width: 924px;
+}
+
+\@endif
+  </style>
+
+<style>
+    .comment-text table tr td{border: 1px solid black;}
+  </style>
+  <script>
+    jQuery(window).on("load",function(){
+
+    function pieChart(data, width, height, cx, cy, r, colors, labels, lx, ly) {
+        var svgns = "http://www.w3.org/2000/svg";
+
+        var chart = document.createElementNS(svgns, "svg");
+        chart.setAttribute("width", width);
+        chart.setAttribute("height", height);
+        chart.setAttribute("viewBox", "0 0 " + width + " " + height);
+
+        var total = 0;
+        for (var i = 0; i < data.length; i++) {
+            total += data[i];
+        }
+
+        var angles = [];
+        for (var i = 0; i < data.length; i++)
+            angles[i] = data[i] / total * Math.PI * 2;
+
+
+        starttangle = 0;
+        for (var i = 0; i < data.length; i++) {
+            var endangle = starttangle + angles[i];
+
+            var x1 = cx + r * Math.sin(starttangle);
+            var y1 = cy - r * Math.cos(starttangle);
+            var x2 = cx + r * Math.sin(endangle);
+            var y2 = cy - r * Math.cos(endangle);
+
+            var big = 0;
+            if (endangle - starttangle > Math.PI) big = 1;
+
+            var path = document.createElementNS(svgns, "path");
+
+            var d = "M " + cx + "," + cy + " L " + x1 + "," + y1 + " A " + r + "," + r + " 0 " + big + " 1 " + x2 + "," + y2 + " Z";
+
+            path.setAttribute("d", d);
+            path.setAttribute("fill", colors[i]);
+            path.setAttribute("stroke", "white");
+            path.setAttribute("stroke-width", "1");
+            chart.appendChild(path);
+
+            starttangle = endangle;
+
+            var icon = document.createElementNS(svgns, "rect");
+            icon.setAttribute("x", lx);
+            icon.setAttribute("y", ly + 20 * i);
+            icon.setAttribute("width", 10);
+            icon.setAttribute("height", 10);
+            icon.setAttribute("fill", colors[i]);
+            icon.setAttribute("stroke", "black");
+            icon.setAttribute("stroke-width", "1");
+            chart.appendChild(icon);
+
+            var label = document.createElementNS(svgns, "text");
+            label.setAttribute("x", lx + 20);
+            label.setAttribute("y", ly + 20 * i + 10);
+            label.setAttribute("font-family", "sans-serif");
+            label.setAttribute("font-size", "12");
+            label.appendChild(document.createTextNode(labels[i]));
+            chart.appendChild(label);
+        }
+        return chart;
+    }
+
+
+
+
+        jQuery("[yuan]").each(function () {
+            var me = jQuery(this)
+            var temp =me.attr("yuan").split(",")
+            var txt = []
+            var nyuan = []
+            var ncolor = []
+            temp.map(function(e){
+                txt.push(e.split(" ")[2]+" "+e.split(" ")[1])
+            })
+            var nyuanT = []
+            temp.map(function(e){
+                nyuan.push(e.split(" ")[1].split("%")[0]-0)
+            })
+            var ncolorT = []
+            temp.map(function(e){
+                ncolor.push(e.split(" ")[0])
+            })
+
+            console.log(txt,nyuan,ncolor)
+            setTimeout(function() {
+                me.append(pieChart(nyuan, 180, 90, 35, 50, 30, ncolor, txt, 75, 10))
+            }, 100);
+
+        })
+
+jQuery("#question_Q3_1 .groupingRows").click(function(){
+        jQuery("#question_Q3a_1").css("display","block")
+      })
+
+    })
+
+  </script>
+]]></style>
+<block label="block_Conjoint" cond="1" randomize="1">
+  <note>DCM Question Template --Start--</note>
+  <exec when="init">
+def setupDCMFile(fname, fileDelimiter="\t"):
+    f = open("%s/%s" % (gv.survey.path, fname))
+    dcmObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]
+
+    d = {}
+    dcm_concepts = []
+
+    for i,row in enumerate(dcmObj):
+        if i:
+            d["v%s_t%s_c%s" % (row[0],row[1],row[2])] = row[3:]
+            if row[2] not in dcm_concepts:
+                dcm_concepts.append(row[2])
+
+    concepts = [ int(x) for x in dcm_concepts ]
+    concepts.sort()
+    d["concepts"] = dcm_concepts
+
+    return d
+
+#set persistent items, format: p.concept#_att#
+def setupDCMItems(d, vt, t1, prefix="1"):
+    print "***** STAFF ONLY *****"
+    print "***** DCM Matrix *****"
+    print "Version_Task: %s" % vt
+    print(vt)
+    for concept in d.get("concepts"):
+        attributes = d[ "%s_c%s" % (vt,concept) ]
+        print "Concept %s: %s" % (concept,attributes)
+
+        for i,attr in enumerate(attributes):
+          print(attributes[i])
+          eval("progAttr_"+t1+".r"+concept+".c"+str(i+1)).val=attributes[i]
+  </exec>
+
+  <exec when="init">
+Q15_dcm = setupDCMFile("DCM_design.dat")
+  </exec>
+
+  <suspend/>
+
+  <quota label="DCM_quota_IS" cond="ChannelShopper.r1" overquota="noqual" sheet="DCM_IS"/>
+
+  <suspend/>
+
+  <quota label="DCM_quota_O" cond="ChannelShopper.r2" overquota="noqual" sheet="DCM_O"/>
+
+  <suspend/>
+
+  <exec>
+print p.markers
+for x in p.markers:
+  if ("/DCM_O/dcm_" in x) or ("/DCM_IS/dcm_" in x):
+    hidVersion.val = int(x.split("_")[-1])
+    break
+  </exec>
+
+  <suspend/>
+
+  <number 
+   label="hidVersion"
+   cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+   size="3"
+   style="dev">
+    <title>Hidden to punch Version assigned</title>
+  </number>
+
+  <suspend/>
+
+  <autofill label="S_ChannelShopper_DCM" where="execute,survey,report">
+    <title>S_ChannelShopper</title>
+    <row label="r1" autofill="ChannelShopper.r1">In this section we would like you to imagine you are about to buy external pain relief products at a retailer in-store. You will see a range of different offers presented - each time at a different price. Please select the offer that you would buy.</row>
+    <row label="r2" autofill="ChannelShopper.r2">In this section we would like you to imagine you are about to buy external pain relief products at a retailer online. You will see a range of different offers presented - each time at a different price. Please select the offer that you would buy.</row>
+  </autofill>
+
+  <suspend/>
+
+  <pipe label="S_ChannelShopper_DCM_table" capture="">
+    <case label="r1" cond="ChannelShopper.r1">none</case>
+    <case label="r2" cond="ChannelShopper.r2">True</case>
+    <case label="r3" cond="1">UNDEFINED</case></pipe>
+  <suspend/>
+
+  <exec>
+p.startTime = timeSpent()
+  </exec>
+
+  <loop label="Q15_dcm_loop" vars="task">
+    <title>Q15 - DCM Loop</title>
+    <block label="Q15_dcm_block">
+      <exec>
+setupDCMItems( Q15_dcm, "v%s_t%s" % (hidVersion.val,"[loopvar: task]"),"[loopvar: task]", "Q15")
+p.DCMcount = "%d" % (Q15_dcm_loop_expanded.order.index([loopvar: task]-1) + 1)
+      </exec>
+
+      <text 
+     label="progAttr_[loopvar: task]"
+     optional="1"
+     size="3"
+     where="survey,report,execute">
+        <title>Programming to punch attributes for rows</title>
+        <row label="r1">1</row>
+        <row label="r2">2</row>
+        <row label="r3">3</row>
+        <row label="r4">4</row>
+        <row label="r5">5</row>
+        <row label="r6">6</row>
+        <col label="c1">Attribute1</col>
+        <col label="c2">Attribute2</col>
+        <col label="c3">Attribute3</col>
+        <col label="c4">Attribute4</col>
+        <col label="c5">Attribute5</col>
+        <col label="c6">Attribute6</col>
+        <col label="c7">Attribute7</col>
+        <col label="c8">Attribute8</col>
+        <col label="c9">Attribute9</col>
+      </text>
+
+      <suspend/>
+
+      <exec>
+for itr1 in range(1,10):
+  for itr in range(1,7):
+      val1=eval("progAttr_[loopvar: task].r"+str(itr)+".c"+str(itr1)).val
+      val2=eval("hidAttribute"+str(itr1)+"_[loopvar: task].r"+str(val1)).index
+      print(val1,val2)
+      eval("hidAttribute"+str(itr1)+"_[loopvar: task].c"+str(itr)).val=val2
+      </exec>
+
+      <suspend/>
+
+      <radio 
+     label="hidAttribute1_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r1">Pads</row>
+        <row label="r2">Topicals</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute2_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r101">Bengay</row>
+        <row label="r102">Icy Hot</row>
+        <row label="r103">Biofreeze</row>
+        <row label="r104">Aspercreme</row>
+        <row label="r105">Tiger Balm</row>
+        <row label="r106">Vicks Vapopatch</row>
+        <row label="r107">Salonpas</row>
+        <row label="r108">Thermacare</row>
+        <row label="r109">CVS Health</row>
+        <row label="r110">Equate</row>
+        <row label="r111">Walgreens</row>
+        <row label="r112">Up &amp; Up</row>
+        <row label="r113">Amazon Basic Care</row>
+        <row label="r114">Be Koool</row>
+        <row label="r201">Bengay</row>
+        <row label="r202">Icy Hot</row>
+        <row label="r203">Biofreeze</row>
+        <row label="r204">Aspercreme</row>
+        <row label="r205">Tiger Balm</row>
+        <row label="r206">Voltaren</row>
+        <row label="r207">Salonpas</row>
+        <row label="r208">Equate</row>
+        <row label="r209">Motrin</row>
+        <row label="r210">Arnicare</row>
+        <row label="r211">Theraworx</row>
+        <row label="r212">Store Brand</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute3_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r101">Hot sensation</row>
+        <row label="r102">Cold sensation</row>
+        <row label="r103">Both hot and cold sensation</row>
+        <row label="r104">Lidocaine/numbing sensation</row>
+        <row label="r105">No sensation/drug free/for circulation</row>
+        <row label="r201">Hot sensation</row>
+        <row label="r202">Cold sensation</row>
+        <row label="r203">Both hot and cold sensation</row>
+        <row label="r204">Lidocaine/numbing sensation</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute4_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r0">-</row>
+        <row label="r1">Back</row>
+        <row label="r2">Neck</row>
+        <row label="r3">Joint</row>
+        <row label="r4">Chest</row>
+        <row label="r5">Hands (arthritis)</row>
+        <row label="r6">Shoulder</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute5_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r1">Gel</row>
+        <row label="r2">Cream</row>
+        <row label="r3">Spray</row>
+        <row label="r4">Roll-on</row>
+        <row label="r5">Liquid</row>
+        <row label="r6">Single use pads/patches</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute6_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r101">2 count</row>
+        <row label="r102">3 count</row>
+        <row label="r103">4 count</row>
+        <row label="r104">5 count</row>
+        <row label="r105">6 count</row>
+        <row label="r201">2 oz</row>
+        <row label="r202">2.5 oz</row>
+        <row label="r203">3 oz</row>
+        <row label="r204">3.5 oz</row>
+        <row label="r205">4 oz</row>
+        <row label="r206">4.5 oz</row>
+        <row label="r207">5.5 oz</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute7_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r10101">$2.98</row>
+        <row label="r10102">$4.30</row>
+        <row label="r10103">$6.59</row>
+        <row label="r10104">$8.59</row>
+        <row label="r10105">$20.99</row>
+        <row label="r10201">$3.60</row>
+        <row label="r10202">$6.63</row>
+        <row label="r10203">$9.99</row>
+        <row label="r10204">$14.99</row>
+        <row label="r10205">$23.74</row>
+        <row label="r10301">$4.22</row>
+        <row label="r10302">$7.99</row>
+        <row label="r10303">$13.00</row>
+        <row label="r10304">$16.71</row>
+        <row label="r10305">$26.49</row>
+        <row label="r10401">$4.83</row>
+        <row label="r10402">$8.93</row>
+        <row label="r10403">$15.86</row>
+        <row label="r10404">$19.11</row>
+        <row label="r10405">$29.24</row>
+        <row label="r10501">$5.45</row>
+        <row label="r10502">$10.00</row>
+        <row label="r10503">$18.72</row>
+        <row label="r10504">$21.50</row>
+        <row label="r10505">$31.99</row>
+        <row label="r20101">$4.64</row>
+        <row label="r20102">$7.79</row>
+        <row label="r20103">$10.49</row>
+        <row label="r20104">$13.00</row>
+        <row label="r20105">$16.00</row>
+        <row label="r20201">$5.75</row>
+        <row label="r20202">$9.00</row>
+        <row label="r20203">$11.00</row>
+        <row label="r20204">$13.20</row>
+        <row label="r20205">$17.50</row>
+        <row label="r20301">$7.00</row>
+        <row label="r20302">$10.00</row>
+        <row label="r20303">$11.99</row>
+        <row label="r20304">$13.40</row>
+        <row label="r20305">$18.75</row>
+        <row label="r20401">$8.07</row>
+        <row label="r20402">$11.87</row>
+        <row label="r20403">$12.39</row>
+        <row label="r20404">$13.88</row>
+        <row label="r20405">$20.50</row>
+        <row label="r20501">$9.00</row>
+        <row label="r20502">$12.00</row>
+        <row label="r20503">$13.99</row>
+        <row label="r20504">$14.50</row>
+        <row label="r20505">$22.00</row>
+        <row label="r20601">$10.25</row>
+        <row label="r20602">$12.50</row>
+        <row label="r20603">$14.99</row>
+        <row label="r20604">$15.75</row>
+        <row label="r20605">$24.00</row>
+        <row label="r20701">$11.49</row>
+        <row label="r20702">$13.90</row>
+        <row label="r20703">$15.99</row>
+        <row label="r20704">$17.47</row>
+        <row label="r20705">$25.00</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute8_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r1">4.5 stars</row>
+        <row label="r2">4.6 stars</row>
+        <row label="r3">4.8 stars</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <radio 
+     label="hidAttribute9_[loopvar: task]"
+     grouping="cols"
+     optional="1"
+     where="survey,report,execute">
+        <title>Hidden to punch attributes displayed</title>
+        <row label="r1">1250</row>
+        <row label="r2">4500</row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+      </radio>
+
+      <suspend/>
+
+      <html label="dcm_[loopvar: task]"><span style="font-size:18px;">[pipe:S_ChannelShopper_DCM]</span><br />[loopvar: task]/15<br /><br />
+    <div align="center">
+
+
+<table width="100%" border="1">
+<tbody>
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">
+<strong></strong>
+</td>
+<td width="14%" style="text-align: center;"><strong>OPTION 1</strong>
+</td>
+<td width="14%" style="text-align: center;"><strong>OPTION 2</strong>
+</td>
+<td width="14%" style="text-align: center;"><strong>OPTION 3</strong>
+</td>
+<td width="14%" style="text-align: center;"><strong>OPTION 4</strong>
+</td>
+<td width="14%" style="text-align: center;"><strong>OPTION 5</strong>
+</td>
+<td width="14%" style="text-align: center;"><strong>OPTION 6</strong>
+</td>
+</tr>
+
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Type</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute1_[loopvar: task].rows[hidAttribute1_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute1_[loopvar: task].rows[hidAttribute1_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute1_[loopvar: task].rows[hidAttribute1_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute1_[loopvar: task].rows[hidAttribute1_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute1_[loopvar: task].rows[hidAttribute1_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute1_[loopvar: task].rows[hidAttribute1_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Brand</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute2_[loopvar: task].rows[hidAttribute2_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute2_[loopvar: task].rows[hidAttribute2_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute2_[loopvar: task].rows[hidAttribute2_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute2_[loopvar: task].rows[hidAttribute2_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute2_[loopvar: task].rows[hidAttribute2_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute2_[loopvar: task].rows[hidAttribute2_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Sensation</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute3_[loopvar: task].rows[hidAttribute3_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute3_[loopvar: task].rows[hidAttribute3_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute3_[loopvar: task].rows[hidAttribute3_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute3_[loopvar: task].rows[hidAttribute3_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute3_[loopvar: task].rows[hidAttribute3_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute3_[loopvar: task].rows[hidAttribute3_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Treatment Area</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute4_[loopvar: task].rows[hidAttribute4_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute4_[loopvar: task].rows[hidAttribute4_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute4_[loopvar: task].rows[hidAttribute4_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute4_[loopvar: task].rows[hidAttribute4_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute4_[loopvar: task].rows[hidAttribute4_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute4_[loopvar: task].rows[hidAttribute4_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Format</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute5_[loopvar: task].rows[hidAttribute5_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute5_[loopvar: task].rows[hidAttribute5_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute5_[loopvar: task].rows[hidAttribute5_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute5_[loopvar: task].rows[hidAttribute5_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute5_[loopvar: task].rows[hidAttribute5_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute5_[loopvar: task].rows[hidAttribute5_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Count</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute6_[loopvar: task].rows[hidAttribute6_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute6_[loopvar: task].rows[hidAttribute6_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute6_[loopvar: task].rows[hidAttribute6_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute6_[loopvar: task].rows[hidAttribute6_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute6_[loopvar: task].rows[hidAttribute6_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute6_[loopvar: task].rows[hidAttribute6_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr>
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Price</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute7_[loopvar: task].rows[hidAttribute7_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute7_[loopvar: task].rows[hidAttribute7_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute7_[loopvar: task].rows[hidAttribute7_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute7_[loopvar: task].rows[hidAttribute7_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute7_[loopvar: task].rows[hidAttribute7_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute7_[loopvar: task].rows[hidAttribute7_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr style="display:${pipe.S_ChannelShopper_DCM_table}">
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Review Rating</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute8_[loopvar: task].rows[hidAttribute8_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute8_[loopvar: task].rows[hidAttribute8_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute8_[loopvar: task].rows[hidAttribute8_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute8_[loopvar: task].rows[hidAttribute8_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute8_[loopvar: task].rows[hidAttribute8_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute8_[loopvar: task].rows[hidAttribute8_[loopvar: task].c6.val].text}</td>
+</tr>
+
+<tr style="display:${pipe.S_ChannelShopper_DCM_table}">
+<td width="14%" style="text-align: left;padding:5px 5px 5px 5px;" colspan="2">Number of Reviews</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell1">${hidAttribute9_[loopvar: task].rows[hidAttribute9_[loopvar: task].c1.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell2">${hidAttribute9_[loopvar: task].rows[hidAttribute9_[loopvar: task].c2.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell3">${hidAttribute9_[loopvar: task].rows[hidAttribute9_[loopvar: task].c3.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell4">${hidAttribute9_[loopvar: task].rows[hidAttribute9_[loopvar: task].c4.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute9_[loopvar: task].rows[hidAttribute9_[loopvar: task].c5.val].text}</td>
+<td width="14%" style="text-align: center;" class="cellValue greyClass greenText cell5">${hidAttribute9_[loopvar: task].rows[hidAttribute9_[loopvar: task].c6.val].text}</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div></html>
+
+      <radio 
+     label="Q_Decision_Categories_[loopvar: task]">
+        <title>&amp;nbsp;</title>
+        <style name="page.head"><![CDATA[
+<style>
+.grid.grid-table-mode.setWidth{
+  width:1200px;
+}
+\@if not device.desktop
+.comment-text span{
+  width:90vw;
+}
+
+.grid.grid-table-mode.setWidth{
+  width:924px;
+}
+\@endif
+
+.grid.grid-table-mode .row-legend {
+    width: 14% !important;
+}
+.grid.grid-table-mode .colCount-6 .col-legend {
+    display: none;
+}
+.question {
+    padding:0;
+    margin: 0;
+}
+.question-text,.instruction-text {
+    display: none;
+}
+.grid.grid-table-mode .row-legend {
+    background-color: lightgrey;
+}
+.grid.grid-table-mode .cell {
+    border: 1px;
+}
+.question {
+  border-top: 0px solid #0091da;
+}
+
+
+</style>
+<script>
+$ (document).on("ready",function() {
+
+var a1 = $ ('.cell1').html()
+var a2 = $ ('.cell2').html()
+var a3 = $ ('.cell3').html()
+var a4 = $ ('.cell4').html()
+var a5 = $ ('.cell5').html()
+var a6 = $ ('.cell6').html()
+var a7 = $ ('.cell7').html()
+var a8 = $ ('.cell8').html()
+var a9 = $ ('.cell9').html()
+var a10 = $ ('.cell10').html()
+var a11 = $ ('.cell11').html()
+var a12 = $ ('.cell12').html()
+var a13 = $ ('.cell13').html()
+var a14 = $ ('.cell14').html()
+var a15 = $ ('.cell15').html()
+var a16 = $ ('.cell16').html()
+var a17 = $ ('.cell17').html()
+var a18 = $ ('.cell18').html()
+var a19 = $ ('.cell19').html()
+var a20 = $ ('.cell20').html()
+var a21 = $ ('.cell21').html()
+var a22 = $ ('.cell22').html()
+var a23 = $ ('.cell23').html()
+var a24 = $ ('.cell24').html()
+var a25 = $ ('.cell25').html()
+var a26 = $ ('.cell26').html()
+var a27 = $ ('.cell27').html()
+var a28 = $ ('.cell28').html()
+var a29 = $ ('.cell29').html()
+var a30 = $ ('.cell30').html()
+var a31 = $ ('.cell31').html()
+var a32 = $ ('.cell32').html()
+var a33 = $ ('.cell33').html()
+var a34 = $ ('.cell34').html()
+var a35 = $ ('.cell35').html()
+var a36 = $ ('.cell36').html()
+var a37 = $ ('.cell37').html()
+var a38 = $ ('.cell38').html()
+var a39 = $ ('.cell39').html()
+var a40 = $ ('.cell40').html()
+var a41 = $ ('.cell41').html()
+var a42 = $ ('.cell42').html()
+
+
+if (a1 != a2){
+$ ('.cell1').css("color", "#000");
+$ ('.cell2').css("color", "#000");
+}
+if (a3 != a4){
+$ ('.cell3').css("color", "#000");
+$ ('.cell4').css("color", "#000");
+}
+if (a5 != a6){
+$ ('.cell5').css("color", "#000");
+$ ('.cell6').css("color", "#000");
+}
+if (a7 != a8){
+$ ('.cell7').css("color", "#000");
+$ ('.cell8').css("color", "#000");
+}
+if (a9 != a10){
+$ ('.cell9').css("color", "#000");
+$ ('.cell10').css("color", "#000");
+}
+if (a11 != a12){
+$ ('.cell11').css("color", "#000");
+$ ('.cell12').css("color", "#000");
+}
+if (a13 != a14){
+$ ('.cell13').css("color", "#000");
+$ ('.cell14').css("color", "#000");
+}
+if (a15 != a16){
+$ ('.cell15').css("color", "#000");
+$ ('.cell16').css("color", "#000");
+}
+if (a17 != a18){
+$ ('.cell17').css("color", "#000FF");
+$ ('.cell18').css("color", "#000FF");
+}
+if (a19 != a20){
+$ ('.cell19').css("color", "#000");
+$ ('.cell20').css("color", "#000");
+}
+if (a21 != a22){
+$ ('.cell21').css("color", "#000");
+$ ('.cell22').css("color", "#000");
+}
+if (a23 != a24){
+$ ('.cell23').css("color", "#000");
+$ ('.cell24').css("color", "#000");
+}
+if (a25 != a26){
+$ ('.cell25').css("color", "#000");
+$ ('.cell26').css("color", "#000");
+}
+if (a27 != a28){
+$ ('.cell27').css("color", "#000");
+$ ('.cell28').css("color", "#000");
+}
+if (a29 != a30){
+$ ('.cell29').css("color", "#000");
+$ ('.cell30').css("color", "#000");
+}
+if (a31 != a32){
+$ ('.cell31').css("color", "#000");
+$ ('.cell32').css("color", "#000");
+}
+if (a33 != a34){
+$ ('.cell33').css("color", "#000");
+$ ('.cell34').css("color", "#000");
+}
+if (a35 != a36){
+$ ('.cell35').css("color", "#000");
+$ ('.cell36').css("color", "#000");
+}
+if (a37 != a38){
+$ ('.cell37').css("color", "#000");
+$ ('.cell38').css("color", "#000");
+}
+if (a39 != a40){
+$ ('.cell39').css("color", "#000");
+$ ('.cell40').css("color", "#000");
+}
+if (a41 != a42){
+$ ('.cell41').css("color", "#000");
+$ ('.cell42').css("color", "#000");
+}
+
+$ ('.row').css("background-color", "lightgrey");
+
+});
+</script>
+]]></style>
+        <row label="r1"><div align="right"><b>Most likely</b></div></row>
+        <col label="c1">OPTION 1</col>
+        <col label="c2">OPTION 2</col>
+        <col label="c3">OPTION 3</col>
+        <col label="c4">OPTION 4</col>
+        <col label="c5">OPTION 5</col>
+        <col label="c6">OPTION 6</col>
+        <noanswer label="n99"><div align="right">None, I would not choose any of these</div></noanswer>
+      </radio>
+    </block>
+
+    <looprow label="1">
+      <loopvar name="task">1</loopvar>
+    </looprow>
+
+    <looprow label="2">
+      <loopvar name="task">2</loopvar>
+    </looprow>
+
+    <looprow label="3">
+      <loopvar name="task">3</loopvar>
+    </looprow>
+
+    <looprow label="4">
+      <loopvar name="task">4</loopvar>
+    </looprow>
+
+    <looprow label="5">
+      <loopvar name="task">5</loopvar>
+    </looprow>
+
+    <looprow label="6">
+      <loopvar name="task">6</loopvar>
+    </looprow>
+
+    <looprow label="7">
+      <loopvar name="task">7</loopvar>
+    </looprow>
+
+    <looprow label="8">
+      <loopvar name="task">8</loopvar>
+    </looprow>
+
+    <looprow label="9">
+      <loopvar name="task">9</loopvar>
+    </looprow>
+
+    <looprow label="10">
+      <loopvar name="task">10</loopvar>
+    </looprow>
+
+    <looprow label="11">
+      <loopvar name="task">11</loopvar>
+    </looprow>
+
+    <looprow label="12">
+      <loopvar name="task">12</loopvar>
+    </looprow>
+
+    <looprow label="13">
+      <loopvar name="task">13</loopvar>
+    </looprow>
+
+    <looprow label="14">
+      <loopvar name="task">14</loopvar>
+    </looprow>
+
+    <looprow label="15">
+      <loopvar name="task">15</loopvar>
+    </looprow>
+  </loop>
+
+  <float 
+   label="Q15_Timer"
+   size="15"
+   where="execute,survey,report">
+    <title>Q15 - DCM Timer (Minutes)</title>
+    <exec>
+Q15_Timer.val = (timeSpent() - p.startTime) / 60.0
+    </exec>
+
+  </float>
+
+  <suspend/>
+</block>
+
+<quota label="mdquota" overquota="noqual" sheet="MaxDiff1"/>
+
+<suspend/>
+
+<block label="ConsiderationFactors_online" cond="ChannelShopper.r2" builder:title="Question – ConsiderationFactors_online">
+  <exec>
+for x in range(1,301):
+  if hasMarker("/MaxDiff1/ver_" + str(x) +"/*"):
+    Q_DecisionFactorsO_Version.val = x
+  </exec>
+
+  <suspend/>
+
+  <number 
+   label="Q_DecisionFactorsO_Version"
+   size="3"
+   verify="range(1,300)"
+   where="execute,survey,report">
+    <title>Q_DecisionFactors - MaxDiff Version</title>
+  </number>
+
+  <suspend/>
+
+  <exec>
+VersionMD_temp = str(Q_DecisionFactorsO_Version.val)
+
+fileOject = open(gv.survey.path+"/ConsiderationFactors_MaxDiff_Design_O.dat","r")
+try:
+  fileList = fileOject.readlines()
+finally:
+  fileOject.close()
+
+p.fileFound = 0
+
+for line in fileList[1:]:
+  thisLine = line.strip('\r\n').split("\t")
+  for x in range(1,19):
+    if VersionMD_temp  == thisLine[0] and thisLine[1] == str(x):
+      eval("Version_Set_O"+str(x)+".r1").val=thisLine[2]
+      eval("Version_Set_O"+str(x)+".r2").val=thisLine[3]
+      eval("Version_Set_O"+str(x)+".r3").val=thisLine[4]
+      eval("Version_Set_O"+str(x)+".r4").val=thisLine[5]
+      eval("Version_Set_O"+str(x)+".r5").val=thisLine[6]
+  </exec>
+
+  <suspend/>
+
+  <exec>
+setOrder1 = []
+setOrder2 = []
+setOrder3 = []
+setOrder4 = []
+setOrder5 = []
+setOrder6 = []
+setOrder7 = []
+setOrder8 = []
+setOrder9 = []
+setOrder10 = []
+setOrder11 = []
+setOrder12 = []
+setOrder13 = []
+setOrder14 = []
+setOrder15 = []
+
+
+for x in range(1,16):
+  for y in eval("Q_DecisionFactorsO_"+str(x)).rows:
+    y.disabled=1
+
+
+
+for x in range(1,16):
+  for z in eval("Version_Set_O"+str(x)).rows:
+    print z.val
+    print int(z.val)-1
+    eval("Q_DecisionFactorsO_"+str(x)).rows[int(z.val)-1].disabled = 0
+    eval("setOrder"+str(x)).append(int(z.val)-1)
+  eval("Q_DecisionFactorsO_"+str(x)).rows.order = eval("setOrder"+str(x))
+  dataorder=[]
+  for sorder in eval("setOrder"+str(x)):
+    dataorder.append(str(sorder+1))
+  eval("list_order_O_"+str(x)).val= ",".join(dataorder)
+  print eval("Q_DecisionFactorsO_"+str(x)).rows.order
+  </exec>
+
+  <suspend/>
+
+  <exec>
+p.startTime = timeSpent()
+  </exec>
+
+  <exec>
+p.navText=1
+  </exec>
+
+  <define label="MD_list_O" builder:title="MD list">
+    <row label="item1">Rapid relief</row>
+    <row label="item2">Long lasting relief</row>
+    <row label="item3">Fragrance/smell</row>
+    <row label="item4">No fragrance/smell; unscented</row>
+    <row label="item5">Patch</row>
+    <row label="item6">Roll-on</row>
+    <row label="item7">Spray</row>
+    <row label="item8">Topical cream, gel, lotion or oil</row>
+    <row label="item9">Limited or natural ingredients</row>
+    <row label="item10">Professional recommended   (Doctor, training, coach, etc.)</row>
+    <row label="item11">Good for muscle pain, spasms, and tension</row>
+    <row label="item12">Good for joints (ankle, knee, wrist, neck, elbow, hip, back and shoulder)</row>
+    <row label="item13">Promotion/on sale/ coupons/ reward points</row>
+    <row label="item14">Multi-Pack Bundle (i.e., pack of 2, pack of 4, etc.)</row>
+    <row label="item15">My preferred brand</row>
+    <row label="item16">Something new</row>
+    <row label="item17">It was on my shopping list</row>
+    <row label="item18">WOM (word of mouth); Recommendation by friend</row>
+    <row label="item19">Easy to apply/ No mess</row>
+    <row label="item20">Only heat sensation</row>
+    <row label="item21">Only cold sensation</row>
+    <row label="item22">Both heat and cold sensation</row>
+    <row label="item23">Active ingredient (menthol/lidocaine)</row>
+    <row label="item24">Strength (Regular, Ultra, Maximum, professional, prescription, etc.)</row>
+  </define>
+  <loop label="Q_DecisionFactorsO_md_loop" vars="task">
+    <title>Q_DecisionFactors - MaxDiff Loop</title>
+    <block label="Q_DecisionFactorsO_md_block" randomize="1">
+      <text 
+     label="Version_Set_O[loopvar: task]"
+     cond="0"
+     size="40"
+     where="notdp">
+        <title>Set [loopvar: task]</title>
+        <row label="r1">item1</row>
+        <row label="r2">item2</row>
+        <row label="r3">item3</row>
+        <row label="r4">item4</row>
+        <row label="r5">item5</row>
+      </text>
+
+      <suspend/>
+
+      <text 
+     label="list_order_O_[loopvar: task]"
+     cond="0"
+     optional="0"
+     size="40">
+        <title>Set [loopvar: task]</title>
+      </text>
+
+      <suspend/>
+
+      <radio 
+     label="Q_DecisionFactorsO_[loopvar: task]"
+     adim="cols"
+     grouping="cols"
+     shuffle="rows"
+     ss:questionClassNames="Q1_maxdiff"
+     unique="1">
+<title>Thinking about when you were buying external pain relief from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>, which factors were most and least important to your decision?<br /> <i>In this exercise you will see several different sets of five factors each. Some factors may get repeated over different sets. For each set, please select the factors that are most important and least important to you in that set.</i> </title>
+        <comment>${p.navText}/15</comment>
+        <col label="c1">Most Important</col>
+        <col label="c2">Least Important</col>
+        <insert source="MD_list_O"/>
+        <style mode="before" name="question.header"><![CDATA[
+<style type="text/css">
+.Q1_maxdiff .survey-q-grid .survey-q-grid-rowlegend {
+    text-align: center;
+}
+img{width:200px}
+.grid.grid-table-mode .row-legend {
+    text-align: center;
+}
+.grid-table-mode .nonempty {
+    border: 1px solid #000;
+}
+</style>
+]]></style>
+        <style name="question.row"><![CDATA[
+\@if this.styles.ss.rowHeight
+    <tr class="$(style) colCount-$(colCount)" style="height:${this.styles.ss.rowHeight};">
+\@else
+    <tr class="$(style) colCount-$(colCount)">
+\@endif
+    ${elements.split("</td>")[0]}</td>
+    $(left)
+    ${elements.split("</td>")[1]}</td>
+</tr>
+]]></style>
+        <style name="question.top-legend"><![CDATA[
+\@if this.styles.ss.colLegendHeight
+    <tr class="legend top-legend${" GtTenColumns" if ec.colCount > 10 else ""} colCount-$(colCount)" style="height:${this.styles.ss.colLegendHeight};">
+\@else
+    <tr class="legend top-legend${" GtTenColumns" if ec.colCount > 10 else ""} colCount-$(colCount)">
+\@endif
+    ${legends.split("</th>")[0]}</th>
+    $(left)
+    ${legends.split("</th>")[1]}</th>
+</tr>
+<tbody>
+]]></style>
+      </radio>
+
+      <suspend/>
+
+      <exec>
+for x in Version_Set_O[loopvar: task].rows:
+  if x.any:
+    print x.val
+    SC_MaxDiff_O_[loopvar: task].rows[int(x.val)-1].val = 0
+
+SC_MaxDiff_O_[loopvar: task].rows[Q_DecisionFactorsO_[loopvar: task].c1.val].val = 1
+SC_MaxDiff_O_[loopvar: task].rows[Q_DecisionFactorsO_[loopvar: task].c2.val].val = -1
+      </exec>
+
+      <suspend/>
+
+      <float 
+     label="SC_MaxDiff_O_[loopvar: task]"
+     cond="not gv.isSST()"
+     size="3"
+     ss:listDisplay="0"
+     where="execute,survey,report">
+        <title>For each task, all alternatives need a variable (i.e. 11 variables per task in this design). Each statement is coded as follows:
+Code 1 = most encouraging alternative
+Code 0 = alternative shown, but not selected
+Code -1 = least encouraging alternative
+Code SYSMIS (i.e. missing value) = alternative not shown
+</title>
+        <insert source="MD_list_O"/>
+      </float>
+
+      <suspend/>
+
+      <exec>
+p.navText=p.navText+1
+      </exec>
+
+      <suspend/>
+    </block>
+
+    <looprow label="1">
+      <loopvar name="task">1</loopvar>
+    </looprow>
+
+    <looprow label="2">
+      <loopvar name="task">2</loopvar>
+    </looprow>
+
+    <looprow label="3">
+      <loopvar name="task">3</loopvar>
+    </looprow>
+
+    <looprow label="4">
+      <loopvar name="task">4</loopvar>
+    </looprow>
+
+    <looprow label="5">
+      <loopvar name="task">5</loopvar>
+    </looprow>
+
+    <looprow label="6">
+      <loopvar name="task">6</loopvar>
+    </looprow>
+
+    <looprow label="7">
+      <loopvar name="task">7</loopvar>
+    </looprow>
+
+    <looprow label="8">
+      <loopvar name="task">8</loopvar>
+    </looprow>
+
+    <looprow label="9">
+      <loopvar name="task">9</loopvar>
+    </looprow>
+
+    <looprow label="10">
+      <loopvar name="task">10</loopvar>
+    </looprow>
+
+    <looprow label="11">
+      <loopvar name="task">11</loopvar>
+    </looprow>
+
+    <looprow label="12">
+      <loopvar name="task">12</loopvar>
+    </looprow>
+
+    <looprow label="13">
+      <loopvar name="task">13</loopvar>
+    </looprow>
+
+    <looprow label="14">
+      <loopvar name="task">14</loopvar>
+    </looprow>
+
+    <looprow label="15">
+      <loopvar name="task">15</loopvar>
+    </looprow>
+
+  </loop>
+
+  <float 
+   label="Q_DecisionFactorsO_Timer"
+   size="15"
+   where="execute,survey,report">
+    <title>Q_DecisionFactors - MaxDiff Timer (Minutes)</title>
+    <exec>
+Q_DecisionFactorsO_Timer.val = (timeSpent() - p.startTime) / 60.0
+    </exec>
+
+  </float>
+
+  <note>MaxDiff Indices Template --End--</note>
+  <suspend/>
+
+  <exec>
+for x in Q_DecisionFactorsO_BEFORE.rows:
+  x.disabled=1
+
+for x in Q_DecisionFactorsO_COMPARE.rows:
+  x.disabled=1
+
+for x in Q_DecisionFactorsO_CHOICE.rows:
+  x.disabled=1
+
+for y in range(1,16):
+  for i in eval("Q_DecisionFactorsO_"+str(y)).rows: 
+    if i.c1:
+        Q_DecisionFactorsO_BEFORE.rows[i.index].disabled=0
+        Q_DecisionFactorsO_COMPARE.rows[i.index].disabled=0
+        Q_DecisionFactorsO_CHOICE.rows[i.index].disabled=0
+  </exec>
+
+  <select 
+   label="Q_DecisionFactorsO_BEFORE"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="width: 250px; height:70px !important;"
+   ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+   ranksort:cardCSS="width: 250px; height:70px !important;; color: #000000;"
+   ranksort:cardsContainerCSS="width: 580px;"
+   shuffle="rows"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title><b><u>BEFORE</u></b> you started shopping, what were you going to look for?</title>
+    <comment>Select 1, 2 and 3 most important</comment>
+    <insert source="MD_list_O"/>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+  </select>
+
+  <suspend/>
+
+  <select 
+   label="Q_DecisionFactorsO_COMPARE"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="width: 250px; height:70px !important;"
+   ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+   ranksort:cardCSS="width: 250px; height:70px !important;; color: #000000;"
+   ranksort:cardsContainerCSS="width: 580px;"
+   shuffle="rows"
+   shuffleBy="Q_DecisionFactorsO_BEFORE"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>When you were <b><u>CHOOSING AND COMPARING</u></b> among different products while shopping, what did you pay attention to most?</title>
+    <comment>Select 1, 2 and 3 most important</comment>
+    <insert source="MD_list_O"/>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+  </select>
+
+  <suspend/>
+
+  <select 
+   label="Q_DecisionFactorsO_CHOICE"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="width: 250px; height:70px !important;"
+   ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+   ranksort:cardCSS="width: 250px; height:70px !important;; color: #000000;"
+   ranksort:cardsContainerCSS="width: 580px;"
+   shuffle="rows"
+   shuffleBy="Q_DecisionFactorsO_BEFORE"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>What influenced your <b><u>FINAL CHOICE</u></b>? </title>
+    <comment>Select 1, 2 and 3 most important</comment>
+    <insert source="MD_list_O"/>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+  </select>
+
+  <suspend/>
+</block>
+
+<checkbox 
+  label="Q_DecisionFactorsO_BEFORE_Top3"
+  atleast="1">
+  <title>Top3 <b><u>BEFORE</u></b> you started shopping, what were you going to look for?</title>
+  <virtual>
+for x in Q_DecisionFactorsO_BEFORE.rows:
+  if x.ch1 or x.ch2 or x.ch3:
+    Q_DecisionFactorsO_BEFORE_Top3.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_O"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsO_COMPARE_Top3"
+  atleast="1">
+  <title>Top3 When you were <b><u>CHOOSING AND COMPARING</u></b> among different products while shopping, what did you pay attention to most?</title>
+  <virtual>
+for x in Q_DecisionFactorsO_COMPARE.rows:
+  if x.ch1 or x.ch2 or x.ch3:
+    Q_DecisionFactorsO_COMPARE_Top3.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_O"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsO_CHOICE_Top3"
+  atleast="1">
+  <title>Top3 What influenced your <b><u>FINAL CHOICE</u></b>?</title>
+  <virtual>
+for x in Q_DecisionFactorsO_CHOICE.rows:
+  if x.ch1 or x.ch2 or x.ch3:
+    Q_DecisionFactorsO_CHOICE_Top3.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_O"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsO_BEFORE_Top2"
+  atleast="1">
+  <title>Top2 <b><u>BEFORE</u></b> you started shopping, what were you going to look for?</title>
+  <virtual>
+for x in Q_DecisionFactorsO_BEFORE.rows:
+  if x.ch1 or x.ch2:
+    Q_DecisionFactorsO_BEFORE_Top2.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_O"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsO_COMPARE_Top2"
+  atleast="1">
+  <title>Top2 When you were <b><u>CHOOSING AND COMPARING</u></b> among different products while shopping, what did you pay attention to most?</title>
+  <virtual>
+for x in Q_DecisionFactorsO_COMPARE.rows:
+  if x.ch1 or x.ch2:
+    Q_DecisionFactorsO_COMPARE_Top2.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_O"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsO_CHOICE_Top2"
+  atleast="1">
+  <title>Top2 What influenced your <b><u>FINAL CHOICE</u></b>?</title>
+  <virtual>
+for x in Q_DecisionFactorsO_CHOICE.rows:
+  if x.ch1 or x.ch2:
+    Q_DecisionFactorsO_CHOICE_Top2.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_O"/>
+</checkbox>
+
+<suspend/>
+
+<block label="ConsiderationFactors_IS" cond="ChannelShopper.r1" builder:title="Question – ConsiderationFactors_IS">
+  <exec>
+for x in range(1,301):
+  if hasMarker("/MaxDiff1/ver_" + str(x) +"/*"):
+    Q_DecisionFactorsIS_Version.val = x
+  </exec>
+
+  <suspend/>
+
+  <number 
+   label="Q_DecisionFactorsIS_Version"
+   size="3"
+   verify="range(1,300)"
+   where="execute,survey,report">
+    <title>Q_DecisionFactors - MaxDiff Version</title>
+  </number>
+
+  <suspend/>
+
+  <exec>
+VersionMD_temp = str(Q_DecisionFactorsIS_Version.val)
+
+fileOject = open(gv.survey.path+"/ConsiderationFactors_MaxDiff_Design_IS.dat","r")
+try:
+  fileList = fileOject.readlines()
+finally:
+  fileOject.close()
+
+p.fileFound = 0
+
+for line in fileList[1:]:
+  thisLine = line.strip('\r\n').split("\t")
+  for x in range(1,16):
+    if VersionMD_temp  == thisLine[0] and thisLine[1] == str(x):
+      eval("Version_Set_IS"+str(x)+".r1").val=thisLine[2]
+      eval("Version_Set_IS"+str(x)+".r2").val=thisLine[3]
+      eval("Version_Set_IS"+str(x)+".r3").val=thisLine[4]
+      eval("Version_Set_IS"+str(x)+".r4").val=thisLine[5]
+      eval("Version_Set_IS"+str(x)+".r5").val=thisLine[6]
+  </exec>
+
+  <suspend/>
+
+  <exec>
+setOrder1 = []
+setOrder2 = []
+setOrder3 = []
+setOrder4 = []
+setOrder5 = []
+setOrder6 = []
+setOrder7 = []
+setOrder8 = []
+setOrder9 = []
+setOrder10 = []
+setOrder11 = []
+setOrder12 = []
+setOrder13 = []
+setOrder14 = []
+setOrder15 = []
+
+
+
+for x in range(1,16):
+  for y in eval("Q_DecisionFactorsIS_"+str(x)).rows:
+    y.disabled=1
+
+
+
+for x in range(1,16):
+  for z in eval("Version_Set_IS"+str(x)).rows:
+    print z.val
+    print int(z.val)-1
+    eval("Q_DecisionFactorsIS_"+str(x)).rows[int(z.val)-1].disabled = 0
+    eval("setOrder"+str(x)).append(int(z.val)-1)
+  eval("Q_DecisionFactorsIS_"+str(x)).rows.order = eval("setOrder"+str(x))
+  dataorder=[]
+  for sorder in eval("setOrder"+str(x)):
+    dataorder.append(str(sorder+1))
+  eval("list_ISrder_IS_"+str(x)).val= ",".join(dataorder)
+  print eval("Q_DecisionFactorsIS_"+str(x)).rows.order
+  </exec>
+
+  <suspend/>
+
+  <exec>
+p.startTime = timeSpent()
+  </exec>
+
+  <exec>
+p.navText=1
+  </exec>
+
+  <define label="MD_list_IS" builder:title="MD list">
+
+      <row label="item1">Rapid relief</row>
+    <row label="item2">Long lasting relief</row>
+    <row label="item3">Fragrance/smell</row>
+    <row label="item4">No fragrance/smell; unscented</row>
+    <row label="item5">Patch</row>
+    <row label="item6">Roll-on</row>
+    <row label="item7">Spray</row>
+    <row label="item8">Topical cream, gel, lotion or oil</row>
+    <row label="item9">Limited or natural ingredients</row>
+    <row label="item10">Professional recommended   (Doctor, training, coach, etc.)</row>
+    <row label="item11">Good for muscle pain, spasms, and tension</row>
+    <row label="item12">Good for joints (ankle, knee, wrist, neck, elbow, hip, back and shoulder)</row>
+    <row label="item13">Promotion/on sale/ coupons/ reward points</row>
+
+    <row label="item14">My preferred brand</row>
+    <row label="item15">Something new</row>
+    <row label="item16">It was on my shopping list</row>
+    <row label="item17">WOM (word of mouth); Recommendation by friend</row>
+    <row label="item18">Easy to apply/ No mess</row>
+    <row label="item19">Only heat sensation</row>
+    <row label="item20">Only cold sensation</row>
+    <row label="item21">Both heat and cold sensation</row>
+    <row label="item22">Active ingredient (menthol/lidocaine)</row>
+    <row label="item23">Strength (Regular, Ultra, Maximum, professional, prescription, etc.)</row>
+</define>
+  <loop label="Q_DecisionFactorsIS_md_loop" vars="task">
+    <title>Q_DecisionFactors - MaxDiff Loop</title>
+    <block label="Q_DecisionFactorsIS_md_block" randomize="1">
+      <text 
+     label="Version_Set_IS[loopvar: task]"
+     cond="0"
+     size="40"
+     where="notdp">
+        <title>Set [loopvar: task]</title>
+        <row label="r1">item1</row>
+        <row label="r2">item2</row>
+        <row label="r3">item3</row>
+        <row label="r4">item4</row>
+        <row label="r5">item5</row>
+      </text>
+
+      <suspend/>
+
+      <text 
+     label="list_ISrder_IS_[loopvar: task]"
+     cond="0"
+     optional="0"
+     size="40">
+        <title>Set [loopvar: task]</title>
+      </text>
+
+      <suspend/>
+
+      <radio 
+     label="Q_DecisionFactorsIS_[loopvar: task]"
+     adim="cols"
+     grouping="cols"
+     shuffle="rows"
+     ss:questionClassNames="Q1_maxdiff"
+     unique="1">
+<title>Thinking about when you were buying external pain relief from a retailer <b>[pipe:S_ChannelShopper_pipe]</b>, which factors were most and least important to your decision?<br /> <i>In this exercise you will see several different sets of five factors each. Some factors may get repeated over different sets. For each set, please select the factors that are most important and least important to you in that set.</i> </title>
+        <comment>${p.navText}/15</comment>
+        <col label="c1">Most Important</col>
+        <col label="c2">Least Important</col>
+        <insert source="MD_list_IS"/>
+        <style mode="before" name="question.header"><![CDATA[
+<style type="text/css">
+.Q1_maxdiff .survey-q-grid .survey-q-grid-rowlegend {
+    text-align: center;
+}
+img{width:200px}
+.grid.grid-table-mode .row-legend {
+    text-align: center;
+}
+.grid-table-mode .nonempty {
+    border: 1px solid #000;
+}
+</style>
+]]></style>
+        <style name="question.row"><![CDATA[
+\@if this.styles.ss.rowHeight
+    <tr class="$(style) colCount-$(colCount)" style="height:${this.styles.ss.rowHeight};">
+\@else
+    <tr class="$(style) colCount-$(colCount)">
+\@endif
+    ${elements.split("</td>")[0]}</td>
+    $(left)
+    ${elements.split("</td>")[1]}</td>
+</tr>
+]]></style>
+        <style name="question.top-legend"><![CDATA[
+\@if this.styles.ss.colLegendHeight
+    <tr class="legend top-legend${" GtTenColumns" if ec.colCount > 10 else ""} colCount-$(colCount)" style="height:${this.styles.ss.colLegendHeight};">
+\@else
+    <tr class="legend top-legend${" GtTenColumns" if ec.colCount > 10 else ""} colCount-$(colCount)">
+\@endif
+    ${legends.split("</th>")[0]}</th>
+    $(left)
+    ${legends.split("</th>")[1]}</th>
+</tr>
+<tbody>
+]]></style>
+      </radio>
+
+      <suspend/>
+
+      <exec>
+for x in Version_Set_IS[loopvar: task].rows:
+  if x.any:
+    print x.val
+    SC_MaxDiff_IS_[loopvar: task].rows[int(x.val)-1].val = 0
+
+SC_MaxDiff_IS_[loopvar: task].rows[Q_DecisionFactorsIS_[loopvar: task].c1.val].val = 1
+SC_MaxDiff_IS_[loopvar: task].rows[Q_DecisionFactorsIS_[loopvar: task].c2.val].val = -1
+      </exec>
+
+      <suspend/>
+
+      <float 
+     label="SC_MaxDiff_IS_[loopvar: task]"
+     cond="not gv.isSST()"
+     size="3"
+     ss:listDisplay="0"
+     where="execute,survey,report">
+        <title>For each task, all alternatives need a variable (i.e. 11 variables per task in this design). Each statement is coded as follows:
+Code 1 = most encouraging alternative
+Code 0 = alternative shown, but not selected
+Code -1 = least encouraging alternative
+Code SYSMIS (i.e. missing value) = alternative not shown
+</title>
+        <insert source="MD_list_IS"/>
+      </float>
+
+      <suspend/>
+
+      <exec>
+p.navText=p.navText+1
+      </exec>
+
+      <suspend/>
+    </block>
+
+    <looprow label="1">
+      <loopvar name="task">1</loopvar>
+    </looprow>
+
+    <looprow label="2">
+      <loopvar name="task">2</loopvar>
+    </looprow>
+
+    <looprow label="3">
+      <loopvar name="task">3</loopvar>
+    </looprow>
+
+    <looprow label="4">
+      <loopvar name="task">4</loopvar>
+    </looprow>
+
+    <looprow label="5">
+      <loopvar name="task">5</loopvar>
+    </looprow>
+
+    <looprow label="6">
+      <loopvar name="task">6</loopvar>
+    </looprow>
+
+    <looprow label="7">
+      <loopvar name="task">7</loopvar>
+    </looprow>
+
+    <looprow label="8">
+      <loopvar name="task">8</loopvar>
+    </looprow>
+
+    <looprow label="9">
+      <loopvar name="task">9</loopvar>
+    </looprow>
+
+    <looprow label="10">
+      <loopvar name="task">10</loopvar>
+    </looprow>
+
+    <looprow label="11">
+      <loopvar name="task">11</loopvar>
+    </looprow>
+
+    <looprow label="12">
+      <loopvar name="task">12</loopvar>
+    </looprow>
+
+    <looprow label="13">
+      <loopvar name="task">13</loopvar>
+    </looprow>
+
+    <looprow label="14">
+      <loopvar name="task">14</loopvar>
+    </looprow>
+
+    <looprow label="15">
+      <loopvar name="task">15</loopvar>
+    </looprow>
+
+  </loop>
+
+  <float 
+   label="Q_DecisionFactorsIS_Timer"
+   size="15"
+   where="execute,survey,report">
+    <title>Q_DecisionFactors - MaxDiff Timer (Minutes)</title>
+    <exec>
+Q_DecisionFactorsIS_Timer.val = (timeSpent() - p.startTime) / 60.0
+    </exec>
+
+  </float>
+
+  <note>MaxDiff Indices Template --End--</note>
+  <suspend/>
+
+  <exec>
+for x in Q_DecisionFactorsIS_BEFORE.rows:
+  x.disabled=1
+
+for x in Q_DecisionFactorsIS_COMPARE.rows:
+  x.disabled=1
+
+for x in Q_DecisionFactorsIS_CHOICE.rows:
+  x.disabled=1
+
+for y in range(1,16):
+  for i in eval("Q_DecisionFactorsIS_"+str(y)).rows: 
+    if i.c1:
+        Q_DecisionFactorsIS_BEFORE.rows[i.index].disabled=0
+        Q_DecisionFactorsIS_COMPARE.rows[i.index].disabled=0
+        Q_DecisionFactorsIS_CHOICE.rows[i.index].disabled=0
+  </exec>
+
+  <select 
+   label="Q_DecisionFactorsIS_BEFORE"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="width: 250px; height:60px !important;"
+   ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+   ranksort:cardCSS="width: 250px; height:60px !important;; color: #000000;"
+   ranksort:cardsContainerCSS="width: 580px;"
+   shuffle="rows"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title><b><u>BEFORE</u></b> you started shopping, what were you going to look for?</title>
+    <comment>Select 1, 2 and 3 most important</comment>
+    <insert source="MD_list_IS"/>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+  </select>
+
+  <suspend/>
+
+  <select 
+   label="Q_DecisionFactorsIS_COMPARE"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="width: 250px; height:60px !important;"
+   ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+   ranksort:cardCSS="width: 250px; height:60px !important;; color: #000000;"
+   ranksort:cardsContainerCSS="width: 580px;"
+   shuffle="rows"
+   shuffleBy="Q_DecisionFactorsIS_BEFORE"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>When you were <b><u>CHOOSING AND COMPARING</u></b> among different products while shopping, what did you pay attention to most? </title>
+    <comment>Select 1, 2 and 3 most important</comment>
+    <insert source="MD_list_IS"/>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+  </select>
+
+  <suspend/>
+
+  <select 
+   label="Q_DecisionFactorsIS_CHOICE"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="width: 250px; height:60px !important;"
+   ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+   ranksort:cardCSS="width: 250px; height:60px !important;; color: #000000;"
+   ranksort:cardsContainerCSS="width: 580px;"
+   shuffle="rows"
+   shuffleBy="Q_DecisionFactorsIS_BEFORE"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>What influenced your <b><u>FINAL CHOICE</u></b>? </title>
+    <comment>Select 1, 2 and 3 most important</comment>
+    <insert source="MD_list_IS"/>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+  </select>
+
+  <suspend/>
+</block>
+
+<checkbox 
+  label="Q_DecisionFactorsIS_BEFORE_Top3"
+  atleast="1">
+  <title>Top3 <b><u>BEFORE</u></b> you started shopping, what were you going to look for?</title>
+  <virtual>
+for x in Q_DecisionFactorsIS_BEFORE.rows:
+  if x.ch1 or x.ch2 or x.ch3:
+    Q_DecisionFactorsIS_BEFORE_Top3.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_IS"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsIS_COMPARE_Top3"
+  atleast="1">
+  <title>Top3 When you were <b><u>CHOOSING AND COMPARING</u></b> among different products while shopping, what did you pay attention to most?</title>
+  <virtual>
+for x in Q_DecisionFactorsIS_COMPARE.rows:
+  if x.ch1 or x.ch2 or x.ch3:
+    Q_DecisionFactorsIS_COMPARE_Top3.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_IS"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsIS_CHOICE_Top3"
+  atleast="1">
+  <title>Top3 What influenced your <b><u>FINAL CHOICE</u></b>?</title>
+  <virtual>
+for x in Q_DecisionFactorsIS_CHOICE.rows:
+  if x.ch1 or x.ch2 or x.ch3:
+    Q_DecisionFactorsIS_CHOICE_Top3.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_IS"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsIS_BEFORE_Top2"
+  atleast="1">
+  <title>Top2 <b><u>BEFORE</u></b> you started shopping, what were you going to look for?</title>
+  <virtual>
+for x in Q_DecisionFactorsIS_BEFORE.rows:
+  if x.ch1 or x.ch2:
+    Q_DecisionFactorsIS_BEFORE_Top2.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_IS"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsIS_COMPARE_Top2"
+  atleast="1">
+  <title>Top2 When you were <b><u>CHOOSING AND COMPARING</u></b> among different products while shopping, what did you pay attention to most?</title>
+  <virtual>
+for x in Q_DecisionFactorsIS_COMPARE.rows:
+  if x.ch1 or x.ch2:
+    Q_DecisionFactorsIS_COMPARE_Top2.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_IS"/>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_DecisionFactorsIS_CHOICE_Top2"
+  atleast="1">
+  <title>Top2 What influenced your <b><u>FINAL CHOICE</u></b>?</title>
+  <virtual>
+for x in Q_DecisionFactorsIS_CHOICE.rows:
+  if x.ch1 or x.ch2:
+    Q_DecisionFactorsIS_CHOICE_Top2.rows[x.index].val = 1
+  </virtual>
+
+  <insert source="MD_list_IS"/>
+</checkbox>
+
+<suspend/>
+
+
+<checkbox 
+  label="Q_Triggers"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>Thinking about the last time you purchased external pain relief products at a retailer <b>[pipe:S_ChannelShopper_pipe]</b>, which of the following motivated you to make that purchase?</title>
+  <comment>Select all that apply.</comment>
+  <row label="r1" cond="ChannelShopper.r2">I was directed to buy it via a “buy-now” button on social media</row>
+  <row label="r2" cond="ChannelShopper.r2">I saw a recommendation to add to cart on the website (e.g., “You might also like” or “Other people also bought”)</row>
+  <row label="r3" cond="ChannelShopper.r2">I saw an advertisement/banner while browsing online</row>
+  <row label="r4" cond="ChannelShopper.r2">I received an online coupon I wanted to use</row>
+  <row label="r5" cond="ChannelShopper.r1">I saw some external pain relief products displayed at the end of an aisle</row>
+  <row label="r6" cond="ChannelShopper.r1">I saw or became aware of an in-store sale/promotion</row>
+  <row label="r7" cond="ChannelShopper.r1">I received a store coupon I wanted to use in-store</row>
+  <row label="r8">It was on my shopping list</row>
+  <row label="r9">I wanted to stock up on products for when the need might arise</row>
+  <row label="r10">I read an article recommending a product</row>
+  <row label="r11">I received a recommendation from my doctor</row>
+  <row label="r12">I wanted to find an alternative product to what I have been using</row>
+  <row label="r13">I saw an advertisement</row>
+  <row label="r14">I had run out of the product I was using</row>
+  <row label="r16">I received a recommendation from my friend or family member</row>
+  <row label="r15" open="1" openSize="25" randomize="0">Other, Please specify:</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="Q_SHOP8"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>What issues have you experienced while shopping for external pain relief you purchased at a retailer <b>[pipe:S_ChannelShopper_pipe]</b>?</title>
+  <comment>Select all that apply.</comment>
+  <row label="r1" cond="ChannelShopper.r2">Issues using filters to get to the right product online</row>
+  <row label="r2" cond="ChannelShopper.r2">Issues searching for what I need</row>
+  <row label="r3" cond="ChannelShopper.r2">Products in-store only</row>
+  <row label="r4" cond="ChannelShopper.r2">Products not available for pick-up</row>
+  <row label="r5" cond="ChannelShopper.r2">Not enough images online</row>
+  <row label="r6" cond="ChannelShopper.r2">Delivery fees</row>
+  <row label="r7" cond="ChannelShopper.r2">Not able to receive it in time/ delivery not quick enough</row>
+  <row label="r8" cond="ChannelShopper.r2">Items are more expensive online vs in store</row>
+  <row label="r9" cond="ChannelShopper.r2">Limited delivery options</row>
+  <row label="r10" cond="ChannelShopper.r2">Only available behind the counter from a pharmacist</row>
+  <row label="r11" cond="ChannelShopper.r1">Issues finding what I need in-store</row>
+  <row label="r12" cond="ChannelShopper.r1">Products online only</row>
+  <row label="r13" cond="ChannelShopper.r1">Items expensive in-store</row>
+  <row label="r14">Product out of stock</row>
+  <row label="r15">Difficulty finding my preferred product</row>
+  <row label="r16">Not enough product information</row>
+  <row label="r17" exclusive="1" randomize="0">No real problems issues</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="Q_Important_Factor"
+  cond="ChannelShopper.r2"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>What is the most important factor on a product page that you look for?</title>
+  <comment>Select one response.</comment>
+  <row label="r1">Images</row>
+  <row label="r2">Price of product</row>
+  <row label="r3">Product description/information</row>
+  <row label="r4">Subscribe and save</row>
+  <row label="r5">Size</row>
+  <row label="r6">Flavor/type</row>
+  <row label="r7">Delivery window</row>
+  <row label="r8">Product reviews</row>
+  <row label="r9">Images uploaded by other shoppers</row>
+  <row label="r10">Videos (how to use)</row>
+  <row label="r11">Before and after photos</row>
+  <row label="r12">Link to brand website</row>
+  <row label="r13">"You may also like…" recommendations</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="Q_TWOTRIPS"
+  cond="S_ExternalPain_Delivery.r1"
+  atm1d:large_maxWidth="250px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Thinking about when you have purchased external pain relief products at a retailer online and picked it up in-store or curbside, which of the following have you ever done?</title>
+  <comment>Select one response.</comment>
+  <row label="r1">Picked up the external pain relief products and immediately left the store/curbside area</row>
+  <row label="r2">Picked up the external pain relief products and continued to browse for other products/categories in-store</row>
+  <row label="r3">Picked up the external pain relief products and then continued to browse external pain relief products in-store</row>
+</radio>
+
+<suspend/>
+
+<html label="Intro4" where="survey">Now, just a few questions for classification purposes…</html>
+
+<suspend/>
+
+<text 
+  label="C_ZipCode">
+  <title>Please enter your 5-digit zip code.</title>
+  <validate>
+if not(this.val.isdigit()):
+  error("Please enter a valid zip code.")
+if len(this.val) != 5:
+  error("Please enter a valid zip code.")
+  </validate>
+
+</text>
+
+<suspend/>
+
+<select 
+  label="S_Standard_Education"
+  randomize="0">
+  <title>What is the last level of education that you completed?</title>
+  <comment>Select one response.</comment>
+  <choice label="ch1">Some High School or less</choice>
+  <choice label="ch2">Completed High School</choice>
+  <choice label="ch3">Some College or Technical School</choice>
+  <choice label="ch4">Completed College/Technical School</choice>
+  <choice label="ch5">Some Post-Graduate Study or more</choice>
+</select>
+
+<suspend/>
+
+<select 
+  label="C_STANDARD_RELATIONSHIP"
+  randomize="0">
+  <title>What is your relationship status?</title>
+  <comment>Select one response.</comment>
+  <choice label="ch1">Single, never married</choice>
+  <choice label="ch2">Married</choice>
+  <choice label="ch3">Separated, divorced or widowed</choice>
+  <choice label="ch4">Domestic partnership/living with someone</choice>
+  <choice label="ch5">Prefer not to answer</choice>
+</select>
+
+<suspend/>
+
+<radio 
+  label="C_STANDARD_ETHNICITY"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  ss:questionClassNames="noclick"
+  uses="atm1d.9">
+  <title>Which of the following best describes your ethnicity? </title>
+  <comment>Select one response.</comment>
+  <row label="r1">Caucasian/White</row>
+  <row label="r2">African American /Black,</row>
+  <row label="r3">Asian/Pacific Islander</row>
+  <row label="r4">Hispanic/Latino</row>
+  <row label="r5" open="1" openSize="25" randomize="0">Other (please specify)</row>
+</radio>
+
+<suspend/>
+</survey>

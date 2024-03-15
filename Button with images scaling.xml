@@ -1,0 +1,46 @@
+<checkbox 
+  label="E7"
+  atleast="1"
+  atm1d:numCols="3"
+  atm1d:viewMode="tiled"
+  shuffle="rows"
+  uses="pdatm1d.2009">
+  <title>Which of the following <b>retailers</b> have you bought pet food or products from in the past 12 months?</title>
+  <comment>Please select all that apply.</comment>
+  
+  
+  <style name="page.head"><![CDATA[
+<style>
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 200px;
+    min-width: 200px;
+}
+
+\@if not device.desktop
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 200px;
+    min-width: 200px;
+}
+
+\@endif
+
+</style>
+]]></style>
+  
+  
+  <group label="g1">SUPERMARKETS</group>
+  <group label="g2">PHYSICAL PET SPECIALISTS</group>
+  <group label="g3">ONLINE PET RETAILERS</group>
+  <group label="g4">OTHER</group>
+  <row label="r1" groups="g1"><img src="/survey/selfserve/53b/220405/L1.png" /></row>
+  <row label="r2" groups="g1"><img src="/survey/selfserve/53b/220405/L2.png" /></row>
+  <row label="r3" groups="g2"><img src="/survey/selfserve/53b/220405/L3.png" /></row>
+  <row label="r4" groups="g2"><img src="/survey/selfserve/53b/220405/L4.png" /></row>
+  <row label="r5" groups="g3"><img src="/survey/selfserve/53b/220405/L5.png" /></row>
+  <row label="r6" groups="g3"><img src="/survey/selfserve/53b/220405/L6.png" /></row>
+  <row label="r7" groups="g4"><img src="/survey/selfserve/53b/220405/L7.png" /><br /><div align="center">From the vet</div></row>
+  <row label="r8" groups="g4" open="1" openSize="25" randomize="0">Other (specify)</row>
+  <row label="r9" exclusive="1" groups="g4" randomize="0">None of these</row>
+</checkbox>
+
+<suspend/>

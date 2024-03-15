@@ -1,0 +1,6 @@
+atm1d:large_buttonAlign="center"
+atm1d:large_maxHeight="120px"
+atm1d:large_maxWidth="200px"
+atm1d:showInput="0"
+atm1d:viewMode="tiled"
+uses="atm1d.9"

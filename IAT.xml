@@ -1,0 +1,176 @@
+<block label="TestRound" builder:title="Live Implicit Exercises">
+      <pipe label="Implicit_IMG_Comp1" capture="">
+        <case label="r1" cond="True"><img src="[rel IATCOMP1.jpg]" constrain="true" height="100" title="" /></case>
+        <case label="r11" cond="1"/></pipe>
+      <pipe label="Implicit_IMG_Test" capture="">
+        <case label="r1" cond="Phase.r1"><img src="[rel IAT1.jpg]" constrain="true" title="" height="200" width="500" /></case>
+        <case label="r2" cond="Phase.r2"><img src="[rel IAT2.jpg]" constrain="true" title="" height="200" width="500" /></case>
+        <case label="r3" cond="Phase.r3"><img src="[rel IAT3.jpg]" constrain="true" title="" height="200" width="500" /></case>
+        <case label="r11" cond="1"/></pipe>
+      <pipe label="Implicit_IMG_Comp2" capture="">
+        <case label="r1" cond="True"><img src="[rel IATCOMP2.jpg]" constrain="true" height="200" title="" /></case>
+        <case label="r11" cond="1"/></pipe>
+      <suspend/>
+
+      <html label="IM1" where="survey"><span style="font-size: 14pt;">You are now going to see a series of <u>statements</u> and <u>attributes</u> on your screen.<br />Please pay attention as it's going to be <u>very quick</u>.<br /><br />As soon as a statement appears you will have <u><b><span style="color: #c6007e;">5 seconds</span></b></u> to click on the package that you think best applies to the statement.<br /><br /><strong>Ready? Please continue. </strong></span></html>
+
+      <suspend/>
+
+      <loop label="L1a" randomizeChildren="1" vars="statement">
+        <title>New Loop</title>
+        <block label="b1a" builder:title="default loop block">
+          <radio 
+       label="IM1B_[loopvar: label]"
+       cardsort:animationDuration="0"
+       cardsort:bucketCSS="background: white;"
+       cardsort:bucketHoverCSS="background: F0F8FF;"
+       cardsort:bucketMaxWidth="550px"
+       cardsort:bucketSelectCSS="background: F0F8FF;"
+       cardsort:completionHTML=""
+       cardsort:displayCounter="0"
+       cardsort:displayProgress="0"
+       cardsort:dragAndDrop="0"
+       optional="1"
+       randomize="0"
+       shuffle="cols"
+       uses="cardsort.6">
+            <title>&amp;nbsp;</title>
+            <row label="r1"><strong><span style="font-size: 36pt;">[loopvar: statement]</span></strong></row>
+            <col label="c1">[pipe: Implicit_IMG_Comp1]</col>
+            <col label="c2">[pipe: Implicit_IMG_Test]</col>
+            <col label="c3">[pipe: Implicit_IMG_Comp2]</col>
+            <style name="question.after"><![CDATA[
+<style>
+#question_packAttTimesa_[loopvar: label]{
+  display:none;
+}
+</style>
+]]></style>
+            <style name="question.after" wrap="ready"><![CDATA[
+var nextButton = $ (".sq-cardsort-next");
+    var prevButton = $ (".sq-cardsort-previous");
+    nextButton.hide();
+    prevButton.hide();
+    nextFunction();
+    
+    nextButton.click(function(){
+      nextFunction();
+    });
+    
+    var timeOut;
+var qn = ${jsexport()}; //returns json object of the question
+var order = [qn.rows[0].index] //return order of question rows
+    
+    function setTimeOut() {
+      clearTimeout(timeOut);
+        timeOut = setTimeout( function() {
+                        nextButton.click();
+              order.shift();
+                  timeStart = $ .now();
+                  if (order.length==0) {
+                    $ ("#btn_continue").click();
+                  }
+                    }, 7000);
+    }
+    
+    function nextFunction(){
+      setTimeOut()      
+    }
+    
+console.log(qn)     
+  
+      timeStart = $ .now();
+        
+          $ (document).on('click','.sq-cardsort-bucket',function(){ 
+            
+            time = ($ .now()-timeStart)/1000;
+            
+            var ind = $ ('.sq-cardsort-card:visible').attr('index'); //return index of row shown
+            
+            console.log(ind)
+            console.log(order)
+            console.log(order.length)
+
+            index = order.shift();
+            
+            console.log("index:"+index);
+            console.log(time);
+              
+            $ ('input[type=text]:eq('+index+')').val(time);
+            
+           
+            timeStart = $ .now();
+            
+          setTimeout( function() {
+               $ ("#btn_continue").click();
+               }, 50);
+        });
+]]></style>
+          </radio>
+
+          <text 
+       label="packAttTimesa_[loopvar: label]"
+       cond="not(gv.isSST())"
+       randomize="0">
+            <title>Pack Attribute Times</title>
+            <row label="r1">[loopvar:statement]</row>
+          </text>
+
+          <suspend/>
+
+          <float 
+       label="packAttTimesnlivea_[loopvar: label]"
+       randomize="0"
+       where="execute,survey,report">
+            <title>Pack Attribute Times</title>
+            <exec>
+for row in packAttTimesa_[loopvar: label].rows:
+  packAttTimesnlivea_[loopvar: label].rows[row.index].val = float(packAttTimesa_[loopvar: label].rows[row.index].val or 0)
+            </exec>
+
+            <row label="r1">[loopvar:statement]</row>
+          </float>
+
+          <suspend/>
+
+          <note>Is Unique and different from other brands is a Plus standard statement and should always be in position 1</note>
+          <textarea 
+       label="IM2_[loopvar: label]"
+       cond="False"
+       height="5"
+       optional="0"
+       randomize="0"
+       width="60">
+            <title>What specifically about the [pipe: Brand] made you say it was "[loopvar:statement]" than the others?</title>
+          </textarea>
+
+          <suspend/>
+
+          <note>PROGRAMMER NOTE: 0 is neutral, 00 is fair, and 1 is unique and different from other brands need to remain in IAT for all studies and not edited.</note>        </block>
+
+        <looprow label="0" randomize="0">
+          <loopvar name="statement">Is Cluttered</loopvar>
+        </looprow>
+
+        <looprow label="1">
+          <loopvar name="statement">Is unique and different from other brands</loopvar>
+        </looprow>
+
+        <looprow label="2">
+          <loopvar name="statement">Is a high-quality product</loopvar>
+        </looprow>
+
+        <looprow label="3">
+          <loopvar name="statement">Is for someone like me</loopvar>
+        </looprow>
+
+        <looprow label="4">
+          <loopvar name="statement">Is made by a brand I can trust</loopvar>
+        </looprow>
+
+        <looprow label="5">
+          <loopvar name="statement">Is significantly larger than a regular size candy bar</loopvar>
+        </looprow>
+      </loop>
+    </block>
+  </block>

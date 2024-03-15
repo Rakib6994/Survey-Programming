@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="video_rating"
+  autosave="0"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="150"
+  delphi="1"
+  extraVariables="source,record,decLang,list,userAgent"
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="1"
+  ss:hideProgressBar="0"
+  state="testing">
+
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<textarea 
+  label="q1"
+  bcme:account_id="2280166212001"
+  bcme:height="480"
+  bcme:pause_enable="1"
+  bcme:player_id="WxkzMz4Kr"
+  bcme:slider_orientation="horizontal"
+  bcme:video_id="6321072149112"
+  bcme:watermark="Analyticsify"
+  bcme:width="852"
+  height="10"
+  optional="0"
+  sst="0"
+  uses="bcme.6"
+  width="50"
+  where="survey"
+  >
+  <title>As you watch the video, please rate it by moving the slider left to right.</title>
+  
+</textarea>
+
+<textarea 
+  label="Q1_0"
+  height="10"
+  imgmap:image="0.jpg"
+  ss:questionClassNames="sq-imgmap"
+  uses="imgmap.4"
+  width="50">
+  <title>Please highlight the part of the video that make you rate this particular level of enjoyment. You can also put in your comments to explain your choice.</title>
+  <col label="c1" cond="1">Positive</col>
+</textarea>
+</survey>

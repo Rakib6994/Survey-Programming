@@ -1,0 +1,104 @@
+<exec>
+if S2.check('1-17'):
+  S3.val = 0
+if S2.check('18-24'):
+  S3.val = 1
+if S2.check('25-34'):
+  S3.val = 2
+if S2.check('35-44'):
+  S3.val = 3
+if S2.check('45-54'):
+  S3.val = 4
+if S2.check('55-64'):
+  S3.val = 5
+if S2.check('65-75'):
+  S3.val = 6
+if S2.check('76-120'):
+  S3.val = 7
+</exec>
+
+<suspend/>
+
+<radio 
+  label="S3"
+  optional="1"
+  where="execute,survey,report">
+  <title>Record the age group 1</title>
+  <row label="r1">1-17</row>
+  <row label="r2">18-24</row>
+  <row label="r3">25-34</row>
+  <row label="r4">35-44</row>
+  <row label="r5">45-54</row>
+  <row label="r6">55-64</row>
+  <row label="r7">65-75</row>
+  <row label="r8">76+</row>
+</radio>
+
+<suspend/>
+
+
+
+
+
+
+<number 
+  label="A4A"
+  optional="0"
+  size="3"
+  verify="range(01,120)">
+  <title>Please specify your age below.</title>
+</number>
+
+<suspend/>
+
+<autofill label="A4B">
+  <title>Record age-group.</title>
+  <row label="r1" autofill="(A4A.check('&lt;40'))">Below 40</row>
+  <row label="r2" autofill="(A4A.check('40-44'))">40-44 years</row>
+  <row label="r3" autofill="(A4A.check('45-49'))">45-49 years</row>
+  <row label="r4" autofill="(A4A.check('50-54'))">50-54 years</row>
+  <row label="r5" autofill="(A4A.check('55-59'))">55-59 years</row>
+  <row label="r6" autofill="(A4A.check('&gt;=60'))">60 yrs and above</row>
+</autofill>
+
+<suspend/>
+
+
+
+
+
+
+
+
+<exec>
+if A4A.check('0-39'):
+  A4B.val = 0
+if A4A.check('40-44'):
+  A4B.val = 1
+if A4A.check('45-49'):
+  A4B.val = 2
+if A4A.check('50-54'):
+  A4B.val = 3
+if A4A.check('55-59'):
+ A4B.val = 4
+if A4A.check('&gt;=60'):
+  A4B.val = 5
+</exec>
+
+<suspend/>
+
+<radio 
+  label="A4B"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1">
+  <title>${this.label + ". " if showQID.r1 else ""}Coded Age</title>
+  <comment><span style='color: #ca0b00;'>This will be hidden after launch.</span></comment>
+  <row label="r1">Below 40</row>
+  <row label="r2">40-44 years</row>
+  <row label="r3">45-49 years</row>
+  <row label="r4">50-54 years</row>
+  <row label="r5">55-59 years</row>
+  <row label="r6">60 yrs and above</row>
+</radio>
+
+<suspend/>

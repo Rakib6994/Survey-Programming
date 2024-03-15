@@ -1,0 +1,80 @@
+.watch {
+	position: absolute;
+	border: black solid 2px;
+	border-radius: 5px; 
+	}
+	
+.disp {
+	margin: 75px 68px;
+	position: absolute;
+	}
+
+#startbutton {
+	height: 77px; 
+	width: 77px; 
+	border-radius: 100%; 
+	position: absolute; 
+	margin: 176px 100px; 
+	text-align: center;	
+	font-size: 21px;
+	cursor: pointer;
+	color: white;
+	}
+
+.green {
+    background-color: #008800;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003500), to(#008800));
+    background-image: -webkit-linear-gradient(left, #194919, #008800); 
+    background-image:    -moz-linear-gradient(left, #194919, #008800);
+    background-image:     -ms-linear-gradient(left, #194919, #008800);
+    background-image:      -o-linear-gradient(left, #194919, #008800);
+    }
+
+.red {
+    background-color: #CC0000;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8A0000), to(#CC0000));
+    background-image: -webkit-linear-gradient(left, #8A0000, #CC0000); 
+    background-image:    -moz-linear-gradient(left, #8A0000, #CC0000);
+    background-image:     -ms-linear-gradient(left, #8A0000, #CC0000);
+    background-image:      -o-linear-gradient(left, #8A0000, #CC0000);
+    }
+	
+
+.done {
+    background-color: #0000FF;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000040), to(#0000FF));
+    background-image: -webkit-linear-gradient(left, #000040, #0000FF); 
+    background-image:    -moz-linear-gradient(left, #000040, #0000FF);
+    background-image:     -ms-linear-gradient(left, #000040, #0000FF);
+    background-image:      -o-linear-gradient(left, #000040, #0000FF);
+	}
+
+.start {
+	cursor: pointer;
+	}
+	
+.stop {
+	cursor: pointer;
+	diplay: hide;
+	}
+	
+#disp {
+	text-align:center;
+	margin: 9px -3px;
+	height: 35px;
+	width: 152px;
+	font-size: 30px;
+	
+	}
+	
+	
+
+.answer {
+	display: hidden;
+	}
+	
+#stopwatch {
+	float: left;
+	}
+	
+	

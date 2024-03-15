@@ -1,0 +1,22 @@
+<select 
+  label="A1b"
+  minRanks="4"
+  optional="1"
+  ranksort:bucketCSS="min-height:140px;margin:5px;"
+  ranksort:cardCSS="min-height:140px;margin:5px;"
+  ranksort:mobile_cardCSS="min-height:180px;margin:10px;padding:10px;"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>Now please take a look at the statements again and rank them in order of 1 to 4, where 1 describes you the BEST and 4 describes you the LEAST.</title>
+  <comment>Please click or drag each item into a rank position.</comment>
+  <row label="r1">I know exactly what styles and shapes are most flattering for my body shape. When it comes to clothes and styling, others often come to me for advice.</row>
+  <row label="r2">I'm still trying to figure out what styles and shapes of clothes are most flattering for my body shape. I enjoy staying up to date with the latest trends and my personal style is reflected in the clothes I wear and in my home.</row>
+  <row label="r3">It is important to me that I look good at all times, even if it's just popping down to the shops or picking the kids up from school. When I find a piece of clothing that fits me well, I'm happy to invest in it as I don't have time to shop around.</row>
+  <row label="r4">I like to dress for success and prefer high quality clothes that need minimum fuss and effort. I'm happy to take others' advice on what type of clothes and styles bring out the best in me.</row>
+  <choice label="ch1">1</choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3</choice>
+  <choice label="ch4">4</choice>
+</select>
+
+<suspend/>

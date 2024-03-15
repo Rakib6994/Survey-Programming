@@ -1,0 +1,86 @@
+<radio
+label="S9x1">
+<title>Now we’d like to ask you about different financial services or tasks. Thinking about the financial services below, which best describes your engagement with them?</title>
+<comment><i>Please select one in each row</i></comment>
+<col label="c5" value="5">Done in the past month</col>
+<col label="c4" value="4">Done in the past year, but not in the last month</col>
+<col label="c3" value="3">Done in the past, but not in the past year</col>
+<col label="c2" value="2">Aware of it, but never done</col>
+<col label="c1" value="1">Never heard of it</col>
+
+<row label="r1">Send or receive money for personal reasons</row>
+<row label="r2">Send or receive money for business reasons</row>
+<row label="r3">Pay for goods or services online</row>
+<row label="r4">Use a buy now and pay later service</row>
+<row label="r5">Receive direct deposits / paycheck</row>
+<row label="r6">Save money in an account</row>
+<row label="r7">Invest and manage stocks</row>
+<row label="r8">Invest and manage cryptocurrency (e.g., Bitcoin)</row>
+</radio>
+
+<suspend/>
+
+<radio
+label="S9x2">
+<title>Now we’d like to ask you about different financial services or tasks. Thinking about the financial services below, which best describes your engagement with them?</title>
+<comment><i>Please select one in each row</i></comment>
+<col label="c5" value="5">Done in the past month</col>
+<col label="c4" value="4">Done in the past year, but not in the last month</col>
+<col label="c3" value="3">Done in the past, but not in the past year</col>
+<col label="c2" value="2">Aware of it, but never done</col>
+<col label="c1" value="1">Never heard of it</col>
+
+<row label="r9">Use a debit card</row>
+<row label="r10">Get discounts or offers from businesses (e.g., 5% off codes or bonus activations) at check out</row>
+<row label="r11">Get a personal loan</row>
+<row label="r12">Track and budget money on your financial accounts</row>
+<row label="r13">Monitor or check your credit</row>
+<row label="r14">Use your family’s financial account or card</row>
+<row label="r15">Get paid for referring others to sign up for an account with the financial service companies you use</row>
+<row label="r16">File your taxes</row>
+</radio>
+<suspend/>
+
+
+
+<exec>
+for x in S9x1.rows:
+if S9x1[x].any:
+S9[x].val=S9x1[x].val
+for y in S9x2.rows:
+if S9x2[y].any:
+S9[y].val=S9x2[y].val
+
+</exec>
+
+<radio
+label="S9"
+optional="1"
+where="execute,survey,report">
+<title>Now we’d like to ask you about different financial services or tasks. Thinking about the financial services below, which best describes your engagement with them?</title>
+<comment><i>Please select one in each row</i></comment>
+<col label="c5" value="5">Done in the past month</col>
+<col label="c4" value="4">Done in the past year, but not in the last month</col>
+<col label="c3" value="3">Done in the past, but not in the past year</col>
+<col label="c2" value="2">Aware of it, but never done</col>
+<col label="c1" value="1">Never heard of it</col>
+
+<row label="r1">Send or receive money for personal reasons</row>
+<row label="r2">Send or receive money for business reasons</row>
+<row label="r3">Pay for goods or services online</row>
+<row label="r4">Use a buy now and pay later service</row>
+<row label="r5">Receive direct deposits / paycheck</row>
+<row label="r6">Save money in an account</row>
+<row label="r7">Invest and manage stocks</row>
+<row label="r8">Invest and manage cryptocurrency (e.g., Bitcoin)</row>
+<row label="r9">Use a debit card</row>
+<row label="r10">Get discounts or offers from businesses (e.g., 5% off codes or bonus activations) at check out</row>
+<row label="r11">Get a personal loan</row>
+<row label="r12">Track and budget money on your financial accounts</row>
+<row label="r13">Monitor or check your credit</row>
+<row label="r14">Use your family’s financial account or card</row>
+<row label="r15">Get paid for referring others to sign up for an account with the financial service companies you use</row>
+<row label="r16">File your taxes</row>
+</radio>
+
+<suspend/>

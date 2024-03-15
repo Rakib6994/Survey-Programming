@@ -1,0 +1,15 @@
+<text 
+   label="DateTime"
+   optional="0"
+   randomize="0"
+   size="25"
+   where="report">
+    <title>DateTime</title>
+    <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+    </exec>
+
+  </text>

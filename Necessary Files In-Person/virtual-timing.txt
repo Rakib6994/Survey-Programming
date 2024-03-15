@@ -1,0 +1,16 @@
+== Timings for 300 records, in micro-seconds per record == 
+vos                83   13.30
+setup              72   11.52
+vbrowser           65   10.39
+v_FreqClutter1       57    9.12
+v_FreqTest         50    8.06
+v_FreqClutter2       50    7.98
+LocationCode       38    6.11
+vlist              15    2.44
+vmobiledevice       14    2.30
+write              12    2.06
+vmobileos          11    1.88
+vterm               7    1.17
+status              5    0.90
+vdropout            4    0.76
+TOTAL             627 (1592.39 records per second)

@@ -1,0 +1,182 @@
+<stylevar name="cs:fg_tag" type="res"/>
+<stylevar name="cs:fg_repeatCheck" type="res"/>
+<stylevar name="cs:fg_textHover" type="res"/>
+<stylevar name="cs:fg_unitS" type="res"/>
+<stylevar name="cs:fg_unitP" type="res"/>
+<stylevar name="cs:fg_step1" type="res"/>
+<stylevar name="cs:fg_step2" type="res"/>
+<stylevar name="cs:fg_step3" type="res"/>
+<stylevar name="cs:fg_step4" type="res"/>
+<text 
+  label="Q_Assort_1"
+  cs:fg_repeatCheck="1"
+  cs:fg_step1="Review the products in the image bank.."
+  cs:fg_step2="Drag and drop the products into groupings. ."
+  cs:fg_step3="Use the text box at the top of grouping to “name” the grouping you have created."
+  cs:fg_step4="Add more items to this group by dropping them on top of it.Make more groups by dropping them in unused spaces.When you're done click 'Finished' at the top right. Have fun!"
+  cs:fg_textHover="0"
+  cs:fg_unitP="items"
+  cs:fg_unitS="item"
+  ss:listDisplay="0">
+  <title>We would now like you to take another look at these lip care products and sort them into groupings of the products that go together, if any.  There are no “right” or “wrong” answers – simply sort the products as what comes naturally to you.  </title>
+  <style mode="before" name="question.header"><![CDATA[
+<link rel="stylesheet" type="text/css" href="https://paralleldata.decipherinc.com/survey/selfserve/601/FEDTEMPLATEV1/freegroup.css" />
+		<script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+		<script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/601/FEDTEMPLATEV1/freegroup.js"></script>
+		<style type="text/css">
+		.question-text{
+			display: none;
+		}
+		.answers {
+			display: none;
+		}
+				    .freegroup-slider {
+      height: 500px !important;
+    } 
+		</style>
+		<script type="text/javascript">
+		(function($) {
+			var setupOptions = ${this.stylesjs.freegroup};
+			$.extend(setupOptions, {
+				deviceClass: "${"mobile" if (gv.request.device.properties.get("isMobileDevice") == "1") else ""}${"desktop" if (gv.request.device.properties.get("isMobileDevice") == "0") else ""}",
+				repeatcheck: "${this.styles.cs.fg_repeatCheck}",
+				texthover: "${this.styles.cs.fg_textHover}",
+				units: "${this.styles.cs.fg_unitS}",
+				unitp: "${this.styles.cs.fg_unitP}",
+				step1: "${this.styles.cs.fg_step1}",
+				step2: "${this.styles.cs.fg_step2}",
+				step3: "${this.styles.cs.fg_step3}",
+				step4: "${this.styles.cs.fg_step4}",
+				label: "${this.label}"
+			});
+			$ (function() {
+				Survey.question.freegroup.setup(setupOptions);
+			});
+		})(jQuery);
+		</script>
+]]></style>
+  <style mode="before" name="survey.question.answers.start"><![CDATA[
+<div class="freegroup-body freegroup-${this.label}">
+			<div class="freegroup-list">
+
+			</div>
+			<div class="freegroup-block" drag>
+					\@for fgR in ec.enabledRows
+					<div class="freegroup-block-item freegroup-block-${fgR.label or "q1"}" fgtag="${fgR.styles.cs.fg_tag}" texthover="${this.styles.cs.fg_textHover}">
+						${fgR.text}
+					</div>      
+					\@end
+			</div>
+			<div class="freegroup-slider">    
+				\@for fgC in ec.enabledCols 
+				<div class="freegroup-slider-item freegroup-slider-${fgC.label or "tips"}">
+					${fgC.text}    
+				</div>      
+				\@end
+				<div class="freegroup-slider-box box1"></div>
+				<div class="freegroup-slider-box box2"></div>
+				<div class="freegroup-slider-box box3"></div>
+				<div class="freegroup-slider-box box4"></div>
+				<div class="freegroup-slider-box box5"></div>
+			</div>
+			<div class="freegroup-other">
+			</div>
+		</div>
+		</div>
+]]></style>
+  <row label="r1"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC1.jpg" height="100" /></row>
+  <row label="r2"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC2.jpg" height="100" /></row>
+  <row label="r3"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC3.jpg" height="100" /></row>
+  <row label="r4"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC4.jpg" height="100" /></row>
+  <row label="r5"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC5.jpg" height="100" /></row>
+  <row label="r6"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC6.jpg" height="100" /></row>
+</text>
+
+<suspend/>
+
+<text 
+  label="Q_Assort_2"
+  cs:fg_repeatCheck="1"
+  cs:fg_step1="Review the products in the image bank.."
+  cs:fg_step2="Drag and drop the products into groupings. ."
+  cs:fg_step3="Use the text box at the top of grouping to “name” the grouping you have created."
+  cs:fg_step4="Add more items to this group by dropping them on top of it.Make more groups by dropping them in unused spaces.When you're done click 'Finished' at the top right. Have fun!"
+  cs:fg_textHover="0"
+  cs:fg_unitP="items"
+  cs:fg_unitS="item"
+  ss:listDisplay="0">
+  <title>We would now like you to take one final look at these lip care products and put them into the boxes that best represents your perception of the type of product each represents.  There are no “right” or “wrong” answers – simply put the products in the boxes as what comes naturally to you. Depending on how you feel, you can place multiple products in a box, one product in a box, or no products in a box – the choice is up to you.  </title>
+  <style mode="before" name="question.header"><![CDATA[
+<link rel="stylesheet" type="text/css" href="https://paralleldata.decipherinc.com/survey/selfserve/601/FEDTEMPLATEV1/freegroup.css" />
+		<script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>
+		<script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/601/FEDTEMPLATEV1/freegroup.js"></script>
+		<style type="text/css">
+		.question-text{
+			display: none;
+		}
+		.answers {
+			display: none;
+		}
+				    .freegroup-slider {
+      height: 500px !important;
+    } 
+		</style>
+		<script type="text/javascript">
+		(function($) {
+			var setupOptions = ${this.stylesjs.freegroup};
+			$.extend(setupOptions, {
+				deviceClass: "${"mobile" if (gv.request.device.properties.get("isMobileDevice") == "1") else ""}${"desktop" if (gv.request.device.properties.get("isMobileDevice") == "0") else ""}",
+				repeatcheck: "${this.styles.cs.fg_repeatCheck}",
+				texthover: "${this.styles.cs.fg_textHover}",
+				units: "${this.styles.cs.fg_unitS}",
+				unitp: "${this.styles.cs.fg_unitP}",
+				step1: "${this.styles.cs.fg_step1}",
+				step2: "${this.styles.cs.fg_step2}",
+				step3: "${this.styles.cs.fg_step3}",
+				step4: "${this.styles.cs.fg_step4}",
+				label: "${this.label}"
+			});
+			$ (function() {
+				Survey.question.freegroup.setup(setupOptions);
+			});
+		})(jQuery);
+		</script>
+]]></style>
+  <style mode="before" name="survey.question.answers.start"><![CDATA[
+<div class="freegroup-body freegroup-${this.label}">
+			<div class="freegroup-list">
+
+			</div>
+			<div class="freegroup-block" drag>
+					\@for fgR in ec.enabledRows
+					<div class="freegroup-block-item freegroup-block-${fgR.label or "q1"}" fgtag="${fgR.styles.cs.fg_tag}" texthover="${this.styles.cs.fg_textHover}">
+						${fgR.text}
+					</div>      
+					\@end
+			</div>
+			<div class="freegroup-slider">    
+				\@for fgC in ec.enabledCols 
+				<div class="freegroup-slider-item freegroup-slider-${fgC.label or "tips"}">
+					${fgC.text}    
+				</div>      
+				\@end
+				<div class="freegroup-slider-box box1"></div>
+				<div class="freegroup-slider-box box2"></div>
+				<div class="freegroup-slider-box box3"></div>
+				<div class="freegroup-slider-box box4"></div>
+				<div class="freegroup-slider-box box5"></div>
+			</div>
+			<div class="freegroup-other">
+			</div>
+		</div>
+		</div>
+]]></style>
+  <row label="r1"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC1.jpg" height="100" /></row>
+  <row label="r2"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC2.jpg" height="100" /></row>
+  <row label="r3"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC3.jpg" height="100" /></row>
+  <row label="r4"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC4.jpg" height="100" /></row>
+  <row label="r5"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC5.jpg" height="100" /></row>
+  <row label="r6"><img src="https://emea.focusvision.com/survey/selfserve/1da7/ae482/BC6.jpg" height="100" /></row>
+</text>
+
+<suspend/>

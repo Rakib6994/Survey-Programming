@@ -1,0 +1,123 @@
+<checkbox 
+  label="A4"
+  atleast="1"
+  ss:legendColWidth="400px"
+  uses="multicol.7">
+  <title>Which of these have you bought in the <strong>last 12 months</strong>?</title>
+  <comment>Please select all that apply.</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+.row-legend-group {
+    background-color: #aaa;
+    color: #fff;
+}
+</style>
+]]></style>
+  <group label="g1" builder:axis="row">Australia's Own</group>
+  <group label="g2" builder:axis="row">Almond Breeze</group>
+  <group label="g3" builder:axis="row">MILKLAB</group>
+  <group label="g4" builder:axis="row">So Good</group>
+  <group label="g5" builder:axis="row">Vitasoy</group>
+  <group label="g6" builder:axis="row">Pure Harvest</group>
+  <group label="g7" builder:axis="row">Bonsoy</group>
+  <group label="g8" builder:axis="row">Alpro</group>
+  <group label="g9" builder:axis="row">Liddells</group>
+  <group label="g10" builder:axis="row">Paul's</group>
+  <group label="g11" builder:axis="row">Nutty Bruce</group>
+  <group label="g12" builder:axis="row">Oatly</group>
+  <group label="g13" builder:axis="row">Minor Figures</group>
+  <group label="g14" builder:axis="row">Califia Farms</group>
+  <group label="g15" builder:axis="row">Alternative Dairy</group>
+  <group label="g16" builder:axis="row">Happy Happy Soy Boy</group>
+  <group label="g17" builder:axis="row">Coles</group>
+  <group label="g18" builder:axis="row">Woolworths Select</group>
+  <group label="g19" builder:axis="row">Macro</group>
+  <group label="g20" builder:axis="row">Suncoast</group>
+  <group label="g21" builder:axis="row">Living Planet</group>
+  <group label="g22" builder:axis="row">Inside Out</group>
+  <group label="g23" builder:axis="row">Devondale</group>
+  <group label="g24" builder:axis="row">Other</group>
+  <row label="r1" groups="g1">Australia's Own Organic Almond Unsweetened</row>
+  <row label="r2" groups="g1">Australia's Own Almond Protein Plus</row>
+  <row label="r3" groups="g1">Australia's Own Like Milk Unsweetened</row>
+  <row label="r4" groups="g1">Australia's Own Organic Coconut</row>
+  <row label="r5" groups="g1">Australia's Own Barista Almond</row>
+  <row label="r6" groups="g1">Australia's Own Barista Macadamia</row>
+  <row label="r7" groups="g1">Australia's Own Dairy Milk</row>
+  <row label="r8" groups="g1">Australia's Own A2 Milk</row>
+  <row label="r9" groups="g2">Almond Breeze Unsweetened</row>
+  <row label="r10" groups="g2">Almond Breeze Flavoured</row>
+  <row label="r11" groups="g2">Almond Breeze Barista Blend</row>
+  <row label="r12" groups="g3">MILKLAB Almond</row>
+  <row label="r13" groups="g3">MILKLAB Coconut</row>
+  <row label="r14" groups="g3">MILKLAB Dairy</row>
+  <row label="r15" groups="g3">MILKLAB Macadamia</row>
+  <row label="r16" groups="g3">MILKLAB Lactose Free</row>
+  <row label="r17" groups="g3">MILKLAB Soy</row>
+  <row label="r18" groups="g4">So Good Nut</row>
+  <row label="r19" groups="g4">So Good Soy</row>
+  <row label="r20" groups="g4">So Good Barista Oat</row>
+  <row label="r21" groups="g4">So Good Barista Almond</row>
+  <row label="r22" groups="g4">So Good Barista Soy</row>
+  <row label="r23" groups="g4">So Good Prebiotic</row>
+  <row label="r24" groups="g4">So Good Bliss</row>
+  <row label="r25" groups="g5">Vitasoy</row>
+  <row label="r26" groups="g5">Vitasoy Soy Milky</row>
+  <row label="r27" groups="g5">Vitasoy Oat</row>
+  <row label="r28" groups="g5">Vitasoy Soy Protein Plus</row>
+  <row label="r29" groups="g5">Vitasoy Rice</row>
+  <row label="r30" groups="g5">Vitasoy Home Barista Oat</row>
+  <row label="r31" groups="g5">Vitasoy Home Barista Almond</row>
+  <row label="r32" groups="g5">Vitasoy Home Barista Soy</row>
+  <row label="r33" groups="g5">Vitasoy Prebiotic Soy</row>
+  <row label="r34" groups="g6">Pure Harvest Almond</row>
+  <row label="r35" groups="g6">Pure Harvest Coco Quench</row>
+  <row label="r36" groups="g6">Pure Harvest Almond Quench</row>
+  <row label="r37" groups="g6">Pure Harvest Hazel Quench</row>
+  <row label="r38" groups="g6">Pure Harvest Golden Quench</row>
+  <row label="r39" groups="g6">Pure Harvest Rice</row>
+  <row label="r40" groups="g6">Pure Harvest Oat</row>
+  <row label="r41" groups="g7">Bonsoy Soy</row>
+  <row label="r42" groups="g7">Bonsoy Almond</row>
+  <row label="r43" groups="g7">Bonsoy Coconut</row>
+  <row label="r44" groups="g8">Alpro Almond</row>
+  <row label="r45" groups="g8">Alpro Oat</row>
+  <row label="r46" groups="g8">Alpro Soya Plain</row>
+  <row label="r47" groups="g8">Alpro Coconut</row>
+  <row label="r48" groups="g8">Alpro Hazelnut</row>
+  <row label="r49" groups="g8">Alpro Rice</row>
+  <row label="r50" groups="g8">Alpro Cashew</row>
+  <row label="r51" groups="g9">Liddells Lactose Free</row>
+  <row label="r52" groups="g10">Paul's Zymil</row>
+  <row label="r53" groups="g11">Nutty Bruce Almond</row>
+  <row label="r54" groups="g11">Nutty Bruce Coconut</row>
+  <row label="r55" groups="g11">Nutty Bruce Almond &amp; Oat</row>
+  <row label="r56" groups="g11">Nutty Bruce Almond &amp; Coconut</row>
+  <row label="r57" groups="g12">Oatly</row>
+  <row label="r58" groups="g12">Oatly Barista Blend</row>
+  <row label="r59" groups="g12">Oatly Flavoured</row>
+  <row label="r60" groups="g13">Minor Figures</row>
+  <row label="r61" groups="g14">Califia Farms Almond</row>
+  <row label="r62" groups="g14">Califia Farms Oat Barista Blend</row>
+  <row label="r63" groups="g15">Alternative Dairy Co Barista Oat</row>
+  <row label="r64" groups="g15">Alternative Dairy Co Barista Almond</row>
+  <row label="r65" groups="g15">Alternative Dairy Co Barista Soy</row>
+  <row label="r66" groups="g16">Happy Happy Soy Boy</row>
+  <row label="r67" groups="g17">Coles Almond</row>
+  <row label="r68" groups="g17">Coles Soy</row>
+  <row label="r69" groups="g18">Woolworths Select Almond</row>
+  <row label="r70" groups="g18">Woolworths Select Full Cream Dairy</row>
+  <row label="r71" groups="g18">Woolworths Select Free From Lactose</row>
+  <row label="r72" groups="g18">Woolworths Select Soy</row>
+  <row label="r73" groups="g19">Macro Organic Almond</row>
+  <row label="r74" groups="g19">Macro Organic Soy</row>
+  <row label="r75" groups="g20">Suncoast Macadamia</row>
+  <row label="r76" groups="g21">Living Planet UHT Goats Milk</row>
+  <row label="r77" groups="g22">Inside Out Almond Milk</row>
+  <row label="r78" groups="g23">Devcondale Full Cream Lonf Life</row>
+  <row label="r79" groups="g23">Devondale Skim Long Life</row>
+  <row label="r98" groups="g24" open="1" openSize="25" randomize="0">Other (please specify)</row>
+  <row label="r99" exclusive="1" groups="g24" randomize="0">None of these</row>
+</checkbox>
+
+<suspend/>

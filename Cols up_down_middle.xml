@@ -1,0 +1,75 @@
+<checkbox 
+  label="A3"
+  atleast="1"
+  colCond="A2ab_hidleastfill.rows[col.index]"
+  colLegend="both"
+  colLegendRows="12"
+  grouping="cols"
+  shuffle="rows"
+  surveyDisplay="desktop">
+  <title>Which of the following brands do you think match each of the statements below? You may think that a brand can be described by more than one statement or that each statement can be used to describe more than one brand.</title>
+  <comment>Please select all that apply. </comment>
+  <col label="c1">Mc Donald's</col>
+  <col label="c2">Burger King</col>
+  <col label="c3">Chick-fil-A</col>
+  <col label="c4">KFC</col>
+  <col label="c5">Subway</col>
+  <col label="c6">Wendy's</col>
+  <col label="c7">Chipotle</col>
+  <col label="c8">Taco Bell</col>
+  <col label="c9">Domino's</col>
+  <col label="c10">Pizza Hut</col>
+  <col label="c11">Starbucks</col>
+  <col label="c12">Dunkin'</col>
+  <col label="c13">Sonic Drive-In</col>
+  <col label="c14">Jack In The Box</col>
+  <col label="c15">Denny's</col>
+  <col label="c16">Popeyes</col>
+  <col label="c17">Arby's</col>
+  <col label="c18">Wing-Stop</col>
+  <col label="c19">Boston Market</col>
+  <col label="c20">Bojangles</col>
+  <col label="c21">Church's</col>
+  <col label="c22">Zaxby’s</col>
+  <col label="c23">Cane’s</col>
+  <col label="c24">Whataburger</col>
+  <col label="c25">Wingstop</col>
+  <col label="c26">Hardee’s</col>
+  <row label="r1">Is unique</row>
+  <row label="r2">Is a brand that does its own thing</row>
+  <row label="r3">Is confident</row>
+  <row label="r4">Is a brand people talk about</row>
+  <row label="r5">I'm familiar with this brand</row>
+  <row label="r6">Is for someone like me</row>
+  <row label="r7">Takes a stand on socially meaningful topics (e.g. BLM)</row>
+  <row label="r8">Is relevant to me and my peers</row>
+  <row label="r9">Shares the same values and beliefs as I do</row>
+  <row label="r10">Stands for causes or issues I care about</row>
+  <row label="r11">Is an ethical or sustainable brand</row>
+  <row label="r12">Has strong values</row>
+  <row label="r13">Stands up for the values it communicates</row>
+  <row label="r14">Plays a significant role in social good</row>
+  <row label="r15">Is "hot" among my friends and peers</row>
+  <row label="r16">Cares about my community and is engaged in it</row>
+  <row label="r17">Inspires to try new things</row>
+  <row label="r18">Empowers me and my lifestyle</row>
+  <row label="r19">My family/peers and friends buy this brand</row>
+  <row label="r20">Puts community first</row>
+  <row label="r21">Is a brand I love</row>
+  <row label="r22">Meets my needs</row>
+  <row label="r23">"Gets" me and my peers</row>
+  <row label="r24">Makes an impact on the society</row>
+  <row label="r25">Brings people together</row>
+  <row label="r26">Gives us experiences/memories to share</row>
+  <row label="r27">Gets people talking</row>
+  <row label="r28">Is easy and rewarding to purchase</row>
+  <row label="r29">Has a great loyalty program</row>
+  <row label="r30">Is a place I have fond memories of</row>
+  <row label="r31">Is a place that reminds me of a good time in my life</row>
+  <row label="r32">Is a place I used to go with my family</row>
+  <row label="r33">Is easy to place an order</row>
+  <row label="r34">Has easy to use app</row>
+  <row label="r99" exclusive="1" randomize="0">None of these match this brand</row>
+</checkbox>
+
+<suspend/>

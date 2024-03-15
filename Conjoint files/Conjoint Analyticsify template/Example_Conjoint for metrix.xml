@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="Example_Conjoint for metrix"
+  autosave="0"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="150"
+  delphi="1"
+  extraVariables="source,record,decLang,list,userAgent"
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="1"
+  ss:hideProgressBar="0"
+  state="testing">
+
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+</samplesources>
+
+<style cond="1" name="survey.respview.footer.support"><![CDATA[
+<div style="text-align: center;" jstcache="0"></div>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+		.survey-page {
+		    background-image: url("https://au.focusvision.com/survey/selfserve/5ad/170207/1200x1200metrix_tileable_honeycomb_background1.png");
+		    }    
+		</style>
+]]></style>
+<style name="page.head"><![CDATA[
+<style>
+.sq-atm1d-vertical .sq-atm1d-button {
+    
+    min-width: 150px ;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d .sq-atm1d-table {
+	min-height:25px;
+}
+</style>
+]]></style>
+<suspend/>
+
+<note>DCM Question Template --Start--</note>
+<exec when="init">
+def setupDCMFile(fname, fileDelimiter="\t"):
+    f = open("%s/%s" % (gv.survey.path, fname))
+    dcmObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]
+
+    d = {}
+    dcm_concepts = []
+
+    for i,row in enumerate(dcmObj):
+        if i:
+            d["v%s_t%s_c%s" % (row[0],row[1],row[2])] = row[3:]
+            if row[2] not in dcm_concepts:
+                dcm_concepts.append(row[2])
+
+    concepts = [ int(x) for x in dcm_concepts ]
+    concepts.sort()
+    d["concepts"] = dcm_concepts
+
+    return d
+
+#set persistent items, format: p.concept#_att#
+def setupDCMItems(d, vt, t1, prefix="1"):
+    print "***** STAFF ONLY *****"
+    print "***** DCM Matrix *****"
+    print "Version_Task: %s" % vt
+    print(vt)
+    for concept in d.get("concepts"):
+        attributes = d[ "%s_c%s" % (vt,concept) ]
+        print "Concept %s: %s" % (concept,attributes)
+
+        for i,attr in enumerate(attributes):
+          print(attributes[i])
+          print "adasdasd"
+          eval("progAttr_"+t1+".r"+concept+".c"+str(i+1)).val=attributes[i]
+</exec>
+
+<exec when="init">
+Q24_dcm = setupDCMFile("design1.dat")
+</exec>
+
+<quota label="Q24_quota" overquota="noqual" sheet="Q1_DCM"/>
+
+<number 
+  label="Q24_Version"
+  size="3"
+  verify="range(1,50)"
+  where="execute,survey,report">
+  <title>Q24 - DCM Version</title>
+  <exec>
+print p.markers
+for x in p.markers:
+  if "/Q1_DCM/ver_" in x:
+    Q24_Version.val = int(x.split("_")[-1])
+    break
+  </exec>
+
+</number>
+
+<suspend/>
+
+<exec>
+p.startTime = timeSpent()
+</exec>
+
+<loop label="Q24_dcm_loop" vars="task">
+  <title>Q24 - DCM Loop</title>
+  <block label="Q24_dcm_block">
+    <exec>
+setupDCMItems( Q24_dcm, "v%s_t%s" % (Q24_Version.val,"[loopvar: task]"),"[loopvar: task]", "Q24")
+p.DCMcount = "%d" % (Q24_dcm_loop_expanded.order.index([loopvar: task]-1) + 1)
+    </exec>
+
+    <text 
+    label="progAttr_[loopvar: task]"
+    optional="1"
+    size="3"
+    where="survey,report,execute">
+      <title>Programming to punch attributes for rows</title>
+      <row label="r1">1</row>
+      <row label="r2">2</row>
+      <row label="r3">3</row>
+      <row label="r4">4</row>
+      <row label="r5">5</row>
+      <row label="r6">6</row>
+      <col label="c1">Attribute1</col>
+      <col label="c2">Attribute2</col>
+      <col label="c3">Attribute3</col>
+      <col label="c4">Attribute4</col>
+    </text>
+
+    <suspend/>
+
+    <exec>
+hidAttribute1_[loopvar: task].val=1
+concept1_hidAttribute4_[loopvar: task].val=1
+concept2_hidAttribute4_[loopvar: task].val=1
+concept3_hidAttribute4_[loopvar: task].val=1
+concept4_hidAttribute4_[loopvar: task].val=1
+concept5_hidAttribute4_[loopvar: task].val=1
+
+concept1_hidAttribute5_[loopvar: task].val=1
+concept2_hidAttribute5_[loopvar: task].val=1
+concept3_hidAttribute5_[loopvar: task].val=1
+concept4_hidAttribute5_[loopvar: task].val=1
+concept5_hidAttribute5_[loopvar: task].val=1
+
+concept1_hidAttribute6_[loopvar: task].val=1
+concept2_hidAttribute6_[loopvar: task].val=1
+concept3_hidAttribute6_[loopvar: task].val=1
+concept4_hidAttribute6_[loopvar: task].val=1
+concept5_hidAttribute6_[loopvar: task].val=1
+
+concept1_hidAttribute7_[loopvar: task].val=1
+concept2_hidAttribute7_[loopvar: task].val=1
+concept3_hidAttribute7_[loopvar: task].val=1
+concept4_hidAttribute7_[loopvar: task].val=1
+concept5_hidAttribute7_[loopvar: task].val=1
+
+for itr1 in range(1,4):
+  for itr in range(1,7):
+      val1=eval("progAttr_[loopvar: task].r"+str(itr)+".c"+str(itr1)).val
+      val2=eval("concept"+str(itr)+"_hidAttribute"+str(itr1)+"_[loopvar: task].r"+str(val1)).index
+      print(val1,val2)
+      eval("concept"+str(itr)+"_hidAttribute"+str(itr1)+"_[loopvar: task]").val=val2
+
+concept1_hidAttribute3_[loopvar: task].val=int(progAttr_[loopvar: task].r1.c2.val)
+concept2_hidAttribute3_[loopvar: task].val=int(progAttr_[loopvar: task].r2.c2.val)
+    </exec>
+
+    <suspend/>
+
+    <radio 
+    label="hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><img src='[rel myplacelogo.png]'/></row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute4_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><b>Secure Online Delivery</b></row>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute4_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><b>Safe and Secure</b></row>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute4_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><b>Get the Party Started</b></row>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute4_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><b>Keyless Entry</b></row>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute4_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><b>Peace of Mind</b></row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute5_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">See who is at your door and be alerted to deliveries wherever you are, and open your garage remotely for safe delivery. Check the camera to make sure your goods and home are secure.</row>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute5_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">Feel secure knowing you can monitor you home at all times, with the added comfort of automatic exterior lights to give you clear vision at night and to be alerted when sensors go off.</row>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute5_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">See who is at your door and let them into your home remotely. Set the scene with music while you finish getting ready.</row>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute5_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">No more worrying about keys. See who is at your door (e.g. kids, cleaner, pet sitter) and let them in remotely. Keep an eye on them and your home once inside.</row>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute5_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">No more worrying about keys if you are running late and won’t be home to let in the kids/pet sitter/cleaner. See when they are at your door and let them in remotely. The door can be deadlocked giving you peace of mind that they are safe inside.</row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute6_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">Product integration:<br/>Doorbell, Camera, MyGarage</row>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute6_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">Product integration:<br/>Camera, Exterior lighting</row>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute6_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">Product integration:<br/>Doorbell, Gainsborough smart doorlock, Sonos speakers</row>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute6_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">Product integration:<br/>Doorbell, Camera, Gainsborough smart doorlock</row>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute6_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">Product integration:<br/>Doorbell, Gainsborough smart doorlock</row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute7_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><i>Includes all products and hardware</i></row>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute7_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><i>Includes all products and hardware</i></row>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute7_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><i>The door lock and Sonos hardware is <b>not included</b> in the bundle pricing</i></row>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute7_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><i>The door lock hardware is <b>not included</b> in the bundle pricing</i></row>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute7_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1"><i>The door lock hardware is <b>not included</b> in the bundle pricing</i></row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">$695</row>
+      <row label="r2">$997</row>
+      <row label="r3">$1179</row>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">$995</row>
+      <row label="r2">$1,370</row>
+      <row label="r3">$1,679</row>
+      <row label="r4">$1,979</row>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">$330</row>
+      <row label="r2">$419</row>
+      <row label="r3">$497</row>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">$440</row>
+      <row label="r2">$559</row>
+      <row label="r3">$697</row>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None</row>
+      <row label="r1">$330</row>
+      <row label="r2">$419</row>
+      <row label="r3">$497</row>
+    </radio>
+
+    <radio 
+    label="concept6_hidAttribute1_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None of these</row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute2_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">No software subscription fee</row>
+      <row label="r1">No software subscription fee</row>
+      <row label="r2">No software subscription fee</row>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute2_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">No software subscription fee</row>
+      <row label="r1">No software subscription fee</row>
+      <row label="r2">No software subscription fee</row>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute2_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">No software subscription fee</row>
+      <row label="r1">No software subscription fee</row>
+      <row label="r2">Plus $4 per month</row>
+      <row label="r3">Plus $8 per month</row>
+      <row label="r4">Plus $12 per month</row>
+      <row label="r5">Plus $200 one off fee</row>
+      <row label="r6">Plus $300 one off fee</row>
+      <row label="r7">Plus $400 one off fee</row>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute2_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">No software subscription fee</row>
+      <row label="r1">No software subscription fee</row>
+      <row label="r2">Plus $2 per month</row>
+      <row label="r3">Plus $4 per month</row>
+      <row label="r4">Plus $6 per month</row>
+      <row label="r5">Plus $100 one off fee</row>
+      <row label="r6">Plus $150 one off fee</row>
+      <row label="r7">Plus $200 one off fee</row>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute2_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">No software subscription fee</row>
+      <row label="r1">No software subscription fee</row>
+      <row label="r2">Plus $2 per month</row>
+      <row label="r3">Plus $4 per month</row>
+      <row label="r4">Plus $6 per month</row>
+      <row label="r5">Plus $100 one off fee</row>
+      <row label="r6">Plus $150 one off fee</row>
+      <row label="r7">Plus $200 one off fee</row>
+    </radio>
+
+    <radio 
+    label="concept6_hidAttribute2_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None of these</row>
+    </radio>
+
+    <radio 
+    label="concept1_hidAttribute3_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0"/>
+      <row label="r1">Australian made and supported</row>
+      <row label="r2"/>
+    </radio>
+
+    <radio 
+    label="concept2_hidAttribute3_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0"/>
+      <row label="r1">Australian made and supported</row>
+      <row label="r2"/>
+    </radio>
+
+    <radio 
+    label="concept3_hidAttribute3_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0"/>
+      <row label="r1">Australian made and supported</row>
+      <row label="r2"/>
+    </radio>
+
+    <radio 
+    label="concept4_hidAttribute3_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0"/>
+      <row label="r1">Australian made and supported</row>
+      <row label="r2"/>
+    </radio>
+
+    <radio 
+    label="concept5_hidAttribute3_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0"/>
+      <row label="r1">Australian made and supported</row>
+      <row label="r2"/>
+    </radio>
+
+    <radio 
+    label="concept6_hidAttribute3_[loopvar: task]"
+    grouping="cols"
+    optional="1"
+    where="survey,report,execute">
+      <title>Hidden to punch attributes displayed</title>
+      <row label="r0">None of these</row>
+    </radio>
+
+    <suspend/>
+
+    <html label="dcm_[loopvar: task]" ss:commentClassNames="dcm_css"><span style='font-size:18px;'>Version:[pipe: Q24_Version] Task:[loopvar: task] <br/>Scenario [loopvar: task] of 12<br/><br/></span><br/><br/>
+        <div class='dcm-block'>
+          <div class='dcm-block-item'>
+             <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>             
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept1_hidAttribute4_[loopvar: task].selected.text}</q>
+            </div>          
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept1_hidAttribute5_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept1_hidAttribute6_[loopvar: task].selected.text}</q>
+            </div>        
+          
+            <div class='item-c'>
+              <q class='txt_t'>Price:</q>
+              <q class='txt_c'>${concept1_hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept1_hidAttribute2_[loopvar: task].selected.text}</q>
+            </div>       
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept1_hidAttribute3_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept1_hidAttribute7_[loopvar: task].selected.text}</q>
+            </div>  
+            <div class='dcm-block-btn'> </div>
+
+          </div>
+
+          <div class='dcm-block-item'>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>     
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept2_hidAttribute4_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept2_hidAttribute5_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept2_hidAttribute6_[loopvar: task].selected.text}</q>
+            </div>            
+            
+            <div class='item-c'>
+              <q class='txt_t'>Price:</q>
+              <q class='txt_c'>${concept2_hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept2_hidAttribute2_[loopvar: task].selected.text}</q>
+            </div>       
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept2_hidAttribute3_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept2_hidAttribute7_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='dcm-block-btn'> </div>
+          </div>
+
+
+          <div class='dcm-block-item'>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept3_hidAttribute4_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept3_hidAttribute5_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept3_hidAttribute6_[loopvar: task].selected.text}</q>
+            </div>   
+            
+            <div class='item-c'>
+              <q class='txt_t'>Price:</q>
+              <q class='txt_c'>${concept3_hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept3_hidAttribute2_[loopvar: task].selected.text}</q>
+            </div>       
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept3_hidAttribute3_[loopvar: task].selected.text}</q>
+            </div>  
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept3_hidAttribute7_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='dcm-block-btn'> </div>
+          </div>
+
+
+          <div class='dcm-block-item'>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${hidAttribute1_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept4_hidAttribute4_[loopvar: task].selected.text}</q>
+            </div>
+             <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept4_hidAttribute5_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept4_hidAttribute6_[loopvar: task].selected.text}</q>
+            </div>              
+            <div class='item-c'>
+              <q class='txt_t'>Price:</q>
+              <q class='txt_c'>${concept4_hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept4_hidAttribute2_[loopvar: task].selected.text}</q>
+            </div>       
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept4_hidAttribute3_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept4_hidAttribute7_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='dcm-block-btn'> </div>
+          </div>
+          
+
+          <div class='dcm-block-item'>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept5_hidAttribute4_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept5_hidAttribute5_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept5_hidAttribute6_[loopvar: task].selected.text}</q>
+            </div>      
+            <div class='item-c'>
+              <q class='txt_t'>Price:</q>
+              <q class='txt_c'>${concept5_hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept5_hidAttribute2_[loopvar: task].selected.text}</q>
+            </div>       
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept5_hidAttribute3_[loopvar: task].selected.text}</q>
+            </div> 
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept5_hidAttribute7_[loopvar: task].selected.text}</q>
+            </div>  
+            <div class='dcm-block-btn'> </div>
+          </div>
+          
+          
+          <div class='dcm-block-item'>
+            <div class='item-c'>
+              <q class='txt_t'> </q>
+              <q class='txt_c'>${concept6_hidAttribute1_[loopvar: task].selected.text}</q>
+            </div>
+            <div class='dcm-block-btn'> </div>
+          </div>
+          
+        </div></html>
+
+    <radio 
+    label="Q24_[loopvar: task]"
+    keepWith="dcm_[loopvar: task]"
+    ss:questionClassNames="dcm_hide">
+      <title>&amp;nbsp;</title>
+      <style name="page.head"><![CDATA[
+<link rel="stylesheet" type="text/css" href="[rel dcm.css]" />
+<script type="text/javascript" src="[rel dcm.js]"></script>
+]]></style>
+      <row label="r1"><div align='right'><b>Preferred choice</b></div></row>
+      <col label="c1">Option 1</col>
+      <col label="c2">Option 2</col>
+      <col label="c3">Option 3</col>
+      <col label="c4">Option 4</col>
+      <col label="c5">Option 5</col>
+      <col label="c6">Option 6</col>
+    </radio>
+
+    <suspend/>
+  </block>
+
+  <looprow label="1">
+    <loopvar name="task">1</loopvar>
+  </looprow>
+
+  <looprow label="2">
+    <loopvar name="task">2</loopvar>
+  </looprow>
+
+  <looprow label="3">
+    <loopvar name="task">3</loopvar>
+  </looprow>
+
+  <looprow label="4">
+    <loopvar name="task">4</loopvar>
+  </looprow>
+
+  <looprow label="5">
+    <loopvar name="task">5</loopvar>
+  </looprow>
+
+  <looprow label="6">
+    <loopvar name="task">6</loopvar>
+  </looprow>
+
+  <looprow label="7">
+    <loopvar name="task">7</loopvar>
+  </looprow>
+
+  <looprow label="8">
+    <loopvar name="task">8</loopvar>
+  </looprow>
+
+  <looprow label="9">
+    <loopvar name="task">9</loopvar>
+  </looprow>
+
+  <looprow label="10">
+    <loopvar name="task">10</loopvar>
+  </looprow>
+
+  <looprow label="11">
+    <loopvar name="task">11</loopvar>
+  </looprow>
+
+  <looprow label="12">
+    <loopvar name="task">12</loopvar>
+  </looprow>
+</loop>
+
+<float 
+  label="Q24_Timer"
+  size="15"
+  where="execute,survey,report">
+  <title>Q24 - DCM Timer (Minutes)</title>
+  <exec>
+Q24_Timer.val = (timeSpent() - p.startTime) / 60.0
+  </exec>
+
+</float>
+
+<note>DCM Question Template --End--</note>
+<suspend/>
+</survey>

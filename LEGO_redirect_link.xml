@@ -1,0 +1,24 @@
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="co" required="1" values="fr"/>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>Cint - ro</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="CID" unique="1"/>
+    <var name="co" required="1" values="ua"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=569683e9-e96f-b969-c428-2f58fe23a7c1"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=569683e9-e96f-b969-c428-2f58fe23a7c1"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=d2c84709-f3ba-401f-97be-4cd981c10beb"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>

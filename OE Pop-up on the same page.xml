@@ -1,0 +1,170 @@
+<radio 
+  label="q1">
+  <title>What is your favourite team ?</title>
+  <row label="r1" ss:rowClassNames="mu">Man Utd</row>
+  <row label="r2" ss:rowClassNames="mc">Man City</row>
+  <row label="r3" ss:rowClassNames="liv">Liverpool</row>
+  <row label="r4" ss:rowClassNames="bar">Barcelona</row>
+  <row label="r5" ss:rowClassNames="RM">Real Madrid</row>
+</radio>
+
+<textarea 
+  label="q1_1"
+  height="10"
+  keepWith="q1"
+  width="50">
+  <title>Please tell us, why do you like Man Utd ?</title>
+  <validate>
+if (q1.r1) and this.val=="":
+    error("Please answer this question")
+  </validate>
+
+</textarea>
+
+<textarea 
+  label="q1_2"
+  height="10"
+  keepWith="q1_1"
+  width="50">
+  <title>Please tell us, why do you like Man City ?</title>
+  <validate>
+if (q1.r2) and this.val=="":
+    error("Please answer this question")
+  </validate>
+
+</textarea>
+
+<textarea 
+  label="q1_3"
+  height="10"
+  keepWith="q1_2"
+  width="50">
+  <title>Please tell us, why do you like Liverpool ?</title>
+  <validate>
+if (q1.r3) and this.val=="":
+    error("Please answer this question")
+  </validate>
+
+</textarea>
+
+<textarea 
+  label="q1_4"
+  height="10"
+  keepWith="q1_3"
+  width="50">
+  <title>Please tell us, why do you like Barcelona ?</title>
+  <validate>
+if (q1.r4) and this.val=="":
+    error("Please answer this question")
+  </validate>
+
+</textarea>
+
+<textarea 
+  label="q1_5"
+  height="10"
+  keepWith="q1_4"
+  width="50">
+  <title>Please tell us, why do you like Real Madrid ?</title>
+  <validate>
+if (q1.r5) and this.val=="":
+    error("Please answer this question")
+  </validate>
+
+  <style name="question.after" wrap="ready"><![CDATA[
+var q1 = $ ("#question_q1");
+var q1_1 = $ ("#question_q1_1");
+var q1_2 = $ ("#question_q1_2");
+var q1_3 = $ ("#question_q1_3");
+var q1_4 = $ ("#question_q1_4");
+var q1_5 = $ ("#question_q1_5");
+
+document.querySelector(".mu").appendChild(document.querySelector("#question_q1_1"));
+
+document.querySelector(".mc").appendChild(document.querySelector("#question_q1_2"));
+
+document.querySelector(".liv").appendChild(document.querySelector("#question_q1_3"));
+
+document.querySelector(".bar").appendChild(document.querySelector("#question_q1_4"));
+
+document.querySelector(".RM").appendChild(document.querySelector("#question_q1_5"));
+  
+function hideQuestions()
+{
+  q1_1.hide();
+  q1_2.hide();
+  q1_3.hide();
+  q1_4.hide();
+  q1_5.hide();
+}
+
+hideQuestions();
+
+q1.change(function () {
+  if ($ (".mu").find("input").is(":checked"))
+  {
+    q1_1.show(1000);
+    q1_2.hide();
+      $ ('#question_q1_2 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_3.hide();
+      $ ('#question_q1_3 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_4.hide();
+      $ ('#question_q1_4 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_5.hide();
+      $ ('#question_q1_5 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+  }
+  else if($ (".mc").find("input").is(":checked"))
+  {
+    q1_2.show(1000);
+    q1_1.hide();
+      $ ('#question_q1_1 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_3.hide();
+      $ ('#question_q1_3 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_4.hide();
+      $ ('#question_q1_4 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_5.hide();
+      $ ('#question_q1_5 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+  }
+   else if($ (".liv").find("input").is(":checked"))
+  {
+    q1_3.show(1000);
+    q1_1.hide();
+      $ ('#question_q1_1 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_2.hide();
+      $ ('#question_q1_2 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_4.hide();
+      $ ('#question_q1_4 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_5.hide();
+      $ ('#question_q1_5 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+  }
+   else if($ (".bar").find("input").is(":checked"))
+  {
+    q1_4.show(1000);
+    q1_1.hide();
+      $ ('#question_q1_1 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_3.hide();
+      $ ('#question_q1_3 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_2.hide();
+      $ ('#question_q1_2 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_5.hide();
+      $ ('#question_q1_5 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+  }
+   else if($ (".RM").find("input").is(":checked"))
+  {
+    q1_5.show(1000);
+    q1_1.hide();
+      $ ('#question_q1_1 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_3.hide();
+      $ ('#question_q1_3 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_4.hide();
+      $ ('#question_q1_4 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+    q1_2.hide();
+      $ ('#question_q1_2 div.element.even.groupingRows.OneColumnEl .input.textarea').val('');
+  }
+  
+  
+});
+]]></style>
+</textarea>
+
+<suspend/>

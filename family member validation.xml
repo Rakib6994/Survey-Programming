@@ -1,0 +1,35 @@
+<number 
+  label="S_HHSize"
+  optional="0"
+  size="10"
+  verify="range(1,99)">
+  <title><b>Including yourself, how many people are currently living in your household?</b></title>
+  <comment>Please enter a number.</comment>
+</number>
+
+<suspend/>
+
+<number 
+  label="S_AgeInHH"
+  autosum:prefill="0"
+  optional="0"
+  randomize="0"
+  size="3"
+  ss:listDisplay="0"
+  uses="autosum.5">
+  <title><b>Including yourself, how many people are currently living in your household in each of the following age ranges?</b></title>
+  <comment>Please enter a number.</comment>
+  <validate>
+if S_AgeInHH.sum != S_HHSize.val:
+  error(res.AgeInHH_Err)
+if S_AgeInHH.r1.val lt 1:
+  error(res.AgeInHH18_Err)
+  </validate>
+
+  <row label="r1">18 and over</row>
+  <row label="r2">13-17</row>
+  <row label="r3">6-12</row>
+  <row label="r4">under 6</row>
+</number>
+
+<suspend/>

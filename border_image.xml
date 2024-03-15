@@ -1,0 +1,29 @@
+<looprow label="Lr1" cond="(hidconcept.r1)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept1.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept1.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 236px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept1.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(hidconcept.r2)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept2.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept2.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 242px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept2.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(hidconcept.r3)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept3.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept3.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 243px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept3.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(hidconcept.r4)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept4.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept4.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 239px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept4.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(hidconcept.r5)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept5.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept5.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 600, title: &amp;quot;pop-up&amp;quot;} );" style="height: 242px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept5.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(hidconcept.r6)">
+    <loopvar name="hidconceptrows"><img width="500" src="[rel concept6.PNG]" style="border: 1px solid #34cceb;" /></loopvar>
+    <loopvar name="var2"><div align="center"><img width="250" src="[rel concept6.PNG]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 650, height: 703, title: &amp;quot;pop-up&amp;quot;} );" style="height: 352px;border: 1px solid #34cceb;" /><div style="display: none;"><img src="[rel concept6.PNG]" /></div><br /><i style="font-size:14px">You may click on the concept to see a larger view.</i></div><br /></loopvar>
+  </looprow>

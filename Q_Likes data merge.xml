@@ -1,0 +1,204 @@
+<textarea 
+  label="Q_Likes_25"
+  imgmap:image="/survey/${gv.survey.path}/PACK1A.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_1 &amp; Q_Likes_13</title>
+  <virtual>
+if (Phase.r1 and shelf.r1 and Version.r1 and findability.r1):
+    Q_Likes_25.c1.val = Q_Likes_1.c1.val
+if (Phase.r1 and shelf.r1 and Version.r1 and findability.r3):
+    Q_Likes_25.c1.val = Q_Likes_13.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_26"
+  imgmap:image="/survey/${gv.survey.path}/PACK1B.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_2 &amp; Q_Likes_14</title>
+  <virtual>
+if (Phase.r1 and shelf.r1 and Version.r2 and findability.r2):
+    Q_Likes_26.c1.val = Q_Likes_2.c1.val
+if (Phase.r1 and shelf.r1 and Version.r2 and findability.r3):
+    Q_Likes_26.c1.val = Q_Likes_14.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_27"
+  imgmap:image="/survey/${gv.survey.path}/PACK2A.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_3 &amp; Q_Likes_15</title>
+  <virtual>
+if (Phase.r2 and shelf.r1 and Version.r1 and findability.r1):
+    Q_Likes_27.c1.val = Q_Likes_3.c1.val
+if (Phase.r2 and shelf.r1 and Version.r1 and findability.r3):
+    Q_Likes_27.c1.val = Q_Likes_15.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_28"
+  imgmap:image="/survey/${gv.survey.path}/PACK2B.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_4 &amp; Q_Likes_16</title>
+  <virtual>
+if (Phase.r2 and shelf.r1 and Version.r2 and findability.r2):
+    Q_Likes_28.c1.val = Q_Likes_4.c1.val
+if (Phase.r2 and shelf.r1 and Version.r2 and findability.r3):
+    Q_Likes_28.c1.val = Q_Likes_16.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_29"
+  imgmap:image="/survey/${gv.survey.path}/PACK3A.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_5 &amp; Q_Likes_17</title>
+  <virtual>
+if (Phase.r3 and shelf.r1 and Version.r1 and findability.r1):
+    Q_Likes_29.c1.val = Q_Likes_5.c1.val
+if (Phase.r3 and shelf.r1 and Version.r1 and findability.r3):
+    Q_Likes_29.c1.val = Q_Likes_17.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_30"
+  imgmap:image="/survey/${gv.survey.path}/PACK3B.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_6 &amp; Q_Likes_18</title>
+  <virtual>
+if (Phase.r3 and shelf.r1 and Version.r2 and findability.r2):
+    Q_Likes_30.c1.val = Q_Likes_6.c1.val
+if (Phase.r3 and shelf.r1 and Version.r2 and findability.r3):
+    Q_Likes_30.c1.val = Q_Likes_18.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_31"
+  imgmap:image="/survey/${gv.survey.path}/PACK1AS.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_7 &amp; Q_Likes_19</title>
+  <virtual>
+if (Phase.r1 and shelf.r2 and Version.r1 and findability.r1):
+    Q_Likes_31.c1.val = Q_Likes_7.c1.val
+if (Phase.r1 and shelf.r2 and Version.r1 and findability.r3):
+    Q_Likes_31.c1.val = Q_Likes_19.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+
+<textarea 
+  label="Q_Likes_32"
+  imgmap:image="/survey/${gv.survey.path}/PACK1BS.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_8 &amp; Q_Likes_20</title>
+  <virtual>
+if (Phase.r1 and shelf.r2 and Version.r2 and findability.r2):
+    Q_Likes_32.c1.val = Q_Likes_8.c1.val
+if (Phase.r1 and shelf.r2 and Version.r2 and findability.r3):
+    Q_Likes_32.c1.val = Q_Likes_20.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_33"
+  imgmap:image="/survey/${gv.survey.path}/PACK2AS.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_9 &amp; Q_Likes_21</title>
+  <virtual>
+if (Phase.r2 and shelf.r2 and Version.r1 and findability.r1):
+    Q_Likes_33.c1.val = Q_Likes_9.c1.val
+if (Phase.r2 and shelf.r2 and Version.r1 and findability.r3):
+    Q_Likes_33.c1.val = Q_Likes_21.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+
+<textarea 
+  label="Q_Likes_34"
+  imgmap:image="/survey/${gv.survey.path}/PACK2BS.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_10 &amp; Q_Likes_22</title>
+  <virtual>
+if (Phase.r2 and shelf.r2 and Version.r2 and findability.r2):
+    Q_Likes_34.c1.val = Q_Likes_10.c1.val
+if (Phase.r2 and shelf.r2 and Version.r2 and findability.r3):
+    Q_Likes_34.c1.val = Q_Likes_22.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_35"
+  imgmap:image="/survey/${gv.survey.path}/PACK3AS.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_11 &amp; Q_Likes_23</title>
+  <virtual>
+if (Phase.r3 and shelf.r2 and Version.r1 and findability.r1):
+    Q_Likes_35.c1.val = Q_Likes_11.c1.val
+if (Phase.r3 and shelf.r2 and Version.r1 and findability.r3):
+    Q_Likes_35.c1.val = Q_Likes_23.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>
+
+
+<textarea 
+  label="Q_Likes_36"
+  imgmap:image="/survey/${gv.survey.path}/PACK3BS.jpg"
+  sst="0"
+  uses="imgmap.2020">
+  <title>Combination of Q_Likes_12 &amp; Q_Likes_24</title>
+  <virtual>
+if (Phase.r3 and shelf.r2 and Version.r2 and findability.r2):
+    Q_Likes_36.c1.val = Q_Likes_12.c1.val
+if (Phase.r3 and shelf.r2 and Version.r2 and findability.r3):
+    Q_Likes_36.c1.val = Q_Likes_24.c1.val
+  </virtual>
+
+  <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+</textarea>

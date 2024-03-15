@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AE700 Clinique EBM Redesign PF360 +PF Ecom - PackFlash 360 - US - Teaneck"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="144"
+  delphi="1"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="desktop"
+  name="Survey"
+  otherLanguages="spanish_mexico"
+  remerged="20221229_02:57"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png"
+  ss:logoPosition="left"
+  state="closed"
+  theme="frozen:company/behaviorally-theme-2-1"
+  unusedLanguages="spanish_mexico"
+  version="12">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<res label="sys_surveyCompleted"/>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+.sq-mgshelf-cart-view-content table td input {
+  width: 50px !important;
+}  
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}   
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+#comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  border-radius: 30px;
+}
+.sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+}
+.grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+	$ (".clickable").addClass( "hvr-underline-from-center" )
+	$ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+	
+	if(!$ (".sq-cardsort-Q_PackAtt").length){
+		$ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+	}
+	
+	if($ (".p1").length){
+    	$ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");    	
+    	$ (".comment-text").css("color", "black");
+    	$ (".comment-text").css("background-color","lightgrey");
+    	$ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+    	$ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");
+    	$ (".question").css("background-color","lightgrey");
+    	$ (".question-text").css("color","black");
+    	$ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+	if($ (".radio .sq-atm1d-button").length){
+    	$ ("#btn_continue").hide();
+    }	
+	$ (document).on('click', '.radio .sq-atm1d-button', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+    	$ ("#btn_continue").hide();
+    }
+	$ (document).on('click', '.sq-atmtable-btn', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+    	$ ("#btn_continue").hide();
+    }
+	$ (document).on('click', '.sq-sliderpoints-container', function() {
+		$ ("#btn_continue").click();
+	})
+       
+/*Textbox*/
+	$ ('.element').css('text-align','center');
+	
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+    	$ ("#btn_continue").hide();
+    }
+	$ (document).on('click', '.sq-atmrating-container', function() {
+		$ ("#btn_continue").click();
+	})
+*/
+
+/*Change Font*/
+	$ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+</script>
+]]></style>
+<samplesources>
+  <samplesource list="160">
+    <title>Question Lab</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="arid" unique="1"/>
+    <exit cond="terminated" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=2&amp;arid=${arid}"/>
+    <exit cond="overquota" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=3&amp;arid=${arid}"/>
+    <exit cond="qualified" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=1&amp;arid=${arid}"/>
+  </samplesource>
+
+  <samplesource list="155">
+    <title>UBO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated" url="https://uboconsulting.com/redirect/terminate.html"/>
+    <exit cond="overquota" url="https://uboconsulting.com/redirect/over-quota.html"/>
+    <exit cond="qualified" url="https://uboconsulting.com/redirect/complete.html"/>
+  </samplesource>
+
+  <samplesource list="154">
+    <title>Paradigm</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="digid" unique="1"/>
+    <exit cond="terminated" url="https://dig.ps-di.com/exitlink?statusid=2&amp;digid=${digid}"/>
+    <exit cond="overquota" url="https://dig.ps-di.com/exitlink?statusid=3&amp;digid=${digid}"/>
+    <exit cond="qualified" url="https://dig.ps-di.com/exitlink?statusid=1&amp;digid=${digid}&amp;cmpid=25o5ROxZO358P7KGoLA5HivE"/>
+  </samplesource>
+
+  <samplesource list="153">
+    <title>Veritolytics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="verito" unique="1"/>
+    <exit cond="terminated" url="http://panel.veritolytics.com/backuri/return.php?status=30&amp;verito=${verito}"/>
+    <exit cond="overquota" url="http://panel.veritolytics.com/backuri/return.php?status=40&amp;verito=${verito}"/>
+    <exit cond="qualified" url="http://panel.veritolytics.com/backuri/return.php?status=20&amp;verito=${verito}"/>
+  </samplesource>
+
+  <samplesource list="152">
+    <title>Bilendi &amp; Respondi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="m" unique="1"/>
+    <exit cond="terminated" url="https://survey.maximiles.com/screenout?p=qvs&amp;m=${m}&amp;p=qvs"/>
+    <exit cond="overquota" url="https://survey.maximiles.com/quotasfull?p=qvq&amp;m=${m}&amp;p=qvq"/>
+    <exit cond="qualified" url="https://survey.maximiles.com/complete?p=qvc&amp;m=${m}&amp;p=qvc"/>
+  </samplesource>
+
+  <samplesource list="150">
+    <title>Cognitive Intelligence</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=2&amp;co=3&amp;sample=1"/>
+    <exit cond="overquota" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=3&amp;co=3&amp;sample=1"/>
+    <exit cond="qualified" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=1&amp;co=3&amp;sample=1"/>
+  </samplesource>
+
+  <samplesource list="134">
+    <title>Prodege</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://api.prodegepeeq.com/prodegemr/transaction-completion?apik=PAT!HMpwEa8t$I&amp;completion_type=3&amp;signature=606f5f7f9c9dedd645a6&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://api.prodegepeeq.com/prodegemr/transaction-completion?apik=PAT!HMpwEa8t$I&amp;completion_type=2&amp;signature=e9b519e3a7f548cb9a88&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://api.prodegepeeq.com/prodegemr/transaction-completion?apik=PAT!HMpwEa8t$I&amp;completion_type=1&amp;signature=3150776bac0ad968e4e2&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Schlesinger (previously Market cube)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending/?RS=3&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending/?RS=2&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending/?RS=1&amp;RID=${RID}&amp;secret=606"/>
+  </samplesource>
+
+  <samplesource list="3">
+    <title>Torfac - (Formerly Wise Works)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="wspid" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;wspid=${wspid}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;wspid=${wspid}"/>
+    <exit cond="qualified" url="https://pollrouting.com/router/ViTo231826078423f0deb87958998e28f35c03e/passback.php?bvl=b&amp;st=jNWCZ1WOhQaR&amp;wspid=${wspid}"/>
+  </samplesource>
+
+  <samplesource list="138">
+    <title>Philomath Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey.philomathresearch.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey.philomathresearch.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey.philomathresearch.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="6">
+    <title>Rakuten Insights (AIP)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=s"/>
+    <exit cond="overquota" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=q"/>
+    <exit cond="qualified" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=c"/>
+  </samplesource>
+
+  <samplesource list="141">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=02a08ede-c3f8-a497-a571-5dbb15c6da66"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=02a08ede-c3f8-a497-a571-5dbb15c6da66"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=2d612fdc-8a95-42b7-9aee-84fada79afa0"/>
+  </samplesource>
+
+  <samplesource list="24">
+    <title>SampleGurus</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=2"/>
+    <exit cond="overquota" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=3"/>
+    <exit cond="qualified" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="26">
+    <title>Orchidea Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ORGID" required="1"/>
+    <exit cond="terminated" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin629587&amp;ORGID=${ORGID}"/>
+    <exit cond="overquota" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin315610&amp;ORGID=${ORGID}"/>
+    <exit cond="qualified" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin921274&amp;ORGID=${ORGID}"/>
+  </samplesource>
+
+  <samplesource list="25">
+    <title>OMI Russia </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ac" unique="1"/>
+    <exit cond="terminated" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=2"/>
+    <exit cond="overquota" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=3"/>
+    <exit cond="qualified" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="20">
+    <title>GMO Research (JPN)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=2&amp;id=${id}"/>
+    <exit cond="overquota" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=3&amp;id=${id}"/>
+    <exit cond="qualified" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=1&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Samplenomics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ui" unique="1"/>
+    <exit cond="terminated" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndTerm&amp;ui=${ui}"/>
+    <exit cond="overquota" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndOverQ&amp;ui=${ui}"/>
+    <exit cond="qualified" url="http://host4.dotdata.nl/dotdata/start?u=EE4E2321A3984FD0BB88A3C5FD9F7977&amp;q=END&amp;ui=${ui}"/>
+  </samplesource>
+
+  <samplesource list="104">
+    <title>Kantar - (LightSpeed + GMI) all of Asia except China</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <var name="table" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${table}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${table}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${table}"/>
+  </samplesource>
+
+  <samplesource list="10">
+    <title>Kantar - China only</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <var name="ProjectToken" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+  </samplesource>
+
+  <samplesource list="4">
+    <title>OI Research - Online interactive research limited</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://api.dynata.com/respondent/exit?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://api.dynata.com/respondent/exit?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://api.dynata.com/respondent/exit?rst=1&amp;psid=${psid}&amp;high=${int(high.val)}"/>
+  </samplesource>
+
+  <samplesource list="136">
+    <title>DISQO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tid" unique="1"/>
+    <exit cond="terminated" url="https://go.activemeasure.com?status=12615&amp;tid=${tid}"/>
+    <exit cond="overquota" url="https://go.activemeasure.com?status=9526&amp;tid=${tid}"/>
+    <exit cond="qualified" url="https://go.activemeasure.com?status=17787&amp;tid=${tid}"/>
+  </samplesource>
+
+  <samplesource list="101">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <exit cond="terminated" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://dkr1.ssisurveys.com/projects/end?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://dkr1.ssisurveys.com/projects/end?rst=1&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="15">
+    <title>Pure Spectrum </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder - do not add Resp</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #C6007E">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<exec cond="list == '4'">
+if gv.isSST():
+  high1=1111111
+if not gv.isSST():
+  high1=(15599 * int(pid) - 14885)
+high.val=high1
+</exec>
+
+<suspend/>
+
+<float 
+  label="high"
+  cond="list == '4'"
+  translateable="0"
+  where="execute,survey">
+  <title>High</title>
+</float>
+
+<block label="Logistics" builder:title="Logistics">
+  <radio 
+   label="Location"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Sample Source (web) / Location (web to clt)</title>
+    <row label="US166" cond="list=='3'" value="592487365">Torfac (previously Wise Works)</row>
+    <row label="US167" cond="list=='2'" value="592490403">Schlesinger (previously Market cube)</row>
+    <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+    <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+    <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+    <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+    <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+    <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+    <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+    <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+    <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+    <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+    <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+    <row label="US213" cond="list=='24'" value="1314418229">SampleGurus</row>
+    <row label="RU007" cond="list=='25'" value="833513838">OMI (Online Market Intelligence)</row>
+    <row label="IN021" cond="list=='26'" value="1422500825">Orchidea Research ()</row>
+    <row label="US220" cond="list=='141'" value="7535526">Cint</row>
+    <row label="IN200" cond="list=='150'" value="7535529">Cognitive Intelligence</row>
+    <row label="GB030" cond="list=='152'" value="1244">Bilendi &amp; Respondi ()</row>
+    <row label="US215" cond="list=='153'" value="69019">Veritolytics</row>
+    <row label="US230" cond="list=='154'" value="30846">Paradigm Sample</row>
+    <row label="US234" cond="list=='160'" value="30816">Question Lab</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="LocationCode"
+   cond="not(gv.isSST())"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+	LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="IP_ID"
+   optional="0"
+   randomize="0"
+   size="50"
+   where="execute,survey,report">
+    <title>IP ID</title>
+    <exec>
+IP_ID.val = gv.request.getRemote()
+    </exec>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>AE700 Clinique EBM Redesign PF360 +PF Ecom - PackFlash 360 - US - Teaneck</title>
+    <row label="r1" autofill="True">ae700</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="changelog" where="execute,survey,report">
+    <title>Change-log!</title>
+    <row label="r1" autofill="1">Added brand considerers.</row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Intro" where="survey"><p class="p1"><b>Hello and welcome to our survey!</b><br /><br />Thank you in advance for your participation.&amp;nbsp; This study is very important to us and we ask that you answer each question carefully and completely.<br />While going through the survey, please use the scroll bar on the right and bottom of your screen to move up and down through questions and images.&amp;nbsp; Please remember that there are no right or wrong answers.&amp;nbsp; We are only interested in your opinions.<br /><br />Thank you again!&amp;nbsp; Let’s begin…</p></html>
+
+  <text 
+   label="Browser"
+   randomize="0">
+    <title>&amp;nbsp;</title>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(id)" value="$(value)" size="$(size)" class="input text-input" $(extra) hidden/>
+]]></style>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.even').hide();
+           var isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+           var isEdge = (navigator.userAgent.indexOf('Edge') >= 0);
+           var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+           var isSafari = (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+           console.log('The value for browser is ' + isEdge);
+           console.log(isChrome);
+           console.log(isFirefox);
+           console.log(isSafari);
+           if (isEdge)
+           {
+               $ ('input[type=text]').val('N');
+
+           }
+          else if (isChrome)
+           {
+               $ ('input[type=text]').val('Y');
+
+           }
+          else if(isFirefox)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+          else if(isSafari)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+         else {
+        $ ('input[type=text]').val('N');
+}
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <autofill label="CompatBrowser" where="execute,survey,report">
+    <title>Compatible Browser</title>
+    <row label="r1" autofill="Browser.val == 'Y'">Yes</row>
+    <row label="none" autofill="CompatBrowser.count == 0">No</row>
+  </autofill>
+
+  <suspend/>
+
+  <term label="TERM_Compat" cond="CompatBrowser.none and not(gv.isSST())">Incompatible Browser</term>
+
+  <term label="TERM_Device" cond="not(device.desktop) and not(gv.isSST())">Incompatible Device</term>
+
+  <suspend/>
+
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Category</title>
+    <row label="r1" autofill="True">makeup</row>
+  </autofill>
+
+  <autofill label="Clutter1" randomize="0" where="execute,survey,report">
+    <title>Clutter Category 1</title>
+    <row label="r1" autofill="True">Mascara</row>
+  </autofill>
+
+  <autofill label="Clutter2" randomize="0" where="execute,survey,report">
+    <title>Clutter Category 2</title>
+    <row label="r1" autofill="True">Lipstick</row>
+  </autofill>
+
+  <autofill label="Months" randomize="0" where="execute,survey,report">
+    <title>Enter number of months here 1,3,6,12 for past purchased, BUMO</title>
+    <row label="r1" autofill="True"><strong>24 months</strong></row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<block label="Screener" builder:title="Screener">
+  <checkbox 
+   label="S_PastParticipation"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Have you participated in a market research study within the past 1 week, on any of the following topics?</title>
+    <row label="r1">Food/ beverage products</row>
+    <row label="r2">Cosmetics</row>
+    <row label="r3">Pharmaceutical products</row>
+    <row label="r4">Household cleaning products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_PastPar" cond="(S_PastParticipation.r2)">Past Participation</term>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="center"
+   atm1d:small_maxWidth="60%"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you, or does anyone in your immediate family work for any of the following industries?</title>
+    <row label="r1">Market research or marketing</row>
+    <row label="r2">Advertising agency or Public Relations firms</row>
+    <row label="r3">A graphic design or packaging firm</row>
+    <row label="r4">A company involved in the manufacturing, distribution, or sale of <b>food/beverage</b> products</row>
+    <row label="r5">A company involved in the manufacturing, distribution, or sale of <b>pharmaceuticals</b> products</row>
+    <row label="r6">A company involved in the manufacturing, distribution or sale of <b>cosmetics</b> products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Industry" cond="(S_Industry.r1 or S_Industry.r2 or S_Industry.r3 or S_Industry.r6)">Sensitive Industry</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Which of the following best describes how you identify?</title>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3" cond="0">Non-Binary</row>
+    <row label="r4" cond="0">Not listed</row>
+    <row label="r5" cond="0">Prefer Not to Answer</row>
+    <row label="r6" cond="0" randomize="0">Prefer to self-identify</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="termS_Gender" cond="not(S_Gender.r2)">Not FeMale</term>
+
+  <text 
+   label="SelfIdentifyGender_OE"
+   cond="S_Gender.r6"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your identity below:</title>
+  </text>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="3"
+   ss:postText="years old"
+   verify="range(0,99)">
+    <title>Please type in your age below.</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('30-55'))">Age</term>
+
+  <suspend/>
+
+  <autofill label="gender" randomize="0" where="execute,survey,report">
+    <title>Gender for Real Eye</title>
+    <row label="r1" autofill="S_Gender.r1">1</row>
+    <row label="r2" autofill="S_Gender.r2">0</row>
+    <row label="r3" autofill="not(S_Gender.r1 or S_Gender.r2)">2</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="S_Frequency"
+   cardrating:lrg_maxwidth="96px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>How often have you purchased products in each of the following categories?</title>
+    <row label="r1">Mascara</row>
+    <row label="r2"><b>Foundation</b></row>
+    <row label="r3">Lipstick</row>
+    <col label="c1">Once a week</col>
+    <col label="c2">Once every 2-3 weeks</col>
+    <col label="c3">Once a month</col>
+    <col label="c4">Once every 2 or 3 months</col>
+    <col label="c5">Once every 6 months</col>
+    <col label="c6">Once a year</col>
+    <col label="c7" cond="False">Every 2-3 years</col>
+    <col label="c7_2">Every 2 years</col>
+    <col label="c7_3">Every 3 years</col>
+    <col label="c8">Never</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      	})
+	</script>
+]]></style>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Freq" cond="S_Frequency.r2.c8">Category Frequency</term>
+
+  <suspend/>
+
+  <radio 
+   label="v_FreqClutter1"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter1] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r1.c1:  data.val=0
+if S_Frequency.r1.c2:  data.val=1
+if S_Frequency.r1.c3:  data.val=2
+if S_Frequency.r1.c4:  data.val=3
+if S_Frequency.r1.c5:  data.val=4
+if S_Frequency.r1.c6:  data.val=5
+if S_Frequency.r1.c7:  data.val=6
+if S_Frequency.r1.c7_2:  data.val=7
+if S_Frequency.r1.c7_3:  data.val=8
+if S_Frequency.r1.c8:  data.val=9
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2-3 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Every 2-3 years</row>
+    <row label="r7_2">Every 2 years</row>
+    <row label="r7_3">Every 3 years</row>
+    <row label="r8">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqClutter2"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter2] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r3.c1:  data.val=0
+if S_Frequency.r3.c2:  data.val=1
+if S_Frequency.r3.c3:  data.val=2
+if S_Frequency.r3.c4:  data.val=3
+if S_Frequency.r3.c5:  data.val=4
+if S_Frequency.r3.c6:  data.val=5
+if S_Frequency.r3.c7:  data.val=6
+if S_Frequency.r3.c7_2:  data.val=7
+if S_Frequency.r3.c7_3:  data.val=8
+if S_Frequency.r3.c8:  data.val=9
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2-3 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Every 2-3 years</row>
+    <row label="r7_2">Every 2 years</row>
+    <row label="r7_3">Every 3 years</row>
+    <row label="r8">Never</row>
+  </radio>
+
+  <autofill label="FreqQual" randomize="0" where="execute,survey,report">
+    <title>Frequency Qualifier</title>
+    <row label="r1" autofill="not(S_Frequency.r1.c6 or S_Frequency.r1.c7)">[pipe: Clutter1]</row>
+    <row label="r2" autofill="not(S_Frequency.r2.c6 or S_Frequency.r2.c7)">Foundation</row>
+    <row label="r3" autofill="not(S_Frequency.r3.c6 or S_Frequency.r3.c7)">[pipe: Clutter2]</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="v_FreqTest"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Category] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r2.c1:  data.val=0
+if S_Frequency.r2.c2:  data.val=1
+if S_Frequency.r2.c3:  data.val=2
+if S_Frequency.r2.c4:  data.val=3
+if S_Frequency.r2.c5:  data.val=4
+if S_Frequency.r2.c6:  data.val=5
+if S_Frequency.r2.c7:  data.val=6
+if S_Frequency.r2.c7_2:  data.val=7
+if S_Frequency.r2.c7_3:  data.val=8
+if S_Frequency.r2.c8:  data.val=9
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2-3 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Every 2-3 years</row>
+    <row label="r7_2">Every 2 years</row>
+    <row label="r7_3">Every 3 years</row>
+    <row label="r8">Never</row>
+  </radio>
+
+  <suspend/>
+
+  <block label="Category1" builder:title="ClutterCat1">
+    <checkbox 
+    label="S_Brand_PastPurchased1"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>Which brands of <b>foundation</b> have you purchased within the past 36 months?</title>
+      <row label="r1">Clinique</row>
+      <row label="r2">Lancome</row>
+      <row label="r3">Estee Lauder</row>
+      <row label="r4">NARS</row>
+      <row label="r5">Dior</row>
+      <row label="r6">IT Cosmetics</row>
+      <row label="r7">Charlotte Tilbury</row>
+      <row label="r8">Too Faced</row>
+      <row label="r9">Maybelline</row>
+      <row label="r10">Neutrogena</row>
+      <row label="r11">MAC</row>
+      <row label="r12" exclusive="1" randomize="0">None of the above</row>
+    </checkbox>
+
+    <term label="TERM_PastPurchased1" cond="0">Sensitive PastPurchased1</term>
+
+    <suspend/>
+
+    <goto cond="not(S_Brand_PastPurchased1.r1)" target="BRAND_CONSIDERATION"/>
+  </block>
+
+  <suspend/>
+
+  <block label="Category2" builder:title="TestCat">
+    <radio 
+    label="Clinique_Past_Purchase"
+    randomize="0"
+    shuffle="rows">
+      <title>Which of these Clinique foundations have you purchased within the past 36 months?</title>
+      <row label="r1">Clinique Even Better Makeup Broad Spectrum SPF 15</row>
+      <row label="r2">Even Better Clinical Serum Foundation Broad Spectrum SPF 25</row>
+      <row label="r3">Clinique Beyond Perfecting Foundation + Concealer</row>
+      <row label="r4">Clinique Even Better Refresh Hydrating and Repairing Makeup</row>
+      <row label="r5" open="1" openOptional="1" openSize="25" optional="1" randomize="0">Other(Please specify):</row>
+      <col label="c1">Within the Past 6 Months</col>
+      <col label="c2">7-12 months ago</col>
+      <col label="c3">13-24 months ago</col>
+      <col label="c4">25-36 months ago</col>
+      <col label="none">None of these</col>
+    </radio>
+
+    <suspend/>
+
+    <term label="TERM_Clinique_Past_Purchase" cond="Clinique_Past_Purchase.r1.none">Clinique_Past_Purchase_Term</term>
+
+    <suspend/>
+
+    <autofill label="S_Brand_PastPurchased" randomize="0" where="execute,survey,report">
+      <title>Usage Past Purchased (P3M, P6M, P12M) - User/Non User for Database</title>
+      <row label="TB" autofill="S_Brand_PastPurchased1.r1">TestBrand User - all test brands netted</row>
+      <row label="NonUser" autofill="S_Brand_PastPurchased.count==0">TestBrand NON User</row>
+    </autofill>
+  </block>
+
+  <suspend/>
+
+  <radio 
+   label="C_STORE"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Where do you typically buy <b>Clinique foundations</b>?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">At a physical store only (Sephora, Ulta, Macy's, etc.)</row>
+    <row label="r2">Online Only</row>
+    <row label="r3">Both online and in store</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_ONLINE_STORES"
+   cond="C_STORE.r2 or C_STORE.r3"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you bought <b>Clinique foundations</b> online. Where specifically?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Amazon.com</row>
+    <row label="r2">Online Specialized shops (e.g., Sephora, ULTA, etc.)</row>
+    <row label="r3">Social media marketplace (e.g., Facebook marketplace, Instagram, bloggers, social media retailers, etc.)</row>
+    <row label="r4">Directly from the Clinique brand website</row>
+    <row label="r5" open="1" openSize="25" randomize="0">Other (Please specify:)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="BRAND_CONSIDERATION"
+   cond="not(S_Brand_PastPurchased1.r1)"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   shuffle="rows"
+   shuffleBy="S_Brand_PastPurchased1"
+   uses="atm1d.9">
+    <title>Which of the following brands would you <u>consider</u> purchasing for <b>foundation</b> in the future?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Clinique</row>
+    <row label="r2">Lancôme</row>
+    <row label="r3">Estee Lauder</row>
+    <row label="r4">NARS</row>
+    <row label="r5">Dior</row>
+    <row label="r6">IT Cosmetics</row>
+    <row label="r7">Charlotte Tilbury</row>
+    <row label="r8">Too Faced</row>
+    <row label="r9">Maybelline</row>
+    <row label="r10">Neutrogena</row>
+    <row label="r11">MAC</row>
+    <row label="r12" exclusive="1" randomize="0">I would not consider any of these brands</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_BRAND_CONSIDERATION" cond="BRAND_CONSIDERATION.any and not(BRAND_CONSIDERATION.r1)">BRAND_CONSIDERATION Termination.</term>
+
+  <suspend/>
+
+  <autofill label="Past_Purchase" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P3M, P6M, P12M) - User/Non User for Database</title>
+    <row label="r1" autofill="Clinique_Past_Purchase.r1.any and not(Clinique_Past_Purchase.r1.none)">Clinique Even Better Makeup Broad Spectrum SPF 15</row>
+    <row label="r2" autofill="Clinique_Past_Purchase.r2.any and not(Clinique_Past_Purchase.r2.none)">Even Better Clinical Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r3" autofill="Clinique_Past_Purchase.r3.any and not(Clinique_Past_Purchase.r3.none)">Clinique Beyond Perfecting Foundation + Concealer</row>
+    <row label="r4" autofill="Clinique_Past_Purchase.r4.any and not(Clinique_Past_Purchase.r4.none)">Clinique Even Better Refresh Hydrating and Repairing Makeup</row>
+    <row label="r5" autofill="Clinique_Past_Purchase.r5.any and not(Clinique_Past_Purchase.r5.none)">Other</row>
+    <row label="r6" autofill="Past_Purchase.count == 0">None of these</row>
+  </autofill>
+
+  <autofill label="User_qualifier" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P3M, P6M, P12M) - User/Non User for Database</title>
+    <row label="r1" autofill="Clinique_Past_Purchase.r1.c1 or Clinique_Past_Purchase.r1.c2">Current user</row>
+    <row label="r2" autofill="Clinique_Past_Purchase.r1.c3 or Clinique_Past_Purchase.r1.c4 or BRAND_CONSIDERATION.r1">Lapsed user/Considerers</row>
+  </autofill>
+
+  <suspend/>
+
+  <term label="TERM_User_qualifier" cond="not(User_qualifier.r2)">User_qualifier Termination.</term>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<autofill label="rotationQ" randomize="0" where="execute,survey,report">
+  <title>rotation Qualifier</title>
+  <row label="r1" autofill="1">rotationQ1</row>
+  <row label="r2" autofill="1">rotationQ2</row>
+  <row label="r3" autofill="1">rotationQ3</row>
+  <row label="r4" autofill="1">rotationQ4</row>
+  <row label="r5" autofill="1">rotationQ5</row>
+  <row label="r6" autofill="1">rotationQ6</row>
+  <row label="r7" autofill="1">rotationQ7</row>
+  <row label="r8" autofill="1">rotationQ8</row>
+  <row label="r9" autofill="1">rotationQ9</row>
+  <row label="r10" autofill="1">rotationQ10</row>
+</autofill>
+
+<suspend/>
+
+<quota label="listfill1" doit="1" overquota="noqual" sheet="rotationQ_qual"/>
+
+<exec>
+arr =['rotation1','rotation2','rotation3','rotation4','rotation5','rotation6','rotation7','rotation8','rotation9','rotation10']
+for itr in range(len(arr)):
+  if (hasMarker('/rotationQ_qual/' + arr[itr])):
+      hidlist_rotationQ.rows[itr].val = 1
+</exec>
+
+<autofill label="hidlist_rotationQ" randomize="0" where="execute,survey,report">
+  <title>rotation Qualification</title>
+  <row label="r1">rotation1</row>
+  <row label="r2">rotation2</row>
+  <row label="r3">rotation3</row>
+  <row label="r4">rotation4</row>
+  <row label="r5">rotation5</row>
+  <row label="r6">rotation6</row>
+  <row label="r7">rotation7</row>
+  <row label="r8">rotation8</row>
+  <row label="r9">rotation9</row>
+  <row label="r10">rotation10</row>
+</autofill>
+
+<suspend/>
+
+<block label="Quotas" builder:title="Quotas">
+  <autofill label="Age" randomize="0" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="(S_Age.check('30-43'))">30-43</row>
+    <row label="r2" autofill="(S_Age.check('44-55'))">44-55</row>
+  </autofill>
+
+  <autofill label="Gender" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r1" autofill="(S_Gender.r2)">Female</row>
+  </autofill>
+
+  <autofill label="brands" randomize="0" where="execute,survey,report">
+    <title>Brand consideration.</title>
+    <row label="r1" autofill="BRAND_CONSIDERATION.r1">Clinique</row>
+    <row label="r2" autofill="BRAND_CONSIDERATION.r2">Lancôme</row>
+    <row label="r3" autofill="BRAND_CONSIDERATION.r3">Estee Lauder</row>
+    <row label="r4" autofill="BRAND_CONSIDERATION.r4">NARS</row>
+    <row label="r5" autofill="BRAND_CONSIDERATION.r5">Dior</row>
+    <row label="r6" autofill="BRAND_CONSIDERATION.r6">IT Cosmetics</row>
+    <row label="r7" autofill="BRAND_CONSIDERATION.r7">Charlotte Tilbury</row>
+    <row label="r8" autofill="BRAND_CONSIDERATION.r8">Too Faced</row>
+    <row label="r9" autofill="BRAND_CONSIDERATION.r9">Maybelline</row>
+    <row label="r10" autofill="BRAND_CONSIDERATION.r10">Neutrogena</row>
+    <row label="r11" autofill="BRAND_CONSIDERATION.r11">MAC</row>
+    <row label="r12" autofill="BRAND_CONSIDERATION.r12">I would not consider any of these brands</row>
+    <row label="r13" autofill="brands.count == 0">None of these</row>
+  </autofill>
+
+  <autofill label="Usage" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P3M, P6M, P12M) FULL LIST break out - netted where needed</title>
+    <row label="r1" autofill="S_Brand_PastPurchased1.r1">Clinique</row>
+    <row label="r2" autofill="S_Brand_PastPurchased1.r2">Lancome</row>
+    <row label="r3" autofill="S_Brand_PastPurchased1.r3">Estee Lauder</row>
+    <row label="r4" autofill="S_Brand_PastPurchased1.r4">NARS</row>
+    <row label="r5" autofill="S_Brand_PastPurchased1.r5">Dior</row>
+    <row label="r6" autofill="S_Brand_PastPurchased1.r6">IT Cosmetics</row>
+    <row label="r7" autofill="S_Brand_PastPurchased1.r7">Charlotte Tilbury</row>
+    <row label="r8" autofill="S_Brand_PastPurchased1.r8">Too Faced</row>
+    <row label="r9" autofill="S_Brand_PastPurchased1.r9">Maybelline</row>
+    <row label="r10" autofill="S_Brand_PastPurchased1.r10">Neutrogena</row>
+    <row label="r11" autofill="S_Brand_PastPurchased1.r11">MAC</row>
+    <row label="r12" autofill="S_Brand_PastPurchased1.r12">None of the above</row>
+  </autofill>
+
+  <autofill label="UserPP" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (PastPurch)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased1.r1">Yes</row>
+    <row label="r2" autofill="UserPP.count==0">No</row>
+  </autofill>
+
+  <autofill label="User" randomize="0" where="execute,survey,report">
+    <title>This is "user" as defined by the insights team - the user by which they are running their data in crosstabs (and thus the norms)- this is defined as either past purchased or BUMO – as instructed by insights. Logic will be the same as S_Brand_PastPurchased OR S_Brand_BUMO.</title>
+    <row label="Yes" autofill="S_Brand_PastPurchased1.r1">Yes</row>
+    <row label="No" autofill="User.count==0">No</row>
+  </autofill>
+
+  <autofill label="Finda" randomize="0" where="execute,survey,report">
+    <title>Findability Brand</title>
+    <row label="r1" autofill="True"><strong>Clinique Even Better Makeup Broad Spectrum SPF 15</strong></row>
+  </autofill>
+
+  <suspend/>
+
+  <quota label="Quota" doit="1" overquota="noqual" sheet="Quota"/>
+
+  <suspend/>
+
+  <block label="SETQuotas" builder:title="Quotas">
+    <autofill label="PhaseQ" randomize="0" where="execute,survey,report">
+      <title>PhaseQ</title>
+      <row label="r1" autofill="hasMarker('Ph1*')">Phase1</row>
+      <row label="r2" autofill="hasMarker('Ph2*')">Phase2</row>
+      <row label="r3" autofill="hasMarker('Ph3*')">Phase3</row>
+    </autofill>
+
+    <autofill label="Sample" randomize="0" where="execute,survey,report">
+      <title>Sample</title>
+      <row label="r1" autofill="hasMarker('*Sam1*')">Clinique Even Better Makeup Users</row>
+      <row label="r2" autofill="hasMarker('*Sam2*')">Clinique Even Better Makeup Lapsed Users/Considerers</row>
+    </autofill>
+
+    <autofill label="Version" cond="0" randomize="0" where="execute,survey,report">
+      <title>Version</title>
+    </autofill>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <exec>
+if PhaseQ.r1:  Phase.val=0
+if PhaseQ.r2:  Phase.val=1
+if PhaseQ.r3:  Phase.val=2
+  </exec>
+
+  <radio 
+   label="Phase"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Phase</title>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+  </radio>
+
+  <suspend/>
+</block>
+
+<block label="Images" cond="0" builder:title="IMAGES">
+  <autofill label="SHELF_IMG" randomize="0" where="execute,survey,report">
+    <title>Shelf Image</title>
+    <row label="r1" autofill="(Phase.r1)"><img src="[rel SHELF1_HR.jpg]" title="" height="500" alt="" constrain="true" class="jloupeme" /></row>
+    <row label="r2" autofill="(Phase.r2)"><img src="[rel SHELF2_HR.jpg]" title="" height="500" alt="" constrain="true" class="jloupeme" /></row>
+  </autofill>
+
+  <autofill label="PH_IMG" randomize="0" where="execute,survey,report">
+    <title>Phase Image</title>
+    <row label="r1" autofill="(Phase.r1)"><img src="[rel LINE1.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></row>
+    <row label="r2" autofill="(Phase.r2)"><img src="[rel LINE2.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></row>
+  </autofill>
+
+  <autofill label="COMP_IMG" randomize="0" where="execute,survey,report">
+    <title>Competitor Image</title>
+    <row label="r1" autofill="True"><img src="[rel COMP.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></row>
+  </autofill>
+
+  <pipe label="FEImage" capture="">
+    <case label="r1" cond="(Phase.r1)">PACK1</case>
+    <case label="r2" cond="(Phase.r2)">PACK2</case>
+    <case label="r99" cond="1"/></pipe>
+  <suspend/>
+</block>
+
+<suspend/>
+
+<block label="Variables" builder:title="VARIABLES">
+  <number 
+   label="resp_id"
+   size="6"
+   where="execute,survey,report">
+    <title>Respondent ID</title>
+    <exec>
+try:
+	resp_id.val = Resp.val
+	print record
+except NameError:
+	resp_id.val = record
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <autofill label="Brand" randomize="0" where="execute,survey,report">
+    <title>Test Brand</title>
+    <row label="r1" autofill="True"><strong>Clinique</strong></row>
+  </autofill>
+
+  <autofill label="Price" randomize="0" where="execute,survey,report">
+    <title>Test Brand Price</title>
+    <row label="r1" autofill="True"><strong>Price</strong></row>
+  </autofill>
+
+  <autofill label="CompBrand" randomize="0" where="execute,survey,report">
+    <title>Competitor Brand</title>
+    <row label="r1" autofill="True"><strong>Comp Brand</strong></row>
+  </autofill>
+
+  <autofill label="CompPrice" randomize="0" where="execute,survey,report">
+    <title>Competitor Price</title>
+  </autofill>
+</block>
+
+<suspend/>
+
+<block label="Omni_Questions" builder:title="OmniQuestions">
+  <radio 
+   label="S_Omni_Research"
+   cond="0"
+   averages="nosummary"
+   grouping="cols"
+   ss:listDisplay="1"
+   type="rating"
+   values="order">
+    <title>Thinking about the <b>[pipe: Category]</b> category, how much <b>browsing or research do you typically do "online" and "in store"&amp;nbsp;</b> before shopping?</title>
+    <comment>Select one for each option</comment>
+    <col label="c1">Online</col>
+    <col label="c2">In Store</col>
+    <row label="r1" value="1">A lot</row>
+    <row label="r2" value="2">Some</row>
+    <row label="r3" value="3">A little</row>
+    <row label="r4" value="4">None at all</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_Omni_ShoppingPlan"
+   cond="0"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>Thinking about the <b>[pipe: Category]</b> category, and the different occasions when you shop it, would you say your shopping is more planned or impromptu?  </title>
+    <row label="r1">Regular stock-up</row>
+    <row label="r2">Ad-hoc, immediate need, top-up</row>
+    <row label="r3">Exploration or just browsing</row>
+    <row label="r4">For a special occasion</row>
+    <col label="c1">Mostly planned</col>
+    <col label="c2">Somewhat planned, somewhat impromptu</col>
+    <col label="c3">Mostly impromptu</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      	})
+	</script>
+]]></style>
+  </radio>
+
+  <suspend/>
+</block>
+
+<block label="AgreementBlock" builder:title="Agree">
+  <suspend/>
+
+  <note>THIS QUESTION SHOULD BE LEFT IN TO ENSURE QUALITY OF INTERVIEWING AND THAT IT'S NOT A BOT TAKING THE SURVEY</note>
+  <radio 
+   label="RedHerringCheck"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Which of the following is not an animal?</title>
+    <row label="r1">Dog</row>
+    <row label="r2">Cat</row>
+    <row label="r3">Flamingo</row>
+    <row label="r4">Television</row>
+    <row label="r5">Horse</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_RedHerring" cond="not(RedHerringCheck.r4)">Failed Red Herring</term>
+
+  <suspend/>
+
+  <radio 
+   label="Agreement"
+   atm1d:large_buttonAlign="center"
+   atm1d:large_contentAlign="center"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="center"
+   atm1d:small_contentAlign="center"
+   randomize="0"
+   uses="atm1d.9">
+    <title><strong><span style="color: #0091da;">Respondent Confidentiality Disclosure Agreement (RCDA)<br /></span></strong><hr /><strong><em>Congratulations!<br /></em></strong><br />
+<div align="left">
+<ul>
+   Thank you for agreeing to participate in this consumer study on behalf of <strong><span style="color: #0091da;">Behaviorally</span></strong>. Before you can participate in this research, we would like you to understand that it will involve Confidential Information and you must agree to these terms and conditions. If you do not agree, you will not be eligible to participate in this study. By signing this agreement, you agree as follows:
+<li />You will use information or material disclosed to you or which may be available as part of this study only for the purpose of participating in this study, and you will not otherwise use the information or material for your own benefit or the benefit of any third party.
+<li />You agree to keep confidential and not disclose, copy, transmit, or use for any purpose other than your participation in this study any information or material disclosed or made available to you as part of the study, including about products or packaging that may be disclosed to you directly or indirectly by participating in this study. Any disclosure, copying, transmitting or misuse of any information or material in any form (including hard copy and/or electronic/data) whether intentional or unintentional may subject you to disqualification, and any other remedies available to Behaviorally or its study partners in law or equity.
+<li />You agree that Behaviorally (and its partners) will be irreparably harmed and monetary damages may not be adequate compensation if you fail to meet your obligations under this agreement, and that, in addition to other remedies, Behaviorally (or its partners) shall be entitled to seek injunctive relief to prevent any threatened or continued breach. The parties hereby waive any requirements for security for obtaining any provisional relief.
+<li />Each of Behaviorally’s partners is an intended third-party beneficiary of this agreement and each partner may enforce the terms of this agreement.<br /><br /><br />
+</ul>
+</div>
+As further detailed in our privacy policy (<a href="https://www.behaviorally.com/privacy-policy" target="_blank" rel="noopener">https://www.behaviorally.com/privacy-policy</a>), we take reasonable precautions to protect the privacy and security of your information during the market research survey. All information collected as part of this survey is treated in accordance with our online privacy policy and is destroyed 2 months after you have taken this survey. You will be compensated for your time, commitment, and confidential obligation.<br /><br /><strong>Please confirm your acceptance of these terms by checking the agreement below.</strong></title>
+    <row label="r1"><b>I hereby acknowledge and agree to the terms.</b></row>
+  </radio>
+
+  <text 
+   label="DateTime"
+   optional="0"
+   randomize="0"
+   size="25"
+   where="report">
+    <title>DateTime</title>
+    <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+    </exec>
+
+  </text>
+</block>
+
+<suspend/>
+
+<note>PROG: Only include QC Core Block1 if there is QC Core</note>
+<suspend/>
+
+<block label="ShoppingSection" builder:title="Shopping Section">
+  <pipe label="ShelfImage" capture="">
+    <case label="r1" cond="(Phase.r1)">AE552_SHELF1</case>
+    <case label="r2" cond="(Phase.r2)">AE552_SHELF2</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="findaShelfImage" capture="">
+    <case label="r1" cond="(Phase.r1)">AE700_LandingPage1</case>
+    <case label="r2" cond="(Phase.r2)">AE700_LandingPage2</case>
+    <case label="r3" cond="(Phase.r3)">AE700_LandingPage3</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="findarotation" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">R01</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">R02</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">R03</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">R04</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">R05</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">R06</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">R07</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">R08</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">R09</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">R10</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="a3image" capture="">
+    <case label="r1" cond="(Phase.r1)">A3a</case>
+    <case label="r2" cond="(Phase.r2)">A3b</case>
+    <case label="r3" cond="(Phase.r3)">A3c</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="a3efimage" capture="">
+    <case label="r1" cond="(Phase.r1)">LP_A3a</case>
+    <case label="r2" cond="(Phase.r2)">LP_A3b</case>
+    <case label="r3" cond="(Phase.r3)">LP_A3c</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="b2image" capture="">
+    <case label="r1" cond="(Phase.r1)">B2a</case>
+    <case label="r2" cond="(Phase.r2)">B2b</case>
+    <case label="r3" cond="(Phase.r3)">B2c</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image1" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">A1</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">B1</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">A1</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">B1</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">B4</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">${pipe.b2image}</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">C1</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">B3</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">${pipe.a3image}</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">A4</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image2" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">A2</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">A4</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">${pipe.b2image}</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">C3</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">C4</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">C3</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">C2</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">B1</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">C1</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">${pipe.a3image}</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image3" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">${pipe.a3image}</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">C1</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">C3</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">A4</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">B3</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">B3</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">A4</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">A4</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">C3</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">C1</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image4" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">A4</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">${pipe.b2image}</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">${pipe.a3image}</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">C4</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">B1</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">C2</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">C3</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">${pipe.a3image}</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">C4</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">B1</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image5" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">B1</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">A2</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">C2</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">${pipe.b2image}</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">A2</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">A2</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">A1</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">A2</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">A1</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">${pipe.b2image}</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image6" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">${pipe.b2image}</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">B4</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">B3</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">A2</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">C1</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">A1</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">C4</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">C3</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">B4</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">B3</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image7" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">B3</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">A1</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">C1</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">B4</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">${pipe.a3image}</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">${pipe.a3image}</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">${pipe.b2image}</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">C1</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">B3</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">C3</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image8" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">B4</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">B3</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">B4</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">C2</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">C2</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">B4</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">B4</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">C2</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">B1</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">A2</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image9" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">C1</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">${pipe.a3image}</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">C4</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">${pipe.a3image}</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">${pipe.b2image}</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">C1</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">B1</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">C4</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">A4</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">C4</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image10" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">C2</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">C3</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">A4</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">A1</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">A1</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">A4</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">A2</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">B4</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">${pipe.b2image}</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">C2</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image11" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">C3</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">C4</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">B1</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">B3</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">A4</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">B1</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">B3</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">A1</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">A2</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">B4</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="image12" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">C4</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">C2</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">A2</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">C1</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">C3</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">C4</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">${pipe.a3image}</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">${pipe.b2image}</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">C2</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">A1</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="a3product" capture="">
+    <case label="r1" cond="(Phase.r1 or Phase.r2 or Phase.r3)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="b2product" capture="">
+    <case label="r1" cond="(Phase.r1)">IT Cosmetics - CC+ Cream with SPF 50+</case>
+    <case label="r2" cond="(Phase.r2 or Phase.r3)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product1" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">${pipe.b2product}</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">${pipe.a3product}</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product2" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">${pipe.b2product}</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">${pipe.a3product}</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product3" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">${pipe.a3product}</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product4" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">${pipe.b2product}</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">${pipe.a3product}</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">${pipe.a3product}</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product5" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">${pipe.b2product}</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">${pipe.b2product}</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product6" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">${pipe.b2product}</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product7" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">${pipe.a3product}</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">${pipe.a3product}</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">${pipe.b2product}</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product8" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product9" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">${pipe.a3product}</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">${pipe.a3product}</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">${pipe.b2product}</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product10" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">${pipe.b2product}</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product11" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">NARS - Natural Radiant Longwear Foundation</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Dior - Dior Forever Skin Glow Foundation SPF 15</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">IT Cosmetics - Your Skin But Better Foundation + Skincare</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="Product12" capture="">
+    <case label="r1" cond="(hidlist_rotationQ.r1)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r2" cond="(hidlist_rotationQ.r2)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r3" cond="(hidlist_rotationQ.r3)">Estée Lauder - Double Wear Stay-in-Place Foundation</case>
+    <case label="r4" cond="(hidlist_rotationQ.r4)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</case>
+    <case label="r5" cond="(hidlist_rotationQ.r5)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</case>
+    <case label="r6" cond="(hidlist_rotationQ.r6)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</case>
+    <case label="r7" cond="(hidlist_rotationQ.r7)">${pipe.a3product}</case>
+    <case label="r8" cond="(hidlist_rotationQ.r8)">${pipe.b2product}</case>
+    <case label="r9" cond="(hidlist_rotationQ.r9)">Maybelline - Fit Me Dewy + Smooth Foundation</case>
+    <case label="r10" cond="(hidlist_rotationQ.r10)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="ae552behaviorallyvst10251DW7RBdGW96productid" capture="">
+    <case label="r1" cond="(Phase.r1)">x1</case>
+    <case label="r2" cond="(Phase.r2)">x2</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="letter" capture="">
+    <case label="r1" cond="(Phase.r1)">a</case>
+    <case label="r2" cond="(Phase.r2)">b</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_price_text" capture="">
+    <case label="r1" cond="True">Price</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_quantity_text" capture="">
+    <case label="r1" cond="True">Quantity</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_subtotal_text" capture="">
+    <case label="r1" cond="True">Subtotal</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_cancel_text" capture="">
+    <case label="r1" cond="True">Put Back</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_purchase" capture="">
+    <case label="r1" cond="True">Purchase</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="find_select" capture="">
+    <case label="r1" cond="True">Select</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="continue_text" capture="">
+    <case label="r1" cond="True">Please click the Continue button to proceed</case>
+    <case label="r99" cond="1"/></pipe>
+  <block label="RealEyeExercise" builder:title="Real Eye Exercise">
+    <pipe label="ProjectID" capture="">
+      <case label="r1" cond="True">c568646d-f1fa-4376-8c8d-d893b1233a90</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <pipe label="REShelf" capture="">
+      <case label="r1" cond="Phase.r1">AE700_LandingPage1_${pipe.findarotation}_HR</case>
+      <case label="r2" cond="Phase.r2">AE700_LandingPage2_${pipe.findarotation}_HR</case>
+      <case label="r3" cond="Phase.r3">AE700_LandingPage3_${pipe.findarotation}_HR</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <html label="placeholderredirect" where="none">Redirect placeholder so that the redirect executes</html>
+
+    <suspend sst="0" url="https://www.realeye.io/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REShelf}.jpg&amp;realeye-tester-tags=userpp-[pipe:UserPP],sample-[pipe:Sample],phase-[pipe:Phase],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>
+
+    <number 
+    label="RealEye_Status"
+    randomize="0"
+    size="3"
+    where="execute,survey,report">
+      <title>Real Eye: Status</title>
+      <exec>
+RE_Status= gv.request.get("ef_status")
+
+RealEye_Status.val = RE_Status
+      </exec>
+
+    </number>
+
+    <number 
+    label="RealEye_Quality"
+    randomize="0"
+    size="3"
+    where="execute,survey,report">
+      <title>Real Eye: Quality</title>
+      <exec>
+RE_Quality= gv.request.get("realeye-tester-quality_grade")
+
+RealEye_Quality.val = RE_Quality
+      </exec>
+
+    </number>
+
+    <text 
+    label="RealEye_ID"
+    randomize="0"
+    size="25"
+    where="execute,survey,report">
+      <title>Real Eye: ID</title>
+      <exec>
+RE_ID= gv.request.get("realeye-tester-id")
+
+RealEye_ID.val = RE_ID
+      </exec>
+
+    </text>
+
+    <suspend/>
+
+    <autofill label="EF_Status" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Status</title>
+      <row label="r1" autofill="RealEye_Status.check('1')">Qualified</row>
+      <row label="r2" autofill="RealEye_Status.check('2')">Skip (I don't want to participate in this test)</row>
+      <row label="r3" autofill="RealEye_Status.check('3')">Quota Full</row>
+      <row label="r4" autofill="RealEye_Status.check('4')">Screen Out</row>
+      <row label="None" autofill="EF_Status.count==0">No Status</row>
+    </autofill>
+
+    <autofill label="EF_Quality" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Quality</title>
+      <row label="net1" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5')">T2B</row>
+      <row label="net2" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5') or RealEye_Quality.check('4')">T3B</row>
+      <row label="net3" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2')">B2B</row>
+      <row label="net4" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2') or RealEye_Quality.check('3')">B3B</row>
+      <row label="r1" autofill="RealEye_Quality.check('1')">Very Low</row>
+      <row label="r2" autofill="RealEye_Quality.check('2')">Low</row>
+      <row label="r3" autofill="RealEye_Quality.check('3')">Average</row>
+      <row label="r4" autofill="RealEye_Quality.check('4')">Good</row>
+      <row label="r5" autofill="RealEye_Quality.check('5')">Very Good</row>
+      <row label="r6" autofill="RealEye_Quality.check('6')">Perfect</row>
+      <row label="None" autofill="EF_Quality.count==0">No Quality</row>
+    </autofill>
+
+    <term label="TERM_RealEye_OptOut" cond="not(EF_Status.r1) and not(gv.isSST())">Real Eye: Skip/ Screen Out/ RealEye OQ</term>
+
+    <suspend/>
+  </block>
+</block>
+
+<suspend/>
+
+<block label="Findability_Section" builder:title="Findability Section">
+  <html label="F1Text" where="survey">Next, you are going to see the display of foundations again. This time, you will be looking for one particular item.<br />When you see the display, please find <b>Clinique Even Better Makeup Broad Spectrum SPF 15</b>.<br /><br /> When you find this product, please use your mouse, and click on the center of the product to select it.<br /><b>After clicking on the product you were searching for, click the 'Select' button in order to select the product</b>.<br /><br /> When you are ready, click continue to begin.</html>
+
+  <suspend/>
+
+  <number 
+   label="F1"
+   mgshelf:cancel_text="${pipe.shop_cancel_text}"
+   mgshelf:completed_text="${pipe.continue_text}"
+   mgshelf:currency_position="before"
+   mgshelf:currency_sign="$"
+   mgshelf:findability="1"
+   mgshelf:magnifier_border_radius="50%"
+   mgshelf:magnifier_height="275"
+   mgshelf:magnifier_image="[rel ${pipe.findaShelfImage}_${pipe.findarotation}_HR.jpg]"
+   mgshelf:magnifier_width="275"
+   mgshelf:name_text=""
+   mgshelf:popup_show_name="1"
+   mgshelf:popup_show_price="1"
+   mgshelf:popup_show_quantity="1"
+   mgshelf:popup_show_subtotal="1"
+   mgshelf:price_text="${pipe.shop_price_text}"
+   mgshelf:purchase_text="${pipe.find_select}"
+   mgshelf:quantity_text="${pipe.shop_quantity_text}"
+   mgshelf:shelf_image="[rel ${pipe.findaShelfImage}_${pipe.findarotation}_LR.jpg]"
+   mgshelf:shelf_width="800"
+   mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+   randomize="0"
+   size="10"
+   uses="prsshelf2.5">
+    <title>Again, you are looking for: <br /><span style="font-size: 30pt;"><b>Clinique Even Better Makeup Broad Spectrum SPF 15</b></span> </title>
+    <comment><b><i>After clicking on the product you were searching for, click the 'Select' button in order to select the product.</i></b></comment>
+    <col label="c1">Quantity</col>
+    <col label="c2">Order of click</col>
+    <col label="c3">Time opened</col>
+    <row label="r1" mgshelf:coord="466,288,729,678" mgshelf:image="[rel ${pipe.image1}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product1}</row>
+    <row label="r2" mgshelf:coord="787,287,1051,672" mgshelf:image="[rel ${pipe.image2}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product2}</row>
+    <row label="r3" mgshelf:coord="1136,290,1400,675" mgshelf:image="[rel ${pipe.image3}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product3}</row>
+    <row label="r4" mgshelf:coord="1467,283,1731,668" mgshelf:image="[rel ${pipe.image4}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product4}</row>
+    <row label="r5" mgshelf:coord="461,889,761,1273" mgshelf:image="[rel ${pipe.image5}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product5}</row>
+    <row label="r6" mgshelf:coord="786,886,1086,1270" mgshelf:image="[rel ${pipe.image6}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product6}</row>
+    <row label="r7" mgshelf:coord="1126,893,1426,1277" mgshelf:image="[rel ${pipe.image7}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product7}</row>
+    <row label="r8" mgshelf:coord="1457,896,1757,1280" mgshelf:image="[rel ${pipe.image8}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product8}</row>
+    <row label="r9" mgshelf:coord="456,1503,756,1887" mgshelf:image="[rel ${pipe.image9}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product9}</row>
+    <row label="r10" mgshelf:coord="803,1491,1103,1875" mgshelf:image="[rel ${pipe.image10}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product10}</row>
+    <row label="r11" mgshelf:coord="1137,1499,1437,1883" mgshelf:image="[rel ${pipe.image11}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product11}</row>
+    <row label="r12" mgshelf:coord="1469,1496,1769,1880" mgshelf:image="[rel ${pipe.image12}.jpg]" mgshelf:price="" mgshelf:width="160">${pipe.Product12}</row>
+    <style name="question.after"><![CDATA[
+<style type="text/css">
+        .sq-mgshelf-cart-icon { display: none !important; }
+      </style>
+<script>
+		
+      	$ (document).on('click', '.bs-btn-primary', function() {
+      		$ ("#btn_continue").click();
+      		
+      	})
+      	</script>
+]]></style>
+  </number>
+
+  <suspend/>
+
+  <checkbox 
+   label="Selected_at_F1"
+   where="execute,survey,report">
+    <title>Selected product based on rotation and phase.</title>
+    <comment>Select all that apply</comment>
+    <row label="r1" autofill="(F1.r1.c1 and hidlist_rotationQ.r1)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r2" autofill="(F1.r1.c1 and hidlist_rotationQ.r2)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r3" autofill="(F1.r1.c1 and hidlist_rotationQ.r3)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r4" autofill="(F1.r1.c1 and hidlist_rotationQ.r4)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r5" autofill="(F1.r1.c1 and hidlist_rotationQ.r5)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r6" autofill="(Phase.r1 and F1.r1.c1 and hidlist_rotationQ.r6)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r7" autofill="((Phase.r2 or Phase.r3) and F1.r1.c1 and hidlist_rotationQ.r6)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r8" autofill="(F1.r1.c1 and hidlist_rotationQ.r7)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r9" autofill="(F1.r1.c1 and hidlist_rotationQ.r8)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r10" autofill="(F1.r1.c1 and hidlist_rotationQ.r9)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r11" autofill="(F1.r1.c1 and hidlist_rotationQ.r10)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r12" autofill="(F1.r2.c1 and hidlist_rotationQ.r1)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r13" autofill="(F1.r2.c1 and hidlist_rotationQ.r2)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r14" autofill="(Phase.r1 and F1.r2.c1 and hidlist_rotationQ.r3)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r15" autofill="((Phase.r2 or Phase.r3) and F1.r2.c1 and hidlist_rotationQ.r3)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r16" autofill="(F1.r2.c1 and hidlist_rotationQ.r4)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r17" autofill="(F1.r2.c1 and hidlist_rotationQ.r5)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r18" autofill="(F1.r2.c1 and hidlist_rotationQ.r6)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r19" autofill="(F1.r2.c1 and hidlist_rotationQ.r7)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r20" autofill="(F1.r2.c1 and hidlist_rotationQ.r8)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r21" autofill="(F1.r2.c1 and hidlist_rotationQ.r9)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r22" autofill="(F1.r2.c1 and hidlist_rotationQ.r10)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r23" autofill="(F1.r3.c1 and hidlist_rotationQ.r1)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r24" autofill="(F1.r3.c1 and hidlist_rotationQ.r2)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r25" autofill="(F1.r3.c1 and hidlist_rotationQ.r3)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r26" autofill="(F1.r3.c1 and hidlist_rotationQ.r4)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r27" autofill="(F1.r3.c1 and hidlist_rotationQ.r5)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r28" autofill="(F1.r3.c1 and hidlist_rotationQ.r6)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r29" autofill="(F1.r3.c1 and hidlist_rotationQ.r7)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r30" autofill="(F1.r3.c1 and hidlist_rotationQ.r8)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r31" autofill="(F1.r3.c1 and hidlist_rotationQ.r9)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r32" autofill="(F1.r3.c1 and hidlist_rotationQ.r10)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r33" autofill="( F1.r4.c1 and hidlist_rotationQ.r1)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r34" autofill="(Phase.r1 and F1.r4.c1 and hidlist_rotationQ.r2)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r35" autofill="((Phase.r2 or Phase.r3) and F1.r4.c1 and hidlist_rotationQ.r2)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r36" autofill="(F1.r4.c1 and hidlist_rotationQ.r3)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r37" autofill="(F1.r4.c1 and hidlist_rotationQ.r4)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r38" autofill="(F1.r4.c1 and hidlist_rotationQ.r5)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r39" autofill="(F1.r4.c1 and hidlist_rotationQ.r6)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r40" autofill="(F1.r4.c1 and hidlist_rotationQ.r7)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r41" autofill="(F1.r4.c1 and hidlist_rotationQ.r8)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r42" autofill="(F1.r4.c1 and hidlist_rotationQ.r9)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r43" autofill="(F1.r4.c1 and hidlist_rotationQ.r10)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r44" autofill="(F1.r5.c1 and hidlist_rotationQ.r1)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r45" autofill="(F1.r5.c1 and hidlist_rotationQ.r2)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r46" autofill="(F1.r5.c1 and hidlist_rotationQ.r3)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r47" autofill="(Phase.r1 and F1.r5.c1 and hidlist_rotationQ.r4)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r48" autofill="((Phase.r2 or Phase.r3) and F1.r5.c1 and hidlist_rotationQ.r4)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r49" autofill="(F1.r5.c1 and hidlist_rotationQ.r5)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r50" autofill="(F1.r5.c1 and hidlist_rotationQ.r6)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r51" autofill="(F1.r5.c1 and hidlist_rotationQ.r7)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r52" autofill="(F1.r5.c1 and hidlist_rotationQ.r8)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r53" autofill="(F1.r5.c1 and hidlist_rotationQ.r9)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r54" autofill="(Phase.r1 and F1.r5.c1 and hidlist_rotationQ.r10)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r55" autofill="((Phase.r2 or Phase.r3) and F1.r5.c1 and hidlist_rotationQ.r10)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r56" autofill="(Phase.r1 and F1.r6.c1 and hidlist_rotationQ.r1)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r57" autofill="((Phase.r2 or Phase.r3) and F1.r6.c1 and hidlist_rotationQ.r1)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r58" autofill="(F1.r6.c1 and hidlist_rotationQ.r2)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r59" autofill="(F1.r6.c1 and hidlist_rotationQ.r3)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r60" autofill="(F1.r6.c1 and hidlist_rotationQ.r4)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r61" autofill="(F1.r6.c1 and hidlist_rotationQ.r5)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r62" autofill="(F1.r6.c1 and hidlist_rotationQ.r6)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r63" autofill="(F1.r6.c1 and hidlist_rotationQ.r7)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r64" autofill="(F1.r6.c1 and hidlist_rotationQ.r8)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r65" autofill="(F1.r6.c1 and hidlist_rotationQ.r9)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r66" autofill="(F1.r6.c1 and hidlist_rotationQ.r10)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r67" autofill="(F1.r7.c1 and hidlist_rotationQ.r1)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r68" autofill="(F1.r7.c1 and hidlist_rotationQ.r2)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r69" autofill="(F1.r7.c1 and hidlist_rotationQ.r3)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r70" autofill="(F1.r7.c1 and hidlist_rotationQ.r4)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r71" autofill="(F1.r7.c1 and hidlist_rotationQ.r5)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r72" autofill="(F1.r7.c1 and hidlist_rotationQ.r6)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r73" autofill="(Phase.r1 and F1.r7.c1 and hidlist_rotationQ.r7)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r74" autofill="((Phase.r2 or Phase.r3) and F1.r7.c1 and hidlist_rotationQ.r7)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r75" autofill="(F1.r7.c1 and hidlist_rotationQ.r8)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r76" autofill="(F1.r7.c1 and hidlist_rotationQ.r9)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r77" autofill="(F1.r7.c1 and hidlist_rotationQ.r10)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r78" autofill="(F1.r8.c1 and hidlist_rotationQ.r1)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r79" autofill="(F1.r8.c1 and hidlist_rotationQ.r2)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r80" autofill="(F1.r8.c1 and hidlist_rotationQ.r3)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r81" autofill="(F1.r8.c1 and hidlist_rotationQ.r4)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r82" autofill="(F1.r8.c1 and hidlist_rotationQ.r5)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r83" autofill="(F1.r8.c1 and hidlist_rotationQ.r6)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r84" autofill="(F1.r8.c1 and hidlist_rotationQ.r7)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r85" autofill="(F1.r8.c1 and hidlist_rotationQ.r8)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r86" autofill="(F1.r8.c1 and hidlist_rotationQ.r9)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r87" autofill="(F1.r8.c1 and hidlist_rotationQ.r10)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r88" autofill="(F1.r9.c1 and hidlist_rotationQ.r1)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r89" autofill="(F1.r9.c1 and hidlist_rotationQ.r2)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r90" autofill="(F1.r9.c1 and hidlist_rotationQ.r3)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r91" autofill="(F1.r9.c1 and hidlist_rotationQ.r4)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r92" autofill="(Phase.r1 and F1.r9.c1 and hidlist_rotationQ.r5)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r93" autofill="((Phase.r2 or Phase.r3) and F1.r9.c1 and hidlist_rotationQ.r5)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r94" autofill="(F1.r9.c1 and hidlist_rotationQ.r6)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r95" autofill="(F1.r9.c1 and hidlist_rotationQ.r7)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r96" autofill="(F1.r9.c1 and hidlist_rotationQ.r8)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r97" autofill="(F1.r9.c1 and hidlist_rotationQ.r9)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r98" autofill="(F1.r9.c1 and hidlist_rotationQ.r10)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r99" autofill="(F1.r10.c1 and hidlist_rotationQ.r1)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r100" autofill="(F1.r10.c1 and hidlist_rotationQ.r2)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r101" autofill="(F1.r10.c1 and hidlist_rotationQ.r3)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r102" autofill="(F1.r10.c1 and hidlist_rotationQ.r4)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r103" autofill="(F1.r10.c1 and hidlist_rotationQ.r5)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r104" autofill="(F1.r10.c1 and hidlist_rotationQ.r6)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r105" autofill="(F1.r10.c1 and hidlist_rotationQ.r7)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r106" autofill="(F1.r10.c1 and hidlist_rotationQ.r8)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r107" autofill="(Phase.r1 and F1.r10.c1 and hidlist_rotationQ.r9)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r108" autofill="((Phase.r2 or Phase.r3) and F1.r10.c1 and hidlist_rotationQ.r9)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r109" autofill="(F1.r10.c1 and hidlist_rotationQ.r10)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r110" autofill="(F1.r11.c1 and hidlist_rotationQ.r1)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r111" autofill="(F1.r11.c1 and hidlist_rotationQ.r2)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r112" autofill="(F1.r11.c1 and hidlist_rotationQ.r3)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r113" autofill="(F1.r11.c1 and hidlist_rotationQ.r4)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r114" autofill="(F1.r11.c1 and hidlist_rotationQ.r5)">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r115" autofill="(F1.r11.c1 and hidlist_rotationQ.r6)">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r116" autofill="(F1.r11.c1 and hidlist_rotationQ.r7)">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r117" autofill="(F1.r11.c1 and hidlist_rotationQ.r8)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r118" autofill="(F1.r11.c1 and hidlist_rotationQ.r9)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r119" autofill="(F1.r11.c1 and hidlist_rotationQ.r10)">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r120" autofill="(F1.r12.c1 and hidlist_rotationQ.r1)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r121" autofill="(F1.r12.c1 and hidlist_rotationQ.r2)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r122" autofill="(F1.r12.c1 and hidlist_rotationQ.r3)">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r123" autofill="(F1.r12.c1 and hidlist_rotationQ.r4)">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r124" autofill="(F1.r12.c1 and hidlist_rotationQ.r5)">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+    <row label="r125" autofill="(F1.r12.c1 and hidlist_rotationQ.r6)">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r126" autofill="(F1.r12.c1 and hidlist_rotationQ.r7)">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r127" autofill="(Phase.r1 and F1.r12.c1 and hidlist_rotationQ.r8)">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r128" autofill="((Phase.r2 or Phase.r3) and F1.r12.c1 and hidlist_rotationQ.r8)">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r129" autofill="( F1.r12.c1 and hidlist_rotationQ.r9)">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r130" autofill="(F1.r12.c1 and hidlist_rotationQ.r10)">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="F1_Product"
+   where="execute,survey,report">
+    <title>Selected product at F1.</title>
+    <row label="r1" autofill="Selected_at_F1.r1 or Selected_at_F1.r3 or Selected_at_F1.r51 or Selected_at_F1.r53 or Selected_at_F1.r62 or Selected_at_F1.r68 or Selected_at_F1.r102 or Selected_at_F1.r103 or Selected_at_F1.r117 or Selected_at_F1.r130">Lancôme - Teint Idole Ultra 24H Long Wear Matte Foundation</row>
+    <row label="r2" autofill="Selected_at_F1.r2 or Selected_at_F1.r4 or Selected_at_F1.r20 or Selected_at_F1.r38 or Selected_at_F1.r43 or Selected_at_F1.r44 or Selected_at_F1.r86 or Selected_at_F1.r95 or Selected_at_F1.r112 or Selected_at_F1.r115">Dior - Dior Forever Skin Glow Foundation SPF 15</row>
+    <row label="r3" autofill="Selected_at_F1.r5 or Selected_at_F1.r58 or Selected_at_F1.r65 or Selected_at_F1.r70 or Selected_at_F1.r78 or Selected_at_F1.r80 or Selected_at_F1.r83 or Selected_at_F1.r84 or Selected_at_F1.r106 or Selected_at_F1.r119 ">Charlotte Tilbury - Airbrush Flawless Longwear Foundation</row>
+    <row label="r4" autofill="Selected_at_F1.r6 or Selected_at_F1.r14 or Selected_at_F1.r34 or Selected_at_F1.r47 or Selected_at_F1.r54 or Selected_at_F1.r56 or Selected_at_F1.r73 or Selected_at_F1.r92 or Selected_at_F1.r107 or Selected_at_F1.r127 ">IT Cosmetics - CC+ Cream with SPF 50+</row>
+    <row label="r5" autofill="Selected_at_F1.r7 or Selected_at_F1.r15 or Selected_at_F1.r35 or Selected_at_F1.r48 or Selected_at_F1.r55 or Selected_at_F1.r57 or Selected_at_F1.r74 or Selected_at_F1.r93 or Selected_at_F1.r108 or Selected_at_F1.r128">CLINIQUE - Even Better Matte Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r6" autofill="Selected_at_F1.r8 or Selected_at_F1.r21 or Selected_at_F1.r24 or Selected_at_F1.r32 or Selected_at_F1.r61 or Selected_at_F1.r69 or Selected_at_F1.r75 or Selected_at_F1.r88 or Selected_at_F1.r94 or Selected_at_F1.r123 ">Too Faced - Born This Way Natural Finish Longwear Liquid Foundation</row>
+    <row label="r7" autofill="Selected_at_F1.r9 or Selected_at_F1.r27 or Selected_at_F1.r28 or Selected_at_F1.r59 or Selected_at_F1.r66 or Selected_at_F1.r67 or Selected_at_F1.r76 or Selected_at_F1.r79 or Selected_at_F1.r113 or Selected_at_F1.r116">IT Cosmetics - Your Skin But Better Foundation + Skincare</row>
+    <row label="r8" autofill="Selected_at_F1.r10 or Selected_at_F1.r22 or Selected_at_F1.r23 or Selected_at_F1.r36 or Selected_at_F1.r41 or Selected_at_F1.r71 or Selected_at_F1.r72 or Selected_at_F1.r89 or Selected_at_F1.r91 or Selected_at_F1.r126">CLINIQUE - Even Better Makeup Broad Spectrum SPF 15 Foundation</row>
+    <row label="r9" autofill="Selected_at_F1.r11 or Selected_at_F1.r13 or Selected_at_F1.r26 or Selected_at_F1.r29 or Selected_at_F1.r30 or Selected_at_F1.r33 or Selected_at_F1.r97 or Selected_at_F1.r101 or Selected_at_F1.r104 or Selected_at_F1.r114">NARS - Natural Radiant Longwear Foundation</row>
+    <row label="r10" autofill="Selected_at_F1.r12 or Selected_at_F1.r45 or Selected_at_F1.r49 or Selected_at_F1.r50 or Selected_at_F1.r52 or Selected_at_F1.r60 or Selected_at_F1.r87 or Selected_at_F1.r105 or Selected_at_F1.r118 or Selected_at_F1.r122 ">Estée Lauder - Double Wear Stay-in-Place Foundation</row>
+    <row label="r11" autofill="Selected_at_F1.r17 or Selected_at_F1.r37 or Selected_at_F1.r42 or Selected_at_F1.r63 or Selected_at_F1.r90 or Selected_at_F1.r96 or Selected_at_F1.r98 or Selected_at_F1.r111 or Selected_at_F1.r120 or Selected_at_F1.r125">Neutrogena - Hydro Boost Hydrating Tint Foundation with Hyaluronic Acid</row>
+    <row label="r12" autofill="Selected_at_F1.r19 or Selected_at_F1.r39 or Selected_at_F1.r46 or Selected_at_F1.r81 or Selected_at_F1.r82 or Selected_at_F1.r85 or Selected_at_F1.r99 or Selected_at_F1.r109 or Selected_at_F1.r121 or Selected_at_F1.r129">Maybelline - Fit Me Dewy + Smooth Foundation</row>
+    <row label="r13" autofill="Selected_at_F1.r16 or Selected_at_F1.r18 or Selected_at_F1.r25 or Selected_at_F1.r31 or Selected_at_F1.r40 or Selected_at_F1.r64 or Selected_at_F1.r77 or Selected_at_F1.r100 or Selected_at_F1.r110 or Selected_at_F1.r124 ">CLINIQUE - Even Better Clinical™ Serum Foundation Broad Spectrum SPF 25</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="F1_Item_Found"
+   onLoad="copy('F1', rows=True)"
+   randomize="0">
+    <title>Product Found</title>
+    <virtual>
+for r in F1.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      data.val = r.index
+    </virtual>
+
+  </radio>
+
+  <radio 
+   label="vFindCorrect"
+   randomize="0"
+   where="execute,survey,report">
+    <title><b>Correct Product Found?</b></title>
+    <exec>
+if ((hidlist_rotationQ.r9 and F1.r1.c1) or (hidlist_rotationQ.r10 and F1.r2.c1) or (hidlist_rotationQ.r1 and F1.r3.c1) or (hidlist_rotationQ.r3 and F1.r4.c1) or (hidlist_rotationQ.r8 and F1.r4.c1) or (hidlist_rotationQ.r5 and F1.r7.c1) or (hidlist_rotationQ.r6 and F1.r7.c1) or (hidlist_rotationQ.r2 and F1.r9.c1) or (hidlist_rotationQ.r4 and F1.r9.c1) or (hidlist_rotationQ.r7 and F1.r12.c1)):  vFindCorrect.val = 0
+else:				    vFindCorrect.val = 1
+    </exec>
+
+    <row label="r1">Correct</row>
+    <row label="r2">Incorrect</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="CorrectlyFound" randomize="0" where="execute,survey,report">
+    <title>Correctly Found - Was the Respondent a TestBrand User (based off of Usage)</title>
+    <row label="r1" autofill="vFindCorrect.r1 and S_Brand_PastPurchased1.r1">Correct - TestBrand User</row>
+    <row label="r2" autofill="vFindCorrect.r1 and not(S_Brand_PastPurchased1.r1)">Correct - TestBrand Non-User</row>
+    <row label="r3" autofill="vFindCorrect.r2 and S_Brand_PastPurchased1.r1">Incorrect - TestBrand User</row>
+    <row label="r4" autofill="vFindCorrect.r2 and not(S_Brand_PastPurchased1.r1)">Incorrect - TestBrand Non-User</row>
+  </autofill>
+
+  <suspend/>
+
+  <note>Findability Question Bank: Differentiation, FamilyFit are OPTIONAL</note>
+  <block label="DoNotModifyDataBase" builder:title="Do Not Modify - for DataBaseCollection">
+    <float 
+    label="vFindTimeSeconds"
+    randomize="0"
+    size="10"
+    where="execute,survey,report">
+      <title>Find Time (in seconds)</title>
+      <exec>
+vFindTimeSeconds.val = F1_DQ_hidden.val  
+results=vFindTimeSeconds.val
+print results
+      </exec>
+
+    </float>
+
+    <suspend/>
+
+    <radio 
+    label="EaseOfFind"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How easy or difficult was it to find this product?</title>
+      <comment><img src="[rel ${pipe.a3efimage}.jpg]" title="" height="500" alt="" constrain="true" class="jloupeme" /></comment>
+      <net labels="r1,r2">T2B</net>
+      <net labels="r4,r5">B2B</net>
+      <row label="r1">Very easy to find</row>
+      <row label="r2">Somewhat easy to find</row>
+      <row label="r3">Neither easy nor difficult to find</row>
+      <row label="r4">Somewhat difficult to find</row>
+      <row label="r5">Very difficult to find</row>
+    </radio>
+
+    <suspend/>
+
+    <note>DO NOT MODIFY: EaseOfFind - Filtered by Correctly Located</note>
+    <radio 
+    label="vEaseOfFind"
+    cond="vFindCorrect.r1"
+    randomize="0"
+    where="execute,survey,report">
+      <title>DO NOT MODIFY: EaseOfFind - Filtered by Correctly Located How easy or difficult do you think it was to find this product?</title>
+      <exec>
+vEaseOfFind.val=EaseOfFind.val
+      </exec>
+
+      <net labels="r1,r2">T2B</net>
+      <net labels="r4,r5">B2B</net>
+      <row label="r1">Very easy to find</row>
+      <row label="r2">Somewhat easy to find</row>
+      <row label="r3">Neither easy nor difficult to find</row>
+      <row label="r4">Somewhat difficult to find</row>
+      <row label="r5">Very difficult to find</row>
+    </radio>
+
+    <suspend/>
+
+    <block label="F_HighlightBlock" cond="vFindCorrect.r1" builder:title="F_Highlight_ImageMap">
+      <loop label="F_Highlight_Loop" vars="image">
+        <title>Findability- Heatmap</title>
+        <block label="F_Highlight_Block" builder:title="F_Highlight Heatmap Block">
+          <textarea 
+       label="F_Highlight_[loopvar: label]"
+       imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+       optional="0"
+       sst="0"
+       uses="imgmap.2020">
+            <title>When finding <b>[pipe: Finda]</b>, which <b>one</b> part of the packaging was most useful in helping you find what you were looking for?</title>
+            <comment>Using your mouse, highlight the <b>single part</b> of the packaging that was most useful.<br /><img src="/survey/selfserve/1da7/220614/clickNdragcrop.gif" alt="" width="200px" /></comment>
+            <col label="c1" imgmap:color="#32CD32">most useful</col>
+          </textarea>
+
+          <suspend/>
+        </block>
+
+        <looprow label="1" cond="Phase.r1">
+          <loopvar name="image">A3a.jpg</loopvar>
+        </looprow>
+
+        <looprow label="2" cond="Phase.r2">
+          <loopvar name="image">A3b.jpg</loopvar>
+        </looprow>
+
+        <looprow label="3" cond="Phase.r3">
+          <loopvar name="image">A3c.jpg</loopvar>
+        </looprow>
+      </loop>
+    </block>
+  </block>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<html label="likes_dislikes_intro" where="survey">You are now going to see the picture of a pack. On that picture, you will be asked to highlight the areas you <u>like</u> most about the pack, if there are any.<br /><br />Then on that same picture, you will be asked to highlight the areas you <u>dislike</u> about the pack, if any.</html>
+
+<suspend/>
+
+<block label="Attitudinal2" builder:title="Attitudinal_Competitor">
+  <block label="Likes_Dislikes" builder:title="Likes_Dislikes_ImageMap">
+    <loop label="ES_Loop" vars="image">
+      <title>Emotion- Heatmap</title>
+      <block label="ES_Block" builder:title="Heatmap Block">
+        <textarea 
+      label="Q_Likes_[loopvar: label]"
+      imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+      optional="1"
+      sst="0"
+      uses="imgmap.2020">
+          <title>Using your mouse, please highlight the items/aspects of the packaging you like <u>most</u> (if any).<br /> If there's nothing that you specifically like, please click "I don’t <u>like</u> any of it" at the bottom of the page.<br /><img src="/survey/selfserve/1da7/191272/clickNdrag.gif" alt="" width="200px" /></title>
+          <validate>
+if Q_Likes_[loopvar: label].c1.val != "" and Q_LikesNone_[loopvar: label].r1:      		error(res.MapError)
+if Q_Likes_[loopvar: label].c1.val == "" and not(Q_LikesNone_[loopvar: label].r1):      error(res.MapError2)
+          </validate>
+
+          <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+        </textarea>
+
+        <checkbox 
+      label="Q_LikesNone_[loopvar: label]"
+      atleast="0"
+      atm1d:showInput="0"
+      atm1d:viewMode="tiled"
+      optional="1"
+      randomize="0"
+      uses="atm1d.9">
+          <title>&amp;nbsp;</title>
+          <validate>
+if Q_Likes_[loopvar: label].c1.val != "" and Q_LikesNone_[loopvar: label].r1:      		error(res.MapError)
+if Q_Likes_[loopvar: label].c1.val == "" and not(Q_LikesNone_[loopvar: label].r1):      error(res.MapError2)
+          </validate>
+
+          <row label="r1">I don’t like any of it</row>
+        </checkbox>
+
+        <suspend/>
+
+        <textarea 
+      label="OE_Likes_[loopvar: label]"
+      cond="Q_Likes_[loopvar: label].c1"
+      height="5"
+      optional="0"
+      randomize="0"
+      width="80">
+          <title>Why do you like this part of the package?</title>
+          <comment>Please be as detailed and thorough as possible.</comment>
+        </textarea>
+
+        <suspend/>
+
+        <textarea 
+      label="Q_Dislikes_[loopvar: label]"
+      imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+      optional="1"
+      sst="0"
+      uses="imgmap.2020">
+          <title>Using your mouse, please highlight the items/aspects of the packaging you like the <u>least</u>.<br /> If there's nothing that you specifically dislike, please click "I don’t <u>dislike</u> any of it" at the bottom of the page.<br />
+        <img src="[rel clickNdrag.gif]" alt="" width="200px" /></title>
+          <validate>
+if Q_Dislikes_[loopvar: label].c1.val != "" and Q_DislikesNone_[loopvar: label].r1:      	error(res.MapError)
+if Q_Dislikes_[loopvar: label].c1.val == "" and not(Q_DislikesNone_[loopvar: label].r1):    error(res.MapError2)
+          </validate>
+
+          <col label="c1" imgmap:color="#ED1C24" optional="1">Dislike</col>
+        </textarea>
+
+        <checkbox 
+      label="Q_DislikesNone_[loopvar: label]"
+      atleast="0"
+      atm1d:showInput="0"
+      atm1d:viewMode="tiled"
+      optional="1"
+      randomize="0"
+      uses="atm1d.9">
+          <title>&amp;nbsp;</title>
+          <validate>
+if Q_Dislikes_[loopvar: label].c1.val != "" and Q_DislikesNone_[loopvar: label].r1:      	error(res.MapError)
+if Q_Dislikes_[loopvar: label].c1.val == "" and not(Q_DislikesNone_[loopvar: label].r1):    error(res.MapError2)
+          </validate>
+
+          <row label="r1">I don’t dislike any of it</row>
+        </checkbox>
+
+        <suspend/>
+
+        <textarea 
+      label="OE_DisLikes_[loopvar: label]"
+      cond="Q_Dislikes_[loopvar: label].c1"
+      height="5"
+      optional="0"
+      randomize="0"
+      width="80">
+          <title>Why do you dislike this part of the package?</title>
+          <comment>Please be as detailed and thorough as possible.</comment>
+        </textarea>
+
+        <suspend/>
+      </block>
+
+      <looprow label="1" cond="Phase.r1">
+        <loopvar name="image">A3a.jpg</loopvar>
+      </looprow>
+
+      <looprow label="2" cond="Phase.r2">
+        <loopvar name="image">A3b.jpg</loopvar>
+      </looprow>
+
+      <looprow label="3" cond="Phase.r3">
+        <loopvar name="image">A3c.jpg</loopvar>
+      </looprow>
+    </loop>
+  </block>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<html label="Class_Intro" where="survey"><strong><em>Now, just a few questions for classification purposes…</em></strong></html>
+
+<suspend/>
+
+<select 
+  label="S_State"
+  randomize="0">
+  <title>Please select the US state in which you currently live.</title>
+  <choice label="AL">Alabama</choice>
+  <choice label="AK">Alaska</choice>
+  <choice label="AZ">Arizona</choice>
+  <choice label="AR">Arkansas</choice>
+  <choice label="CA">California</choice>
+  <choice label="CO">Colorado</choice>
+  <choice label="CT">Connecticut</choice>
+  <choice label="DE">Delaware</choice>
+  <choice label="DC">District of Columbia</choice>
+  <choice label="FL">Florida</choice>
+  <choice label="GA">Georgia</choice>
+  <choice label="HI">Hawaii</choice>
+  <choice label="ID">Idaho</choice>
+  <choice label="IL">Illinois</choice>
+  <choice label="IN">Indiana</choice>
+  <choice label="IA">Iowa</choice>
+  <choice label="KS">Kansas</choice>
+  <choice label="KY">Kentucky</choice>
+  <choice label="LA">Louisiana</choice>
+  <choice label="ME">Maine</choice>
+  <choice label="MD">Maryland</choice>
+  <choice label="MA">Massachusetts</choice>
+  <choice label="MI">Michigan</choice>
+  <choice label="MN">Minnesota</choice>
+  <choice label="MS">Mississippi</choice>
+  <choice label="MO">Missouri</choice>
+  <choice label="MT">Montana</choice>
+  <choice label="NE">Nebraska</choice>
+  <choice label="NV">Nevada</choice>
+  <choice label="NH">New Hampshire</choice>
+  <choice label="NJ">New Jersey</choice>
+  <choice label="NM">New Mexico</choice>
+  <choice label="NY">New York</choice>
+  <choice label="NC">North Carolina</choice>
+  <choice label="ND">North Dakota</choice>
+  <choice label="OH">Ohio</choice>
+  <choice label="OK">Oklahoma</choice>
+  <choice label="OR">Oregon</choice>
+  <choice label="PA">Pennsylvania</choice>
+  <choice label="RI">Rhode Island</choice>
+  <choice label="SC">South Carolina</choice>
+  <choice label="SD">South Dakota</choice>
+  <choice label="TN">Tennessee</choice>
+  <choice label="TX">Texas</choice>
+  <choice label="UT">Utah</choice>
+  <choice label="VT">Vermont</choice>
+  <choice label="VA">Virginia</choice>
+  <choice label="WA">Washington</choice>
+  <choice label="WV">West Virginia</choice>
+  <choice label="WI">Wisconsin</choice>
+  <choice label="WY">Wyoming</choice>
+</select>
+
+<select 
+  label="C_Employment"
+  randomize="0">
+  <title>Which of the following best describes your current employment status?</title>
+  <choice label="ch1">Working full-time</choice>
+  <choice label="ch2">Working part-time</choice>
+  <choice label="ch3">Looking for work, temporarily unemployed</choice>
+  <choice label="ch4">Full-time student</choice>
+  <choice label="ch5">Full-time homemaker</choice>
+  <choice label="ch6">Retired</choice>
+  <choice label="ch7">Not employed</choice>
+  <choice label="ch8">I prefer not to answer</choice>
+</select>
+
+<select 
+  label="STANDARD_RELATIONSHIP"
+  randomize="0">
+  <title>What is your relationship status?</title>
+  <choice label="ch1">Single, never married</choice>
+  <choice label="ch2">Married</choice>
+  <choice label="ch3">Separated, divorced, or widowed</choice>
+  <choice label="ch4">Domestic partnership/living with someone</choice>
+  <choice label="ch5">Prefer not to answer</choice>
+</select>
+
+<select 
+  label="STANDARD_EDUCATION"
+  randomize="0">
+  <title>What is the highest level of education you have completed?</title>
+  <choice label="ch1">3rd Grade or less</choice>
+  <choice label="ch2">Middle School - Grades 4 - 8</choice>
+  <choice label="ch3">Completed some high school</choice>
+  <choice label="ch4">High school graduate</choice>
+  <choice label="ch5">Other post high school vocational training</choice>
+  <choice label="ch6">Completed some college, but no degree</choice>
+  <choice label="ch7">Associate Degree</choice>
+  <choice label="ch8">College Degree (such as B.A., B.S.)</choice>
+  <choice label="ch9">Completed some graduate, but no degree</choice>
+  <choice label="ch10">Masters degree</choice>
+  <choice label="ch11">Doctorate degree</choice>
+  <choice label="ch12">None of the Above</choice>
+</select>
+
+<select 
+  label="STANDARD_INCOME"
+  randomize="0">
+  <title>Please select the range that best represents your total annual household income.</title>
+  <choice label="ch1">Less than $15 000</choice>
+  <choice label="ch2">$15 000 to $19 999</choice>
+  <choice label="ch3">$20 000 to $24 999</choice>
+  <choice label="ch4">$25 000 to $29 999</choice>
+  <choice label="ch5">$30 000 to $34 999</choice>
+  <choice label="ch6">$35 000 to $39 999</choice>
+  <choice label="ch7">$40 000 to $44 999</choice>
+  <choice label="ch8">$45 000 to $49 999</choice>
+  <choice label="ch9">$50 000 to $59 999</choice>
+  <choice label="ch10">$60 000 to $74 999</choice>
+  <choice label="ch11">$75 000 to $84 999</choice>
+  <choice label="ch12">$85 000 to $99 999</choice>
+  <choice label="ch13">$100 000 to $124 999</choice>
+  <choice label="ch14">$125 000 to $149 999</choice>
+  <choice label="ch15">$150 000 to $174 999</choice>
+  <choice label="ch16">$175 000 to $199 999</choice>
+  <choice label="ch17">$200,000 or more</choice>
+  <choice label="ch18">Prefer not to answer</choice>
+</select>
+
+<suspend/>
+
+<radio 
+  label="S_Ethnicity"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Are you of Hispanic, Latino or Spanish origin?</title>
+  <comment>Select one response.</comment>
+  <row label="r1">No, not of Hispanic, Latino, or Spanish origin</row>
+  <row label="r2">Yes, Hispanic, Latino, or Spanish origin</row>
+  <row label="r3">Prefer not to answer</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="S_Race"
+  atleast="1"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>What is your race?</title>
+  <comment>Please note, Hispanic origin is not a race, and was asked in a separate question.<br />
+  Some questions can be sensitive in nature. We would like to remind you that your participation is strictly voluntary and that your responses are used for research purposes only.
+  A “Prefer not to answer” option is available for you to select if that is the case.</comment>
+  <row label="r1">White/Caucasian</row>
+  <row label="r2">Black/African American</row>
+  <row label="r3">American Indian/Alaska Native</row>
+  <row label="r4">Asian</row>
+  <row label="r5">Native Hawaiian/Pacific Islander</row>
+  <row label="r6" open="1" openSize="25" randomize="0">Other (Please Specify)</row>
+  <row label="r7">Biracial (a mix of more than one race)</row>
+  <row label="r8" exclusive="1">Prefer not to answer</row>
+</checkbox>
+
+<suspend/>
+
+<block label="Survey_Experience_Questions" cond="0" builder:title="Survey_Experience_Questions">
+  <radio 
+   label="Q_OverallSurveyExperience"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Now, please tell me which of the following best describes your overall experience taking this survey?</title>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Very Positive</row>
+    <row label="r2" value="4">Somewhat Positive</row>
+    <row label="r3" value="3">Neither Positive Nor Negative</row>
+    <row label="r4" value="2">Somewhat Negative</row>
+    <row label="r5" value="1">Very Negative</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="Text1" where="execute,survey,report">
+    <title>text 3</title>
+    <row label="r1" autofill="Q_OverallSurveyExperience.r1 or Q_OverallSurveyExperience.r2 ">did you <b>like</b></row>
+    <row label="r2" autofill="Q_OverallSurveyExperience.r3">made you feel neither positive nor negative</row>
+    <row label="r3" autofill="Q_OverallSurveyExperience.r4 or Q_OverallSurveyExperience.r5">did you <b>not like</b></row>
+  </autofill>
+
+  <autofill label="Use" where="execute,survey,report">
+    <title>text 3</title>
+    <row label="r1" autofill="Q_OverallSurveyExperience.r1 or Q_OverallSurveyExperience.r2 ">Easy to use</row>
+    <row label="r2" autofill="Q_OverallSurveyExperience.r3">Using the</row>
+    <row label="r3" autofill="Q_OverallSurveyExperience.r4 or Q_OverallSurveyExperience.r5">Hard to use</row>
+  </autofill>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_SurveyExperience_followup"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>What makes you say that you had a <strong>[pipe: Q_OverallSurveyExperience lower]</strong> experience?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1" cond="(Q_OverallSurveyExperience.r3 or Q_OverallSurveyExperience.r4 or Q_OverallSurveyExperience.r5)">Being asked the eye-tracking test privacy policy agreement (RealEye)</row>
+    <row label="r2">The shopping from shelf experience</row>
+    <row label="r3">The questions asked on specific packages/ products</row>
+    <row label="r4">The length of the survey</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_SurveyExperience_followup2"
+   cond="Q_SurveyExperience_followup.r2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following  <strong>[pipe: Text1 lower]</strong> about the shopping from shelf experience?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1">[pipe: Use] the controls when shopping</row>
+    <row label="r2">The “look” of the shelf set</row>
+    <row label="r3">The selection offered at the shelf set</row>
+    <row label="r4">The length of the shelf set/aisle</row>
+  </checkbox>
+
+  <suspend/>
+</block>
+
+<html label="class_Intro" cond="0" where="survey">Thank you for your time and cooperation!</html>
+
+<suspend/>
+
+<html label="Exit_Intro" cond="0" where="survey"><strong>Thank you for this information!<br /><br />
+Thank you for participation! You have been determined eligible for the online discussion mentioned earlier. If selected, we will contact you within 1 week, at which point you will receive details regarding when the discussion will take place.
+</strong></html>
+
+<suspend/>
+</survey>

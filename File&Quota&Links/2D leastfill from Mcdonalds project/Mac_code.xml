@@ -1,0 +1,3550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="J2100599_FF5_ McD Food Trends_W2"
+  atm1d:showInput="0"
+  autosaveKey="UID,ID"
+  browserDupes="strict"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="141"
+  delphi="1"
+  extraVariables="source,record,decLang,list,userAgent,ipAddress,table"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  persistentExit="1"
+  remerged="20211101_18:36"
+  secure="1"
+  setup="term,decLang,quota,time"
+  spssSimpleCheckbox="1"
+  ss:customCSS="lightbox"
+  ss:customJS="lightbox"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="0"
+  ss:listDisplay="1"
+  state="testing"
+  theme="frozen:user/2130/victoria-555"
+  version="4">
+
+<res label="startbtn">START</res>
+<res label="continuebtn">NEXT</res>
+<res label="Errpostcode">Please enter a valid postcode.</res>
+<res label="errVFC1">You’ve entered a wrong numbers or alphabets. Please enter the correct number or alphabet again. You can try 2 more times.</res>
+<res label="errVFC2">You’ve entered a wrong numbers or alphabets. Please enter the correct number or alphabet again. You can try 1 more time.</res>
+<res label="errDedupeinOrder">Please fill in the answers in order, and fill in different answers.</res>
+<res label="errS7">Please review your response. You mentioned you have ${S7.val} child(ren) living at your household.</res>
+<samplesources>
+  <samplesource disableBrowserDupes="1" list="1">
+    <title>Testing with unique link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>
+
+  <samplesource disableBrowserDupes="1" list="2">
+    <title>Testing with generic link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>
+
+  <samplesource list="21">
+    <title>TEG</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <var name="PID"/>
+    <var name="PP" values="9,1078,3,74,19,20,99,1115,1123,1134,1124,1125,1119,56,10,1113,1137,1139,1140,1141,1136,70,61,1,21,22,1104,1138,8,2,18,1143,1084,1077,14,11,1130,1133,13,73,1132,16,30,4,5,1083,1131"/>
+    <exit cond="terminated and (QC2.r2 or checkQC.r2 or checkQC.r3 or checkQC.r5 or checkQC.r6 or S11.count ge 7)" timeout="3" url="https://octopus.purkle.com/Entry/completemessage.aspx?str=7350553549434771306431455350574C34556C7A76673D3D&amp;RewardType=LQC&amp;userId=${UID}">Thank you for your participation.<br />This survey contained questions that help ensure the accuracy and reliability of research results. In this instance it looks like these questions were not answered consistently or as instructed.<br />We encourage you to take your time, read questions carefully, and provide consistent answers to earn the full reward. For this survey you are still awarded for your contribution.</exit>
+    <exit cond="terminated and (checkQC.r4)" timeout="3" url="https://octopus.purkle.com/Entry/completemessage.aspx?str=6D5A6777736C636479557A72676935356E705A4531413D3D&amp;RewardType=F&amp;userId=${UID}"><p style="font-size:18px;"><i>Whoa, that was a little too fast!<br /><br />You've completed the survey in less than XXXX minutes when it should take at least xxx minutes.<br /><br />We were expecting you to take your time and read each question carefully. For this, survey we can only give you the minimum reward</i></p></exit>
+    <exit cond="terminated" timeout="3" url="https://octopus.purkle.com/Entry/completemessage.aspx?str=4E4A65794D4934674D466B763176786C32794B7549673D3D&amp;RewardType=S&amp;userId=${UID}"><p style="font-size:18px;"><i>Thank you for taking the time to participate in our online survey.<br /><br />Unfortunately, you did not qualify for this research but will still receive the screening reward for your participation.<br /><br />We look forward to contacting you in the near future with our surveys and special offers.</i></p></exit>
+    <exit cond="qualified" timeout="3" url="https://octopus.purkle.com/Entry/completemessage.aspx?str=4B37743330626F305679756F67497945506E47564A673D3D&amp;RewardType=C&amp;userId=${UID}"><p style="font-size:18px;"><i>Thank you for taking the time to participate in our online survey.<br /><br />We look forward to contacting you again with our surveys and special offers.</i></p></exit>
+    <exit cond="overquota" timeout="3" url="https://octopus.purkle.com/Entry/completemessage.aspx?str=466358466D33704658504E3559586A596853474E41413D3D&amp;RewardType=Q&amp;userId=${UID}"><p style="font-size:18px;"><i>Thank you for taking the time to participate in our online survey.<br /><br />Unfortunately, you did not qualify for this research but will still receive the screening reward for your participation.<br /><br />We look forward to contacting you in the near future with our surveys and special offers.</i></p></exit>
+  </samplesource>
+
+  <samplesource keyring="sys/rn" list="22" sign="out,in">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and ((QC2.r2) or (samplingHouse.r6 and QHP.val not in ['',None]) or (checkQC.r2 or checkQC.r3 or checkQC.r4 or checkQC.r5 or checkQC.r6) or (S11.count ge 7) or (str(VFC1.val)=='Verificationfailed'))" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;qflag=73&amp;psid=${UID}">Thank you for taking our survey.</exit>
+    <exit cond="terminated" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;psid=${UID}">Thank you for taking our survey.</exit>
+    <exit cond="qualified" url="https://dkr1.ssisurveys.com/projects/end?rst=1&amp;psid=${UID}&amp;basic=16786">That's the end of our survey.  Thanks again for your time<br /><br /><b>Please close down your window to exit the survey.</b></exit>
+    <exit cond="overquota" url="https://dkr1.ssisurveys.com/projects/end?rst=3&amp;psid=${UID}">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="23">
+    <title>Theoru</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated and (QC2.r2)" url="https://wraparound.theoru.com.au/Results.aspx?JOB=4146a&amp;ST=2&amp;PXY2=geli"/>
+    <exit cond="terminated and (checkQC.r2 or checkQC.r3 or checkQC.r4 or checkQC.r5 or checkQC.r6 or S11.count ge 7)" url="https://wraparound.theoru.com.au/Results.aspx?JOB=4146a&amp;ST=2&amp;PXY2=geli"/>
+    <exit cond="terminated" url="https://wraparound.theoru.com.au/Results.aspx?JOB=4146a&amp;ST=1643&amp;PXY2=geli"/>
+    <exit cond="qualified" url="https://wraparound.theoru.com.au/Results.aspx?JOB=4146a&amp;ST=1643&amp;PXY2=geli"/>
+    <exit cond="overquota" url="https://wraparound.theoru.com.au/Results.aspx?JOB=4146a&amp;ST=3&amp;PXY2=geli"/>
+  </samplesource>
+
+  <samplesource list="24">
+    <title>Kantar-LSR</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <var name="table" required="1"/>
+    <exit cond="terminated and (QC2.r2)" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${table}"/>
+    <exit cond="terminated and (checkQC.r2 or checkQC.r3 or checkQC.r4 or checkQC.r5 or checkQC.r6 or S11.count ge 7)" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${table}"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/Finished?ProjectToken=${table}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${table}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${table}"/>
+  </samplesource>
+
+  <samplesource list="25">
+    <title>Ekas</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated" url="https://www.medicalopinionleaders.com.au/wix/p264051309374.aspx?stat=screened&amp;__userid=${UID}"/>
+    <exit cond="overquota" url="https://www.medicalopinionleaders.com.au/wix/p264051309374.aspx?stat=quotafull&amp;__userid=${UID}"/>
+    <exit cond="qualified" url="https://www.medicalopinionleaders.com.au/wix/p264051309374.aspx?stat=complete&amp;__userid=${UID}"/>
+  </samplesource>
+
+  <samplesource list="26">
+    <title>Redchilli</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated" url="http://www.redchilli.cn/index.php/App/My/getRst?rst=2&amp;psid=${UID}">Thanks for your participation. Please close the browser.</exit>
+    <exit cond="qualified" url="http://www.redchilli.cn/index.php/App/My/getRst?rst=1&amp;psid=${UID}">Thanks for your participation. If you don't receive the rewards, please contact REDCHILLI001.</exit>
+    <exit cond="overquota" url="http://www.redchilli.cn/index.php/App/My/getRst?rst=3&amp;psid=${UID}">Thanks for your participation. Please close the browser.</exit>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Client sample - unique link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>
+
+  <samplesource list="12">
+    <title>Client sample - generic link</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>
+
+  <samplesource list="41">
+    <title>Country 1</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="UID" unique="1"/>
+    <exit cond="terminated">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<style label="disable_continue" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ ('.sq-cardsort-next').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').on("drop",function(e) {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+function cardSortNext() {
+  if ($ ('.sq-cardsort-completion').is(':visible')) {
+    $ ("#btn_continue").click();
+  }
+}
+]]></style>
+<style label="disableChromeautoComplete" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ (function() {
+  $ (window).on("load",function(){
+    $ ("input[type='text']").each(function(){
+      var inputC = '<input type="text" style="display:none;" autocomplete="new-password">'
+      $ (this).before(inputC)
+      $ (this).attr("autocomplete","off")
+    })
+  })
+});
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>
+<style type="text/css">
+.InfoClass {
+	text-align:center;
+	font-weight:bold;
+	font-size:3.4em;
+	text-decoration: underline;
+	text-decoration-color: rgb(232, 147, 45);
+}
+.question {
+	border-bottom: 1px solid rgb(232, 147, 45);
+	padding-bottom: 10px;
+
+}
+
+.instruction-text {
+	font-style:italic;
+	padding-left: 10px;
+}
+.strtbtn {
+  border: 10px double rgb(232, 147, 45);
+  border-radius: 50%;
+  font-size:25px;
+  font-weight:bold;
+  background: #F2F2F2;
+  color: rgb(232, 147, 45);
+  width:120px;
+  height:120px;
+  padding:5px;
+  position:relative;
+}
+.strtbtn:hover, .strtbtn:focus {
+  border: 10px double #F2F2F2;
+  background: #000;
+}
+
+.wrap {
+  text-align: center;
+  position: relative;
+}
+.wrap:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid rgb(232, 147, 45);
+  width: 100%;
+  transform: translateY(-50%);
+}  
+
+.sq-atm1d .sq-atm1d-button{
+	font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-tiled .sq-atm1d-td{
+ text-align:left;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    margin: 1px 3px;
+}
+.sq-atm1d-button.sq-atm1d-open  {			
+    min-height: 30px ;
+    max-height: 100px ;
+}
+.sq-atm1d-open .sq-atm1d-openEnd {
+    display: inline-block;
+    margin: 0 !important;
+    min-width: 80px ;
+    max-width: 120px ;
+}
+.survey-error {
+	background: #f2f2f2;
+	color:#ba0000;
+	border: 1px solid #ba0000;
+}
+
+.sq-atm1d-openEnd .text {
+    position: relative;
+    top: 50%;
+    transform: translateY(0%);
+}
+
+.sq-cardrate-card .sq-cardrate-content {
+	text-shadow:none;
+}
+.sq-cardrate-navset .sq-cardrate-clickable, .sq-cardrate-navset .sq-cardrate-disabled .sq-cardrate-clickable {
+	display:none;
+}
+.sq-cardrate-bucketset .sq-cardrate-hovered, .sq-cardrate-bucketset .sq-cardrate-selected {
+	background: rgb(232, 147, 45);
+}
+.survey-body, .page-header, .footer, .sq-atm1d-widget {
+	max-width: 1000px;
+}
+.answers, .fir-select2-dropdown {
+	font-size:1.2rem;
+}
+
+img {
+  max-width: 100% ;
+  height: auto ;
+}
+.sq-cardsort-card-item{
+	width:600px !important;
+}
+.sq-cardsort-bucket {
+	overflow:hidden;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket.sq-cardsort-state-hovered{
+	background-color:#e8932d;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+	font-size:1.1em;
+}
+.sq-atm1d-open .sq-atm1d-openEnd {
+    margin: 18px 0 0;
+}
+
+\@if device.desktop
+.sq-atm1d-vertical .sq-atm1d-button {			
+    max-height: 44px ;
+    min-width: 100px ;
+}
+.sq-atm1d-tiled .sq-atm1d-button{
+    width:auto;
+    min-width:100px;
+    max-width:800px;
+    height:auto;
+    min-height:44px;
+    max-height:800px;
+}
+\@endif
+
+
+\@if not device.desktop
+.question-text {
+    font-size: 1.1rem;
+}  
+.instruction-text {
+    font-size: 0.7rem;
+}
+.comment-text {
+    font-size: 1.1rem;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:0.9rem;  
+}
+.answers {
+    font-size: 1.1rem;
+}
+.grid-table-mode .legend {
+    font-size: 1.1rem;
+}
+.grid-table-mode .legend {
+    font-size: 1.1rem;
+}
+.sq-cardsort-card .sq-cardsort-card-item {
+    font-size: 1.1rem;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+    font-size: 0.9rem;
+}
+.sq-cardsort-completion-item {
+    font-size: 1.1rem;
+}
+.question-error {
+    font-size: 1.1rem;
+}
+.exit-message-header {
+    font-size: 1.1rem;
+}
+.exit-message-text {
+    font-size: 1.1rem;
+}
+.sq-cardsort-bucket{
+    width:auto !important;
+    max-width:100% !important;
+}
+.sq-cardsort-card{
+    margin-top: 35px !important;
+}
+#survey .sq-cardsort-cards,#survey .sq-cardsort-card{
+    width:auto !important;
+    max-width:100% !important;
+}
+\@endif
+.cell-legend-above, .cell-legend-above .cell-sub-column {
+    display: inline-block;
+}
+
+  </style>
+]]></style>
+<style label="QNumstyle" arg:mlen="2" name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="$(name)" value="$(value)" maxLength="$(mlen)" size="$(size)" onkeypress="return isNumberKey(event)" style="height:40px; font-size:16px;border-radius:10px;text-align:center;" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+<script>
+function isNumberKey(evt)
+{
+       var charCode = (evt.which) ? evt.which : event.keyCode;
+       if (charCode > 31 && (charCode < 48 || charCode > 57)){
+	       if(charCode == 46){
+			return true;
+	       }
+               return false;
+       }
+       return true;
+}
+</script>
+]]></style>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if this.groups
+      \@if col.group and row.group
+        <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""} $(this.label)_$(col.group.label) 
+        $(this.label)_$(row.group.label)" class="element $(extraClasses) $(col.group.styles.ss.groupClassNames) 
+        $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>
+        </td>
+      \@else
+        \@if col.group
+          <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""} $(this.label)_$(col.group.label)"
+          class="element $(extraClasses) $(col.group.styles.ss.groupClassNames) $(col.styles.ss.colClassNames) 
+          $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>
+          </td>
+        \@else
+          \@if row.group
+            <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""} 
+            $(this.label)_$(row.group.label)" class="element $(extraClasses) $(row.group.styles.ss.groupClassNames)
+            $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>
+            </td>
+          \@else
+            <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""}" class="element 
+            $(extraClasses) $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  
+            $(extra)>
+            </td>
+          \@endif
+        \@endif
+      \@endif
+    \@else
+      <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""}" class="element $(extraClasses) 
+      $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>
+      </td>
+    \@endif
+]]></style>
+<style name="survey.respview.footer"><![CDATA[
+<div id="surveyFooter" class="survey-footer">
+      <div class="footer survey-footer-text">
+      </div>
+  </div>
+]]></style>
+<style name="button.continue" with="Info"><![CDATA[
+<div class="wrap">
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="${res.startbtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+</div>
+]]></style>
+<style name="button.continue"><![CDATA[
+<input type="submit" name="continue" id="btn_continue" class="button continue nextbtn" value="${res.continuebtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+]]></style>
+<style name="button.finish"><![CDATA[
+<div class="wrap">
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="SUBMIT" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+</div>
+]]></style>
+<suspend/>
+
+<exec>
+p.ACTM=[2600,2601,2602,2603,2604,2605,2606,2607,2609,2611,2612,2614,2615,2617,2900,2902,2903,2904,2905,2906,2911,2912,2913,2914]
+
+p.NSWM=[2000,2006,2007,2008,2009,2010,2011,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050,2052,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,2072,2073,2074,2075,2076,2077,2079,2080,2081,2082,2083,2084,2085,2086,2087,2088,2089,2090,2092,2093,2094,2095,2096,2097,2099,2100,2101,2102,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113,2114,2115,2116,2117,2118,2119,2120,2121,2122,2125,2126,2127,2128,2129,2130,2131,2132,2133,2134,2135,2136,2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147,2148,2150,2151,2152,2153,2154,2155,2156,2157,2158,2159,2160,2161,2162,2163,2164,2165,2166,2167,2168,2170,2171,2172,2173,2174,2175,2176,2177,2178,2179,2190,2191,2192,2193,2194,2195,2196,2197,2198,2199,2200,2203,2204,2205,2206,2207,2208,2209,2210,2211,2212,2213,2214,2216,2217,2218,2219,2220,2221,2222,2223,2224,2225,2226,2227,2228,2229,2230,2231,2232,2233,2234,2250,2251,2256,2257,2258,2259,2260,2261,2262,2263,2555,2556,2557,2558,2559,2560,2563,2564,2565,2566,2567,2568,2569,2570,2571,2572,2573,2574,2745,2747,2748,2749,2750,2752,2753,2754,2755,2756,2757,2758,2759,2760,2761,2762,2763,2765,2766,2767,2768,2769,2770,2773,2774,2775,2776,2777,2778,2779,2780,2782,2783,2784,2785,2786]
+
+p.NSWR=[2264,2265,2267,2278,2280,2281,2282,2283,2284,2285,2286,2287,2289,2290,2291,2292,2293,2294,2295,2296,2297,2298,2299,2300,2302,2303,2304,2305,2306,2307,2308,2311,2312,2314,2315,2316,2317,2318,2319,2320,2321,2322,2323,2324,2325,2326,2327,2328,2329,2330,2331,2333,2334,2335,2336,2337,2338,2339,2340,2341,2342,2343,2344,2345,2346,2347,2350,2351,2352,2353,2354,2355,2356,2357,2358,2359,2360,2361,2365,2369,2370,2371,2372,2379,2380,2381,2382,2386,2387,2388,2390,2395,2396,2397,2398,2399,2400,2401,2402,2403,2404,2405,2406,2408,2409,2410,2411,2415,2420,2421,2422,2423,2424,2425,2426,2427,2428,2429,2430,2431,2439,2440,2441,2443,2444,2445,2446,2447,2448,2449,2450,2452,2453,2454,2455,2456,2460,2462,2463,2464,2465,2466,2469,2470,2471,2472,2473,2474,2475,2476,2477,2478,2479,2480,2481,2482,2483,2484,2485,2486,2487,2488,2489,2490,2500,2502,2505,2506,2508,2515,2516,2517,2518,2519,2522,2525,2526,2527,2528,2529,2530,2533,2534,2535,2536,2537,2538,2539,2540,2541,2545,2546,2548,2549,2550,2551,2575,2576,2577,2578,2579,2580,2581,2582,2583,2584,2585,2586,2587,2588,2590,2594,2618,2619,2620,2621,2622,2623,2625,2626,2627,2628,2629,2630,2631,2632,2633,2640,2641,2642,2643,2644,2645,2646,2647,2648,2649,2650,2651,2652,2653,2655,2656,2658,2659,2660,2661,2663,2665,2666,2668,2669,2671,2672,2675,2678,2680,2681,2700,2701,2702,2703,2705,2706,2707,2710,2711,2712,2713,2714,2715,2716,2717,2720,2721,2722,2725,2726,2727,2729,2730,2731,2732,2733,2734,2735,2736,2737,2738,2739,2787,2790,2791,2792,2793,2794,2795,2797,2798,2799,2800,2803,2804,2805,2806,2807,2808,2809,2810,2817,2818,2820,2821,2822,2823,2824,2825,2826,2827,2828,2829,2830,2831,2832,2833,2834,2835,2836,2838,2839,2840,2842,2843,2844,2845,2846,2847,2848,2849,2850,2852,2864,2865,2866,2867,2868,2869,2870,2871,2873,2874,2875,2876,2877,2878,2879,2880,2898]
+
+p.VICM=[3000,3002,3003,3004,3005,3006,3008,3010,3011,3012,3013,3015,3016,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3036,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3063,3064,3065,3066,3067,3068,3070,3071,3072,3073,3074,3075,3076,3078,3079,3081,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093,3094,3095,3096,3097,3099,3101,3102,3103,3104,3105,3106,3107,3108,3109,3111,3113,3114,3115,3116,3121,3122,3123,3124,3125,3126,3127,3128,3129,3130,3131,3132,3133,3134,3135,3136,3137,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3151,3152,3153,3154,3155,3156,3158,3159,3160,3161,3162,3163,3165,3166,3167,3168,3169,3170,3171,3172,3173,3174,3175,3177,3178,3179,3180,3181,3182,3183,3184,3185,3186,3187,3188,3189,3190,3191,3192,3193,3194,3195,3196,3197,3198,3199,3200,3201,3202,3204,3205,3206,3207,3211,3335,3337,3338,3340,3427,3428,3429,3430,3431,3432,3433,3434,3435,3437,3438,3440,3441,3750,3751,3752,3753,3754,3755,3756,3757,3758,3759,3760,3761,3762,3763,3765,3766,3767,3770,3775,3777,3781,3782,3783,3785,3786,3787,3788,3789,3791,3792,3793,3795,3796,3797,3799,3800,3802,3803,3804,3805,3806,3807,3808,3809,3810,3812,3813,3814,3815,3910,3911,3912,3913,3915,3916,3918,3919,3920,3926,3927,3928,3929,3930,3931,3933,3934,3936,3937,3938,3939,3940,3941,3942,3943,3944,3975,3976,3977,3978,3980,3981]
+
+p.VICR=[3212,3213,3214,3215,3216,3217,3218,3219,3220,3221,3222,3223,3224,3225,3226,3227,3228,3230,3231,3232,3233,3234,3235,3236,3237,3238,3239,3240,3241,3242,3243,3249,3250,3251,3254,3260,3264,3265,3266,3267,3268,3269,3270,3271,3272,3273,3274,3275,3276,3277,3278,3279,3280,3281,3282,3283,3284,3285,3286,3287,3289,3292,3293,3294,3300,3301,3302,3303,3304,3305,3309,3310,3311,3312,3314,3315,3317,3318,3319,3321,3322,3323,3324,3325,3328,3329,3330,3331,3332,3333,3334,3341,3342,3345,3350,3351,3352,3355,3356,3357,3360,3361,3363,3364,3370,3371,3373,3374,3375,3377,3378,3379,3380,3381,3384,3385,3387,3388,3390,3391,3392,3393,3395,3396,3400,3401,3407,3409,3412,3413,3414,3415,3418,3419,3420,3423,3424,3442,3444,3446,3447,3448,3450,3451,3453,3458,3460,3461,3462,3463,3464,3465,3467,3468,3469,3472,3475,3477,3478,3480,3482,3483,3485,3487,3488,3489,3490,3491,3494,3496,3498,3500,3501,3505,3506,3507,3509,3512,3515,3516,3517,3518,3520,3521,3522,3523,3525,3527,3529,3530,3531,3533,3537,3540,3542,3544,3546,3549,3550,3551,3555,3556,3557,3558,3559,3561,3562,3563,3564,3565,3566,3567,3568,3570,3571,3572,3573,3575,3576,3579,3580,3581,3583,3584,3585,3586,3588,3589,3590,3591,3594,3595,3596,3597,3599,3607,3608,3610,3612,3614,3616,3617,3618,3620,3621,3622,3623,3624,3629,3630,3631,3633,3634,3635,3636,3637,3638,3639,3640,3641,3644,3646,3647,3649,3658,3659,3660,3662,3663,3664,3665,3666,3669,3670,3672,3673,3675,3677,3678,3682,3683,3685,3687,3688,3690,3691,3694,3695,3697,3698,3699,3700,3701,3704,3705,3707,3708,3709,3711,3712,3713,3714,3715,3717,3718,3719,3720,3722,3723,3725,3726,3727,3728,3730,3732,3733,3735,3737,3738,3739,3740,3741,3744,3746,3747,3749,3764,3778,3779,3816,3818,3820,3821,3822,3823,3824,3825,3831,3832,3833,3835,3840,3842,3844,3847,3850,3851,3852,3854,3856,3857,3858,3859,3860,3862,3864,3865,3869,3870,3871,3873,3874,3875,3878,3880,3882,3885,3886,3887,3888,3889,3890,3891,3892,3893,3895,3896,3898,3900,3902,3903,3904,3909,3921,3922,3923,3925,3945,3946,3950,3951,3953,3954,3956,3957,3958,3959,3960,3962,3964,3965,3966,3967,3971,3979,3984,3987,3988,3990,3991,3992,3995,3996]
+
+p.SAM=[5000,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024,5025,5031,5032,5033,5034,5035,5037,5038,5039,5040,5041,5042,5043,5044,5045,5046,5047,5048,5049,5050,5051,5052,5061,5062,5063,5064,5065,5066,5067,5068,5069,5070,5072,5073,5074,5075,5076,5081,5082,5083,5084,5085,5086,5087,5088,5089,5090,5091,5092,5093,5094,5095,5096,5097,5098,5106,5107,5108,5109,5110,5111,5112,5113,5114,5115,5116,5117,5118,5120,5121,5125,5126,5127,5131,5132,5133,5134,5136,5137,5138,5139,5140,5141,5142,5144,5150,5151,5152,5153,5154,5155,5156,5157,5158,5159,5160,5161,5162,5163,5164,5165,5166,5167,5168,5169,5170,5171,5172,5173,5174,5201,5231,5232,5233,5234,5240,5241,5242,5243,5244,5245,5250,5251,5252,5371,5501,5960]
+
+p.SAR=[5202,5203,5204,5210,5211,5212,5213,5214,5220,5221,5222,5223,5235,5236,5237,5238,5253,5254,5255,5256,5259,5260,5261,5262,5263,5264,5265,5266,5267,5268,5269,5270,5271,5272,5273,5275,5276,5277,5278,5279,5280,5290,5291,5301,5302,5303,5304,5306,5307,5308,5309,5310,5311,5320,5321,5322,5330,5331,5332,5333,5340,5341,5342,5343,5344,5345,5346,5350,5351,5352,5353,5354,5355,5356,5357,5360,5372,5373,5374,5381,5400,5401,5410,5411,5412,5413,5414,5415,5416,5417,5418,5419,5420,5421,5422,5431,5432,5433,5434,5440,5451,5452,5453,5454,5455,5460,5461,5462,5464,5470,5471,5472,5473,5480,5481,5482,5483,5485,5490,5491,5493,5495,5502,5510,5520,5521,5522,5523,5540,5550,5552,5554,5555,5556,5558,5560,5570,5571,5572,5573,5575,5576,5577,5580,5581,5582,5583,5600,5601,5602,5603,5604,5605,5606,5607,5608,5609,5630,5631,5632,5633,5640,5641,5642,5650,5651,5652,5653,5654,5655,5660,5661,5670,5671,5680,5690,5700,5701,5710,5713,5715,5717,5719,5720,5722,5723,5724,5725,5730,5731,5732,5733,5734]
+
+p.TASM=[7000,7004,7005,7007,7008,7009,7010,7011,7012,7015,7016,7017,7018,7019,7020,7021,7022,7023,7024,7025,7030,7050,7052,7053,7054,7055,7140,7170,7171,7172,7173,7174,7175,7176]
+
+p.TASR=[7026,7027,7109,7112,7113,7116,7117,7119,7120,7150,7155,7162,7163,7177,7178,7179,7180,7182,7183,7184,7185,7186,7187,7190,7209,7210,7211,7212,7213,7214,7215,7216,7248,7249,7250,7252,7253,7254,7255,7256,7257,7258,7259,7260,7261,7262,7263,7264,7265,7267,7268,7270,7275,7276,7277,7290,7291,7292,7300,7301,7302,7303,7304,7305,7306,7307,7310,7315,7316,7320,7321,7322,7325,7330,7331,7466,7467,7468,7469,7470]
+
+p.NTM=[800,810,812,815,820,828,829,830,832,834,835,836,837,838,839,841]
+
+p.NTR=[822,840,845,846,847,850,852,853,854,860,862,870,872,873,874,875,880,885,886]
+
+p.WAM=[6000,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025,6026,6027,6028,6029,6030,6031,6032,6033,6034,6035,6036,6037,6038,6050,6051,6052,6053,6054,6055,6056,6057,6058,6059,6060,6061,6062,6063,6064,6065,6066,6067,6068,6069,6070,6071,6072,6073,6074,6076,6077,6078,6079,6081,6082,6083,6084,6090,6100,6101,6102,6103,6104,6105,6106,6107,6108,6109,6110,6111,6112,6121,6122,6123,6124,6125,6126,6147,6148,6149,6150,6151,6152,6153,6154,6155,6156,6157,6158,6159,6160,6161,6162,6163,6164,6165,6166,6167,6168,6169,6170,6171,6172,6173,6174,6175,6176,6180,6181,6182,6207,6208,6209,6210,6211,6214,6556,6558]
+
+p.WAR=[6041,6042,6043,6044,6213,6215,6218,6220,6221,6223,6224,6225,6226,6227,6228,6229,6230,6232,6233,6236,6237,6239,6240,6243,6244,6251,6252,6253,6254,6255,6256,6258,6260,6262,6271,6275,6280,6281,6282,6284,6285,6286,6288,6290,6302,6304,6306,6308,6309,6311,6312,6313,6315,6316,6317,6318,6320,6321,6322,6323,6324,6326,6327,6328,6330,6333,6335,6336,6337,6338,6341,6343,6346,6348,6350,6351,6352,6353,6355,6356,6357,6358,6359,6361,6363,6365,6367,6368,6369,6370,6372,6373,6375,6383,6384,6385,6386,6390,6391,6392,6393,6394,6395,6396,6397,6398,6401,6403,6405,6407,6409,6410,6411,6412,6413,6414,6415,6418,6419,6420,6421,6422,6423,6424,6425,6426,6427,6428,6429,6430,6431,6432,6434,6436,6437,6438,6440,6442,6443,6445,6446,6447,6448,6450,6452,6460,6461,6462,6463,6465,6466,6467,6468,6470,6472,6473,6475,6476,6477,6479,6480,6484,6485,6487,6488,6489,6490,6501,6502,6503,6504,6505,6506,6507,6509,6510,6511,6512,6513,6514,6515,6516,6517,6518,6519,6521,6522,6525,6528,6530,6532,6535,6536,6537,6560,6562,6564,6566,6567,6568,6569,6571,6572,6574,6575,6603,6605,6606,6608,6609,6612,6613,6614,6616,6620,6623,6625,6627,6628,6630,6631,6632,6635,6638,6639,6640,6642,6646,6701,6705,6707,6710,6712,6713,6714,6716,6718,6720,6721,6722,6725,6726,6728,6731,6740,6743,6751,6753,6754,6758,6760,6762,6765,6770]
+
+p.QLDM=[4000,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4017,4018,4019,4020,4021,4022,4025,4029,4030,4031,4032,4034,4035,4036,4037,4051,4053,4054,4055,4059,4060,4061,4064,4065,4066,4067,4068,4069,4070,4072,4073,4074,4075,4076,4077,4078,4101,4102,4103,4104,4105,4106,4107,4108,4109,4110,4111,4112,4113,4114,4115,4116,4117,4118,4119,4120,4121,4122,4123,4124,4125,4127,4128,4129,4130,4131,4132,4133,4151,4152,4153,4154,4155,4156,4157,4158,4159,4160,4161,4163,4164,4165,4169,4170,4171,4172,4173,4174,4178,4179,4183,4184,4205,4207,4280,4285,4287,4300,4301,4303,4304,4305,4306,4307,4309,4310,4311,4312,4313,4340,4341,4342,4346,4500,4501,4502,4503,4504,4505,4506,4507,4508,4509,4510,4511,4512,4514,4515,4516,4520,4521]
+
+p.QLDR=[4208,4209,4210,4211,4212,4213,4214,4215,4216,4217,4218,4220,4221,4223,4224,4225,4226,4227,4228,4229,4230,4270,4271,4272,4275,4343,4344,4345,4347,4350,4352,4353,4354,4355,4356,4357,4358,4359,4360,4361,4362,4363,4364,4365,4370,4371,4372,4373,4374,4375,4376,4377,4378,4380,4381,4382,4383,4384,4385,4387,4388,4390,4400,4401,4402,4403,4404,4405,4406,4407,4408,4410,4411,4412,4413,4415,4416,4417,4418,4419,4420,4421,4422,4423,4424,4425,4426,4427,4428,4454,4455,4461,4462,4465,4467,4468,4470,4472,4474,4477,4478,4479,4480,4481,4482,4486,4487,4488,4489,4490,4491,4492,4493,4494,4496,4497,4498,4517,4518,4519,4550,4551,4552,4553,4554,4555,4556,4557,4558,4559,4560,4561,4562,4563,4564,4565,4566,4567,4568,4569,4570,4571,4572,4573,4574,4575,4580,4581,4600,4601,4605,4606,4608,4610,4611,4612,4613,4614,4615,4620,4621,4625,4626,4627,4630,4650,4655,4659,4660,4662,4670,4671,4673,4674,4676,4677,4678,4680,4694,4695,4697,4699,4700,4701,4702,4703,4704,4705,4706,4707,4709,4710,4711,4712,4713,4714,4715,4716,4717,4718,4719,4720,4721,4722,4723,4724,4725,4726,4727,4728,4730,4731,4732,4733,4735,4736,4737,4738,4739,4740,4741,4742,4743,4744,4745,4746,4750,4751,4753,4754,4756,4757,4798,4799,4800,4801,4802,4803,4804,4805,4806,4807,4808,4809,4810,4811,4812,4814,4815,4816,4817,4818,4819,4820,4821,4822,4823,4824,4825,4828,4829,4830,4849,4850,4852,4854,4855,4856,4858,4859,4860,4861,4865,4868,4869,4870,4871,4872,4873,4874,4875,4876,4877,4878,4879,4880,4881,4882,4883,4884,4885,4886,4887,4888,4890,4891,4892,4895]
+
+p.OTR=[2899,6798,6799]
+
+
+p.InnerR=[2083,2157,2311,2312,2314,2315,2316,2317,2318,2319,2325,2328,2330,2331,2333,2334,2335,2336,2337,2340,2341,2344,2350,2351,2352,2358,2415,2420,2421,2422,2423,2424,2425,2426,2427,2428,2429,2430,2439,2440,2443,2444,2445,2446,2450,2452,2456,2460,2463,2464,2465,2466,2470,2471,2472,2473,2474,2477,2478,2479,2480,2481,2482,2483,2484,2533,2534,2535,2536,2537,2538,2539,2540,2541,2569,2571,2572,2573,2574,2575,2576,2577,2578,2579,2580,2581,2582,2583,2584,2585,2586,2587,2588,2590,2594,2618,2621,2622,2623,2626,2630,2640,2641,2642,2643,2644,2646,2647,2650,2651,2652,2655,2658,2659,2660,2661,2663,2678,2701,2710,2713,2714,2720,2722,2729,2731,2752,2757,2758,2775,2785,2786,2787,2790,2791,2794,2795,2798,2799,2800,2804,2830,2845,2846,2847,2848,2850,2866,3139,3211,3221,3222,3223,3225,3226,3227,3228,3230,3231,3232,3233,3234,3235,3236,3239,3240,3241,3242,3243,3249,3250,3251,3254,3260,3264,3265,3266,3272,3275,3276,3277,3278,3279,3280,3281,3282,3283,3284,3300,3321,3322,3328,3329,3330,3331,3332,3333,3334,3341,3342,3345,3350,3351,3352,3355,3356,3357,3360,3361,3363,3364,3370,3371,3373,3374,3375,3377,3378,3380,3430,3431,3432,3433,3434,3435,3437,3438,3440,3441,3442,3444,3446,3447,3448,3450,3451,3453,3458,3460,3461,3462,3463,3464,3465,3467,3468,3469,3472,3475,3515,3516,3517,3521,3522,3523,3550,3551,3555,3556,3557,3558,3559,3561,3562,3563,3564,3565,3570,3571,3572,3607,3608,3610,3612,3614,3616,3617,3618,3620,3621,3622,3623,3624,3629,3630,3631,3633,3634,3635,3636,3637,3638,3640,3641,3644,3646,3647,3649,3658,3659,3660,3662,3663,3664,3665,3666,3669,3670,3672,3673,3675,3677,3678,3682,3683,3685,3687,3688,3690,3691,3694,3695,3697,3698,3699,3711,3712,3714,3717,3718,3719,3725,3726,3727,3728,3730,3732,3735,3737,3738,3739,3746,3747,3749,3757,3758,3760,3761,3762,3763,3764,3775,3777,3778,3779,3797,3799,3812,3813,3814,3815,3816,3818,3820,3821,3822,3823,3824,3825,3831,3832,3833,3835,3840,3842,3844,3847,3850,3851,3852,3854,3856,3857,3858,3859,3860,3862,3869,3870,3871,3873,3916,3922,3923,3925,3928,3929,3937,3945,3946,3950,3951,3953,3954,3956,3957,3958,3959,3960,3962,3964,3971,3979,3980,3981,3984,3987,3988,3990,3991,3992,3995,3996,4270,4275,4285,4287,4307,4309,4310,4311,4312,4313,4340,4341,4342,4343,4344,4345,4346,4347,4350,4352,4353,4354,4355,4356,4357,4358,4359,4360,4361,4362,4363,4364,4365,4370,4371,4372,4374,4400,4401,4403,4404,4405,4507,4514,4515,4517,4518,4519,4520,4521,4550,4552,4553,4554,4561,4562,4563,4568,4569,4570,4571,4574,4580,4581,4605,4610,4614,4615,4620,4650,4655,4659,4660,4662,4670,4673,4680,4700,4701,4702,4703,4704,4710,4711,4714,4740,4750,5120,5132,5133,5134,5138,5139,5144,5153,5157,5201,5202,5203,5204,5210,5211,5212,5213,5214,5231,5232,5233,5234,5235,5236,5237,5238,5240,5241,5242,5243,5244,5245,5250,5251,5252,5253,5254,5255,5256,5259,5260,5290,5350,5351,5352,5353,5355,5356,5360,5371,5372,5373,5374,5400,5401,5410,5411,5412,5413,5414,5451,5452,5453,5460,5461,5501,5502,6037,6041,6042,6083,6084,6124,6125,6126,6207,6213,6214,6215,6218,6220,6221,6223,6224,6225,6226,6227,6228,6229,6230,6232,6233,6236,6237,6239,6240,6251,6252,6253,6255,6271,6280,6281,6282,6284,6285,6286,6288,6290,6302,6390,6401,6403,6501,6502,6503,6556,6558,6560,6562,6564,6566,6567,7000,7004,7005,7007,7008,7009,7010,7011,7012,7015,7016,7017,7018,7019,7020,7021,7024,7025,7030,7050,7052,7053,7054,7055,7140,7150,7170,7171,7172,7173,7212,7248,7249,7250,7258,7277,7290,7291,7300,7301,7310]
+
+p.MajorC=[2000,2006,2007,2008,2009,2010,2011,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050,2052,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,2072,2073,2074,2075,2076,2077,2079,2080,2081,2082,2084,2085,2086,2087,2088,2089,2090,2092,2093,2094,2095,2096,2097,2099,2100,2101,2102,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113,2114,2115,2116,2117,2118,2119,2120,2121,2122,2125,2126,2127,2128,2129,2130,2131,2132,2133,2134,2135,2136,2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147,2148,2150,2151,2152,2153,2154,2155,2156,2158,2159,2160,2161,2162,2163,2164,2165,2166,2167,2168,2170,2171,2172,2173,2174,2175,2176,2177,2178,2179,2190,2191,2192,2193,2194,2195,2196,2197,2198,2199,2200,2203,2204,2205,2206,2207,2208,2209,2210,2211,2212,2213,2214,2216,2217,2218,2219,2220,2221,2222,2223,2224,2225,2226,2227,2228,2229,2230,2231,2232,2233,2234,2250,2251,2256,2257,2258,2259,2260,2261,2262,2263,2264,2265,2267,2278,2280,2281,2282,2283,2284,2285,2286,2287,2289,2290,2291,2292,2293,2294,2295,2296,2297,2298,2299,2300,2302,2303,2304,2305,2306,2307,2308,2320,2321,2322,2323,2324,2326,2327,2485,2486,2487,2488,2489,2490,2500,2502,2505,2506,2508,2515,2516,2517,2518,2519,2522,2525,2526,2527,2528,2529,2530,2555,2556,2557,2558,2559,2560,2563,2564,2565,2566,2567,2568,2570,2600,2601,2602,2603,2604,2605,2606,2607,2609,2611,2612,2614,2615,2617,2619,2620,2745,2747,2748,2749,2750,2753,2754,2755,2756,2759,2760,2761,2762,2763,2765,2766,2767,2768,2769,2770,2773,2774,2776,2777,2778,2779,2780,2782,2783,2784,2900,2902,2903,2904,2905,2906,2911,2912,2913,2914,3000,3002,3003,3004,3005,3006,3008,3010,3011,3012,3013,3015,3016,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3036,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3063,3064,3065,3066,3067,3068,3070,3071,3072,3073,3074,3075,3076,3078,3079,3081,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093,3094,3095,3096,3097,3099,3101,3102,3103,3104,3105,3106,3107,3108,3109,3111,3113,3114,3115,3116,3121,3122,3123,3124,3125,3126,3127,3128,3129,3130,3131,3132,3133,3134,3135,3136,3137,3138,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3151,3152,3153,3154,3155,3156,3158,3159,3160,3161,3162,3163,3165,3166,3167,3168,3169,3170,3171,3172,3173,3174,3175,3177,3178,3179,3180,3181,3182,3183,3184,3185,3186,3187,3188,3189,3190,3191,3192,3193,3194,3195,3196,3197,3198,3199,3200,3201,3202,3204,3205,3206,3207,3212,3213,3214,3215,3216,3217,3218,3219,3220,3224,3335,3337,3338,3340,3427,3428,3429,3750,3751,3752,3753,3754,3755,3756,3759,3765,3766,3767,3770,3781,3782,3783,3785,3786,3787,3788,3789,3791,3792,3793,3795,3796,3800,3802,3803,3804,3805,3806,3807,3808,3809,3810,3910,3911,3912,3913,3915,3918,3919,3920,3926,3927,3930,3931,3933,3934,3936,3938,3939,3940,3941,3942,3943,3944,3975,3976,3977,3978,4000,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4017,4018,4019,4020,4021,4022,4029,4030,4031,4032,4034,4035,4036,4037,4051,4053,4054,4055,4059,4060,4061,4064,4065,4066,4067,4068,4069,4070,4072,4073,4074,4075,4076,4077,4078,4101,4102,4103,4104,4105,4106,4107,4108,4109,4110,4111,4112,4113,4114,4115,4116,4117,4118,4119,4120,4121,4122,4123,4124,4125,4127,4128,4129,4130,4131,4132,4133,4151,4152,4153,4154,4155,4156,4157,4158,4159,4160,4161,4163,4164,4165,4169,4170,4171,4172,4173,4174,4178,4179,4205,4207,4208,4209,4210,4211,4212,4213,4214,4215,4216,4217,4218,4220,4221,4223,4224,4225,4226,4227,4228,4229,4230,4271,4272,4280,4300,4301,4303,4304,4305,4306,4500,4501,4502,4503,4504,4505,4506,4508,4509,4510,4511,4512,4516,4551,4555,4556,4557,4558,4559,4560,4564,4565,4566,4567,4572,4573,4575,5000,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024,5025,5031,5032,5033,5034,5035,5037,5038,5039,5040,5041,5042,5043,5044,5045,5046,5047,5048,5049,5050,5051,5052,5061,5062,5063,5064,5065,5066,5067,5068,5069,5070,5072,5073,5074,5075,5076,5081,5082,5083,5084,5085,5086,5087,5088,5089,5090,5091,5092,5093,5094,5095,5096,5097,5098,5106,5107,5108,5109,5110,5111,5112,5113,5114,5115,5116,5117,5118,5121,5125,5126,5127,5131,5136,5137,5140,5141,5142,5150,5151,5152,5154,5155,5156,5158,5159,5160,5161,5162,5163,5164,5165,5166,5167,5168,5169,5170,5171,5172,5173,5174,5960,6000,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6014,6015,6016,6017,6018,6019,6020,6021,6022,6023,6024,6025,6026,6027,6028,6029,6030,6031,6032,6033,6034,6035,6036,6038,6050,6051,6052,6053,6054,6055,6056,6057,6058,6059,6060,6061,6062,6063,6064,6065,6066,6067,6068,6069,6070,6071,6072,6073,6074,6076,6077,6078,6079,6081,6082,6090,6100,6101,6102,6103,6104,6105,6106,6107,6108,6109,6110,6111,6112,6121,6122,6123,6147,6148,6149,6150,6151,6152,6153,6154,6155,6156,6157,6158,6159,6160,6162,6163,6164,6165,6166,6167,6168,6169,6170,6171,6172,6173,6174,6175,6176,6180,6181,6182,6208,6209,6210,6211]
+
+p.OuterR=[800,810,812,815,820,828,829,830,832,834,835,836,837,838,839,841,2329,2338,2339,2342,2343,2345,2346,2347,2353,2354,2355,2357,2359,2360,2361,2365,2369,2370,2371,2372,2379,2380,2381,2382,2388,2390,2395,2397,2398,2399,2400,2401,2402,2403,2404,2408,2409,2410,2411,2431,2441,2447,2448,2449,2453,2454,2455,2462,2469,2475,2476,2545,2546,2548,2549,2550,2551,2625,2627,2628,2629,2631,2632,2633,2645,2648,2649,2653,2656,2665,2666,2668,2669,2671,2680,2681,2700,2702,2703,2705,2706,2707,2711,2712,2715,2716,2717,2721,2725,2726,2727,2730,2732,2733,2734,2735,2736,2737,2738,2739,2792,2793,2797,2803,2805,2806,2807,2808,2809,2810,2817,2818,2820,2821,2822,2823,2824,2827,2828,2831,2842,2843,2844,2849,2852,2864,2865,2867,2868,2869,2870,2871,2874,2875,2876,2877,2880,3237,3238,3267,3268,3269,3270,3271,3273,3274,3285,3286,3287,3289,3292,3293,3294,3301,3302,3303,3304,3305,3309,3310,3311,3312,3314,3315,3317,3318,3319,3323,3324,3325,3379,3381,3384,3385,3387,3388,3390,3391,3392,3393,3395,3396,3400,3401,3407,3409,3412,3413,3414,3415,3418,3419,3420,3423,3477,3478,3480,3482,3483,3485,3487,3488,3489,3490,3491,3494,3496,3498,3500,3501,3505,3507,3518,3520,3525,3527,3529,3530,3531,3533,3537,3540,3542,3544,3546,3549,3566,3567,3568,3573,3575,3576,3579,3580,3581,3583,3584,3585,3586,3588,3589,3590,3591,3594,3595,3596,3597,3599,3639,3700,3701,3704,3705,3707,3708,3709,3713,3715,3720,3722,3723,3733,3740,3741,3744,3864,3865,3874,3875,3878,3880,3882,3885,3886,3887,3888,3893,3895,3896,3898,3900,3902,3903,3904,3909,3921,3965,3966,3967,4184,4373,4375,4376,4377,4378,4380,4381,4382,4383,4384,4385,4387,4388,4390,4402,4406,4407,4408,4410,4411,4412,4413,4415,4416,4421,4424,4425,4455,4498,4600,4601,4606,4608,4611,4612,4613,4621,4625,4626,4627,4630,4671,4674,4676,4677,4678,4694,4695,4697,4699,4712,4715,4716,4717,4718,4719,4720,4737,4738,4739,4741,4742,4744,4745,4751,4753,4754,4756,4757,4798,4799,4800,4802,4805,4806,4807,4808,4809,4810,4811,4812,4814,4815,4816,4817,4818,4819,4820,4849,4850,4852,4854,4855,4856,4858,4859,4860,4861,4865,4868,4869,4870,4871,4872,4873,4877,4878,4879,4880,4881,4882,4883,4884,4885,4886,4887,4888,5261,5262,5263,5264,5265,5266,5267,5268,5269,5270,5271,5272,5273,5275,5276,5277,5278,5279,5280,5291,5301,5306,5307,5308,5309,5310,5311,5320,5321,5322,5330,5331,5332,5333,5340,5341,5342,5343,5344,5345,5346,5354,5357,5381,5415,5416,5417,5418,5419,5420,5421,5422,5431,5432,5433,5434,5454,5455,5462,5464,5470,5471,5472,5473,5480,5481,5482,5483,5485,5490,5491,5493,5495,5510,5520,5521,5522,5523,5540,5550,5552,5554,5555,5556,5558,5560,5570,5571,5572,5573,5575,5580,5581,5600,5601,5608,5609,5700,5701,5710,6043,6044,6243,6244,6254,6256,6258,6260,6262,6275,6304,6306,6308,6309,6311,6312,6313,6315,6316,6317,6318,6320,6321,6322,6323,6324,6326,6327,6328,6330,6333,6370,6372,6383,6384,6391,6392,6393,6394,6395,6396,6397,6398,6405,6407,6409,6410,6411,6412,6413,6414,6415,6430,6432,6442,6460,6461,6462,6463,6465,6485,6504,6505,6506,6507,6509,6510,6511,6512,6513,6514,6516,6521,6522,6525,6528,6530,6532,6535,6568,6569,6571,6572,6574,6575,6603,7022,7023,7026,7027,7109,7112,7113,7116,7117,7119,7120,7155,7162,7163,7174,7175,7176,7177,7178,7179,7180,7182,7183,7184,7185,7186,7187,7190,7209,7210,7211,7213,7214,7215,7216,7252,7253,7254,7259,7260,7261,7262,7263,7264,7265,7267,7268,7270,7275,7276,7292,7302,7303,7304,7305,7306,7307,7315,7316,7320,7321,7322,7325,7330,7331]
+
+p.RemoteA=[840,845,846,847,850,853,870,873,874,875,886,2356,2386,2387,2396,2405,2406,2672,2675,2825,2826,2829,2832,2833,2834,2835,2840,2873,3424,3506,3509,3512,3889,3890,3891,3892,4025,4183,4417,4418,4419,4420,4422,4423,4426,4427,4428,4454,4461,4462,4487,4494,4496,4497,4705,4706,4707,4709,4713,4721,4722,4723,4743,4746,4803,4804,4824,4825,4895,5220,5221,5222,5223,5302,5303,5304,5440,5576,5577,5582,5583,5602,5603,5604,5605,5606,5607,5630,5631,5632,5633,5640,5641,5642,5713,5715,5725,5730,6161,6335,6336,6337,6338,6341,6343,6350,6351,6352,6353,6355,6357,6358,6361,6363,6365,6367,6368,6369,6373,6375,6385,6386,6418,6419,6420,6421,6422,6423,6424,6425,6426,6427,6428,6446,6447,6448,6450,6466,6467,6468,6470,6472,6473,6475,6476,6477,6479,6480,6484,6487,6488,6489,6490,6515,6517,6518,6519,6536,6605,6606,6608,6609,6612,6613,6614,6616,6620,6623,6625,6627,6628,6630,6631,6632,6713,6714,6718,6720,6721,6722,6725,6726,7466,7467,7468,7469,7470]
+
+p.VeryRemoteA=[822,852,854,860,862,872,880,885,2836,2838,2839,2878,2879,2898,2899,4465,4467,4468,4470,4472,4474,4477,4478,4479,4480,4481,4482,4486,4488,4489,4490,4491,4492,4493,4724,4725,4726,4727,4728,4730,4731,4732,4733,4735,4736,4801,4821,4822,4823,4828,4829,4830,4874,4875,4876,4890,4891,4892,5650,5651,5652,5653,5654,5655,5660,5661,5670,5671,5680,5690,5717,5719,5720,5722,5723,5724,5731,5732,5733,5734,6346,6348,6356,6359,6429,6431,6434,6436,6437,6438,6440,6443,6445,6452,6537,6635,6638,6639,6640,6642,6646,6701,6705,6707,6710,6712,6716,6728,6731,6740,6743,6751,6753,6754,6758,6760,6762,6765,6770,6798,6799,7255,7256,7257]
+</exec>
+
+<suspend/>
+
+<exec when="init">
+def group_rows( question, grouped_rows ):
+  first_item_index = None
+  shuffle_order = [row.index for row in question.rows.order]
+  for index, row in enumerate( shuffle_order ):
+    if question.rows[row].label in grouped_rows:
+      if first_item_index == None:
+        first_item_index = index
+      else:
+        first_item_index += 1
+        shuffle_order.insert( first_item_index, shuffle_order.pop(index) )
+  question.rows.order = shuffle_order
+
+
+def group_rows_with_order( question, grouped_rows ):
+  current_order = [row.index for row in question.rows.order]
+  new_order = []
+  grouped_rows = [question.attr(row).index for row in grouped_rows]
+  first_item_index = current_order.index(grouped_rows[0])
+  current_order.insert(first_item_index, grouped_rows)
+  for row in current_order:
+    if row == grouped_rows:
+      new_order = new_order + row
+    elif row not in grouped_rows:
+      new_order.append(row)
+  question.rows.order = new_order
+
+
+def CheckDupOrder():
+  for x in this.rows:
+    if x.val:
+      err1 = 0
+      for y in this.rows:
+        if y.index != x.index and y.val and (x.val).strip() == (y.val).strip():
+          err1 = 1
+      if err1 == 1:
+        error(res.errDedupeinOrder, row=x)
+    if not x.val:
+      err2 = 0
+      for y in this.rows:
+        if y.index gt x.index and y.val:
+          err2 = 1
+      if err2 == 1:
+        error(res.errDedupeinOrder, row=x)
+</exec>
+
+<style mode="after" name="respview.client.js"><![CDATA[
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/220231/hideContinue.js"></script>
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/220231/AutoContinue.js"></script>
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/220231/unctrl.js"></script>
+]]></style>
+<style name="survey.header"><![CDATA[
+<link rel="stylesheet" type="text/css" href="https://paralleldata.decipherinc.com/survey/selfserve/202d/220231/custom.css"/>
+<script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/202d/220231/custom.js"></script>
+]]></style>
+<checkbox 
+  label="changeLog"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record the changes log</title>
+  <comment>SP use only.</comment>
+  <row label="r1">1</row>
+  <row label="r2">2</row>
+  <row label="r3">3</row>
+  <row label="r4">4</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="samplingMethod"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record the sampling method</title>
+  <comment>SP use only.</comment>
+  <row label="r1">Nat rep on entry</row>
+  <row label="r2">On complete</row>
+  <row label="r3">Client list</row>
+  <row label="r4">B2B sample</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+if list == '21':
+  samplingHouse.val=samplingHouse.r1.index
+if list == '21' and PP == '9':
+  samplingHouse.val=samplingHouse.rTEG9.index
+if list == '21' and PP == '1078':
+  samplingHouse.val=samplingHouse.rTEG1078.index
+if list == '21' and PP == '3':
+  samplingHouse.val=samplingHouse.rTEG3.index
+if list == '21' and PP == '74':
+  samplingHouse.val=samplingHouse.rTEG74.index
+if list == '21' and PP == '19':
+  samplingHouse.val=samplingHouse.rTEG19.index
+if list == '21' and PP == '20':
+  samplingHouse.val=samplingHouse.rTEG20.index
+if list == '21' and PP == '99':
+  samplingHouse.val=samplingHouse.rTEG99.index
+if list == '21' and PP == '1115':
+  samplingHouse.val=samplingHouse.rTEG1115.index
+if list == '21' and PP == '1123':
+  samplingHouse.val=samplingHouse.rTEG1123.index
+if list == '21' and PP == '1134':
+  samplingHouse.val=samplingHouse.rTEG1134.index
+if list == '21' and PP == '1124':
+  samplingHouse.val=samplingHouse.rTEG1124.index
+if list == '21' and PP == '1125':
+  samplingHouse.val=samplingHouse.rTEG1125.index
+if list == '21' and PP == '1119':
+  samplingHouse.val=samplingHouse.rTEG1119.index
+if list == '21' and PP == '56':
+  samplingHouse.val=samplingHouse.rTEG56.index
+if list == '21' and PP == '10':
+  samplingHouse.val=samplingHouse.rTEG10.index
+if list == '21' and PP == '1113':
+  samplingHouse.val=samplingHouse.rTEG1113.index
+if list == '21' and PP == '1137':
+  samplingHouse.val=samplingHouse.rTEG1137.index
+if list == '21' and PP == '1139':
+  samplingHouse.val=samplingHouse.rTEG1139.index
+if list == '21' and PP == '1140':
+  samplingHouse.val=samplingHouse.rTEG1140.index
+if list == '21' and PP == '1141':
+  samplingHouse.val=samplingHouse.rTEG1141.index
+if list == '21' and PP == '1136':
+  samplingHouse.val=samplingHouse.rTEG1136.index
+if list == '21' and PP == '70':
+  samplingHouse.val=samplingHouse.rTEG70.index
+if list == '21' and PP == '61':
+  samplingHouse.val=samplingHouse.rTEG61.index
+if list == '21' and PP == '12':
+  samplingHouse.val=samplingHouse.rTEG12.index
+if list == '21' and PP == '1':
+  samplingHouse.val=samplingHouse.rTEG1.index
+if list == '21' and PP == '21':
+  samplingHouse.val=samplingHouse.rTEG21.index
+if list == '21' and PP == '22':
+  samplingHouse.val=samplingHouse.rTEG22.index
+if list == '21' and PP == '1104':
+  samplingHouse.val=samplingHouse.rTEG1104.index
+if list == '21' and PP == '1138':
+  samplingHouse.val=samplingHouse.rTEG1138.index
+if list == '21' and PP == '8':
+  samplingHouse.val=samplingHouse.rTEG8.index
+if list == '21' and PP == '2':
+  samplingHouse.val=samplingHouse.rTEG2.index
+if list == '21' and PP == '18':
+  samplingHouse.val=samplingHouse.rTEG18.index
+if list == '21' and PP == '1143':
+  samplingHouse.val=samplingHouse.rTEG1143.index
+if list == '21' and PP == '1084':
+  samplingHouse.val=samplingHouse.rTEG1084.index
+if list == '21' and PP == '1077':
+  samplingHouse.val=samplingHouse.rTEG1077.index
+if list == '21' and PP == '14':
+  samplingHouse.val=samplingHouse.rTEG14.index
+if list == '21' and PP == '11':
+  samplingHouse.val=samplingHouse.rTEG11.index
+if list == '21' and PP == '1130':
+  samplingHouse.val=samplingHouse.rTEG1130.index
+if list == '21' and PP == '1133':
+  samplingHouse.val=samplingHouse.rTEG1133.index
+if list == '21' and PP == '13':
+  samplingHouse.val=samplingHouse.rTEG13.index
+if list == '21' and PP == '73':
+  samplingHouse.val=samplingHouse.rTEG73.index
+if list == '21' and PP == '1132':
+  samplingHouse.val=samplingHouse.rTEG1132.index
+if list == '21' and PP == '16':
+  samplingHouse.val=samplingHouse.rTEG16.index
+if list == '21' and PP == '30':
+  samplingHouse.val=samplingHouse.rTEG30.index
+if list == '21' and PP == '4':
+  samplingHouse.val=samplingHouse.rTEG4.index
+if list == '21' and PP == '5':
+  samplingHouse.val=samplingHouse.rTEG5.index
+if list == '21' and PP == '1083':
+  samplingHouse.val=samplingHouse.rTEG1083.index
+if list == '21' and PP == '1131':
+  samplingHouse.val=samplingHouse.rTEG1131.index
+
+
+if list == '22':
+  samplingHouse.val=samplingHouse.r6.index
+if list == '23':
+  samplingHouse.val=samplingHouse.r7.index
+if list == '24':
+  samplingHouse.val=samplingHouse.r8.index
+if list == '25':
+  samplingHouse.val=samplingHouse.r9.index
+
+if list == '26':
+  samplingHouse.val=samplingHouse.r10.index
+
+if list == '11':
+  samplingHouse.val=samplingHouse.r41.index
+if list == '12':
+  samplingHouse.val=samplingHouse.r42.index
+
+
+if list == '1' or list == '2':
+  samplingHouse.val=samplingHouse.r99.index
+</exec>
+
+<suspend/>
+
+<radio 
+  label="samplingHouse"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record the sample source</title>
+  <comment>SP use only.</comment>
+  <row label="r1" value="1">TEG</row>
+  <row label="rTEG9" value="2109">TEG - ACA</row>
+  <row label="rTEG1078" value="2101078">TEG - AIP</row>
+  <row label="rTEG3" value="2103">TEG - Bounty Rewards</row>
+  <row label="rTEG74" value="21074">TEG - BountyAU2</row>
+  <row label="rTEG19" value="21019">TEG - Cint</row>
+  <row label="rTEG20" value="21020">TEG - Client Sample</row>
+  <row label="rTEG99" value="21099">TEG - ClientSample99</row>
+  <row label="rTEG1115" value="2101115">TEG - ConsumerLink</row>
+  <row label="rTEG1123" value="2101123">TEG - Dynata</row>
+  <row label="rTEG1134" value="2101134">TEG - eKas</row>
+  <row label="rTEG1124" value="2101124">TEG - Forever New AU</row>
+  <row label="rTEG1125" value="2101125">TEG - Forever New NZ</row>
+  <row label="rTEG1119" value="2101119">TEG - growthops</row>
+  <row label="rTEG56" value="21056">TEG - Kidspot NZ</row>
+  <row label="rTEG10" value="21010">TEG - Lightspeed-GMI</row>
+  <row label="rTEG1113" value="2101113">TEG - Lucid</row>
+  <row label="rTEG1137" value="2101137">TEG - Lucid 2</row>
+  <row label="rTEG1139" value="2101139">TEG - Lucid 3</row>
+  <row label="rTEG1140" value="2101140">TEG - Lucid 4</row>
+  <row label="rTEG1141" value="2101141">TEG - Lucid 5</row>
+  <row label="rTEG1136" value="2101136">TEG - octopus</row>
+  <row label="rTEG70" value="21070">TEG - Octopus Group</row>
+  <row label="rTEG61" value="21061">TEG - OHBabyNZ</row>
+  <row label="rTEG12" value="21012">TEG - PureProfile</row>
+  <row label="rTEG1" value="2101">TEG - Purkle AU</row>
+  <row label="rTEG21" value="21021">TEG - Purkle AU 3</row>
+  <row label="rTEG22" value="21022">TEG - Purkle AU 4</row>
+  <row label="rTEG1104" value="2101104">TEG - Purkle AU 5</row>
+  <row label="rTEG1138" value="2101138">TEG - Purkle AU 6</row>
+  <row label="rTEG8" value="2108">TEG - Purkle AU2</row>
+  <row label="rTEG2" value="2102">TEG - Purkle NZ</row>
+  <row label="rTEG18" value="21018">TEG - Purkle NZ 2</row>
+  <row label="rTEG1143" value="2101143">TEG - Purkle NZ 3</row>
+  <row label="rTEG1084" value="2101084">TEG - QOR</row>
+  <row label="rTEG1077" value="2101077">TEG - Red Planet</row>
+  <row label="rTEG14" value="21014">TEG - Research Panel</row>
+  <row label="rTEG11" value="21011">TEG - ResearchNow</row>
+  <row label="rTEG1130" value="2101130">TEG - Research-Profile</row>
+  <row label="rTEG1133" value="2101133">TEG - Southern Cross Austereo</row>
+  <row label="rTEG13" value="21013">TEG - SSI</row>
+  <row label="rTEG73" value="21073">TEG - Student Edge</row>
+  <row label="rTEG1132" value="2101132">TEG ana</row>
+  <row label="rTEG16" value="21016">TEG - The ORU</row>
+  <row label="rTEG30" value="21030">TEG - The Student Edge</row>
+  <row label="rTEG4" value="2104">TEG - Ticketek AU</row>
+  <row label="rTEG5" value="2105">TEG - Ticketek NZ</row>
+  <row label="rTEG1083" value="2101083">TEG - Toluna</row>
+  <row label="rTEG1131" value="2101131">TEG - Toluna2</row>
+  <row label="r6" value="6">Dynata</row>
+  <row label="r7" value="7">Theoru</row>
+  <row label="r8" value="8">Kantar-LSR</row>
+  <row label="r9" value="9">Ekas</row>
+  <row label="r10" value="10">Redchilli</row>
+  <row label="r41" value="41">Client list unique link</row>
+  <row label="r42" value="42">Client list generic link</row>
+  <row label="r99" value="99">Test link</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="QCOUNTRY"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record the Marketing (Country)</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">AU</row>
+  <row label="r2" value="2">CN</row>
+  <row label="r3" value="3">TH</row>
+  <row label="r4" value="4">BR</row>
+  <row label="r5" value="5">US</row>
+  <row label="r99" value="99">Others</row>
+</radio>
+
+<suspend/>
+
+<quota overquota="noqual" sheet="rateOrder_quota"/>
+
+<exec>
+if hasMarker("/rateOrder_quota/LTH"):
+  ratingOrder.val=0
+if hasMarker("/rateOrder_quota/HTL"):
+  ratingOrder.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="ratingOrder"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record the order of the rating question</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">Order from negative - positive</row>
+  <row label="r2" value="2">Order from positive - negative</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if ratingOrder.r2:
+  tempQC1.rows.order = reversed(tempQC1.rows)
+  tempQC2.rows.order = reversed(tempQC2.rows)
+else:
+  tempQC1.rows.order = tempQC1.rows
+  tempQC2.rows.order = tempQC2.rows
+</exec>
+
+<suspend/>
+
+<quota overquota="noqual" sheet="qcQ_quota"/>
+
+<suspend/>
+
+<exec>
+for x in QCtree.rows:
+  if hasMarker('/qcQ_quota/QCsub' + x.label):
+    x.val = 1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="QCtree"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record 2 sub QC questions from QC tree</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1">QC sub 1</row>
+  <row label="r2">QC sub 2</row>
+  <row label="r3">QC sub 3</row>
+  <row label="r4">QC sub 4</row>
+  <row label="r5">QC sub 5</row>
+  <row label="r6">QC sub 6</row>
+  <row label="r7">QC sub 7</row>
+  <row label="r8">QC sub 8</row>
+  <row label="r9">QC sub 9</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+p.arrQCtree=[]
+
+for x in QCtree.rows:
+  if x:
+    p.arrQCtree.append(x.index)
+
+random.shuffle(p.arrQCtree)
+
+if len(p.arrQCtree) ge 1:
+  QCtree1st.val=p.arrQCtree[0]
+if len(p.arrQCtree) ge 2:
+  QCtree2nd.val=p.arrQCtree[1]
+</exec>
+
+<suspend/>
+
+<radio 
+  label="QCtree1st"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record 1st sub QC questions from QC tree</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">QC sub 1</row>
+  <row label="r2" value="2">QC sub 2</row>
+  <row label="r3" value="3">QC sub 3</row>
+  <row label="r4" value="4">QC sub 4</row>
+  <row label="r5" value="5">QC sub 5</row>
+  <row label="r6" value="6">QC sub 6</row>
+  <row label="r7" value="7">QC sub 7</row>
+  <row label="r8" value="8">QC sub 8</row>
+  <row label="r9" value="9">QC sub 9</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="QCtree2nd"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev">
+  <title>Record 2nd sub QC questions from QC tree</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">QC sub 1</row>
+  <row label="r2" value="2">QC sub 2</row>
+  <row label="r3" value="3">QC sub 3</row>
+  <row label="r4" value="4">QC sub 4</row>
+  <row label="r5" value="5">QC sub 5</row>
+  <row label="r6" value="6">QC sub 6</row>
+  <row label="r7" value="7">QC sub 7</row>
+  <row label="r8" value="8">QC sub 8</row>
+  <row label="r9" value="9">QC sub 9</row>
+</radio>
+
+<suspend/>
+
+<pipe label="QCtree1stTitle" capture="">
+  <case label="r1" cond="QCtree1st.r1">Please select <b>"Strongly agree"</b> from the list below. This is a quality check question.</case>
+  <case label="r2" cond="QCtree1st.r2">Please select <b>"I'm <b>fairly</b> confident"</b> from the list below. This is a quality check question.</case>
+  <case label="r3" cond="QCtree1st.r3">Please select <b>"Rarely"</b> from the list below. This is a quality check question.</case>
+  <case label="r4" cond="QCtree1st.r4">Please select <b>"Excellent"</b> from the list below. This is a quality check question.</case>
+  <case label="r5" cond="QCtree1st.r5">Please select <b>"Moderate"</b> from the list below. This is a quality check question.</case>
+  <case label="r6" cond="QCtree1st.r6">Please select <b>"Disapprove"</b> from the list below. This is a quality check question.</case>
+  <case label="r7" cond="QCtree1st.r7">Please select <b>"Extremely aware"</b> from the list below. This is a quality check question.</case>
+  <case label="r8" cond="QCtree1st.r8">Please select <b>"Very important"</b> from the list below. This is a quality check question.</case>
+  <case label="r9" cond="QCtree1st.r9">Please select <b>"Slightly familiar"</b> from the list below. This is a quality check question.</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndTitle" capture="">
+  <case label="r1" cond="QCtree2nd.r1">Please select <b>"Strongly agree"</b> from the list below. This is a quality check question.</case>
+  <case label="r2" cond="QCtree2nd.r2">Please select <b>"I'm <b>fairly</b> confident"</b> from the list below. This is a quality check question.</case>
+  <case label="r3" cond="QCtree2nd.r3">Please select <b>"Rarely"</b> from the list below. This is a quality check question.</case>
+  <case label="r4" cond="QCtree2nd.r4">Please select <b>"Excellent"</b> from the list below. This is a quality check question.</case>
+  <case label="r5" cond="QCtree2nd.r5">Please select <b>"Moderate"</b> from the list below. This is a quality check question.</case>
+  <case label="r6" cond="QCtree2nd.r6">Please select <b>"Disapprove"</b> from the list below. This is a quality check question.</case>
+  <case label="r7" cond="QCtree2nd.r7">Please select <b>"Extremely aware"</b> from the list below. This is a quality check question.</case>
+  <case label="r8" cond="QCtree2nd.r8">Please select <b>"Very important"</b> from the list below. This is a quality check question.</case>
+  <case label="r9" cond="QCtree2nd.r9">Please select <b>"Slightly familiar"</b> from the list below. This is a quality check question.</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree1stRow1" capture="">
+  <case label="r1" cond="QCtree1st.r1">Strongly disagree</case>
+  <case label="r2" cond="QCtree1st.r2">I’m <b>not</b> confident <b>at all</b></case>
+  <case label="r3" cond="QCtree1st.r3">Never</case>
+  <case label="r4" cond="QCtree1st.r4">Very poor</case>
+  <case label="r5" cond="QCtree1st.r5">None</case>
+  <case label="r6" cond="QCtree1st.r6">Strongly disapprove</case>
+  <case label="r7" cond="QCtree1st.r7">Not at all aware</case>
+  <case label="r8" cond="QCtree1st.r8">Not at all important</case>
+  <case label="r9" cond="QCtree1st.r9">Not at all familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree1stRow2" capture="">
+  <case label="r1" cond="QCtree1st.r1">Somewhat disagree</case>
+  <case label="r2" cond="QCtree1st.r2">I’m <b>not so</b> confident</case>
+  <case label="r3" cond="QCtree1st.r3">Rarely</case>
+  <case label="r4" cond="QCtree1st.r4">Poor</case>
+  <case label="r5" cond="QCtree1st.r5">Very mild</case>
+  <case label="r6" cond="QCtree1st.r6">Disapprove</case>
+  <case label="r7" cond="QCtree1st.r7">Slight aware</case>
+  <case label="r8" cond="QCtree1st.r8">Slightly important</case>
+  <case label="r9" cond="QCtree1st.r9">Slightly familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree1stRow3" capture="">
+  <case label="r1" cond="QCtree1st.r1">Neither agree or disagree</case>
+  <case label="r2" cond="QCtree1st.r2">Neither confident or disagree</case>
+  <case label="r3" cond="QCtree1st.r3">Sometimes</case>
+  <case label="r4" cond="QCtree1st.r4">Fair</case>
+  <case label="r5" cond="QCtree1st.r5">Mild</case>
+  <case label="r6" cond="QCtree1st.r6">Neutral</case>
+  <case label="r7" cond="QCtree1st.r7">Moderately aware</case>
+  <case label="r8" cond="QCtree1st.r8">Moderately important</case>
+  <case label="r9" cond="QCtree1st.r9">Moderately familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree1stRow4" capture="">
+  <case label="r1" cond="QCtree1st.r1">Somewhat agree</case>
+  <case label="r2" cond="QCtree1st.r2">I’m <b>fairly</b> confident</case>
+  <case label="r3" cond="QCtree1st.r3">Often</case>
+  <case label="r4" cond="QCtree1st.r4">Good</case>
+  <case label="r5" cond="QCtree1st.r5">Moderate</case>
+  <case label="r6" cond="QCtree1st.r6">Approve</case>
+  <case label="r7" cond="QCtree1st.r7">Very aware</case>
+  <case label="r8" cond="QCtree1st.r8">Very important</case>
+  <case label="r9" cond="QCtree1st.r9">Very familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree1stRow5" capture="">
+  <case label="r1" cond="QCtree1st.r1">Strongly agree</case>
+  <case label="r2" cond="QCtree1st.r2">I’m <b>very</b> confident</case>
+  <case label="r3" cond="QCtree1st.r3">Always</case>
+  <case label="r4" cond="QCtree1st.r4">Excellent</case>
+  <case label="r5" cond="QCtree1st.r5">Severe</case>
+  <case label="r6" cond="QCtree1st.r6">Strongly approve</case>
+  <case label="r7" cond="QCtree1st.r7">Extremely aware</case>
+  <case label="r8" cond="QCtree1st.r8">Extremely important</case>
+  <case label="r9" cond="QCtree1st.r9">Extremely familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndRow1" capture="">
+  <case label="r1" cond="QCtree2nd.r1">Strongly disagree</case>
+  <case label="r2" cond="QCtree2nd.r2">I’m <b>not</b> confident <b>at all</b></case>
+  <case label="r3" cond="QCtree2nd.r3">Never</case>
+  <case label="r4" cond="QCtree2nd.r4">Very poor</case>
+  <case label="r5" cond="QCtree2nd.r5">None</case>
+  <case label="r6" cond="QCtree2nd.r6">Strongly disapprove</case>
+  <case label="r7" cond="QCtree2nd.r7">Not at all aware</case>
+  <case label="r8" cond="QCtree2nd.r8">Not at all important</case>
+  <case label="r9" cond="QCtree2nd.r9">Not at all familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndRow2" capture="">
+  <case label="r1" cond="QCtree2nd.r1">Somewhat disagree</case>
+  <case label="r2" cond="QCtree2nd.r2">I’m <b>not so</b> confident</case>
+  <case label="r3" cond="QCtree2nd.r3">Rarely</case>
+  <case label="r4" cond="QCtree2nd.r4">Poor</case>
+  <case label="r5" cond="QCtree2nd.r5">Very mild</case>
+  <case label="r6" cond="QCtree2nd.r6">Disapprove</case>
+  <case label="r7" cond="QCtree2nd.r7">Slight aware</case>
+  <case label="r8" cond="QCtree2nd.r8">Slightly important</case>
+  <case label="r9" cond="QCtree2nd.r9">Slightly familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndRow3" capture="">
+  <case label="r1" cond="QCtree2nd.r1">Neither agree or disagree</case>
+  <case label="r2" cond="QCtree2nd.r2">Neither confident or disagree</case>
+  <case label="r3" cond="QCtree2nd.r3">Sometimes</case>
+  <case label="r4" cond="QCtree2nd.r4">Fair</case>
+  <case label="r5" cond="QCtree2nd.r5">Mild</case>
+  <case label="r6" cond="QCtree2nd.r6">Neutral</case>
+  <case label="r7" cond="QCtree2nd.r7">Moderately aware</case>
+  <case label="r8" cond="QCtree2nd.r8">Moderately important</case>
+  <case label="r9" cond="QCtree2nd.r9">Moderately familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndRow4" capture="">
+  <case label="r1" cond="QCtree2nd.r1">Somewhat agree</case>
+  <case label="r2" cond="QCtree2nd.r2">I’m <b>fairly</b> confident</case>
+  <case label="r3" cond="QCtree2nd.r3">Often</case>
+  <case label="r4" cond="QCtree2nd.r4">Good</case>
+  <case label="r5" cond="QCtree2nd.r5">Moderate</case>
+  <case label="r6" cond="QCtree2nd.r6">Approve</case>
+  <case label="r7" cond="QCtree2nd.r7">Very aware</case>
+  <case label="r8" cond="QCtree2nd.r8">Very important</case>
+  <case label="r9" cond="QCtree2nd.r9">Very familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndRow5" capture="">
+  <case label="r1" cond="QCtree2nd.r1">Strongly agree</case>
+  <case label="r2" cond="QCtree2nd.r2">I’m <b>very</b> confident</case>
+  <case label="r3" cond="QCtree2nd.r3">Always</case>
+  <case label="r4" cond="QCtree2nd.r4">Excellent</case>
+  <case label="r5" cond="QCtree2nd.r5">Severe</case>
+  <case label="r6" cond="QCtree2nd.r6">Strongly approve</case>
+  <case label="r7" cond="QCtree2nd.r7">Extremely aware</case>
+  <case label="r8" cond="QCtree2nd.r8">Extremely important</case>
+  <case label="r9" cond="QCtree2nd.r9">Extremely familiar</case>
+  <case label="r10" cond="1">UNDEFINED</case></pipe>
+<exec>
+checkQC.r1.val=1
+</exec>
+
+<suspend/>
+
+<text 
+  label="sst"
+  cond="0"
+  size="40">
+  <title>section time</title>
+  <row label="S">screener</row>
+  <row label="A">section A</row>
+  <row label="B">section B</row>
+  <row label="C">section C</row>
+  <row label="D">section D</row>
+  <row label="E">section E</row>
+  <row label="F">section F</row>
+  <row label="G">section G</row>
+  <row label="Z">section Z</row>
+</text>
+
+<suspend/>
+
+<exec>
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times1 = time.time()
+</exec>
+
+<suspend/>
+
+<text 
+  label="VFC1"
+  fwidth="1024"
+  optional="0"
+  uses="verify.2"
+  verify:btn="Submit"
+  verify:count="3"
+  verify:wrongTxt_1="${res.errVFC1}"
+  verify:wrongTxt_2="${res.errVFC2}">
+  <title>Before you proceed to the survey, please complete the following security check question.<br />Please enter the text in the image.<br />If you can’t read text, please click on the image to refresh.<br />If you would like to hear the text read aloud, please click the speaker icon.</title>
+</text>
+
+<suspend/>
+
+<term cond="str(VFC1.val)=='Verificationfailed'">Verification failed</term>
+
+<suspend/>
+
+<html label="Info" where="survey">Welcome to our survey!<br /><br />The survey will take a <strong>maximum of 10 minutes</strong> for you to complete. Please answer each question on your screen before proceeding to the next screen. If you require a break at any stage, you can close your browser and return to the survey at a later time. All you need to do to resume is return to the My Survey portal and the survey will be waiting for you.</html>
+
+<suspend/>
+
+<radio 
+  label="QWBIR"
+  atm1d:large_buttonAlign="center"
+  atm1d:small_buttonAlign="center"
+  uses="atm1d.9">
+  <title><div style="font-size: 2em; border-bottom: 1px solid #e8932d;">We believe in research</div>
+<br />We want to remind you the company sponsoring this relies on the results to <strong>make key business decisions.</strong>Therefore, it’s very important that you provide <strong>considered and accurate </strong>responses.<br /><br />You’ll notice simple questions unrelated to the survey topic, they’re part of our <strong>quality controls</strong>, to ensure you’re paying attention. If a respondent fails these questions, the survey may be treated as invalid.<br /><br />Are you happy to co-operate with these <strong>quality controls</strong> and answer this <strong>survey accurately</strong>?</title>
+  <comment>Please select one response only.</comment>
+  <row label="r1" value="1">Yes</row>
+  <row label="r2" value="2">No</row>
+</radio>
+
+<text 
+  label="QHP"
+  cond="samplingHouse.r6"
+  size="40">
+  <title><span style="font-color: #ffffff"></span></title>
+  <row label="r1" ss:rowClassNames="QHP01"><span style="font-color:#ffffff">answerx</span></row>
+  <style mode="after" name="question.header"><![CDATA[
+<style type="text/css">
+ .QHP01{ display: none; }
+ .question {
+ border-bottom: 0px solid rgb(232, 147, 45);
+}
+ #question_text_QHP {
+ border-bottom: 1px solid rgb(232, 147, 45);
+}
+ </style>
+]]></style>
+</text>
+
+<suspend/>
+
+<term cond="QWBIR.r2">Believe in Research code 2</term>
+
+<term cond="not gv.isSST() and samplingHouse.r6 and QHP.val not in ['',None]">Honeypot</term>
+
+<suspend/>
+
+<html label="INTRO" where="survey">Firstly, a few quick questions to make sure we're surveying a good cross-section of the population.</html>
+
+<suspend/>
+
+<checkbox 
+  label="S1"
+  atleast="1"
+  rowShuffle="rotate"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>Do you or any of your immediate family work in the following industries?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Marketing, advertising or media</row>
+  <row label="r2">Market research</row>
+  <row label="r3">Food manufacturing or marketing</row>
+  <row label="r4">Food retail</row>
+  <row label="r5">Banking and finance</row>
+  <row label="r6">Hospitality</row>
+  <row label="r7">Airlines or travel</row>
+  <row label="r8">Manufacturing or sale of cars</row>
+  <row label="r9" exclusive="1" randomize="0">None of these</row>
+</checkbox>
+
+<suspend/>
+
+<number 
+  label="S2"
+  keepWith="S3,S4"
+  optional="0"
+  size="3"
+  verify="range(1,100)">
+  <title>Please type in your age in years:</title>
+  <comment>Please enter below.</comment>
+  <style arg:mlen="3" copy="QNumstyle" name="el.text"/>
+</number>
+
+<radio 
+  label="S3"
+  keepWith="S2,S4"
+  uses="atm1d.9">
+  <title>Are you...?</title>
+  <row label="r1" value="1">Male</row>
+  <row label="r2" value="2">Female</row>
+</radio>
+
+<text 
+  label="S4"
+  fwidth="1024"
+  keepWith="S2,S3"
+  optional="0"
+  size="5">
+  <title>Please type in your postcode:</title>
+  <validate>
+if not this.val.isdigit():
+  error(res.Errpostcode)
+if (len(this.val) lt 3) or (len(this.val) gt 4):
+  error(res.Errpostcode)
+  </validate>
+
+  <style arg:mlen="4" copy="QNumstyle" name="el.text"/>
+</text>
+
+<suspend/>
+
+<exec>
+if S2.check('1-17'):
+  S2b.val = 0
+if S2.check('18-24'):
+  S2b.val = 1
+if S2.check('25-34'):
+  S2b.val = 2
+if S2.check('35-49'):
+  S2b.val = 3
+if S2.check('50-64'):
+  S2b.val = 4
+if S2.check('65-120'):
+  S2b.val = 5
+
+if S2.check('18-21'):
+  S2c.val = 0
+if S2.check('22-25'):
+  S2c.val = 1
+if S2.check('26-39'):
+  S2c.val = 2
+if S2.check('40-120'):
+  S2c.val = 3
+</exec>
+
+<suspend/>
+
+<radio 
+  label="S2b"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record the age group 1</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="r0" value="0">1-17</row>
+  <row label="r1" value="1">18-24</row>
+  <row label="r2" value="2">25-34</row>
+  <row label="r3" value="3">35-49</row>
+  <row label="r4" value="4">50-64</row>
+  <row label="r5" value="5">65+</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="S2c"
+  cond="0"
+  optional="1"
+  style="dev,testing">
+  <title>Record the age group 2</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="r1" value="1">18-21</row>
+  <row label="r2" value="2">22-25</row>
+  <row label="r3" value="3">26-39</row>
+  <row label="r4" value="4">40+</row>
+</radio>
+
+<suspend/>
+
+<exec>
+p.postcodearr = [2601,2006,2265,3002,3213,5006,5203,7004,7027,6003,6042,4005,4209]
+random.shuffle(p.postcodearr)
+if (gv.isSST()):
+  S4.val= p.postcodearr[0]
+strchk = int(S4.val)
+
+if strchk in p.NSWM or strchk in p.NSWR:
+    S4b.val=0
+
+elif strchk in p.VICM or strchk in p.VICR:
+    S4b.val=1
+
+elif strchk in p.QLDM or strchk in p.QLDR:
+    S4b.val=2
+
+elif strchk in p.WAM or strchk in p.WAR:
+    S4b.val=3
+
+elif strchk in p.SAM or strchk in p.SAR:
+    S4b.val=4
+
+elif strchk in p.TASM or strchk in p.TASR:
+    S4b.val=5
+
+elif strchk in p.ACTM:
+    S4b.val=6
+
+elif strchk in p.NTM or strchk in p.NTR:
+    S4b.val=7
+elif strchk in p.OTR:
+    S4b.val=8
+else:
+    S4b.val=9
+
+if (strchk in p.NSWM or strchk in p.ACTM or strchk in p.VICM or strchk in p.QLDM or strchk in p.WAM or strchk in p.SAM or strchk in p.TASM or strchk in p.NTM):
+    S4c.val=0
+elif (strchk in p.NSWR or strchk in p.VICR or strchk in p.QLDR or strchk in p.WAR or strchk in p.SAR or strchk in p.TASR or strchk in p.NTR or strchk in p.OTR):
+    S4c.val=1
+
+if strchk in p.ACTM:
+    S4d.val=0
+elif strchk in p.NSWM:
+    S4d.val=1
+elif strchk in p.VICM:
+    S4d.val=2
+elif strchk in p.QLDM:
+    S4d.val=3
+elif strchk in p.SAM:
+    S4d.val=4
+elif strchk in p.WAM:
+    S4d.val=5
+elif strchk in p.TASM:
+    S4d.val=6
+elif strchk in p.NTM:
+    S4d.val=7
+elif strchk in p.NSWR:
+    S4d.val=8
+elif strchk in p.VICR:
+    S4d.val=9
+elif strchk in p.QLDR:
+    S4d.val=10
+elif strchk in p.SAR:
+    S4d.val=11
+elif strchk in p.WAR:
+    S4d.val=12
+elif strchk in p.TASR:
+    S4d.val=13
+elif strchk in p.NTR:
+    S4d.val=14
+elif strchk in p.OTR:
+    S4d.val=15
+
+if strchk in p.MajorC:
+  S4e.val=0
+elif strchk in p.InnerR:
+  S4e.val=1
+elif strchk in p.OuterR:
+  S4e.val=2
+elif strchk in p.RemoteA:
+  S4e.val=3
+elif strchk in p.VeryRemoteA:
+  S4e.val=4
+</exec>
+
+<suspend/>
+
+<radio 
+  label="S4b"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record the state</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="r1" value="1">NSW</row>
+  <row label="r2" value="2">VIC</row>
+  <row label="r3" value="3">QLD</row>
+  <row label="r4" value="4">WA</row>
+  <row label="r5" value="5">SA</row>
+  <row label="r6" value="6">TAS</row>
+  <row label="r7" value="7">ACT</row>
+  <row label="r8" value="8">NT</row>
+  <row label="r9" value="9">OT</row>
+  <row label="r10" value="10">NONE</row>
+</radio>
+
+<radio 
+  label="S4c"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record of GCCSA Region</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="r1" value="1">Metro</row>
+  <row label="r2" value="2">Regional</row>
+</radio>
+
+<radio 
+  label="S4d"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record of GCCSA</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="r1" value="1">Australian Capital Territory - Canberra</row>
+  <row label="r2" value="2">Greater Sydney</row>
+  <row label="r3" value="3">Greater Melbourne</row>
+  <row label="r4" value="4">Greater Brisbane</row>
+  <row label="r5" value="5">Greater Adelaide</row>
+  <row label="r6" value="6">Greater Perth</row>
+  <row label="r7" value="7">Greater Hobart</row>
+  <row label="r8" value="8">Greater Darwin</row>
+  <row label="r9" value="9">REST OF NSW</row>
+  <row label="r10" value="10">REST OF VIC</row>
+  <row label="r11" value="11">REST OF QLD</row>
+  <row label="r12" value="12">REST OF SA</row>
+  <row label="r13" value="13">REST OF WA</row>
+  <row label="r14" value="14">REST OF TAS</row>
+  <row label="r15" value="15">REST OF NT</row>
+  <row label="r16" value="16">REST OF Other Territories</row>
+</radio>
+
+<radio 
+  label="S4e"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record the RA</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="r1" value="1">Major Cities of Australia</row>
+  <row label="r2" value="2">Inner Regional Australia</row>
+  <row label="r3" value="3">Outer Regional Australia</row>
+  <row label="r4" value="4">Remote Australia</row>
+  <row label="r5" value="5">Very Remote Australia</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="S5"
+  uses="atm1d.9">
+  <title>Which of the following best describes the household you live in?</title>
+  <comment>Please select the one answer that most applies.</comment>
+  <row label="r1">Live with parents or boarding</row>
+  <row label="r2">Live alone</row>
+  <row label="r3">Live in a shared adult household</row>
+  <row label="r4">Live with partner</row>
+  <row label="r5">Live with my partner and children</row>
+  <row label="r6">Live with my children</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="S6_hidden"
+  where="execute,survey,report">
+  <title>Do you have children?</title>
+  <comment>autopunch selected 5 or 6 at S5</comment>
+  <row label="r1" autofill="S5.r5 or S5.r6">Yes</row>
+  <row label="r2" autofill="S5.r1 or S5.r2 or S5.r3 or S5.r4">No</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="S6"
+  cond="S5.r1 or S5.r2 or S5.r3 or S5.r4"
+  uses="atm1d.9">
+  <title>Do you have children?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if S5.r1 or S5.r2 or S5.r3 or S5.r4:
+  S7.val = 0
+</exec>
+
+<number 
+  label="S7"
+  cond="S5.r5 or S5.r6"
+  optional="0"
+  size="3"
+  verify="range(1,20)">
+  <title>How many children currently live in your household?</title>
+  <comment>Please enter a whole number.</comment>
+</number>
+
+<suspend/>
+
+<checkbox 
+  label="S8"
+  cond="S5.r5 or S5.r6"
+  atleast="1"
+  uses="atm1d.9">
+  <title>Which of the following age groups do your children living at home fall into?</title>
+  <comment>Please select all that apply.</comment>
+  <validate>
+if this.count gt S7.val:
+    error(res.errS7)
+  </validate>
+
+  <row label="r1">Under 5 years</row>
+  <row label="r2">5-12 years</row>
+  <row label="r3">13-17 years</row>
+  <row label="r4">18+ years</row>
+</checkbox>
+
+<suspend/>
+
+<autofill label="S8Bx1" where="execute,survey,report">
+  <title>HIDDEN LIFESTAGE</title>
+  <row label="r1" autofill="(S2.check('16-22')) and (S5.r1 or S5.r2 or S5.r3 or S5.r4)">Gen Z/ Young Millennials</row>
+  <row label="r2" autofill="(S2.check('23-35')) and (S5.r1 or S5.r2 or S5.r3 or S5.r4)">Young SINKS/DINKS</row>
+  <row label="r3" autofill="(S2.check('&gt;35')) and (S5.r1 or S5.r2 or S5.r3 or S5.r4)">Older SINKS/DINKS</row>
+  <row label="r4" autofill="(S5.r5 or S5.r6) and (S8.r1 or S8.r2)">Young family</row>
+  <row label="r5" autofill="(S5.r5 or S5.r6) and (S8.r3 or S8.r4)">Older family</row>
+  <row label="none" autofill="S8Bx1.count == 0" builder:none="1"><i>None</i></row>
+</autofill>
+
+<suspend/>
+
+<radio 
+  label="S9"
+  uses="atm1d.9">
+  <title>Which of the following best describes your highest level of education? </title>
+  <comment>Please select one answer.</comment>
+  <row label="r1">Year 10 or below</row>
+  <row label="r2">Year 11 or 12</row>
+  <row label="r3">Diploma or certificate from a college or TAFE including an apprenticeship</row>
+  <row label="r4">Degree of diploma from a university</row>
+  <row label="r5">Postgraduate degree</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="S10"
+  uses="atm1d.9">
+  <title>Which of the following groups does your total (pre-tax) personal annual income fall?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Under $20,000</row>
+  <row label="r2">$20,000 - $39,999</row>
+  <row label="r3">$40,000 - $59,999</row>
+  <row label="r4">$60,000 - $79,999</row>
+  <row label="r5">$80,000 - $99,999</row>
+  <row label="r6">$100,000 - $119,999</row>
+  <row label="r7">$120,000 - $149,999</row>
+  <row label="r8">$150,000 or more</row>
+  <row label="r9">Prefer not to say</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="S11"
+  atleast="1"
+  rowShuffle="rotate"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>Which of the following have you done in the <b>past 12 months</b>?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Undergone an IVF cycle (Inc. egg retrieval &amp;/or insemination)</row>
+  <row label="r2">Retired from work</row>
+  <row label="r3">Purchased an investment property</row>
+  <row label="r4">Graduated from University</row>
+  <row label="r5">Bought testosterone supplements</row>
+  <row label="r6">Taken an international holiday</row>
+  <row label="r7">Bought a yacht</row>
+  <row label="r8" exclusive="1" randomize="0">None of these</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+S11_SUM.val=S11.count
+</exec>
+
+<suspend/>
+
+<exec>
+if S11.count ge 7:
+  checkQC.r10.val=1
+</exec>
+
+<suspend/>
+
+<number 
+  label="S11_SUM"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  size="3"
+  style="dev,testing">
+  <title>Record the number of options selected in QC7</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+</number>
+
+<suspend/>
+
+<term cond="S11.count ge 7">QS11 selected all 7 responses</term>
+
+<suspend/>
+
+<exec>
+if S1.r1 or S1.r2 or S1.r3 or S1.r4:
+  TermAll.S1.val=1
+if S2b.r0 or S2b.r5:
+  TermAll.S2b.val=1
+if S4b.r10 or S4b.r9:
+  TermAll.S4b.val=1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="TermAll"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Summary the respondents terminated place.</title>
+  <comment>This is a hide question, will be auto hide during the FW</comment>
+  <row label="S1">S1</row>
+  <row label="S2b">S2b</row>
+  <row label="S4b">S4b</row>
+  <row label="S5">S5</row>
+</checkbox>
+
+<suspend/>
+
+<term cond="S1.r1 or S1.r2 or S1.r3 or S1.r4">S1_term</term>
+
+<term cond="S2b.r0 or S2b.r5">Age less than 18 or greater than 64</term>
+
+<term cond="S4b.r10 or S4b.r9">State code none</term>
+
+<term cond="TermAll.any">*Respondent terminate by TermALL</term>
+
+<suspend/>
+
+<quota overquota="noqual" sheet="total_quota"/>
+
+<suspend/>
+
+<exec>
+p.times2= time.time()   
+VAR_TIME_S.r1.val = ("%.2f" % ((p.times2- p.times1) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_S"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">SECTION 1: S</row>
+</float>
+
+<suspend/>
+
+<radio 
+  label="tempQC1"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>${pipe.QCtree1stTitle}</title>
+  <comment>Please select one response only.</comment>
+  <row label="r1" value="1">${pipe.QCtree1stRow1}</row>
+  <row label="r2" value="2">${pipe.QCtree1stRow2}</row>
+  <row label="r3" value="3">${pipe.QCtree1stRow3}</row>
+  <row label="r4" value="4">${pipe.QCtree1stRow4}</row>
+  <row label="r5" value="5">${pipe.QCtree1stRow5}</row>
+</radio>
+
+<suspend/>
+
+<exec>
+QC1.val=0
+if (QCtree1st.r1 and not tempQC1.r5) or (QCtree1st.r2 and not tempQC1.r4) or (QCtree1st.r3 and not tempQC1.r2) or (QCtree1st.r4 and not tempQC1.r5) or (QCtree1st.r5 and not tempQC1.r4) or (QCtree1st.r6 and not tempQC1.r2) or (QCtree1st.r7 and not tempQC1.r5) or (QCtree1st.r8 and not tempQC1.r4) or (QCtree1st.r9 and not tempQC1.r2):
+  QC1.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="QC1"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record the 1st QC question answer correct or incorrect.</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">Correct</row>
+  <row label="r2" value="2">Incorrect</row>
+</radio>
+
+<suspend/>
+
+<pipe label="QCtree1stText" capture="">
+  <case label="r1" cond="QC1.r1"><p><b>Great! You passed the first quality check question! There will be more later in survey!</b><br />Thank you so much for paying attention to the survey. We value your considered and honest answers</p></case>
+  <case label="r2" cond="QC1.r2 and samplingHouse.r6">Unfortunately some of your recent answers indicate you may not be fully engaged in this survey.  Please answer honestly as these questions are about "you" and your opinions and experiences. <br /><br />Inconsistent or incomplete answers may result in this survey being cancelled and you will not be eligible to earn the credit you were offered for completion.</case>
+  <case label="r3" cond="QC1.r2"><p><b>You have selected the incorrect answer to the previous question...</b><br />Which suggests you are not paying attention to this survey. The integrity of this research depends on your considered &amp; honest answers.</p><p><b>If you fail the next quality check question,</b><br />you may not be provided the full incentive and may not be invited to complete future surveys.</p></case>
+  <case label="r4" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree1stCSS" capture="">
+  <case label="r1" cond="QC1.r1">custom-newqc-t</case>
+  <case label="r2" cond="QC1.r2">custom-newqc-f</case>
+  <case label="r3" cond="1">UNDEFINED</case></pipe>
+<html label="QC1TOF" ss:commentClassNames="${pipe.QCtree1stCSS}">${pipe.QCtree1stText}</html>
+
+<suspend/>
+
+<exec>
+sst.S.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<label label="sect1" builder:title="Section A"/>
+
+<checkbox 
+  label="proglist_A"
+  optional="1"
+  where="execute,survey,report">
+  <title>All UNITS of Product.</title>
+  <comment>will be hidden</comment>
+  <row label="r1" autofill="1">Plant Based</row>
+  <row label="r2" autofill="1">Flexitarian</row>
+  <row label="r3" autofill="1">Vegetarian</row>
+  <row label="r4" autofill="1">Vegan</row>
+  <row label="r5" autofill="1">Gluten free</row>
+  <row label="r6" autofill="1">Low Carb</row>
+  <row label="r7" autofill="1">High Protein</row>
+  <row label="r8" autofill="1">Low Sugar/Sugar Free</row>
+  <row label="r9" autofill="1">Indulgent Treats</row>
+  <row label="r10" autofill="1">Food with 100% Australian Ingredients</row>
+  <row label="r11" autofill="1">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</row>
+  <row label="r12" autofill="1">Recyclable Packaging</row>
+  <row label="r13" autofill="1">RSPCA Approved</row>
+  <row label="r14" autofill="1">Free Range Chicken/Eggs</row>
+  <row label="r15" autofill="1">Sustainably Sourced Coffee Beans</row>
+  <row label="r16" autofill="1">American BBQ</row>
+  <row label="r17" autofill="1">Mexican/Tex Mex</row>
+  <row label="r18" autofill="1">Thai</row>
+  <row label="r19" autofill="1">Italian</row>
+  <row label="r20" autofill="1">Japanese</row>
+  <row label="r21" autofill="1">Middle Eastern</row>
+  <row label="r22" autofill="1">Australian BBQ</row>
+  <row label="r23" autofill="1">Asian Fusion</row>
+  <row label="r24" autofill="1">Korean</row>
+  <row label="r25" autofill="1">Street Food</row>
+  <row label="r26" autofill="1">Traditional Family Favourites</row>
+  <row label="r27" autofill="1">Marinated Meats</row>
+  <row label="r28" autofill="1">Food With Miso</row>
+  <row label="r29" autofill="1">Food With Caramelised Flavours</row>
+  <row label="r30" autofill="1">Food With Charred/Blackened Flavours</row>
+  <row label="r31" autofill="1">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</row>
+  <row label="r32" autofill="1">Loaded Shakes</row>
+  <row label="r33" autofill="1">Food in Sharing Boxes</row>
+  <row label="r34" autofill="1">Gourmet Beef Burgers</row>
+  <row label="r35" autofill="1">Large Chicken Burgers</row>
+  <row label="r36" autofill="1">Chicken Waffle</row>
+  <row label="r37" autofill="1">Fried Chicken with Gravy</row>
+  <row label="r38" autofill="1">Fried Food</row>
+  <row label="r39" autofill="0">Sweet Potato Fries</row>
+  <row label="r40" autofill="1">Chicken Wraps</row>
+  <row label="r41" autofill="1">Tacos</row>
+  <row label="r42" autofill="1">Oat Milk</row>
+  <row label="r43" autofill="1">Nitro Coffee</row>
+  <row label="r44" autofill="1">Cold Brew</row>
+  <row label="r45" autofill="1">Kombucha</row>
+  <row label="r46" autofill="1">Coconut Water</row>
+  <row label="r47" autofill="1">Immunity Boosting Drink</row>
+  <row label="r48" autofill="1">Probiotic drink</row>
+  <row label="r49" autofill="1">Milo</row>
+  <row label="r50" autofill="1">Bubble Tea</row>
+  <row label="r51" autofill="1">Smoothies</row>
+  <row label="r52" autofill="1">Craft Sodas</row>
+  <row label="r53" autofill="1">Milk Chocolate</row>
+  <row label="r54" autofill="1">Chocolate Brownie</row>
+  <row label="r55" autofill="1">Nutella</row>
+  <row label="r56" autofill="1">Lotus Biscoff</row>
+  <row label="r57" autofill="1">Mango</row>
+  <row label="r58" autofill="1">Blueberry</row>
+  <row label="r59" autofill="1">Coconut</row>
+  <row label="r60" autofill="1">Matcha</row>
+  <row label="r61" autofill="1">Pavlova</row>
+  <row label="r62" autofill="1">Tiramisu</row>
+  <row label="r63" autofill="1">Smokey BBQ Sauce</row>
+  <row label="r64" autofill="1">Texan BBQ Sauce</row>
+  <row label="r65" autofill="1">Spicy BBQ Sauce</row>
+  <row label="r66" autofill="1">BBQ Rib Sauce</row>
+  <row label="r67" autofill="1">Korean BBQ Sauce</row>
+  <row label="r68" autofill="1">Memphis BBQ Sauce</row>
+  <row label="r69" autofill="1">Aioli</row>
+  <row label="r70" autofill="1">Smoky Mayo</row>
+  <row label="r71" autofill="1">Spicy Mayo</row>
+  <row label="r72" autofill="1">Truffle Aioli</row>
+  <row label="r73" autofill="1">Lemon Herb Aioli</row>
+  <row label="r74" autofill="1">Burger Sauce</row>
+  <row label="r75" autofill="1">Ranch Sauce</row>
+  <row label="r76" autofill="1">Pepper Mayo</row>
+  <row label="r77" autofill="1">Signature Sauce</row>
+  <row label="r78" autofill="1">Jalapeno Sauce</row>
+  <row label="r79" autofill="1">Sriracha</row>
+  <row label="r80" autofill="1">Chipotle</row>
+  <row label="r81" autofill="1">Buffalo Sauce</row>
+  <row label="r82" autofill="1">Mighty Hot Sauce</row>
+  <row label="r83" autofill="1">Free Range Chicken</row>
+  <row label="r84" autofill="1">Free Range Eggs</row>
+  <row label="r85" autofill="1">Flavoured Hot Coffee</row>
+  <row label="r86" autofill="1">Flavoured Cold Coffee</row>
+  <row label="r87" autofill="1">Potato Scallops</row>
+  <row label="r88" autofill="1">Mozzarella Sticks</row>
+  <row label="r89" autofill="1">Mac &amp; Cheese Bites</row>
+  <row label="r90" autofill="1">Sweet Potato Fries</row>
+</checkbox>
+
+<suspend/>
+
+<quota label="hidleastfill_1" overquota="noqual" sheet="hidlistfill_A"/>
+
+<exec>
+arr =['Product1','Product2','Product3','Product4','Product5','Product6','Product7','Product8','Product9','Product10','Product11','Product12','Product13','Product14','Product15','Product16','Product17','Product18','Product19','Product20','Product21','Product22','Product23','Product24','Product25','Product26','Product27','Product28','Product29','Product30','Product31','Product32','Product33','Product34','Product35','Product36','Product37','Product38','Product39','Product40','Product41','Product42','Product43','Product44','Product45','Product46','Product47','Product48','Product49','Product50','Product51','Product52','Product53','Product54','Product55','Product56','Product57','Product58','Product59','Product60','Product61','Product62','Product63','Product64','Product65','Product66','Product67','Product68','Product69','Product70','Product71','Product72','Product73','Product74','Product75','Product76','Product77','Product78','Product79','Product80','Product81','Product82','Product83','Product84','Product85','Product86','Product87','Product88', 'Product89','Product90']
+for itr in range(len(arr)):
+  if (hasMarker('/hidlistfill_A/*/*/' + arr[itr])):
+      HidlistA.rows[itr].val = 1
+</exec>
+
+<checkbox 
+  label="HidlistA"
+  optional="1"
+  shuffle="rows"
+  where="execute,survey,report">
+  <title>Hidden Question</title>
+  <comment>randomly capture 17 items</comment>
+  <row label="r1">Plant Based</row>
+  <row label="r2">Flexitarian</row>
+  <row label="r3">Vegetarian</row>
+  <row label="r4">Vegan</row>
+  <row label="r5">Gluten free</row>
+  <row label="r6">Low Carb</row>
+  <row label="r7">High Protein</row>
+  <row label="r8">Low Sugar/Sugar Free</row>
+  <row label="r9">Indulgent Treats</row>
+  <row label="r10">Food with 100% Australian Ingredients</row>
+  <row label="r11">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</row>
+  <row label="r12">Recyclable Packaging</row>
+  <row label="r13">RSPCA Approved</row>
+  <row label="r14">Free Range Chicken/Eggs</row>
+  <row label="r15">Sustainably Sourced Coffee Beans</row>
+  <row label="r16">American BBQ</row>
+  <row label="r17">Mexican/Tex Mex</row>
+  <row label="r18">Thai</row>
+  <row label="r19">Italian</row>
+  <row label="r20">Japanese</row>
+  <row label="r21">Middle Eastern</row>
+  <row label="r22">Australian BBQ</row>
+  <row label="r23">Asian Fusion</row>
+  <row label="r24">Korean</row>
+  <row label="r25">Street Food</row>
+  <row label="r26">Traditional Family Favourites</row>
+  <row label="r27">Marinated Meats</row>
+  <row label="r28">Food With Miso</row>
+  <row label="r29">Food With Caramelised Flavours</row>
+  <row label="r30">Food With Charred/Blackened Flavours</row>
+  <row label="r31">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</row>
+  <row label="r32">Loaded Shakes</row>
+  <row label="r33">Food in Sharing Boxes</row>
+  <row label="r34">Gourmet Beef Burgers</row>
+  <row label="r35">Large Chicken Burgers</row>
+  <row label="r36">Chicken Waffle</row>
+  <row label="r37">Fried Chicken with Gravy</row>
+  <row label="r38">Fried Food</row>
+  <row label="r39">Sweet Potato Fries</row>
+  <row label="r40">Chicken Wraps</row>
+  <row label="r41">Tacos</row>
+  <row label="r42">Oat Milk</row>
+  <row label="r43">Nitro Coffee</row>
+  <row label="r44">Cold Brew</row>
+  <row label="r45">Kombucha</row>
+  <row label="r46">Coconut Water</row>
+  <row label="r47">Immunity Boosting Drink</row>
+  <row label="r48">Probiotic drink</row>
+  <row label="r49">Milo</row>
+  <row label="r50">Bubble Tea</row>
+  <row label="r51">Smoothies</row>
+  <row label="r52">Craft Sodas</row>
+  <row label="r53">Milk Chocolate</row>
+  <row label="r54">Chocolate Brownie</row>
+  <row label="r55">Nutella</row>
+  <row label="r56">Lotus Biscoff</row>
+  <row label="r57">Mango</row>
+  <row label="r58">Blueberry</row>
+  <row label="r59">Coconut</row>
+  <row label="r60">Matcha</row>
+  <row label="r61">Pavlova</row>
+  <row label="r62">Tiramisu</row>
+  <row label="r63">Smokey BBQ Sauce</row>
+  <row label="r64">Texan BBQ Sauce</row>
+  <row label="r65">Spicy BBQ Sauce</row>
+  <row label="r66">BBQ Rib Sauce</row>
+  <row label="r67">Korean BBQ Sauce</row>
+  <row label="r68">Memphis BBQ Sauce</row>
+  <row label="r69">Aioli</row>
+  <row label="r70">Smoky Mayo</row>
+  <row label="r71">Spicy Mayo</row>
+  <row label="r72">Truffle Aioli</row>
+  <row label="r73">Lemon Herb Aioli</row>
+  <row label="r74">Burger Sauce</row>
+  <row label="r75">Ranch Sauce</row>
+  <row label="r76">Pepper Mayo</row>
+  <row label="r77">Signature Sauce</row>
+  <row label="r78">Jalapeno Sauce</row>
+  <row label="r79">Sriracha</row>
+  <row label="r80">Chipotle</row>
+  <row label="r81">Buffalo Sauce</row>
+  <row label="r82">Mighty Hot Sauce</row>
+  <row label="r83">Free Range Chicken</row>
+  <row label="r84">Free Range Eggs</row>
+  <row label="r85">Flavoured Hot Coffee</row>
+  <row label="r86">Flavoured Cold Coffee</row>
+  <row label="r87">Potato Scallops</row>
+  <row label="r88">Mozzarella Sticks</row>
+  <row label="r89">Mac &amp; Cheese Bites</row>
+  <row label="r90">Sweet Potato Fries</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+arrOrder=[];
+for itr in range(len(HidlistA.rows.order)):
+  if  HidlistA.rows[HidlistA.rows.order[itr].index].val:
+   arrOrder.append(HidlistA.rows[HidlistA.rows.order[itr].index].label)
+
+for itr in range(len(arrOrder)):
+  eval("HidLoopOrderA." + str(arrOrder[itr])).val = itr + 1
+print arrOrder;
+</exec>
+
+<number 
+  label="HidLoopOrderA"
+  shuffle="rows"
+  shuffleBy="HidlistA"
+  size="10"
+  where="execute,survey,report">
+  <title>Hidden for storing concept order - hidden_q</title>
+  <row label="r1">Plant Based</row>
+  <row label="r2">Flexitarian</row>
+  <row label="r3">Vegetarian</row>
+  <row label="r4">Vegan</row>
+  <row label="r5">Gluten free</row>
+  <row label="r6">Low Carb</row>
+  <row label="r7">High Protein</row>
+  <row label="r8">Low Sugar/Sugar Free</row>
+  <row label="r9">Indulgent Treats</row>
+  <row label="r10">Food with 100% Australian Ingredients</row>
+  <row label="r11">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</row>
+  <row label="r12">Recyclable Packaging</row>
+  <row label="r13">RSPCA Approved</row>
+  <row label="r14">Free Range Chicken/Eggs</row>
+  <row label="r15">Sustainably Sourced Coffee Beans</row>
+  <row label="r16">American BBQ</row>
+  <row label="r17">Mexican/Tex Mex</row>
+  <row label="r18">Thai</row>
+  <row label="r19">Italian</row>
+  <row label="r20">Japanese</row>
+  <row label="r21">Middle Eastern</row>
+  <row label="r22">Australian BBQ</row>
+  <row label="r23">Asian Fusion</row>
+  <row label="r24">Korean</row>
+  <row label="r25">Street Food</row>
+  <row label="r26">Traditional Family Favourites</row>
+  <row label="r27">Marinated Meats</row>
+  <row label="r28">Food With Miso</row>
+  <row label="r29">Food With Caramelised Flavours</row>
+  <row label="r30">Food With Charred/Blackened Flavours</row>
+  <row label="r31">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</row>
+  <row label="r32">Loaded Shakes</row>
+  <row label="r33">Food in Sharing Boxes</row>
+  <row label="r34">Gourmet Beef Burgers</row>
+  <row label="r35">Large Chicken Burgers</row>
+  <row label="r36">Chicken Waffle</row>
+  <row label="r37">Fried Chicken with Gravy</row>
+  <row label="r38">Fried Food</row>
+  <row label="r39">Sweet Potato Fries</row>
+  <row label="r40">Chicken Wraps</row>
+  <row label="r41">Tacos</row>
+  <row label="r42">Oat Milk</row>
+  <row label="r43">Nitro Coffee</row>
+  <row label="r44">Cold Brew</row>
+  <row label="r45">Kombucha</row>
+  <row label="r46">Coconut Water</row>
+  <row label="r47">Immunity Boosting Drink</row>
+  <row label="r48">Probiotic drink</row>
+  <row label="r49">Milo</row>
+  <row label="r50">Bubble Tea</row>
+  <row label="r51">Smoothies</row>
+  <row label="r52">Craft Sodas</row>
+  <row label="r53">Milk Chocolate</row>
+  <row label="r54">Chocolate Brownie</row>
+  <row label="r55">Nutella</row>
+  <row label="r56">Lotus Biscoff</row>
+  <row label="r57">Mango</row>
+  <row label="r58">Blueberry</row>
+  <row label="r59">Coconut</row>
+  <row label="r60">Matcha</row>
+  <row label="r61">Pavlova</row>
+  <row label="r62">Tiramisu</row>
+  <row label="r63">Smokey BBQ Sauce</row>
+  <row label="r64">Texan BBQ Sauce</row>
+  <row label="r65">Spicy BBQ Sauce</row>
+  <row label="r66">BBQ Rib Sauce</row>
+  <row label="r67">Korean BBQ Sauce</row>
+  <row label="r68">Memphis BBQ Sauce</row>
+  <row label="r69">Aioli</row>
+  <row label="r70">Smoky Mayo</row>
+  <row label="r71">Spicy Mayo</row>
+  <row label="r72">Truffle Aioli</row>
+  <row label="r73">Lemon Herb Aioli</row>
+  <row label="r74">Burger Sauce</row>
+  <row label="r75">Ranch Sauce</row>
+  <row label="r76">Pepper Mayo</row>
+  <row label="r77">Signature Sauce</row>
+  <row label="r78">Jalapeno Sauce</row>
+  <row label="r79">Sriracha</row>
+  <row label="r80">Chipotle</row>
+  <row label="r81">Buffalo Sauce</row>
+  <row label="r82">Mighty Hot Sauce</row>
+  <row label="r83">Free Range Chicken</row>
+  <row label="r84">Free Range Eggs</row>
+  <row label="r85">Flavoured Hot Coffee</row>
+  <row label="r86">Flavoured Cold Coffee</row>
+  <row label="r87">Potato Scallops</row>
+  <row label="r88">Mozzarella Sticks</row>
+  <row label="r89">Mac &amp; Cheese Bites</row>
+  <row label="r90">Sweet Potato Fries</row>
+</number>
+
+<suspend/>
+
+<exec>
+L1_expanded.order = HidlistA.rows.order
+</exec>
+
+<suspend/>
+
+<html label="INTRO_A" where="survey">We'd now like to ask you about the <strong>food and drink</strong> you may (or may not) have been eating or drinking recently. Some of the things we'll ask you about will be specific types of food or drink, whilst others will be types of diet, cuisine or ingredient.</html>
+
+<suspend/>
+
+<loop label="L1" builderSource="HidlistA" vars="HidlistArows,Var1">
+  <block label="b1" builder:title="default loop block">
+    <suspend/>
+
+    <select 
+    label="A1_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, have you consumed it in the last month?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">Yes</choice>
+      <choice label="r2">No</choice>
+    </select>
+
+    <select 
+    label="A2_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, do you hope to consume more or less of it in the next month?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">Much more</choice>
+      <choice label="r2">A little more</choice>
+      <choice label="r3">The same</choice>
+      <choice label="r4">A little less</choice>
+      <choice label="r5">Much less</choice>
+    </select>
+
+    <select 
+    label="A3_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, to what extent does it fit with your idea of the McDonald’s menu?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">It fits really well on the McDonald's menu</choice>
+      <choice label="r2">It fits fairly well on the McDonald's menu</choice>
+      <choice label="r3">I don't know/don't have an opinion</choice>
+      <choice label="r4">It doesn't fit that well on the McDonald's menu</choice>
+      <choice label="r5">It doesn't fit at all well on the McDonald's menu</choice>
+    </select>
+
+    <select 
+    label="A4_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the <strong>[loopvar:Var1]</strong> below, if it was added to, or featured more on the McDonald’s menu, to what extent would this impact your likelihood to go to McDonald’s?<br /><br /><div align="center"><span style="font-size: 16pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistArows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">I'd be much more likely to go to McDonalds</choice>
+      <choice label="r2">I'd be somewhat more likely to go to McDonald's</choice>
+      <choice label="r3">It would have no effect</choice>
+      <choice label="r4">I'd be somewhat less likely to go to McDonald's</choice>
+      <choice label="r5">I'd be much less likely to go to McDonald's</choice>
+    </select>
+  </block>
+
+  <looprow label="Lr1" cond="(HidlistA.r1)">
+    <loopvar name="HidlistArows">Plant Based</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(HidlistA.r2)">
+    <loopvar name="HidlistArows">Flexitarian</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(HidlistA.r3)">
+    <loopvar name="HidlistArows">Vegetarian</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(HidlistA.r4)">
+    <loopvar name="HidlistArows">Vegan</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(HidlistA.r5)">
+    <loopvar name="HidlistArows">Gluten free</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(HidlistA.r6)">
+    <loopvar name="HidlistArows">Low Carb</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr7" cond="(HidlistA.r7)">
+    <loopvar name="HidlistArows">High Protein</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr8" cond="(HidlistA.r8)">
+    <loopvar name="HidlistArows">Low Sugar/Sugar Free</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr9" cond="(HidlistA.r9)">
+    <loopvar name="HidlistArows">Indulgent Treats</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr10" cond="(HidlistA.r10)">
+    <loopvar name="HidlistArows">Food with 100% Australian Ingredients</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr11" cond="(HidlistA.r11)">
+    <loopvar name="HidlistArows">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr12" cond="(HidlistA.r12)">
+    <loopvar name="HidlistArows">Recyclable Packaging</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr13" cond="(HidlistA.r13)">
+    <loopvar name="HidlistArows">RSPCA Approved</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr14" cond="(HidlistA.r14)">
+    <loopvar name="HidlistArows">Free Range Chicken/Eggs</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr15" cond="(HidlistA.r15)">
+    <loopvar name="HidlistArows">Sustainably Sourced Coffee Beans</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr16" cond="(HidlistA.r16)">
+    <loopvar name="HidlistArows">American BBQ</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr17" cond="(HidlistA.r17)">
+    <loopvar name="HidlistArows">Mexican/Tex Mex</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr18" cond="(HidlistA.r18)">
+    <loopvar name="HidlistArows">Thai</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr19" cond="(HidlistA.r19)">
+    <loopvar name="HidlistArows">Italian</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr20" cond="(HidlistA.r20)">
+    <loopvar name="HidlistArows">Japanese</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr21" cond="(HidlistA.r21)">
+    <loopvar name="HidlistArows">Middle Eastern</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr22" cond="(HidlistA.r22)">
+    <loopvar name="HidlistArows">Australian BBQ</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr23" cond="(HidlistA.r23)">
+    <loopvar name="HidlistArows">Asian Fusion</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr24" cond="(HidlistA.r24)">
+    <loopvar name="HidlistArows">Korean</loopvar>
+    <loopvar name="Var1">cuisine</loopvar>
+  </looprow>
+
+  <looprow label="Lr25" cond="(HidlistA.r25)">
+    <loopvar name="HidlistArows">Street Food</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr26" cond="(HidlistA.r26)">
+    <loopvar name="HidlistArows">Traditional Family Favourites</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr27" cond="(HidlistA.r27)">
+    <loopvar name="HidlistArows">Marinated Meats</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr28" cond="(HidlistA.r28)">
+    <loopvar name="HidlistArows">Food With Miso</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr29" cond="(HidlistA.r29)">
+    <loopvar name="HidlistArows">Food With Caramelised Flavours</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr30" cond="(HidlistA.r30)">
+    <loopvar name="HidlistArows">Food With Charred/Blackened Flavours</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr31" cond="(HidlistA.r31)">
+    <loopvar name="HidlistArows">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr32" cond="(HidlistA.r32)">
+    <loopvar name="HidlistArows">Loaded Shakes</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr33" cond="(HidlistA.r33)">
+    <loopvar name="HidlistArows">Food in Sharing Boxes</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr34" cond="(HidlistA.r34)">
+    <loopvar name="HidlistArows">Gourmet Beef Burgers</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr35" cond="(HidlistA.r35)">
+    <loopvar name="HidlistArows">Large Chicken Burgers</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr36" cond="(HidlistA.r36)">
+    <loopvar name="HidlistArows">Chicken Waffle</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr37" cond="(HidlistA.r37)">
+    <loopvar name="HidlistArows">Fried Chicken with Gravy</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr38" cond="(HidlistA.r38)">
+    <loopvar name="HidlistArows">Fried Food</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr39" cond="(HidlistA.r39)">
+    <loopvar name="HidlistArows">Sweet Potato Fries</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr40" cond="(HidlistA.r40)">
+    <loopvar name="HidlistArows">Chicken Wraps</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr41" cond="(HidlistA.r41)">
+    <loopvar name="HidlistArows">Tacos</loopvar>
+    <loopvar name="Var1">food type</loopvar>
+  </looprow>
+
+  <looprow label="Lr42" cond="(HidlistA.r42)">
+    <loopvar name="HidlistArows">Oat Milk</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr43" cond="(HidlistA.r43)">
+    <loopvar name="HidlistArows">Nitro Coffee</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr44" cond="(HidlistA.r44)">
+    <loopvar name="HidlistArows">Cold Brew</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr45" cond="(HidlistA.r45)">
+    <loopvar name="HidlistArows">Kombucha</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr46" cond="(HidlistA.r46)">
+    <loopvar name="HidlistArows">Coconut Water</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr47" cond="(HidlistA.r47)">
+    <loopvar name="HidlistArows">Immunity Boosting Drink</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr48" cond="(HidlistA.r48)">
+    <loopvar name="HidlistArows">Probiotic drink</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr49" cond="(HidlistA.r49)">
+    <loopvar name="HidlistArows">Milo</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr50" cond="(HidlistA.r50)">
+    <loopvar name="HidlistArows">Bubble Tea</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr51" cond="(HidlistA.r51)">
+    <loopvar name="HidlistArows">Smoothies</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr52" cond="(HidlistA.r52)">
+    <loopvar name="HidlistArows">Craft Sodas</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr53" cond="(HidlistA.r53)">
+    <loopvar name="HidlistArows">Milk Chocolate</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr54" cond="(HidlistA.r54)">
+    <loopvar name="HidlistArows">Chocolate Brownie</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr55" cond="(HidlistA.r55)">
+    <loopvar name="HidlistArows">Nutella</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr56" cond="(HidlistA.r56)">
+    <loopvar name="HidlistArows">Lotus Biscoff</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr57" cond="(HidlistA.r57)">
+    <loopvar name="HidlistArows">Mango</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr58" cond="(HidlistA.r58)">
+    <loopvar name="HidlistArows">Blueberry</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr59" cond="(HidlistA.r59)">
+    <loopvar name="HidlistArows">Coconut</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr60" cond="(HidlistA.r60)">
+    <loopvar name="HidlistArows">Matcha</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr61" cond="(HidlistA.r61)">
+    <loopvar name="HidlistArows">Pavlova</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr62" cond="(HidlistA.r62)">
+    <loopvar name="HidlistArows">Tiramisu</loopvar>
+    <loopvar name="Var1">sweet/dessert ingredient</loopvar>
+  </looprow>
+
+  <looprow label="Lr63" cond="(HidlistA.r63)">
+    <loopvar name="HidlistArows">Smokey BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr64" cond="(HidlistA.r64)">
+    <loopvar name="HidlistArows">Texan BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr65" cond="(HidlistA.r65)">
+    <loopvar name="HidlistArows">Spicy BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr66" cond="(HidlistA.r66)">
+    <loopvar name="HidlistArows">BBQ Rib Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr67" cond="(HidlistA.r67)">
+    <loopvar name="HidlistArows">Korean BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr68" cond="(HidlistA.r68)">
+    <loopvar name="HidlistArows">Memphis BBQ Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr69" cond="(HidlistA.r69)">
+    <loopvar name="HidlistArows">Aioli</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr70" cond="(HidlistA.r70)">
+    <loopvar name="HidlistArows">Smoky Mayo</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr71" cond="(HidlistA.r71)">
+    <loopvar name="HidlistArows">Spicy Mayo</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr72" cond="(HidlistA.r72)">
+    <loopvar name="HidlistArows">Truffle Aioli</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr73" cond="(HidlistA.r73)">
+    <loopvar name="HidlistArows">Lemon Herb Aioli</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr74" cond="(HidlistA.r74)">
+    <loopvar name="HidlistArows">Burger Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr75" cond="(HidlistA.r75)">
+    <loopvar name="HidlistArows">Ranch Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr76" cond="(HidlistA.r76)">
+    <loopvar name="HidlistArows">Pepper Mayo</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr77" cond="(HidlistA.r77)">
+    <loopvar name="HidlistArows">Signature Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr78" cond="(HidlistA.r78)">
+    <loopvar name="HidlistArows">Jalapeno Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr79" cond="(HidlistA.r79)">
+    <loopvar name="HidlistArows">Sriracha</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr80" cond="(HidlistA.r80)">
+    <loopvar name="HidlistArows">Chipotle</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr81" cond="(HidlistA.r81)">
+    <loopvar name="HidlistArows">Buffalo Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr82" cond="(HidlistA.r82)">
+    <loopvar name="HidlistArows">Mighty Hot Sauce</loopvar>
+    <loopvar name="Var1">sauce</loopvar>
+  </looprow>
+
+  <looprow label="Lr83" cond="(HidlistA.r83)">
+    <loopvar name="HidlistArows">Free Range Chicken</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr84" cond="(HidlistA.r84)">
+    <loopvar name="HidlistArows">Free Range Eggs</loopvar>
+    <loopvar name="Var1">ethical approach to food/drink</loopvar>
+  </looprow>
+
+  <looprow label="Lr85" cond="(HidlistA.r85)">
+    <loopvar name="HidlistArows">Flavoured Hot Coffee</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr86" cond="(HidlistA.r86)">
+    <loopvar name="HidlistArows">Flavoured Cold Coffee</loopvar>
+    <loopvar name="Var1">beverage type</loopvar>
+  </looprow>
+
+  <looprow label="Lr87" cond="(HidlistA.r87)">
+    <loopvar name="HidlistArows">Potato Scallops</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+
+  <looprow label="Lr88" cond="(HidlistA.r88)">
+    <loopvar name="HidlistArows">Mozzarella Stickse</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+
+  <looprow label="Lr89" cond="(HidlistA.r89)">
+    <loopvar name="HidlistArows">Mac &amp; Cheese Bites</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+
+  <looprow label="Lr90" cond="(HidlistA.r90)">
+    <loopvar name="HidlistArows">Sweet Potato Fries</loopvar>
+    <loopvar name="Var1">Sides</loopvar>
+  </looprow>
+</loop>
+
+<suspend/>
+
+<exec>
+sst.A.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times2= time.time()   
+VAR_TIME_A.r1.val = ("%.2f" % ((p.times2- p.times1) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_A"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">SECTION 2: A</row>
+</float>
+
+<suspend/>
+
+<checkbox 
+  label="proglist_B"
+  optional="1"
+  where="execute,survey,report">
+  <title>all items used in section B</title>
+  <comment>Select all that apply</comment>
+  <row label="r1" autofill="1">Roma Tomatoes</row>
+  <row label="r2" autofill="1">Cos Lettuce</row>
+  <row label="r3" autofill="1">Pickled Vegetables</row>
+  <row label="r4" autofill="1">Slaw</row>
+  <row label="r5" autofill="0">Roasted Pumpkin</row>
+  <row label="r6" autofill="1">Rocket</row>
+  <row label="r7" autofill="1">Baby Spinach</row>
+  <row label="r8" autofill="1">Multigrain Bun</row>
+  <row label="r9" autofill="1">Sourdough Bun</row>
+  <row label="r10" autofill="1">Milk Bun</row>
+  <row label="r11" autofill="0">Potato Bun</row>
+  <row label="r12" autofill="0">Donut Bun</row>
+  <row label="r13" autofill="0">Pretzel Bun</row>
+  <row label="r14" autofill="1">Waffle as a bun</row>
+  <row label="r15" autofill="1">Flatbread</row>
+  <row label="r16" autofill="1">Southern Fried Chicken</row>
+  <row label="r17" autofill="1">Slow Cooked/Pulled Meats</row>
+  <row label="r18" autofill="1">Brisket</row>
+  <row label="r19" autofill="1">Angus Premium Blends</row>
+  <row label="r20" autofill="1">Ribs</row>
+  <row label="r21" autofill="1">Aged beef</row>
+  <row label="r22" autofill="1">Smoked Meats</row>
+  <row label="r23" autofill="1">Spicy Bacon</row>
+  <row label="r24" autofill="1">Katsu</row>
+  <row label="r25" autofill="1">Karaage Chicken</row>
+  <row label="r26" autofill="1">Korean Fried Chicken</row>
+  <row label="r27" autofill="1">Jalapenos</row>
+  <row label="r28" autofill="1">Hash Brown</row>
+  <row label="r29" autofill="1">Crispy Onions</row>
+  <row label="r30" autofill="0">Potato Scallops</row>
+  <row label="r31" autofill="0">Mozzarella Sticks</row>
+  <row label="r32" autofill="1">Grilled Portabello Mushrooms</row>
+  <row label="r33" autofill="1">Fried Pickles</row>
+  <row label="r34" autofill="1">Smoked Cheese</row>
+  <row label="r35" autofill="1">Spicy Cheese</row>
+  <row label="r36" autofill="1">Egg</row>
+  <row label="r37" autofill="1">Pineapple</row>
+  <row label="r38" autofill="1">Corn Chips/Tortilla Chips</row>
+  <row label="r39" autofill="1">Brioche Bun</row>
+  <row label="r40" autofill="1">Gourmet Bun</row>
+  <row label="r41" autofill="1">Sweet Potato Bun</row>
+  <row label="r42" autofill="1">Damper Bun</row>
+</checkbox>
+
+<suspend/>
+
+<quota label="hidleastfill_2" overquota="noqual" sheet="hidlistfill_B"/>
+
+<exec>
+arr =['pr1','pr2','pr3','pr4','pr5','pr6','pr7','pr8','pr9','pr10','pr11','pr12','pr13','pr14','pr15','pr16','pr17','pr18','pr19','pr20','pr21','pr22','pr23','pr24','pr25','pr26','pr27','pr28','pr29','pr30','pr31','pr32','pr33','pr34','pr35','pr36','pr37','pr38','pr39','pr40','pr41','pr42']
+for itr in range(len(arr)):
+  if (hasMarker('/hidlistfill_B/*/*/' + arr[itr])):
+      HidlistB.rows[itr].val = 1
+</exec>
+
+<checkbox 
+  label="HidlistB"
+  optional="1"
+  shuffle="rows"
+  where="execute,survey,report">
+  <title>Hidden Question</title>
+  <comment>randomly capture 7 items</comment>
+  <row label="r1">Roma Tomatoes</row>
+  <row label="r2">Cos Lettuce</row>
+  <row label="r3">Pickled Vegetables</row>
+  <row label="r4">Slaw</row>
+  <row label="r5">Roasted Pumpkin</row>
+  <row label="r6">Rocket</row>
+  <row label="r7">Baby Spinach</row>
+  <row label="r8">Multigrain Bun</row>
+  <row label="r9">Sourdough Bun</row>
+  <row label="r10">Milk Bun</row>
+  <row label="r11">Potato Bun</row>
+  <row label="r12">Donut Bun</row>
+  <row label="r13">Pretzel Bun</row>
+  <row label="r14">Waffle as a bun</row>
+  <row label="r15">Flatbread</row>
+  <row label="r16">Southern Fried Chicken</row>
+  <row label="r17">Slow Cooked/Pulled Meats</row>
+  <row label="r18">Brisket</row>
+  <row label="r19">Angus Premium Blends</row>
+  <row label="r20">Ribs</row>
+  <row label="r21">Aged beef</row>
+  <row label="r22">Smoked Meats</row>
+  <row label="r23">Spicy Bacon</row>
+  <row label="r24">Katsu</row>
+  <row label="r25">Karaage Chicken</row>
+  <row label="r26">Korean Fried Chicken</row>
+  <row label="r27">Jalapenos</row>
+  <row label="r28">Hash Brown</row>
+  <row label="r29">Crispy Onions</row>
+  <row label="r30">Potato Scallops</row>
+  <row label="r31">Mozzarella Sticks</row>
+  <row label="r32">Grilled Portabello Mushrooms</row>
+  <row label="r33">Fried Pickles</row>
+  <row label="r34">Smoked Cheese</row>
+  <row label="r35">Spicy Cheese</row>
+  <row label="r36">Egg</row>
+  <row label="r37">Pineapple</row>
+  <row label="r38">Corn Chips/Tortilla Chips</row>
+  <row label="r39">Brioche Bun</row>
+  <row label="r40">Gourmet Bun</row>
+  <row label="r41">Sweet Potato Bun</row>
+  <row label="r42">Damper Bun</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+arrOrder=[];
+for itr in range(len(HidlistB.rows.order)):
+  if  HidlistB.rows[HidlistB.rows.order[itr].index].val:
+   arrOrder.append(HidlistB.rows[HidlistB.rows.order[itr].index].label)
+
+for itr in range(len(arrOrder)):
+  eval("HidLoopOrderB." + str(arrOrder[itr])).val = itr + 1
+print arrOrder;
+</exec>
+
+<number 
+  label="HidLoopOrderB"
+  shuffle="rows"
+  shuffleBy="HidlistB"
+  size="10"
+  where="execute,survey,report">
+  <title>Hidden for storing concept order - hidden_q</title>
+  <row label="r1">Roma Tomatoes</row>
+  <row label="r2">Cos Lettuce</row>
+  <row label="r3">Pickled Vegetables</row>
+  <row label="r4">Slaw</row>
+  <row label="r5">Roasted Pumpkin</row>
+  <row label="r6">Rocket</row>
+  <row label="r7">Baby Spinach</row>
+  <row label="r8">Multigrain Bun</row>
+  <row label="r9">Sourdough Bun</row>
+  <row label="r10">Milk Bun</row>
+  <row label="r11">Potato Bun</row>
+  <row label="r12">Donut Bun</row>
+  <row label="r13">Pretzel Bun</row>
+  <row label="r14">Waffle as a bun</row>
+  <row label="r15">Flatbread</row>
+  <row label="r16">Southern Fried Chicken</row>
+  <row label="r17">Slow Cooked/Pulled Meats</row>
+  <row label="r18">Brisket</row>
+  <row label="r19">Angus Premium Blends</row>
+  <row label="r20">Ribs</row>
+  <row label="r21">Aged beef</row>
+  <row label="r22">Smoked Meats</row>
+  <row label="r23">Spicy Bacon</row>
+  <row label="r24">Katsu</row>
+  <row label="r25">Karaage Chicken</row>
+  <row label="r26">Korean Fried Chicken</row>
+  <row label="r27">Jalapenos</row>
+  <row label="r28">Hash Brown</row>
+  <row label="r29">Crispy Onions</row>
+  <row label="r30">Potato Scallops</row>
+  <row label="r31">Mozzarella Sticks</row>
+  <row label="r32">Grilled Portabello Mushrooms</row>
+  <row label="r33">Fried Pickles</row>
+  <row label="r34">Smoked Cheese</row>
+  <row label="r35">Spicy Cheese</row>
+  <row label="r36">Egg</row>
+  <row label="r37">Pineapple</row>
+  <row label="r38">Corn Chips/Tortilla Chips</row>
+  <row label="r39">Brioche Bun</row>
+  <row label="r40">Gourmet Bun</row>
+  <row label="r41">Sweet Potato Bun</row>
+  <row label="r42">Damper Bun</row>
+</number>
+
+<suspend/>
+
+<exec>
+L2_expanded.order = HidlistB.rows.order
+</exec>
+
+<html label="INTRO_B" where="survey">We'd now like to ask you about <strong>burger ingredients</strong> you may (or may not have) been eating recently. The questions are similar to the previous section but in this case we want you to think about <strong>burgers only</strong>.</html>
+
+<suspend/>
+
+<loop label="L2" builderSource="HidlistB" vars="HidlistBrows">
+  <block label="b2" builder:title="default loop block">
+    <suspend/>
+
+    <select 
+    label="B1_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the burger ingredient below, have you consumed a burger with this ingredient in the last month?<br /><br /><div align="center"><span style="font-size: 18pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistBrows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">Yes</choice>
+      <choice label="r2">No</choice>
+    </select>
+
+    <select 
+    label="B2_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the burger ingredient below, do you hope to consume more or less burgers containing it in the next month? <br /><br /><div align="center"><span style="font-size: 18pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistBrows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">Much more</choice>
+      <choice label="r2">A little more</choice>
+      <choice label="r3">The same</choice>
+      <choice label="r4">A little less</choice>
+      <choice label="r5">Much less</choice>
+    </select>
+
+    <select 
+    label="B3_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the burger ingredient below, to what extent does it fit with your idea of McDonald’s burgers? <br /><br /><div align="center"><span style="font-size: 18pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistBrows]</strong></span> </div></title>
+      <comment> Please select one.</comment>
+      <choice label="r1">It fits really well with McDonald's burgers</choice>
+      <choice label="r2">It fits fairly well with McDonald's burgers</choice>
+      <choice label="r3">I don't know/don't have an opinion</choice>
+      <choice label="r4">It doesn't fit that well with McDonald's burgers</choice>
+      <choice label="r5">It doesn't fit at all well with McDonald's burgers</choice>
+    </select>
+
+    <select 
+    label="B4_[loopvar: label]"
+    rowLegend="both"
+    ss:questionClassNames="sq-sliderpoints"
+    uses="sliderpoints.3">
+      <title>Thinking of the burger ingredient below, if it was added to, or featured more on the McDonald’s burger menu, to what extent would this impact your likelihood to go to McDonald’s?<br /><br /><div align="center"><span style="font-size: 18pt; color: #0000ff;" jstcache="0"><strong jstcache="0">[loopvar: HidlistBrows]</strong></span> </div></title>
+      <comment>Please select one.</comment>
+      <choice label="r1">I'd be much more likely to go to McDonalds</choice>
+      <choice label="r2">I'd be somewhat more likely to go to McDonald's</choice>
+      <choice label="r3">It would have no effect</choice>
+      <choice label="r4">I'd be somewhat less likely to go to McDonald's</choice>
+      <choice label="r5">I'd be much less likely to go to McDonald's</choice>
+    </select>
+  </block>
+
+  <looprow label="Lr1" cond="(HidlistB.r1)">
+    <loopvar name="HidlistBrows">Roma Tomatoes</loopvar>
+  </looprow>
+
+  <looprow label="Lr2" cond="(HidlistB.r2)">
+    <loopvar name="HidlistBrows">Cos Lettuce</loopvar>
+  </looprow>
+
+  <looprow label="Lr3" cond="(HidlistB.r3)">
+    <loopvar name="HidlistBrows">Pickled Vegetables</loopvar>
+  </looprow>
+
+  <looprow label="Lr4" cond="(HidlistB.r4)">
+    <loopvar name="HidlistBrows">Slaw</loopvar>
+  </looprow>
+
+  <looprow label="Lr5" cond="(HidlistB.r5)">
+    <loopvar name="HidlistBrows">Roasted Pumpkin</loopvar>
+  </looprow>
+
+  <looprow label="Lr6" cond="(HidlistB.r6)">
+    <loopvar name="HidlistBrows">Rocket</loopvar>
+  </looprow>
+
+  <looprow label="Lr7" cond="(HidlistB.r7)">
+    <loopvar name="HidlistBrows">Baby Spinach</loopvar>
+  </looprow>
+
+  <looprow label="Lr8" cond="(HidlistB.r8)">
+    <loopvar name="HidlistBrows">Multigrain Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr9" cond="(HidlistB.r9)">
+    <loopvar name="HidlistBrows">Sourdough Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr10" cond="(HidlistB.r10)">
+    <loopvar name="HidlistBrows">Milk Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr11" cond="(HidlistB.r11)">
+    <loopvar name="HidlistBrows">Potato Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr12" cond="(HidlistB.r12)">
+    <loopvar name="HidlistBrows">Donut Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr13" cond="(HidlistB.r13)">
+    <loopvar name="HidlistBrows">Pretzel Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr14" cond="(HidlistB.r14)">
+    <loopvar name="HidlistBrows">Waffle as a bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr15" cond="(HidlistB.r15)">
+    <loopvar name="HidlistBrows">Flatbread</loopvar>
+  </looprow>
+
+  <looprow label="Lr16" cond="(HidlistB.r16)">
+    <loopvar name="HidlistBrows">Southern Fried Chicken</loopvar>
+  </looprow>
+
+  <looprow label="Lr17" cond="(HidlistB.r17)">
+    <loopvar name="HidlistBrows">Slow Cooked/Pulled Meats</loopvar>
+  </looprow>
+
+  <looprow label="Lr18" cond="(HidlistB.r18)">
+    <loopvar name="HidlistBrows">Brisket</loopvar>
+  </looprow>
+
+  <looprow label="Lr19" cond="(HidlistB.r19)">
+    <loopvar name="HidlistBrows">Angus Premium Blends</loopvar>
+  </looprow>
+
+  <looprow label="Lr20" cond="(HidlistB.r20)">
+    <loopvar name="HidlistBrows">Ribs</loopvar>
+  </looprow>
+
+  <looprow label="Lr21" cond="(HidlistB.r21)">
+    <loopvar name="HidlistBrows">Aged beef</loopvar>
+  </looprow>
+
+  <looprow label="Lr22" cond="(HidlistB.r22)">
+    <loopvar name="HidlistBrows">Smoked Meats</loopvar>
+  </looprow>
+
+  <looprow label="Lr23" cond="(HidlistB.r23)">
+    <loopvar name="HidlistBrows">Spicy Bacon</loopvar>
+  </looprow>
+
+  <looprow label="Lr24" cond="(HidlistB.r24)">
+    <loopvar name="HidlistBrows">Katsu</loopvar>
+  </looprow>
+
+  <looprow label="Lr25" cond="(HidlistB.r25)">
+    <loopvar name="HidlistBrows">Karaage Chicken</loopvar>
+  </looprow>
+
+  <looprow label="Lr26" cond="(HidlistB.r26)">
+    <loopvar name="HidlistBrows">Korean Fried Chicken</loopvar>
+  </looprow>
+
+  <looprow label="Lr27" cond="(HidlistB.r27)">
+    <loopvar name="HidlistBrows">Jalapenos</loopvar>
+  </looprow>
+
+  <looprow label="Lr28" cond="(HidlistB.r28)">
+    <loopvar name="HidlistBrows">Hash Brown</loopvar>
+  </looprow>
+
+  <looprow label="Lr29" cond="(HidlistB.r29)">
+    <loopvar name="HidlistBrows">Crispy Onions</loopvar>
+  </looprow>
+
+  <looprow label="Lr30" cond="(HidlistB.r30)">
+    <loopvar name="HidlistBrows">Potato Scallops</loopvar>
+  </looprow>
+
+  <looprow label="Lr31" cond="(HidlistB.r31)">
+    <loopvar name="HidlistBrows">Mozzarella Sticks</loopvar>
+  </looprow>
+
+  <looprow label="Lr32" cond="(HidlistB.r32)">
+    <loopvar name="HidlistBrows">Grilled Portabello Mushrooms</loopvar>
+  </looprow>
+
+  <looprow label="Lr33" cond="(HidlistB.r33)">
+    <loopvar name="HidlistBrows">Fried Pickles</loopvar>
+  </looprow>
+
+  <looprow label="Lr34" cond="(HidlistB.r34)">
+    <loopvar name="HidlistBrows">Smoked Cheese</loopvar>
+  </looprow>
+
+  <looprow label="Lr35" cond="(HidlistB.r35)">
+    <loopvar name="HidlistBrows">Spicy Cheese</loopvar>
+  </looprow>
+
+  <looprow label="Lr36" cond="(HidlistB.r36)">
+    <loopvar name="HidlistBrows">Egg</loopvar>
+  </looprow>
+
+  <looprow label="Lr37" cond="(HidlistB.r37)">
+    <loopvar name="HidlistBrows">Pineapple</loopvar>
+  </looprow>
+
+  <looprow label="Lr38" cond="(HidlistB.r38)">
+    <loopvar name="HidlistBrows">Corn Chips/Tortilla Chips</loopvar>
+  </looprow>
+
+  <looprow label="Lr39" cond="(HidlistB.r39)">
+    <loopvar name="HidlistBrows">Brioche Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr40" cond="(HidlistB.r40)">
+    <loopvar name="HidlistBrows">Gourmet Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr41" cond="(HidlistB.r41)">
+    <loopvar name="HidlistBrows">Sweet Potato Bun</loopvar>
+  </looprow>
+
+  <looprow label="Lr42" cond="(HidlistB.r42)">
+    <loopvar name="HidlistBrows">Damper Bun</loopvar>
+  </looprow>
+</loop>
+
+<suspend/>
+
+<exec>
+sst.B.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times3= time.time()   
+VAR_TIME_B.r1.val = ("%.2f" % ((p.times3- p.times2) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_B"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">SECTION 3: B</row>
+</float>
+
+<suspend/>
+
+<html label="intro_C" where="survey">The next section of this survey is all about your attitudes and behaviours towards different foods and drinks.</html>
+
+<suspend/>
+
+<radio 
+  label="SD1"
+  uses="atm1d.9">
+  <title>Do you tend to be the first to try new foods/drinks?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD2"
+  uses="atm1d.9">
+  <title>Do you <strong>read</strong> restaurant reviews at Broadsheet, Concrete Playground and/ or Urban List at least once a week?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<number 
+  label="SD3"
+  optional="0"
+  size="3"
+  verify="range(0,100)">
+  <title>How many food-related social media accounts do you follow?  
+</title>
+  <comment>Please enter a whole number.</comment>
+  <noanswer label="r99">Don’t Know</noanswer>
+</number>
+
+<suspend/>
+
+<radio 
+  label="SD4"
+  uses="atm1d.9">
+  <title>Do you regularly <strong>write</strong> reviews on websites like Broadsheet, Concrete Playground and/ or Urban List?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD5"
+  uses="atm1d.9">
+  <title>Do people ask you for advice or recommendations on food/drinks or eating out at restaurants?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD6"
+  uses="atm1d.9">
+  <title>Is food an active interest of yours? </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD7"
+  uses="atm1d.9">
+  <title>Do you enjoy creating meals or recipes using new and exciting ingredients?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD8"
+  uses="atm1d.9">
+  <title>How often do you buy and personally eat/drink items from McDonald’s?</title>
+  <comment>Please select one.</comment>
+  <row label="r9">At least <strong>5 times or more a week</strong></row>
+  <row label="r8">At least <strong>2-3 times a week</strong></row>
+  <row label="r7">At least <strong>once a week</strong></row>
+  <row label="r6">At least <strong>once a fortnight</strong></row>
+  <row label="r5">At least <strong>once a month</strong></row>
+  <row label="r4">At least <strong>once every 2-3 months</strong></row>
+  <row label="r3">At least <strong>once every 6 months</strong></row>
+  <row label="r2"><strong>Once a year</strong></row>
+  <row label="r1"><strong>Less often</strong></row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD9"
+  cardsort:bucketCSS="background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727)); background: -webkit-linear-gradient(top, #fff, #E6E7E8); background: -moz-linear-gradient(top, #fff, #E6E7E8); background: -ms-linear-gradient(top, #fff, #E6E7E8); background: -o-linear-gradient(top, #fff, #E6E7E8); border-radius:15px; margin: 0px auto; padding:0px; color:#000; height:100px; line-height:15px; width:100px; font-size:12px; font-family:'Arial'; border: 2px solid #7D848D;"
+  cardsort:bucketHoverCSS="background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727)); background: -webkit-linear-gradient(top, #fff, #E6E7E8); background: -moz-linear-gradient(top, #fff, #E6E7E8); background: -ms-linear-gradient(top, #fff, #E6E7E8); background: -o-linear-gradient(top, #fff, #E6E7E8); border-radius:15px; margin: 0px auto; padding:0px; color:#000; height:100px; line-height:15px; width:100px; font-size:12px; font-family:'Arial'; border: 2px solid #7D848D;"
+  cardsort:bucketsPerRow="11"
+  cardsort:cardCSS="margin:0 auto; width:600px; font-size:24px; font-family:'Calibri';"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  cardsort:wrapBuckets="1"
+  rowShuffle="rotate"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>How often do you tend to <strong>buy and personally eat/drink the following types of food/drink from McDonald’s?</strong></title>
+  <style name="page.head"><![CDATA[
+\@if (device.desktop)
+<style type="text/css">
+      .sq-cardsort-bucket-c1, .sq-cardsort-bucket-c2, .sq-cardsort-bucket-c3, .sq-cardsort-bucket-c4, .sq-cardsort-bucket-c5, .sq-cardsort-bucket-c6, .sq-cardsort-bucket-c7, .sq-cardsort-bucket-c8, .sq-cardsort-bucket-c8, .sq-cardsort-bucket-c9, .sq-cardsort-bucket-c10 {width:80px !important;}
+  </style>
+\@endif
+]]></style>
+  <col label="c1"><strong>5 times or more a week</strong></col>
+  <col label="c2"><strong>2-3 times a week</strong></col>
+  <col label="c3">At least <strong>once a week</strong></col>
+  <col label="c4">At least <strong>once a fortnight</strong></col>
+  <col label="c5">At least <strong>once a month</strong></col>
+  <col label="c6">At least <strong>once every 2-3 months</strong></col>
+  <col label="c7">At least <strong>once every 6 months</strong></col>
+  <col label="c8"><strong>Once a year</strong></col>
+  <col label="c9"><strong>Less often</strong></col>
+  <row label="r1">Burger Classics, like Big Mac, Quarter Pounder, McChicken, Hamburger, Cheeseburger</row>
+  <row label="r2">'Select' Burgers, with high-quality, specially selected ingredients, like Angus Burger, Wagyu burger, Chicken Clubhouse, BBQ Bacon Lovers</row>
+  <row label="r3">Salads</row>
+  <row label="r4">Wraps</row>
+  <row label="r5">Ice cream</row>
+  <row label="r6">Sides like fries, hash browns etc.</row>
+  <row label="r7">Breakfast items, like hotcakes, English muffins, brekkie rolls</row>
+  <row label="r8">Food from McCafé, like muffins, banana bread</row>
+  <row label="r9">Beverages incl. shakes</row>
+  <row label="r10">Coffee</row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_SD9.val = 1
+for itr in range(len(SD9.cols)):
+  if SD9.cols[itr].all:
+     FlatLiner_SD9.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_SD9"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="SD10"
+  cardsort:bucketCSS="background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727)); background: -webkit-linear-gradient(top, #fff, #E6E7E8); background: -moz-linear-gradient(top, #fff, #E6E7E8); background: -ms-linear-gradient(top, #fff, #E6E7E8); background: -o-linear-gradient(top, #fff, #E6E7E8); border-radius:15px; margin: 0px auto; padding:0px; color:#000; height:100px; line-height:15px; width:100px; font-size:12px; font-family:'Arial'; border: 2px solid #7D848D;"
+  cardsort:bucketHoverCSS="background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727)); background: -webkit-linear-gradient(top, #fff, #E6E7E8); background: -moz-linear-gradient(top, #fff, #E6E7E8); background: -ms-linear-gradient(top, #fff, #E6E7E8); background: -o-linear-gradient(top, #fff, #E6E7E8); border-radius:15px; margin: 0px auto; padding:0px; color:#000; height:100px; line-height:15px; width:100px; font-size:12px; font-family:'Arial'; border: 2px solid #7D848D;"
+  cardsort:bucketsPerRow="11"
+  cardsort:cardCSS="margin:0 auto; width:600px; font-size:24px; font-family:'Calibri';"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  cardsort:wrapBuckets="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>Please indicate how much you personally <strong>agree or disagree</strong> with each of the following statements.</title>
+  <comment>Please select one answer per statement.</comment>
+  <style name="page.head"><![CDATA[
+\@if (device.desktop)
+<style type="text/css">
+      .sq-cardsort-bucket-c1, .sq-cardsort-bucket-c2, .sq-cardsort-bucket-c3, .sq-cardsort-bucket-c4, .sq-cardsort-bucket-c5, .sq-cardsort-bucket-c6, .sq-cardsort-bucket-c7, .sq-cardsort-bucket-c8, .sq-cardsort-bucket-c8, .sq-cardsort-bucket-c9, .sq-cardsort-bucket-c10 {width:120px !important;}
+  </style>
+\@endif
+]]></style>
+  <col label="c1">Do not agree at all</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">Agree completely</col>
+  <row label="r1">I prioritise good health when making choices about food</row>
+  <row label="r2">Sustainability of ingredients and food processes are important to me and an influence on my food choices</row>
+  <row label="r3">I consider myself a food enthusiast, taking an interest in cooking, food trends and restaurants</row>
+  <row label="r4">The carbon footprint of ingredients and food processes are important to me and an influence on my food choices</row>
+  <row label="r5">Recycling is important to me and an influence on my food choices</row>
+  <row label="r6">Minimising food waste is a priority for me</row>
+  <row label="r7">I am actively reducing my meat intake</row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_SD10.val = 1
+for itr in range(len(SD10.cols)):
+  if SD10.cols[itr].all:
+     FlatLiner_SD10.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_SD10"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="SD11"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>Which of these restaurants have you <strong>eaten at in the past 3 months</strong>?</title>
+  <comment>Please select all that apply. </comment>
+  <row label="r1">McDonald's</row>
+  <row label="r2">KFC</row>
+  <row label="r3">Hungry Jack's</row>
+  <row label="r4">Grill'd</row>
+  <row label="r5">Red Rooster</row>
+  <row label="r6">Oporto</row>
+  <row label="r7">Nando's</row>
+  <row label="r8" exclusive="1" randomize="0">None of these</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="SD12"
+  cond="0"
+  uses="atm1d.9">
+  <title>How often do you buy and personally eat/drink items from McDonald’s?</title>
+  <comment>Please select one.</comment>
+  <row label="r9">At least<strong> 5 times or more a week</strong></row>
+  <row label="r8">At least <strong>2-3 times a week</strong></row>
+  <row label="r7">At least <strong>once a week</strong></row>
+  <row label="r6">At least <strong>once a fortnight</strong></row>
+  <row label="r5">At least <strong>once a month</strong></row>
+  <row label="r4">At least <strong>once every 2-3 months</strong></row>
+  <row label="r3">At least <strong>once every 6 months</strong></row>
+  <row label="r2"><strong>Once a year</strong></row>
+  <row label="r1"><strong>Less often</strong></row>
+</radio>
+
+<suspend/>
+
+<exec>
+p.times4= time.time()   
+VAR_TIME_D.r1.val = ("%.2f" % ((p.times4- p.times3) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_D"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">SECTION 4: D</row>
+</float>
+
+<suspend/>
+
+<radio 
+  label="tempQC2"
+  shuffle="rows"
+  uses="atm1d.9">
+  <title>${pipe.QCtree2ndTitle}</title>
+  <comment>Please select one response only.</comment>
+  <row label="r1" value="1">${pipe.QCtree2ndRow1}</row>
+  <row label="r2" value="2">${pipe.QCtree2ndRow2}</row>
+  <row label="r3" value="3">${pipe.QCtree2ndRow3}</row>
+  <row label="r4" value="4">${pipe.QCtree2ndRow4}</row>
+  <row label="r5" value="5">${pipe.QCtree2ndRow5}</row>
+</radio>
+
+<suspend/>
+
+<exec>
+QC2.val=0
+if (QCtree2nd.r1 and not tempQC2.r5) or (QCtree2nd.r2 and not tempQC2.r4) or (QCtree2nd.r3 and not tempQC2.r2) or (QCtree2nd.r4 and not tempQC2.r5) or (QCtree2nd.r5 and not tempQC2.r4) or (QCtree2nd.r6 and not tempQC2.r2) or (QCtree2nd.r7 and not tempQC2.r5) or (QCtree2nd.r8 and not tempQC2.r4) or (QCtree2nd.r9 and not tempQC2.r2):
+  QC2.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="QC2"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>Record the 2nd QC question answer correct or incorrect.</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">Correct</row>
+  <row label="r2" value="2">Incorrect</row>
+</radio>
+
+<suspend/>
+
+<pipe label="QCtree2ndText" capture="">
+  <case label="r1" cond="QC2.r1"><p><b>Great! You passed the 2<sup>nd</sup> quality check question!</b><br />Thank you so much for paying attention to the survey. We value your considered and honest answers</p></case>
+  <case label="r3" cond="QC2.r2"><b>You have failed the 2<sup>nd</sup> quality check question in this survey</b>, <br />which means we can’t accept your answers <br />and you will not be provided the full incentive for completing this survey.</case>
+  <case label="r4" cond="1">UNDEFINED</case></pipe>
+<pipe label="QCtree2ndCSS" capture="">
+  <case label="r1" cond="QC2.r1">custom-newqc-t</case>
+  <case label="r2" cond="QC2.r2">custom-newqc-f</case>
+  <case label="r3" cond="1">UNDEFINED</case></pipe>
+<html label="QC2TOF" ss:commentClassNames="${pipe.QCtree2ndCSS}">${pipe.QCtree2ndText}</html>
+
+<suspend/>
+
+<exec>
+if QC2.r2:
+  checkQC.r6.val=1
+</exec>
+
+<suspend/>
+
+<term cond="QC2.r2">QC2 question failed.</term>
+
+<block label="imgQCcheck" cond="0">
+  <radio 
+   label="QC4"
+   uses="atm1d.9">
+    <title>Did you encounter any issues with the survey?</title>
+    <comment>Please select one</comment>
+    <row label="r1" value="1">Yes</row>
+    <row label="r2" value="2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="QC5"
+   cond="QC4.r1"
+   atleast="1"
+   uses="atm1d.9">
+    <title>Can you please specify what type of issues you encountered?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Images didn't load</row>
+    <row label="r2">Images are blurry, but I was still able to answer properly</row>
+    <row label="r3">Images are too blurry which has affected my answers</row>
+    <row label="r4">Images are not properly aligned, but I was still able to answer properly</row>
+    <row label="r5">Images are not properly aligned which has affected my answers</row>
+    <row label="r6" open="1" openSize="25" randomize="0">Other image issues – Please specify</row>
+    <row label="r7" exclusive="1" randomize="0">I didn't encounter any issues</row>
+  </checkbox>
+
+  <suspend/>
+</block>
+
+<pipe label="pipeWrongGender" capture="">
+  <case label="r1" cond="S3.r2">Male</case>
+  <case label="r2" cond="S3.r1">Female</case>
+  <case label="r99" cond="1">UNDEFINED</case></pipe>
+<suspend/>
+
+<radio 
+  label="QC3"
+  rowShuffle="rotate"
+  shuffle="rows"
+  ss:questionClassNames="flexGrid">
+  <title>Finally, can we just confirm the following, please select <b>true or false</b> for each.</title>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+\@if device.desktop
+.grid.grid-table-mode .col-legend {
+  width: 120px !important;
+}
+\@endif
+</style>
+]]></style>
+  <row label="r1">Your age group is <b>[pipe:S2b]</b></row>
+  <row label="r2">Your gender is <b>[pipe:pipeWrongGender]</b></row>
+  <col label="c1">True</col>
+  <col label="c2">False</col>
+</radio>
+
+<suspend/>
+
+<exec>
+checkQC.r2.val=0
+checkQC.r4.val=0
+checkQC.r5.val=0
+if QC3.r1.c2 or QC3.r2.c1:
+  checkQC.r1.val=0
+  checkQC.r2.val=1
+if timeSpent() lt 1:
+  checkQC.r1.val=0
+  checkQC.r4.val=1
+if QC5.r1 or QC5.r3 or QC5.r5 or QC5.r6:
+  checkQC.r1.val=0
+  checkQC.r5.val=1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="checkQC"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>RECORD QUILITY OR NOT FROM QC</title>
+  <row label="r1">Good</row>
+  <row label="r2">Last QC bad</row>
+  <row label="r3">Flatliners</row>
+  <row label="r4">Speeder</row>
+  <row label="r5">img issue</row>
+  <row label="r6">QC2 fail</row>
+  <row label="r7">Bad OE</row>
+  <row label="r8">negativeOE</row>
+  <row label="r9">repeatIP</row>
+  <row label="r10">QC7 select all 7 responses</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+if checkQC.r2 or checkQC.r3 or checkQC.r4 or checkQC.r5 or checkQC.r6:
+  checkQC.r1.val=0
+</exec>
+
+<suspend/>
+
+<pipe label="pipeFinalx0" capture="">
+  <case label="r1" cond="checkQC.r1">Thank you for your valued opinion!</case>
+  <case label="r2" cond="1">That's the end of the survey!</case></pipe>
+<suspend/>
+
+<block label="Section_end" cond="1" builder:title="FF5 End Page">
+  <html label="Finalx0" where="survey"><div style="text-align:center;"><span style="font-size:3em;">${pipe.pipeFinalx0}</span></div></html>
+
+  <select 
+   label="Finalx1"
+   keepWith="Finalx0,Finalx3"
+   randomize="0"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>What was your overall experience of the survey?</title>
+    <comment>Drag the slider to a point on the scale.</comment>
+    <choice label="ch1" value="1"><i style="font-size: 30px;" class="material-icons">sentiment_very_dissatisfied</i><br />Terrible</choice>
+    <choice label="ch2" value="2"><i style="font-size: 30px;" class="material-icons">sentiment_dissatisfied</i><br />Bad</choice>
+    <choice label="ch3" value="3"><i style="font-size: 30px;" class="material-icons">sentiment_neutral</i><br />Okay</choice>
+    <choice label="ch4" value="4"><i style="font-size: 30px;" class="material-icons">sentiment_satisfied</i><br />Good</choice>
+    <choice label="ch5" value="5"><i style="font-size: 30px" class="fa-icon-smile-o"> </i><br />Great</choice>
+  </select>
+
+  <textarea 
+   label="Finalx3"
+   height="5"
+   keepWith="Finalx0,Finalx1"
+   randomize="0"
+   ss:legendColWidth="250px"
+   ss:listDisplay="0"
+   width="70">
+    <title>We are keen to improve our surveys. Please let us know how we could have improved this survey for you?</title>
+    <style name="page.head"><![CDATA[
+<style>
+.grid.grid-table-mode.grid-multi-col .colCount-1 .element, .clearColWidths .grid.grid-table-mode .colCount-1 .element {
+	border-left:none;
+	border-right: 1px solid #d9d9d9;
+	background: #f2f2f2;
+}
+.grid.grid-table-mode .cell {
+	border-right:none;
+	background: #f2f2f2;
+}
+\@if device.desktop 
+textarea.input, input[type=text] {
+    width: 100%;
+}  
+\@endif  
+</style>
+]]></style>
+  </textarea>
+</block>
+
+<suspend/>
+
+<radio 
+  label="Finalx4"
+  uses="atm1d.9">
+  <title>Based on the results of this survey, we might be interested in conducting further research. Would you be interested in participating and us contacting you?</title>
+  <row label="r1">Yes, I am happy to be contacted via email</row>
+  <row label="r2">No, I'm not interested</row>
+</radio>
+
+<suspend/>
+
+<exec>
+p.scf = timeSpent()   
+if p.scf lt 300:    
+  SC.val = 0  
+else:   
+  SC.val = 1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="SC"
+  where="execute,survey,report">
+  <title>Speeder checks</title>
+  <comment>Please select one..</comment>
+  <row label="r1" value="1">Speeder</row>
+  <row label="r2" value="2">Not Speeder</row>
+</radio>
+
+<suspend/>
+
+<exec>
+sst.Z.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<term cond="not gv.isSST() and (checkQC.r2 or checkQC.r3 or checkQC.r4 or checkQC.r5 or checkQC.r6)">Panel - QC fail</term>
+</survey>

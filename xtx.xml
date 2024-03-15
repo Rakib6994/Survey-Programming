@@ -1,0 +1,25 @@
+<quota label="Q8_quota" cond="rec_Q8.any" overquota="noqual" sheet="Q8 Quota"/>
+
+<suspend/>
+
+<exec>
+arr =['OGEFG','nIFOd','hazXp']
+for itr in range(len(arr)):
+  if (hasMarker('/Q8 Quota/' + arr[itr])):
+     hidlist.rows[itr].val = 1
+</exec>
+
+
+
+<checkbox 
+  label="rec_Q8"
+  atleast="1"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden to capture Q8</title>
+  <row label="r1">OFFLINER</row>
+  <row label="r2">ONLINER</row>
+  <row label="r3">HYBRID&amp;nbsp;</row>
+</checkbox>
+
+<suspend/>

@@ -1,0 +1,16 @@
+<exec cond="(S_Typical10.r10.check('1-10'))">
+var_x = S_Typical10.r10.open.split(" ")
+if len(var_x) gt 0:  Typical10_Other.val = 0
+if S_Typical10.r10.open=='':  Typical10_Other.val = 1
+</exec>
+
+<radio 
+  label="Typical10_Other"
+  cond="(S_Typical10.r10.check('1-10'))"
+  where="execute,survey,report">
+  <title>Typical10_Other</title>
+  <row label="r1">${S_Typical10.r10.open}</row>
+  <row label="none">Local Grocery Store</row>
+</radio>
+
+<suspend/>

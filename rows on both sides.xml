@@ -1,0 +1,35 @@
+<radio 
+    label="B9_1"
+    cond="B1_1.r1"
+    rowLegend="both"
+    shuffle="rows"
+    ss:legendColWidth="200px"
+    uses="onerowatatime.3">
+      <title>Here are two opposite ways in which someone could <strong>describe this ad/campaign</strong>. Please select the number on the scale that best describes what <u>you</u> personally feel about it.<br/><br/><div align='center'>${HidImage.r1.text}</div></title>
+      <comment>Please select one in each row.</comment>
+      <row label="r1" rightLegend="&lt;b&gt;EASY&lt;/b&gt; to understand"><b>HARD</b> to understand</row>
+      <row label="r2" rightLegend="Is telling me something &lt;b&gt;NEW&lt;/b&gt; ">Is <strong>NOT</strong> telling me anything<strong> NEW</strong></row>
+      <row label="r3" rightLegend="Is saying something &lt;b&gt;BELIEVABLE&lt;/b&gt;">Is <strong>NOT</strong> saying anything <strong>BELIEVABLE</strong></row>
+      <row label="r4" rightLegend="Is saying something &lt;b&gt;DIFFERENT&lt;/b&gt;">Is <strong>NOT</strong> saying anything <strong>DIFFERENT</strong></row>
+      <row label="r5" rightLegend="Makes me &lt;b&gt;MORE INTERESTED&lt;/b&gt;  in what the government is doing to change healthcare in Australia">Makes me <strong>LESS INTERESTED</strong> in what the government is doing to change healthcare in Australia</row>
+      <row label="r6" rightLegend="It &lt;b&gt;FITS&lt;/b&gt; with what I expect from the government ">It <strong>DOES NOT FIT</strong> with what I expect from the government</row>
+      <row label="r7" rightLegend="I &lt;b&gt;ENJOY&lt;/b&gt; this ad/campaign">I <strong>DON’T ENJOY</strong> this ad/campaign</row>
+      <row label="r8" rightLegend="Would &lt;b&gt;TALK ABOUT&lt;/b&gt; with others">Would <strong>NOT TALK ABOUT</strong> with others</row>
+      <row label="r9" rightLegend="It does &lt;b&gt;STAND OUT&lt;/b&gt;">It <strong>DOESN’T STANDOUT</strong></row>
+      <row label="r10" rightLegend="It makes me &lt;b&gt;FEEL BETTER&lt;/b&gt; about the government’s doing to change healthcare in Australia">It makes me <strong>FEEL WORSE</strong> about what the government is doing to change healthcare in Australia</row>
+      <row label="r11" rightLegend="Is &lt;b&gt;RELEVANT&lt;/b&gt; to me and &lt;b&gt;MY SITUATION&lt;/b&gt;">Not at all <strong>RELEVANT</strong> to me and <strong>MY SITUATION</strong></row>
+      <row label="r12" rightLegend="I still &lt;b&gt;ENJOY&lt;/b&gt; this ad/campaign">I’m <strong>BORED</strong> of this ad/campaign</row>
+      <col label="c1">0</col>
+      <col label="c2">1</col>
+      <col label="c3">2</col>
+      <col label="c4">3</col>
+      <col label="c5">4</col>
+      <col label="c6">5</col>
+      <col label="c7">6</col>
+      <col label="c8">7</col>
+      <col label="c9">8</col>
+      <col label="c10">9</col>
+      <col label="c11">10</col>
+    </radio>
+
+    <suspend/>

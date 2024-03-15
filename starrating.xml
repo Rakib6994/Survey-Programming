@@ -1,0 +1,12 @@
+   <select 
+   label="Q16"
+   optional="1"
+   uses="starrating.5">
+    <title><br /><b>Star Rating - Single Row<br /><br />How would you rate the customer service representative?</b></title>
+    <choice label="ch1">Hated It</choice>
+    <choice label="ch2">Didn't Like It</choice>
+    <choice label="ch3">It was OK</choice>
+    <choice label="ch4">Liked It</choice>
+    <choice label="ch5">Loved It</choice>
+  </select>
+<suspend/>

@@ -1,0 +1,84 @@
+<block label="Findability_Section" builder:title="Findability Section">
+  <html label="F1Text" where="survey">Next, you are going to see the display of <b>carbonated soft drink</b> products again.  This time, you will be looking for <u>one particular item</u>.<br /><br /><b>Please find Pepsi Max Can</b>.</html>
+
+  <suspend/>
+
+  <number 
+   label="F1"
+   mgshelf:cancel_text="${pipe.shop_cancel_text}"
+   mgshelf:completed_text="${pipe.continue_text}"
+   mgshelf:currency_position="before"
+   mgshelf:currency_sign="$"
+   mgshelf:findability="1"
+   mgshelf:magnifier_border_radius="50%"
+   mgshelf:magnifier_height="275"
+   mgshelf:magnifier_image="[rel ${pipe.ShelfImage}_HR.jpeg]"
+   mgshelf:magnifier_width="275"
+   mgshelf:name_text=""
+   mgshelf:popup_show_name="1"
+   mgshelf:popup_show_price="1"
+   mgshelf:popup_show_quantity="1"
+   mgshelf:popup_show_subtotal="1"
+   mgshelf:price_text="${pipe.shop_price_text}"
+   mgshelf:purchase_text="${pipe.find_select}"
+   mgshelf:quantity_text="${pipe.shop_quantity_text}"
+   mgshelf:shelf_image="[rel ${pipe.ShelfImage}_LR.jpeg]"
+   mgshelf:shelf_width="1000"
+   mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   size="10"
+   uses="prsshelf2.5">
+    <title>Again, you are looking for:<br /><b><span style="font-size: 18pt;">Pepsi Max Can</span></b><br />When you find this product, please use your mouse and click on the center of the product to select it.</title>
+    <col label="c1">Quantity</col>
+    <col label="c2">Order of click</col>
+    <col label="c3">Time opened</col>
+    <style name="question.after"><![CDATA[
+<style type="text/css">
+        .sq-mgshelf-cart-icon { display: none !important; }
+      </style>
+<script>
+    
+        $ (document).on('click', '.bs-btn-primary', function() {
+          $ ("#btn_continue").click();
+          
+        })
+        </script>
+]]></style>
+  </number>
+
+  <suspend/>
+
+  <radio 
+   label="F1_Item_Found"
+   onLoad="copy('F1', rows=True)"
+   randomize="0">
+    <title>Product Found</title>
+    <virtual>
+for r in F1.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      data.val = r.index
+    </virtual>
+
+  </radio>
+
+  <radio 
+   label="vFindCorrect"
+   randomize="0"
+   where="execute,survey,report">
+    <title><b>Correct Product Found?</b></title>
+    <exec>
+if (F1.c1.r4.val &gt;0):  vFindCorrect.val = 0
+else:           vFindCorrect.val = 1
+    </exec>
+
+    <row label="r1">Correct</row>
+    <row label="r2">Incorrect</row>
+  </radio>
+
+  <suspend/>
+
+  <note>Findability Question Bank: Differentiation, FamilyFit are OPTIONAL</note>
+  <suspend/>
+</block>

@@ -1,0 +1,67 @@
+<style name="respview.client.css" with="SQ3"><![CDATA[
+<style type="text/css">
+#tooltip{
+display:inline-block;
+position:relative;
+
+}
+#tooltip #tooltiptext {
+  display:contents;
+  visibility: hidden;
+  width: 150px;
+  font-size: 13px;
+  background-color: #333C;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top:2px;
+  position: absolute;
+  z-index: 999;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+#tooltip:hover #tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+   </style>
+]]></style>
+<suspend/>
+
+
+<select 
+   label="SQ3"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="height: 80px; width: 460px"
+   ranksort:cardCSS="width: 460px; height: 100px;"
+   randomize="0"
+   shuffle="rows"
+   unique="none,cols"
+   uses="ranksort.5">
+    <title>Was macht Ihr [pipe: SCR4_pipedText2] Arbeitgeber <strong>besonders gut</strong>? Bitte wählen Sie drei Antwortmöglichkeiten aus und sortieren Sie diese nach ihrer Wichtigkeit für Sie ganz persönlich.</title>
+    <res label="sys_select.minranks-plur">Bitte wählen Sie genau $(atleast) Antwortmöglichkeiten aus.</res>
+    <row label="r1"><div id="tooltip">Unternehmenswerte<div id="tooltiptext"><p>Unternehmenswerte sind die Charaktereigenschaften einer Organisation. Die Werte sind Orientierung nach Innen und Außen..</p></div></div></row>
+    <row label="r2">Arbeitsklima</row>
+    <row label="r3">Work-Life-Balance</row>
+    <row label="r4">Weiterbildungsmöglichkeiten</row>
+    <row label="r5">Entfaltungsmöglichkeiten</row>
+    <row label="r6">Corporate Responsibility</row>
+    <row label="r7">Aufstiegschancen</row>
+    <row label="r8">Finanzielle Benefits</row>
+    <row label="r9">Soziale Benefits</row>
+    <row label="r10">Flexibilität</row>
+    <row label="r11" open="1" openSize="25" randomize="0">Andere:&amp;nbsp;</row>
+    <noanswer label="r12">Nichts davon</noanswer>
+    <choice label="ch1"><span style="display: none;">1</span></choice>
+    <choice label="ch2"><span style="display: none;">2</span></choice>
+    <choice label="ch3"><span style="display: none;">3</span></choice>
+  </select>
+
+  <suspend/>

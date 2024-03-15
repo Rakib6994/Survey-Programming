@@ -1,0 +1,31 @@
+<number 
+  label="DMDMPA1"
+  optional="0"
+  size="3"
+  verify="range(1,99)">
+  <title>How old are you?</title>
+  <comment>Please type in your age below.</comment>
+  <style arg:mlen="3" copy="QNumstyle" name="el.text"/>
+</number>
+
+<suspend/>
+
+
+
+  <text 
+   label="Resp_Info"
+   cond="not(gv.isSST())"
+   optional="0"
+   randomize="0"
+   rowLegend="left"
+   size="25">
+    <title><b><span style="color: red;">INTERVIEWER:</span></b> BE SURE TO FILL IN THE RESPONDENTS CONTACT INFORMATION. THIS INFORMATION WILL BE NEEDED TO COMPLETE THE VALIDATION SHEET</title>
+    <row label="Name">Respondent Name:</row>
+    <row label="Address">Street Address:</row>
+    <row label="City">City:</row>
+    <row label="State" verify="len(2,2)">State:</row>
+    <row label="Zip" verify="zipcode">Zip:</row>
+    <row label="Email" verify="email">Email Address</row>
+    <row label="Phone" verify="phoneUS">Phone:</row>
+    <row label="Screener_Interviewer">Screening Interviewer's Name</row>
+  </text>

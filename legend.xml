@@ -1,0 +1,83 @@
+<radio 
+  label="DMIN"
+  colLegendRows="12"
+  shuffle="rows">
+  <title>Et plus largement, quels sont vos centres d'intérêt ?</title>
+  <comment>Merci de choisir toutes les réponses qui s'appliquent.</comment>
+  <row label="DMIN_1">La finance</row>
+  <row label="DMIN_2">Les nouvelles technologies</row>
+  <row label="DMIN_3">Les questions de société</row>
+  <row label="DMIN_4">Les voyages</row>
+  <row label="DMIN_5">Le cinéma</row>
+  <row label="DMIN_6">La musique</row>
+  <row label="DMIN_7">L'art</row>
+  <row label="DMIN_8">Les résultats sportifs</row>
+  <row label="DMIN_9">L'actualité sportive</row>
+  <row label="DMIN_10">Les Sports extrêmes</row>
+  <row label="DMIN_11">Les jeux vidéos</row>
+  <row label="DMIN_12">L'esport</row>
+  <row label="DMIN_13">La santé, la diététique</row>
+  <row label="DMIN_14">Les Sneakers</row>
+  <row label="DMIN_15">Le luxe</row>
+  <row label="DMIN_16">La mode</row>
+  <row label="DMIN_17">La beauté</row>
+  <row label="DMIN_18">Le DIY (Do It Yourself)</row>
+  <row label="DMIN_19">L'actualité</row>
+  <row label="DMIN_20">L'entrepreneuriat</row>
+  <row label="DMIN_21">L'économie</row>
+  <row label="DMIN_22">Les Cryptomonnaies</row>
+  <row label="DMIN_23">La blockchain</row>
+  <row label="DMIN_24">Les NFT (Non-Fungible Tokens)</row>
+  <row label="DMIN_25">La nature</row>
+  <col label="c1">Pas du tout</col>
+  <col label="c2">Un peu</col>
+  <col label="c3">Assez</col>
+  <col label="c4">Beaucoup</col>
+</radio>
+
+<suspend/>
+
+
+
+<radio 
+  label="DMSOCO"
+  colLegendRows="10,20"
+  shuffle="rows">
+  <title>Parmi les sujets suivants, quels sont ceux qui vous préoccupent le plus personnellement ?</title>
+  <comment>Merci de choisir toutes les réponses qui s'appliquent.</comment>
+  <alt>Confiance dans les institutions</alt>
+  <row label="DMSOCO_1">L'environnement</row>
+  <row label="DMSOCO_2">Le dérèglement climatique</row>
+  <row label="DMSOCO_3">La démocratie</row>
+  <row label="DMSOCO_4">La Laïcité</row>
+  <row label="DMSOCO_5">Le droit des animaux</row>
+  <row label="DMSOCO_6">La précarité</row>
+  <row label="DMSOCO_7">Les retraites</row>
+  <row label="DMSOCO_8">La santé</row>
+  <row label="DMSOCO_9">Le logement</row>
+  <row label="DMSOCO_10">Le droit des femmes</row>
+  <row label="DMSOCO_11">Les inégalités sociales</row>
+  <row label="DMSOCO_12">L'handicap</row>
+  <row label="DMSOCO_13">Les droits LBGTQ+</row>
+  <row label="DMSOCO_14">La lutte contre le racisme</row>
+  <row label="DMSOCO_15">La menace terroriste</row>
+  <row label="DMSOCO_16">L'immigration</row>
+  <row label="DMSOCO_17">L'insécurité</row>
+  <row label="DMSOCO_18">La Défense</row>
+  <row label="DMSOCO_19">Le pouvoir d'achat</row>
+  <row label="DMSOCO_20">L'inflation</row>
+  <row label="DMSOCO_21">L'emploi</row>
+  <row label="DMSOCO_22">L'éducation</row>
+  <row label="DMSOCO_23">La faim dans le monde</row>
+  <row label="DMSOCO_24">La montée des régimes autoritaires</row>
+  <row label="DMSOCO_25">La guerre en Ukraine</row>
+  <row label="DMSOCO_26">La surconsommation</row>
+  <row label="DMSOCO_27">Le gaspillage</row>
+  <row label="DMSOCO_28">La souverainté énergétique</row>
+  <col label="c1">Pas du tout</col>
+  <col label="c2">Un peu</col>
+  <col label="c3">Assez</col>
+  <col label="c4">Beaucoup</col>
+</radio>
+
+<suspend/>

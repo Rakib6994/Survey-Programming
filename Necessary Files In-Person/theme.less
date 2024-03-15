@@ -1,0 +1,1022 @@
+// Theme: <Frozen Theme (<Behaviorally Theme 2>)>
+
+
+/* ================================================ READ ME! ================================================ */
+/*
+  This file is...
+    A minimally styled boilerplate LESS file for making a Beacon survey theme.
+    This single file constitutes a theme.
+    It overrides all other Beacon LESS files except survey-specific overrides (such as ss:includeLESS and themevars).
+
+  Rules of thumb are...
+    • Use 'rem' units for font sizes (ex. font-size: 1.125em;). This way the user can increase or decrease all font sizes
+      proportionally by adjusting the @desktop-font-size variable. It also helps surveys remain accessible to the
+      visually impaired.
+    • USE THE VARIABLES.
+        - The variables are piped into the theme editor and used for making adjustments using the UI, so DON'T DELETE
+          ANY OF THE PRESET VARIABLES (except the "theme-specific variables" at the end).
+        - In general, avoid messing with any of the styles that are using the variables in the theme file.
+        - You can add theme specific variables at the bottom of the variables list if you want to provide some
+          customization controls or for your own convenience.
+        - You will see the contrast() mixin used throughout this file, it's used to to automatically calculate which of
+          two colors (a dark and a light color) will contrast better with the element behind it. Feel free to replace it
+          with an exact color if you have one in mind.
+    • Stay flat.
+        - Avoid too much style nesting. By keeping things flat, you'll make it much easier for users to perform simple
+          overrides in the theme editor's css/less injector. Wouldn't you rather override ".instructions" instead of
+          ".survey-body .question .instructions"?
+    • Stay Responsive. The responsive strategy is as follows..
+        - Mobile first. Style the survey with a narrow viewport in mind first.
+        - Then apply Desktop styling using media queries. You can use the "@media @desktop {}" media query in any
+          selector to apply its styling over the @breakpoint (there are examples of this scattered about).
+        - BUT TABLES ARE SPECIAL. Tables attempt to stay a table for as long as possible before collapsing into a list
+          for narrow viewports, therefore they don't use media queries. There are separate sections (see table of
+          contents below) for styling the list & table modes exclusively.
+*/
+/* ============================================ TABLE OF CONTENTS ============================================ */
+/*
+    --- Variables
+    --- Survey Page (html, body, etc)
+    --- Hyperlinks
+    --- Input Fields
+    --- Logo
+    --- Progress Bar
+    --- Comment
+    --- Question
+    --- Question > Question Text
+    --- Question > Instructions
+    --- Question > Answers
+    --- Question > Answers > Table List Mode Styles
+    --- Question > Answers > Table Grid Mode Styles
+    --- Buttons
+    --- Exit Page
+    --- Errors
+    --- Extra Info
+    --- Footer
+*/
+
+/* ============================================= ( Variables ) ============================================= */
+
+// **************** Color Palette Chips **************** //
+
+// Use these to allow the user to change the color palette for the theme and get a nice result. The colors you set here
+// will be used by default when selecting your theme. IN GENERAL, PRETEND THAT THESE ARE THE ONLY COLORS YOU CAN USE,
+// as they all have a recommended purpose. You might not even need them all.
+
+@background-color:  #fff; //white
+@foreground-color:  #fff; //white
+@text-color:        rgb(73, 73, 72); //almost black
+
+
+@color-1: #5A5A5A;             //graphite
+@color-2: #0091DA;             //blue
+@color-3: rgb(73, 73, 72);     //dark grey
+@color-4: #E0E0E0;             //light grey unused
+@color-5: #C6007E;             //fuchsia
+@color-6: rgba(0, 0, 0, 0);    //unused in this theme
+@color-6: rgba(0, 0, 0, 0);    //unused in this theme
+
+
+@border-color:                @background-color;
+@question-background:         transparent;
+@button-color:                @background-color;
+@button-hover-color:          @background-color;   //darken(@button-color, 5%)
+@button-selected-color:       lighten(@color-2, 10%);
+@button-text-color:           @text-color;
+@button-text-hover-color:     @color-2;  //was button-text-color
+@button-text-selected-color:  @background-color;
+@link-color:                  @color-5;  //support link
+@link-color-hover:            darken(@link-color, 10%);
+
+
+// Other colors (OK to use non-variables here, as these are not part of the color palette) //
+@error-color:   @color-5; // Usually a shade of red
+@warning-color: lighten(@color-5, 10%);
+@info-color:    #cf6;
+@dq-like:       #c5d600;
+@dq-neutral:    #00b4d6;
+@dq-dislike:    #ba0000;
+
+
+
+// ********************** Fonts ********************** //
+
+// Replace this URL with any webfont URL. Whatever @webfont equals will be the imported font.
+// Preferably use a font that supports italic, bold, and bold italic formatting.
+// DO NOT USE "HTTP://" OR "HTTPS://" AT THE BEGINNING OF THIS URL, ALWAYS START WITH "//"
+@webfont: '//fonts.googleapis.com/css?family=Hind';
+.webfontImport(@webfont);
+
+@primary-font-family:   Hind, sans-serif;  // Questions / Comments
+@secondary-font-family: Hind, sans-serif;  // Answers, footer, button text, progress, etc.
+
+@large-text:    1.7rem;     // 20px
+@normal-text:   1.5rem;       // 16px
+@small-text:    1.3rem;    // 14px
+
+
+
+// ********************** Helper Variables ************************* //
+@page-background-image:     ""; // Replace this URL with any image URL.
+@border-radius:             7px; // Default border radius for the foreground and all buttons.
+@foreground-border-radius:  @border-radius;
+
+
+
+// **************** Structural Controls **************** //
+// Breakpoint
+@breakpoint:  768px; // Set the breakpoint here, then use "@media @desktop {}" for desktop styles in your theme.
+@desktop:     ~"(min-width: @{breakpoint})";
+@mobile:     ~"(max-width: @{breakpoint})";
+
+// Base font sizes
+@desktop-font-size: 0.750em; // See the readme above for explanation on what em units are.
+// Use a multiplier for mobile font size so the user only has to change desktop font size to get proportional resizing.
+@mobile-font-size:  (@desktop-font-size * 7/6);
+
+
+// Foreground Measurements (use px units!)
+@foreground-width:    960px;
+  // ^ Sets min-width of the foreground when the screen is above this size. Otherwise, foreground stays at width:100%
+  // We set a min-width instead of a normal width because tables need to be able to extend their width in certain cases.
+@foreground-padding-top-bottom:         0;
+@foreground-padding-left-right-mobile:  14px;
+@foreground-padding-left-right-desktop: 18px;
+@foreground-border:                     0;
+@foreground-inner-width:                (@foreground-width - (@foreground-padding-left-right-desktop * 2) - (@foreground-border * 2));
+  // ^ Keeps survey-level elements (like logos and comments) from expanding the fg width, excludes questions.
+
+// Question Measurements (use px units!)
+@question-padding-top-bottom:         36px;
+@question-padding-left-right-mobile:  0;
+@question-padding-left-right-desktop: 0;
+@question-border:                     0;
+@question-inner-width:                (@foreground-inner-width - (@question-padding-left-right-desktop * 2) - (@question-border * 2));
+  // ^ Keeps question-level elements (like question-text) from expanding the fg width, excludes tables and lists.
+
+// ******************** Progress Bar ******************** //
+@progress-position:     right;
+@progress-border-color: transparent;
+@progress-empty-color:  @table-row-group-bg-color;
+@progress-fill-color:   transparent;
+@progress-text-color:   @text-color;
+@progress-font-size:    @small-text;
+@progress-font-family:  @secondary-font-family;
+
+
+
+// ******************* Comment Text ******************* //
+@comment-text-color:    @text-color;
+@comment-font-size:     @large-text;
+@comment-font-family:   @primary-font-family;
+
+
+
+// ******************* Question Text ******************* //
+@question-text-color:   @text-color;
+@question-font-size:    @large-text;
+@question-font-family:  @primary-font-family;
+
+// ****************** Instruction Text ****************** //
+@instruction-text-color:  @text-color;
+@instruction-font-size:   @small-text;
+@instruction-font-family: @secondary-font-family;
+
+// ********************** Answers ********************** //
+@answer-text-color:   @text-color;
+@answer-font-size:    @normal-text;
+@answer-font-family:  @secondary-font-family;
+
+// Tables
+@table-border-color:        @border-color;
+@table-legend-bg-color:     darken(@background-color, 3%);
+@table-row-legend-bg-color: @table-legend-bg-color;
+@table-col-legend-bg-color: @table-legend-bg-color;
+@table-row-group-bg-color:  darken(@table-legend-bg-color, 3%);
+@table-col-group-bg-color:  @table-row-group-bg-color;
+@table-cell-hover-color:    @row-bg-color;
+
+// Rows (overrides @table-legend-bg-color on row legends)
+@row-bg-color:      darken(@background-color, 3%);
+@row-bg-color-alt:  @row-bg-color;
+
+
+
+// Text Inputs
+@input-text-color:          @text-color;
+@input-font-size:           @normal-text;
+@input-bg-color:            @background-color;
+@input-bg-color-active:     @input-bg-color;
+@input-border-color:        @dq-button-border-color;
+@input-border-color-active: @color-1;
+
+
+
+// ********************** Buttons ********************** //
+// Primary Survey Button (Continue, Finish, etc..)
+@primary-button-text-color:         @button-text-color;
+@primary-button-text-color-hover:   @button-text-selected-color;
+@primary-button-font-size:          @normal-text;
+@primary-button-font-family:        @secondary-font-family;
+@primary-button-bg-color:           @button-color;
+@primary-button-bg-color-hover:     @dq-button-bg-color-selected;
+@primary-button-border-color:       @dq-button-border-color;
+@primary-button-border-color-hover: transparent;
+@primary-button-border-radius:      @border-radius;
+
+// Secondary Survey Button ('Go Back', 'Randomize')
+@secondary-button-text-color:         @primary-button-text-color;
+@secondary-button-text-color-hover:   @primary-button-text-color-hover;
+@secondary-button-font-size:          @primary-button-font-size;
+@secondary-button-font-family:        @primary-button-font-family;
+@secondary-button-bg-color:           @primary-button-bg-color;
+@secondary-button-bg-color-hover:     @primary-button-bg-color-hover;
+@secondary-button-border-color:       @primary-button-border-color;
+@secondary-button-border-color-hover: @primary-button-border-color-hover;
+@secondary-button-border-radius:      @primary-button-border-radius;
+
+// DQ Buttons (in-survey buttons like Button Select)
+@dq-button-font-size:             @normal-text;
+@dq-button-font-family:           @secondary-font-family;
+@dq-button-text-color:            @button-text-color;
+@dq-button-text-color-hover:      @button-text-hover-color;
+@dq-button-text-color-selected:   @button-text-selected-color;
+@dq-button-bg-color:              @button-color;
+@dq-button-bg-color-hover:        @button-hover-color;
+@dq-button-bg-color-selected:     @button-selected-color;
+@dq-button-border-color:          @color-2;
+@dq-button-border-color-hover:    @dq-button-border-color;
+@dq-button-border-color-selected: transparent;
+@dq-button-border-radius:         @border-radius;
+
+
+// FIR ("Form Image Replacement", the svg radios & checkboxes)
+@fir-border:             @dq-button-border-color;
+@fir-border-hover:       @fir-border;
+@fir-border-selected:    @fir-border;
+@fir-base:               @background-color;
+@fir-base-hover:         @background-color;
+@fir-base-selected:      @background-color;
+@fir-inner:              @background-color;
+@fir-inner-hover:        @fir-border;
+@fir-inner-selected:     @button-selected-color; // DO NOT MAKE THIS THE SAME COLOR AS @FIR-INNER-HOVER
+@fir-size:               1.65em;
+
+
+
+// *********************** Footer *********************** //
+@footer-text-color:       @text-color;
+@footer-font-size:        @small-text;
+@footer-font-family:      @secondary-font-family;
+@footer-link-color:       @link-color;
+@footer-link-color-hover: @link-color-hover;
+
+
+
+// ********************* Exit Page ********************* //
+@exit-header-text-color:  @text-color;
+@exit-header-font-size:   @large-text;
+@exit-header-font-family: @primary-font-family;
+@exit-body-text-color:    @text-color;
+@exit-body-font-size:     @normal-text;
+@exit-body-font-family:   @secondary-font-family;
+
+
+
+// ********************* Messaging ********************* //
+// Survey Errors (error messaging at the page level)
+@survey-error-text-color:   @background-color;
+@survey-error-font-size:    @large-text;
+@survey-error-font-family:  @secondary-font-family;
+@survey-error-bg-color:     @error-color;
+
+// Question Errors (error messaging at the question level)
+@question-error-text-color:    @error-color;
+@question-error-font-size:     @normal-text;
+@question-error-font-family:   @secondary-font-family;
+@question-error-bg-color:      transparent;
+@answer-error-highlight-color: lighten(@error-color, 60%);
+
+// Survey Info
+@survey-info-text-color:   @text-color;
+@survey-info-font-size:    @normal-text;
+@survey-info-font-family:  @secondary-font-family;
+@survey-info-bg-color:     @info-color;
+
+// Survey Warning
+@survey-warning-text-color:   @text-color;
+@survey-warning-font-size:    @normal-text;
+@survey-warning-font-family:  @secondary-font-family;
+@survey-warning-bg-color:     @warning-color;
+
+
+// Buttons Select Questions
+@btn-select-default-max-width:  @foreground-width / 3; // Widest a button can be by default (fit 3 buttons on screen by default)
+@btn-select-spacing:            0 2px 4px; // Set padding around buttons when in grid mode, Left/right are stripped in list mode.
+@btn-select-border-radius:      @dq-button-border-radius;
+
+
+
+// ******************* Theme Editor Options ******************* //
+
+/*
+  Font Sizes
+
+  Override the default font sizes used by Theme Editor. Provide a comma-separated list of 5 values, sorted from
+  smallest to largest. The middle value will be used as the default size.
+*/
+
+//@font-sizes: 0.65em, 0.7em, 0.75em, 0.85em, 0.95em;
+
+/*
+  Font Families
+
+  Override the default font families used by Theme Editor. You may provide up to 9 entries. A @font-family-X variable
+  must always be followed by a @webfont-X variable.
+
+  @font-family-X variables should ALWAYS have quotation marks around font names that contains a whitespace. It's
+  recommended that they end with 'serif' or 'sans-serif'.
+  @webfont-X variable must be set to empty quotes "" if you don't need a webfont.
+*/
+//@font-family-1: Arial, sans-serif;
+//@webfont-1: "";
+//@font-family-2: Arial, sans-serif;
+//@webfont-2: "";
+//@font-family-3: "Open Sans", sans-serif;
+//@webfont-3: "http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700";
+//@font-family-4: Arial, sans-serif;
+//@webfont-4: "";
+//@font-family-5: Arial, sans-serif;
+//@webfont-5: "";
+//@font-family-6: Arial, sans-serif;
+//@webfont-6: "";
+//@font-family-7: Arial, sans-serif;
+//@webfont-7: "";
+//@font-family-8: Arial, sans-serif;
+//@webfont-8: "";
+//@font-family-0: Arial, sans-serif;
+//@webfont-9: "";
+
+/*
+  Color Palettes
+
+  Specify some recommended color palettes for this theme. You may provide up to 9 palettes. Provide a comma-separated
+  list of 6 values.
+*/
+@theme-palette-1: @color-1, @color-2, @color-3, @color-4, @color-5, @color-6;
+//@theme-palette-2: red, orange, yellow, green, blue, violet;
+//@theme-palette-3: red, orange, yellow, green, blue, violet;
+//@theme-palette-4: red, orange, yellow, green, blue, violet;
+//@theme-palette-5: red, orange, yellow, green, blue, violet;
+//@theme-palette-6: red, orange, yellow, green, blue, violet;
+//@theme-palette-7: red, orange, yellow, green, blue, violet;
+//@theme-palette-8: red, orange, yellow, green, blue, violet;
+//@theme-palette-9: red, orange, yellow, green, blue, violet;
+
+// ******************* Theme Specific ******************* //
+/*
+  Add additional theme specific variables below.
+  Use a prefix, something like "@contemporary-fg-border-radius" if the theme was named "contemporary".
+  Creating variables allows the user to easily change things, they may appear in the theme editor UI as controls.
+*/
+
+
+
+/* ============================================ ( Survey Page ) ============================================ */
+html {
+  font-family:  @primary-font-family;
+  font-size:    @mobile-font-size;
+  @media @desktop {
+    font-size:  @desktop-font-size;
+  }
+}
+
+.survey-page {
+  // Background
+  background-color:   @background-color;
+  color:              @text-color;
+  @media @desktop {
+    background-color: @background-color;
+    .backgroundImport(@page-background-image);
+  }
+}
+
+.survey-body {
+  // Foreground
+  padding:                @foreground-padding-top-bottom @foreground-padding-left-right-mobile;
+  background-color:       transparent;
+  position:               relative;
+  border:                 @foreground-border none transparent;
+  -webkit-border-radius:  @foreground-border-radius;
+  -moz-border-radius:     @foreground-border-radius;
+  border-radius:          @foreground-border-radius;
+  @media @desktop {
+    padding-left:         @foreground-padding-left-right-desktop;
+    padding-right:        @foreground-padding-left-right-desktop;
+  }
+}
+
+.survey-header {
+  margin-bottom:  1.5em;
+  min-height:     2.5em;
+}
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}  
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+
+/* ================================================= ( Hyperlinks ) =============================================== */
+a {
+  color:    @link-color;
+  &:hover {
+    color:  @link-color-hover;
+  }
+}
+
+/* ================================================= ( Input Fields ) =============================================== */
+
+// This selector affects all text, radio, checkbox, select, and textarea fields.
+.input {
+  margin: 0;
+}
+
+input[type="text"], textarea {
+  background:             @input-bg-color;
+  border:                 1px solid @input-border-color;
+  color:                  @input-text-color;
+  font-size:              @input-font-size;
+  -moz-border-radius:     @border-radius;
+  -webkit-border-radius:  @border-radius;
+  border-radius:          @border-radius;
+  &:focus {
+    background:           @input-bg-color-active;
+    border:               1px solid @input-border-color-active;
+  }
+}
+
+input[type="text"] {
+  padding: 0.25em 0.5em;
+  .noRows.noCols & {
+    // When a text element is the only form element in a question
+    padding: 0.5em 0.75em;
+  }
+}
+
+textarea {
+  padding: 0.75em 0.5em;
+  width: 100%;
+  cursor: text;
+  -moz-border-radius:     .75em;
+  -webkit-border-radius:  .75em;
+  border-radius:          .75em;
+}
+
+select {
+  font-size: @large-text;
+}
+
+.oe-inline, .oe-left {
+  margin-left: 0.5em;
+}
+.oe-right {
+  margin-right: 0.5em;
+}
+
+/* ================================================= ( Logo ) =============================================== */
+.logo { // Container around logo
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.logo-left {
+  text-align: left;
+}
+
+.logo-middle {
+  text-align: center;
+}
+
+.logo-right {
+  text-align: right;
+}
+
+.logo-image { // Actual logo image
+}
+
+
+/* ============================================ ( Progress Bar ) ============================================ */
+/*
+  Left a basic progress bar built in, but feel to make your own!
+*/
+
+.progress-bar-position() when (@progress-position = right) {
+    text-align: right;
+    float:      right;
+    .logo-left + &, .logo-middle + & {
+      position: absolute;
+      top:      0;
+      right:    0;
+      float:    none;
+    }
+}
+.progress-bar-position() when (@progress-position = left) {
+    text-align: left;
+    float:      left;
+    .logo-right + &, .logo-middle + & {
+      position: absolute;
+      top:      0;
+      left:     0;
+      float:    none;
+    }
+}
+.progress-bar {
+  width:          100%;
+  margin-bottom:  2em;
+  text-align:     center;
+
+  @media @desktop {
+    .progress-bar-position();
+    width:        100%;
+    &:after {
+      content:    " ";
+      display:    table;
+      clear:      both;
+    }
+  }
+}
+
+.progress-bottom {
+  // When the progress bar is placed at the bottom of the page
+  margin-top:     1em;
+  margin-bottom:  0;
+}
+
+.progress-box-outer, .progress-text {
+  // Vertically aligns bar and text
+  display:        inline-block;
+  vertical-align: top;
+}
+
+// Progress Bar Empty Box
+.progress-box-outer {
+  background-color: @progress-empty-color;
+  border:           none;
+  width:            100%;
+  max-width:        100%;
+  text-align:       right;
+  height:           .85em;
+  display:          inline-block;
+}
+
+// Progress Bar Fill (full)
+.progress-box-completed {
+  background-color: @progress-fill-color;
+  width:            0;
+  height:           100%;
+  display:          block;
+}
+
+// Progress Bar Text
+.progress-text {
+  color:        @progress-text-color;
+  font-family:  @progress-font-family;
+  font-size:    @progress-font-size;
+  line-height:  1em;
+  padding-left: 0.5em;
+  display:      none;
+}
+
+
+/* ============================================== ( Comment ) =============================================== */
+.comment {
+    background:    @question-background;
+    margin-top:    1em;
+    margin-bottom: 0;
+    padding:       @question-padding-top-bottom @question-padding-left-right-mobile;
+    @media @desktop {
+      padding:     @question-padding-top-bottom @question-padding-left-right-desktop;
+    }
+}
+
+.comment-text {
+  color:        @comment-text-color;
+  font-size:    @comment-font-size;
+  line-height:  normal;
+  font-family:  @comment-font-family;
+}
+
+
+/* ============================================= ( Question ) ============================================== */
+// Question Container
+.question {
+  background:     @question-background;
+  margin-top:     1em;
+  margin-bottom:  0;
+  clear:          both;
+  padding:        @question-padding-top-bottom @question-padding-left-right-mobile;
+  border-top:     1px solid @color-2;
+  @media @desktop {
+    padding:      @question-padding-top-bottom @question-padding-left-right-desktop;
+  }
+}
+
+
+/* ====================================== ( Question > Question Text ) ===================================== */
+.question-text {
+  color:          @question-text-color;
+  font-size:      @question-font-size;
+  font-family:    @question-font-family;
+  margin-bottom:  0.75em;
+  line-height:    normal;
+}
+
+
+/* ====================================== ( Question > Instructions ) ====================================== */
+.instruction-text {
+  color:          @instruction-text-color;
+  font-size:      @instruction-font-size;
+  font-family:    @instruction-font-family;
+  margin-bottom:  1.5em;
+}
+
+
+/* ========================================= ( Question > Answers ) ========================================= */
+// Container that wraps around all grids/lists in a question, If several grids were merged together,
+// this would wrap around all of them.
+.answers,
+.fir-select2-dropdown {
+  color:        @answer-text-color;
+  font-size:    @answer-font-size;
+  font-family:  @answer-font-family;
+}
+
+/* ============================ ( Question > Answers > Table List Mode Styles ) ============================ */
+
+// Mobile-only column legends
+.mobile-spacing(@spacing1, @spacing2) {
+  padding:    @spacing1;
+  .checkbox &, .radio & {
+    padding:  @spacing2;
+  }
+}
+.cell-text {
+  .mobile-spacing(0 0 0 0.4em, 0 0 0 0.25em);
+
+  .cell-legend-left & {
+    .mobile-spacing(0 0.6em 0 0, 0 0.6em 0 0);
+  }
+  .cell-legend-above & {
+    .mobile-spacing(0 0 0.25em 1px, 0 0 0.25em 1px);
+  }
+}
+
+// All legends (row and col)
+.legend {
+  font-weight:  normal;
+  padding:      0.5em;
+}
+
+// Wrapper that goes around inputs
+.element {
+  padding: 0.4em 0.4em 0.4em 0;
+}
+
+// Indentation levels on mobile exclusively
+// Cells need extra indentation to show hierarchy.
+.indent-1 {
+  padding-left: 1.167em;
+}
+.indent-2 {
+  padding-left: 1.750em;
+}
+.indent-3 {
+  padding-left: 2.333em;
+}
+
+// Legend formatting on mobile exclusively
+// Parents of element cells (such as groups) need extra formatting to show hierarchy.
+.legend-level-1 {
+  font-size: 1em;
+}
+.legend-level-2 {
+  font-size: 1.23em;
+}
+.legend-level-3 {
+  font-size: 1.3em;
+}
+
+// Row and legend formatting on mobile and desktop
+.row-no-answer {}
+.row-elements, .answers-list {
+  background:       @row-bg-color;
+}
+.answers-list {
+  background:       @background-color;
+}
+.odd when not (@row-bg-color-alt = @row-bg-color) {
+  background:       @row-bg-color-alt;
+}
+.row-legend when (@row-bg-color = transparent) and (@row-bg-color-alt = transparent) {
+  background-color: @table-row-legend-bg-color;
+}
+.col-legend {
+  background-color: @table-col-legend-bg-color;
+}
+.row-legend-group {
+  font-size:        1.2em;
+  background-color: @table-row-group-bg-color;
+}
+.col-legend-group {
+  background-color: @table-col-group-bg-color;
+}
+
+// Row spacing on lists exclusively
+.row-elements + .row-elements, .row-elements + .row-group {
+  margin-top: 2em;
+}
+.zeroHeight + .row-elements, .zeroHeight + .row-group {
+  margin-top: 0;
+}
+
+/* ============================ ( Question > Answers > Table Grid Mode Styles ) ============================ */
+/*
+  All the desktop grid styles need to have the .grid-desktop-mode prefixed before
+  These take place until a table absolutely must collapse.. It's a long story.
+*/
+.grid-table-mode {
+  .legend {
+    padding:    0.4em 0.5em;
+    font-size:  1em; // Overrides the effects of .legend-level-X
+  }
+  input[type="text"], textarea {
+    padding: 0.25em 0.5em;
+  }
+  .nonempty {
+    // Apply cell borders and backgrounds to this selector, as it excludes blank corner cells.
+    border: 1px solid @table-border-color;
+  }
+  .row-legend-group {
+    font-size: @answer-font-size;
+    padding:   1em .5em;
+  }
+  .col-legend-group {}
+  .element {
+    // Reset padding to remove earlier list-mode indenting.
+    padding: 0.4em;
+    &:hover, &:focus, &:active {
+      background-color: @table-cell-hover-color;
+    }
+  }
+  .row-elements + .row-elements, .row-elements + .row-group {
+    // Reset margin to remove earlier list-mode spacing.
+    margin-top: 0;
+  }
+  .col-legend {
+      padding: 0.75em 0.5em;
+  }
+}
+
+
+/* =============================================== ( Buttons ) ============================================== */
+/*
+  "Continue", "Finish", etc.
+*/
+
+// Buttons area container
+.survey-buttons {
+  margin:           1em 0 0;
+  text-align:       center;
+  @media @desktop {
+    padding-right:  1em;
+    text-align:     right;
+  }
+}
+
+// Primary button formatting
+.button {
+  background-color: @primary-button-bg-color;
+  color:            @primary-button-text-color;
+  font-size:        @primary-button-font-size;
+  font-family:      @primary-button-font-family;
+  border:           1px solid @primary-button-border-color;
+
+  -webkit-appearance:     none;
+  -webkit-border-radius:  @primary-button-border-radius;
+  -moz-border-radius:     @primary-button-border-radius;
+  border-radius:          @primary-button-border-radius;
+
+  cursor:   pointer;
+  padding:  0.7em 1em;
+  margin:   0.111em;
+
+  &:hover, &:focus {
+    background-color: @primary-button-bg-color-hover;
+    border-color:     @primary-button-border-color-hover;
+    color:            @primary-button-text-color-hover;
+  }
+  &:active {
+    background-color: darken(@primary-button-bg-color-hover, 3);
+  }
+  &[disabled] {
+    .safeFadeout(@primary-button-bg-color, 40%);
+  }
+  &.continue {}
+  &.finish {}
+  &.back, &.randomize { // Secondary buttons. Randomize only appears in QA Mode.
+    background-color:       @secondary-button-bg-color;
+    color:                  @secondary-button-text-color;
+    font-size:              @secondary-button-font-size;
+    font-family:            @secondary-button-font-family;
+    border:                 1px solid @secondary-button-border-color;
+    -webkit-border-radius:  @secondary-button-border-radius;
+    -moz-border-radius:     @secondary-button-border-radius;
+    border-radius:          @secondary-button-border-radius;
+    &:hover, &:focus {
+      background-color:     @secondary-button-bg-color-hover;
+      border-color:         @secondary-button-border-color-hover;
+      color:                @secondary-button-text-color-hover;
+    }
+    &:active {
+      background-color: darken(@secondary-button-bg-color-hover, 3);
+    }
+    &[disabled] {
+      .safeFadeout(@secondary-button-bg-color, 40%);
+    }
+  }
+}
+
+/* ============================================ ( Exit Page ) =============================================== */
+// Page Container
+.exit-message {}
+
+// Header Text
+.exit-message-header {
+  color:          @exit-header-text-color;
+  font-size:      @exit-header-font-size;
+  font-family:    @exit-header-font-family;
+  margin-bottom:  0.75em;
+}
+
+// Additional Text/Messages
+.exit-message-text {
+  color:        @exit-body-text-color;
+  font-size:    @exit-body-font-size;
+  font-family:  @exit-body-font-family;
+}
+
+
+/* =============================================== ( Errors ) =============================================== */
+/*
+    Survey page errors are displayed at the top of the page and are wrapped in a .survey-page-error container
+    Survey question errors are displayed WITHIN a question and are wrapped in .survey-q-error containers
+*/
+
+.survey-error {
+  padding:               1em;
+  margin-bottom:         1em;
+  background-color:      @survey-error-bg-color;
+  color:                 @survey-error-text-color;
+  font-size:             @survey-error-font-size;
+  font-family:           @survey-error-font-family;
+  border-radius:         0;
+  -moz-border-radius:    0;
+  -webkit-border-radius: 0;
+}
+
+.survey-error-text {}
+
+.question-error {
+  margin:                0.5em 0;
+  background-color:      @question-error-bg-color;
+  color:                 @question-error-text-color;
+  font-size:             @question-error-font-size;
+  font-family:           @question-error-font-family;
+  border-radius:         0;
+  -moz-border-radius:    0;
+  -webkit-border-radius: 0;
+}
+
+.question-error-text {}
+
+.cell.hasError, .answers-list .element.hasError, .element.hasError:hover, // Answers in an error state. Note the hover override.
+.rowLegendErr .oe, .colLegendErr .oe {
+  background-color: @answer-error-highlight-color;
+}
+
+
+/* ============================================ ( Extra Info ) ============================================== */
+/*
+    This is mainly used in QA mode for:
+        - page breaks
+        - "show question attributes"
+        - "show source code"
+        - and other messages
+    But these messages will also show if a survey is in testing mode and sent to a non-logged-in user to test,
+    so they do need some styling.
+*/
+
+.survey-info, .survey-warning {
+  font-weight:           bold;
+}
+.survey-info, .survey-warning, .autosave-restart {
+  padding:               0.714em;
+  margin-bottom:         1em;
+  border-radius:         0;
+  -moz-border-radius:    0;
+  -webkit-border-radius: 0;
+}
+
+// Extra Info Container
+.survey-info {
+  background-color: @survey-info-bg-color;
+  color:            @survey-info-text-color;
+  font-size:        @survey-info-font-size;
+  font-family:      @survey-info-font-family;
+}
+.survey-info-text {}
+
+// Warning container
+.survey-warning {
+  background-color: @survey-warning-bg-color;
+  color:            @survey-warning-text-color;
+  font-size:        @survey-warning-font-size;
+  font-family:      @survey-warning-font-family;
+}
+.survey-warning-text {}
+
+// Autosave Restart Message
+.autosave-restart {
+  background-color: @survey-info-bg-color;
+  color:            @survey-info-text-color;
+  font-size:        @survey-info-font-size;
+  font-family:      @survey-info-font-family;
+  text-align:       center;
+  text-decoration:  none;
+  &:hover {
+    background: darken(@survey-info-bg-color, 10%);
+    color: @survey-info-text-color;
+  }
+}
+
+
+/* =============================================== ( Footer ) ============================================== */
+.footer {
+  color:        @color-1;
+  font-size:    @footer-font-size;
+  font-family:  @footer-font-family;
+  text-align:   center;
+  margin:       2em 0;
+  a {
+    color:      @footer-link-color;
+    &:hover, &:focus, &:active {
+      color:    @footer-link-color-hover;
+    }
+  }
+}
+
+// Workaround for bug #21884, should be permanently fixed in compat 132.
+.bugfix-21884() when (@compat < 132) {
+  .survey-info, .survey-warning, .survey-extra-approval, .autosave-restart, .logo, .survey-error, .survey-buttons {
+    max-width: @foreground-inner-width;
+  }
+  .question-text, .instruction-text {
+    max-width: @question-inner-width;
+  }
+  .answers-table {
+    min-width: @question-inner-width;
+    @media (max-width: @foreground-width) {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+  .grid.grid-table-mode.setWidth {
+    width: @question-inner-width;
+    @media (max-width: @foreground-width) {
+      width: 100%;
+    }
+  }
+}
+.bugfix-21884();

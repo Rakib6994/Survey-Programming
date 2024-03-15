@@ -1,0 +1,26 @@
+<number 
+  label="S_Typical10"
+  amount="10"
+  autosum:postText=""
+  autosum:preText=""
+  autosum:prefill="0"
+  size="10"
+  ss:legendColWidth="300px"
+  ss:listDisplay="0"
+  uses="autosum.5"
+  verify="range(0,10)">
+  <title>Thinking about your grocery shopping routine as a whole, how would you divide your typical 10 trips across the following retailers?</title>
+  <comment>Please enter a number between 0 and 10 for each of the following retailers.</comment>
+  <row label="r1">Walmart</row>
+  <row label="r2">Target</row>
+  <row label="r3">Kroger</row>
+  <row label="r4">Albertsons</row>
+  <row label="r5">Amazon</row>
+  <row label="r6">Costco</row>
+  <row label="r7">Sam's Club</row>
+  <row label="r8">Dollar General</row>
+  <row label="r9">Instacart</row>
+  <row label="r10" open="1" openOptional="1" randomize="0">Local Grocery Store (please specify)</row>
+</number>
+
+<suspend/>

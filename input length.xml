@@ -1,0 +1,17 @@
+<text 
+  label="S5a"
+  fwidth="1024"
+  optional="0"
+  size="5">
+  <title>Please type in your postcode.</title>
+  <validate>
+if not this.val.isdigit():
+  error(res.Errpostcode)
+if (len(this.val) lt 3) or (len(this.val) gt 4):
+  error(res.Errpostcode)
+  </validate>
+
+  <style arg:mlen="4" copy="QNumstyle" name="el.text"/>
+</text>
+
+<suspend/>

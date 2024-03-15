@@ -1,0 +1,55 @@
+<style name="respview.client.css" with="CJ4_1"><![CDATA[
+<style type="text/css">
+#tooltip{
+display:inline-block;
+position:relative;
+color: blue;
+}
+#tooltip #tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333C;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px;
+ 
+  
+  position: absolute;
+  z-index: 999;
+}
+
+
+#tooltip:hover #tooltiptext {
+  visibility: visible;
+}
+   </style>
+]]></style>
+<suspend/>
+
+
+<block label="Logistics" builder:title="Logistics">
+  <select 
+   label="CJ4_1"
+   minRanks="1"
+   optional="1"
+   randomize="0"
+   shuffle="rows"
+   unique="none,cols"
+   uses="ranksort.5">
+    <title><div id="tooltip">Orientierungsphase<div id="tooltiptext"><p>z.B. einen ersten Überblick über potenzielle Arbeitgeber und Stellen schaffen</p></div></div></title>
+    <row label="r1">Arbeitgeber*innen Websites</row>
+    <row label="r2">Job-Netzwerke, z.B. Xing, LinkedIn</row>
+    <row label="r3">Soziale Netzwerke (z.B. Instagram, Facebook, TikTok, etc.)</row>
+    <row label="r4">Jobbörsen (z.B. Stepstone, Monster, Indeed)</row>
+    <row label="r5">Stellenanzeigen in Zeitungen</row>
+    <row label="r6">Kolleg*Innen, Freunde und Bekannte</row>
+    <row label="r7">Fachmagazine oder Fachportale für die entsprechende Branche</row>
+    <row label="r8">Headhunter/private Personalvermittler</row>
+    <row label="r9">Zeitarbeitsfirmen</row>
+    <row label="r10">Spezielle Jobvermittlungsseiten</row>
+    <row label="r88">Sonstige</row>
+    <choice label="ch1">1 Habe ich zuerst genutzt</choice>
+    <choice label="ch2">2 Habe ich zuerst genutzt</choice>
+  </select>
+</block>

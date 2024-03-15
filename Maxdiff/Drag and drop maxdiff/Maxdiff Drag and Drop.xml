@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="Maxdiff Drag and Drop"
+  autosave="0"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="153"
+  delphi="1"
+  extraVariables="source,record,decLang,list,userAgent"
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="1"
+  ss:hideProgressBar="0"
+  state="testing">
+
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<autofill label="Category" randomize="0" where="execute,survey,report">
+  <title>Category</title>
+  <row label="r1" autofill="True"><strong>Cough, Cold, &amp; Flu  products</strong></row>
+</autofill>
+
+<block label="Section2" builder:title="DURING/AFTER_SALON_VISIT">
+  <html label="Intro_for_all_2" cond="0" where="survey">In this section we would like you to imagine you are about to buy over the counter [pipe: Category] at a retailer in-store. You will see a range of different offers presented - each time at a different price. Please select the offer that you would buy.</html>
+
+  <suspend/>
+
+  <block label="b1" builder:title="MaxDiff">
+    <block label="Q_DecisionFactors" builder:title="Question – DecisionFactors">
+      <note>MaxDiff Indices Template --Start--</note>
+      <exec when="init">
+def setupMaxDiffFile(fname, fileDelimiter="\t"):
+    try:
+        f = open("%s/%s" % (gv.survey.path, fname))
+        mdObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]
+        d = dict( ("v%s_t%s" % (row[0], row[1]), row[2:]) for row in mdObj )
+    except IOError:
+        d = {}
+    return d
+
+def setupMaxDiffItemsI(d, vt, question):
+    item_index = dict( (r.o.label.strip("item"), r.index) for r in question.rows )
+
+    items = d[vt]
+
+
+    for r in question.rows:
+        if r.o.label.strip("item") not in items:
+            r.disabled = True
+
+    question.rows.order = [ item_index[i] for i in items ]
+
+
+  
+    print "*****STAFF ONLY*****"
+    print "Version_Task: %s" % vt
+    for i in range(len(items)):
+        print "Item %s: %s" % (i+1,items[i])
+      </exec>
+
+      <exec when="init">
+Q_DecisionFactors_md = setupMaxDiffFile("Design.dat")
+      </exec>
+
+      <quota label="Quota3" overquota="noqual" sheet="MaxDiff1"/>
+
+      <number 
+     label="Q_DecisionFactors_Version"
+     size="3"
+     verify="range(1,300)"
+     where="execute,survey,report">
+        <title>Q_DecisionFactors - MaxDiff Version</title>
+        <exec>
+print p.markers
+for x in p.markers:
+    if "/MaxDiff1/ver_" in x:
+        Q_DecisionFactors_Version.val = int(x.split("_")[-1])
+        break
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <exec>
+p.startTime = timeSpent()
+      </exec>
+
+      <loop label="Q_DecisionFactors_md_loop" vars="task">
+        <title>Q_DecisionFactors - MaxDiff Loop</title>
+        <block label="Q_DecisionFactors_md_block" randomize="1">
+          <radio 
+       label="Q_DecisionFactors_[loopvar: task]"
+       adim="cols"
+       grouping="cols"
+       shuffle="rows"
+       unique="1">
+            <title><div align="center">Task [MDcount]/18</div> <br />Thinking about when you were buying over the counter [pipe: Category] from a retailer, which factors were most and least important to your decision? </title>
+            <comment>In this exercise you will see several different sets of five factors each. Some factors may get repeated over different sets. For each set, please select the factor that is most important and least important to you in that set. Please select only one factor for Most Important, and one factor for Least Important (Most Important and Least Important cannot be the same factor).</comment>
+            <exec>
+setupMaxDiffItemsI( Q_DecisionFactors_md, "v%d_t%d" % (Q_DecisionFactors_Version.val, [loopvar: task]), Q_DecisionFactors_[loopvar: task])
+p.MDcount = str(Q_DecisionFactors_md_loop_expanded.order.index([loopvar: task]-1)+1)
+            </exec>
+
+            <col label="best">Most Important</col>
+            <col label="worst">Least Important</col>
+            <row label="item1">A deal through reward points</row>
+            <row label="item2">Multi-Pack Bundle (e.g., pack of 2, pack of 4, etc.)</row>
+            <row label="item3">Value size</row>
+            <row label="item4">Is in the format I prefer (e.g. tablet, syrup, powder, etc.)</row>
+            <row label="item5">Offered with an add-on item</row>
+            <row label="item6">My usual brand of choice</row>
+            <row label="item7">Has active ingredient(s) that are efficient in relieving my symptoms</row>
+            <row label="item8">Works for multiple symptoms (e.g., stuffy nose, cough, sore throat, etc.)</row>
+            <row label="item9">A brand that works for me</row>
+            <row label="item10">Easy to open packaging</row>
+            <row label="item11">Maximum Strength</row>
+            <row label="item12">Treatment that would provide symptom relief for as long as possible (e.g. 12-hr or 24-hr relief)</row>
+            <row label="item13">Something new</row>
+            <row label="item14">Good reviews/high ratings</row>
+            <row label="item15">On a sale/promotion</row>
+            <row label="item16">Lowest cost option</row>
+            <row label="item17">Recommended to add to cart</row>
+            <row label="item18">On display; e.g. in a prominent location in-store, or in a sponsored section online</row>
+            <row label="item19">Signage in aisle/on the Cold, Cough, Flu page on the retailer website</row>
+            <row label="item20">It was on my shopping list</row>
+            <row label="item21">Medical professional-recommended</row>
+            <row label="item22">FSA or HSA Eligible</row>
+            <row label="item23">Good for people with High Blood Pressure</row>
+            <row label="item24">Minimal other ingredients (e.g. color, preservatives, etc.)</row>
+            <row label="item25">Has ingredients that I'm familiar with</row>
+            <row label="item26">Can purchase without the assistance of a pharmacist</row>
+            <row label="item27">Directly treats my symptom(s) (e.g. nasal or throat spray, lip product, etc.).</row>
+            <row label="item28">Easy to take on-the-go</row>
+            <row label="item29">Has a flavor I like</row>
+            <row label="item30">Reduces the duration of my illness</row>
+            <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="https://paralleldata.decipherinc.com/survey/selfserve/601/FEDTEMPLATEV1/new_maxdiff.css" />
+  <script type="text/javascript" src="https://paralleldata.decipherinc.com/s/support/jquery-ui-touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/601/FEDTEMPLATEV1/new_maxdiff.js"></script>
+  <style>
+  .new_maxdiff-body{
+    width:800px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+
+  .new_maxdiff-block-item,.new_maxdiff-slider-item{
+    width:350px;
+    height:60px;
+  }
+  \@if device.smartphone
+  .new_maxdiff-body{
+    width:100%;
+    font-size: 1.1rem;
+  }
+  .new_maxdiff-block-item,.new_maxdiff-slider-item{
+    width:160px;
+    height:60px;
+  }
+  \@endif
+
+  .Most .new_maxdiff-block-item{
+    background: #f00;
+    color: white;
+  }
+  .Least .new_maxdiff-block-item{
+    background: #55f;
+    color: white;
+  }
+  </style>
+  <div class="new_maxdiff-body">
+        <div class="new_maxdiff-block" drag>    
+            \@for item in ec.enabledRows
+            <div class="new_maxdiff-block-item">
+                ${item.text}
+            </div>
+            \@end
+        </div>
+
+        <div class="new_maxdiff-slider">    
+            \@for item in ec.enabledCols
+            <div class="new_maxdiff-slider-item ${item.text}"><p>${item.text}</p></div>      
+            \@end
+        </div>
+  </div>
+]]></style>
+          </radio>
+        </block>
+
+        <looprow label="1">
+          <loopvar name="task">1</loopvar>
+        </looprow>
+
+        <looprow label="2">
+          <loopvar name="task">2</loopvar>
+        </looprow>
+
+        <looprow label="3">
+          <loopvar name="task">3</loopvar>
+        </looprow>
+
+        <looprow label="4">
+          <loopvar name="task">4</loopvar>
+        </looprow>
+
+        <looprow label="5">
+          <loopvar name="task">5</loopvar>
+        </looprow>
+
+        <looprow label="6">
+          <loopvar name="task">6</loopvar>
+        </looprow>
+
+        <looprow label="7">
+          <loopvar name="task">7</loopvar>
+        </looprow>
+
+        <looprow label="8">
+          <loopvar name="task">8</loopvar>
+        </looprow>
+
+        <looprow label="9">
+          <loopvar name="task">9</loopvar>
+        </looprow>
+
+        <looprow label="10">
+          <loopvar name="task">10</loopvar>
+        </looprow>
+
+        <looprow label="11">
+          <loopvar name="task">11</loopvar>
+        </looprow>
+
+        <looprow label="12">
+          <loopvar name="task">12</loopvar>
+        </looprow>
+
+        <looprow label="13">
+          <loopvar name="task">13</loopvar>
+        </looprow>
+
+        <looprow label="14">
+          <loopvar name="task">14</loopvar>
+        </looprow>
+
+        <looprow label="15">
+          <loopvar name="task">15</loopvar>
+        </looprow>
+
+        <looprow label="16">
+          <loopvar name="task">16</loopvar>
+        </looprow>
+
+        <looprow label="17">
+          <loopvar name="task">17</loopvar>
+        </looprow>
+
+        <looprow label="18">
+          <loopvar name="task">18</loopvar>
+        </looprow>
+      </loop>
+
+      <float 
+     label="Q_DecisionFactors_Timer"
+     size="15"
+     where="execute,survey,report">
+        <title>Q_DecisionFactors - MaxDiff Timer (Minutes)</title>
+        <exec>
+Q_DecisionFactors_Timer.val = (timeSpent() - p.startTime) / 60.0
+        </exec>
+
+      </float>
+
+      <suspend/>
+
+      <note>MaxDiff Indices Template --End--</note>
+      <suspend/>
+    </block>
+
+    <suspend/>
+  </block>
+</block>
+</survey>

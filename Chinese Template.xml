@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="BMW Value Service"
+  atm1d:showInput="0"
+  autosaveKey="uid"
+  browserDupes="safe"
+  builder:cname=""
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="141"
+  delphi="1"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent,sn,qtype"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  otherLanguages="simplifiedchinese,korean"
+  remerged="20211231_14:00"
+  secure="1"
+  setup="term,decLang,quota,time"
+  spssSimpleCheckbox="1"
+  ss:customCSS="lightbox"
+  ss:customJS="lightbox"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="0"
+  ss:listDisplay="0"
+  ss:logoAlt="Logo"
+  ss:logoFile=""
+  ss:logoPosition="right"
+  state="testing"
+  theme="frozen:user/30/teg2019_peterv1"
+  unusedLanguages="simplifiedchinese,korean"
+  version="7">
+
+<res label="resRankOE">edit</res>
+<res label="chk100">Please check your answers, the total must be 100%.</res>
+<res label="continuebtn">NEXT</res>
+<res label="submitbtn">SUBMIT</res>
+<res label="Errpostcode">Please check your post code.</res>
+<res label="cardratingComplet">Please click 'NEXT' to the following question.</res>
+<res label="maxdiffTitle">For the following items, which one do you find most appealing and which one do you find least appealing?<br /><i>Please select one from the "most" and one from the "least" column. You must choose a different item in each column.</i>
+<br /><br /></res>
+<res label="maxdiffMost">Most appealing</res>
+<res label="maxdiffLeast">Least appealing</res>
+<res label="loadimg">[
+
+]</res>
+<res label="DupOrder">Please fill in the answer in order.</res>
+<res label="DupSame">Please fill in different answers in the boxes.</res>
+<res label="startButtonCN">开始</res>
+<res label="startButtonSk">Start</res>
+<samplesources>
+  <samplesource list="testing">
+    <title>testing</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <exit cond="terminated">Thank you for your interest.  However, at this time, we are looking for survey respondents who fit a different profile. Please do not be discouraged, as there may be future studies to which you will be invited to participate.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Unfortunately, aspects of the info you’ve provided mean you won’t qualify for this particular survey. Sorry. And thank you very much for your interest.</exit>
+  </samplesource>
+
+
+<style name="respview.client.css"><![CDATA[
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>
+<style type="text/css">
+
+.InfoClass {
+    text-align:center;
+    font-weight:bold;
+    font-size:3.4em;
+    text-decoration: underline;
+    text-decoration-color: #c4008c;
+}
+.question {
+    border-bottom: 1px solid #c4008c;
+    padding-bottom: 10px;
+
+}
+
+
+.button {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.367rem;
+    font-family: "Fira Sans",sans-serif;
+    border: 2px solid #c4008c;
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: .7em 1em;
+    margin: .111em;
+}
+
+.question-text {
+    font-weight: 400;
+}  
+
+
+.instruction-text {
+  font-size: 1.1rem;
+  font-family: "Fira Sans",sans-serif;  
+  margin-top: 20px;
+  font-style:italic;
+  color: #595656;
+}
+
+.comment-text {
+    color: #000;
+    font-size: 1.367rem;
+    line-height: normal;
+    font-family: "Fira Sans",sans-serif;
+
+}
+
+\@if device.desktop
+input[type="text"]{
+    height: 30px !important;
+} 
+.survey-body {
+    width: 960px;
+}
+\@endif
+
+
+.strtbtn {
+  border: 10px double #c4008c;
+//  #BFBFBF;
+  border-radius: 50%;
+  font-size:25px;
+  font-weight:bold;
+  background: #F2F2F2;
+  color: rgb(0, 0, 0);
+  width:120px;
+  height:120px;
+  padding:5px;
+  position:relative;
+}
+.strtbtn:hover, .strtbtn:focus {
+  border: 10px double #c4008c;
+  background: #F2F2F2;
+}
+
+.wrap {
+  text-align: center;
+  position: relative;
+}
+.wrap:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #c4008c;
+  width: 100%;
+  transform: translateY(-50%);
+}  
+
+.sq-atm1d .sq-atm1d-button{
+    font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+}
+
+.sq-atm1d-open .oe {
+    display: inline-block;
+    padding: 2px 4px;
+    width: 50%;
+}
+
+.sq-atm1d-open .sq-atm1d-openEnd {
+    display: inline;
+    margin: 8px 0 0;
+}
+
+.sq-atm1d .sq-atm1d-button {
+    background-color: #ffffff;
+    border-color: rgb(204, 204, 204);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    color: #000;
+    font-family: "Fira Sans",sans-serif;
+    font-size: 1.367rem;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 3px 8px;
+}
+
+.sq-atm1d .sq-atm1d-hovered {
+    background-color: #eab3db;
+    border-color: #c4008c;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    color: #fff;
+    font-family: "Fira Sans",sans-serif;
+    font-size: 1.367rem;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 3px 8px;
+}
+
+.sq-atm1d .sq-atm1d-selected {
+    background-color: #c4008c;
+    border-color: #c4008c;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    color: #fff;
+    font-family: "Fira Sans",sans-serif;
+    font-size: 1.367rem;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 3px 8px;
+}
+
+\@if device.desktop or device.tablet
+.sq-atm1d-large .sq-atm1d-button {          
+    min-height: auto !important;
+    min-width: 150px ;
+}
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: 43px !important;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-height: 55px !important;
+}
+\@endif
+
+.sq-atm1d-button.sq-atm1d-open  {     
+    max-height: 200px ;
+    min-width: 150px ;
+}
+
+.sq-atm1d-tiled .sq-atm1d-button {
+    margin: 3px 3px !important;
+}
+
+.survey-error {
+    background: #f2f2f2;
+    color:#ba0000;
+    border: 1px solid #ba0000;
+}
+
+.grid-table-mode .col-legend-group {
+    color: #c4008c;
+}
+
+.left1{
+    text-align:left;
+    display: inline-block;
+    width:100%;
+    padding-right: 45%;
+}
+.right1{
+    text-align:right;
+    display: inline-block;
+    width:100%;
+    padding-left: 45%;
+}
+
+.survey-error {
+  display:none;
+}
+
+.sq-atmrating.hasRows .sq-atmrating-row-legend {
+    background: #c4008c57;
+    border: 2px solid #c4008c57;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+\@if device.smartphone  
+.question-text {
+    font-size: 1.1rem;
+}  
+.instruction-text {
+    font-size: 1.1rem;
+}
+.comment-text {
+    font-size: 1.1rem;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.1rem;  
+}
+.answers {
+    font-size: 1.1rem;
+}
+.grid-table-mode .legend {
+    font-size: 1.1rem;
+}
+.grid-table-mode .legend {
+    font-size: 1.1rem;
+}
+.sq-cardsort-card .sq-cardsort-card-item {
+    font-size: 1.1rem;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+    font-size: 1.1rem;
+}
+.sq-cardsort-completion-item {
+    font-size: 1.1rem;
+}
+.question-error {
+    font-size: 1.1rem;
+}
+.exit-message-header {
+    font-size: 1.1rem;
+}
+.exit-message-text {
+    font-size: 1.1rem;
+}
+
+.sq-cardrating-button {
+    height: auto !important;
+}
+
+.sq-atmrating .atmrating_leftPosition {
+  width: 40% !important;
+}
+.sq-atmrating .atmrating_rightPosition {
+  width: 40% !important;
+}
+.sq-atmrating .atmrating_midPosition {
+  width: 20%;
+}
+\@endif
+
+.sq-atm1d .sq-atm1d-button {
+    line-height: 21px;
+}
+
+.sq-cardsort-card .sq-cardsort-card-item {
+    line-height: 22px;
+}
+
+.grid.grid-table-mode .row-legend {
+    line-height: 22px;
+}
+
+
+
+  </style>
+]]></style>
+<suspend/>
+
+<style label="QNumstyle" arg:mlen="2" name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="$(name)" value="$(value)" maxLength="$(mlen)" size="$(size)" onkeypress="return isNumberKey(event)" style="height:40px; font-size:16px;border-radius:10px;text-align:center;" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+<script>
+function isNumberKey(evt)
+{
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+               return false;
+
+       return true;
+}
+</script>
+]]></style>
+<style name="survey.respview.footer"><![CDATA[
+<div id="surveyFooter" class="survey-footer">
+      <div class="footer survey-footer-text" style="text-align:right">
+<!--    <img src="[rel logo_f299656864bdd64107215e5a9b4fe240.jpg]"/>-->
+      </div>
+  </div>
+]]></style>
+<style name="button.continue" with="Info"><![CDATA[
+<div class="wrap">
+
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="${res.startButtonSk}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+
+
+</div>
+]]></style>
+<style name="button.continue"><![CDATA[
+<input type="submit" name="continue" id="btn_continue" class="button continue nextbtn" value="${res.continuebtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+]]></style>
+<style name="button.finish"><![CDATA[
+<div class="wrap">
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="${res.submitbtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+</div>
+]]></style>
+<suspend/>
+
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+
+    ${v2_insertStyle('el.label.start')}
+
+    ${v2_insertStyle('el.label.end')}
+
+</div>
+
+\@else
+
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+
+    ${v2_insertStyle('el.label.start')}
+
+    ${v2_insertStyle('el.label.end')}
+
+</$(tag)>
+
+\@endif
+]]></style>
+<style label="disable_continue" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ ('.sq-cardsort-next').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').on("drop",function(e) {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+function cardSortNext() {
+  if ($ ('.sq-cardsort-completion').is(':visible')) {
+    $ ("#btn_continue").click();
+  }
+}
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script src="[rel hideContinue.js]"></script>
+]]></style>
+
+
+
+<note>
+WRITE YOUR CODE HERE!
+</note>
+
+
+
+
+
+
+
+</survey>

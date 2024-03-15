@@ -1,0 +1,12 @@
+samples = ['sam1', 'sam2']
+phrases = ['ph1', 'ph2', 'ph3', 'ph4']
+versions = ['ver1', 'ver2', 'ver3', 'ver4']
+
+combinations = []
+for version in versions:
+    for sam in samples:
+        for phrase in phrases:
+            combo = phrase + sam + version
+            combinations.append(combo)
+
+print(combinations)

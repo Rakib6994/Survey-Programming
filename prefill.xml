@@ -1,0 +1,17 @@
+<number 
+  label="S_AgeInHH"
+  autosum:prefill="0"
+  optional="0"
+  randomize="0"
+  size="3"
+  ss:listDisplay="0"
+  uses="autosum.5">
+  <title><b>Including yourself, how many people are currently living in your household in each of the following age ranges?</b></title>
+  <comment>Please enter a number.</comment>
+  <row label="r1">18 and over</row>
+  <row label="r2">13-17</row>
+  <row label="r3">6-12</row>
+  <row label="r4">under 6</row>
+</number>
+
+<suspend/>

@@ -1,0 +1,334 @@
+<checkbox 
+  label="proglist_A"
+  optional="1"
+  where="execute,survey,report">
+  <title>All UNITS of Product.</title>
+  <comment>will be hidden</comment>
+  <row label="r1" autofill="1">Plant Based</row>
+  <row label="r2" autofill="1">Flexitarian</row>
+  <row label="r3" autofill="1">Vegetarian</row>
+  <row label="r4" autofill="1">Vegan</row>
+  <row label="r5" autofill="1">Gluten free</row>
+  <row label="r6" autofill="1">Low Carb</row>
+  <row label="r7" autofill="1">High Protein</row>
+  <row label="r8" autofill="1">Low Sugar/Sugar Free</row>
+  <row label="r9" autofill="1">Indulgent Treats</row>
+  <row label="r10" autofill="1">Food with 100% Australian Ingredients</row>
+  <row label="r11" autofill="1">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</row>
+  <row label="r12" autofill="1">Recyclable Packaging</row>
+  <row label="r13" autofill="1">RSPCA Approved</row>
+  <row label="r14" autofill="1">Free Range Chicken/Eggs</row>
+  <row label="r15" autofill="1">Sustainably Sourced Coffee Beans</row>
+  <row label="r16" autofill="1">American BBQ</row>
+  <row label="r17" autofill="1">Mexican/Tex Mex</row>
+  <row label="r18" autofill="1">Thai</row>
+  <row label="r19" autofill="1">Italian</row>
+  <row label="r20" autofill="1">Japanese</row>
+  <row label="r21" autofill="1">Middle Eastern</row>
+  <row label="r22" autofill="1">Australian BBQ</row>
+  <row label="r23" autofill="1">Asian Fusion</row>
+  <row label="r24" autofill="1">Korean</row>
+  <row label="r25" autofill="1">Street Food</row>
+  <row label="r26" autofill="1">Traditional Family Favourites</row>
+  <row label="r27" autofill="1">Marinated Meats</row>
+  <row label="r28" autofill="1">Food With Miso</row>
+  <row label="r29" autofill="1">Food With Caramelised Flavours</row>
+  <row label="r30" autofill="1">Food With Charred/Blackened Flavours</row>
+  <row label="r31" autofill="1">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</row>
+  <row label="r32" autofill="1">Loaded Shakes</row>
+  <row label="r33" autofill="1">Food in Sharing Boxes</row>
+  <row label="r34" autofill="1">Gourmet Beef Burgers</row>
+  <row label="r35" autofill="1">Large Chicken Burgers</row>
+  <row label="r36" autofill="1">Chicken Waffle</row>
+  <row label="r37" autofill="1">Fried Chicken with Gravy</row>
+  <row label="r38" autofill="1">Fried Food</row>
+  <row label="r39" autofill="0">Sweet Potato Fries</row>
+  <row label="r40" autofill="1">Chicken Wraps</row>
+  <row label="r41" autofill="1">Tacos</row>
+  <row label="r42" autofill="1">Oat Milk</row>
+  <row label="r43" autofill="1">Nitro Coffee</row>
+  <row label="r44" autofill="1">Cold Brew</row>
+  <row label="r45" autofill="1">Kombucha</row>
+  <row label="r46" autofill="1">Coconut Water</row>
+  <row label="r47" autofill="1">Immunity Boosting Drink</row>
+  <row label="r48" autofill="1">Probiotic drink</row>
+  <row label="r49" autofill="1">Milo</row>
+  <row label="r50" autofill="1">Bubble Tea</row>
+  <row label="r51" autofill="1">Smoothies</row>
+  <row label="r52" autofill="1">Craft Sodas</row>
+  <row label="r53" autofill="1">Milk Chocolate</row>
+  <row label="r54" autofill="1">Chocolate Brownie</row>
+  <row label="r55" autofill="1">Nutella</row>
+  <row label="r56" autofill="1">Lotus Biscoff</row>
+  <row label="r57" autofill="1">Mango</row>
+  <row label="r58" autofill="1">Blueberry</row>
+  <row label="r59" autofill="1">Coconut</row>
+  <row label="r60" autofill="1">Matcha</row>
+  <row label="r61" autofill="1">Pavlova</row>
+  <row label="r62" autofill="1">Tiramisu</row>
+  <row label="r63" autofill="1">Smokey BBQ Sauce</row>
+  <row label="r64" autofill="1">Texan BBQ Sauce</row>
+  <row label="r65" autofill="1">Spicy BBQ Sauce</row>
+  <row label="r66" autofill="1">BBQ Rib Sauce</row>
+  <row label="r67" autofill="1">Korean BBQ Sauce</row>
+  <row label="r68" autofill="1">Memphis BBQ Sauce</row>
+  <row label="r69" autofill="1">Aioli</row>
+  <row label="r70" autofill="1">Smoky Mayo</row>
+  <row label="r71" autofill="1">Spicy Mayo</row>
+  <row label="r72" autofill="1">Truffle Aioli</row>
+  <row label="r73" autofill="1">Lemon Herb Aioli</row>
+  <row label="r74" autofill="1">Burger Sauce</row>
+  <row label="r75" autofill="1">Ranch Sauce</row>
+  <row label="r76" autofill="1">Pepper Mayo</row>
+  <row label="r77" autofill="1">Signature Sauce</row>
+  <row label="r78" autofill="1">Jalapeno Sauce</row>
+  <row label="r79" autofill="1">Sriracha</row>
+  <row label="r80" autofill="1">Chipotle</row>
+  <row label="r81" autofill="1">Buffalo Sauce</row>
+  <row label="r82" autofill="1">Mighty Hot Sauce</row>
+  <row label="r83" autofill="1">Free Range Chicken</row>
+  <row label="r84" autofill="1">Free Range Eggs</row>
+  <row label="r85" autofill="1">Flavoured Hot Coffee</row>
+  <row label="r86" autofill="1">Flavoured Cold Coffee</row>
+  <row label="r87" autofill="1">Potato Scallops</row>
+  <row label="r88" autofill="1">Mozzarella Sticks</row>
+  <row label="r89" autofill="1">Mac &amp; Cheese Bites</row>
+  <row label="r90" autofill="1">Sweet Potato Fries</row>
+</checkbox>
+
+<suspend/>
+
+<quota label="hidleastfill_1" overquota="noqual" sheet="hidlistfill_A"/>
+
+<exec>
+arr =['Product1','Product2','Product3','Product4','Product5','Product6','Product7','Product8','Product9','Product10','Product11','Product12','Product13','Product14','Product15','Product16','Product17','Product18','Product19','Product20','Product21','Product22','Product23','Product24','Product25','Product26','Product27','Product28','Product29','Product30','Product31','Product32','Product33','Product34','Product35','Product36','Product37','Product38','Product39','Product40','Product41','Product42','Product43','Product44','Product45','Product46','Product47','Product48','Product49','Product50','Product51','Product52','Product53','Product54','Product55','Product56','Product57','Product58','Product59','Product60','Product61','Product62','Product63','Product64','Product65','Product66','Product67','Product68','Product69','Product70','Product71','Product72','Product73','Product74','Product75','Product76','Product77','Product78','Product79','Product80','Product81','Product82','Product83','Product84','Product85','Product86','Product87','Product88', 'Product89','Product90']
+for itr in range(len(arr)):
+  if (hasMarker('/hidlistfill_A/*/*/' + arr[itr])):
+      HidlistA.rows[itr].val = 1
+</exec>
+
+<checkbox 
+  label="HidlistA"
+  optional="1"
+  shuffle="rows"
+  where="execute,survey,report">
+  <title>Hidden Question</title>
+  <comment>randomly capture 17 items</comment>
+  <row label="r1">Plant Based</row>
+  <row label="r2">Flexitarian</row>
+  <row label="r3">Vegetarian</row>
+  <row label="r4">Vegan</row>
+  <row label="r5">Gluten free</row>
+  <row label="r6">Low Carb</row>
+  <row label="r7">High Protein</row>
+  <row label="r8">Low Sugar/Sugar Free</row>
+  <row label="r9">Indulgent Treats</row>
+  <row label="r10">Food with 100% Australian Ingredients</row>
+  <row label="r11">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</row>
+  <row label="r12">Recyclable Packaging</row>
+  <row label="r13">RSPCA Approved</row>
+  <row label="r14">Free Range Chicken/Eggs</row>
+  <row label="r15">Sustainably Sourced Coffee Beans</row>
+  <row label="r16">American BBQ</row>
+  <row label="r17">Mexican/Tex Mex</row>
+  <row label="r18">Thai</row>
+  <row label="r19">Italian</row>
+  <row label="r20">Japanese</row>
+  <row label="r21">Middle Eastern</row>
+  <row label="r22">Australian BBQ</row>
+  <row label="r23">Asian Fusion</row>
+  <row label="r24">Korean</row>
+  <row label="r25">Street Food</row>
+  <row label="r26">Traditional Family Favourites</row>
+  <row label="r27">Marinated Meats</row>
+  <row label="r28">Food With Miso</row>
+  <row label="r29">Food With Caramelised Flavours</row>
+  <row label="r30">Food With Charred/Blackened Flavours</row>
+  <row label="r31">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</row>
+  <row label="r32">Loaded Shakes</row>
+  <row label="r33">Food in Sharing Boxes</row>
+  <row label="r34">Gourmet Beef Burgers</row>
+  <row label="r35">Large Chicken Burgers</row>
+  <row label="r36">Chicken Waffle</row>
+  <row label="r37">Fried Chicken with Gravy</row>
+  <row label="r38">Fried Food</row>
+  <row label="r39">Sweet Potato Fries</row>
+  <row label="r40">Chicken Wraps</row>
+  <row label="r41">Tacos</row>
+  <row label="r42">Oat Milk</row>
+  <row label="r43">Nitro Coffee</row>
+  <row label="r44">Cold Brew</row>
+  <row label="r45">Kombucha</row>
+  <row label="r46">Coconut Water</row>
+  <row label="r47">Immunity Boosting Drink</row>
+  <row label="r48">Probiotic drink</row>
+  <row label="r49">Milo</row>
+  <row label="r50">Bubble Tea</row>
+  <row label="r51">Smoothies</row>
+  <row label="r52">Craft Sodas</row>
+  <row label="r53">Milk Chocolate</row>
+  <row label="r54">Chocolate Brownie</row>
+  <row label="r55">Nutella</row>
+  <row label="r56">Lotus Biscoff</row>
+  <row label="r57">Mango</row>
+  <row label="r58">Blueberry</row>
+  <row label="r59">Coconut</row>
+  <row label="r60">Matcha</row>
+  <row label="r61">Pavlova</row>
+  <row label="r62">Tiramisu</row>
+  <row label="r63">Smokey BBQ Sauce</row>
+  <row label="r64">Texan BBQ Sauce</row>
+  <row label="r65">Spicy BBQ Sauce</row>
+  <row label="r66">BBQ Rib Sauce</row>
+  <row label="r67">Korean BBQ Sauce</row>
+  <row label="r68">Memphis BBQ Sauce</row>
+  <row label="r69">Aioli</row>
+  <row label="r70">Smoky Mayo</row>
+  <row label="r71">Spicy Mayo</row>
+  <row label="r72">Truffle Aioli</row>
+  <row label="r73">Lemon Herb Aioli</row>
+  <row label="r74">Burger Sauce</row>
+  <row label="r75">Ranch Sauce</row>
+  <row label="r76">Pepper Mayo</row>
+  <row label="r77">Signature Sauce</row>
+  <row label="r78">Jalapeno Sauce</row>
+  <row label="r79">Sriracha</row>
+  <row label="r80">Chipotle</row>
+  <row label="r81">Buffalo Sauce</row>
+  <row label="r82">Mighty Hot Sauce</row>
+  <row label="r83">Free Range Chicken</row>
+  <row label="r84">Free Range Eggs</row>
+  <row label="r85">Flavoured Hot Coffee</row>
+  <row label="r86">Flavoured Cold Coffee</row>
+  <row label="r87">Potato Scallops</row>
+  <row label="r88">Mozzarella Sticks</row>
+  <row label="r89">Mac &amp; Cheese Bites</row>
+  <row label="r90">Sweet Potato Fries</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+arrOrder=[];
+for itr in range(len(HidlistA.rows.order)):
+  if  HidlistA.rows[HidlistA.rows.order[itr].index].val:
+   arrOrder.append(HidlistA.rows[HidlistA.rows.order[itr].index].label)
+
+for itr in range(len(arrOrder)):
+  eval("HidLoopOrderA." + str(arrOrder[itr])).val = itr + 1
+print arrOrder;
+</exec>
+
+<number 
+  label="HidLoopOrderA"
+  shuffle="rows"
+  shuffleBy="HidlistA"
+  size="10"
+  where="execute,survey,report">
+  <title>Hidden for storing concept order - hidden_q</title>
+  <row label="r1">Plant Based</row>
+  <row label="r2">Flexitarian</row>
+  <row label="r3">Vegetarian</row>
+  <row label="r4">Vegan</row>
+  <row label="r5">Gluten free</row>
+  <row label="r6">Low Carb</row>
+  <row label="r7">High Protein</row>
+  <row label="r8">Low Sugar/Sugar Free</row>
+  <row label="r9">Indulgent Treats</row>
+  <row label="r10">Food with 100% Australian Ingredients</row>
+  <row label="r11">Food with Regional Australian callouts e.g. grown in Tasmania/Adelaide/South Australia</row>
+  <row label="r12">Recyclable Packaging</row>
+  <row label="r13">RSPCA Approved</row>
+  <row label="r14">Free Range Chicken/Eggs</row>
+  <row label="r15">Sustainably Sourced Coffee Beans</row>
+  <row label="r16">American BBQ</row>
+  <row label="r17">Mexican/Tex Mex</row>
+  <row label="r18">Thai</row>
+  <row label="r19">Italian</row>
+  <row label="r20">Japanese</row>
+  <row label="r21">Middle Eastern</row>
+  <row label="r22">Australian BBQ</row>
+  <row label="r23">Asian Fusion</row>
+  <row label="r24">Korean</row>
+  <row label="r25">Street Food</row>
+  <row label="r26">Traditional Family Favourites</row>
+  <row label="r27">Marinated Meats</row>
+  <row label="r28">Food With Miso</row>
+  <row label="r29">Food With Caramelised Flavours</row>
+  <row label="r30">Food With Charred/Blackened Flavours</row>
+  <row label="r31">Australian Natives Ingredients: e.g. Wattleseed, Lemon Myrtle</row>
+  <row label="r32">Loaded Shakes</row>
+  <row label="r33">Food in Sharing Boxes</row>
+  <row label="r34">Gourmet Beef Burgers</row>
+  <row label="r35">Large Chicken Burgers</row>
+  <row label="r36">Chicken Waffle</row>
+  <row label="r37">Fried Chicken with Gravy</row>
+  <row label="r38">Fried Food</row>
+  <row label="r39">Sweet Potato Fries</row>
+  <row label="r40">Chicken Wraps</row>
+  <row label="r41">Tacos</row>
+  <row label="r42">Oat Milk</row>
+  <row label="r43">Nitro Coffee</row>
+  <row label="r44">Cold Brew</row>
+  <row label="r45">Kombucha</row>
+  <row label="r46">Coconut Water</row>
+  <row label="r47">Immunity Boosting Drink</row>
+  <row label="r48">Probiotic drink</row>
+  <row label="r49">Milo</row>
+  <row label="r50">Bubble Tea</row>
+  <row label="r51">Smoothies</row>
+  <row label="r52">Craft Sodas</row>
+  <row label="r53">Milk Chocolate</row>
+  <row label="r54">Chocolate Brownie</row>
+  <row label="r55">Nutella</row>
+  <row label="r56">Lotus Biscoff</row>
+  <row label="r57">Mango</row>
+  <row label="r58">Blueberry</row>
+  <row label="r59">Coconut</row>
+  <row label="r60">Matcha</row>
+  <row label="r61">Pavlova</row>
+  <row label="r62">Tiramisu</row>
+  <row label="r63">Smokey BBQ Sauce</row>
+  <row label="r64">Texan BBQ Sauce</row>
+  <row label="r65">Spicy BBQ Sauce</row>
+  <row label="r66">BBQ Rib Sauce</row>
+  <row label="r67">Korean BBQ Sauce</row>
+  <row label="r68">Memphis BBQ Sauce</row>
+  <row label="r69">Aioli</row>
+  <row label="r70">Smoky Mayo</row>
+  <row label="r71">Spicy Mayo</row>
+  <row label="r72">Truffle Aioli</row>
+  <row label="r73">Lemon Herb Aioli</row>
+  <row label="r74">Burger Sauce</row>
+  <row label="r75">Ranch Sauce</row>
+  <row label="r76">Pepper Mayo</row>
+  <row label="r77">Signature Sauce</row>
+  <row label="r78">Jalapeno Sauce</row>
+  <row label="r79">Sriracha</row>
+  <row label="r80">Chipotle</row>
+  <row label="r81">Buffalo Sauce</row>
+  <row label="r82">Mighty Hot Sauce</row>
+  <row label="r83">Free Range Chicken</row>
+  <row label="r84">Free Range Eggs</row>
+  <row label="r85">Flavoured Hot Coffee</row>
+  <row label="r86">Flavoured Cold Coffee</row>
+  <row label="r87">Potato Scallops</row>
+  <row label="r88">Mozzarella Sticks</row>
+  <row label="r89">Mac &amp; Cheese Bites</row>
+  <row label="r90">Sweet Potato Fries</row>
+</number>
+
+<suspend/>
+
+<exec>
+L1_expanded.order = HidlistA.rows.order
+</exec>
+
+<suspend/>
+
+
+
+
+<html label="INTRO_A" where="survey">We'd now like to ask you about the <strong>food and drink</strong> you may (or may not) have been eating or drinking recently. Some of the things we'll ask you about will be specific types of food or drink, whilst others will be types of diet, cuisine or ingredient.</html>
+
+<suspend/>

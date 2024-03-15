@@ -1,0 +1,116 @@
+<select 
+  label="Q16"
+  minRanks="3"
+  optional="1"
+  ranksort:bucketCSS="height: 150px;"
+  ranksort:cardCSS="height: 150px;"
+  ranksort:cardDroppedCSS=" height: 85px;"
+  ranksort:cardHoverCSS="height: 85px;"
+  ranksort:mobile_cardCSS="height: auto;"
+  ranksort:showBucketNumber="0"
+  shuffle="rows"
+  unique="none,cols"
+  uses="ranksort_oe.92">
+  <title>Which of the following, if any, were the top three challenges you faced with <b>[pipe:hidlist]</b> <u>in the past 12 months</u>?<br /><br />To change the ranking please deselect the options which you want to change and select the new options.</title>
+  <comment>Please select and rank top three.</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+\@if device.desktop
+
+
+.sq-ranksort-container .sq-ranksort-cards .sq-ranksort-card.sq-ranksort-card-dropped {
+    background-color: #c4008c !important;
+    border: 2px solid #c4008c !important;
+    color: #ffffff !important;
+    
+    
+}
+
+#survey .sq-ranksort-container .sq-ranksort-icon-rank {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    background: #c4008c;
+    border: 2px solid #c4008c;
+    color: #c4008c;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+    display: block;
+    text-align: left;
+}
+
+#survey .sq-ranksort-container .sq-ranksort-cards .sq-ranksort-card, #survey .sq-ranksort-container .sq-ranksort-buckets .sq-ranksort-card {
+    font-size: 14px !important;
+}
+
+#survey .sq-ranksort-container .sq-ranksort-cards {
+    padding: 1px;
+
+}
+#survey .sq-ranksort-container .sq-ranksort-numbers {
+    / padding: 10px 0px 10px 40px; /
+    margin-left: 10px;
+    width: 1px;
+    
+}
+
+#survey .sq-ranksort-container .sq-ranksort-buckets-container {
+    float: left;
+    padding-left: 80px;
+    text-align: left;
+}
+
+#survey .sq-ranksort-container .sq-ranksort-buckets {
+    width: 270px;
+    padding-left: 25px;
+}
+
+
+#question_C1b .sq-ranksort-container .sq-ranksort-cards {
+    width: 800px;
+}
+
+#survey .sq-ranksort-container .sq-ranksort-buckets .sq-ranksort-bucket {
+    margin: 2px;
+}
+
+.survey-body, .page-header, .footer {
+    margin: 0 auto;
+    min-width: 960px;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 960px;
+}
+\@endif
+
+\@if device.smartphone
+.sq-ranksort-container .sq-ranksort-cards .sq-ranksort-card {
+    border-color: #c4008c !important;
+}
+
+\@endif
+</style>
+]]></style>
+  <row label="r1"><p style="text-align: left;">Navigating the customer online portal / mobile app for information I needed (e.g., on existing subscription plans)</p></row>
+  <row label="r2"><p style="text-align: left;">Having service disruption(s)</p></row>
+  <row label="r3"><p style="text-align: left;">Experiencing poor connectivity</p></row>
+  <row label="r4"><p style="text-align: left;">Long waiting time when contacting customer service centre</p></row>
+  <row label="r5"><p style="text-align: left;">Long waiting time when visiting physical store</p></row>
+  <row label="r6"><p style="text-align: left;">Issues / queries taking a long time to be resolved (e.g, no first-time resolution)</p></row>
+  <row label="r7"><p style="text-align: left;">Have had to dispute a charge</p></row>
+  <row label="r8"><p style="text-align: left;">My issues / queries were not resolved</p></row>
+  <row label="r9"><p style="text-align: left;">The bill is complex to understand</p></row>
+  <row label="r10"><p style="text-align: left;">Using a payment option of my convenience</p></row>
+  <row label="r11"><p style="text-align: left;">Understanding the differences between the various service plans</p></row>
+  <row label="r12"><p style="text-align: left;">Provision of subpar equipment</p></row>
+  <row label="r13" open="1" openSize="25" randomize="0">Other (please specify)</row>
+  <choice label="ch1">1</choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3</choice>
+</select>
+
+<suspend/>

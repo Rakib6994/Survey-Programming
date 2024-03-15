@@ -1,0 +1,12 @@
+<number 
+  label="S3"
+  optional="0"
+  size="3"
+  ss:questionClassNames="demo"
+  verify="range(1,100)">
+  <title>How old are you?</title>
+  <comment><em>Please enter a whole number.</em></comment>
+  <style arg:mlen="3" copy="QNumstyle" name="el.text"/>
+</number>
+
+<suspend/>

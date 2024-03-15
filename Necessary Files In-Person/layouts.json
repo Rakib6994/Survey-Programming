@@ -1,0 +1,1801 @@
+{
+ "layouts": [
+  {
+   "excludedFields": [],
+   "variableData": [
+    {
+     "minStart": 0,
+     "altlabel": "record",
+     "shown": 1,
+     "fwidth": 7,
+     "label": "record"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "uuid",
+     "shown": 1,
+     "fwidth": 16,
+     "label": "uuid"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "date",
+     "shown": 1,
+     "fwidth": 16,
+     "label": "date"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "markers",
+     "shown": 1,
+     "fwidth": 64,
+     "label": "markers"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "status",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "status"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "SamplePhase",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "SamplePhase"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "SampleCity",
+     "shown": 1,
+     "fwidth": 70,
+     "label": "SampleCity"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Location",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Location"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "SampleResp",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "SampleResp"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Conf",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "Conf"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "JobNumberr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "JobNumberr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Waver10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Waver10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Wavenone",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Wavenone"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_PastParticipationr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_PastParticipationr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_PastParticipationr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_PastParticipationr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_PastParticipationr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_PastParticipationr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_PastParticipationr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_PastParticipationr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_PastParticipationr5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_PastParticipationr5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Industryr9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Industryr9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_GroceryShop",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_GroceryShop"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Ager1",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "S_Ager1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_CategoryPurchasedr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_CategoryPurchasedr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_CategoryPurchasedr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_CategoryPurchasedr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_CategoryPurchasedr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_CategoryPurchasedr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_CategoryPurchasedr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_CategoryPurchasedr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased1r10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased1r10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_BUMO1",
+     "shown": 1,
+     "fwidth": 2,
+     "label": "S_Brand_BUMO1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter1r11",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter1r11"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased2r10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased2r10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_BUMO2",
+     "shown": 1,
+     "fwidth": 2,
+     "label": "S_Brand_BUMO2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter2r11",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter2r11"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_PastPurchased3r10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_PastPurchased3r10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_BUMO3",
+     "shown": 1,
+     "fwidth": 2,
+     "label": "S_Brand_BUMO3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "S_Brand_NonRejecter3r11",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "S_Brand_NonRejecter3r11"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Eyesight",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Eyesight"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ComputerComfort",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "ComputerComfort"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Ager1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Ager1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Ager2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Ager2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Usager1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Usager1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Usager2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Usager2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Phase",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Phase"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "EM1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "EM1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "EM2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "EM2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Gender",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Gender"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Version",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Version"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Findability",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Findability"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Sample",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Sample"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Categoryr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Categoryr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Findar1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Findar1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Findar2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Findar2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindCardr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindCardr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindCardr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindCardr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Brandr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Brandr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "SKUr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "SKUr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Pricer1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Pricer1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Pricer2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Pricer2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Pricer3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Pricer3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Pricer4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Pricer4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ImageTextr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "ImageTextr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ImageTextr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "ImageTextr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ImageTextr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "ImageTextr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ImageTextr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "ImageTextr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Imager1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Imager1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Imager2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Imager2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Imager3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Imager3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Imager4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Imager4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Shelfr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Shelfr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Shelfr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Shelfr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Shelfr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Shelfr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Shelfr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Shelfr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "is2Dr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "is2Dr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "is2Dr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "is2Dr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Agreementr1",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Agreementr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "DateTime",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "DateTime"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "RecruiterNamer1",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "RecruiterNamer1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoName",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoName"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoAddress",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoAddress"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoCity",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoCity"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoState",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoState"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoZip",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoZip"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoEmail",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoEmail"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoPhone",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoPhone"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp_InfoScreener_Interviewer",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp_InfoScreener_Interviewer"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "RescreenRecreening_Interviewer",
+     "shown": 1,
+     "fwidth": 16,
+     "label": "RescreenRecreening_Interviewer"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ET_InfoET_Interviewer",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "ET_InfoET_Interviewer"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ET_Infor2",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "ET_Infor2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Shopping_Interviewerr1",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Shopping_Interviewerr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "CheckQRShelf",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "CheckQRShelf"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "P_QuantityPurchasedr1",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "P_QuantityPurchasedr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "P_QuantityPurchasedr2",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "P_QuantityPurchasedr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "P_Shoppingr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "P_Shoppingr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "P_Shoppingr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "P_Shoppingr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "P_Total_Products",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "P_Total_Products"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindTime",
+     "shown": 1,
+     "fwidth": 30,
+     "label": "FindTime"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindLetterr1",
+     "shown": 1,
+     "fwidth": 12,
+     "label": "FindLetterr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindNumberr2",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "FindNumberr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindTimeSeconds",
+     "shown": 1,
+     "fwidth": 22,
+     "label": "FindTimeSeconds"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindProduct",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindProduct"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindCorrect",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindCorrect"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ConfirmFind",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "ConfirmFind"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "F_EaseOfFind",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "F_EaseOfFind"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindTimeSeconds_FindProductA",
+     "shown": 1,
+     "fwidth": 22,
+     "label": "FindTimeSeconds_FindProductA"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindProduct_FindProductA",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindProduct_FindProductA"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindCorrect_FindProductA",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindCorrect_FindProductA"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "F_EaseOfFind_FindProductA",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "F_EaseOfFind_FindProductA"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindTimeSeconds_FindProductB",
+     "shown": 1,
+     "fwidth": 22,
+     "label": "FindTimeSeconds_FindProductB"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindProduct_FindProductB",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindProduct_FindProductB"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "FindCorrect_FindProductB",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "FindCorrect_FindProductB"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "F_EaseOfFind_FindProductB",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "F_EaseOfFind_FindProductB"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Main_Interviewerr1",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Main_Interviewerr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "CheckQR",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "CheckQR"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Checkr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Checkr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Checkr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Checkr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Checkr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Checkr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Checkr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Checkr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Emotion",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Emotion"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "EmotionTime",
+     "shown": 1,
+     "fwidth": 22,
+     "label": "EmotionTime"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "EmotionMapPH1c1",
+     "shown": 1,
+     "fwidth": 255,
+     "label": "EmotionMapPH1c1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "EmotionMapNonePH1r1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "EmotionMapNonePH1r1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_InitialImpressions",
+     "shown": 1,
+     "fwidth": 255,
+     "label": "Q_InitialImpressions"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_OA",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_OA"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PackAttr9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PackAttr9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr9",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr9"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr10",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr10"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr11",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr11"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Communicationr12",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Communicationr12"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Straightliner",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Straightliner"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Value",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Value"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_PI",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_PI"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr1",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr2",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr3",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr4",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr5",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr5"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr6",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr6"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr7",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr7"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Q_Competitionr8",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "Q_Competitionr8"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_Frequency",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "C_Frequency"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_MarialStat",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "C_MarialStat"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_PplInHHr1",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "C_PplInHHr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_AgeRangesInHHr1",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "C_AgeRangesInHHr1"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_AgeRangesInHHr2",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "C_AgeRangesInHHr2"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_AgeRangesInHHr3",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "C_AgeRangesInHHr3"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_AgeRangesInHHr4",
+     "shown": 1,
+     "fwidth": 19,
+     "label": "C_AgeRangesInHHr4"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_Education",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "C_Education"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_Employment",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "C_Employment"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "C_Income",
+     "shown": 1,
+     "fwidth": 2,
+     "label": "C_Income"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vlist",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "vlist"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "qtime",
+     "shown": 1,
+     "fwidth": 22,
+     "label": "qtime"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vos",
+     "shown": 1,
+     "fwidth": 2,
+     "label": "vos"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vosr14oe",
+     "shown": 1,
+     "fwidth": 30,
+     "label": "vosr14oe"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vbrowser",
+     "shown": 1,
+     "fwidth": 2,
+     "label": "vbrowser"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vbrowserr14oe",
+     "shown": 1,
+     "fwidth": 30,
+     "label": "vbrowserr14oe"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vmobiledevice",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "vmobiledevice"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "vmobileos",
+     "shown": 1,
+     "fwidth": 1,
+     "label": "vmobileos"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "start_date",
+     "shown": 1,
+     "fwidth": 16,
+     "label": "start_date"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "source",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "source"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "ipAddress",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "ipAddress"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "decLang",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "decLang"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "list",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "list"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "userAgent",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "userAgent"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "Resp",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "Resp"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "dcua",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "dcua"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "session",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "session"
+    },
+    {
+     "minStart": 0,
+     "altlabel": "url",
+     "shown": 1,
+     "fwidth": 60,
+     "label": "url"
+    }
+   ],
+   "description": "ET Data Map",
+   "updatedOn": 1442431545.917675,
+   "createdOn": 1442431508.57391,
+   "flags": "",
+   "createdBy": 14214,
+   "updatedBy": 14214,
+   "id": 19927
+  }
+ ]
+}

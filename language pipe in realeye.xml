@@ -1,0 +1,23 @@
+ <pipe label="relanguage" capture="">
+    <case label="r1" cond="S_Language.r2">/hi</case>
+    <case label="r2" cond="S_Language.r3">/hi</case>
+    <case label="r99" cond="1"/></pipe>
+  <suspend/>
+
+  <html label="placeholderredirect" where="none">Redirect placeholder so that the redirect executes</html>
+
+  <suspend sst="0" url="https://www.realeye.io${pipe.relanguage}/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B0%5D=${pipe.EF_PracticeShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REPACK}.jpg&amp;participantId=${uuid}?&amp;realeye-tester-tags=bumo-[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:sample],phase-[pipe:Phase],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>
+
+  <number 
+   label="RealEye_Status"
+   randomize="0"
+   size="3"
+   where="execute,survey,report">
+    <title>Real Eye: Status</title>
+    <exec>
+RE_Status= gv.request.get("ef_status")
+
+RealEye_Status.val = RE_Status
+    </exec>
+
+  </number>

@@ -1,0 +1,70 @@
+ <radio 
+   label="v_FreqTest"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Category] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.TB.c1:  data.val=0
+if S_Frequency.TB.c2:  data.val=1
+if S_Frequency.TB.c3:  data.val=2
+if S_Frequency.TB.c4:  data.val=3
+if S_Frequency.TB.c5:  data.val=4
+if S_Frequency.TB.c6:  data.val=5
+if S_Frequency.TB.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+  
+ <radio 
+   label="v_FreqClutter1"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter1] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r1.c1:  data.val=0
+if S_Frequency.r1.c2:  data.val=1
+if S_Frequency.r1.c3:  data.val=2
+if S_Frequency.r1.c4:  data.val=3
+if S_Frequency.r1.c5:  data.val=4
+if S_Frequency.r1.c6:  data.val=5
+if S_Frequency.r1.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqClutter2"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter2] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r2.c1:  data.val=0
+if S_Frequency.r2.c2:  data.val=1
+if S_Frequency.r2.c3:  data.val=2
+if S_Frequency.r2.c4:  data.val=3
+if S_Frequency.r2.c5:  data.val=4
+if S_Frequency.r2.c6:  data.val=5
+if S_Frequency.r2.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>  
+
+  <suspend/>

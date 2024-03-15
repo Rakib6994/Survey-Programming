@@ -1,0 +1,22 @@
+ <radio 
+   label="Social_Grade"
+   cond="(gv.survey.root.state.dev or gv.survey.root.state.testing)"
+   optional="1"
+   style="dev,testing">
+    <title>Social_Grade. This will be hidden after live!</title>
+    <row label="r1">A1</row>
+    <row label="r2">A2</row>
+    <row label="r3">A3</row>
+    <row label="r4">B1</row>
+    <row label="r5">B2</row>
+    <row label="r6">C1</row>
+    <row label="r7">C2</row>
+    <row label="r8">D1</row>
+    <row label="r9">D2</row>
+    <row label="r10">E1</row>
+    <row label="r11">E2</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM__social_grade" cond="Social_Grade.inrange(7,10) and Social_Grade.count == 0">Terminate D E</term>

@@ -1,0 +1,12 @@
+ <number 
+   label="Q14"
+   ignoreValues="99"
+   randomize="0"
+   size="10"
+   uses="atmrating.5"
+   verify="range(0,10)">
+    <title><br /><br /><b>Button Rating - Single Row<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+    <comment>Select an answer</comment>
+    <row label="r1">&amp;nbsp;</row>
+  </number>
+<suspend/>

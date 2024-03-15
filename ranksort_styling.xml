@@ -1,0 +1,189 @@
+<select 
+  label="B10A"
+  minRanks="5"
+  optional="1"
+  ranksort:bucketCSS=" height: 80px;"
+  ranksort:cardCSS=" height: 80px;"
+  ranksort:mobile_cardCSS="height: 50px;"
+  shuffle="rows"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>${this.label + ". " if showQID.r1 else ""}What benefits do you look for when it comes to treatments for your condition?<br />
+Please rank upto a maximum of 5 benefits that are important to you, from the list below.<br /><br />
+Give rank '1' to the most important benefit, rank '2' to the next important benefit and so on."</title>
+  <comment>Please click or drag each item into a rank position.</comment>
+  <row label="r1" cond="A1.r1 and A11hid.r1">Helps you fall asleep</row>
+  <row label="r2" cond="A1.r1 and A11hid.r1">Helps with restful sleep</row>
+  <row label="r3" cond="A1.r1 and A11hid.r1">Improvement of poor sleep quality</row>
+  <row label="r4" cond="A1.r1 and A11hid.r1">Fall asleep faster</row>
+  <row label="r5" cond="A1.r1 and A11hid.r1">Increased total sleep time</row>
+  <row label="r6" cond="A1.r1 and A11hid.r1">Improvements to sleep disturbance</row>
+  <row label="r7" cond="A1.r1 and A11hid.r1">Sleep longer and better</row>
+  <row label="r8" cond="A1.r1 and A11hid.r1">Fatigue reduction</row>
+  <row label="r9" cond="A1.r1 and A11hid.r1">Improves energy levels</row>
+  <row label="r10" cond="A1.r1 and A11hid.r1">Enhances physical performance and alleviating mental fatigue</row>
+  <row label="r11" cond="A1.r1 and A11hid.r1">Improves physical fatigue</row>
+  <row label="r12" cond="A1.r1 and A11hid.r1">Improves memory</row>
+  <row label="r13" cond="A1.r1 and A11hid.r3">Helps protect your eyes from harmful high-energy light waves like UV rays in sunlight</row>
+  <row label="r14" cond="A1.r1 and A11hid.r3">Filters blue light</row>
+  <row label="r15" cond="A1.r1 and A11hid.r3">Eases eye fatigue/ tired eyes</row>
+  <row label="r16" cond="A1.r1 and A11hid.r3">Reduces risk of chronic eye diseases</row>
+  <row label="r17" cond="A1.r1 and A11hid.r3">Reduces symptoms of dry eyes/tired eyes</row>
+  <row label="r18" cond="A1.r1 and A11hid.r3">Boosts eye health</row>
+  <row label="r19" cond="A1.r1 and A11hid.r3">Helps maintains eye health</row>
+  <row label="r20" cond="A1.r1 and A11hid.r3">Leads to clearer vision</row>
+  <row label="r21" cond="A1.r2 and A11hid.r2">Helps with restful sleep</row>
+  <row label="r22" cond="A1.r2 and A11hid.r2">Helps to improve poor sleep quality</row>
+  <row label="r23" cond="A1.r2 and A11hid.r2">Help you fall asleep faster</row>
+  <row label="r24" cond="A1.r2 and A11hid.r2">Helps to increase total sleep time</row>
+  <row label="r25" cond="A1.r2 and A11hid.r2">Helps with difficulties in falling asleep</row>
+  <row label="r26" cond="A1.r2 and A11hid.r2">Helps with staying asleep</row>
+  <row label="r27" cond="A1.r2 and A11hid.r2">Help to reduce feeling of nervousness</row>
+  <row label="r28" cond="A1.r2 and A11hid.r2">Helps to reduce stress</row>
+  <row label="r29" cond="A1.r2 and A11hid.r2">Helps to reduce anxiety</row>
+  <row label="r30" cond="A1.r2 and A11hid.r2">Helps to relieve state of tension</row>
+  <row label="r31" cond="A1.r2 and A11hid.r2">Help to reduce feeling of restlessness</row>
+  <row label="r32" cond="A1.r2 and A11hid.r3">Helps to protect your eyes from harmful high-energy light waves like UV rays in sunlight</row>
+  <row label="r33" cond="A1.r2 and A11hid.r3">Helps to filter blue light</row>
+  <row label="r34" cond="A1.r2 and A11hid.r3">Helps to ease eye fatigue/ tired eyes</row>
+  <row label="r35" cond="A1.r2 and A11hid.r3">Helps to reduce risk of chronic eye diseases</row>
+  <row label="r36" cond="A1.r2 and A11hid.r3">Helps to reduce symptoms of dry eyes</row>
+  <row label="r37" cond="A1.r2 and A11hid.r3">Helps to boost eye health</row>
+  <row label="r38" cond="A1.r2 and A11hid.r3">Helps to maintain eye health</row>
+  <row label="r39" cond="A1.r2 and A11hid.r3">Helps to have a clearer vision</row>
+  <choice label="ch1">1</choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3</choice>
+  <choice label="ch4">4</choice>
+  <choice label="ch5">5</choice>
+</select>
+
+<suspend/>
+
+
+
+
+<checkbox 
+  label="C5"
+  atleast="1"
+  cardsort:animationDuration="200"
+  cardsort:bucketsPerRow="4"
+  cardsort:cardMaxWidth="90"
+  cardsort:completionHTML="Thanks, you have completed this question."
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="0"
+  grouping="cols"
+  rowCond="C3[row.index]"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>${this.label + ". " if showQID.r1 else ""}Which benefits do you think are associated with this ingredient?    </title>
+  <comment>Please select all responses that apply. If none apply, select 'none of these'.</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+\@if device.desktop
+.sq-cardsort .sq-cardsort-card-item {
+    display: table !important;
+}
+
+
+.sq-cardsort-bucket {
+ width: 200px !important;
+ min-height: 100px !important;
+}
+.sq-cardsort-card {
+ width: 600px !important;
+}
+
+.sq-cardsort-bucket-item  {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+\@endif
+
+#btn_continue{
+    display:none;
+        float:right;
+}
+</style>
+]]></style>
+  <col label="c1" cond="A1.r1 and A11hid.r1 ">Helps you fall asleep</col>
+  <col label="c2" cond="A1.r1 and A11hid.r1 ">Helps with restful sleep</col>
+  <col label="c3" cond="A1.r1 and A11hid.r1 ">Improvement of poor sleep quality</col>
+  <col label="c4" cond="A1.r1 and A11hid.r1 ">Fall asleep faster</col>
+  <col label="c5" cond="A1.r1 and A11hid.r1 ">Increased total sleep time</col>
+  <col label="c6" cond="A1.r1 and A11hid.r1 ">Improvements to sleep disturbance</col>
+  <col label="c7" cond="A1.r1 and A11hid.r1 ">Sleep longer and better</col>
+  <col label="c8" cond="A1.r1 and A11hid.r1 ">Fatigue reduction</col>
+  <col label="c9" cond="A1.r1 and A11hid.r1 ">Improves energy levels</col>
+  <col label="c10" cond="A1.r1 and A11hid.r1 ">Enhances physical performance and alleviating mental fatigue</col>
+  <col label="c11" cond="A1.r1 and A11hid.r1 ">Improves physical fatigue</col>
+  <col label="c12" cond="A1.r1 and A11hid.r1 ">Improves memory</col>
+  <col label="c13" cond="A1.r1 and A11hid.r3">Helps protect your eyes from harmful high-energy light waves like UV rays in sunlight</col>
+  <col label="c14" cond="A1.r1 and A11hid.r3">Filters blue light</col>
+  <col label="c15" cond="A1.r1 and A11hid.r3">Eases eye fatigue/ tired eyes</col>
+  <col label="c16" cond="A1.r1 and A11hid.r3">Reduces risk of chronic eye diseases</col>
+  <col label="c17" cond="A1.r1 and A11hid.r3">Reduces symptoms of dry eyes/tired eyes</col>
+  <col label="c18" cond="A1.r1 and A11hid.r3">Boosts eye health</col>
+  <col label="c19" cond="A1.r1 and A11hid.r3">Helps maintains eye health</col>
+  <col label="c20" cond="A1.r1 and A11hid.r3">Leads to clearer vision</col>
+  <col label="c21" cond="A1.r2 and A11hid.r2">Helps with restful sleep</col>
+  <col label="c22" cond="A1.r2 and A11hid.r2">Helps to improve poor sleep quality</col>
+  <col label="c23" cond="A1.r2 and A11hid.r2">Help you fall asleep faster</col>
+  <col label="c24" cond="A1.r2 and A11hid.r2">Helps to increase total sleep time</col>
+  <col label="c25" cond="A1.r2 and A11hid.r2">Helps with difficulties in falling asleep</col>
+  <col label="c26" cond="A1.r2 and A11hid.r2">Helps with staying asleep</col>
+  <col label="c27" cond="A1.r2 and A11hid.r2">Help to reduce feeling of nervousness</col>
+  <col label="c28" cond="A1.r2 and A11hid.r2">Helps to reduce stress</col>
+  <col label="c29" cond="A1.r2 and A11hid.r2">Helps to reduce anxiety</col>
+  <col label="c30" cond="A1.r2 and A11hid.r2">Helps to relieve state of tension</col>
+  <col label="c31" cond="A1.r2 and A11hid.r2">Help to reduce feeling of restlessness</col>
+  <col label="c32" cond="A1.r2 and A11hid.r3">Helps to protect your eyes from harmful high-energy light waves like UV rays in sunlight</col>
+  <col label="c33" cond="A1.r2 and A11hid.r3">Helps to filter blue light</col>
+  <col label="c34" cond="A1.r2 and A11hid.r3">Helps to ease eye fatigue/ tired eyes</col>
+  <col label="c35" cond="A1.r2 and A11hid.r3">Helps to reduce risk of chronic eye diseases</col>
+  <col label="c36" cond="A1.r2 and A11hid.r3">Helps to reduce symptoms of dry eyes</col>
+  <col label="c37" cond="A1.r2 and A11hid.r3">Helps to boost eye health</col>
+  <col label="c38" cond="A1.r2 and A11hid.r3">Helps to maintain eye health</col>
+  <col label="c39" cond="A1.r2 and A11hid.r3">Helps to have a clearer vision</col>
+  <row label="r1">Melatonin</row>
+  <row label="r2">Gaba</row>
+  <row label="r3">ZIZIPHI SPINOSAE SEMEN</row>
+  <row label="r4">SCHISANDRAE CHINENSIS FRUCTUS</row>
+  <row label="r5">MARGARITIFERA</row>
+  <row label="r6">HERBA LAVANDULAE</row>
+  <row label="r7">PORIA</row>
+  <row label="r8">GINSENG RADIX ET RHIZOMA</row>
+  <row label="r9">BLACK HOREHOUND</row>
+  <row label="r10">Taurine</row>
+  <row label="r11">Lutein</row>
+  <row label="r12">WHORTLEBERRY AND EXTRACT with Anthocyanin</row>
+  <row label="r13">LYCII FRUCTUS</row>
+  <row label="r14">Β-CAROTENE</row>
+  <row label="r15">CASSIAE SEMEN</row>
+  <row label="r16">Grape seed extract</row>
+  <row label="r17">BILBERRY AND EXTRACT</row>
+  <row label="r18">CHRYSANTHEMI FLOS</row>
+  <row label="r19">TAURINE</row>
+  <row label="r20">Zeaxanthin</row>
+  <row label="r21">Ecklonia Cava extract</row>
+  <row label="r22">Rice Bran spirits extract</row>
+  <row label="r23">Lactium</row>
+  <row label="r24">Ashwagandha</row>
+  <row label="r25">Gynostemma&amp;nbsp;<br />Pentaphyllum<br />leaves extract</row>
+  <row label="r26">Tryptophan</row>
+  <row label="r27">Valerian root</row>
+  <row label="r28">Hop cone extract</row>
+  <row label="r29">Lemon balm leaves</row>
+  <row label="r30">Saffron extract</row>
+  <row label="r31">Lutein, Zeaxanthin compound extract</row>
+  <row label="r32">Perilla frutescens extract</row>
+  <row label="r33">Grape Skin Fermentated enzyme extract</row>
+  <row label="r34">Bilberry extract</row>
+  <row label="r35">Marigold extract (Lutein&#160;Ester)</row>
+  <row label="r36">Taurine</row>
+  <row label="r37">Euphrasia Officinalis L.</row>
+  <row label="r99" cond="1" exclusive="1" randomize="0">None of these</row>
+</checkbox>
+
+<suspend/>

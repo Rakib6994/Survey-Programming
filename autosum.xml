@@ -1,0 +1,32 @@
+uses="autosum.5"
+
+<number 
+  label="KID2"
+  cond="(KID1.check('&gt; 0'))"
+  optional="0"
+  size="10"
+  ss:listDisplay="0"
+  uses="autosumft.99"
+  verify="range(0,50)">
+  <title>Concerning your age of your children, how many do you have in each of the below age brackets?</title>
+  <comment>Please type your answer in the textbox below as a whole number, for each age bracket.</comment>
+  <validate>
+if ((KID2.sum) lt (KID1.val)) or ((KID2.sum) gt (KID1.val)):    
+  error("You previously mentioned you had ${KID1.val} kid/s, please ensure the total here is the same number. ")
+  </validate>
+
+  <row label="r1" optional="1">Age 0 - 2</row>
+  <row label="r2" optional="1">Age 3 - 5</row>
+  <row label="r3" optional="1">Age 6 - 8</row>
+  <row label="r4" optional="1">Age 9 - 12</row>
+  <row label="r5" optional="1">Age 13 - 15</row>
+  <row label="r6" optional="1">Age 16 - 18</row>
+  <row label="r7" optional="1">Age 19 - 24</row>
+  <row label="r8" optional="1">Age 25 - 34</row>
+  <row label="r9" optional="1">Age 35 - 44</row>
+  <row label="r10" optional="1">Age 45 - 54</row>
+  <row label="r11" optional="1">Age 55+</row>
+</number>
+
+<suspend/>
+

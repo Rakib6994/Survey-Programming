@@ -1,0 +1,65 @@
+<html label="cm_B1_d" cond="not(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())" where="survey">Over the next few screens we are going to show a brand and an attribute (e.g. quality or innovative, etc).<br /><br />
+Press your "<b>A</b>" key if you <b>Agree</b> the attribute matches the brand.<br />
+Press your "<b>L</b>" key if you <b>Don't Agree</b> the attribute matches the brand.<br /><br />
+Try and answer as quickly as you can. But, hey, if you don't know, don't worry.<br />
+This is for fun, it isn't a test.<br /><br />
+Just to make sure you understand the task, we're going to do a quick practice run.<br /><br />
+Click Next when you are ready to do the practice run.</html>
+
+<html label="cm_B1_m" cond="(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())" where="survey">Over the next few screens we are going to show a brand and an attribute (e.g. quality or innovative, etc).<br /><br />
+Please tap on "<b>thumbs up</b>" icon if you <b>Agree</b> the attribute matches the brand.<br />
+Please tap on "<b>thumbs down</b>" key if you <b>Don't Agree</b> the attribute matches the brand.<br /><br />
+Try and answer as quickly as you can. But, hey, if you don't know, don't worry.<br />
+This is for fun, it isn't a test.<br /><br />
+Just to make sure you understand the task, we're going to do a quick practice run.<br /><br />
+Click Next when you are ready to do the practice run.</html>
+
+<suspend/>
+
+<radio 
+  label="DummyB1"
+  cardsort:bucketMaxWidth="200px"
+  cardsort:cardCSS="min-width:600px;font-color:#000000; font-size:24px;height:90px;font-family:'Verdana','Arial',sans-serif;margin:0 auto;"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="0"
+  cardsort:displayProgress="0"
+  cardsort:progressCSS="font-family:'Verdana','Arial',sans-serif;font-size:14px;font-weight:bold;"
+  cardsort:wrapBuckets="0"
+  optional="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title><div style="text-align:center;font-size:x-large;color:blue;"><b>DOGS</b></div></title>
+  <style cond="not(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())" name="page.head"><![CDATA[
+<script>
+jQuery(document).ready(function()
+{
+	jQuery(document).on('keypress keydown', function(event)
+	{
+		if (event.which == 65) 
+		{
+			jQuery(".sq-cardsort-bucket-item:eq(0)").parent().click();
+		}
+		
+		if (event.which == 76) 
+		{
+			jQuery(".sq-cardsort-bucket-item:eq(1)").parent().click();
+		}
+	});
+});
+</script>
+
+<style>
+.sq-cardsort-bucket { cursor: none !important; pointer-events : none !important;}
+.surveyContent { cursor: none !important; }
+</style>
+]]></style>
+  <row label="r1">Cute</row>
+  <row label="r2">Playful</row>
+  <row label="r3">Needy</row>
+  <row label="r4">Loyal</row>
+  <col label="c1" alt="yes">Yes</col>
+  <col label="c2" alt="no">No</col>
+</radio>
+
+<suspend/>

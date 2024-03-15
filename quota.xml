@@ -1,0 +1,15 @@
+<suspend/>
+
+<quota label="total" overquota="noqual" sheet="total_quota"/>
+
+<quota label="gender" overquota="noqual" sheet="gender_quota"/>
+
+<quota label="age" overquota="noqual" sheet="age_quota"/>
+
+<quota label="agexgender" overquota="noqual" sheet="AgeXGender"/>
+
+<quota label="location" overquota="noqual" sheet="location_quota"/>
+
+<quota label="income" overquota="noqual" sheet="income_quota"/>
+
+<suspend/>

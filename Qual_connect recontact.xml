@@ -1,0 +1,95 @@
+<block label="QualConnects_Plus" cond="False" builder:title="Qual Connects">
+  <autofill label="QualPrice" where="execute,survey,report">
+    <title>Qual Incentive</title>
+    <row label="r1" autofill="True">$30</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="S_Recontact_Will"
+   atm1d:showInput="0"
+   atm1d:viewMode="horizontal"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You are eligible to participate in a <strong><span style="color: red;">follow-up</span></strong> online market research discussion on consumer products. This is not an attempt to sell you anything -- this is strictly a research study. This is also an opportunity to express your thoughts, opinions and ideas to a company that is interested in what you have to say.<br /><br />
+    The 15 to 20 minute discussion would take place over a live online video call with a certified moderator, and would require you to use a laptop or desktop computer (not a mobile device or tablet). You will receive an additional incentive of <span style="color: #ff0000;"><strong>[pipe: QualPrice]</strong></span> for participating in this discussion.<br /><br />
+    If selected, you will be notified within 1 week, at which point you will receive details regarding when the discussion will take place. Would you be willing to participate?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_Recontact_CAM"
+   cond="S_Recontact_Will.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Does your laptop or desktop computer have a functioning web cam?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_Recontact_SPEED"
+   cond="S_Recontact_CAM.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please select the response that best describes your internet connection.</title>
+    <row label="r1">56k / Dial-Up</row>
+    <row label="r2">DSL</row>
+    <row label="r3">Cable</row>
+    <row label="r4">High-Performance Internet (any service faster than standard Cable)</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="S_Recontact_INFO"
+   cond="not(gv.isSST()) and (S_Recontact_SPEED.r2 or S_Recontact_SPEED.r3 or S_Recontact_SPEED.r4)"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please provide your contact information so that we may contact you if selected.</title>
+    <row label="r1">Name</row>
+    <row label="r2" verify="phoneUS">Phone Number</row>
+    <row label="r3" verify="email">Email</row>
+  </text>
+
+  <suspend/>
+
+  <radio 
+   label="S_Recontact_TimeZone"
+   cond="(S_Recontact_SPEED.r2 or S_Recontact_SPEED.r3 or S_Recontact_SPEED.r4)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please select your time zone.</title>
+    <row label="r1">Hawaii-Aleutian Time (HAT)</row>
+    <row label="r2">Alaska Time (AST)</row>
+    <row label="r3">Pacific Time (PT)</row>
+    <row label="r4">Mountain Time (MT)</row>
+    <row label="r5">Central Time (CT)</row>
+    <row label="r6">Eastern Time (ET)</row>
+  </radio>
+
+  <suspend/>
+
+  <html label="S_Recontact_End" cond="not(gv.isSST()) and (S_Recontact_SPEED.r2 or S_Recontact_SPEED.r3 or S_Recontact_SPEED.r4)" where="survey"><strong>Thank you for this information!<br /><br />Thank you for participation! You have been determined eligible for the online discussion mentioned earlier. If selected, we will contact you within 1 week, at which point you will receive details regarding when the discussion will take place.<br /></strong></html>
+
+  <suspend/>
+
+  <autofill label="QualParticipate" where="execute,survey,report">
+    <title>Qualifies for Qual Connect</title>
+    <row label="r1" autofill="(S_Recontact_SPEED.r2 or S_Recontact_SPEED.r3 or S_Recontact_SPEED.r4)">Yes</row>
+    <row label="r2" autofill="QualParticipate.count==0">No</row>
+  </autofill>
+</block>

@@ -1,0 +1,14 @@
+atm1d:large_buttonAlign="center"
+atm1d:numCols="5"
+atm1d:viewMode="tiled"
+
+
+
+
+OR
+
+ atm1d:large_buttonAlign="center"
+  atm1d:large_maxHeight="200%"
+  atm1d:large_maxWidth="200px"
+
+  atm1d:viewMode="tiled"

@@ -1,0 +1,14 @@
+<textarea 
+     label="S_IssueLocation"
+     imgmap:image="[rel humanbody.png]"
+     optional="1"
+     sst="0"
+     uses="imgmap.2020">
+        <title>Please indicate all the areas where you experience skin irritation from<br /><div align="center">
+        <img src="[rel clickNdrag.gif]" alt="" width="200px" /></div></title>
+        <comment>On the diagram below, please use your mouse to click on all the areas that apply. <br/></comment>
+        <col label="c1" imgmap:color="#32CD32" optional="1">Please mark the areas.</col>
+      </textarea>
+
+
+<suspend/>

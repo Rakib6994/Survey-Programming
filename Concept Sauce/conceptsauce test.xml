@@ -1,0 +1,3260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="conceptsauce test"
+  autoRecover="1"
+  autosave="0"
+  browserDupes=""
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="144"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="noMobile"
+  mobileDevices="desktop"
+  name="Behaviorally_ShopperFlash"
+  otherLanguages="french"
+  remerged="20220324_13:34"
+  secure="1"
+  setup="term,decLang,quota,time"
+  smartphoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png"
+  ss:logoPosition="left"
+  state="live"
+  theme="frozen:company/behaviorally-theme-2-1"
+  unusedLanguages="french"
+  version="19">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<res label="sys_surveyCompleted"/>
+<style name="survey.header"><![CDATA[
+<script type="text/javascript">
+    $ (window).on("load", function () {
+    	setTimeout(function () {
+    		$ ("body").append("<div class='hidevideo' style='position: fixed;top: 200%;left: 200%;'></div>")
+            video = "<video id='video-play' playsinline preload='auto'><source src='https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/tempvideo_1.mp4' type='video/mp4'></video>"
+            $ (".hidevideo").append(video)
+    	}, 2000);
+    })
+</script>
+]]></style>
+<suspend/>
+
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+.sq-mgshelf-cart-view-content table td input {
+  width: 50px !important;
+}  
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}   
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+#comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  border-radius: 30px;
+}
+.sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+}
+.grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+  $ (".clickable").addClass( "hvr-underline-from-center" )
+  $ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+  
+  if(!$ (".sq-cardsort-Q_PackAtt").length){
+    $ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+  }
+  
+  if($ (".p1").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");      
+      $ (".comment-text").css("color", "black");
+      $ (".comment-text").css("background-color","lightgrey");
+      $ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");
+      $ (".question").css("background-color","lightgrey");
+      $ (".question-text").css("color","black");
+      $ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+  if($ (".radio .sq-atm1d-button").length){
+      $ ("#btn_continue").hide();
+    } 
+  $ (document).on('click', '.radio .sq-atm1d-button', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmtable-btn', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-sliderpoints-container', function() {
+    $ ("#btn_continue").click();
+  })
+       
+/*Textbox*/
+  $ ('.element').css('text-align','center');
+  
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmrating-container', function() {
+    $ ("#btn_continue").click();
+  })
+*/
+
+/*Change Font*/
+  $ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+</script>
+]]></style>
+<samplesources default="0">
+  <samplesource list="134">
+    <title>Prodege</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=3"/>
+    <exit cond="overquota" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=2"/>
+    <exit cond="qualified" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=1"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Schlesinger (previously Market cube)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending/?RS=3&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending/?RS=2&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending/?RS=1&amp;RID=${RID}&amp;secret=606"/>
+  </samplesource>
+
+  <samplesource list="3">
+    <title>Wise Works</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="wspid" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;wspid=${wspid}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;wspid=${wspid}"/>
+    <exit cond="qualified" url="https://pollrouting.com/router/ViTo231826078423f0deb87958998e28f35c03e/passback.php?bvl=b&amp;st=jNWCZ1WOhQaR&amp;wspid=${wspid}"/>
+  </samplesource>
+
+  <samplesource list="138">
+    <title>Philomath Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey-rush.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey-rush.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey-rush.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="6">
+    <title>Rakuten Insights (AIP)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <var name="pid" unique="1"/>
+    <exit cond="terminated" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=s"/>
+    <exit cond="overquota" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=q"/>
+    <exit cond="qualified" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=c"/>
+  </samplesource>
+
+  <samplesource list="141">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey-rush.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey-rush.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey-rush.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="24">
+    <title>PSampleGurus</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${id}&amp;status=2"/>
+    <exit cond="overquota" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${id}&amp;status=3"/>
+    <exit cond="qualified" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${id}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="140">
+    <title>Asia Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey-rush.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey-rush.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey-rush.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="27">
+    <title>Borderless Access</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <exit cond="qualified and 1"/>
+    <exit cond="terminated" url="https://surveys.thepanelstation.com/crdct.aspx?id=${id}&amp;rst=3"/>
+    <exit cond="overquota" url="https://surveys.thepanelstation.com/crdct.aspx?id=${id}&amp;rst=2"/>
+    <exit cond="qualified" url="https://surveys.thepanelstation.com/crdct.aspx?id=${id}&amp;rst=1"/>
+  </samplesource>
+
+  <samplesource list="26">
+    <title>Orchidea Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ORGID" required="1"/>
+    <exit cond="terminated" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin629587&amp;ORGID=${ORGID}"/>
+    <exit cond="overquota" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin315610&amp;ORGID=${ORGID}"/>
+    <exit cond="qualified" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin921274&amp;ORGID=${ORGID}"/>
+  </samplesource>
+
+  <samplesource list="25">
+    <title>OMI Russia </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ac" unique="1"/>
+    <exit cond="terminated" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=2"/>
+    <exit cond="overquota" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=3"/>
+    <exit cond="qualified" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="23">
+    <title>Research for Good</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sesskey" unique="1"/>
+    <exit cond="terminated" url="https://survey.saysoforgood.com/result?result=T&amp;sesskey=${sesskey}"/>
+    <exit cond="overquota" url="https://survey.saysoforgood.com/result?result=Q&amp;sesskey=${sesskey}"/>
+    <exit cond="qualified" url="https://survey.saysoforgood.com/result?result=C&amp;sesskey=${sesskey}&amp;password=humzes"/>
+  </samplesource>
+
+  <samplesource list="22">
+    <title>Union Panel</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="http://www.surveyunion.com/api/fa/screenout/idy_sid=${sid}"/>
+    <exit cond="overquota" url="http://www.surveyunion.com/api/fa/quotafull/idy_sid=${sid}"/>
+    <exit cond="qualified" url="http://www.surveyunion.com/api/fa/complete/idy_sid=${sid}"/>
+  </samplesource>
+
+  <samplesource list="20">
+    <title>GMO Research (JPN)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=2&amp;id=${id}"/>
+    <exit cond="overquota" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=3&amp;id=${id}"/>
+    <exit cond="qualified" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=1&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="19">
+    <title>Acuity </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="auid" unique="1"/>
+    <exit cond="terminated" url="https://acuityinsights.online/thanks?status=t&amp;auid=${auid}"/>
+    <exit cond="overquota" url="https://acuityinsights.online/thanks?status=q&amp;auid=${auid}"/>
+    <exit cond="qualified" url="https://acuityinsights.online/thanks?status=c&amp;auid=${auid}"/>
+  </samplesource>
+
+  <samplesource list="17">
+    <title>Splendid-Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.mobrog.com/?m=6006&amp;return=screenout&amp;i_survey=${ID}"/>
+    <exit cond="overquota" url="https://surveys.mobrog.com/?m=6006&amp;return=quotafull&amp;i_survey=${ID}"/>
+    <exit cond="qualified" url="https://surveys.mobrog.com/?m=6006&amp;return=complete&amp;i_survey=${ID}"/>
+  </samplesource>
+
+  <samplesource list="14">
+    <title>Think Now Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=b2929f76-5377-467a-8b9c-d27faa00bba5&amp;RID=${RID}"/>
+  </samplesource>
+
+  <samplesource list="13">
+    <title>Cognitive Intelligence</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://kesurvey.sawtoothsoftware.com/ST011/cgi-bin/ciwweb.pl?studyname=ST011&amp;id=${id}&amp;status=2&amp;co=1&amp;sample=1"/>
+    <exit cond="overquota" url="https://kesurvey.sawtoothsoftware.com/ST011/cgi-bin/ciwweb.pl?studyname=ST011&amp;id=${id}&amp;status=3&amp;co=1&amp;sample=1"/>
+    <exit cond="qualified" url="https://kesurvey.sawtoothsoftware.com/ST011/cgi-bin/ciwweb.pl?studyname=ST011&amp;id=${id}&amp;status=1&amp;co=1&amp;sample=1"/>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Samplenomics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ui" unique="1"/>
+    <exit cond="terminated" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndTerm&amp;ui=${ui}"/>
+    <exit cond="overquota" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndOverQ&amp;ui=${ui}"/>
+    <exit cond="qualified" url="http://host4.dotdata.nl/dotdata/start?u=EE4E2321A3984FD0BB88A3C5FD9F7977&amp;q=END&amp;ui=${ui}"/>
+  </samplesource>
+
+  <samplesource list="104">
+    <title>LightSpeed - DO NOT USE, this is now kantar</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <var name="table" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${table}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${table}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${table}"/>
+  </samplesource>
+
+  <samplesource list="10">
+    <title>Kantar</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <var name="ProjectToken" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+  </samplesource>
+
+  <samplesource list="8">
+    <title>Respondi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tic" unique="1"/>
+    <exit cond="terminated" url="https://mingle.respondi.com/s/1277088/ospe.php3?c_0002=0&amp;tic=${tic}"/>
+    <exit cond="overquota" url="https://mingle.respondi.com/s/1277088/ospe.php3?c_0002=2&amp;tic=${tic}"/>
+    <exit cond="qualified" url="https://mingle.respondi.com/s/1277088/ospe.php3?c_0002=1&amp;tic=${tic}"/>
+  </samplesource>
+
+  <samplesource list="4">
+    <title>OI Research - Online interactive research limited</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <exit cond="terminated" url="https://api.dynata.com/respondent/exit?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://api.dynata.com/respondent/exit?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://api.dynata.com/respondent/exit?rst=1&amp;psid=${psid}&amp;basic=11111"/>
+  </samplesource>
+
+  <samplesource list="7">
+    <title>Lucid</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=5f160ff5-0278-4427-803e-0d4bca070945&amp;RID=${RID}"/>
+  </samplesource>
+
+  <samplesource list="136">
+    <title>DISQO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tid" unique="1"/>
+    <exit cond="terminated" url="https://go.activemeasure.com?status=12615&amp;tid=${tid}"/>
+    <exit cond="overquota" url="https://go.activemeasure.com?status=9526&amp;tid=${tid}"/>
+    <exit cond="qualified" url="https://go.activemeasure.com?status=17787&amp;tid=${tid}"/>
+  </samplesource>
+
+  <samplesource list="12">
+    <title>Capgemini (Nestle ONLY)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://link.annik.com/rd?status=s&amp;id=${id}"/>
+    <exit cond="overquota" url="https://link.annik.com/rd?status=q&amp;id=${id}"/>
+    <exit cond="qualified" url="https://link.annik.com/rd?status=c&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="5">
+    <title>EMI - new</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="EMI" unique="1"/>
+    <exit cond="terminated" url="https://survey.emi-rs.com/end/quotafull/?scb=OPFvOzn710y7"/>
+    <exit cond="overquota" url="https://survey.emi-rs.com/end/quotafull/?scb=OPFvOzn710y7"/>
+    <exit cond="qualified" url="https://survey.emi-rs.com/end/complete/?scb=12u5Hj6rSVD5"/>
+  </samplesource>
+
+  <samplesource list="9">
+    <title>Bilendi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="http://survey.maximiles.com/static-screenout?l=189173&amp;ID=${ID}"/>
+    <exit cond="overquota" url="http://survey.maximiles.com/static-quotasfull?l=189172&amp;ID={ID}"/>
+    <exit cond="qualified" url="http://survey.maximiles.com/static-complete?l=189174&amp;ID={ID}"/>
+  </samplesource>
+
+  <samplesource keyring="sys/rn" list="101" sign="out">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <exit cond="terminated" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://dkr1.ssisurveys.com/projects/end?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://dkr1.ssisurveys.com/projects/end?rst=1&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="15">
+    <title>Pure Spectrum </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="16">
+    <title>Market T Plus</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="eid" unique="1"/>
+    <exit cond="terminated" url="http://smart.markettplus.com/landingpage.aspx?pid=291101&amp;cid=46412&amp;st=s&amp;smode=3&amp;eid=${eid}"/>
+    <exit cond="overquota" url="http://smart.markettplus.com/landingpage.aspx?pid=291101&amp;cid=46412&amp;st=q&amp;smode=3&amp;eid=${eid}"/>
+    <exit cond="qualified" url="http://smart.markettplus.com/landingpage.aspx?pid=291101&amp;cid=46412&amp;st=c&amp;smode=3&amp;eid=${eid}"/>
+  </samplesource>
+
+  <samplesource list="18">
+    <title>Dynamic field new (copy)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ExtCode" unique="1"/>
+    <exit cond="terminated" url="https://dynamicfieldwork.dubinterviewer.com/scripts/dubinterviewer.dll/Frames?Quest=100117&amp;Resp=${ExtCode}&amp;Rst=2"/>
+    <exit cond="overquota" url="https://dynamicfieldwork.dubinterviewer.com/scripts/dubinterviewer.dll/Frames?Quest=100117&amp;Resp=${ExtCode}&amp;Rst=3"/>
+    <exit cond="qualified" url="https://dynamicfieldwork.dubinterviewer.com/scripts/dubinterviewer.dll/Frames?Quest=100117&amp;Resp=${ExtCode}&amp;Rst=1"/>
+  </samplesource>
+
+  <samplesource list="137">
+    <title>Research Cart</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="respid" unique="1"/>
+    <exit cond="terminated" url="http://www.researchcart.com/terminated-entry.php?projectid=RC230321B&amp;respid=${respid}"/>
+    <exit cond="overquota" url="http://www.researchcart.com/quotafull-entry.php?projectid=RC230321B&amp;respid=${respid}"/>
+    <exit cond="qualified" url="http://www.researchcart.com/completed-entry.php?projectid=RC230321B&amp;respid=${respid}"/>
+  </samplesource>
+
+  <samplesource list="21">
+    <title>Phoenix Data Innov</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="xpid" unique="1"/>
+    <exit cond="terminated" url="http://globaldial.surveybackoffice.com/endcapture.php?cada=NTAxOS1aMnh2WW1Gc1pHbGhiQT09&amp;st=222"/>
+    <exit cond="overquota" url="http://globaldial.surveybackoffice.com/endcapture.php?cada=NTAxOS1aMnh2WW1Gc1pHbGhiQT09&amp;st=333"/>
+    <exit cond="qualified" url="http://globaldial.surveybackoffice.com/endcapture.php?cada=NTAxOS1aMnh2WW1Gc1pHbGhiQT09&amp;st=111"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder - do not add Resp</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #C6007E">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+
+  <samplesource list="144">
+    <title>Universal Reserach Panels</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://surveys.universalresearchpanels.com/newdesign/site/Universalresearchpanels/surveyresult.php?projectid=Q17806-BE_25-BEABT&amp;q=17806&amp;qresult=a5988fd6dd5c0549c3247b8d955a1871&amp;id=${id}"/>
+    <exit cond="overquota" url="https://surveys.universalresearchpanels.com/newdesign/site/Universalresearchpanels/surveyresult.php?projectid=Q17806-BE_25-BEABT&amp;q=17806&amp;qresult=2d6d2c915c91cb0b16a99d2d280dddc3&amp;id=$id}"/>
+    <exit cond="qualified" url="https://surveys.universalresearchpanels.com/newdesign/site/Universalresearchpanels/surveyresult.php?projectid=Q17806-BE_25-BEABT&amp;q=17806&amp;qresult=deb34e15a965f068ec64ac7c938edd34&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="143">
+    <title>European National Panels</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey-rush.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey-rush.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey-rush.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="142">
+    <title>MIS Group</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey-rush.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey-rush.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey-rush.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #C6007E">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<block label="Logistics" builder:title="Logistics">
+  <radio 
+   label="Location"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Sample Source (web) / Location (web to clt)</title>
+    <row label="US166" cond="list=='3'" value="592487365">Wise Works</row>
+    <row label="US167" cond="list=='2'" value="592490403">Market-Cube</row>
+    <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+    <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+    <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+    <row label="IN014" cond="list=='12'" value="592505378">Capgemini</row>
+    <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+    <row label="GB017" cond="list=='7'" value="595370772">Lucid Holdings UK Limited</row>
+    <row label="US170" cond="list=='5'" value="595372438">EMI Research Solutions</row>
+    <row label="GB018" cond="list=='8'" value="595377573">RESPONDI LIMITED</row>
+    <row label="GB019" cond="list=='9'" value="595382531">Bilendi Ltd.</row>
+    <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+    <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+    <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+    <row label="IN015" cond="list=='13'" value="692643881">Cognitive Intelligence</row>
+    <row label="US191" cond="list=='14'" value="786180997">Think Now Research ()</row>
+    <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+    <row label="US196" cond="list=='16'" value="913308096">Market T Plus ()</row>
+    <row label="GB021" cond="list=='18'" value="848715950">Dynamic Fieldwork (NO ET)</row>
+    <row label="US197" cond="list=='17'" value="913561750">Splendid Research ()</row>
+    <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+    <row label="US194" cond="list=='19'" value="828016042">Acuity (NO ET)</row>
+    <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+    <row label="IN019" cond="list=='137'" value="1154268554">Research Cart</row>
+    <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+    <row label="CN038" cond="list=='22'" value="1285284313">Union Panels (Kadence)</row>
+    <row label="GB022" cond="list=='21'" value="1219137790">Phoenix Data Innov UK ()</row>
+    <row label="US208" cond="list=='23'" value="1312675875">Research for Good</row>
+    <row label="US213" cond="list=='24'" value="1314418229">SampleGurus</row>
+    <row label="RU007" cond="list=='25'" value="833513838">OMI (Online Market Intelligence)</row>
+    <row label="IN021" cond="list=='26'" value="1422500825">Orchidea Research ()</row>
+    <row label="US212" cond="list=='27'" value="1446682660">Borderless Access (NO ET)</row>
+    <row label="IN023" cond="list=='140'" value="1183840761">Asia Research</row>
+    <row label="US220" cond="list=='141'" value="7535526">Cint</row>
+    <row label="FR024" cond="list=='142'" value="7690198">MIS Group</row>
+    <row label="CZ002" cond="list=='143'" value="7690199">European National Panels</row>
+    <row label="NZ001" cond="list=='144'" value="690199">Universal Research Panels</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="LocationCode"
+   cond="not(gv.isSST())"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+  LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+  </autofill>
+
+  <suspend/>
+
+  <text 
+   label="IP_ID"
+   optional="0"
+   randomize="0"
+   size="80"
+   where="execute,survey,report">
+    <title>IP ID</title>
+    <exec>
+IP_ID.val = gv.request.getRemote()
+    </exec>
+
+  </text>
+
+  <suspend/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>AC579 - P2P - S3b</title>
+    <row label="r1" autofill="True">ac579</row>
+  </autofill>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Category</title>
+    <row label="r1" autofill="True"><strong>Alcohol Beverage</strong></row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Intro" where="survey"><p class="p1">Hello and welcome to our survey!<br /><br />
+Thank you in advance for your participation.  This study is very important to us and we ask that you answer each question carefully and completely.<br /><br />
+While going through the survey, please use the scroll bar on the right and bottom of your screen to move up and down through questions and images.  Please remember that there are no right or wrong answers. We are only interested in your opinions.<br /><br />
+Thank you again!  Let’s begin…</p></html>
+
+  <text 
+   label="Browser"
+   randomize="0">
+    <title>&amp;nbsp;</title>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(id)" value="$(value)" size="$(size)" class="input text-input" $(extra) hidden/>
+]]></style>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.even').hide();
+           var isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+           var isEdge = (navigator.userAgent.indexOf('Edge') >= 0);
+           var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+           var isSafari = (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+           console.log('The value for browser is ' + isEdge);
+           console.log(isChrome);
+           console.log(isFirefox);
+           console.log(isSafari);
+           if (isEdge)
+           {
+               $ ('input[type=text]').val('N');
+
+           }
+          else if (isChrome)
+           {
+               $ ('input[type=text]').val('Y');
+
+           }
+          else if(isFirefox)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+          else if(isSafari)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+         else {
+        $ ('input[type=text]').val('N');
+}
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <autofill label="CompatBrowser" where="execute,survey,report">
+    <title>Compatible Browser</title>
+    <row label="r1" autofill="Browser.val == 'Y'">Yes</row>
+    <row label="none" autofill="CompatBrowser.count == 0">No</row>
+  </autofill>
+
+  <suspend/>
+
+  <term label="TERM_Compat" cond="CompatBrowser.none and not(gv.isSST())">Incompatible Browser</term>
+</block>
+
+<suspend/>
+
+<block label="Screener" builder:title="Screener">
+  <checkbox 
+   label="S_PastParticipation"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Have you participated in a market research study within the past month, on any of the following topics?</title>
+    <row label="r1">Household Cleaning Products</row>
+    <row label="r2">Alcohol Beverage Products</row>
+    <row label="r3">Food Products</row>
+    <row label="r4">Toothpaste</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <text 
+   label="temp_video">
+    <title>Video Question</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/videoplay.css" />
+	<script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/videoplay.js"></script>
+  <div class='pop-loading'><em>LOADING<s></s></em></div>
+	<div class="videorating-body" ended="1">
+		<div class="videorating-block">
+			\@if device.desktop
+			<video id='video-play' width='960' playsinline preload="auto"><source src='https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/AC579_DEMO.mp4' type='video/ogg'><source src='https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/AC579_DEMO.mp4' type='video/mp4'></video>
+			\@else
+			<video id='video-play' height="240" playsinline preload="auto"><source src='https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/AC579_DEMO.mp4' type='video/ogg'><source src='https://paralleldata.decipherinc.com/survey/selfserve/202d/220341/AC579_DEMO.mp4' type='video/mp4'></video>
+			\@endif
+			<div class="videorating-block-bar">
+				<div class="sound">
+					<input class="sound-input" type="range" min="0" max="1" step=".1">
+				</div>
+				<div class="progress">
+					<em></em>
+				</div>
+				<div class="time">
+					<q>00:00</q>/
+					<q>00:00</q>
+				</div>
+			</div>
+			<em id="vplay"></em>
+		</div>
+	</div>
+  ${v2_insertStyle('survey.question')}
+	${v2_insertStyle('survey.question.instructions')}
+]]></style>
+  </text>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<radio 
+  label="Phase"
+  randomize="0">
+  <title>Phase</title>
+  <row label="r1">1</row>
+  <row label="r2">2</row>
+  <row label="r3">3</row>
+  <row label="r4">4</row>
+  <row label="r5">5</row>
+  <row label="r6">6</row>
+  <row label="r7">7</row>
+  <row label="r8">8</row>
+  <row label="r9">9</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="Start"
+  randomize="0">
+  <title>Start</title>
+  <row label="r1">1</row>
+  <row label="r2">2</row>
+</radio>
+
+<suspend/>
+
+<block label="ShoppingSection" builder:title="Shopping Section">
+  <pipe label="ShelfImage" capture="">
+    <case label="r1" cond="(Phase.r1)">SHELF1</case>
+    <case label="r2" cond="(Phase.r2)">SHELF2</case>
+    <case label="r3" cond="(Phase.r3)">SHELF3</case>
+    <case label="r4" cond="(Phase.r4)">SHELF4</case>
+    <case label="r5" cond="(Phase.r5)">SHELF5</case>
+    <case label="r6" cond="(Phase.r6)">SHELF6</case>
+    <case label="r7" cond="(Phase.r7)">SHELF7</case>
+    <case label="r8" cond="(Phase.r8)">SHELF8</case>
+    <case label="r9" cond="(Phase.r9)">SHELF9</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="letter" capture="">
+    <case label="r1" cond="(Phase.r1)">a</case>
+    <case label="r2" cond="(Phase.r2)">b</case>
+    <case label="r3" cond="(Phase.r3)">c</case>
+    <case label="r4" cond="(Phase.r4)">d</case>
+    <case label="r5" cond="(Phase.r5)">e</case>
+    <case label="r6" cond="(Phase.r6)">f</case>
+    <case label="r7" cond="(Phase.r7)">g</case>
+    <case label="r8" cond="(Phase.r8)">h</case>
+    <case label="r9" cond="(Phase.r9)">i</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_price_text" capture="">
+    <case label="r1" cond="True">Price</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_quantity_text" capture="">
+    <case label="r1" cond="True">Quantity</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_subtotal_text" capture="">
+    <case label="r1" cond="True">Subtotal</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_cancel_text" capture="">
+    <case label="r1" cond="True">Put Back</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="shop_purchase" capture="">
+    <case label="r1" cond="True">Purchase</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="find_select" capture="">
+    <case label="r1" cond="True">Select</case>
+    <case label="r99" cond="1"/></pipe>
+  <pipe label="continue_text" capture="">
+    <case label="r1" cond="True">Please click the Continue button to proceed</case>
+    <case label="r99" cond="1"/></pipe>
+  <suspend/>
+
+  <html label="Maximize" where="survey"><strong>Throughout this survey, you are going to be shown several pictures. Please be sure that you maximize your window at this time, such that you can see these pictures with as much clarity as possible. You can also mouse over the images to see them magnified at any time. <br /><br />Press F11 for full screen.</strong></html>
+
+  <suspend/>
+
+  <number 
+   label="resp_id"
+   size="6"
+   where="execute,survey,report">
+    <title>Respondent ID</title>
+    <exec>
+try:
+  resp_id.val = Resp.val
+  print record
+except NameError:
+  resp_id.val = record
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <block label="ConceptSauce" builder:title="Shopping Exercise">
+    <pipe label="CS_ProjectID" capture="">
+      <case label="r1" cond="True">xx</case>
+      <case label="r10" cond="1"/></pipe>
+    <pipe label="param_id" capture="">
+      <case label="r1f" cond="Phase.r1 and Start.r1">PRMS01FX5C4ZZW1AEG5MD4E127SYHN</case>
+      <case label="r2f" cond="Phase.r2 and Start.r1">PRMS01FX5C2A6RVPKNJV468B6HWCV9</case>
+      <case label="r3f" cond="Phase.r3 and Start.r1">PRMS01FX5CFB0R4Q5YHBG1G93NCCBP</case>
+      <case label="r4f" cond="Phase.r4 and Start.r1">PRMS01FX5CTPJCEQ70HF284QD1JYM1</case>
+      <case label="r5f" cond="Phase.r5 and Start.r1">PRMS01FX5DEKKDRVA1JKE9BDGHX3CA</case>
+      <case label="r6f" cond="Phase.r6 and Start.r1">PRMS01FX5DNXTSB33JX8J4X8H027BY</case>
+      <case label="r1b" cond="Phase.r1 and Start.r2">PRMS01FX5NQEBS9VHH6CR88C48BMY6</case>
+      <case label="r2b" cond="Phase.r2 and Start.r2">PRMS01FX5NMZEWXX0DG3Y2M2EH8141</case>
+      <case label="r3b" cond="Phase.r3 and Start.r2">PRMS01FX5KRRGKYMTMCH3M4BF22PHB</case>
+      <case label="r4b" cond="Phase.r4 and Start.r2">PRMS01FX5NBF2XGAVEDSEXXRS6YGKS</case>
+      <case label="r5b" cond="Phase.r5 and Start.r2">PRMS01FX5ND8HXAZM61746K8EZTSWQ</case>
+      <case label="r6b" cond="Phase.r6 and Start.r2">PRMS01FX5NFK4GQHHMYFQRZGMEW5KM</case>
+      <case label="r8" cond="Phase.r8">PRMS01FX5E54HF7HB6JBPVW1RK510T</case>
+      <case label="r9" cond="Phase.r9">PRMS01FX5ED6HMXP6B0WXCH58Y28PC</case>
+      <case label="r99" cond="1"/></pipe>
+    <pipe label="VCShoppingUrl" capture="">
+      <case label="r1" cond="True">https://survey.rose.conceptsauce.io?param_id=${pipe.param_id}&amp;respondent_id=${uuid}</case>
+      <case label="r99" cond="1"/></pipe>
+    <pipe label="VCSurveyidAPIUrl" capture="">
+      <case label="r1" cond="True">https://better-params-api.rose.conceptsauce.io/api?pageid=${pipe.param_id}</case>
+      <case label="r99" cond="1"/></pipe>
+    <pipe label="VCAPIUrl" capture="">
+      <case label="r1" cond="True">https://public-survey-data-api.rose.conceptsauce.io/api?pageid=${pipe.param_id}</case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <html label="ShopIntro" where="survey"><span style="font-size: 14pt;">In a moment you will be redirected to a virtual shopping platform. [pipe:Pipe_Shelf_Txt]<br /><br /> Assume for a moment that you are doing your shopping for [pipe: Category]. Please select the products that you wish to purchase by clicking on the individual products on the shelf. You may purchase as many or as few products as you like.</span><br /><br />
+<ul>
+<li style="text-align: left;" /><span style="font-size: 14pt;">If you would like to see a close-up of a product, click on the product.</span>
+<li style="text-align: left;" /><span style="font-size: 14pt;">After you have selected a product, you may observe the structure and back of the package by using your mouse to rotate the product.</span>
+<li style="text-align: left;" /><span style="font-size: 14pt;">If you would like to purchase a product, click on the product and use the "add to basket" button and choose a quantity to add it to your cart.</span>
+<li style="text-align: left;" /><span style="font-size: 14pt;">When finished with the shopping trip, click the "checkout" button on the bottom of your screen.</span>
+<li style="text-align: left;" /><span style="font-size: 14pt;">You will have the opportunity to review your order and if everything is accurate please click the 'Finish Shopping' button.</span>
+<li style="text-align: left;" /><span style="font-size: 14pt;">Please be sure to view the entire shelf before proceeding.</span>
+</ul></html>
+
+    <suspend/>
+
+    <exec>
+from datetime import datetime
+import time
+starttime = datetime.now()
+print starttime
+    </exec>
+
+    <suspend/>
+
+    <block label="digitalSection" builder:title="Shopping">
+      <html label="placeholder_Shop2" where="none">Redirect placeholder so that the redirect executes</html>
+
+      <exec sst="0">
+suspendExternal(pipe.VCShoppingUrl+"&amp;respondentId="+uuid+"&amp;link=[return]&amp;")
+      </exec>
+
+      <float 
+     label="ShopTime"
+     optional="0"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Shop Time</title>
+        <comment>Time it took for Shopping</comment>
+        <exec>
+from datetime import datetime
+import time
+endtime =  datetime.now()
+print endtime
+ShopTime.val = (endtime - starttime).seconds
+        </exec>
+
+      </float>
+
+      <suspend/>
+
+      <text 
+     label="api_Data"
+     size="40">
+        <title>Welcome back, please continue rest questions.</title>
+        <style name="page.head"><![CDATA[
+<link rel="stylesheet" href="[rel ploading.css]">
+<script>
+    $ (window).on("load", function () {
+        $ ("body").append("<div class='pop-loading'><em>LOADING<s></s></em></div>")
+        
+        var formData = JSON.stringify({"event_type": "params_crud","action": "get_params","data": {"params_id": "${pipe.param_id}"}})
+
+        $.ajax({
+            type: "post",
+            url: "https://better-params-api.rose.conceptsauce.io/api",
+            dataType: 'json',
+            contentType: 'application/json',
+            data: formData,
+            success: function (dd) {
+
+                setTimeout(function(){
+                    var sid = dd.data.params.survey_id
+                    var formDataShelf = JSON.stringify({"event_type": "survey_data_request","action": "get_shop_shelf_summary_purchases","data": {"target": {"survey_id": sid,"respondent_id": "${uuid}","block_id": "shelf1"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataShelf,
+                        success: function (aaa) {
+                            console.log(1,aaa)
+                            setTimeout(function(){
+                                $ (".answers").find(".input.text-input").eq(0).val(sid)
+                                $ (".answers").find(".input.text-input").eq(1).val(aaa.data.basket_summary.sku_list.replace(/\s+/g,""))
+                                $ (".answers").find(".input.text-input").eq(2).val(aaa.data.basket_summary.total_value)
+                                $ (".pop-loading").remove()
+                            },1000)
+                        }
+                    });
+
+                    var formDataCon = JSON.stringify({"event_type": "survey_data_request","action": "get_shop_shelf_summary_items_looked_at","data": {"target": {"survey_id": sid,"respondent_id": "${uuid}","block_id": "shelf1"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataCon,
+                        success: function (bbb) {
+                            console.log(2,bbb)
+                            setTimeout(function(){                                
+                                var sku = []
+                                var start = []
+                                var total = []
+                                bbb.data.items_looked_at.map(function(e){
+                                    sku.push(e.sku)
+                                    start.push(e.time_to_start_looking)
+                                    total.push(e.total_duration_looking)
+                                })
+
+                                $ (".answers").find(".input.text-input").eq(3).val(sku)
+                                $ (".answers").find(".input.text-input").eq(4).val(start)
+                                $ (".answers").find(".input.text-input").eq(5).val(total)
+                                $ (".pop-loading").remove()
+                                setTimeout(function(){
+                                    $ ("#btn_continue").click()                                  
+                                },1000)                                
+                                
+                            },1000)                                                        
+                        }
+                    });
+
+                    var formDataCOV = JSON.stringify({"event_type": "survey_data_request","action": "get_shop_shelf_detail_items_looked_at","data": {"target": {"survey_id": sid,"respondent_id": "${uuid}","block_id": "con|version_1_task_2"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataCOV,
+                        success: function (ccc) {
+                            console.log(3,ccc)
+                        }
+                    });
+
+                    var formDataConjoint = JSON.stringify({"event_type": "survey_data_request","action": "get_conjoint_shelf_version_summary","data": {"target": {"survey_id": sid,"block_id": "conjoint","version_id": "1"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataConjoint,
+                        success: function (ddd) {
+                            console.log(4,ddd)
+                        }
+                    });
+                    
+
+                },1000)
+
+            }
+        });
+    })
+
+</script>
+]]></style>
+        <row label="r1">surveyid</row>
+        <row label="r2">sku_list</row>
+        <row label="r3">total_value</row>
+        <row label="r4">items_looked_at_sku</row>
+        <row label="r5">items_to_start_looking</row>
+        <row label="r6">total_duration_looking</row>
+      </text>
+
+      <suspend/>
+
+      <exec>
+SurveyId.val=api_Data.r1.val
+total_value.val=api_Data.r3.val
+productArr = api_Data.r2.val.split(",")
+productPickArr = api_Data.r4.val.split(",")
+productStartTimeArr = api_Data.r5.val.split(",")
+productDurationTimeArr = api_Data.r6.val.split(",")
+print productArr
+
+for x in productArr:
+  for y in P_QuantityPurchased.rows:
+    if x == y.label:
+      y.c1.val=1
+
+for a in productPickArr:
+  for b in P1_Items_ClickedOn.rows:
+    if a == b.label:
+      b.val=1
+
+for i, att in enumerate(productPickArr):
+  for c in P_QuantityPurchased.rows:
+    if c.label == att:
+      P_QuantityPurchased.rows[c.index].c2.val = i+1
+      P_QuantityPurchased.rows[c.index].c3.val = productStartTimeArr[i]
+      P_QuantityPurchased.rows[c.index].c4.val = productDurationTimeArr[i]
+      </exec>
+
+      <text 
+     label="SurveyId"
+     optional="0"
+     size="30"
+     where="execute,survey,report">
+        <title>Survey Id</title>
+      </text>
+
+      <float 
+     label="total_value"
+     optional="0"
+     size="10"
+     where="execute,survey,report">
+        <title>total value</title>
+      </float>
+
+      <suspend/>
+
+      <number 
+     label="P_QuantityPurchased"
+     size="10"
+     where="execute,survey,report">
+        <title>.</title>
+        <col label="c1">Purchased (not Quantity - TBD Quantity for CS)</col>
+        <col label="c2">Order of click</col>
+        <col label="c3">ClickedOn_StartTime</col>
+        <col label="c4">Time opened (duration)</col>
+        <row label="u018200202087">BUD LIGHT SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u018200202155">BUD LIGHT SELTZER BLACK CHERRY MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u018200202179">BUD LIGHT SELTZER STRAWBERRY MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u018200202636">MICHELOB ULTRA ORGANIC SELTZER SIGNATURE COLLECTION VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u018200202667">MICHELOB ULTRA ORGANIC SELTZER CLASSIC COLLECTION VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u018200202698">BUD LIGHT SELTZER LEMONADE VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u018200286865">BUD LIGHT SELTZER VARIETY PACK MALT BEVERAGE 24 CT 12 OZ CAN IN BOX 288 OZ</row>
+        <row label="u021130208241">VITALI PREM VODKA 1.75 LT</row>
+        <row label="u021130208296">VITALI VODKA PREM 750 ML</row>
+        <row label="u021130208326">VITALI PREM VODKA CITRUS 1.75 LT</row>
+        <row label="u021130208395">SAMUEL GRANT BOURBON  750 ML</row>
+        <row label="u021130208401">SAMUEL GRANT BOURBON  1.75 LT</row>
+        <row label="u021130208418">VITALI VODKA PREM 375 ML</row>
+        <row label="u021130213320">KINGS BAY WHITE RUM TROPICAL 1.75 LT</row>
+        <row label="u021130242191">BANDOLERO TEQUILA SILVER 1.75 LT</row>
+        <row label="u021136180879">TOPO CHICO HARD SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u021296006019">PAUL MASSON GRANDE AMBER BRANDY 750 ML</row>
+        <row label="u021296600309">PAUL MASSON GRANDE AMBER BRANDY 1.75 LT</row>
+        <row label="u033544000434">CORONA HARD SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u034100012328">VIZZY HARD SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u034100015077">VIZZY LEMONADE HARD SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u039383006507">MICHTERS STRAIGHT RYE 750 ML</row>
+        <row label="u039383007184">MICHTERS BOURBON WHISKEY 750 ML</row>
+        <row label="u040063400027">FOUR ROSES KENTUCKY BOURBON WHSK 750 ML</row>
+        <row label="u040063400317">FOUR ROSES KENTUCKY BOURBON WHSK 750 ML</row>
+        <row label="u040063400409">FOUR ROSES KENTUCKY BOURBON WHSK 750 ML</row>
+        <row label="u040063400430">FOUR ROSES KENTUCKY BOURBON WHSK 1.75 LT</row>
+        <row label="u040232284465">MULE MOSCOW MULE 4PK 12 OZ</row>
+        <row label="u040232288333">FOUR ROSES WHISKEY BOURBON 750 ml</row>
+        <row label="u040232555442">UNCLE NEAREST WHSKY PREM 1856 750 ML</row>
+        <row label="u050037014501">DISARONNO AMARETTO 750 ML</row>
+        <row label="u080244002039">BLANTONS BOURBON WHISKEY BOX 750 ML</row>
+        <row label="u080244002114">ANCIENT AGE BOURBON WHISKEY 1.75 LT</row>
+        <row label="u080244003715">BUFFALO TRACE KENTUCKY BRBN CRM 750 ML</row>
+        <row label="u080244009212">BUFFALO TRACE WHSKY STRGHT BRBN 1.75 LT</row>
+        <row label="u080244009236">BUFFALO TRACE WHISKEY KNTCKY 750 ML</row>
+        <row label="u080432100783">GLENLIVET SCOTCH 15YR 750 ML</row>
+        <row label="u080432102145">ABERLOUR SCOTCH WHISKY SNG MLT 750 ML</row>
+        <row label="u080432106846">ALTOS TEQUILA PLATA 750 ML</row>
+        <row label="u080432106853">ALTOS TEQUILA REPOSADO  750 ML</row>
+        <row label="u080432107263">JAMESON IRISH WHISKEY SLCT BLK 750 ML</row>
+        <row label="u080432109755">GLENLIVET SCOTCH FNDRS RSRV 750 ML</row>
+        <row label="u080432109922">JAMESON CASKMATES IRISH WHISKEY 750 ML</row>
+        <row label="u080432112199">JAMESON CASKMATES IRISH WHISKEY 750 ML</row>
+        <row label="u080432114926">GLENLIVER SCOTCH WHISKY COGNAC B 750 ML</row>
+        <row label="u080432115619">JAMESON WHSKY/COFF CLD BRW 750 ML</row>
+        <row label="u080432115763">GLENLIVET SCOTCH CARIBBEAN BOX 750 ML</row>
+        <row label="u080432400395">CHIVAS REGAL SCOTCH 12YR BOX 750 ML</row>
+        <row label="u080432400463">CHIVAS REGAL SCOTCH 12YR BOX 1.75 LT</row>
+        <row label="u080432400630">GLENLIVET SCTCH WHSKY SNG MLT 750 ML</row>
+        <row label="u080432400661">GLENLIVET SCOTCH 18YR BOX 750 ML</row>
+        <row label="u080432401231">SEAGRAMS X-DRY GIN 750 ML</row>
+        <row label="u080432401262">SEAGRAMS X-DRY GIN 1.75 LT</row>
+        <row label="u080432500101">JAMESON IRISH WHISKEY 50 ML</row>
+        <row label="u080432500118">JAMESON IRISH WHSKY TRPLE DSTLL 1 LT</row>
+        <row label="u080432500149">JAMESON IRISH WHISKEY 375 ML</row>
+        <row label="u080432500170">JAMESON IRISH WHISKEY 750 ML</row>
+        <row label="u080432500187">JAMESON IRISH WHISKEY 1.75 LT</row>
+        <row label="u080432586174">REDBREAST IRISH WHISKEY AGE 12  750 ML</row>
+        <row label="u080432802908">SEAGRAMS ESCAPES VARIETY PACK MALT BEVERAGE 12 CT 11 OZ LONG NECK BOTTLE IN BOX 134.4 OZ</row>
+        <row label="u080480000271">BACARDI DRAGON BERRY RUM  750 ML</row>
+        <row label="u080480002114">BOMBAY DRY GIN SAPPHIRE 750 ML</row>
+        <row label="u080480003838">BACARDI PINEAPPLE 750 ML</row>
+        <row label="u080480005245">BACARDI BLACK RUM 1.75 LT</row>
+        <row label="u080480005269">BACARDI BLACK RUM 750 ML</row>
+        <row label="u080480015206">BACARDI SUPERIOR RUM 1.75 LT</row>
+        <row label="u080480015305">BACARDI SUPERIOR RUM 1 LT</row>
+        <row label="u080480015329">BACARDI SUPERIOR RUM 1.75 LT</row>
+        <row label="u080480015404">BACARDI SUPERIOR RUM 750 ML</row>
+        <row label="u080480015459">BACARDI SUPERIOR RUM 750 ML</row>
+        <row label="u080480015602">BACARDI SUPERIOR RUM 375 ML</row>
+        <row label="u080480016210">BACARDI SUPERIOR RUM 50 ML</row>
+        <row label="u080480025205">BACARDI GOLD RUM 1.75 LT</row>
+        <row label="u080480025328">BACARDI GOLD RUM 1.75 LT</row>
+        <row label="u080480025403">BACARDI GOLD RUM 750 ML</row>
+        <row label="u080480025465">BACARDI GOLD RUM 750 ML</row>
+        <row label="u080480065201">CASTILLO SILVER RUM 1.75 LT</row>
+        <row label="u080480170004">CAZADORES TEQUILA REPOSADO 1.75 LT</row>
+        <row label="u080480170028">CAZADORES TEQUILA/SHORT GLASSES 1 CT</row>
+        <row label="u080480172022">CAZADORES TEQUILA BLANCO 750 ML</row>
+        <row label="u080480172527">CAZADORES TEQUILA ANEJO 750 ML</row>
+        <row label="u080480230005">DEWARS WHITE LABEL SCOTCH BLEND 1.75 LT</row>
+        <row label="u080480230029">DEWARS WHITE LABEL SCOTCH BLEND 750 ML</row>
+        <row label="u080480231026">DEWARS SCOTCH WHISKY 12YR BOX 750 ML</row>
+        <row label="u080480280000">GREY GOOSE VODKA IMPORT 1 CT</row>
+        <row label="u080480280017">GREY GOOSE VODKA 1 LT</row>
+        <row label="u080480280024">GREY GOOSE VODKA 750 ML</row>
+        <row label="u080480300005">BOMBAY DRY GIN 1.75 LT</row>
+        <row label="u080480300029">BOMBAY DRY GIN 750 ML</row>
+        <row label="u080480301002">BOMBAY DRY GIN SAPPHIRE 1.75 LT</row>
+        <row label="u080480301019">BOMBAY DRY GIN SAPPHIRE 1 LT</row>
+        <row label="u080480301026">BOMBAY DRY GIN SAPPHIRE 750 ML</row>
+        <row label="u080480355203">BACARDI GOLD RUM 1.75 LT</row>
+        <row label="u080480355401">BACARDI RUM LIMON 750 ML</row>
+        <row label="u080480984274">BACARDI RUM LIME 750 ML</row>
+        <row label="u080480985424">BACARDI LIMON &amp; LEMONADE RUM CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u080480985431">BACARDI LIME &amp; SODA RUM CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u080480985448">BACARDI RUM PUNCH RUM CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u080480986186">BOMBAY SAPPHIRE GIN AND TONIC GIN CAN IN BOX 4 CT 0.2LT</row>
+        <row label="u080480986278">BACARDI ASSORTED RUM CAN IN BOX 6 CT 0.355LT</row>
+        <row label="u080660001203">1792 BRBN WHSKY KNTCKY SMLL BTCH 750 ML</row>
+        <row label="u080660203010">TEN HIGH KENTUCKY BOURBON 1.75 LT</row>
+        <row label="u080660246314">KENTUCKY GENTLEMAN BRBN STRGHT 1.75 LT</row>
+        <row label="u080660358512">HOUSE OF STUART SCOTCH 1.75 LT</row>
+        <row label="u080660365015">LAUDERS SCOTCH BLEND 1.75 LT</row>
+        <row label="u080660472614">BARTON VODKA PREM CHRCL FLTR 1.75 LT</row>
+        <row label="u080660487014">CRYSTAL PALACE VODKA 1.75 LT</row>
+        <row label="u080686001027">JIM BEAM RD STG BRBN WHSKY BL CH 750 ML</row>
+        <row label="u080686001072">JIM BEAM RD STG BRBN WHSKY BL CH 1.75 LT</row>
+        <row label="u080686001102">JIM BEAM KNTCKY BOURBON  1.75 LT</row>
+        <row label="u080686001119">JIM BEAM BRBN WHSKY KNTCKY STRT 1.75 LT</row>
+        <row label="u080686001201">JIM BEAM KNTCKY BOURBON  1 LT</row>
+        <row label="u080686001409">JIM BEAM KNTCKY BOURBON  750 ML</row>
+        <row label="u080686001430">JIM BEAM KNTCKY BOURBON TRVL 750 ML</row>
+        <row label="u080686001607">JIM BEAM KNTCKY BOURBON 375 ML</row>
+        <row label="u080686001706">JIM BEAM KNTCKY BOURBON 200 ML</row>
+        <row label="u080686001904">JIM BEAM KNTCKY BOURBON 50 ML</row>
+        <row label="u080686005018">JIM BEAM DEVILS CUT BOURBON 750 ML</row>
+        <row label="u080686006060">JIM BEAM KNTCKY BOURBON HONEY 750 ML</row>
+        <row label="u080686006282">JIM BEAM KNTCKY BOURBON HONEY 1.75 LT</row>
+        <row label="u080686006381">JIM BEAM KNTCKY FIRE 750 ML</row>
+        <row label="u080686006558">JIM BEAM KNTCKY BOURBON  APPLE 750 ML</row>
+        <row label="u080686006596">JIM BEAM KNTCKY BOURBON APPLE 1.75 LT</row>
+        <row label="u080686006855">JIM BEAM KNTCKY BOURBON VANILLA 750 ML</row>
+        <row label="u080686011408">BOOKERS KENTUCKY BRBN WHSKY  750 ML</row>
+        <row label="u080686012146">BASIL HAYDENS KENTUCKY BRBN DRK 750 ML</row>
+        <row label="u080686012405">BASIL HAYDENS KENTUCKY BRBN 8YR 750 ML</row>
+        <row label="u080686016045">KNOB CREEK SINGLE BARREL RESERVE 750 ML</row>
+        <row label="u080686016083">KNOB CREEK WHISKEY RYE KNTCKY 750 ML</row>
+        <row label="u080686016403">KNOB CREEK WHSKY BRBN KNTCKY 750 ML</row>
+        <row label="u080686016762">KNOB CREEK BRBN WHSKY KNTCKY STR 750 ML</row>
+        <row label="u080686018094">JIM BEAM WHISKEY DOUBLE OAK 750 ML</row>
+        <row label="u080686021148">JIM BEAM BOURBON WHSKY PEACH 750 ML</row>
+        <row label="u080686034100">JIM BEAM BLK KNTCKY BOURBN XA 1.75 LT</row>
+        <row label="u080686034407">JIM BEAM BLK KNTCKY BOURBN XA 750 ML</row>
+        <row label="u080686042129">KESSLER WHISKEY 1.75 LT</row>
+        <row label="u080686110040">SKINNYGIRL MARGARITA 750 ML</row>
+        <row label="u080686122128">GILBEYS GIN  1.75 LT</row>
+        <row label="u080686125105">GILBEYS VODKA 1.75 LT</row>
+        <row label="u080686141129">RONRICO RUM SILVER 1.75 LT</row>
+        <row label="u080686160106">KAMCHATKA VODKA 1.75 LT</row>
+        <row label="u080686500124">WINDSOR CANADIAN WHISKEY 1.75 LT</row>
+        <row label="u080686507123">OLD CROW KNTCKY STRGHT BRBN WHSK 1.75 LT</row>
+        <row label="u080686813019">LAPHROAIG SCOTCH SNGL MALT 10YR 750 ML</row>
+        <row label="u080686821052">CANADIAN CLUB WHISKY 750 ML</row>
+        <row label="u080686821120">CANADIAN CLUB WHISKY 1.75 LT</row>
+        <row label="u080686821434">CANADIAN CLUB WHISKY 750 ML</row>
+        <row label="u080686831013">SAUZA TEQUILA GOLD 750 ML</row>
+        <row label="u080686832010">SAUZA TEQUILA SILVER 750 ML</row>
+        <row label="u080686833161">TEQUILA REPOSADO 750 ML</row>
+        <row label="u080686835028">HORNITOS TEQUILA REST 750 ML</row>
+        <row label="u080686835035">HORNITOS REPOSADO TEQUILA 375 ML</row>
+        <row label="u080686835059">HORNITOS TEQUILA REPOSADO 1.75 LT</row>
+        <row label="u080686835325">HORNITOS TEQUILA PLATA 750 ML</row>
+        <row label="u080686835349">HORNITOS TEQUILA PLATA 1.75 LT</row>
+        <row label="u080686835424">HORNITOS ANEJO TEQUILA 750 ML</row>
+        <row label="u080686835486">HORNITOS LIME SHOT TEQUILA   750 ML</row>
+        <row label="u080686835585">HORNITOS BLK BRRL TEQUILA ANEJO 750 ML</row>
+        <row label="u080686926511">PINNACLE VODKA WHIP 750 ML</row>
+        <row label="u080686926573">PINNACLE VODKA WHIP 1.75 LT</row>
+        <row label="u080686929406">PINNACLE VODKA 750 ML</row>
+        <row label="u080686929451">PINNACLE VODKA 1.75 LT</row>
+        <row label="u080686934059">HIBIKI JPNS HRMNY SNTRY WHSKY 750 ML</row>
+        <row label="u080686938057">EFFEN VODKA 750 ML</row>
+        <row label="u080686938248">EFFEN VODKA CUCUMBER 750 ML</row>
+        <row label="u080686957010">SUNTORY TOKI WHISKY 750 ML</row>
+        <row label="u080686958031">THE JAPANESE CRAFT GIN ROKU 6 750 ML</row>
+        <row label="u081128001063">OLD FORESTER SIGNATURE BOURBON 750 ML</row>
+        <row label="u081128001155">OLD FORESTER WHSKY BRBN PRHBTN 750 ml</row>
+        <row label="u081128001209">WOODFORD RESERVE BRRL FNSH SLCT 750 ML</row>
+        <row label="u081128001483">WOODFORD RESERVE DSTLR SLCT 1 LT</row>
+        <row label="u081128001506">WOODFORD RESERVE DSTLR SLCT 750 ML</row>
+        <row label="u081128005009">OLD FORESTER STRAIGHT BOURBON 1.75 LT</row>
+        <row label="u081128005085">OLD FORESTER STRAIGHT BOURBON 750 ML</row>
+        <row label="u081128010508">EARLY TIMES KNTCKY WHISKY  1.75 LT</row>
+        <row label="u081128011680">WOODFORD RESERVE DSTLR SLCT 375 ML</row>
+        <row label="u081128013165">WOODFORD RESERVE DSTLR SLCT 1.75 LT</row>
+        <row label="u081128023003">CANADIAN MIST WHISKY BLEND 1.75 LT</row>
+        <row label="u081128023188">CANADIAN MIST CANADIAN WHSKY  750 ML</row>
+        <row label="u081128074050">FINLANDIA VODKA 1.75 LT</row>
+        <row label="u081240049516">CLASE AZUL TEQUILA REPOSADO 750 ML</row>
+        <row label="u081753810818">GLENMORANGIE SCOTCH ORIGINAL BOX 750 ML</row>
+        <row label="u082000000051">SMIRNOFF VODKA 1 LT</row>
+        <row label="u082000000105">SMIRNOFF VODKA 750 ML</row>
+        <row label="u082000000907">SMIRNOFF VODKA RECIPE 21 375 ML</row>
+        <row label="u082000001041">SMIRNOFF GREEN APPLE 750 ML</row>
+        <row label="u082000001171">SMIRNOFF VODKA WATERMELON 750 ML</row>
+        <row label="u082000003823">CROWN ROYAL XO WHSKY BLND CNDN 750 ML</row>
+        <row label="u082000003915">SMIRNOFF VODKA CITRUS 750 ML</row>
+        <row label="u082000003960">SMIRNOFF VODKA RASPBERRY 750 ML</row>
+        <row label="u082000004011">SMIRNOFF VODKA VANILLA 750 ML</row>
+        <row label="u082000004585">CROWN ROYAL APPLE  50 ML</row>
+        <row label="u082000004721">SMIRNOFF RED VODKA 50 ML</row>
+        <row label="u082000004882">CAPTAIN MORGAN RUM COCONUT 750 ML</row>
+        <row label="u082000004981">BLADE AND BOW BOURBON WHISKEY   750 ML</row>
+        <row label="u082000005612">SMIRNOFF VODKA RECIPE 21 375 ML</row>
+        <row label="u082000005759">CIROC FRENCH BRANDY 750 ML</row>
+        <row label="u082000009504">SMIRNOFF VODKA 750 ML</row>
+        <row label="u082000105701">SMIRNOFF VODKA 1.75 LT</row>
+        <row label="u082000105749">SMIRNOFF VODKA 1.75 LT</row>
+        <row label="u082000723851">SMIRNOFF ICE MALT BEVERAGE 6 CT 11 OZ LONG NECK BTL CRTN 67.2 OZ</row>
+        <row label="u082000723998">SMIRNOFF VODKA RASPBERRY 1.75 LT</row>
+        <row label="u082000727514">SMIRNOFF ICE GREEN APPLE BITE MALT BEVERAGE 6 CT 11 OZ GLASS BOTTLE IN CRTN 67.2 OZ</row>
+        <row label="u082000727545">SMIRNOFF ICE RASPBERRY BURST MALT BEVERAGE 6 CT 11 OZ GLASS BOTTLE IN CRTN 67.2 OZ</row>
+        <row label="u082000727606">SMIRNOFF VODKA 1.75 LT</row>
+        <row label="u082000729082">SMIRNOFF ICE PARTY PACK MALT BEVERAGE 12 CT 11 OZ GLASS BOTTLE IN BOX 134.4 OZ</row>
+        <row label="u082000729341">SMIRNOFF VODKA STRAWBERRY 750 ML</row>
+        <row label="u082000731535">SMIRNOFF VODKA CHERRY 750 ML</row>
+        <row label="u082000741985">CAPTAIN MORGAN 100 SPICED 750 ML</row>
+        <row label="u082000742005">CAPTAIN MORGAN 100 SPICED 1.75 LT</row>
+        <row label="u082000743507">CAPTAIN MORGAN LONG ISLAND ICED TEA TEQUILA&amp;RUM&amp;GIN&amp;VODK PLASTIC BOTTLE 1 CT 1.75LT</row>
+        <row label="u082000750437">CROWN ROYAL BLACK BOX    750 ML</row>
+        <row label="u082000750451">CROWN ROYAL BLACK BOX    1.75 LT</row>
+        <row label="u082000750710">SMIRNOFF VODKA PEACH  750 ML</row>
+        <row label="u082000752967">BULLEIT RYE AMERICAN WHISKEY SM 750 ML</row>
+        <row label="u082000757511">SMIRNOFF VODKA WHIP CREAM 750 ML</row>
+        <row label="u082000757900">CAPTAIN MORGAN BLACK SPICED 750 ML</row>
+        <row label="u082000759102">CAPTAIN MORGAN SPICE RUM 1.75 LT</row>
+        <row label="u082000759614">SMIRNOFF KISS CARAMEL 750 ML</row>
+        <row label="u082000760832">BULLEIT BOURBON  750 ML</row>
+        <row label="u082000766070">BULLEIT 95 RYE WHISKEY 1.75 LT</row>
+        <row label="u082000766827">CAPTAIN MORGAN WHITE RUM 750 ML</row>
+        <row label="u082000766858">CAPTAIN MORGAN WHITE RUM 1.75 LT</row>
+        <row label="u082000771555">CROWN ROYAL APPLE BAG 375 ML</row>
+        <row label="u082000771562">CROWN ROYAL APPLE BOX 750 ML</row>
+        <row label="u082000771586">CROWN ROYAL APPLE 1 LT</row>
+        <row label="u082000771593">CROWN ROYAL APPLE  1.75 LT</row>
+        <row label="u082000775836">SMIRNOFF VODKA PEPPERMINT TWIST 750 ML</row>
+        <row label="u082000776581">CROWN ROYAL VANILLA 375 ML</row>
+        <row label="u082000776598">CROWN ROYAL WHISKY VANILLA 750 ML</row>
+        <row label="u082000776611">CROWN ROYAL VANILLA BOX 1.75 LT</row>
+        <row label="u082000778639">SMIRNOFF VODKA RD/WHT/BRRY 750 ML</row>
+        <row label="u082000782506">SMIRNOFF ICE RED WHITE AND BERRY MALT BEVERAGE 6 CT 11 OZ GLASS BOTTLE IN CRTN 67.2 OZ</row>
+        <row label="u082000782919">CROWN ROYAL WHISKY PEACH BOX 750 ml</row>
+        <row label="u082000783534">SMIRNOFF VODKA SPICY TAMARIND 750 ML</row>
+        <row label="u082000789703">SMIRNOFF ICE FUN PACK VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u082000790808">SMIRNOFF INFSNS VODKA WTRMLN/MNT 750 ML</row>
+        <row label="u082000790815">SMIRNOFF ZERO SUGAR INF VODKA 750 ML</row>
+        <row label="u082000790822">SMIRNOFF ZERO SUGAR INF VODKA 750 ML</row>
+        <row label="u082000794172">CAPTAIN MORGAN RUM SLICE APPLE 750 ML</row>
+        <row label="u082000796213">CROWN ROYAL PEACH TEA WHISKEY CAN 4 CT 0.355LT</row>
+        <row label="u082000796237">CROWN ROYAL APPLE WHISKEY CAN 4 CT 0.355LT</row>
+        <row label="u082000796251">CROWN ROYAL WHISKEY AND COLA WHISKEY CAN 4 CT 0.355LT</row>
+        <row label="u082000797203">SMIRNOFF VODKA PINK LMNADE 750 ML</row>
+        <row label="u082184000052">JACK DANIELS TENN WHISKEY 50 ML</row>
+        <row label="u082184000335">JACK DANIELS TENN WHISKEY/HONEY  750 ML</row>
+        <row label="u082184000342">JACK DANIELS TENN WHISKEY/HONEY  375 ML</row>
+        <row label="u082184000618">JACK DANIELS TENN WHISKEY/HONEY  1.75 LT</row>
+        <row label="u082184001172">JACK DANIELS TENN WHISKEY/FIRE 750 ML</row>
+        <row label="u082184001219">JACK DANIELS TENN WHISKEY/FIRE 1.75 LT</row>
+        <row label="u082184003459">JACK DANIELS TENN WHISKEY RYE 750 ML</row>
+        <row label="u082184004371">JACK DANIELS WHISKEY APPLE 750 ML</row>
+        <row label="u082184038741">JACK DANIELS GENTLEMAN JACK  1.75 LT</row>
+        <row label="u082184087008">JACK DANIELS TENN WHSKY SNGL BRL 750 ML</row>
+        <row label="u082184090428">JACK DANIELS TENN WHSKY BLK LBL 1.75 LT</row>
+        <row label="u082184090442">JACK DANIELS TENN WHSKY BLK LBL 1 LT</row>
+        <row label="u082184090466">JACK DANIELS TENN WHSKY BLK LBL 750 ML</row>
+        <row label="u082184090503">JACK DANIELS TENN WHSKY BLK LBL 375 ML</row>
+        <row label="u082184090510">JACK DANIELS TENN WHSKY BLK LBL 375 ML</row>
+        <row label="u082184090527">JACK DANIELS TENN WHSKY BLK LBL 200 ML</row>
+        <row label="u082184204764">JACK DANIELS BLACK LABEL WHISKEY AND COLA WHISKEY CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u082184204771">JACK DANIELS WHISKEY HONEY &amp; LMND WHISKEY CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u082422489342">PRESIDENTE BRANDY 1 LT</row>
+        <row label="u082928210211">FLEISCHMANNS GIN X-DRY 1.75 LT</row>
+        <row label="u082928214318">FLEISCHMANNS ROYAL VODKA 1.75 LT</row>
+        <row label="u082928214356">FLEISCHMANNS ROYAL VODKA 750 ML</row>
+        <row label="u082928223310">CANADIAN LTD CANADIAN WHISKY 1.75 LT</row>
+        <row label="u083300072106">ARDBEG ULT SCOTCH SNGL MALT BOX 750 ML</row>
+        <row label="u083664100507">GRANTS TRPL WD WHSKY 1.75 LT</row>
+        <row label="u083664107360">GLENFIDDICH SCOTCH WHISKY 12 750 ML</row>
+        <row label="u083664112210">BALVENIE SCOTCH DBL WD 12Y 750 ML</row>
+        <row label="u083664120260">CLAN MACGREGOR WHSKY BLND SCTCH 1.75 LT</row>
+        <row label="u083664864461">SAILOR JERRY SPICE RUM 750 ML</row>
+        <row label="u083664868735">SAILOR JERRY SPICE RUM 1.75 LT</row>
+        <row label="u083664868919">MILAGRO TEQUILA SILVER 750 ML</row>
+        <row label="u083664868940">MILAGRO TEQUILA REPOSADO 750 ML</row>
+        <row label="u083664869213">REYKA VODKA 750 ML</row>
+        <row label="u083664869718">SAILOR JERRY SPICE CARIBBEAN RUM 750 ML</row>
+        <row label="u083664869756">HENDRICKS GIN 1.75 LT</row>
+        <row label="u083664871681">BALVENIE SCOTCH WHISKY CRBBN CSK 750 ML</row>
+        <row label="u083664872466">TULLAMORE DW IRSH WHSKY TRPL DST 750 ml</row>
+        <row label="u083664872541">MONKEY SHOULDER WHSKY MLT SCTCH 750 ML</row>
+        <row label="u083664873463">GLENFIDDICH SCOTCH WHISKY 14 750 ML</row>
+        <row label="u083664990405">GLENFIDDICH SCOTCH WHISKY 15 750 ML</row>
+        <row label="u083664990436">HENDRICKS GIN 750 ML</row>
+        <row label="u084380360947">PENNSYLVANIA DUTCH EGGNOG BRANDY AND RUM GLASS BOTTLE 1 CT 0.75LT</row>
+        <row label="u084704000290">KORBEL BRANDY 1.75 LT</row>
+        <row label="u085000003817">E&amp;J BRANDY VSOP 750 ML</row>
+        <row label="u085000003930">E&amp;J BRANDY VSOP 1.75 LT</row>
+        <row label="u085000004135">E&amp;J BRANDY 750 ML</row>
+        <row label="u085000004159">E&amp;J BRANDY 1.75 LT</row>
+        <row label="u085000004265">E&amp;J BRANDY 375 ML</row>
+        <row label="u085000006757">PINK WHITNEY VODKA PINK LMND 50 ML</row>
+        <row label="u085000008805">NEW AMSTERDAM VODKA 50 ML</row>
+        <row label="u085000009154">E&amp;J BRANDY XO 750 ML</row>
+        <row label="u085000011126">E&amp;J BRANDY 750 ML</row>
+        <row label="u085000014301">NEW AMSTERDAM GIN NO 485 1.75 LT</row>
+        <row label="u085000014318">NEW AMSTERDAM GIN NO 485 750 ML</row>
+        <row label="u085000016800">CAMARENA TEQUILA SILVER 1.75 LT</row>
+        <row label="u085000016824">CAMARENA TEQUILA SILVER 750 ML</row>
+        <row label="u085000017326">FAMILIA CAMARENA TEQUILA RPSD 750 ML</row>
+        <row label="u085000019481">NEW AMSTERDAM VODKA NO 525 375 ML</row>
+        <row label="u085000019498">NEW AMSTERDAM VODKA NO 525 750 ML</row>
+        <row label="u085000019504">NEW AMSTERDAM VODKA NO 525 1 LT</row>
+        <row label="u085000019511">NEW AMSTERDAM VODKA NO 525 1.75 LT</row>
+        <row label="u085000020333">NEW AMSTERDAM VODKA PEACH 750 ML</row>
+        <row label="u085000021651">NEW AMSTERDAM VODKA PEACH 1.75 LT</row>
+        <row label="u085000022313">NEW AMSTERDAM VODKA PINEAPPLE 750 ML</row>
+        <row label="u085000022337">NEW AMSTERDAM VODKA PINEAPPLE 1.75 LT</row>
+        <row label="u085000024041">E&amp;J BRANDY APPLE 750 ML</row>
+        <row label="u085000026151">NEW AMSTERDAM VODKA RASPBERRY 750 ML</row>
+        <row label="u085000029626">NEW AMSTERDAM VODKA PINK WHITNEY 750 ML</row>
+        <row label="u085000029862">HIGH NOON HRD SLTZR 12OZ 12PK CN 12 CT</row>
+        <row label="u085000031513">HIGH NOON SUN SIPS ASSORTED VODKA CAN IN BOX 8 CT 0.355LT</row>
+        <row label="u085000424988">BAREFOOT SPRITZER MOSCATO CALIFORNIA 4 CT .25 LT</row>
+        <row label="u085000424995">BAREFOOT SPRITZER ROSE CALIFORNIA 4 CT .25 LT</row>
+        <row label="u085000426272">HIGH NOON SUN SIPS GRAPEFRUIT VODKA SODA VODKA CAN 4 CT 0.355LT</row>
+        <row label="u085000429259">HIGH NOON SUN SIPS WATERMELON VODKA SODA VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u085000429266">HIGH NOON SUN SIPS PINEAPPLE VODKA SODA VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u085000429273">HIGH NOON SUN SIPS BLACK CHERRY VODKA SODA VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u085000430958">HIGH NOON SUN SIPS LIME VODKA SODA VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u085000431047">BAREFOOT HARD SELTZER PINEAPPLE PASSIONFRT CALIFORNIA 4 CT 1 LT</row>
+        <row label="u085000431061">BAREFOOT HARD SELTZER STRAWBERRY GUAVA CALIFORNIA 4 CT 1 LT</row>
+        <row label="u085000431375">HIGH NOON SUN SIPS PEACH VODKA SODA VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u085156515417">KETEL ONE VODKA 750 ML</row>
+        <row label="u085156610419">KETEL ONE VODKA 1 LT</row>
+        <row label="u085156875009">KETEL ONE VODKA CUCUMBER/MINT 750 ml</row>
+        <row label="u085246139424">MKRS MRK WHSKY KNTKY STRGHT BRBN 1 LT</row>
+        <row label="u085246139431">MAKERS MARK STRAIGHT BOURBON 750 ML</row>
+        <row label="u085246185001">MAKERS MARK STRAIGHT BOURBON 375 ML</row>
+        <row label="u085246500101">MAKERS 46 BOURBON WHISKY 750 ML</row>
+        <row label="u085246501221">MAKERS MARK WHSKY BRBN CASK 750 ML</row>
+        <row label="u085246501566">MAKERS MARK WHSKY KY STRT BRBN 750 ML</row>
+        <row label="u085592104510">MCCORMICK VODKA 1.75 LT</row>
+        <row label="u085592121043">TEQUILA ROSE STRAW CRM 750 ML</row>
+        <row label="u085676101176">SKOL VODKA PREMIUM 1.75 LT</row>
+        <row label="u085676101763">SKOL VODKA PREMIUM 750 ML</row>
+        <row label="u085676563868">CALYPSO RUM SPICE 750 ML</row>
+        <row label="u086024007843">MARGARITAVILLE TEQUILA SILVER  750 ML</row>
+        <row label="u086024008086">MARGARITAVILLE CLASSIC LIME MARGART TEQUILA GLASS BOTTLE 1 CT 1.75LT</row>
+        <row label="u086036205602">CHRISTIAN BROS HOLIDAY NOG 750 ML</row>
+        <row label="u086036815474">CHRISTIAN BROS BRANDY VS 1.75 LT</row>
+        <row label="u086036815597">CHRISTIAN BROS BRANDY VS 750 ML</row>
+        <row label="u086767520067">RUMPLE MINZE PPRMNT SCHNP 750 ML</row>
+        <row label="u086816517321">LADY BLIGH RUM SPICE AUTHENTIC 1.75 LT</row>
+        <row label="u087000001930">CAPTAIN MORGAN SPICED RUM 750 ML</row>
+        <row label="u087000001992">CROWN ROYAL CANADIAN WHISKY BAG 50 ML</row>
+        <row label="u087000002708">CAPTAIN MORGAN SPICED RUM 1 LT</row>
+        <row label="u087000002715">CAPTAIN MORGAN SPICED RUM 750 ML</row>
+        <row label="u087000002777">CAPTAIN MORGAN SPICED RUM 375 ML</row>
+        <row label="u087000003149">CAPTAIN MORGAN SPICE RUM ORIG 50 ML</row>
+        <row label="u087000003385">SEAGRAMS 7 CROWN WHISKEY  750 ML</row>
+        <row label="u087000004047">BULLEIT BOURBON FRONTIER WHISKEY 1.75 LT</row>
+        <row label="u087000004122">BULLEIT BOURBON FRONTIER WHISKEY 375 ML</row>
+        <row label="u087000005525">BULLEIT BOURBON FRNTR WHSKY KY 750 ML</row>
+        <row label="u087000005549">BULLEIT BOURBON FRONTIER WHISKEY 1 LT</row>
+        <row label="u087000007246">CROWN ROYAL CANADIAN WHISKY BOX 1 LT</row>
+        <row label="u087000007253">CROWN ROYAL CANADIAN WHISKY BOX 750 ML</row>
+        <row label="u087000007338">SEAGRAMS 7 CROWN WHISKEY 750 ML</row>
+        <row label="u087000007604">CROWN ROYAL CANADIAN WHISKY BAG 375 ML</row>
+        <row label="u087000201156">CAPTAIN MORGAN SPICED RUM 1.75 LT</row>
+        <row label="u087000201330">CROWN ROYAL RESERVE CNDN WHSKY  750 ML</row>
+        <row label="u087000201781">CAPTAIN MORGAN PRIVATE STOCK RUM 750 ML</row>
+        <row label="u087000700604">CROWN ROYAL CANADIAN WHISKY BOX 1.75 LT</row>
+        <row label="u087000700703">SEAGRAMS 7 CROWN WHISKEY 1.75 LT</row>
+        <row label="u087000700758">SEAGRAMS VO CANADIAN WHISKY 1.75 LT</row>
+        <row label="u087116014480">UV BLUE VODKA BLUE RASP 750 ML</row>
+        <row label="u087116014527">UV BLUE VODKA RASPBERRY  1.75 LT</row>
+        <row label="u087116014633">UV VODKA 1.75 LT</row>
+        <row label="u087116019126">PRAIRIE ORGANIC VODKA 750 ML</row>
+        <row label="u087116069688">BELVEDERE VODKA 750 ML</row>
+        <row label="u087116069732">BELVEDERE VODKA 1.75 LT</row>
+        <row label="u087236565107">COINTREAU LIQUEUR 750 ML</row>
+        <row label="u087236565206">COINTREAU LIQUEUR 375 ML</row>
+        <row label="u087236700362">BOTANIST ISLAY DRY GIN 22 750 ML</row>
+        <row label="u087236992002">ST REMY BRANDY VSOP 750 ML</row>
+        <row label="u087647111672">DALMORE SCOTCH WHISKY 1 CT</row>
+        <row label="u087692006862">TRULY HARD SELTZER BERRY MIX PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u087692008040">TRULY HARD SELTZER TROPICAL MIX PACK VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u087692009917">TRULY HARD SELTZER LEMONADE SELTZER MIX PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u087692011675">TRULY HARD SELTZER ICED TEA MIX PACK VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u087692012276">TRULY HARD SELTZER PUNCH MIX PACK VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u087692831341">TWISTED TEA HARD ICED TEA MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u087692832317">TWISTED TEA HARD ICED TEA MALT BEVERAGE 1 CT 24 OZ CAN 24 OZ</row>
+        <row label="u088004000332">RICH &amp; RARE CANADIAN WHISKY 1.75 LT</row>
+        <row label="u088004000363">RICH &amp; RARE CANADIAN WHISKY 375 ML</row>
+        <row label="u088004000394">RICH &amp; RARE WHISKY CANADIAN 750 ML</row>
+        <row label="u088004009281">FIREBALL WHISKY CINNAMON 1.75 LT</row>
+        <row label="u088004009373">FIREBALL WHISKY CINNAMON 100 ML</row>
+        <row label="u088004010126">TAAKA VODKA 1.75 LT</row>
+        <row label="u088004010140">TAAKA VODKA 750 ML</row>
+        <row label="u088004010423">NIKOLAI VODKA 1.75 LT</row>
+        <row label="u088004011543">TAAKA VODKA 750 ML</row>
+        <row label="u088004011628">CROWN RUSSE VODKA 1.75 LT</row>
+        <row label="u088004012724">PLATINUM VODKA 1.75 LT</row>
+        <row label="u088004012748">PLATINUM VODKA 750 ML</row>
+        <row label="u088004012762">PLATINUM 7X VODKA X-SMOOTH 375 ML</row>
+        <row label="u088004012786">PLATINUM VODKA 50 ML</row>
+        <row label="u088004020491">FIREBALL WHSKY CINN 10PK 10 CT</row>
+        <row label="u088004020828">BENCHMARK OLD NO 8 BOURBON WHSKY 1.75 LT</row>
+        <row label="u088004020842">BENCHMARK OLD NO 8 BOURBON WHSKY 750 ML</row>
+        <row label="u088004021344">EAGLE RARE BRBN WHSKY KNTCKY 750 ML</row>
+        <row label="u088004025649">OLD WELLER BOURBON ANTIQUE 107 750 ML</row>
+        <row label="u088004026141">FRIS VODKA CRSP SMTH FRZ FLTR 1.75 LT</row>
+        <row label="u088004026172">FIREBALL CINNAMON WHSKEY RD HT 1.75 LT</row>
+        <row label="u088004027131">PADDYS WHISKEY OLD IRISH 750 ML</row>
+        <row label="u088004029296">FIREBALL WHISKY CINNAMON 20PK 50 ML</row>
+        <row label="u088004035839">POPOV VODKA SPECIALTY SPIRIT 1.75 LT</row>
+        <row label="u088004036195">POPOV VDK SPCLTY SPRT 750 ML</row>
+        <row label="u088004036225">SCORESBY SCOTCH WHISKY VERY RARE 1.75 LT</row>
+        <row label="u088004036546">MYERSS RUM JMCN RM ORIG DRK FINE 750 ML</row>
+        <row label="u088004139940">SAZERAC RYE WHISKEY STRAIGHT 750 ML</row>
+        <row label="u088004144678">FIREBALL WHISKY CINN RED HOT 1 LT</row>
+        <row label="u088004144692">FIREBALL WHISKY CINNAMON RED HOT 750 ML</row>
+        <row label="u088004144708">FIREBALL WHISKY CINNAMON 50 ML</row>
+        <row label="u088004144722">FIREBALL WHISKY CINNAMON 375 ML</row>
+        <row label="u088004144739">DR MCGILLICUDDYS FIREBALL CINN 200 ML</row>
+        <row label="u088004146689">FIREBALL WHISKY CINNAMON 750 ML</row>
+        <row label="u088076006232">GEORGE DICKEL TENN WHISKY NO12 750 ML</row>
+        <row label="u088076161863">CIROC VODKA SNAP FROST 750 ML</row>
+        <row label="u088076163164">JOHNNIE WALKER RED LBL SCOTCH 1.75 LT</row>
+        <row label="u088076163171">JOHNNIE WALKER BLK LBL SCOTCH BX 1.75 LT</row>
+        <row label="u088076168640">TANQUERAY RANGPUR GIN DISTILLED 750 ML</row>
+        <row label="u088076175051">CIROC VODKA RED BERRY 750 ML</row>
+        <row label="u088076177406">CIROC VODKA PEACH 750 ML</row>
+        <row label="u088076177703">JOHNNIE WALKER DBL BLK WHISKY BX 750 ML</row>
+        <row label="u088076179080">CIROC PINEAPPLE VODKA 750 ML</row>
+        <row label="u088076180451">CIROC VODKA APPLE  750 ML</row>
+        <row label="u088076180697">CIROC VODKA MANGO 750 ML</row>
+        <row label="u088076181366">JOHNNIE WALKER WHISKEY AGE 18 BX 750 ML</row>
+        <row label="u088076184794">TANQUERAY GIN AND TONIC GIN CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u088076184855">TANQUERAY SEVILLA ORANGE GIN &amp; SODA GIN CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u088076185005">TANQUERAY RANGPUR LIME GIN &amp; SODA GIN CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u088076185050">KETEL ONE BOTANICAL GRAPEFRUIT ROSE VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u088076185074">KETEL ONE BOTANICAL CUCUMBER &amp; MINT VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u088076185098">KETEL ONE BOTANICAL PEACH &amp; ORANGE BLSM VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u088100134511">BLACK VELVET CANADIAN WHISKY 1.75 LT</row>
+        <row label="u088100134559">BLACK VELVET CANADIAN WHISKY 750 ML</row>
+        <row label="u088100134573">BLACK VELVET CANADIAN WHISKY 375 ML</row>
+        <row label="u088100134757">BLACK VELVET CANADIAN WHISKY 750 ML</row>
+        <row label="u088100134856">BLACK VELVET TOAST CARAMEL WHSKY 750 ML</row>
+        <row label="u088100400517">MACNAUGHTON CANADIAN WHISKY 1.75 LT</row>
+        <row label="u088110011307">JOHNNIE WALKER BLK LBL SCOTCH BX 750 ML</row>
+        <row label="u088110011406">JOHNNIE WALKER BLK LBL SCOTCH 1 LT</row>
+        <row label="u088110021306">JOHNNIE WALKER RED LBL SCOTCH 750 ML</row>
+        <row label="u088110070052">JOHNNIE WALKER BLU LBL SCOTCH BX 750 ML</row>
+        <row label="u088110110307">TANQUERAY DRY GIN 750 ML</row>
+        <row label="u088110110406">TANQUERAY DRY GIN 1 LT</row>
+        <row label="u088110110505">TANQUERAY DRY GIN 1.75 LT</row>
+        <row label="u088110140052">LAGAVULIN SCTCH WHSKY ISLY 16 750 ML</row>
+        <row label="u088110158606">TANQUERAY DRY GIN NO 10 750 ML</row>
+        <row label="u088110160050">OBAN SCOTCH SINGLE MALT BOX 750 ML</row>
+        <row label="u088110955311">BUCHANANS SCOTCH 12YR BOX 1.75 LT</row>
+        <row label="u088110955328">BUCHANANS SCOTCH 12YR BOX 750 ML</row>
+        <row label="u088110955342">BUCHANANS SCOTCH 18YR BOX 750 ML</row>
+        <row label="u088110985004">J &amp; B RARE SCOTCH 1.75 LT</row>
+        <row label="u088110985042">J &amp; B RARE SCOTCH 750 ML</row>
+        <row label="u088352110905">EZRA BROOKS BOURBON WHISKEY 1.75 LT</row>
+        <row label="u088352110929">EZRA BROOKS BOURBON WHISKEY 750 ML</row>
+        <row label="u088352117942">REBEL YELL BOURBON WHISKEY 750 ML</row>
+        <row label="u088352126517">TEQUILA EXOTICO BLANCO 750 ML</row>
+        <row label="u088352128801">WOLFSCHMIDT VODKA  1.75 LT</row>
+        <row label="u088352129105">CANADA HOUSE WHISKY CANADIAN 1.75 LT</row>
+        <row label="u088352129341">LORD CALVERT WHISKY CANADIAN 1.75 LT</row>
+        <row label="u088352130798">YELLOWSTONE WHISKEY BOURBON 750 ML</row>
+        <row label="u088600000002">GORDONS LONDON DRY GIN 1.75 LT</row>
+        <row label="u088600000101">GORDONS VODKA 1.75 LT</row>
+        <row label="u089000018758">CHI CHIS MARGARITA TEQUILA &amp; TRIPLE SEC PLASTIC BOTTLE 1 CT 1.75LT</row>
+        <row label="u089000547814">CHI CHIS MEXICAN MUDSLIDE RUM PLASTIC BOTTLE 1 CT 1.75LT</row>
+        <row label="u089016008194">SOBIESKI VODKA 1.75 LT</row>
+        <row label="u089016008491">SOBIESKI VODKA 1.75 LT</row>
+        <row label="u089540333472">BEEFEATER DRY GIN LONDON 1.75 LT</row>
+        <row label="u089540333496">BEEFEATER GIN DRY LONDON 750 ML</row>
+        <row label="u089540352817">BALLANTINE SCOTCH BLEND 1.75 LT</row>
+        <row label="u089540423241">KAHLUA WHITE RUSSIAN RUM LIQUEUR VODKA GLASS BOTTLE 1 CT 1.75LT</row>
+        <row label="u089540448978">MALIBU CARIBBEAN RUM ORIGINAL 1 LT</row>
+        <row label="u089540448992">MALIBU CRBBN RUM/CCNUT LQR ORIG 750 ML</row>
+        <row label="u089540449326">MALIBU CARIBBEAN RUM ORIG 1.75 LT</row>
+        <row label="u089540463131">MALIBU RUM PINEAPPLE 750 ML</row>
+        <row label="u089540466446">MALIBU CRBBN RM/CCNUT LQR ORIG 750 ML</row>
+        <row label="u089540535289">ABSOLUT MANGO MULE VODKA CAN IN CARDBOARD SLEEVE 4 CT 0.355LT</row>
+        <row label="u089540535296">ABSOLUT GRAPEFRUIT PALOMA VODKA CAN IN CARDBOARD SLEEVE 4 CT 0.355LT</row>
+        <row label="u089540535555">MALIBU CARIBBEAN RUM WATERMELON 750 ML</row>
+        <row label="u089540540108">MALIBU CARIBBEAN RUM STRAWBERRY 750 ML</row>
+        <row label="u096749000067">ELIJAH CRAIG STRAIGHT BOURBON 750 ML</row>
+        <row label="u096749000074">ELIJAH CRAIG WHISKEY BOURBON 1.75 LT</row>
+        <row label="u096749002047">BURNETTS VODKA 750 ML</row>
+        <row label="u096749021147">EVAN WILLIAMS STRGHT BOURBON 1.75 LT</row>
+        <row label="u096749021246">EVAN WILLIAMS KNTCKY WSKY STRGHT 1 LT</row>
+        <row label="u096749021345">EVAN WILLIAMS STRGHT BOURBON 750 ML</row>
+        <row label="u096749021376">EVAN WILLIAMS STRGHT BOURBON 750 ML</row>
+        <row label="u096749021642">EVAN WILLIAMS BRBN WHSKY KNTCKY 375 ML</row>
+        <row label="u096749021772">EVAN WILLIAMS STRGHT BOURBON 750 ML</row>
+        <row label="u096749025336">EVAN WILLIAMS EGGNOG WHISKEY GLASS BOTTLE 1 CT 0.75LT</row>
+        <row label="u096749031559">LARCENY KENTUCKY STRT BRBN WHSKY 1.75 LT</row>
+        <row label="u096749086252">ADMIRAL NELSONS RUM SPICE 750 ML</row>
+        <row label="u096749086269">ADMIRAL NELSONS RUM SPICED 1.75 LT</row>
+        <row label="u096749200306">BURNETTS LONDON DRY GIN 1.75 LT</row>
+        <row label="u096749200313">BURNETTS VODKA PREM CLASSIC 1.75 LT</row>
+        <row label="u096749200702">BURNETTS VODKA 750 ML</row>
+        <row label="u096749472215">ELIJAH CRAIG BRBN WHSKY KNTCKY 750 ML</row>
+        <row label="u096749750016">EVAN WILLIAMS SINGLE BARREL BBRN 750 ML</row>
+        <row label="u096749908035">LUNAZUL TEQUILA BLANCO  750 ML</row>
+        <row label="u096749908042">LUNAZUL TEQUILA REPOSADO 750 ML</row>
+        <row label="u1098600222">KENWOOD CABERNET SAUVIGNON 750 ML</row>
+        <row label="u1098600602">KENWOOD SONOMA SAUVIGNON BLANC 750 ML</row>
+        <row label="u1098600763">KENWOOD SONOMA CHARDONNAY 750 ML</row>
+        <row label="u1103450005">MARTINI &amp; ROSSI WHITE ASTI/SPUMANTE 750 ML</row>
+        <row label="u1208696531">CLOUDLINE PINOT NOIR 750 ML</row>
+        <row label="u1235400099">19 CRIMES  RED BLEND 750 ML</row>
+        <row label="u1235400135">19 CRIMES CABERNET SAUVIGNON 750 ML</row>
+        <row label="u1235400168">19 CRIMES THE BANISHED DARK RED 750 ML</row>
+        <row label="u1235400184">19 CRIMES SHIRAZ 750 ML</row>
+        <row label="u1235400193">19 CRIMES UPRISING BLEND 750ML</row>
+        <row label="u1235400194">19 CRIMES HARD CHARDONNAY 750 ML</row>
+        <row label="u1235400429">19 CRIMES CALI RED BLEND 750 ML</row>
+        <row label="u1235400500">19 CRIMES CALI ROSE 750 ML</row>
+        <row label="u1235401393">19 CRIMES RED BLEND 4PK 187 ML</row>
+        <row label="u1235408184">LINDEMANS CHARDONNAY 750 ML</row>
+        <row label="u1235408770">LINDEMANS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u1235408782">LINDEMANS PINOT GRIGIO 750 ML</row>
+        <row label="u1591702696">FREEMARK ABBEY NAPA VALLEY CABERNET 750 ML</row>
+        <row label="u1623600002">CHALK HILL SONOMA COAST CHARDONNAY 750 ML</row>
+        <row label="u1623600103">CHALK HILL ESTATE CHARDONNAY 750 ML</row>
+        <row label="u1669700666">DELOACH VINEYARDS HERITAGE CA PINOT NOIR 750 ML</row>
+        <row label="u1722471020">BONANZA CABERNET SAUVIGNON 750ML</row>
+        <row label="u1722471210">CAYMUS VINEYARDS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u1722475012">CONUNDRUM WHITE BLEND 750 ML</row>
+        <row label="u1722476012">CONUNDRUM RED BLEND 750 ML</row>
+        <row label="u1744400070">SMOKING LOON CABERNET SAUVIGNON 750 ML</row>
+        <row label="u1813820102">EDNA VALLEY VINEYARD CHARDONNAY 750 ML</row>
+        <row label="u1813820202">EDNA VALLEY VINEYARD SAUVIGNON BLANC 750 ML</row>
+        <row label="u1834115101">BAREFOOT CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u1834115102">BAREFOOT SAUVIGNON BLANC 1.5 L</row>
+        <row label="u1834115105">BAREFOOT CHARDONNAY 1.5 L</row>
+        <row label="u1834115110">BAREFOOT MERLOT 1.5 L</row>
+        <row label="u1834175101">BAREFOOT CABERNET SAUVIGNON 750 ML</row>
+        <row label="u1834175102">BAREFOOT SAUVIGNON BLANC 750 ML</row>
+        <row label="u1834175105">BAREFOOT CHARDONNAY 750 ML</row>
+        <row label="u1834175106">BAREFOOT WHITE ZINFANDEL 750 ML</row>
+        <row label="u1834175110">BAREFOOT MERLOT 750 ML</row>
+        <row label="u1834175125">BAREFOOT BUBBLY EXTRA DRY 750 ML</row>
+        <row label="u1834175126">BAREFOOT BUBBLY BRUT 750 ML</row>
+        <row label="u18474500300">WINES OF SUBSTANCE CABERNET</row>
+        <row label="u18597700007">THE FOUR GRACES PINOT NOIR 750 ML</row>
+        <row label="u18898500003">JOEL GOTT CHARDONNAY 750 ML</row>
+        <row label="u18898500011">JOEL GOTT SAUVIGNON BLANC 750 ML</row>
+        <row label="u18898500012">JOEL GOTT ZINFANDEL 750 ML</row>
+        <row label="u18898500013">JOEL GOTT CABERNET SAUVIGNON 750 ML</row>
+        <row label="u18898500028">JOEL GOTT OREGON PINOT GRIS 750 ML</row>
+        <row label="u2113051501">FIREFLY RIDGE CHARDONNAY 750 ML</row>
+        <row label="u2113051530">FIREFLY RIDGE RED BLEND 750 ML</row>
+        <row label="u2113051531">FIREFLY RIDGE PINOT NOIR 750 ML</row>
+        <row label="u3017409112">FAR NIENTE CHARDONNAY 750 ML</row>
+        <row label="u3125900004">Josh Cellars North Coast Reserve Cabernet Sauv</row>
+        <row label="u3125900104">JOSH ROSE  750 ML</row>
+        <row label="u3125900145">JOSH CELLARS PINOT GRIS 750 ML</row>
+        <row label="u3125900258">FLEUR DE PRAIRIE ROSE 750 ML</row>
+        <row label="u3125900303">JOSH CELLARS RESERVE NORTH COAST CHARD 750ML</row>
+        <row label="u3125900372">JOSH CELLARS PROSECCO 750ML</row>
+        <row label="u3125900420">JOSH CELLARS CABERNET SAUVIGNON 375 ML</row>
+        <row label="u3125900421">JOSH CELLARS CHARDONNAY 375ML 375ML GLASS</row>
+        <row label="u3125900432">JOSH CELLARS BOURBON BARREL CABERNET 750ML 750 ML</row>
+        <row label="u3125900892">YELLOW TAIL CHARDONNAY 750 ML</row>
+        <row label="u3125900893">YELLOW TAIL CHARDONNAY 1.5 L</row>
+        <row label="u3125900894">YELLOW TAIL SHIRAZ 750 ML</row>
+        <row label="u3125900895">YELLOW TAIL SHIRAZ 1.5 L</row>
+        <row label="u3125900922">YELLOW TAIL MERLOT 750 ML</row>
+        <row label="u3125900923">YELLOW TAIL MERLOT 1.5 L</row>
+        <row label="u3125900945">YELLOW TAIL CABERNET SAUVIGNON 750 ML</row>
+        <row label="u3125900946">YELLOW TAIL CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u3125900971">YELLOW TAIL PINOT GRIGIO 750 ML</row>
+        <row label="u3125900972">YELLOW TAIL PINOT GRIGIO 1.5 L</row>
+        <row label="u3125901849">YELLOW TAIL PINOT NOIR 750 ML</row>
+        <row label="u3125902191">BARONE FIN PINOT GRIGIO 750 ML</row>
+        <row label="u3125902717">HOB NOB PINOT NOIR 750 ML</row>
+        <row label="u3125903235">YELLOW TAIL SAUVIGNON BLANC 750 ML</row>
+        <row label="u3125903286">YELLOW TAIL MOSCATO 1.5 L</row>
+        <row label="u3125904695">JOSH CELLARS PINOT NOIR 750 ML</row>
+        <row label="u3125904697">JOSH CELLARS SAUVIGNON BLANC 750 ML</row>
+        <row label="u3125904802">JOSH CELLARS LEGACY RED BLEND 750 ML</row>
+        <row label="u3125904922">JOSH CELLARS ZINFANDEL 750 ML</row>
+        <row label="u3125904923">JOSH CELLARS PASO ROBLES CABERNET 750 ML</row>
+        <row label="u3329300300">FREIXENET BRUT 750 ML</row>
+        <row label="u3329300380">FREIXENET EXTRA DRY 750 ML</row>
+        <row label="u3329311100">GLORIA FERRER SONOMA BRUT 750 ML</row>
+        <row label="u3329369000">SEGURA VIUDAS BRUT 750 ML</row>
+        <row label="u4715610750">GRGICH HILLS EST CHARDONNAY 750 ML</row>
+        <row label="u4933100037">LA CREMA SONOMA COAST CHARDONNAY 375ML GLASS</row>
+        <row label="u4933100038">LA CREMA PINOT NOIR 375 ML</row>
+        <row label="u4933100222">LA CREMA SONOMA CHARDONNAY 750 ML</row>
+        <row label="u4933100230">LA CREMA SONOMA PINOT NOIR 750 ML</row>
+        <row label="u4933100312">LA CREMA MONTEREY PINOT GRIS 750 ML</row>
+        <row label="u4933100313">LA CREMA WILLIAMETTE VALLEY PINOT NOIR 750 ML</row>
+        <row label="u4933100413">LA CREMA SONOMA COAST SB 750 ML</row>
+        <row label="u4933101096">LA CREMA MONTEREY PINOT NOIR 750 ML</row>
+        <row label="u4933102109">LA CREMA MONTEREYCHARDONNAY 750 ML</row>
+        <row label="u4933181612">LA CREMA MONTEREY ROSE 750 ML</row>
+        <row label="u617768111109">SVEDKA VODKA IMPORT SWEDISH 1 LT</row>
+        <row label="u617768111178">SVEDKA VODKA 1.75 LT</row>
+        <row label="u617768111758">SVEDKA VODKA 750 ML</row>
+        <row label="u617768113752">SVEDKA VODKA 375 ML</row>
+        <row label="u617768121757">SVEDKA VODKA SWEDISH 750 ML</row>
+        <row label="u617768141755">SVEDKA VODKA STRAWBERRY LEMONADE 750 ML</row>
+        <row label="u617768151754">SVEDKA VODKA MANGO PINEAPPLE 750 ML</row>
+        <row label="u617768201756">SVEDKA VODKA BLUE RASPBERRY 750 ML</row>
+        <row label="u617768231753">SVEDKA PURE INFUSIONS VDK STW GV 750 ML</row>
+        <row label="u619947000013">TITO'S HANDMADE VODKA 1 LT</row>
+        <row label="u619947000020">TITOS VODKA HANDMADE 750 ML</row>
+        <row label="u619947000037">TITOS VODKA HANDMADE 1.75 LT</row>
+        <row label="u619947000044">TITOS VODKA HANDMADE 200 ML</row>
+        <row label="u619947000051">TITOS VODKA HANDMADE 375 ML</row>
+        <row label="u619947000068">TITOS HANDMADE VODKA 50 ML</row>
+        <row label="u619947000082">TITO'S VODKA MINIS 12PK 12 CT</row>
+        <row label="u628451773108">EMPRESS GIN ORIG INDIGO 750 ML</row>
+        <row label="u630328000378">LUKSUSOWA VODKA 750 ML</row>
+        <row label="u630328000392">LUKSUSOWA VODKA 1.75 LT</row>
+        <row label="u63147000834">STUDIO BY MIRAVAL 750 ML</row>
+        <row label="u63298720005">SANTA MARGHERTIA PINOT GRIGIO 375 ML</row>
+        <row label="u63298720020">SANTA MARGHERITA PINOT GRIGIO 750 ML</row>
+        <row label="u63298720940">SANTA MARGHERITA CHIANTI 750 ML</row>
+        <row label="u635985067443">MIKES HARD BLACK CHERRY LEMONADE MALT BEVERAGE 6 CT 11 OZ LONG NECK BTL CRTN 67.2 OZ</row>
+        <row label="u635985100331">WHITE CLAW HARD SELTZER MANGO MALT BEVERAGE 12 CT 12 OZ CAN 144 OZ</row>
+        <row label="u635985100621">MIKES HARD LEMONADE MALT BEVERAGE 6 CT 11 OZ GLASS BOTTLE IN CRTN 67.2 OZ</row>
+        <row label="u635985129981">MIKES HARD PARTY KIT MALT BEVERAGE 12 CT 11 OZ LONG NECK BTL IN BOX 134.4 OZ</row>
+        <row label="u635985224136">MIKES HARD STRAWBERRY LEMONADE MALT BEVERAGE 6 CT 11 OZ LONG NECK BTL CRTN 67.2 OZ</row>
+        <row label="u635985260424">MIKES HARDER VARIETY PACK MALT BEVERAGE 8 CT 16 OZ CAN IN BOX 128 OZ</row>
+        <row label="u635985260899">WHITE CLAW HARD SELTZER BLACK CHERRY MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u635985548904">WHITE CLAW HARD SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u635985800064">WHITE CLAW HARD SELTZER FLAVOR COLLECTION NO 2 VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u635985800170">MIKES HARD LEMONADE SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u635985800262">WHITE CLAW HARD SELTZER FLAVOR COLLECTION NO 3 VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u63741100060">GIESEN ESTATE MARLBOROUGH SAUVIGNON BLANC 750 ML</row>
+        <row label="u649188900476">GRAND MARNIER LIQUEUR 750 ML</row>
+        <row label="u65293510001">7 DEADLY ZINS ZINFANDEL 750 ML</row>
+        <row label="u65293510006">EARTHQUAKE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u65293510021">PETITE PETIT SIRAH 750 ML</row>
+        <row label="u65293510033">FREAKSHOW CABERNET SAUVIGNON 750 ML</row>
+        <row label="u65293510043">FREAKSHOW RED BLEND 750 ML</row>
+        <row label="u655709000013">JEFFERSONS RESERVE BRBN WHSKY 750 ML</row>
+        <row label="u655709000303">JEFFERSONS BOURBON WHISKEY 750 ML</row>
+        <row label="u65789170020">LIBERTY SCHOOL CABERNET SAUVIGNON 750 ML</row>
+        <row label="u664804001351">ESPOLON TEQUILA BLANCO 1.75 LT</row>
+        <row label="u66957601918">DECOY SPARKLING 750 ML</row>
+        <row label="u66957601920">DECOY NAPA VALLEY RED BLEND 750 ML</row>
+        <row label="u66957601921">DECOY SONOMA SAUVIGNON BLANC 750 ML</row>
+        <row label="u66957601922">DECOY SONOMA PINOT NOIR 750 ML</row>
+        <row label="u66957601924">DECOY SONOMA CHARDONNAY 750 ML</row>
+        <row label="u66957601925">DECOY SONOMA MERLOT 750 ML</row>
+        <row label="u66957601926">DECOY SONOMA COUNTY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u66957601928">DUCKHORN VINEYARDS NAPA VALLEY MERLOT 750 ML</row>
+        <row label="u66957601934">DUCKHORN VINEYARDS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u66957601940">DUCKHORN VINEYARDS NAPA VALLEY SAUVIGNON BLANC 750 ML</row>
+        <row label="u66957602044">DECOY LIMITED NAPA VALLEY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u66957602052">DECOY LIMITED NAPA VALLEY RED BLEND 750 ML</row>
+        <row label="u66957602054">DUCKHORN NAPA VALLEY CHARDONNAY 750 ML</row>
+        <row label="u66957602056">DECOY ROSE 750 ML</row>
+        <row label="u66957602078">DECOY LIMITED SONOMA COAST PINOT NOIR 750 ML</row>
+        <row label="u67058000417">MC MANIS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u674545000001">DON JULIO TEQUILA BLANCO BOX 750 ML</row>
+        <row label="u674545000063">DON JULIO TEQUILA ANEJO BOX 750 ML</row>
+        <row label="u674545000322">DON JULIO TEQUILA ANEJO 750 ML</row>
+        <row label="u674545000414">DON JULIO TEQUILA REPOSADO BOX 750 ML</row>
+        <row label="u674545000599">DON JULIO TEQUILA BLANCO 375 ML</row>
+        <row label="u674545000827">DON JULIO TEQUILA ANEJO BOX 750 ML</row>
+        <row label="u67582942501">SUNNY WITH A CHANCE OF FL POSITIVELY CHARDONNAY 750 ML</row>
+        <row label="u67582942506">SUNNY WITH A CHANCE OF FL PINOT NOIR 750 ML</row>
+        <row label="u67582942507">SUNNY WITH A CHANCE OF FL POSITIVELY SAUVIGNON BLANC 750 ML</row>
+        <row label="u680203019353">WILLETT BOURBON WHISKEY  750 ML</row>
+        <row label="u68453000011">POMELO NAPA VALLEY SAUVIGNON BLANC 750ML</row>
+        <row label="u68935200961">KIM CRAWFORD SAUVIGNON BLANC 750 ML</row>
+        <row label="u68935200992">KIM CRAWFORD SAUVIGNON BLANC 375 ML</row>
+        <row label="u68935200998">KIM CRAWFORD ROSE 750 ML</row>
+        <row label="u68935201003">KIM CRAWFORD SAUVIGNON BLANC CANS 2PK 250ML</row>
+        <row label="u68935201008">KIM CRAWFORD LOW ALC SAUVIGNON BLANC 750 ML</row>
+        <row label="u68935201009">KIM CRAWFORD ILLUMINATE ILLUMINATE ROSE 750 ML</row>
+        <row label="u69874390750">ROTH ESTATE ALEXANDER VALLEY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u699013000550">RON ZACAPA RUM BOX 750 ML</row>
+        <row label="u70125300200">GRUET BRUT 750 ML</row>
+        <row label="u71090971010">MER SOLEIL CHARDONNAY 750 ML</row>
+        <row label="u71090975010">SEA SUN CHARDONNAY 750 ML</row>
+        <row label="u71140871365">TOAD HOLLOW CHARDONNAY 750 ML</row>
+        <row label="u71707191171">WILLAMETTE  VLY WHOLE CLUSTER PINOT NOIR 750 ML</row>
+        <row label="u71788841022">HESS COLLECTION ALLOMI CABERNET 750 ML</row>
+        <row label="u71788850022">HESS SELECT TREO RED BLEND 750 ML</row>
+        <row label="u71788851002">HESS SELECT CABERNET SAUVIGNON 750 ML</row>
+        <row label="u71788852002">HESS SELECT CHARDONNAY 750 ML</row>
+        <row label="u720815910133">CABO WABO TEQUILA REPOSADO 750 ML</row>
+        <row label="u720815910737">CABO WABO TEQUILA BLANCO 750 ML</row>
+        <row label="u720815920101">TEMPLETON RYE WHISKEY 750 ML</row>
+        <row label="u720815920231">TEMPLETON RYE WHISKEY 750 ML</row>
+        <row label="u720815930131">TEQUILA CORRALEJO TEQUILA RPSDO 750 ML</row>
+        <row label="u720815930636">TEQUILA CORRALEJO TEQUILA SILVER 750 ML</row>
+        <row label="u720815950139">ZAYA RUM 12YR 750 ML</row>
+        <row label="u720815985735">SEAGRAMS VODKA X-SMOOTH  750 ML</row>
+        <row label="u720815986046">SEAGRAMS VODKA X-SMOOTH  1.75 LT</row>
+        <row label="u720815988347">SEAGRAMS VODKA X-SMOOTH  1.75 LT</row>
+        <row label="u721059000222">WILD TURKEY RARE BREED BOURBON 750 ML</row>
+        <row label="u721059000635">J WRAY &amp; NEPHEW RUM OVERPROOF WH 750 ML</row>
+        <row label="u721059001298">ESPOLON TEQUILA ANEJO 750 ML</row>
+        <row label="u721059001502">APPLETON ESTATE RUM JAMAICA SGNT 750 ML</row>
+        <row label="u721059002844">WILD TURKEY LONGBRANCH WHSKY 750 ML</row>
+        <row label="u721059007504">SKYY VODKA 750 ML</row>
+        <row label="u721059010009">SKYY VODKA 1 LT</row>
+        <row label="u721059017503">SKYY VODKA 1.75 LT</row>
+        <row label="u721059697507">SKYY INFUSIONS VODKA PINEAPPLE 750 ML</row>
+        <row label="u721059707503">ESPOLON TEQUILA BLANCO 750 ML</row>
+        <row label="u721059707510">ESPOLON TEQUILA REPOSADO  750 ML</row>
+        <row label="u721059847506">WILD TURKEY 81 BOURBON WSKY 750 ML</row>
+        <row label="u721059891004">WILD TURKEY 101 BOURBON WSKY 1 LT</row>
+        <row label="u721059891752">WILD TURKEY 101 BOURBON WSKY 1.75 LT</row>
+        <row label="u721059897501">WILD TURKEY 101 BOURBON WSKY 750 ML</row>
+        <row label="u721059957502">RUSSELLS RESERVE BOURBON WHISKEY 750 ML</row>
+        <row label="u721094199059">GOSLINGS RUM BLACK 750 ML</row>
+        <row label="u72167592014">ARGYLE PINOT NOIR 750 ML</row>
+        <row label="u721733000012">PATRON TEQUILA ANEJO 100% DE AGV 750 ML</row>
+        <row label="u721733000029">PATRON TEQUILA 100% AGAVE SILVER 750 ML</row>
+        <row label="u721733000159">PATRON TEQUILA 100% AGAVE RPSDO 750 ML</row>
+        <row label="u721733000883">PATRON TEQUILA SILVER 1.75 LT</row>
+        <row label="u721733000944">PATRON TEQUILA 100% AGAVE 375 ML</row>
+        <row label="u721733000951">PATRON TEQUILA 100% AGAVE RPSD 375 ML</row>
+        <row label="u721733000968">PATRON TEQUILA 100% AGAVE ANEJO 375 ML</row>
+        <row label="u72462400100">J BLACK PINOT NOIR 750 ML</row>
+        <row label="u72462411501">J PINOT NOIR 750 ML</row>
+        <row label="u72462411609">J WINERY PINOT GRIS 750 ML</row>
+        <row label="u72631910001">CAMBRIA JULIA'S VINEYARD PINOT NOIR 750ML</row>
+        <row label="u72776050163">MIONETTO PROSECCO 750 ML</row>
+        <row label="u72875922210">MATANZAS CREEK ALEXANDER VALLEY SAUVIGNON BLANC 750ML</row>
+        <row label="u72881719912">GEKKEIKAN WHITE SAKE 750 ML</row>
+        <row label="u73042995002">TRUE MYTH CABERNET 750 ML</row>
+        <row label="u73395209702">JUSTIN SAUVIGNON BLANC 750 ML</row>
+        <row label="u73395298750">JUSTIN ISOCELES RED BLEND 750 ML</row>
+        <row label="u73395299710">JUSTIN CABERNET SAUVIGNON 750 ML</row>
+        <row label="u736040018728">RUSSIAN STANDARD VODKA 750 ML</row>
+        <row label="u736040018742">RUSSIAN STANDARD VODKA 1.75 LT</row>
+        <row label="u736040519348">AVION TEQUILA SILVER SINGLE ORGN 750 ML</row>
+        <row label="u73604052098">TY KU JUNMAI GINJO SAKE BLACK 330 ML</row>
+        <row label="u73994902632">Silk &amp; Spice Red Blend 750 ML</row>
+        <row label="u73995801450">FRANCIS COPPOLA DIAMOND COLLECTION PINOT NOIR 750 ML</row>
+        <row label="u73995806480">FRANCIS COPPOLA DIAMOND COLLECTION CABERNET SAUVIGNON 750 ML</row>
+        <row label="u73995807500">FRANCIS COPPOLA DIAMOND COLLECTION PINOT GRIGIO 750 ML</row>
+        <row label="u73995810540">FRANCIS COPPOLA DIAMOND COLLECTION RED BLEND 750 ML</row>
+        <row label="u73995816325">Coppola Sofia Brut Rose Can 4pk 187 ML</row>
+        <row label="u73995817452">FRANCIS COPPOLA GOLDEN TIER PINOT NOIR 750ML</row>
+        <row label="u73995819480">DIAMOND COLLECTION PASO ROBLES CABERNET SAUVIGNON 750 ML</row>
+        <row label="u73995897400">FRANCIS COPPOLA DIAMOND COLLECTION CLARET 750 ML</row>
+        <row label="u73995897410">FRANCIS COPPOLA DIAMOND COLLECTION MERLOT 750 ML</row>
+        <row label="u73995897430">FRANCIS COPPOLA DIAMOND COLLECTION ZINFANDEL 750 ML</row>
+        <row label="u73995898420">FRANCIS COPPOLA DIAMOND COLLECTION CHARDONNAY 750 ML</row>
+        <row label="u74265110719">FERRARI CARANO CHARDONNAY 750 ML</row>
+        <row label="u74265112310">FERRARI CARANO SAUVIGNON BLANC 750 ML</row>
+        <row label="u74265118429">FERRARI CARANO RED BLEND 750 ML</row>
+        <row label="u744607049801">EL JIMADOR TEQUILA REPOSADO 1.75 LT</row>
+        <row label="u744607068208">EL JIMADOR TEQUILA SILVER 750 ML</row>
+        <row label="u744607068406">EL JIMADOR TEQUILA BLANCO 1.75 LT</row>
+        <row label="u744607069205">EL JIMADOR TEQUILA REPOSADO 750 ML</row>
+        <row label="u744607111317">HERRADURA TEQUILA SILVER 750 ML</row>
+        <row label="u744607111324">HERRADURA TEQUILA REPOSADO 750 ML</row>
+        <row label="u744607111331">HERRADURA TEQUILA ANEJO 750 ML</row>
+        <row label="u75352610000">FIRESTEED WILLAMETTE VALLEY PINOT NOIR 750ML</row>
+        <row label="u75573800097">JAM JAR SHIRAZ 750 ML</row>
+        <row label="u76867508582">ACROBAT OREGON PINOT GRIS 750 ML</row>
+        <row label="u76867508592">ACROBAT PINOT NOIR 750 ML</row>
+        <row label="u76961145444">SONOMA CUTRER CHARDONNAY 750ML</row>
+        <row label="u79178490173">OUR DAILY RED ORGANIC 750 ML</row>
+        <row label="u793573797940">WHISTLEPIG RYE WHISKEY AGE 10YR 750 ML</row>
+        <row label="u8038795293">COLUMBIA CABERNET 750 ML</row>
+        <row label="u8043234007">JACOBS CREEK CHARDONNAY 750 ML</row>
+        <row label="u8043234107">JACOBS CREEK CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8043240500">BRANCOTT VINEYARDS SAUVIGNON BLANC 750 ML</row>
+        <row label="u8043290907">SANDEMAN FOUNDER'S RESERVE 750 ML</row>
+        <row label="u8051616024">BANFI BELLAGIO CHIANTI 750 ML</row>
+        <row label="u8069609642">BEAULIEU VINEYARD NAPA RUTHERFORD CABERNET 750 ML</row>
+        <row label="u8072096101">UPPERCUT CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8088749374">BOGLE VINEYARDS PETITE SYRAH 750ML</row>
+        <row label="u8088749378">BOGLE VINEYARDS MERLOT 750 ML</row>
+        <row label="u8088749385">BOGLE VINEYARDS OLD VINE ZINFANDEL 750 ML</row>
+        <row label="u8088749392">BOGLE VINEYARDS CHARDONNAY 750 ML</row>
+        <row label="u8088749396">BOGLE VINEYARDS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8088749631">BOGLE VINEYARDS PINOT NOIR 750 ML</row>
+        <row label="u8088749643">BOGLE VINEYARDS RED BLEND 750 ML</row>
+        <row label="u8088749653">BOGLE ROSE 750 ML</row>
+        <row label="u8088755101">JUGGERNAUT HILLSSIDE CABERNET SAUVIGNON  750 ML</row>
+        <row label="u810028200395">KARBACH RANCH WATER HARD SELTZER VARIETY PACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u811538010122">1800 TEQUILA RESERVA SILVER 375 ML</row>
+        <row label="u811538010153">1800 TEQUILA RESERVA SILVER 1.75 LT</row>
+        <row label="u811538010238">1800 TEQUILA RESERVA REPOSADO 750 ML</row>
+        <row label="u811538010252">1800 TEQUILA RESERVA REPOSADO 1.75 LT</row>
+        <row label="u811538010375">1800 TEQUILA COCONUT 750 ML</row>
+        <row label="u811538010399">1800 MARGARITA MIX PINEAPPLE 1.75 LT</row>
+        <row label="u811538010764">JOSE CUERVO ESPECIAL GLD TEQUILA 1.75 LT</row>
+        <row label="u811538010771">JOSE CUERVO ESPECIAL SLVR TQLA 1.75 LT</row>
+        <row label="u811538010801">JOSE CUERVO ESPECIAL GLD TEQUILA 1 LT</row>
+        <row label="u811538010825">JOSE CUERVO TEQUILA SLVR BLU AGV 1 LT</row>
+        <row label="u811538010832">JOSE CURV TQL GLD ESPCL BLU AGAV 750 ML</row>
+        <row label="u811538010856">JOSE CUERVO ESPECIAL SLVR TQLA 750 ML</row>
+        <row label="u811538010887">JOSE CUERVO ESPECIAL GLD TEQUILA 375 ML</row>
+        <row label="u811538010894">JOSE CUERVO ESPECIAL GLD TEQUILA 375 ML</row>
+        <row label="u811538010917">JOSE CUERVO ESPECIAL SLVR TQLA 375 ML</row>
+        <row label="u811538010948">JOSE CUERVO ESPECIAL GLD TEQUILA 50 ML</row>
+        <row label="u811538010962">JOSE CUERVO MRGRTA GLDN 1.75 LT</row>
+        <row label="u811538010993">JOSE CUERVO MRGRTA CLSSC 1.75 LT</row>
+        <row label="u811538011006">JOSE CUERVO MRGRTA LT 1.75 LT</row>
+        <row label="u811538011013">JOSE CUERVO MANGO MARGARITA TEQUILA &amp; TRIPLE SEC PLASTIC BOTTLE 1 CT 1.75LT</row>
+        <row label="u811538011037">JOSE CUERVO MRGRTA STRAW/LIME 1.75 LT</row>
+        <row label="u811538011044">JOSE CUERVO MRGRTA WATERMELON 1.75 LT</row>
+        <row label="u811538011372">JOSE CUERVO TRADIOCIONAL TEQUILA 750 ML</row>
+        <row label="u811538011426">JOSE CUERVO TRADIOCIONAL PLT TEQ 750 ML</row>
+        <row label="u811538011556">JOSE CUERVO MRGRTA MINI CLSSC 4P 200 ML</row>
+        <row label="u811538011587">JOSE CUERVO WHITE PEACH MARGARIT TEQUILA &amp; TRIPLE SEC PLASTIC BOTTLE 1 CT 1.75LT</row>
+        <row label="u811538011877">TINCUP WHISKEY 750 ML</row>
+        <row label="u811538012867">1800 ULTIMATE MARGARITA PEACH MARGARITA TEQUILA GLASS JUG 1 CT 1.75LT</row>
+        <row label="u811538013017">KRAKEN RUM BLACK SPICE 1.75 LT</row>
+        <row label="u811538013024">THE KRAKEN RUM BLACK SPICE 750 ML</row>
+        <row label="u811538013314">JOSE CUERVO MRGRTA STRAW 1.75 LT</row>
+        <row label="u811538013765">JOSE CUERVO MARGARITA PINK LMND 750 ML</row>
+        <row label="u811538014038">CENTENARIO TEQUILA ANEJO 750 ML</row>
+        <row label="u811538014236">CENTENARIO TEQUILA REPOSADO 750 ML</row>
+        <row label="u811538015219">THREE OLIVES VODKA  1.75 LT</row>
+        <row label="u811538016162">BUSHMILLS IRISH WHISKEY 750 ML</row>
+        <row label="u811538016445">1800 ULTIMATE MARGARITA WTRMLN 1.75 LT</row>
+        <row label="u811538018098">THE SEXTON IRISH WHISKEY 750 ML</row>
+        <row label="u811538019156">1800 ULTIMATE MARGARITA MIX 1.75 LT</row>
+        <row label="u811538019323">PENDLETON WHSKY CNDN BLND 750 ML</row>
+        <row label="u811538019361">PENDLETON WHSKY CNDN BLND 1.75 LT</row>
+        <row label="u811538019651">JOSE CUERVO MARGARITA ORNG/PNAPL 1.75 LT</row>
+        <row label="u811751020007">STOLICHNAYA VODKA 750 ML</row>
+        <row label="u811751020045">STOLICHNAYA VODKA 1.75 LT</row>
+        <row label="u812066020355">THE MACALLAN SCOTCH 18YR 750 ML</row>
+        <row label="u812066020553">THE MACALLAN SCOTCH 12YR BOX 750 ML</row>
+        <row label="u812066020799">CUTTY SARK SCOTCH BLEND 1.75 LT</row>
+        <row label="u812066021598">THE MACALLAN SCOTCH 12YR BOX 750 ML</row>
+        <row label="u81214702008">GERARD BERTRAND COTES DE ROSES ROSE 750 ML</row>
+        <row label="u812459010222">BIRD DOG WHISKEY BLACKBERRY 750 ML</row>
+        <row label="u812459010659">BIRD DOG WHISKEY PEACH  750 ML</row>
+        <row label="u81248501142">CENSE SAUVIGNON BLANC 750 ML</row>
+        <row label="u81264302000">ALLEGRINI PALAZZO DELLA TORRE VALPOLICELLA 750 ML</row>
+        <row label="u8130800041">HEADSNAPPER MALBEC 750 ML</row>
+        <row label="u8130800043">CUPCAKE VINEYARDS SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130800066">COCOBON RED BLEND 750 ML</row>
+        <row label="u8130800070">QUAIL OAK CABERNET 750ML</row>
+        <row label="u8130800071">QUAIL OAK CHARDONNAY 750ML</row>
+        <row label="u8130800106">CUPCAKE VINEYARDS PINOT GRIGIO 750 ML</row>
+        <row label="u8130800125">CUPCAKE VINEYARDS RED VELVET RED BLEND 750 ML</row>
+        <row label="u8130800132">CUPCAKE VINEYARDS PROSECCO 750 ML</row>
+        <row label="u8130800133">CUPCAKE VINEYARDS MOSCATO D ASTI 750 ML</row>
+        <row label="u8130800255">HEADSNAPPER SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130800292">HEADSNAPPER PROSECCO 750 ML</row>
+        <row label="u8130800332">CHLOE CHARDONNAY 750 ML</row>
+        <row label="u8130800333">CHLOE PINOT GRIGIO 750 ML</row>
+        <row label="u8130800336">LOVE NOIR PINOT NOIR 750 ML</row>
+        <row label="u8130800340">13 CELSIUS SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130800351">AVA GRACE CHARDONNAY 750 ML</row>
+        <row label="u8130800352">AVA GRACE SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130800353">SLOW PRESS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8130800356">CHLOE PINOT NOIR 750 ML</row>
+        <row label="u8130800373">CHLOE PROSECCO 750 ML</row>
+        <row label="u8130800385">CHLOE ROSE 750 ML</row>
+        <row label="u8130800414">CUPCAKE ROSE 750 ML</row>
+        <row label="u8130800415">CUPCAKE SPARKLING ROSE 750ML</row>
+        <row label="u8130800439">CUPCAKE BUTTERKISSED CHARDONNAY 750 ML</row>
+        <row label="u8130800441">IMAGERY CHARDONNAY 750 ML</row>
+        <row label="u8130800442">IMAGERY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8130800443">IMAGERY PINOT NOIR 750 ML</row>
+        <row label="u8130800444">IMAGERY SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130800477">CUPCAKE SAUVIGNON BLANC CAN 375 ML</row>
+        <row label="u8130801101">CHLOE MARLBOROUGH SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130801164">CUPCAKE LIGHT HEARTED CHARDONNAY 750 ML</row>
+        <row label="u8130801165">CUPCAKE LIGHT HEARTED PINOT GRIGIO 750 ML</row>
+        <row label="u8130801166">CUPCAKE LIGHT HEARTED ROSE 750 ML</row>
+        <row label="u8130801168">CUPCAKE LIGHT HEARTED PINOT NOIR 750 ML</row>
+        <row label="u8130801221">CUPCAKE LIGHTHEARTED SAUVIGNON BLANC 750 ML</row>
+        <row label="u8130859207">CUPCAKE VINEYARDS CHARDONNAY 750 ML</row>
+        <row label="u813497006109">BUMBU RUM ORIGINAL 750 ML</row>
+        <row label="u8143400002">BLACK BOX WINES BOX MERLOT 3 L</row>
+        <row label="u8143400003">BLACK BOX WINES BOX CABERNET SAUVIGNON 3 L</row>
+        <row label="u8143400004">BLACK BOX WINES BOX CHARDONNAY 3 L</row>
+        <row label="u8143400022">BLACK BOX WINES BOX PINOT GRIGIO 3 L</row>
+        <row label="u8143400029">BLACK BOX WINES BOX CABERNET SAUVIGNON 500 ML</row>
+        <row label="u8143400030">BLACK BOX WINES BOX CHARDONNAY 500 ML</row>
+        <row label="u8143431530">NOBILO SAUVIGNON BLANC 750 ML</row>
+        <row label="u8143471001">BLACK BOX PINOT NOIR 3 L</row>
+        <row label="u8143471005">BLACK BOX PINOT NOIR 500 ML</row>
+        <row label="u8143471016">BLACK BOX ROSE 500 ML</row>
+        <row label="u814794010646">JEFFERSONS OCEAN BRBN WHSKY KNTK 750 ML</row>
+        <row label="u815197000128">BLUE ICE VODKA 750 ML</row>
+        <row label="u815197000135">BLUE ICE VODKA 1.75 LT</row>
+        <row label="u815829010068">CAYMAN JACK MALT BEVERAGE 6 CT 11 OZ GLASS BOTTLE IN CRTN 67.2 OZ</row>
+        <row label="u815829011119">CAYMAN JACK MALT BEVERAGE 12 CT 12 OZ CAN IN BOX 144 OZ</row>
+        <row label="u8158400215">KENDALL JACKSON VINTNERS RESERVE PINOT GRIS 750ML</row>
+        <row label="u8158401308">KENDALL JACKSON GRAND RSV CHARDONNAY 750 ML</row>
+        <row label="u8158401310">KENDALL JACKSON VINTNERS RESERVE CHARDONNAY 750 ML</row>
+        <row label="u8158401311">KENDALL JACKSON VITNERS RESERVE CHARDONNAY 375 ML</row>
+        <row label="u8158401317">KENDALL JACKSON VINTNERS RESERVE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8158401321">KENDALL JACKSON GRAND RSV CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8158401329">KENDALL JACKSON VR ROSE 750 ML</row>
+        <row label="u8158401429">KENDALL JACKSON AVANT CHARDONNAY 750 ML</row>
+        <row label="u8158404767">KENDALL JACKSON AVANT CHARDONNAY 750 ML</row>
+        <row label="u8158413000">KENDALL JACKSON VINTNERS RESERVE RIESLING 750 ML</row>
+        <row label="u8158413040">KENDALL JACKSON VINTNERS RESERVE SAUVIGNON BLANC 750 ML</row>
+        <row label="u8158413140">KENDALL JACKSON VINTNERS RESERVE ZINFANDEL 750 ML</row>
+        <row label="u8158413151">KENDALL JACKSON VINTNERS RESERVE PINOT NOIR 750 ML</row>
+        <row label="u8158413152">KENDALL JACKSON VINTNERS RESERVE MERLOT 750 ML</row>
+        <row label="u8158490904">KENDALL JACKSON VINTNERS RESERVE SUMMATION 750 ML</row>
+        <row label="u81613602534">AVALINE ROSE 750 ML</row>
+        <row label="u81613602536">AVALINE SPAIN WHITE BLEND 750 ML</row>
+        <row label="u81625301058">MIONETTO BRUT 187ML 2PK 2-187ML</row>
+        <row label="u816751020477">CUTWATER SPIRITS SPICY BLOODY MARY VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u816751020491">CUTWATER SPIRITS OLD GROVE REGULAR GIN AND TONIC CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u816751020514">CUTWATER SPIRITS THREE SHEETS RUM AND COLA RUM CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u816751020590">CUTWATER SPIRITS VODKA MULE VODKA CAN 1 CT 0.355LT</row>
+        <row label="u816751020606">FUGU VODKA MULE 4PK 12 OZ</row>
+        <row label="u816751020620">CUTWATER SPIRITS LIME VODKA SODA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u816751021207">CUTWATER SPIRITS GRAPEFRUIT TEQUILA CAN 4 CT 0.355LT</row>
+        <row label="u816751021238">CUTWATER SPIRITS TQLA MRGRT LM 4 12 OZ</row>
+        <row label="u816751021481">CUTWATER SPIRITS BLACK SKIMMER MULE BOURBON WHISKEY CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u816751021979">CUTWATER SPIRITS ASSORTED VODKA CAN IN BOX 8 CT 0.355LT</row>
+        <row label="u8175305020">VEUVE CLICQUOT PONSARDIN BRUT 750 ML</row>
+        <row label="u8175305022">VEUVE CLICQUOT BRUT YELLOW (PONSARDIN) 375 ML</row>
+        <row label="u8175380247">VEUVE CLICQUOT PONSARDIN BRUT ROSE 750 ML</row>
+        <row label="u8175380942">CLOUDY BAY SAUVIGNON BLANC 750 ML</row>
+        <row label="u8175381102">DOM PERIGNON BRUT CHAMPAGNE 750 ML</row>
+        <row label="u81762501014">JOEL GOTT PINOT NOIR  750 ML</row>
+        <row label="u81762501018">Joel Gott Palisades Red</row>
+        <row label="u81805102074">BREAD &amp; BUTTER CABERNET SAUVIGNON 750 ML</row>
+        <row label="u81805102161">BREAD &amp; BUTTER ROSE  750 ML</row>
+        <row label="u81805102195">BREAD &amp; BUTTER SAUVIGNON BLANC 750 ML</row>
+        <row label="u818844020128">JOSE CUERVO SPRKL MRGRTA 4PK CAN 4 CT</row>
+        <row label="u818844021415">1800 MARGARITA BLK CHRRY 1.75 LT</row>
+        <row label="u8210073839">BLACK BOX WINES BOX SAUVIGNON BLANC 3 L</row>
+        <row label="u8210073846">BLACK BOX WINES BOX MALBEC 3 L</row>
+        <row label="u8210073851">THE DREAMING TREE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8210073853">THE DREAMING TREE THE CRUSH RED BLEND 750 ML</row>
+        <row label="u8210078006">THE DREAMING TREE PINOT NOIR 750 ML</row>
+        <row label="u8210078011">THE DREAMING TREE SAUVIGNON BLANC 750 ML</row>
+        <row label="u8224201041">BOTA CABERNET SAUVIGNON 500ML</row>
+        <row label="u8224201045">BOTA BOX CABERNET SAUVIGNON 3 L</row>
+        <row label="u8224201083">BOTA RED BLEND 500ML</row>
+        <row label="u8224201105">BOTA BOX CHARDONNAY 3L BOX</row>
+        <row label="u8224201236">BOTA BOX PINOT NOIR 3 L</row>
+        <row label="u8224201293">BOTA BOX SAUVIGNON BLANC 3 L</row>
+        <row label="u8224201325">BOTA BOX PINOT GRIGIO 3 L</row>
+        <row label="u8224201331">BOTA BOX PINOT GRIGIO 500 ML</row>
+        <row label="u8224201374">BOTA BOX NIGHTHAWK BLACK DARK RED BLEND 3 L</row>
+        <row label="u8224201392">Z. ALEXANDER BROWN CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8224201393">Z. ALEXANDER BROWN RED BLEND 750 ML</row>
+        <row label="u8224201420">Z ALEXANDER BROWN MULTI COUNTY PINOT NOIR 750 ML</row>
+        <row label="u8224201431">BOTA BOX MINI SAUV BLANC 500 ML</row>
+        <row label="u8224201437">BOTA BOX ROSE 3 LT</row>
+        <row label="u8224201438">BOTA BOX NIGHTHAWK BLACK CAB SAUVIGNON  3L</row>
+        <row label="u8224201443">GNARLY HEAD 1924 DARK CABERNET 750 ML</row>
+        <row label="u8224201484">THREE FINGER JACK CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8224201495">BOTA BOX ZINFANDEL 3 L</row>
+        <row label="u8224201568">GNARLY HEAD 1924 BOURBON BARREL CABERNET 750 ML</row>
+        <row label="u8224201569">BOTA BOX NIGHTHAWK CHARDONNAY 3L</row>
+        <row label="u8224201604">BOTA B0X NIGHTHAWK SAUVIGNON BLANC 3L BOX</row>
+        <row label="u8224201605">BOTA BOX REDVOLUTION 3 L</row>
+        <row label="u8224201606">BOTA BOX NIGHTHAWK CABERNET SAUVIGONON  3L BOX</row>
+        <row label="u8224201609">BOTA BOX NIGHTHAWK PINOT NOIR 3L</row>
+        <row label="u8224201677">BOTA BOX BREEZE DRY ROSE 3 L</row>
+        <row label="u8224201678">BOTA BOX BREEZE PINOT GRIGIO 3 L</row>
+        <row label="u8224201765">BOTA BOX MALBEC 3 L</row>
+        <row label="u8224216243">BLACK STALLION CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8224228043">337 NOBLE VINES CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8224229043">GNARLY HEAD CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8224229493">GNARLY HEAD ZINFANDEL 750 ML</row>
+        <row label="u8224254403">667 NOBLE VINES PINOT NOIR 750 ML</row>
+        <row label="u8224256213">446 NOBLE VINES CHARDONNAY 750 ML</row>
+        <row label="u8254400904">OZV ZINFANDEL 750 ML</row>
+        <row label="u8273400101">CONCHA Y TORO FRONTERA CABERNET SAUVIGNON/MERLOT 1.5 L</row>
+        <row label="u8273400109">CONCHA Y TORO CASILLERO DEL DIABLO CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8273431364">CONCHA Y TORO CASILLERO DEL DIABLO CARMENERE 750 ML</row>
+        <row label="u8289600145">1000 STORIES BOURBON BARREL AGED ZINFANDEL 750ML</row>
+        <row label="u8289600304">BONTERRA EQUINOX RED BLEND 750 ML</row>
+        <row label="u8289606262">BONTERRA SAUVIGNON BLANC 750 ML</row>
+        <row label="u8289678040">BONTERRA CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8289678041">BONTERRA CHARDONNAY 750 ML</row>
+        <row label="u8308520022">FRANCISCAN ESTATE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8308520052">FRANCISCAN ESTATE CHARDONNAY 750 ML</row>
+        <row label="u8308530026">ESTANCIA CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8308530038">ESTANCIA PINOT GRIGIO 750 ML</row>
+        <row label="u8308530058">ESTANCIA CHARDONNAY 750 ML</row>
+        <row label="u8308530118">ESTANCIA PINOT NOIR 750 ML</row>
+        <row label="u8308542000">RUFFINO PROSECCO 375 ML</row>
+        <row label="u8308542013">RUFFINO SPARKLING ROSE 750 ML</row>
+        <row label="u8308542023">RUFFINO PROSECCO 187 ML</row>
+        <row label="u8308570024">MOUNT VEEDER WINERY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8308590308">RUFFINO RISERVA DUCALE TAN CHIANTI 750 ML</row>
+        <row label="u8308590321">RUFFINO LUMINA PINOT GRIGIO 750 ML</row>
+        <row label="u8308590408">RUFFINO PROSECCO 750 ML</row>
+        <row label="u8312000335">FRANZIA DARK RED BLEND 5 L</row>
+        <row label="u8312000382">FRANZIA PINOT NOIR/CARMENERE VS 5 L</row>
+        <row label="u8312001012">FRANZIA RICH AND BUTTERY CHARDONNAY 5L</row>
+        <row label="u8312001064">BENZIGER TRIBUTE CABERNET SAUVIGNON  750 ML</row>
+        <row label="u8312001079">OUTSPOKEN BUBBLY ROSE CAN 375 ML</row>
+        <row label="u8312010019">FRANZIA BOX MERLOT 5 L</row>
+        <row label="u8312010039">FRANZIA BOX PINOT GRIGIO 5 L</row>
+        <row label="u8312010069">FRANZIA BOX CHILLABLE RED 5 L</row>
+        <row label="u8312010189">FRANZIA BOX CABERNET SAUVIGNON 5 L</row>
+        <row label="u8312010199">FRANZIA BOX  REFRESHING WHITE 5 L</row>
+        <row label="u8312010209">FRANZIA BOX CHARDONNAY 5 L</row>
+        <row label="u8312010289">FRANZIA BOX CRISP WHITE 5 L</row>
+        <row label="u8312010319">FRANZIA BOX WHITE ZINFANDEL 5 L</row>
+        <row label="u8312010329">FRANZIA BOX RED SANGRIA 5 L</row>
+        <row label="u8312010369">FRANZIA BOX SUNSET BLUSH 5 L</row>
+        <row label="u83320200250">ROSE ALL DAY 750 ML</row>
+        <row label="u83330200240">LEESE FITCH CABERNET 750ML</row>
+        <row label="u835229000001">ABSOLUT VODKA 50 ML</row>
+        <row label="u835229000209">ABSOLUT VODKA IMPORT 375 ML</row>
+        <row label="u835229000308">ABSOLUT VODKA SWEDISH 750 ML</row>
+        <row label="u835229000407">ABSOLUT VODKA SWEDISH 1 LT</row>
+        <row label="u835229000605">ABSOLUT VODKA SWEDISH 1.75 LT</row>
+        <row label="u835229001305">ABSOLUT VODKA CITRON 750 ML</row>
+        <row label="u835229001602">ABSOLUT CITRON VODKA 1.75 LT</row>
+        <row label="u835229002302">ABSOLUT VODKA MANDRIN 750 ML</row>
+        <row label="u835229008304">ABSOLUT RASPBERRI VODKA 750 ML</row>
+        <row label="u835229010277">ABSOLUT LIME VODKA 750 ML</row>
+        <row label="u835229010437">ABSOLUT VODKA GRAPEFRUIT IMPRT 750 ML</row>
+        <row label="u835229010611">ABSOLUT JUICE VODKA STRAW EDTN 750 ML</row>
+        <row label="u835229010994">ABSOLUT VODKA WATERMELON 750 ML</row>
+        <row label="u8372202348">MURPHY-GOODE CALIFORNIA PINOT NOIR 750ML</row>
+        <row label="u8372287004">MURPHY-GOODE CALIFORNIA CABERNET SAUVIGNON 750ML</row>
+        <row label="u8372288006">MURPHY-GOODE CALIFORNIA SAUVIGNON BLANC 750ML</row>
+        <row label="u8380404715">COOKS GRAND RESERVE 750 ML</row>
+        <row label="u8380404721">COOKS BRUT 750 ML</row>
+        <row label="u8380404723">COOKS EXTRA DRY 750 ML</row>
+        <row label="u8383700610">CASTLE ROCK PINOT NOIR 750 ML</row>
+        <row label="u8383701000">HONIG SAUVIGNON BLANC 750 ML</row>
+        <row label="u8383702000">HONIG CABERNET SAUVIGNON 750 ML</row>
+        <row label="u83914607626">BAR DOG CABERNET SAUVIGNON 750 ML</row>
+        <row label="u83974300148">YELLOW TAIL BIG BOLD RED 750 ML</row>
+        <row label="u83974300149">YELLOW TAIL BIG BOLD RED 1.5 L</row>
+        <row label="u83974300222">YELLOWTAIL SMOOTH RED 750 ML</row>
+        <row label="u83974300284">YELLOW TAIL PURE BRIGHT CHARDONNAY 750 ML</row>
+        <row label="u83974300287">YELLOW TAIL PURE BRIGHT PINOT GRIGIO 750 ML</row>
+        <row label="u83974300290">YELLOW TAIL PURE BRIGHT SAUVIGNON BLANC 750 ML</row>
+        <row label="u8427900215">YES WAY ROSE 750ML</row>
+        <row label="u8427900250">RISATA MOSCATO D'ASTI 187 ML</row>
+        <row label="u8427900263">YES WAY ROSE BUBBLES 750 ML</row>
+        <row label="u8427900295">YES WAY ROSE CAN 4PK 250 ML</row>
+        <row label="u8427997763">RISATA MOSCATO D ASTI 750 ML</row>
+        <row label="u8468700101">ERATH PINOT NOIR 750 ML</row>
+        <row label="u8469230364">FONSECA BIN #27 PORT 750 ML</row>
+        <row label="u8469240054">LOUIS JADOT BEAUJOLAIS 750 ML</row>
+        <row label="u8469241854">LOUIS JADOT MACON-VILLAGES 750 ML</row>
+        <row label="u8469242454">LOUIS JADOT POUILLY FUISSE 750 ML</row>
+        <row label="u8469245874">LOUIS JADOT PINOT NOIR 750 ML</row>
+        <row label="u8469250164">TAITTINGER BRUT LA FRANCAISE 750 ML</row>
+        <row label="u8469262144">LOUIS JADOT ROSE  750 ML</row>
+        <row label="u8470409132">KORBEL BRUT 750 ML</row>
+        <row label="u8470409147">KORBEL EXTRA DRY 750 ML</row>
+        <row label="u8470409187">KORBEL BRUT ROSE 750 ML</row>
+        <row label="u8470409797">KORBEL SWEET ROSE 750 ML</row>
+        <row label="u84715900202">THE CREAMERY CHARDONNAY 750 ML</row>
+        <row label="u84715900262">CREAMERY CHARDONNAY 375ML</row>
+        <row label="u84837500456">HOUSE WINE CHARDONNAY CAN 375 ML</row>
+        <row label="u84837500458">HOUSE WINE BLEND RED CAN 375 ML</row>
+        <row label="u84837500464">HOUSE WINE ROSE CAN 375 ML</row>
+        <row label="u84837500499">HOUSE WINE SPARKLING ROSE CAN 375 ML</row>
+        <row label="u84837500513">HOUSE WINE GRAPEFRUT SPRITZ CAN 375 ML</row>
+        <row label="u84837500845">HOUSE WINE OLD FASHIONED LEMONADE 375 ML</row>
+        <row label="u8500000197">MASO CANALI PINOT GRIGIO 750 ML</row>
+        <row label="u8500000311">LIVINGSTON CELLARS CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u8500000424">BELLA SERA PINOT GRIGIO 1.5 L</row>
+        <row label="u8500000501">GALLO FAMILY VINEYARDS CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u8500000506">GALLO FAMILY VINEYARDS CHARDONNAY 1.5 L</row>
+        <row label="u8500000532">FAIRBANKS RUBY PORT 750 ML</row>
+        <row label="u8500000533">GALLO FAMILY VINEYARDS CHARDONNAY 4PK 187 ML</row>
+        <row label="u8500000550">SHEFFIELD CELLARS CREAM SHERRY 1.5 L</row>
+        <row label="u8500000553">SHEFFIELD CELLARS TAWNY PORT 1.5 L</row>
+        <row label="u8500000555">SHEFFIELD CELLARS VERY DRY SHERRY 750 ML</row>
+        <row label="u8500000572">CARLO ROSSI SWEET RED 4 L</row>
+        <row label="u8500000587">GALLO FAMILY VINEYARDS SAUVIGNON BLANC 1.5 L</row>
+        <row label="u8500000652">LIVINGSTON CELLARS RED ROSE 1.5 L</row>
+        <row label="u8500000679">PETER VELLA BOX CHARDONNAY 5 L</row>
+        <row label="u8500000694">CARLO ROSSI BURGUNDY 4 L</row>
+        <row label="u8500000709">LIVINGSTON CELLARS WHITE ZINFANDEL 1.5 L</row>
+        <row label="u8500000716">CARLO ROSSI SANGRIA 4 L</row>
+        <row label="u8500000719">CARLO ROSSI CHABLIS 4 L</row>
+        <row label="u8500000729">CARLO ROSSI PAISANO 4 L</row>
+        <row label="u8500000743">ANDRE BRUT 750 ML</row>
+        <row label="u8500000748">ANDRE EXTRA DRY 750 ML</row>
+        <row label="u8500000757">BALLATORE GRAN SPUMANTE 750 ML</row>
+        <row label="u8500000784">GALLO FAMILY VINEYARDS WHITE ZINFANDEL 1.5 L</row>
+        <row label="u8500000806">LIVINGSTON CELLARS CHARDONNAY 1.5 L</row>
+        <row label="u8500000828">ANDRE SPUMANTE 750 ML</row>
+        <row label="u8500000843">ECCO DOMANI PINOT GRIGIO 750 ML</row>
+        <row label="u8500000985">GALLO FAMILY VINEYARDS MERLOT 1.5 L</row>
+        <row label="u8500000986">LIVINGSTON CELLARS MERLOT 1.5 L</row>
+        <row label="u8500001053">FREI BROTHERS RESERVE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500001056">FREI BROTHERS RESERVE CHARDONNAY 750 ML</row>
+        <row label="u8500001128">LIBERTY CREEK MERLOT 1.5 L</row>
+        <row label="u8500001129">LIBERTY CREEK CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u8500001130">LIBERTY CREEK CHARDONNAY 1.5 L</row>
+        <row label="u8500001163">LOUIS M MARTINI SONOMA CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500001164">LOUIS M MARTINI NAPA VALLEY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500001201">WHITEHAVEN SAUVIGNON BLANC 750 ML</row>
+        <row label="u8500001217">DA VINCI CHIANTI 750 ML</row>
+        <row label="u8500001227">MIRASSOU PINOT NOIR 750 ML</row>
+        <row label="u8500001228">MIRASSOU CHARDONNAY 750 ML</row>
+        <row label="u8500001443">BAREFOOT PINOT GRIGIO 1.5 L</row>
+        <row label="u8500001444">BAREFOOT PINOT GRIGIO 750 ML</row>
+        <row label="u8500001520">GALLO FAMILY VINEYARDS MOSCATO 1.5 L</row>
+        <row label="u8500001581">BAREFOOT RIESLING 750 ML</row>
+        <row label="u8500001586">GALLO FAMILY VINEYARDS PINOT GRIGIO 1.5 L</row>
+        <row label="u8500001592">MARTIN CODAX ALBARINO 750 ML</row>
+        <row label="u8500001614">DON MIGUEL GASCON MALBEC 750 ML</row>
+        <row label="u8500001623">GHOST PINES CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500001658">DA VINCI PINOT GRIGIO 750 ML</row>
+        <row label="u8500001660">STARBOROUGH SAUVIGNON BLANC 750 ML</row>
+        <row label="u8500001667">BAREFOOT MOSCATO 1.5 L</row>
+        <row label="u8500001668">BAREFOOT MOSCATO 750 ML</row>
+        <row label="u8500001707">BAREFOOT PINOT NOIR 750 ML</row>
+        <row label="u8500001720">PETER VELLA BOX SANGRIA 5 L</row>
+        <row label="u8500001736">BAREFOOT PINOT NOIR 1.5 L</row>
+        <row label="u8500001759">BAREFOOT BUBBLY MOSCATO 750 ML</row>
+        <row label="u8500001773">LA MARCA PROSECCO 750 ML</row>
+        <row label="u8500001774">APOTHIC RED BLEND 750 ML</row>
+        <row label="u8500001813">BAREFOOT RIESLING 1.5 L</row>
+        <row label="u8500001817">ALAMOS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500001819">ALAMOS MALBEC 750 ML</row>
+        <row label="u8500001839">LIBERTY CREEK PINOT GRIGIO 1.5 L</row>
+        <row label="u8500001849">BAREFOOT SWEET RED 750 ML</row>
+        <row label="u8500001868">BAREFOOT SWEET RED 1.5 L</row>
+        <row label="u8500001945">ALAMOS  RED BLEND 750 ML</row>
+        <row label="u8500001965">BAREFOOT BUBBLY PINK MOSCATO 750 ML</row>
+        <row label="u8500001973">APOTHIC WHITE BLEND 750 ML</row>
+        <row label="u8500001989">BAREFOOT RED MOSCATO 750 ML</row>
+        <row label="u8500001991">GALLO FAMILY VINEYARDS PINK MOSCATO 1.5 L</row>
+        <row label="u8500002028">BAREFOOT RED MOSCATO 1.5 L</row>
+        <row label="u8500002030">DARK HORSE CABERNET 750 ML</row>
+        <row label="u8500002031">DARK HORSE CHARDONNAY 750 ML</row>
+        <row label="u8500002042">CARNIVOR CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500002045">BAREFOOT PINK MOSCATO 750 ML</row>
+        <row label="u8500002060">BAREFOOT PINK MOSCATO 1.5 L</row>
+        <row label="u8500002074">DARK HORSE RED BLEND 750 ML</row>
+        <row label="u8500002104">CARLO ROSSI MOSCATO SANGRIA  4 L</row>
+        <row label="u8500002154">APOTHIC ROSE 750ML</row>
+        <row label="u8500002159">WILLIAM HILL NORTH COAST CHARDONNAY 750 ML</row>
+        <row label="u8500002160">WILLIAM HILL NORTH COAST CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500002180">COLUMBIA RED BLEND 750 ML</row>
+        <row label="u8500002243">LA MARCA PROSECCO 187 ML</row>
+        <row label="u8500002250">BAREFOOT BUBBLY PROSECCO 750 ML</row>
+        <row label="u8500002264">WILLIAM HILL NORTH COAST SAUVIGNON BLANC</row>
+        <row label="u8500002284">LA MARCA PROSECCO 1.5 L</row>
+        <row label="u8500002286">APOTHIC DARK RED BLEND 750 ML</row>
+        <row label="u8500002287">DARK HORSE MERLOT 750 ML</row>
+        <row label="u8500002292">DARK HORSE SAUVIGNON BLANC 750 ML</row>
+        <row label="u8500002294">BAREFOOT ON TAP CABERNET SAUVIGNON 3L</row>
+        <row label="u8500002295">BAREFOOT ON TAP PINOT GRIGIO 3L</row>
+        <row label="u8500002310">PROPHECY PINOT NOIR</row>
+        <row label="u8500002311">PROPHECY SAUVIGNON BLANC 750 ML</row>
+        <row label="u8500002348">APOTHIC CRUSH RED BLEND 750 ML</row>
+        <row label="u8500002350">WILLIAM HILL COASTAL PINOT NOIR</row>
+        <row label="u8500002379">DARK HORSE PINOT NOIR 750 ML</row>
+        <row label="u8500002421">DARK HORSE ROSE 750 ML</row>
+        <row label="u8500002449">PROPHECY PINOT GRIGIO 750 ML</row>
+        <row label="u8500002470">FLEUR DE MER ROSE 750ML</row>
+        <row label="u8500002490">APOTHIC INFERNO 750ML</row>
+        <row label="u8500002497">CARNIVOR ZINFANDEL 750 ML</row>
+        <row label="u8500002505">BAREFOOT SANGRIA 750 ML</row>
+        <row label="u8500002506">BAREFOOT SANGRIA 1.5 LT</row>
+        <row label="u8500002528">DARK HORSE PINOT GRIGIO 750 ML</row>
+        <row label="u8500002534">ORIN SWIFT "PALERMO" CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500002536">ORIN SWIFT ABSTRACT RED 750ML</row>
+        <row label="u8500002546">ORIN SWIFT "PAPILLON" RED 750 ML</row>
+        <row label="u8500002587">BAREFOOT ROSE 750 ML</row>
+        <row label="u8500002608">BAREFOOT ON TAP MOSCATO 3L</row>
+        <row label="u8500002609">BAREFOOT ON TAP CHARDONNAY 3L</row>
+        <row label="u8500002610">DARK HORSE DOUBLE DOWN RED BLEND 750 ML</row>
+        <row label="u8500002647">BAREFOOT ROSE 1.5 L</row>
+        <row label="u8500002670">ORIN SWIFT 8 YEARS IN THE DESERT</row>
+        <row label="u8500002673">BAREFOOT BUBBLY BRUT ROSE 750 ML</row>
+        <row label="u8500002702">PROPHECY ROSE 750 ML</row>
+        <row label="u8500002713">DARK HORSE ROSE CAN 375 ML</row>
+        <row label="u8500002714">DARK HORSE PINOT GRIGIO CAN 375 ML</row>
+        <row label="u8500002785">LEFTIE RED BLEND 750 ML</row>
+        <row label="u8500002834">STORYPOINT CABERNET SAUVIGNON 750ML</row>
+        <row label="u8500002840">BAREFOOT ON THE GO ROSE 500 ML</row>
+        <row label="u8500002841">BAREFOOT ON THE GO PINOT GRIGIO 500 ML</row>
+        <row label="u8500002842">BAREFOOT ON THE GO CHARDONNAY 500ml</row>
+        <row label="u8500002843">BAREFOOT ON THE GO MOSCATO 500 ML</row>
+        <row label="u8500002873">DARK HORSE SAUVIGNON BLANC CAN 375 ML</row>
+        <row label="u8500002900">BAREFOOT PEACH FRUIT-SCATO 750 ML</row>
+        <row label="u8500002901">BAREFOOT STRAWBERRY FRUIT-SCATO 750ML</row>
+        <row label="u8500002902">BAREFOOT APPLE FRUIT-SCATO 750ML 750 ML</row>
+        <row label="u8500002903">DARK HORSE BRUT BUBBLES CAN 375 ML</row>
+        <row label="u8500002990">BAREFOOT STRAWBERRY FRUIT-SCATO 1.5L</row>
+        <row label="u8500002991">BAREFOOT WATERMELON FRUIT-SCATO 1.5L</row>
+        <row label="u8500002992">BAREFOOT WATERMELON FRUIT-SCATO 750 ML</row>
+        <row label="u8500003096">APOTHIC CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8500003109">LA MARCA PROSECCO 375ML GLASS</row>
+        <row label="u8500003122">DARK HORSE BUTTERY CHARD  750 ML</row>
+        <row label="u8500003178">BAREFOOT BLUEBERRY FRUIT-SCATO 750 ML</row>
+        <row label="u8500003214">APOTHIC MERLOT 750 ML</row>
+        <row label="u8500003233">APOTHIC PINOT NOIR 750 ML</row>
+        <row label="u8500003244">LA MARCA PROSECCO ROSE 750 ML</row>
+        <row label="u8500003397">Faux Pas L&amp;M VodKa SoDA 250ML 24EA 4PK OS</row>
+        <row label="u8500003398">Faux Pas Barlett PEAR VODAK MULE 250ML 24EA 4PK OS</row>
+        <row label="u8500003399">Faux Pas GF&amp;OR Tequila SoDA 250ML 24EA 4PK OS</row>
+        <row label="u8500003400">Faux Pas SPY ManGO MARGarita 250ML 24EA 4PK OS</row>
+        <row label="u8500003443">WIldCard Hard Lemonade 4pk 355ML 24CN 6/4PK OS</row>
+        <row label="u8500003489">JAVI'S RCH WTR LIME 355ML 24EA 6/4PK OS</row>
+        <row label="u8500003490">JAVI'S RCH WTR WATERMELON 355ML 24EA 6/4PK OS</row>
+        <row label="u8500003491">JAVI'S RCH WTR GRAPEFRUIT 355ML 24EA 6/4PK OS</row>
+        <row label="u8500004528">BAREFOOT CELLARS PINOT GRIGIO 4PK 187 ML</row>
+        <row label="u8500004536">BAREFOOT CELLARS CHARDONNAY 4PK 187 ML</row>
+        <row label="u8500004559">BAREFOOT MOSCATO 4PK 187 ML</row>
+        <row label="u8500004594">BAREFOOT PINK MOSCATO 4PK 187 ML</row>
+        <row label="u850001409124">SLRRRP GELATIN ALCHL INFS 3 FLVR 12 CT</row>
+        <row label="u850001901116">WHISTLE PIG RY WHSKY PIGGYBACK 750 ML</row>
+        <row label="u8500022912">MAC MURRAY ESTATE SONOMA PINOT NOIR 750 ML</row>
+        <row label="u8500022944">APOTHIC RED BLEND 2PK 250 ML</row>
+        <row label="u8500032243">LA MARCA PROSECCO 3PK 187 ML</row>
+        <row label="u850003519005">21SEEDS TEQUILA CCMBR JLPN BLNC 750 ML</row>
+        <row label="u8500042387">BAREFOOT REFRESH MISC RED 250 ML (4 PK)</row>
+        <row label="u8500042388">BAREFOOT REFRESH MISC WHITE 250 ML (4 PK)</row>
+        <row label="u8500042498">Barefoot Refresh Moscato 4Pk</row>
+        <row label="u8500042499">Barefoot Refresh Rose 4Pk 250 Ml Can</row>
+        <row label="u8500042588">Barefoot Refresh Sangria 250 Ml</row>
+        <row label="u8500042891">Barefoot Spritzer Pink Moscato Cans</row>
+        <row label="u8500043444">Wild Card Lemon Hard Tea 4pk  355ML 24CN 6/4PK OS</row>
+        <row label="u8500043445">Wild Card Hard Punch 4pk 355ML 24CN 6/4PK OS</row>
+        <row label="u850010619132">CANTEEN BLACK CHERRY VODK SD VODKA CAN IN BOX 6 CT 0.355LT</row>
+        <row label="u850010619149">CANTEEN LIME VODKA SODA VODKA CAN IN BOX 6 CT 0.355LT</row>
+        <row label="u850012571216">RANCHO LA GLORIA WN CCKTL LME 1.5 LT</row>
+        <row label="u850015640025">TEREMANA TEQUILA BLANCO 750 ML</row>
+        <row label="u850015640032">TEREMANA TEQUILA REPOSADO 750 ML</row>
+        <row label="u850047003003">ANGELS ENVY BOURBON WHISKEY 750 ML</row>
+        <row label="u850047003065">ANGELS ENVY WHSKY FNSH RYE 750 ml</row>
+        <row label="u850162008600">10 BARREL MSCW ML 12Z 4P CAN 4 ea</row>
+        <row label="u850162008617">10 BARREL GRY HND 12Z 4P CAN 4 ea</row>
+        <row label="u850424002766">REDNECK RIVIERA WHISKEY 750 ML</row>
+        <row label="u85047700502">LIQS WN BSD MARGARITA 1.5L 6EA OS</row>
+        <row label="u85047700505">LIQS WNBSD STRWBRY MARGARITA 6EA 1.5L CD</row>
+        <row label="u85047700506">LIQS WN BSD MOJITO 1.5L 6EA OS</row>
+        <row label="u850477005073">LIQS WN BSD MNGO MARG 1.5L 6EA OS</row>
+        <row label="u85083200426">BREAD &amp; BUTTER CHARDONNAY 750 ML</row>
+        <row label="u85083200427">BREAD &amp; BUTTER PINOT NOIR 750 ML</row>
+        <row label="u8515500001">DOMAINE CHANDON BRUT 750 ML</row>
+        <row label="u8515500003">CHANDON BLANC DE NOIRS SPARKLING WINE 750 ML</row>
+        <row label="u8515500040">DOMAINE CHANDON ROSE 750 ML</row>
+        <row label="u8515500101">CHANDON BRUT 187ML</row>
+        <row label="u85164500405">LOCATIONS CA2 CALIFORNIA 750 ML</row>
+        <row label="u85171800004">MARK WEST VINEYARDS PINOT NOIR 750 ML</row>
+        <row label="u85171800097">RAEBURN RUSSIAN RIVER CHARDONNAY 750 ML</row>
+        <row label="u85171800098">RAEBURN RUSSIAN RIVER PINOT NOIR 750 ML</row>
+        <row label="u85191900400">BUTTERNUT CHARDONNAY 750 ML</row>
+        <row label="u8520000025">SUTTER HOME CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8520000026">SUTTER HOME CHARDONNAY 750 ML</row>
+        <row label="u8520000055">SUTTER HOME CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u8520000056">SUTTER HOME CHARDONNAY 1.5 L</row>
+        <row label="u8520000059">SUTTER HOME WHITE ZINFANDEL 1.5 L</row>
+        <row label="u8520000062">SUTTER HOME MOSCATO 1.5 L</row>
+        <row label="u8520000068">SUTTER HOME PINOT GRIGIO 1.5 L</row>
+        <row label="u8520000076">SUTTER HOME SWEET RED 1.5 L</row>
+        <row label="u8520000098">SUTTER HOME PINK MOSCATO 1.5 L</row>
+        <row label="u8520000100">SUTTER HOME FRE WHITE ZINFANDEL 750 ML</row>
+        <row label="u8520000101">SUTTER HOME FRE CHARDONNAY 750 ML</row>
+        <row label="u8520000104">SUTTER HOME FRE PREMIUM RED 750 ML</row>
+        <row label="u8520000105">SUTTER HOME FRE BRUT SPARKLING 750 ML</row>
+        <row label="u8520000108">SUTTER HOME FRE MERLOT 750 ML</row>
+        <row label="u8520000575">SEAGLASS SAUVIGNON BLANC 750 ML</row>
+        <row label="u8520010448">SUTTER HOME ROSE 187 4PK 187 ML</row>
+        <row label="u8520011875">SUTTER HOME PINOT GRIGIO 4PK 187 ML</row>
+        <row label="u8520011883">SUTTER HOME PINK MOSCATO 4PK 187 ML</row>
+        <row label="u8520051874">SUTTER HOME CABERNET SAUVIGNON 4PK 187 ML</row>
+        <row label="u8520061874">SUTTER HOME CHARDONNAY 4PK 187 ML</row>
+        <row label="u8520071874">SUTTER HOME SAUVIGNON BLANC 4PK 187 ML</row>
+        <row label="u8520091874">SUTTER HOME WHITE ZINFANDEL 4PK 187 ML</row>
+        <row label="u8520091875">SUTTER HOME MOSCATO 4PK 187 ML</row>
+        <row label="u85239300529">FRENCH BLUE BORDEAUX ROSE 750ML</row>
+        <row label="u85241100756">LIFEVINE CAB SAUV 750 ML</row>
+        <row label="u85241100757">LIFEVINE CHARDONNAY 750 ML</row>
+        <row label="u85241100796">LIFEVINE PINOT NOIR 750 ML</row>
+        <row label="u852714006928">ROUND ROCK VODKA 750 ML</row>
+        <row label="u852714006942">ROUND ROCK VODKA 1.75 LT</row>
+        <row label="u85283200015">MUMM NAPA BRUT PRESTIGE 750 ML</row>
+        <row label="u85283200017">MUMM NAPA BRUT ROSE 750 ML</row>
+        <row label="u85283210471">BRANCOTT VINEYARDS SAUVIGNON BLANC 750 ML</row>
+        <row label="u85283210481">CAMPO VIEJO RIOJA RESERVA 750 ML</row>
+        <row label="u85283210489">GH MUMM GRAND CORDON BRUT 750 ML</row>
+        <row label="u85283210585">CAMPO VIEJO CAVA BRUT 750ML</row>
+        <row label="u85283210625">CAMPO VIEJO TEMPRANILLO 750 ML</row>
+        <row label="u852935001153">CHOPIN VODKA POTATO 750 ML</row>
+        <row label="u85308600800">FITVINE CABERNET 750 ML</row>
+        <row label="u85308600802">FITVINE PINOT NOIR 750 ML</row>
+        <row label="u85308600803">FITVINE SAUVIGNON BLANC 750 ML</row>
+        <row label="u85308600805">FIT VINE CHARDONNAY 750 ML</row>
+        <row label="u85308600807">FITVINE PINOT GRIGIO 750 ML</row>
+        <row label="u85308600825">FITVINE PROSECCO 750 ML</row>
+        <row label="u85308600832">FITVINE RED BLEND 750 ML</row>
+        <row label="u853507000024">AVIATION GIN AMERICAN 750 ML</row>
+        <row label="u85370600201">JAM CELLARS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u85370600203">BUTTER CHARDONNAY 750ML</row>
+        <row label="u853797003262">JOIA SPIRIT SPARKLING GREYHOUND VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u853797003286">JOIA SPIRIT SPARKLING MOSCOW MUL VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u853797003309">JOIA SPIRIT SPARKLING COSMOPOLTN VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u85386800602">BANSHEE PINOT NOIR 750 ML</row>
+        <row label="u85386800634">BANSHEE CABERNET PASO ROBLES 750 ML</row>
+        <row label="u854125003008">TRES AGAVES TEQUILA REPOSADO 750 ML</row>
+        <row label="u854396005008">HIGH WEST WHISKEY DOUBLE RYE 750 ML</row>
+        <row label="u854396005220">HIGH WEST WHISKEY BRBN AMRCN 750 ML</row>
+        <row label="u854628006131">OLE SMOKY WHISKEY SALTY CARAMEL 750 ML</row>
+        <row label="u85516500507">MEIOMI PINOT NOIR 750 ML</row>
+        <row label="u85516500577">MEIOMI CHARDONNAY 750ML</row>
+        <row label="u85562200081">BELLE GLOS DAIRYMAN PINOT NOIR 750 ML</row>
+        <row label="u855880008024">ON THE ROCKS OLD FASHIONED BOURBON WHISKEY GLASS BOTTLE 1 CT .375 LT</row>
+        <row label="u855880008055">ON THE ROCKS THE COSMOPOLITAN VODKA AND TRIPLE SEC GLASS BOTTLE 1 CT 0.375LT</row>
+        <row label="u855880008086">ON THE ROCKS JALAPENO PNPPL MRGRT TEQUILA &amp; TRIPLE SEC GLASS BOTTLE 1 CT 0.375LT</row>
+        <row label="u855880008116">ON THE ROCKS MARGARITA TEQUILA &amp; TRIPLE SEC GLASS BOTTLE 1 CT 0.375LT</row>
+        <row label="u855880008147">ON THE ROCKS MAI TAI RUM GLASS BOTTLE 1 CT 0.375LT</row>
+        <row label="u855880008178">ON THE ROCKS AVIATION GIN GLASS BOTTLE 1 CT 0.375LT</row>
+        <row label="u85603600104">UNDERWOOD PINOT NOIR CANS 375 ML</row>
+        <row label="u85603600106">UNDERWOOD PINOT GRIS CANS 375 ML</row>
+        <row label="u85603600107">UNDERWOOD ROSE CANS 375 ML</row>
+        <row label="u85603600109">UNDERWOOD SPARKLING CAN 375 ML</row>
+        <row label="u85603600119">UNDERWOOD SPARKLING ROSE CAN 375 ML</row>
+        <row label="u856065002035">DEEP EDDY VODKA 750 ML</row>
+        <row label="u856065002059">DEEP EDDY VODKA 1.75 LT</row>
+        <row label="u856065002080">DEEP EDDY VODKA RUBY RED 750 ML</row>
+        <row label="u856065002417">DEEP EDDY VODKA LEMON 750 ML</row>
+        <row label="u856065002585">DEEP EDDY VODKA PEACH 750 ML</row>
+        <row label="u85618400611">BOEN TRI APPELLATION PINOT NOIR 750 ML</row>
+        <row label="u85662200101">BIELER PÈRE ET FILS ROSE 750 ML</row>
+        <row label="u856695001002">OCEAN ORGNC VODKA 750 ML</row>
+        <row label="u856724006015">CASAMIGOS TEQUILLA ANEJO 750 ML</row>
+        <row label="u856724006114">CASAMIGOS TEQUILA BLANCO 750 ML</row>
+        <row label="u856724006121">CASAMIGOS TEQUILLA BLANCO 375 ML</row>
+        <row label="u856724006213">CASAMIGOS TEQUILLA REPOSADO 750 ML</row>
+        <row label="u85715100358">TALL DARK STRANGER MALBEC 750 ML</row>
+        <row label="u857641002043">BUZZBALLZ TEQUILA RITA TEQUIL VDK &amp; TRPL SC PLASTIC BALL 1 CT 0.2LT</row>
+        <row label="u857641002753">BUZZBALLZ CHOC TEASE VODKA AND WINE PLASTIC BALL 1 CT 0.2LT</row>
+        <row label="u85774400131">JOSH CELLARS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u85774400132">JOSH CELLARS CHARDONNAY 750 ML</row>
+        <row label="u85774401115">JOSH CELLARS MERLOT 750 ML</row>
+        <row label="u85792300408">MATUA PINOT ROSE 750 ML</row>
+        <row label="u858349004100">WOODINVILLE BOURBON WHISKEY 750 ML</row>
+        <row label="u8590401440">MOGEN DAVID RED CONCORD 750 ML</row>
+        <row label="u85936900125">FAUST CABERNET SAUVIGNON 750 ML</row>
+        <row label="u85936900163">FLOWERS PINOT NOIR 750 ML</row>
+        <row label="u85955100133">MATCHBOOK THE ARSONIST RED BLEND 750 ML</row>
+        <row label="u8597603393">MANISCHEWITZ CONCORD 750 ML</row>
+        <row label="u85977500123">CHOCOVINE CHOCOLATE 750 ML</row>
+        <row label="u85988900600">QUILT NAPA VALLEY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u85988900630">QUILT NAPA VALLEY RED BLEND 750 ML</row>
+        <row label="u860001022711">RANCHO LA GLORIA PEACH MARGARITA WINE GLASS BOTTLE 1 CT 1.5LT</row>
+        <row label="u860001438444">RANCH WATER BLUE AGAVE HARD SELTZER LIME MALT BEVERAGE 6 CT 12 OZ CAN 72 OZ</row>
+        <row label="u860001885781">RANCHO LA GLORIA WATERMELON MARGARITA WINE GLASS BOTTLE 1 CT 1.5LT</row>
+        <row label="u860002858616">LONE RIVER RANCH WATER ORIGINAL HARD SELTZER MALT BEVERAGE 6 CT 12 OZ CAN IN CARDBOARD SLEEVE 72 OZ</row>
+        <row label="u860003623411">LONE RIVER RANCH WATER SPICY HARD SELTZER MALT BEVERAGE 6 CT 12 OZ CAN IN CARDBOARD SLEEVE 72 OZ</row>
+        <row label="u8600300008">WOODBRIDGE CHARDONNAY 750 ML</row>
+        <row label="u8600300009">WOODBRIDGE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8600300042">ROBERT MONDAVI PRIVATE SELECTION MERLOT 750 ML</row>
+        <row label="u8600300050">WOODBRIDGE MERLOT 1.5 L</row>
+        <row label="u8600300164">WOODBRIDGE PINOT GRIGIO 750 ML</row>
+        <row label="u8600300165">WOODBRIDGE PINOT GRIGIO 1.5 L</row>
+        <row label="u8600300256">WOODBRIDGE CABERNET SAUVIGNON 4PK 187 ML</row>
+        <row label="u8600300258">WOODBRIDGE CHARDONNAY 4PK 187 ML</row>
+        <row label="u8600300269">ROBERT MONDAVI PRIVATE SELECTION PINOT GRIGIO 750 ML</row>
+        <row label="u8600300337">WOODBRIDGE RIESLING 1.5 L</row>
+        <row label="u8600300340">WOODBRIDGE PINOT NOIR 1.5 L</row>
+        <row label="u8600300365">WOODBRIDGE CABERNET SAUVIGNON/MERLOT 1.5 L</row>
+        <row label="u8600305184">ROBERT MONDAVI WINERY NAPA CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8600306191">ROBERT MONDAVI PRIVATE SELECTION CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8600309193">ROBERT MONDAVI PRIVATE SELECTION PINOT NOIR 750 ML</row>
+        <row label="u8600325105">MEIOMI ROSE 750 ML</row>
+        <row label="u8600325122">MEIOMI PINOT NOIR 375 ML</row>
+        <row label="u8600325127">MEIOMI CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8600325300">KUNG FU GIRL RIESLING 750ML</row>
+        <row label="u8600325400">COOPER &amp; THIEF RED BLEND 750 ML</row>
+        <row label="u8600325506">THE PRISONER RED BLEND 750 ML</row>
+        <row label="u8600325514">THE PRISONER CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8600326100">7 MOONS RED BLEND 750 ML</row>
+        <row label="u8600326102">7 MOONS DARK RED BLEND  750ML</row>
+        <row label="u8600327801">UNSHACKLED RED BLEND 750ML</row>
+        <row label="u8600327802">UNSHACKLED CABERNET SAUVIGNON 750ML</row>
+        <row label="u8600336193">ROBERT MONDAVI PRIVATE SELECTION SAUVIGNON BLANC 750 ML</row>
+        <row label="u8600346192">ROBERT MONDAVI PRIVATE SELECTION CHARDONNAY 750 ML</row>
+        <row label="u8600378021">ROBERT MONDAVI PRIVATE SELECTION BOURBON BARREL CAB SAUV 750ML</row>
+        <row label="u8600378024">ROBERT MONDAVI PRIVATE SELECTION BOURBON BARREL CHARDONNAY 750 ML</row>
+        <row label="u8600378031">ROBERT MONDAVI PRV SEL MERLOT RUM BRL 750ML</row>
+        <row label="u8600378032">ROBERT MONDAVI PRIVATE SELECTION RYE BARREL AGED RED BLEND 750 ML</row>
+        <row label="u8600378036">ROBERT MONDAVI PRIVATE SELECTION BUTTERY CHARDONNAY 750 ML</row>
+        <row label="u8600381385">WOODBRIDGE CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u8600382044">WOODBRIDGE RED BLEND 1.5 LT</row>
+        <row label="u8600382075">Woodbridge Bourbon Barrel Cabernet 750 ML</row>
+        <row label="u8600382077">Woodbridge Bourbon Barrel Red Blend 750 ML</row>
+        <row label="u8600386386">WOODBRIDGE SAUVIGNON BLANC 1.5 L</row>
+        <row label="u8600387388">WOODBRIDGE CHARDONNAY 1.5 L</row>
+        <row label="u8600390392">WOODBRIDGE LIGHTLY OAKED CHARDONNAY 1.5 L</row>
+        <row label="u8601220043">CHARLES KRUG CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8601240074">CK MONDAVI CHARDONNAY 1.5 L</row>
+        <row label="u8601250094">CK MONDAVI CABERNET SAUVIGNON 1.5 L</row>
+        <row label="u860265002405">SKREWBALL PEANUT BUTTER WHISKEY 750 ML</row>
+        <row label="u860265002450">SKREWBALL WHISKEY P-BTR 375 ML</row>
+        <row label="u860272001439">LONG DRINK GRAPEFRUIT &amp; JUNIPER BERRY GIN CAN IN BOX 6 CT 0.355LT</row>
+        <row label="u860272001446">LONG DRINK GRAPEFRT &amp; JNPR BRRY GIN CAN 1 CT 0.355LT</row>
+        <row label="u861518002623">RANCHO LA GLORIA MANGO MARGARITA AGAVE WINE GLASS BOTTLE 1 CT 1.5LT</row>
+        <row label="u861518002647">RANCHO LA GLORIA MARGARITA AGAVE WINE GLASS BOTTLE 1 CT 1.5LT</row>
+        <row label="u861518002654">RANCHO LA GLORIA STRAWBERRY MARGARITA AGAVE WINE GLASS BOTTLE 1 CT 1.5LT</row>
+        <row label="u8639509500">SHO CHIKU BAI JUNMAI SAKE 750 ML</row>
+        <row label="u86577600007">ELOUAN PINOT NOIR 750 ML</row>
+        <row label="u8678500003">CAVIT COLLECTION PINOT GRIGIO 1.5 L</row>
+        <row label="u8678511073">ROSCATO ROSSO DOLCE 750 ML</row>
+        <row label="u8678520001">VANDERPUMP ROSE 750 ML</row>
+        <row label="u8678521246">ROSCATO ROSE DOLCE 750 ML</row>
+        <row label="u8678521300">ROSCATO MOSCATO 750 ML</row>
+        <row label="u8678800047">HAHN WINERY GSM RED BLEND 750 ML</row>
+        <row label="u8678800090">SMITH &amp; HOOK CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8678801887">HAHN SLH PINOT NOIR 750 ML</row>
+        <row label="u8678855590">HAHN CHARDONNAY 750 ML</row>
+        <row label="u8678866688">HAHN CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8678888802">HAHN ESTATES PINOT NOIR 750 ML</row>
+        <row label="u8689102061">CHAPOUTIER COTE DU RHONE 750 ML</row>
+        <row label="u8689102296">BELLERUCHE ROSE 750 ML</row>
+        <row label="u8689102892">RUTHERFORD HILL MERLOT 750 ML</row>
+        <row label="u8689108003">SEVEN DAUGHTERS MOSCATO 750 ML</row>
+        <row label="u8689108304">THE FEDERALIST 1776 ZINFANDEL 750 ML</row>
+        <row label="u8689108318">THE FEDERALIST 1776 CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8689108613">THE FEDERALIST RED BLEND 750 ML</row>
+        <row label="u8689108703">THE FEDERALIST BOURBON BARREL ZINFANDEL 750 ML</row>
+        <row label="u8689108802">THE FEDERALIST BOURBON BARREL RED BLEND 750 ML</row>
+        <row label="u86903700034">BABE SPARKLING GRIGIO 4PK 250 MLCANS</row>
+        <row label="u86903700038">BABE SPARKLING ROSE´ 4PK 250 ML CANS</row>
+        <row label="u8700010270">BARTON &amp; GUESTIER VOUVRAY 750 ML</row>
+        <row label="u87066100802">OYSTER BAY SAUVIGNON BLANC 750 ML</row>
+        <row label="u87066100805">OYSTER BAY ROSE 750 ML</row>
+        <row label="u87073100003">NAPA CELLARS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8711040057">TOASTED HEAD CHARDONNAY 750 ML</row>
+        <row label="u8724188106">MEZZACORONA PINOT GRIGIO 750 ML</row>
+        <row label="u8724188109">MEZZACORONA PINOT GRIGIO 1.5 L</row>
+        <row label="u8735640512">CLOS DU BOIS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8735644212">CLOS DU BOIS PINOT NOIR 750 ML</row>
+        <row label="u8735651012">CLOS DU BOIS CHARDONNAY 750 ML</row>
+        <row label="u8735651044">CLOS DU BOIS PINOT GRIGIO 750 ML</row>
+        <row label="u8744721872">RAYMOND NAPA RESERVE CABERNET</row>
+        <row label="u8751207339">RODNEY STRONG SONOMA MERLOT 750 ML</row>
+        <row label="u8751234191">KNOTTY VINES CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8751291235">RODNEY STRONG SONOMA CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8751291325">RODNEY STRONG CALIFORNIA CHARDONNAY 750 ML</row>
+        <row label="u8751292795">RODNEY STRONG RUSSIAN RIVER PINOT NOIR 750 ML</row>
+        <row label="u8751292968">RODNEY STRONG ALEXANDER VALLEY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8751294305">RODNEY STRONG CHARLOTTE'S HOME SAUVIGNON BLANC 750 ML</row>
+        <row label="u8771210124">RUTHERFORD RANCH CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8775200564">BARTENURA MOSCATO 750 ML</row>
+        <row label="u87844800260">MOUTON CADET RED BORDEAUX 750 ML</row>
+        <row label="u8787263012">STELLA ROSA MOSCATO D ASTI 750 ML</row>
+        <row label="u8787263013">STELLA ROSA STELLA ROSSO 750 ML</row>
+        <row label="u8787263093">STELLA ROSA BLUEBERRY 750 ML</row>
+        <row label="u8787263095">STELLA ROSA BLACK CHERRY 750 ML</row>
+        <row label="u8787263221">STELLA ROSA "PEACH"  750 ML</row>
+        <row label="u8787263222">STELLA ROSA STELLA BERRY 750 ML</row>
+        <row label="u8787263223">STELLA ROSA STELLA PINK 750 ML</row>
+        <row label="u8787263336">STELLA ROSA "BLACK" 750 ML</row>
+        <row label="u8787263340">STELLA ROSA RED  750 ML</row>
+        <row label="u8787263395">STELLA ROSA TROPICAL MANGO 750 ML</row>
+        <row label="u8787263840">STELLA ROSA PINEAPPLE 750 ML</row>
+        <row label="u8787263842">STELLA ROSA WATERMELON 750 ML</row>
+        <row label="u8787264312">STELLA ROSA RUBY GRAPEFRUIT  750 ML</row>
+        <row label="u8807616165">MOET &amp; CHANDON NECTAR IMPERIAL BRUT ROSE 750 ML</row>
+        <row label="u8811055105">MOET &amp; CHANDON IMPERIAL BRUT WHITE STAR 750 ML</row>
+        <row label="u8811055240">MOET &amp; CHANDON IMPERIAL BRUT ROSE 750 ML</row>
+        <row label="u8823200182">VENDANGE CHARDONNAY 1.5 L</row>
+        <row label="u8823200261">SEBASTIANI CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8823200316">VENDANGE BOX CHARDONNAY 500 ML</row>
+        <row label="u8823200318">VENDANGE BOX PINOT GRIGIO 500 ML</row>
+        <row label="u8825475872">SEGHESIO FAMILY VINEYARDS ZINFANDEL 750 ML</row>
+        <row label="u8832000208">THE PALM ROSE 750 ML</row>
+        <row label="u8832034101">CRUZ GARCIA REAL RED SANGRIA 1.5 L</row>
+        <row label="u8832034103">CRUZ GARCIA REAL RED SANGRIA 750 ML</row>
+        <row label="u8832070006">GEKKEIKAN WHITE SAKE 180 ML</row>
+        <row label="u8841578055">SIMI CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8841578405">SIMI CHARDONNAY 750 ML</row>
+        <row label="u8847401820">SCHMITT SOHNE Qba BLUE BOTTLE RIESLING 750 ML</row>
+        <row label="u8847402240">RELAX RIESLING 750 ML</row>
+        <row label="u8853400138">ST. FRANCIS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8853400147">ST. FRANCIS MERLOT 750 ML</row>
+        <row label="u8858600076">CHATEAU STE MICHELLE PINOT GRIGIO 750 ML</row>
+        <row label="u8858600176">14 HANDS CHARDONNAY 750 ML</row>
+        <row label="u8858600177">14 HANDS MERLOT 750 ML</row>
+        <row label="u8858600186">CHATEAU STE MICHELLE INDIAN WELLS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8858600189">14 HANDS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8858600344">COLUMBIA CREST H3 CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8858600389">NICOLAS FEUILLATTE BRUT CHAMPAGNE 750 ML</row>
+        <row label="u8858600416">CHATEAU STE MICHELLE HARVEST SELECT RIESLING 750 ML</row>
+        <row label="u8858600442">VILLA MARIA SAUVIGNON BLANC 750 ML</row>
+        <row label="u8858600448">14 HANDS HOT TO TROT RED BLEND 750 ML</row>
+        <row label="u8858600572">14 HANDS PINOT GRIGIO 750 ML</row>
+        <row label="u8858600785">INTRINSIC CABERNET 750 ML</row>
+        <row label="u8858600921">INTRINSIC RED BLEND 750 ML</row>
+        <row label="u8858600924">BORNE OF FIRE CABERNET 750 ML</row>
+        <row label="u8858600932">CHATEAU STE MICHELLE ROSE 750 ML</row>
+        <row label="u8858601014">LIQUID LIGHTS SAUVIGNON BLANC 750 ML</row>
+        <row label="u8858601179">CHATEAU STE MICHELLE ELEM STRAWBERRY HIBISCUS ROSE 750 ML</row>
+        <row label="u8858601180">CHATEAU STE MICHELLE ELEM PEACH GINGER WHITE BLEND 750 ML</row>
+        <row label="u8858640184">COLUMBIA CREST GRAND EST CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8858640284">COLUMBIA CREST GRAND EST MERLOT 750 ML</row>
+        <row label="u8858649895">COLUMBIA CREST GRAND EST CHARDONNAY 750 ML</row>
+        <row label="u8858660183">CHATEAU STE MICHELLE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8858660283">CHATEAU STE MICHELLE MERLOT 750 ML</row>
+        <row label="u8858660384">CHATEAU STE MICHELLE CHARDONNAY 750 ML</row>
+        <row label="u8858662184">CHATEAU STE MICHELLE RIESLING 750 ML</row>
+        <row label="u8858662584">CHATEAU STE MICHELLE GEWURZTRAMINER 750 ML</row>
+        <row label="u8858663098">CHATEAU STE MICHELLE SAUVIGNON BLANC 750 ML</row>
+        <row label="u8858665993">CHATEAU STE MICHELLE INDIAN WELLS CHARDONNAY 750 ML</row>
+        <row label="u8859345030">STAGS LEAP WINE CELLARS CHARDONNAY 750 ML</row>
+        <row label="u8859370020">STAGS LEAP WINE CELLARS ARTEMIS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8869286023">STERLING VINTNERS COLLECTION CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8869286024">STERLING VINTNERS COLLECTION MERLOT 750 ML</row>
+        <row label="u8869286025">STERLING VINTNERS COLLECTION CHARDONNAY 750 ML</row>
+        <row label="u8869286210">STERLING VINTNERS COLLECTION PINOT NOIR 750 ML</row>
+        <row label="u8869286405">STERLING VINTNERS COLLECTION MERITAGE 750 ML</row>
+        <row label="u8894000002">TAYLOR RUBY PORT 1.5 L</row>
+        <row label="u8894000018">TAYLOR SHERRY 1.5 L</row>
+        <row label="u8894011001">TAYLOR SWEET MARSALA 750 ML</row>
+        <row label="u8901601726">CAPRICCIO BUBBLY SANGRIA 750 ML</row>
+        <row label="u890355001001">RUMCHATA CARIBBEAN RUM 1.75 LT</row>
+        <row label="u890355001025">RUMCHATA CARIBBEAN RUM 750 ML</row>
+        <row label="u890355001360">RUM CHATA FRAPPA CHATA ALL OTHER RUM GLASS BOTTLE 1 CT 1.75 LT</row>
+        <row label="u890355001513">RUMCHATA CARIBBEAN RUM LIMON 750 ML</row>
+        <row label="u890355001551">RUMCHATA CARIBBEAN RUM PPRMT BRK 750 ML</row>
+        <row label="u890355001568">RUMCHATA GIFT SET CRM LQR 1 CT</row>
+        <row label="u89040900201">DAOU SAUVIGNON BLANC 750 ML</row>
+        <row label="u89040900239">DAOU CABERNET SAUVIGNON 750 ML</row>
+        <row label="u89040900261">DAOU CHARDONNAY 750 ML</row>
+        <row label="u89040900279">THE PESSIMIST RED BLEND 750 ML</row>
+        <row label="u8912106882">J LOHR CHARDONNAY 750 ML</row>
+        <row label="u8912107852">J. LOHR ESTATES PINOT NOIR "FALCON'S PERCH"MONTEREY COUNTY CA 750 ML</row>
+        <row label="u8912118852">J LOHR MERLOT 750 ML</row>
+        <row label="u8912128811">J LOHR SEVEN OAKS CABERNET SAUVIGNON 375 ML</row>
+        <row label="u8912128812">J LOHR CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8912134852">J. LOHR VINEYARD SERIES CABERNET SAUVIGNON "HILLTOP"PASO ROBLES CA 750 ML</row>
+        <row label="u8912140852">2017 J. LOHR PURE PASO™ PROPRIETARY RED WINE 750 ML</row>
+        <row label="u8912185002">ARIEL CAB SAUV 750 ML</row>
+        <row label="u891278002311">MONACO CITRUS RUSH VODKA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u891278002373">MONACO LIME CRUSH TEQUILA AND VODKA CAN 1 CT 0.355LT</row>
+        <row label="u891278002380">MONACO LIME CRUSH TEQUILA CAN IN BOX 4 CT 0.355LT</row>
+        <row label="u891278002465">MONACO CKTL BLUE CRUSH 12OZ CAN 4 CT</row>
+        <row label="u89293100014">A TO Z PINOT GRIGIO 750 ML</row>
+        <row label="u89293100034">A TO Z PINOT NOIR 750 ML</row>
+        <row label="u8941900017">LA VEILLE FERME ROSE 750ML</row>
+        <row label="u8941900060">MARQUES DE CACERES RIOJA CRIANZA 750 ML</row>
+        <row label="u8941923511">CHATEAU MIRAVAL ROSE 750 ML</row>
+        <row label="u89425400282">GERARD BERTRAND GRIS BLANC ROSE 750ML</row>
+        <row label="u89450900017">THREE THIEVES BANDIT BOX CABERNET SAUVIGNON 1 L</row>
+        <row label="u89450900027">THREE THIEVES BANDIT BOX PINOT GRIGIO 1 L</row>
+        <row label="u89450900058">THREE THIEVES BANDIT BOX CHARDONNAY 1 L</row>
+        <row label="u8947550101">CANTINA ZACCAGNINI MONTEPULCIANO D ABBRUZZO 750ML</row>
+        <row label="u89491000010">FRANK FAMILY VINEYARDS CHARD 750 ML</row>
+        <row label="u8954110091">GROTH VINEYARD SAUVIGNON BLANC 750 ML</row>
+        <row label="u8954130089">GROTH VINEYARD CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8963619000">WENTE VINEYARDS MORNING FOG CHARDONNAY 750 ML</row>
+        <row label="u8963624010">WENTE VINEYARDS RIVA RANCH CHARDONNAY 750 ML</row>
+        <row label="u8963646000">WENTE VINEYARDS SOUTHERN HILLS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u89649900110">CANNONBALL CABERNET 750 ML</row>
+        <row label="u89659900203">LAYER CAKE MALBEC 750 ML</row>
+        <row label="u89659900208">LAYER CAKE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u89659900209">LAYER CAKE CHARDONNAY 750 ML</row>
+        <row label="u89659900210">LAYER CAKE BOURBON BARREL CABERNET SAUV 750 ML</row>
+        <row label="u89659900213">LAYER CAKE PINOT NOIR 750 ML</row>
+        <row label="u89659900217">CHERRY TART PINOT NOIR 750 ML</row>
+        <row label="u8974476548">RIUNITE RED LAMBRUSCO 750 ML</row>
+        <row label="u8974476550">RIUNITE RED LAMBRUSCO 1.5 L</row>
+        <row label="u8981900170">BERINGER FOUNDERS ESTATE CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8981900171">BERINGER CC CHARDONNAY 750 ML</row>
+        <row label="u8981900292">MATUA LIGHTER LIGHTER SAUVIGNON BLANC 750 ML</row>
+        <row label="u8981900347">BERINGER KNIGHTS VALLEY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8981900652">BERINGER CC WHITE ZINFANDEL 750 ML</row>
+        <row label="u8981903842">BERINGER CC WHITE ZINFANDEL 1.5 L</row>
+        <row label="u8981904240">STAGS LEAP WINERY CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8981904301">STAGS LEAP WINERY CHARDONNAY 750 ML</row>
+        <row label="u8981904441">STAGS LEAP WINERY MERLOT 750 ML</row>
+        <row label="u8981904585">STAGS LEAP WINERY PETITE SYRAH 750 ML</row>
+        <row label="u8981905509">CHATEAU ST JEAN CALIFORNIA CHARDONNAY 750 ML</row>
+        <row label="u8981906822">BERINGER CC CABERNET SAUVIGNON 750 ML</row>
+        <row label="u8981909029">BERINGER CC WHITE MERLOT 750 ML</row>
+        <row label="u8981915802">MATUA VALLEY SAUVIGNON BLANC 750 ML</row>
+        <row label="u8981950145">CASTELLO DI GABBIANO CHIANTI 750 ML</row>
+        <row label="u8981950241">CASTELLO DI GABBIANO CHIANTI CLASSICO 750 ML</row>
+        <row label="u8981972024">BERINGER BROS BOURBON BARREL CABERNET   750ML</row>
+        <row label="u8981972026">BERINGER BOURBON BARREL AGED RED BLEND 750ML</row>
+        <row label="u8981972144">19 CRIMES PINOT NOIR 750 ML</row>
+        <row label="u8981972356">19 CRIMES SAUVIGNON BLANC 750 ML</row>
+        <row label="u8981979686">CHATEAU ST JEAN CALIFORNIA CABERNET SAUVIGNON 750 ML</row>
+        <row label="u898432002002">DULCE VIDA ORGNC TEQUILA BLANCO 750 ML</row>
+        <row label="u89875600105">LINE 39 CABERNET SAUVIGNON LAKE CO. 750 ML</row>
+        <row label="u89875600147">LINE 39 PINOT NOIR 750 ML</row>
+        <row label="u9792197010">ROMBAUER VINEYARDS CARNEROS CHARDONNAY 750 ML</row>
+        <row label="u9865230002">CLINE ANCIENT VINES ZINFANDEL 750 ML</row>
+        <row label="u9870908858">CATENA MALBEC 750 ML</row>
+        <row label="u9870943620">KRIS PINOT GRIGIO 750 ML</row>
+        <row label="u9998807105">MENAGE A TROIS WHITE BLEND 750 ML</row>
+        <row label="u9998807109">MENAGE A TROIS RED BLEND 750 ML</row>
+        <row label="u9998807114">MENAGE A TROIS CABERNET SAUVIGNON 750 ML</row>
+        <row label="u9998807116">MENAGE A TROIS PINOT GRIGIO 750 ML</row>
+        <row label="u9998807117">MENAGE A TROIS PINOT NOIR 750 ML</row>
+        <row label="u9998807129">MENAGE A TROIS MIDNIGHT RED 750 ML</row>
+        <row label="u9998807130">MENAGE A TROIS PROSECCO 750 ML</row>
+        <row label="u9998807136">MENAGE A TROIS SILK RED 750 ML</row>
+        <row label="u9998807139">MENAGE A TROIS GOLD CHARDONNAY 750 ML</row>
+        <row label="u9998807141">MENAGE A TROIS DECADENCE CABERNET SAUV 750 ML</row>
+        <row label="u9998807143">MENAGE A TROIS LAVISH MERLOT 750 ML</row>
+        <row label="u9998807157">MENAGE A TROIS LUSCIOUS PINOT NOIR 750 ML</row>
+        <row label="u9998807162">MENAGE A TROIS BOURBON BARREL CABERNET SAUVIGNON 750 ML</row>
+        <row label="u9998807175">Menage A Trois Red Blend 3-187 ML</row>
+        <row label="u9998807178">Ménage a Trois "Limelight" Pot Grigio</row>
+        <row label="u9998807189">MENAGE A TROIS MOSCATO DOLCE 750 ML</row>
+        <row label="u9998837108">MENAGE A TROIS ROSE 750ML</row>
+      </number>
+
+      <suspend/>
+
+      <number 
+     label="P1_Total_Products"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Total Products Purchased TBD - CS not ready Quantity for each product</title>
+      </number>
+
+      <suspend/>
+
+      <number 
+     label="P1_Number_Bought_Per_Product"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Total Quantity Purchased Per Product - CS not ready Quantity for each product</title>
+      </number>
+
+      <suspend/>
+
+      <checkbox 
+     label="P1_Items_Bought"
+     atleast="1"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Products Bought</title>
+        <exec>
+for r in P_QuantityPurchased.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      P1_Items_Bought.rows[r.index].val = 1
+        </exec>
+
+      </checkbox>
+
+      <suspend/>
+
+      <checkbox 
+     label="P1_Items_ClickedOn"
+     atleast="1"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     where="execute,survey,report">
+        <title>Products clicked on</title>
+      </checkbox>
+
+      <suspend/>
+
+      <number 
+     label="P1_Number_Unique_Products"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title># of Unique Products Purchased</title>
+        <exec>
+P1_Number_Unique_Products.val = P1_Items_Bought.count
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <number 
+     label="P1_Number_ClickedOn_Products"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title># of Products Clicked On SKU</title>
+        <exec>
+P1_Number_ClickedOn_Products.val = P1_Items_ClickedOn.count
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <autofill label="vProductsBought" where="execute,survey,report">
+        <title>TestBrand Purchased/Bought</title>
+        <row label="TB" autofill="(P1_Items_Bought.u65293510001 or P1_Items_Bought.u65293510001 or P1_Items_Bought.u65293510001 or P1_Items_Bought.u65293510001)">TestBrand Purchased</row>
+        <row label="No" autofill="vProductsBought.count==0">TestBrand NOT Purchased</row>
+      </autofill>
+    </block>
+
+    <suspend/>
+
+    <radio 
+    label="P_QuantityPurchased1b"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>Now that you have completed your shopping trip <b>to stock up or replenish what you keep on hand</b>, would you like more time to explore other items on the shelf (i.e. to find something new, shop for a special occasion, to give alcohol as gift)?</title>
+      <row label="r1">Yes</row>
+      <row label="r2">No</row>
+    </radio>
+
+    <suspend/>
+
+    <exec>
+from datetime import datetime
+import time
+starttime = datetime.now()
+print starttime
+    </exec>
+
+    <suspend/>
+
+    <block label="digitalSection2" cond="P_QuantityPurchased1b.r1" builder:title="Shopping">
+      <html label="placeholder_Shop3" where="none">Redirect placeholder so that the redirect executes</html>
+
+      <exec sst="0">
+suspendExternal(pipe.VCShoppingUrl+"&amp;respondentId="+uuid+"&amp;link=[return]&amp;")
+      </exec>
+
+      <float 
+     label="ShopTime2"
+     optional="0"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Shop Time</title>
+        <comment>Time it took for Shopping</comment>
+        <exec>
+from datetime import datetime
+import time
+endtime =  datetime.now()
+print endtime
+ShopTime2.val = (endtime - starttime).seconds
+        </exec>
+
+      </float>
+
+      <suspend/>
+
+      <text 
+     label="api_Data2"
+     size="40">
+        <title>Welcome back, please continue rest questions.</title>
+        <style name="page.head"><![CDATA[
+<link rel="stylesheet" href="[rel ploading.css]">
+<script>
+    $ (window).on("load", function () {
+        $ ("body").append("<div class='pop-loading'><em>LOADING<s></s></em></div>")
+        
+        var formData = JSON.stringify({"event_type": "params_crud","action": "get_params","data": {"params_id": "${pipe.param_id}"}})
+
+        $.ajax({
+            type: "post",
+            url: "https://better-params-api.rose.conceptsauce.io/api",
+            dataType: 'json',
+            contentType: 'application/json',
+            data: formData,
+            success: function (dd) {
+
+                setTimeout(function(){
+                    var sid = dd.data.params.survey_id
+                    var formDataShelf = JSON.stringify({"event_type": "survey_data_request","action": "get_shop_shelf_summary_purchases","data": {"target": {"survey_id": sid,"respondent_id": "${uuid}","block_id": "shelf1"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataShelf,
+                        success: function (aaa) {
+                            console.log(1,aaa)
+                            setTimeout(function(){
+                                $ (".answers").find(".input.text-input").eq(0).val(sid)
+                                $ (".answers").find(".input.text-input").eq(1).val(aaa.data.basket_summary.sku_list.replace(/\s+/g,""))
+                                $ (".answers").find(".input.text-input").eq(2).val(aaa.data.basket_summary.total_value)
+                                $ (".pop-loading").remove()
+                            },1000)
+                        }
+                    });
+
+                    var formDataCon = JSON.stringify({"event_type": "survey_data_request","action": "get_shop_shelf_summary_items_looked_at","data": {"target": {"survey_id": sid,"respondent_id": "${uuid}","block_id": "shelf1"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataCon,
+                        success: function (bbb) {
+                            console.log(2,bbb)
+                            setTimeout(function(){                                
+                                var sku = []
+                                var start = []
+                                var total = []
+                                bbb.data.items_looked_at.map(function(e){
+                                    sku.push(e.sku)
+                                    start.push(e.time_to_start_looking)
+                                    total.push(e.total_duration_looking)
+                                })
+
+                                $ (".answers").find(".input.text-input").eq(3).val(sku)
+                                $ (".answers").find(".input.text-input").eq(4).val(start)
+                                $ (".answers").find(".input.text-input").eq(5).val(total)
+                                $ (".pop-loading").remove()
+                                setTimeout(function(){
+                                    $ ("#btn_continue").click()                                  
+                                },1000)                                
+                                
+                            },1000)                                                        
+                        }
+                    });
+
+                    var formDataCOV = JSON.stringify({"event_type": "survey_data_request","action": "get_shop_shelf_detail_items_looked_at","data": {"target": {"survey_id": sid,"respondent_id": "${uuid}","block_id": "con|version_1_task_2"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataCOV,
+                        success: function (ccc) {
+                            console.log(3,ccc)
+                        }
+                    });
+
+                    var formDataConjoint = JSON.stringify({"event_type": "survey_data_request","action": "get_conjoint_shelf_version_summary","data": {"target": {"survey_id": sid,"block_id": "conjoint","version_id": "1"}}})
+                    $.ajax({
+                        type: "post",
+                        url: "https://public-survey-data-api.rose.conceptsauce.io/api",
+                        dataType: 'json',
+                        contentType: 'application/json',
+                        data: formDataConjoint,
+                        success: function (ddd) {
+                            console.log(4,ddd)
+                        }
+                    });
+                    
+
+                },1000)
+
+            }
+        });
+    })
+
+</script>
+]]></style>
+        <row label="r1">surveyid</row>
+        <row label="r2">sku_list</row>
+        <row label="r3">total_value</row>
+        <row label="r4">items_looked_at_sku</row>
+        <row label="r5">items_to_start_looking</row>
+        <row label="r6">total_duration_looking</row>
+      </text>
+
+      <suspend/>
+
+      <exec>
+SurveyId2.val=api_Data2.r1.val
+total_value2.val=api_Data2.r3.val
+productArr = api_Data2.r2.val.split(",")
+productPickArr = api_Data2.r4.val.split(",")
+productStartTimeArr = api_Data2.r5.val.split(",")
+productDurationTimeArr = api_Data2.r6.val.split(",")
+print productArr
+
+for x in productArr:
+  for y in P_QuantityPurchased2.rows:
+    if x == y.label:
+      y.c1.val=1
+
+for a in productPickArr:
+  for b in P1_Items_ClickedOn2.rows:
+    if a == b.label:
+      b.val=1
+
+for i, att in enumerate(productPickArr):
+  for c in P_QuantityPurchased2.rows:
+    if c.label == att:
+      P_QuantityPurchased2.rows[c.index].c2.val = i+1
+      P_QuantityPurchased2.rows[c.index].c3.val = productStartTimeArr[i]
+      P_QuantityPurchased2.rows[c.index].c4.val = productDurationTimeArr[i]
+      </exec>
+
+      <text 
+     label="SurveyId2"
+     optional="0"
+     size="30"
+     where="execute,survey,report">
+        <title>Survey Id</title>
+      </text>
+
+      <float 
+     label="total_value2"
+     optional="0"
+     size="10"
+     where="execute,survey,report">
+        <title>total value</title>
+      </float>
+
+      <suspend/>
+
+      <number 
+     label="P_QuantityPurchased2"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     size="10"
+     where="execute,survey,report">
+        <title>.</title>
+        <col label="c1">Purchased (not Quantity - TBD Quantity for CS)</col>
+        <col label="c2">Order of click</col>
+        <col label="c3">ClickedOn_StartTime</col>
+        <col label="c4">Time opened (duration)</col>
+      </number>
+
+      <suspend/>
+
+      <number 
+     label="P1_Total_Products2"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Total Products Purchased TBD - CS not ready Quantity for each product</title>
+      </number>
+
+      <suspend/>
+
+      <number 
+     label="P1_Number_Bought_Per_Product2"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Total Quantity Purchased Per Product - CS not ready Quantity for each product</title>
+      </number>
+
+      <suspend/>
+
+      <checkbox 
+     label="P1_Items_Bought2"
+     atleast="1"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Products Bought</title>
+        <exec>
+for r in P_QuantityPurchased2.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      P1_Items_Bought2.rows[r.index].val = 1
+        </exec>
+
+      </checkbox>
+
+      <suspend/>
+
+      <checkbox 
+     label="P1_Items_ClickedOn2"
+     atleast="1"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     where="execute,survey,report">
+        <title>Products clicked on</title>
+      </checkbox>
+
+      <suspend/>
+
+      <number 
+     label="P1_Number_Unique_Products2"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title># of Unique Products Purchased</title>
+        <exec>
+P1_Number_Unique_Products2.val = P1_Items_Bought2.count
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <number 
+     label="P1_Number_ClickedOn_Products2"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title># of Products Clicked On SKU</title>
+        <exec>
+P1_Number_ClickedOn_Products2.val = P1_Items_ClickedOn2.count
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <autofill label="vProductsBought2" where="execute,survey,report">
+        <title>TestBrand Purchased/Bought</title>
+        <row label="TB" autofill="(P1_Items_Bought2.u65293510001 or P1_Items_Bought2.u65293510001 or P1_Items_Bought2.u65293510001 or P1_Items_Bought2.u65293510001)">TestBrand Purchased</row>
+        <row label="No" autofill="vProductsBought2.count==0">TestBrand NOT Purchased</row>
+      </autofill>
+    </block>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+</block>
+
+<block label="Classification" builder:title="Classification">
+  <html label="Info" where="survey"><b><i>Now, just a few questions for classification purposes…</i></b></html>
+
+  <select 
+   label="STANDARD_ETHNICITY"
+   randomize="0">
+    <title>Please select one of these races/ethnicities that best describes you.</title>
+    <choice label="ch1">White</choice>
+    <choice label="ch2">Black, or African American, or Black British</choice>
+    <choice label="ch3">Asian</choice>
+    <choice label="ch4">Pacific Islander</choice>
+    <choice label="ch5">Hispanic</choice>
+    <choice label="ch6">Some other race</choice>
+    <choice label="ch7">Mixed or multiple</choice>
+    <choice label="ch8">Prefer not to answer</choice>
+  </select>
+</block>
+
+<suspend/>
+</survey>

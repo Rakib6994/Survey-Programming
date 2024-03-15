@@ -1,0 +1,13 @@
+<number label="Q1" size="2">
+  <title>How many children live with you in your household?</title>
+</number>
+<suspend/>
+
+<radio label="Q1_FollowUp" optional="0">
+  <title>You said that you have <b>[pipe: Q1]</b> children in your household. Is that correct?</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+<suspend/>
+
+<goto target="Q1" cond="Q1_FollowUp.r2" />

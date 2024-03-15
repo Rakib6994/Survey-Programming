@@ -1,0 +1,9 @@
+<number 
+  label="A4A"
+  fwidth="1024"
+  optional="0"
+  size="5"
+  verify="range(1,99)">
+  <title>${this.label + ". " if showQID.r1 else ""}Please specify your age below.</title>
+  <style arg:mlen="2" copy="QNumstyle" name="el.text"/>
+</number>

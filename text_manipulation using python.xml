@@ -1,0 +1,159 @@
+<checkbox 
+  label="hidlist"
+  where="execute,survey,report">
+  <title>10 Qualified images.</title>
+  <row label="r1">A1</row>
+  <row label="r2">A2</row>
+  <row label="r3">A3</row>
+  <row label="r4">A4</row>
+  <row label="r5">A5</row>
+  <row label="r6">A6</row>
+  <row label="r7">A7</row>
+  <row label="r8">A8</row>
+  <row label="r9">A9</row>
+  <row label="r10">A10</row>
+  <row label="r11">A11</row>
+  <row label="r12">A12</row>
+  <row label="r13">A13</row>
+  <row label="r14">A14</row>
+  <row label="r15">A15</row>
+  <row label="r16">A16</row>
+  <row label="r17">A17</row>
+  <row label="r18">A18</row>
+  <row label="r19">A19</row>
+  <row label="r20">A20</row>
+  <row label="r21">A21</row>
+  <row label="r22">A22</row>
+  <row label="r23">A23</row>
+  <row label="r24">A24</row>
+  </checkbox>
+<suspend/>
+
+
+
+<exec>
+p.item1=0
+p.item2=0
+p.item3=0
+p.item4=0
+p.item5=0
+p.item6=0
+p.item7=0
+p.item8=0
+p.item9=0
+p.item10=0
+
+for x in hidlist.rows:
+	if hidlist[x] and p.item1==0:
+		qualified_images.r1.text = hidlist[x].text
+		p.item1=p.item1+1
+
+	elif hidlist[x] and p.item2==0:
+		qualified_images.r2.text = hidlist[x].text
+		p.item2=p.item2+1
+
+	elif hidlist[x] and p.item3==0:
+		qualified_images.r3.text = hidlist[x].text
+		p.item3=p.item3+1	
+
+	elif hidlist[x] and p.item4==0:
+		qualified_images.r4.text = hidlist[x].text
+		p.item4=p.item4+1		
+
+	elif hidlist[x] and p.item5==0:
+		qualified_images.r5.text = hidlist[x].text
+		p.item5=p.item5+1
+		
+	elif hidlist[x] and p.item6==0:
+		qualified_images.r6.text = hidlist[x].text
+		p.item6=p.item6+1	
+
+	elif hidlist[x] and p.item7==0:
+		qualified_images.r7.text = hidlist[x].text
+		p.item7=p.item7+1	
+
+	elif hidlist[x] and p.item8==0:
+		qualified_images.r8.text = hidlist[x].text
+		p.item8=p.item8+1
+
+	elif hidlist[x] and p.item9==0:
+		qualified_images.r9.text = hidlist[x].text
+		p.item9=p.item9+1	
+
+	elif hidlist[x] and p.item10==0:
+		qualified_images.r10.text = hidlist[x].text
+		p.item10=p.item10+1				
+</exec>
+
+
+
+<checkbox
+  label="qualified_images"
+  where="execute,survey,report">
+  <title>Image Names</title>
+  <row label="r1" autofill="1">1</row>
+  <row label="r2" autofill="1">2</row>
+  <row label="r3" autofill="1">3</row>
+  <row label="r4" autofill="1">4</row>
+  <row label="r5" autofill="1">5</row>
+  <row label="r6" autofill="1">6</row>
+  <row label="r7" autofill="1">7</row>
+  <row label="r8" autofill="1">8</row>
+  <row label="r9" autofill="1">9</row>
+  <row label="r10" autofill="1">10</row>
+</checkbox>
+<suspend/>
+
+<block label="Final_image" builder:title="VARIABLES">
+  <autofill label="SKU_1" where="execute,survey,report">
+    <title>SKU 1: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r1.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_2" where="execute,survey,report">
+    <title>SKU 2: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r2.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_3" where="execute,survey,report">
+    <title>SKU 3: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r3.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_4" where="execute,survey,report">
+    <title>SKU 4: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r4.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_5" where="execute,survey,report">
+    <title>SKU 5: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r5.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_6" where="execute,survey,report">
+    <title>SKU 6: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r6.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_7" where="execute,survey,report">
+    <title>SKU 7: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r7.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_8" where="execute,survey,report">
+    <title>SKU 8: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r8.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_9" where="execute,survey,report">
+    <title>SKU 9: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r9.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+
+  <autofill label="SKU_10" where="execute,survey,report">
+    <title>SKU 10: Hero Image</title>
+    <row label="r1" autofill="1"><img src="[rel ${qualified_images.r10.text}.jpg]" constrain="true" height="300" width="300" class="pdSwiped" alt="" title="" /></row>
+  </autofill>
+</block>
+
+<suspend/>

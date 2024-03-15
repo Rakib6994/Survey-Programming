@@ -1,0 +1,10 @@
+<!-- Piping Selected options in Q1-->
+
+<html label="Q1_REPORT" where="survey" cond="Q1.val != None">
+  <p>You selected [pipe: Q1]</p>
+  <p>You selected ${Q1.selected.text}</p>
+  <p>You selected ${Q1.rows[Q1.val].text}</p>
+</html>
+
+
+r1 text piping  >--------->>>   ${HidImage.r1.text}

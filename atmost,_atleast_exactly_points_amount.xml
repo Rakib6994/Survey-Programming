@@ -1,0 +1,22 @@
+The atmost, atleast and exactly attributes apply to "<checkbox>"" question types. The points and amount attributes apply to <number> question types.
+
+You can set these attributes dynamically for each respondent.
+
+
+<exec>Q10.exactly = 2</exec>
+<checkbox label="Q10" atleast="1" title="Please select all that apply:">
+  <row label="r1">Item 1</row>
+  <row label="r2">Item 2</row>
+  <row label="r3">Item 3</row>
+  <row label="r4">Item 4</row>
+</checkbox>
+<suspend/>
+
+<exec>Q11.amount = Q10.count</exec>
+<number label="Q11" size="1" amount="4" onLoad="copy('Q10', rows=True)" rowCond="Q10[row]">
+  <title>Please allocate ${Q10.count} points to the following items:</title>
+</number>
+
+
+Error message 1 - Please check exectly 2 boxes in this column (you checked 1)
+Error message 2 - Your total must equal 2 exactly. you have entered 3.

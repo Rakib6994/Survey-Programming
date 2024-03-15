@@ -1,0 +1,1123 @@
+<suspend/>
+
+<quota label="leastfillQuota1" overquota="noqual" sheet="leastfill"/>
+
+<suspend/>
+
+<exec>
+arr =['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18','s19','s20','s21','s22','s23','s24','s25','s26','s27','s28','s29','s30','s31','s32','s33','s34','s35','s36','s37','s38','s39','s40','s41','s42','s43','s44','s45','s46','s47','s48','s49','s50','s51','s52','s53','s54','s55','s56','s57','s58','s59','s60','s61','s62','s63','s64','s65','s66','s67','s68','s69','s70','s71','s72','s73','s74','s75','s76','s77','s78','s79','s80','s81','s82','s83','s84','s85','s86','s87','s88','s89','s90']
+for itr in range(len(arr)):
+  if (hasMarker('/leastfill/' + arr[itr])):
+     Statement_Qual.rows[itr].val = 1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="Statement_Qual"
+  where="execute,survey,report">
+  <title>30 qualified statements.</title>
+  <row label="r1">Der Rucksack soll in mehreren Varianten erhältlich sein, um eine breite Käuferschicht anzusprechen.</row>
+  <row label="r2">Der Rucksack soll den Maßen für Handgepäck bei Fluglinien entsprechen, um als Kabinengepäck genutzt werden zu können.</row>
+  <row label="r3">Der Rucksack soll neben einem Hauptfach auch kleinere Fächer für Gegenstände wie Kopfhörer und Geldbörsen sowie ein zusätzliches Fach am Rücken bieten.</row>
+  <row label="r4">Der Rucksack soll in verschiedenen Größen, beispielsweise in einer kleinen und einer großen Version, angeboten werden.</row>
+  <row label="r5">Der Rucksack soll in einer preiswerten, schlichten und zeitlosen Basisvariante ohne Muster oder Embleme verfügbar sein.</row>
+  <row label="r6">Der Rucksack soll die Möglichkeit bieten, ihn am Fahrrad zu befestigen, sodass er als Fahrradtasche verwendet werden kann.</row>
+  <row label="r7">Der Rucksack soll über die Kommunikationskanäle der Universität vertrieben und beworben werden.</row>
+  <row label="r8">Der Rucksack soll speziell auf die Interessen und Bedürfnisse der Studierenden der Christian-Albrechts-Universität zu Kiel zugeschnitten sein und ein Gefühl der Zugehörigkeit zur Universität vermitteln.</row>
+  <row label="r9">Der Rucksack soll eine integrierte Powerbank enthalten, die über ein Pfandsystem an speziellen Austauschstellen auf dem Campus gegen eine geladene Powerbank getauscht werden kann.</row>
+  <row label="r10">Der Rucksack soll eine zweite Lebensphase haben, indem er zur Aufbereitung zurückgegeben und anschließend zu einem reduzierten Preis wieder verkauft werden kann.</row>
+  <row label="r11">Der Rucksack soll als Mitgliedsausweis eine Zugangsberechtigung zu speziellen Veranstaltungen und Rabatten beinhalten.</row>
+  <row label="r12">Der Rucksack soll individuell gestaltbar sein, zum Beispiel in Bezug auf Farben, Größen, Materialien und Muster.</row>
+  <row label="r13">Der Rucksack soll ein personalisierbares Logo aufweisen, das in Farben, Größen, Materialien und Mustern anpassbar ist.</row>
+  <row label="r14">Der Rucksack soll nach individuellen Wünschen bedruckbar sein.</row>
+  <row label="r15">Der Rucksack soll durch einen Designwettbewerb gestaltet werden.</row>
+  <row label="r16">Der Rucksack soll in Deutschland oder im europäischen Ausland hergestellt werden.</row>
+  <row label="r17">Der Rucksack soll durch Event-Marketing, zum Beispiel über Modenschauen und Pop-up-Stores während der Einführungswochen für Erstsemester, beworben werden.</row>
+  <row label="r18">Der Rucksack soll ein separates Fach für eine Picknickdecke enthalten.</row>
+  <row label="r19">Der Rucksack soll ein fakultätsbezogenes Design aufweisen, das Farben, Logos oder Muster der jeweiligen Fakultät reflektiert.</row>
+  <row label="r20">Der Rucksack soll in verschiedenen Farben erhältlich sein.</row>
+  <row label="r21">Der Rucksack soll einen festen Boden haben, um stets stabil zu stehen und nicht zusammenzuklappen.</row>
+  <row label="r22">Der Rucksack soll Teil eines Starter-Packs für Austauschstudierende sein.</row>
+  <row label="r23">Der Rucksack soll einen Fokus auf Funktionalität legen, einschließlich leichter Reinigung und funktionalen Verschlüssen.</row>
+  <row label="r24">Der Rucksack soll über einen äußeren Getränkehalter verfügen.</row>
+  <row label="r25">Der Rucksack soll durch Gewinnspiele beworben werden, bei denen Rucksäcke verschenkt werden.</row>
+  <row label="r26">Der Rucksack soll regelmäßig verschenkt werden.</row>
+  <row label="r27">Der Rucksack soll einen integrierten GPS-Tracker für das Auffinden bei Verlust beinhalten.</row>
+  <row label="r28">Der Rucksack soll aus hochwertigen Materialien hergestellt werden.</row>
+  <row label="r29">Der Rucksack soll mit einer integrierten Powerbank verkauft werden, die zum Laden von Smartphones und Laptops dient.</row>
+  <row label="r30">Der Rucksack soll ein Isolierfach haben, in dem Getränke und Speisen kühl oder warm gehalten werden können.</row>
+  <row label="r31">Der Rucksack soll in auffälligen Farben verkauft werden, um die Sicherheit im Straßenverkehr zu erhöhen.</row>
+  <row label="r32">Der Rucksack soll durch Kooperationen oder Sponsoring von Unternehmen finanziert werden, um den Preis zu senken.</row>
+  <row label="r33">Der Rucksack soll mit einer kostenlosen Produktzugabe, wie einem Coffee-to-go-Becher, Lageplänen oder Kugelschreibern, verkauft werden.</row>
+  <row label="r34">Der Rucksack soll einen integrierten Mensa- und Bibliothekschip für eine reibungslose Bezahlung und Ausleihe haben.</row>
+  <row label="r35">Der Rucksack soll mit Kühlakkus ausgestattet sein.</row>
+  <row label="r36">Der Rucksack soll ein spezielles Laptopfach für optimalen Schutz enthalten.</row>
+  <row label="r37">Der Rucksack soll eine Aufhängung für die Befestigung am Fahrradgepäckträger haben.</row>
+  <row label="r38">Der Rucksack soll mit LEDs ausgestattet sein, um die Sichtbarkeit des Trägers bei Dunkelheit zu verbessern.</row>
+  <row label="r39">Der Rucksack soll ein besonderes Design haben, das das Logo der Universität hervorhebt.</row>
+  <row label="r40">Der Rucksack soll über lokale Händler verkauft werden.</row>
+  <row label="r41">Der Rucksack soll lokal hergestellt werden, zum Beispiel durch Kooperationen mit lokalen Stoffverarbeitern und Druckereien.</row>
+  <row label="r42">Der Rucksack soll einen Fokus auf das lokale Engagement setzen, z. B. durch den Bezug zur Stadt und zur Region.</row>
+  <row label="r43">Der Rucksack soll einen Fokus auf das lokale Engagement setzen, z. B. durch Strandreinigungsaktionen oder lokalen Baumpflanzaktionen pro verkauftem Rucksack.</row>
+  <row label="r44">Der Rucksack soll durch Influencer-Marketing vertrieben werden, beispielsweise durch Universitäts-Models oder leistungsstarke Studierende.</row>
+  <row label="r45">Der Rucksack soll auch außerhalb der Universität als Freizeitrucksack nutzbar sein.</row>
+  <row label="r46">Der Rucksack soll ein modulares Design haben, um auch als Fahrradtasche oder Umhängetasche verwendet werden zu können oder das Anbringen zusätzlicher Taschen zu ermöglichen.</row>
+  <row label="r47">Der Rucksack soll aus Plastikabfällen aus dem Meer produziert werden.</row>
+  <row label="r48">Der Rucksack soll durch eine Müllsammelaktion vermarktet werden, wobei gesammelter Müll Rabatte auf den Kaufpreis ermöglicht.</row>
+  <row label="r49">Der Rucksack soll aus nachhaltigen Materialien hergestellt werden.</row>
+  <row label="r50">Der Rucksack soll allumfassend den Faktor Nachhaltigkeit fokussieren.</row>
+  <row label="r51">Der Rucksack soll ein ökologisches Image vertreten, zum Beispiel durch faire Produktionsbedingungen oder Spenden aus den Verkaufserlösen an soziale Einrichtungen.</row>
+  <row label="r52">Der Rucksack soll die Möglichkeit bieten, individuelle Patches, wie Fakultäts-Logos oder politische Statements, anzubringen.</row>
+  <row label="r53">Der Rucksack soll eine integrierte Regenkapuze enthalten.</row>
+  <row label="r54">Der Rucksack soll zur Sicherheit des Trägers durch reflektierende Schriftzüge oder Logos an den Außenflächen beitragen.</row>
+  <row label="r55">Der Rucksack soll im Rahmen eines Pfandsystems angeboten werden, wobei für die Rückgabe des Rucksacks ein Betrag erstattet wird und der Rucksack zu einem reduzierten Preis erneut verkauft wird.</row>
+  <row label="r56">Der Rucksack soll zu einem erschwinglichen Preis angeboten werden, wobei Individualisierungen gegen Aufpreis möglich sind.</row>
+  <row label="r57">Der Rucksack soll über Printmedien beworben werden.</row>
+  <row label="r58">Der Rucksack soll in regelmäßigen Abständen (zum Beispiel alle 1 bis 2 Jahre) ein neues Design erhalten</row>
+  <row label="r59">Der Rucksack soll ein Zahlenschloss enthalten, um Wertsachen zu schützen.</row>
+  <row label="r60">Der Rucksack soll durch Rabattaktionen vermarktet werden, wie 10 % Rabatt für Erstsemesterstudierende oder Rabatte in der Mensa.</row>
+  <row label="r61">Der Rucksack soll beim Vorzeigen Rabatte in der Mensa ermöglichen, zum Beispiel für Kaffee.</row>
+  <row label="r62">Beim Vorzeigen eines zum Rucksack mitgelieferten Coffee-to-go-Bechers sollen Rabatte (z.B. für Kaffee in der Mensa) gewährt werden</row>
+  <row label="r63">Der Rucksack soll aus recyceltem Kunststoff hergestellt werden, zum Beispiel aus LKW-Planen oder Stoffresten.</row>
+  <row label="r64">Der Rucksack soll mit zusätzlich erwerbbaren reflektierenden Patches ausgestattet sein können.</row>
+  <row label="r65">Der Rucksack soll mit Reflektoren für bessere Sichtbarkeit ausgestattet sein.</row>
+  <row label="r66">Der Rucksack soll über ein Regencover verfügen, das den Rucksack vor Regen schützt.</row>
+  <row label="r67">Der Rucksack soll aus robusten Materialien, wie wasserfestem Hartplastik, gefertigt werden.</row>
+  <row label="r68">Der Rucksack soll als Rolltop verfügbar sein, sodass er in der Größe zusammenfaltbar bzw. erweiterbar ist.</row>
+  <row label="r69">Der Rucksack soll mit reflektierenden Logos und Schriftzügen ausgestattet sein.</row>
+  <row label="r70">Der Rucksack soll über einen Rückenkühler verfügen, der das Schwitzen verhindert.</row>
+  <row label="r71">Der Rucksack soll aus Segelmaterial produziert werden.</row>
+  <row label="r72">Der Rucksack soll über Social Media, wie Instagram-Accounts, vermarktet werden.</row>
+  <row label="r73">Der Rucksack soll durch integrierte Solarfolien zur Energiegewinnung, z. B. zum Aufladen von Handys oder Laptops, genutzt werden können.</row>
+  <row label="r74">Der Rucksack soll zu bestimmten Zeitpunkten als Sondereditionen verfügbar sein, z. B. regionales Design, LGBTQ.</row>
+  <row label="r75">Der Rucksack soll zu bestimmten Zeitpunkten als Limited Edition angeboten werden, z. B. Winteredition mit weihnachtlichen Patches.</row>
+  <row label="r76">Der Rucksack soll für eine soziale Positionierung stehen, z. B. durch eine Kooperation mit sozialen Hilfsorganisationen.</row>
+  <row label="r77">Der Rucksack soll über ein spezielles Powerbank-Fach verfügen, das die Größe einer handelsüblichen Powerbank hat.</row>
+  <row label="r78">Der Rucksack soll an stationären Stellen vor Ort verkauft werden.</row>
+  <row label="r79">Der Rucksack soll einen hohen Tragekomfort, z. B. durch Polsterung, gewährleisten.</row>
+  <row label="r80">Der Rucksack soll über spezielle Trageriemen verfügen, die den Halt des Rucksacks beim Fahrradfahren verbessern.</row>
+  <row label="r81">Der Rucksack soll ein verstecktes Fach für Wertsachen enthalten.</row>
+  <row label="r82">Der Rucksack kann vorbestellt werden, ggf. mit Vorbestellungsrabatt.</row>
+  <row label="r83">Der Rucksack soll über eine Rückenwärmefunktion verfügen.</row>
+  <row label="r84">Der Rucksack soll über eine wasserfeste Flascheninnentasche verfügen.</row>
+  <row label="r85">Der Rucksack soll aus wasserdichtem Obermaterial, wie PVC-Plane, hergestellt sein.</row>
+  <row label="r86">Der Rucksack soll über einen Werbefilm über den Rucksack (Außen - und Innendesign) beworben werden.</row>
+  <row label="r87">Der Rucksack soll auf Werbeplakaten und Werbetafeln präsentiert werden.</row>
+  <row label="r88">Der Rucksack soll einen eigenen Produktslogan erhalten, z.B. "Auf Kurs mit dem Küstenrucksack" oder "Clever-Bag"</row>
+  <row label="r89">Der Rucksack soll auf universitätsinternen und öffentlichen Veranstaltungen als auch in Schaufenstern beworben werden</row>
+  <row label="r90">Der Rucksack soll in Form von Wettbewerben unter den Fakultäten der Universität vermarktet werden, z. B. die Fakultät, die die meisten Rucksäcke kauft, erhält einen finanziellen Zuschuss zur Fachschaftsparty.</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+p.item1=0
+p.item2=0
+p.item3=0
+p.item4=0
+p.item5=0
+p.item6=0
+p.item7=0
+p.item8=0
+p.item9=0
+p.item10=0
+p.item11=0
+p.item12=0
+p.item13=0
+p.item14=0
+p.item15=0
+p.item16=0
+p.item17=0
+p.item18=0
+p.item19=0
+p.item20=0
+p.item21=0
+p.item22=0
+p.item23=0
+p.item24=0
+p.item25=0
+p.item26=0
+p.item27=0
+p.item28=0
+p.item29=0
+p.item30=0
+
+for x in Statement_Qual.rows:
+   if Statement_Qual[x] and p.item1==0:
+      Maxdiff_Statements.r1.text = Statement_Qual[x].text
+      p.item1=p.item1+1
+
+   elif Statement_Qual[x] and p.item2==0:
+      Maxdiff_Statements.r2.text = Statement_Qual[x].text
+      p.item2=p.item2+1
+
+   elif Statement_Qual[x] and p.item3==0:
+      Maxdiff_Statements.r3.text = Statement_Qual[x].text
+      p.item3=p.item3+1 
+
+   elif Statement_Qual[x] and p.item4==0:
+      Maxdiff_Statements.r4.text = Statement_Qual[x].text
+      p.item4=p.item4+1    
+
+   elif Statement_Qual[x] and p.item5==0:
+      Maxdiff_Statements.r5.text = Statement_Qual[x].text
+      p.item5=p.item5+1
+      
+   elif Statement_Qual[x] and p.item6==0:
+      Maxdiff_Statements.r6.text = Statement_Qual[x].text
+      p.item6=p.item6+1 
+
+   elif Statement_Qual[x] and p.item7==0:
+      Maxdiff_Statements.r7.text = Statement_Qual[x].text
+      p.item7=p.item7+1 
+
+   elif Statement_Qual[x] and p.item8==0:
+      Maxdiff_Statements.r8.text = Statement_Qual[x].text
+      p.item8=p.item8+1
+
+   elif Statement_Qual[x] and p.item9==0:
+      Maxdiff_Statements.r9.text = Statement_Qual[x].text
+      p.item9=p.item9+1 
+
+   elif Statement_Qual[x] and p.item10==0:
+      Maxdiff_Statements.r10.text = Statement_Qual[x].text
+      p.item10=p.item10+1
+
+   elif Statement_Qual[x] and p.item11==0:
+      Maxdiff_Statements.r11.text = Statement_Qual[x].text
+      p.item11=p.item11+1
+
+   elif Statement_Qual[x] and p.item12==0:
+      Maxdiff_Statements.r12.text = Statement_Qual[x].text
+      p.item12=p.item12+1
+
+   elif Statement_Qual[x] and p.item13==0:
+      Maxdiff_Statements.r13.text = Statement_Qual[x].text
+      p.item13=p.item13+1      
+
+   elif Statement_Qual[x] and p.item14==0:
+      Maxdiff_Statements.r14.text = Statement_Qual[x].text
+      p.item14=p.item14+1
+
+   elif Statement_Qual[x] and p.item15==0:
+      Maxdiff_Statements.r15.text = Statement_Qual[x].text
+      p.item15=p.item15+1
+
+   elif Statement_Qual[x] and p.item16==0:
+      Maxdiff_Statements.r16.text = Statement_Qual[x].text
+      p.item16=p.item16+1
+
+   elif Statement_Qual[x] and p.item17==0:
+      Maxdiff_Statements.r17.text = Statement_Qual[x].text
+      p.item17=p.item17+1
+
+   elif Statement_Qual[x] and p.item18==0:
+      Maxdiff_Statements.r18.text = Statement_Qual[x].text
+      p.item18=p.item18+1      
+
+   elif Statement_Qual[x] and p.item19==0:
+      Maxdiff_Statements.r19.text = Statement_Qual[x].text
+      p.item19=p.item19+1
+
+   elif Statement_Qual[x] and p.item20==0:
+      Maxdiff_Statements.r20.text = Statement_Qual[x].text
+      p.item20=p.item20+1
+
+   elif Statement_Qual[x] and p.item21==0:
+      Maxdiff_Statements.r21.text = Statement_Qual[x].text
+      p.item21=p.item21+1
+
+   elif Statement_Qual[x] and p.item22==0:
+      Maxdiff_Statements.r22.text = Statement_Qual[x].text
+      p.item22=p.item22+1
+
+   elif Statement_Qual[x] and p.item23==0:
+      Maxdiff_Statements.r23.text = Statement_Qual[x].text
+      p.item23=p.item23+1      
+
+   elif Statement_Qual[x] and p.item24==0:
+      Maxdiff_Statements.r24.text = Statement_Qual[x].text
+      p.item24=p.item24+1
+
+   elif Statement_Qual[x] and p.item25==0:
+      Maxdiff_Statements.r25.text = Statement_Qual[x].text
+      p.item25=p.item25+1
+
+   elif Statement_Qual[x] and p.item26==0:
+      Maxdiff_Statements.r26.text = Statement_Qual[x].text
+      p.item26=p.item26+1
+
+   elif Statement_Qual[x] and p.item27==0:
+      Maxdiff_Statements.r27.text = Statement_Qual[x].text
+      p.item27=p.item27+1
+
+   elif Statement_Qual[x] and p.item28==0:
+      Maxdiff_Statements.r28.text = Statement_Qual[x].text
+      p.item28=p.item28+1      
+
+   elif Statement_Qual[x] and p.item29==0:
+      Maxdiff_Statements.r29.text = Statement_Qual[x].text
+      p.item29=p.item29+1
+
+   elif Statement_Qual[x] and p.item30==0:
+      Maxdiff_Statements.r30.text = Statement_Qual[x].text
+      p.item30=p.item30+1
+</exec>
+
+<checkbox 
+  label="Maxdiff_Statements"
+  where="execute,survey,report">
+  <title>Qualified maxdiff statements. These statements will be used in maxdiff.</title>
+  <row label="r1" autofill="1">Statement1</row>
+  <row label="r2" autofill="1">Statement2</row>
+  <row label="r3" autofill="1">Statement3</row>
+  <row label="r4" autofill="1">Statement4</row>
+  <row label="r5" autofill="1">Statement5</row>
+  <row label="r6" autofill="1">Statement6</row>
+  <row label="r7" autofill="1">Statement7</row>
+  <row label="r8" autofill="1">Statement8</row>
+  <row label="r9" autofill="1">Statement9</row>
+  <row label="r10" autofill="1">Statement10</row>
+  <row label="r11" autofill="1">Statement11</row>
+  <row label="r12" autofill="1">Statement12</row>
+  <row label="r13" autofill="1">Statement13</row>
+  <row label="r14" autofill="1">Statement14</row>
+  <row label="r15" autofill="1">Statement15</row>
+  <row label="r16" autofill="1">Statement16</row>
+  <row label="r17" autofill="1">Statement17</row>
+  <row label="r18" autofill="1">Statement18</row>
+  <row label="r19" autofill="1">Statement19</row>
+  <row label="r20" autofill="1">Statement20</row>
+  <row label="r21" autofill="1">Statement21</row>
+  <row label="r22" autofill="1">Statement22</row>
+  <row label="r23" autofill="1">Statement23</row>
+  <row label="r24" autofill="1">Statement24</row>
+  <row label="r25" autofill="1">Statement25</row>
+  <row label="r26" autofill="1">Statement26</row>
+  <row label="r27" autofill="1">Statement27</row>
+  <row label="r28" autofill="1">Statement28</row>
+  <row label="r29" autofill="1">Statement29</row>
+  <row label="r30" autofill="1">Statement30</row>
+</checkbox>
+
+<suspend/>
+
+<text 
+  label="Q_Items"
+  size="90"
+  where="execute,survey,report">
+  <title>Here, the statements are saved in data.</title>
+  <exec>
+Q_Items.item1.val =  Maxdiff_Statements.r1.text
+Q_Items.item2.val =  Maxdiff_Statements.r2.text
+Q_Items.item3.val =  Maxdiff_Statements.r3.text
+Q_Items.item4.val =  Maxdiff_Statements.r4.text
+Q_Items.item5.val =  Maxdiff_Statements.r5.text
+Q_Items.item6.val =  Maxdiff_Statements.r6.text
+Q_Items.item7.val =  Maxdiff_Statements.r7.text
+Q_Items.item8.val =  Maxdiff_Statements.r8.text
+Q_Items.item9.val =  Maxdiff_Statements.r9.text
+Q_Items.item10.val = Maxdiff_Statements.r10.text
+Q_Items.item11.val = Maxdiff_Statements.r11.text
+Q_Items.item12.val = Maxdiff_Statements.r12.text
+Q_Items.item13.val = Maxdiff_Statements.r13.text
+Q_Items.item14.val = Maxdiff_Statements.r14.text
+Q_Items.item15.val = Maxdiff_Statements.r15.text
+Q_Items.item16.val = Maxdiff_Statements.r16.text
+Q_Items.item17.val = Maxdiff_Statements.r17.text
+Q_Items.item18.val = Maxdiff_Statements.r18.text
+Q_Items.item19.val = Maxdiff_Statements.r19.text
+Q_Items.item20.val = Maxdiff_Statements.r20.text
+Q_Items.item21.val = Maxdiff_Statements.r21.text
+Q_Items.item22.val = Maxdiff_Statements.r22.text
+Q_Items.item23.val = Maxdiff_Statements.r23.text
+Q_Items.item24.val = Maxdiff_Statements.r24.text
+Q_Items.item25.val = Maxdiff_Statements.r25.text
+Q_Items.item26.val = Maxdiff_Statements.r26.text
+Q_Items.item27.val = Maxdiff_Statements.r27.text
+Q_Items.item28.val = Maxdiff_Statements.r28.text
+Q_Items.item29.val = Maxdiff_Statements.r29.text
+Q_Items.item30.val = Maxdiff_Statements.r30.text
+  </exec>
+
+  <row label="item1">item1</row>
+  <row label="item2">item2</row>
+  <row label="item3">item3</row>
+  <row label="item4">item4</row>
+  <row label="item5">item5</row>
+  <row label="item6">item6</row>
+  <row label="item7">item7</row>
+  <row label="item8">item8</row>
+  <row label="item9">item9</row>
+  <row label="item10">item10</row>
+  <row label="item11">item11</row>
+  <row label="item12">item12</row>
+  <row label="item13">item13</row>
+  <row label="item14">item14</row>
+  <row label="item15">item15</row>
+  <row label="item16">item16</row>
+  <row label="item17">item17</row>
+  <row label="item18">item18</row>
+  <row label="item19">item19</row>
+  <row label="item20">item20</row>
+  <row label="item21">item21</row>
+  <row label="item22">item22</row>
+  <row label="item23">item23</row>
+  <row label="item24">item24</row>
+  <row label="item25">item25</row>
+  <row label="item26">item26</row>
+  <row label="item27">item27</row>
+  <row label="item28">item28</row>
+  <row label="item29">item29</row>
+  <row label="item30">item30</row>
+</text>
+
+<suspend/>
+
+<block label="Maxdiff1">
+  <html label="Intro1" where="survey">Im Folgenden werden Ihnen erneut die Ideen präsentiert. Bitte wählen Sie unter den gezeigten Ideen immer die Idee aus, welche Sie im Vergleich der gezeigten Ideen als <u><b>besonders originell</b></u> halten und die Idee, die sie als am <u><b>wenigsten originell</b></u> einstufen.</html>
+
+  <suspend/>
+
+  <exec>
+p.arr1 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  </exec>
+
+  <block label="Block1">
+    <block label="Q1">
+      <note>MaxDiff Indices Template --Start--</note>
+      <exec when="init">
+def setupMaxDiffFile(fname, fileDelimiter="\t"):
+    try:
+        f = open("%s/%s" % (gv.survey.path, fname))
+        mdObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]
+        d = dict( ("v%s_t%s" % (row[0], row[1]), row[2:]) for row in mdObj )
+    except IOError:
+        d = {}
+    return d
+
+def setupMaxDiffItemsI(d, vt, question):
+    item_index = dict( (r.o.label.strip("item"), r.index) for r in question.rows )
+
+    items = d[vt]
+
+
+    for r in question.rows:
+        if r.o.label.strip("item") not in items:
+            r.disabled = True
+
+    question.rows.order = [ item_index[i] for i in items ]
+
+
+  
+    print "*****STAFF ONLY*****"
+    print "Version_Task: %s" % vt
+    for i in range(len(items)):
+        print "Item %s: %s" % (i+1,items[i])
+      </exec>
+
+      <exec when="init">
+Q1_md = setupMaxDiffFile("Design.dat")
+      </exec>
+
+      <quota label="Quota1" doit="1" overquota="noqual" sheet="Maxdiff"/>
+
+      <number 
+     label="Q1_Version"
+     size="3"
+     verify="range(1,1600)"
+     where="execute,survey,report">
+        <title>Q1 - MaxDiff Version</title>
+        <exec>
+print p.markers
+for x in p.markers:
+    if "/Maxdiff/ver_" in x:
+        Q1_Version.val = int(x.split("_")[-1])
+        break
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <exec>
+p.startTime = timeSpent()
+      </exec>
+
+      <loop label="Q1_md_loop" vars="task">
+        <title>Q1 - MaxDiff Loop</title>
+        <block label="Q1_md_block" randomize="1">
+          <radio 
+       label="Q1_[loopvar: task]"
+       adim="cols"
+       grouping="cols"
+       shuffle="rows"
+       ss:questionClassNames="Q_DecisionFactors_maxdiff"
+       unique="1">
+            <title>Iteration [MDcount]/15<br /><br /><b>Bitte wählen Sie die Idee aus, die im Vergleich am originellsten ist, und die Idee, die am wenigsten originell ist</b>.<br /><br /><b>Der Rucksack soll…</b></title>
+            <exec>
+setupMaxDiffItemsI( Q1_md, "v%d_t%d" % (Q1_Version.val, [loopvar: task]), Q1_[loopvar: task])
+p.MDcount = str(Q1_md_loop_expanded.order.index([loopvar: task]-1)+1)
+            </exec>
+
+            <col label="best">Am originellsten</col>
+            <col label="worst">Am wenigsten originell</col>
+            <row label="item1">${Maxdiff_Statements.r1.text}</row>
+            <row label="item2">${Maxdiff_Statements.r2.text}</row>
+            <row label="item3">${Maxdiff_Statements.r3.text}</row>
+            <row label="item4">${Maxdiff_Statements.r4.text}</row>
+            <row label="item5">${Maxdiff_Statements.r5.text}</row>
+            <row label="item6">${Maxdiff_Statements.r6.text}</row>
+            <row label="item7">${Maxdiff_Statements.r7.text}</row>
+            <row label="item8">${Maxdiff_Statements.r8.text}</row>
+            <row label="item9">${Maxdiff_Statements.r9.text}</row>
+            <row label="item10">${Maxdiff_Statements.r10.text}</row>
+            <row label="item11">${Maxdiff_Statements.r11.text}</row>
+            <row label="item12">${Maxdiff_Statements.r12.text}</row>
+            <row label="item13">${Maxdiff_Statements.r13.text}</row>
+            <row label="item14">${Maxdiff_Statements.r14.text}</row>
+            <row label="item15">${Maxdiff_Statements.r15.text}</row>
+            <row label="item16">${Maxdiff_Statements.r16.text}</row>
+            <row label="item17">${Maxdiff_Statements.r17.text}</row>
+            <row label="item18">${Maxdiff_Statements.r18.text}</row>
+            <row label="item19">${Maxdiff_Statements.r19.text}</row>
+            <row label="item20">${Maxdiff_Statements.r20.text}</row>
+            <row label="item21">${Maxdiff_Statements.r21.text}</row>
+            <row label="item22">${Maxdiff_Statements.r22.text}</row>
+            <row label="item23">${Maxdiff_Statements.r23.text}</row>
+            <row label="item24">${Maxdiff_Statements.r24.text}</row>
+            <row label="item25">${Maxdiff_Statements.r25.text}</row>
+            <row label="item26">${Maxdiff_Statements.r26.text}</row>
+            <row label="item27">${Maxdiff_Statements.r27.text}</row>
+            <row label="item28">${Maxdiff_Statements.r28.text}</row>
+            <row label="item29">${Maxdiff_Statements.r29.text}</row>
+            <row label="item30">${Maxdiff_Statements.r30.text}</row>
+            <style mode="before" name="question.header"><![CDATA[
+<style type="text/css">
+    .Q_DecisionFactors_maxdiff tr.maxdiff-header-legend {
+        background-color: transparent;
+        border-bottom: 2px solid #d9d9d9;
+    }
+    .Q_DecisionFactors_maxdiff tr.maxdiff-header-legend th.legend {
+        background-color: transparent;
+        border: none;
+    }
+    .Q_DecisionFactors_maxdiff tr.maxdiff-row td.element {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    .Q_DecisionFactors_maxdiff tr.maxdiff-row th.row-legend {
+        background-color: transparent;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    </style>
+]]></style>
+            <style name="question.top-legend"><![CDATA[
+\@if ec.simpleList
+    $(legends)
+\@else
+    <$(tag) class="maxdiff-header-legend row row-col-legends row-col-legends-top ${"mobile-top-row-legend " if mobileOnly else ""}${"GtTenColumns " if ec.colCount > 10 else ""}colCount-$(colCount)">
+        ${"%s%s" % (legends.split("</th>")[0],"</th>")}
+       $(left)
+        ${"%s%s" % (legends.split("</th>")[1],"</th>")}
+    </$(tag)>
+    \@if not simple
+  </tbody>
+  <tbody>
+    \@endif
+\@endif
+]]></style>
+            <style name="question.row"><![CDATA[
+\@if ec.simpleList
+    $(elements)
+\@else
+    <$(tag) class="maxdiff-row row row-elements $(style) colCount-$(colCount)">
+        ${"%s%s" % (elements.split("</td>")[0],"</td>")}
+        $(left)
+        ${"%s%s" % (elements.split("</td>")[1],"</td>")}
+    </$(tag)>
+\@endif
+]]></style>
+          </radio>
+
+          <suspend/>
+
+          <exec>
+for itr in range(len(Q1_[loopvar: task].rows)):
+    if Q1_[loopvar: task].rows[itr].best:
+       p.arr1[itr] = p.arr1[itr] + 1
+    if Q1_[loopvar: task].rows[itr].worst:
+       p.arr1[itr] = p.arr1[itr] - 1
+          </exec>
+
+          <suspend/>
+        </block>
+
+        <looprow label="1">
+          <loopvar name="task">1</loopvar>
+        </looprow>
+
+        <looprow label="2">
+          <loopvar name="task">2</loopvar>
+        </looprow>
+
+        <looprow label="3">
+          <loopvar name="task">3</loopvar>
+        </looprow>
+
+        <looprow label="4">
+          <loopvar name="task">4</loopvar>
+        </looprow>
+
+        <looprow label="5">
+          <loopvar name="task">5</loopvar>
+        </looprow>
+
+        <looprow label="6">
+          <loopvar name="task">6</loopvar>
+        </looprow>
+
+        <looprow label="7">
+          <loopvar name="task">7</loopvar>
+        </looprow>
+
+        <looprow label="8">
+          <loopvar name="task">8</loopvar>
+        </looprow>
+
+        <looprow label="9">
+          <loopvar name="task">9</loopvar>
+        </looprow>
+
+        <looprow label="10">
+          <loopvar name="task">10</loopvar>
+        </looprow>
+
+        <looprow label="11">
+          <loopvar name="task">11</loopvar>
+        </looprow>
+
+        <looprow label="12">
+          <loopvar name="task">12</loopvar>
+        </looprow>
+
+        <looprow label="13">
+          <loopvar name="task">13</loopvar>
+        </looprow>
+
+        <looprow label="14">
+          <loopvar name="task">14</loopvar>
+        </looprow>
+
+        <looprow label="15">
+          <loopvar name="task">15</loopvar>
+        </looprow>
+      </loop>
+
+      <float 
+     label="Q1_Timer"
+     size="15"
+     where="execute,survey,report">
+        <title>Q1 - MaxDiff Timer (Minutes)</title>
+        <exec>
+Q1_Timer.val = (timeSpent() - p.startTime) / 60.0
+        </exec>
+
+      </float>
+
+      <suspend/>
+    </block>
+
+    <exec>
+print p.arr1
+for itr in range(len(p.arr1)):
+  D1Score.rows[itr].val = p.arr1[itr]
+  
+for x in range(len(progScore.rows)):
+    if p.arr1[x] == -5 or p.arr1[x] == -6:  progScore.rows[x].c1.val = 1
+    if p.arr1[x] == -4:  progScore.rows[x].c2.val = 1
+    if p.arr1[x] == -3:  progScore.rows[x].c3.val = 1
+    if p.arr1[x] == -2:  progScore.rows[x].c4.val = 1
+    if p.arr1[x] == -1:  progScore.rows[x].c5.val = 1
+    if p.arr1[x] == 0:  progScore.rows[x].c6.val = 1
+    if p.arr1[x] == 1:  progScore.rows[x].c7.val = 1
+    if p.arr1[x] == 2:  progScore.rows[x].c8.val = 1
+    if p.arr1[x] == 3:  progScore.rows[x].c9.val = 1
+    if p.arr1[x] == 4:  progScore.rows[x].c10.val = 1
+    if p.arr1[x] == 5 or p.arr1[x] == 6:  progScore.rows[x].c11.val = 1
+    </exec>
+
+    <suspend/>
+
+    <checkbox 
+    label="progScore"
+    translateable="0"
+    where="execute,survey,report,notdp">
+      <title>Hidden for punching score</title>
+      <row label="item1">${Maxdiff_Statements.r1.text}</row>
+      <row label="item2">${Maxdiff_Statements.r2.text}</row>
+      <row label="item3">${Maxdiff_Statements.r3.text}</row>
+      <row label="item4">${Maxdiff_Statements.r4.text}</row>
+      <row label="item5">${Maxdiff_Statements.r5.text}</row>
+      <row label="item6">${Maxdiff_Statements.r6.text}</row>
+      <row label="item7">${Maxdiff_Statements.r7.text}</row>
+      <row label="item8">${Maxdiff_Statements.r8.text}</row>
+      <row label="item9">${Maxdiff_Statements.r9.text}</row>
+      <row label="item10">${Maxdiff_Statements.r10.text}</row>
+      <row label="item11">${Maxdiff_Statements.r11.text}</row>
+      <row label="item12">${Maxdiff_Statements.r12.text}</row>
+      <row label="item13">${Maxdiff_Statements.r13.text}</row>
+      <row label="item14">${Maxdiff_Statements.r14.text}</row>
+      <row label="item15">${Maxdiff_Statements.r15.text}</row>
+      <row label="item16">${Maxdiff_Statements.r16.text}</row>
+      <row label="item17">${Maxdiff_Statements.r17.text}</row>
+      <row label="item18">${Maxdiff_Statements.r18.text}</row>
+      <row label="item19">${Maxdiff_Statements.r19.text}</row>
+      <row label="item20">${Maxdiff_Statements.r20.text}</row>
+      <row label="item21">${Maxdiff_Statements.r21.text}</row>
+      <row label="item22">${Maxdiff_Statements.r22.text}</row>
+      <row label="item23">${Maxdiff_Statements.r23.text}</row>
+      <row label="item24">${Maxdiff_Statements.r24.text}</row>
+      <row label="item25">${Maxdiff_Statements.r25.text}</row>
+      <row label="item26">${Maxdiff_Statements.r26.text}</row>
+      <row label="item27">${Maxdiff_Statements.r27.text}</row>
+      <row label="item28">${Maxdiff_Statements.r28.text}</row>
+      <row label="item29">${Maxdiff_Statements.r29.text}</row>
+      <row label="item30">${Maxdiff_Statements.r30.text}</row>
+      <col label="c1">-5</col>
+      <col label="c2">-4</col>
+      <col label="c3">-3</col>
+      <col label="c4">-2</col>
+      <col label="c5">-1</col>
+      <col label="c6">0</col>
+      <col label="c7">1</col>
+      <col label="c8">2</col>
+      <col label="c9">3</col>
+      <col label="c10">4</col>
+      <col label="c11">5</col>
+    </checkbox>
+
+    <suspend/>
+
+    <text 
+    label="D1Score"
+    rowLegend="right"
+    size="3"
+    translateable="0"
+    where="execute,survey,report">
+      <title>Hidden for punching score</title>
+      <row label="item1">${Maxdiff_Statements.r1.text}</row>
+      <row label="item2">${Maxdiff_Statements.r2.text}</row>
+      <row label="item3">${Maxdiff_Statements.r3.text}</row>
+      <row label="item4">${Maxdiff_Statements.r4.text}</row>
+      <row label="item5">${Maxdiff_Statements.r5.text}</row>
+      <row label="item6">${Maxdiff_Statements.r6.text}</row>
+      <row label="item7">${Maxdiff_Statements.r7.text}</row>
+      <row label="item8">${Maxdiff_Statements.r8.text}</row>
+      <row label="item9">${Maxdiff_Statements.r9.text}</row>
+      <row label="item10">${Maxdiff_Statements.r10.text}</row>
+      <row label="item11">${Maxdiff_Statements.r11.text}</row>
+      <row label="item12">${Maxdiff_Statements.r12.text}</row>
+      <row label="item13">${Maxdiff_Statements.r13.text}</row>
+      <row label="item14">${Maxdiff_Statements.r14.text}</row>
+      <row label="item15">${Maxdiff_Statements.r15.text}</row>
+      <row label="item16">${Maxdiff_Statements.r16.text}</row>
+      <row label="item17">${Maxdiff_Statements.r17.text}</row>
+      <row label="item18">${Maxdiff_Statements.r18.text}</row>
+      <row label="item19">${Maxdiff_Statements.r19.text}</row>
+      <row label="item20">${Maxdiff_Statements.r20.text}</row>
+      <row label="item21">${Maxdiff_Statements.r21.text}</row>
+      <row label="item22">${Maxdiff_Statements.r22.text}</row>
+      <row label="item23">${Maxdiff_Statements.r23.text}</row>
+      <row label="item24">${Maxdiff_Statements.r24.text}</row>
+      <row label="item25">${Maxdiff_Statements.r25.text}</row>
+      <row label="item26">${Maxdiff_Statements.r26.text}</row>
+      <row label="item27">${Maxdiff_Statements.r27.text}</row>
+      <row label="item28">${Maxdiff_Statements.r28.text}</row>
+      <row label="item29">${Maxdiff_Statements.r29.text}</row>
+      <row label="item30">${Maxdiff_Statements.r30.text}</row>
+    </text>
+
+    <suspend/>
+  </block>
+
+  <block label="Maxdiff2">
+    <html label="Intro2" where="survey">Im Folgenden präsentieren wir Ihnen erneut die Idee, dieses mal sollen Sie diese im Hinblick auf <u><b>die Nützlichkeit</b></u> bewerten. Bitte wählen Sie unter den gezeigten Ideen immer die Idee aus, welche Sie im Vergleich der gezeigten Ideen als <u><b>besonders nützlich</b></u> halten und die Idee, die sie als <u><b>am wenigsten nützlich</b></u> einstufen.</html>
+
+    <suspend/>
+  <exec>
+p.arr2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  </exec>
+  <suspend/>
+    <block label="Q2">
+      <exec when="init">
+def setupMaxDiffFile(fname, fileDelimiter="\t"):
+    try:
+        f = open("%s/%s" % (gv.survey.path, fname))
+        mdObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]
+        d = dict( ("v%s_t%s" % (row[0], row[1]), row[2:]) for row in mdObj )
+    except IOError:
+        d = {}
+    return d
+
+def setupMaxDiffItemsI(d, vt, question):
+    item_index = dict( (r.o.label.strip("item"), r.index) for r in question.rows )
+
+    items = d[vt]
+
+
+    for r in question.rows:
+        if r.o.label.strip("item") not in items:
+            r.disabled = True
+
+    question.rows.order = [ item_index[i] for i in items ]
+
+
+  
+    print "*****STAFF ONLY*****"
+    print "Version_Task: %s" % vt
+    for i in range(len(items)):
+        print "Item %s: %s" % (i+1,items[i])
+      </exec>
+
+      <exec when="init">
+Q2_md = setupMaxDiffFile("Design.dat")
+      </exec>
+
+      <quota label="Quota2" doit="1" overquota="noqual" sheet="Maxdiff"/>
+
+      <number 
+     label="Q2_Version"
+     size="3"
+     verify="range(1,1600)"
+     where="execute,survey,report">
+        <title>Q2 - MaxDiff Version</title>
+        <exec>
+print p.markers
+for x in p.markers:
+    if "/Maxdiff/ver_" in x:
+        Q2_Version.val = int(x.split("_")[-1])
+        break
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <exec>
+p.startTime = timeSpent()
+      </exec>
+
+      <loop label="Q2_md_loop" vars="task1">
+        <title>Q2 - MaxDiff Loop</title>
+        <block label="Q2_md_block" randomize="1">
+          <radio 
+       label="Q2_[loopvar: task1]"
+       adim="cols"
+       grouping="cols"
+       shuffle="rows"
+       ss:questionClassNames="Q_DecisionFactors_maxdiff"
+       unique="1">
+            <title>Iteration [MDcount]/15<br /><br /><b>Bitte wählen Sie die Idee aus, die im Vergleich am nützlichsten ist, und die Idee, die am wenigsten nützlich ist</b>.<br /><br /><b>Der Rucksack soll…</b></title>
+            <exec>
+setupMaxDiffItemsI( Q2_md, "v%d_t%d" % (Q2_Version.val, [loopvar: task1]), Q2_[loopvar: task1])
+p.MDcount = str(Q2_md_loop_expanded.order.index([loopvar: task1]-1)+1)
+            </exec>
+
+            <col label="best">Am originellsten</col>
+            <col label="worst">Am wenigsten originell</col>
+            <row label="item1">${Maxdiff_Statements.r1.text}</row>
+            <row label="item2">${Maxdiff_Statements.r2.text}</row>
+            <row label="item3">${Maxdiff_Statements.r3.text}</row>
+            <row label="item4">${Maxdiff_Statements.r4.text}</row>
+            <row label="item5">${Maxdiff_Statements.r5.text}</row>
+            <row label="item6">${Maxdiff_Statements.r6.text}</row>
+            <row label="item7">${Maxdiff_Statements.r7.text}</row>
+            <row label="item8">${Maxdiff_Statements.r8.text}</row>
+            <row label="item9">${Maxdiff_Statements.r9.text}</row>
+            <row label="item10">${Maxdiff_Statements.r10.text}</row>
+            <row label="item11">${Maxdiff_Statements.r11.text}</row>
+            <row label="item12">${Maxdiff_Statements.r12.text}</row>
+            <row label="item13">${Maxdiff_Statements.r13.text}</row>
+            <row label="item14">${Maxdiff_Statements.r14.text}</row>
+            <row label="item15">${Maxdiff_Statements.r15.text}</row>
+            <row label="item16">${Maxdiff_Statements.r16.text}</row>
+            <row label="item17">${Maxdiff_Statements.r17.text}</row>
+            <row label="item18">${Maxdiff_Statements.r18.text}</row>
+            <row label="item19">${Maxdiff_Statements.r19.text}</row>
+            <row label="item20">${Maxdiff_Statements.r20.text}</row>
+            <row label="item21">${Maxdiff_Statements.r21.text}</row>
+            <row label="item22">${Maxdiff_Statements.r22.text}</row>
+            <row label="item23">${Maxdiff_Statements.r23.text}</row>
+            <row label="item24">${Maxdiff_Statements.r24.text}</row>
+            <row label="item25">${Maxdiff_Statements.r25.text}</row>
+            <row label="item26">${Maxdiff_Statements.r26.text}</row>
+            <row label="item27">${Maxdiff_Statements.r27.text}</row>
+            <row label="item28">${Maxdiff_Statements.r28.text}</row>
+            <row label="item29">${Maxdiff_Statements.r29.text}</row>
+            <row label="item30">${Maxdiff_Statements.r30.text}</row>
+            <style mode="before" name="question.header"><![CDATA[
+<style type="text/css">
+    .Q_DecisionFactors_maxdiff tr.maxdiff-header-legend {
+        background-color: transparent;
+        border-bottom: 2px solid #d9d9d9;
+    }
+    .Q_DecisionFactors_maxdiff tr.maxdiff-header-legend th.legend {
+        background-color: transparent;
+        border: none;
+    }
+    .Q_DecisionFactors_maxdiff tr.maxdiff-row td.element {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    .Q_DecisionFactors_maxdiff tr.maxdiff-row th.row-legend {
+        background-color: transparent;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid #d9d9d9;
+        text-align: center;
+    }
+    </style>
+]]></style>
+            <style name="question.top-legend"><![CDATA[
+\@if ec.simpleList
+    $(legends)
+\@else
+    <$(tag) class="maxdiff-header-legend row row-col-legends row-col-legends-top ${"mobile-top-row-legend " if mobileOnly else ""}${"GtTenColumns " if ec.colCount > 10 else ""}colCount-$(colCount)">
+        ${"%s%s" % (legends.split("</th>")[0],"</th>")}
+       $(left)
+        ${"%s%s" % (legends.split("</th>")[1],"</th>")}
+    </$(tag)>
+    \@if not simple
+  </tbody>
+  <tbody>
+    \@endif
+\@endif
+]]></style>
+            <style name="question.row"><![CDATA[
+\@if ec.simpleList
+    $(elements)
+\@else
+    <$(tag) class="maxdiff-row row row-elements $(style) colCount-$(colCount)">
+        ${"%s%s" % (elements.split("</td>")[0],"</td>")}
+        $(left)
+        ${"%s%s" % (elements.split("</td>")[1],"</td>")}
+    </$(tag)>
+\@endif
+]]></style>
+          </radio>
+  <suspend/>           
+          
+        <exec>
+for itr in range(len(Q2_[loopvar: task1].rows)):
+    if Q2_[loopvar: task1].rows[itr].best:
+       p.arr2[itr] = p.arr2[itr] + 1
+    if Q2_[loopvar: task1].rows[itr].worst:
+       p.arr2[itr] = p.arr2[itr] - 1
+        </exec>
+
+        <suspend/>          
+        </block>
+
+        <looprow label="1">
+          <loopvar name="task1">1</loopvar>
+        </looprow>
+
+        <looprow label="2">
+          <loopvar name="task1">2</loopvar>
+        </looprow>
+
+        <looprow label="3">
+          <loopvar name="task1">3</loopvar>
+        </looprow>
+
+        <looprow label="4">
+          <loopvar name="task1">4</loopvar>
+        </looprow>
+
+        <looprow label="5">
+          <loopvar name="task1">5</loopvar>
+        </looprow>
+
+        <looprow label="6">
+          <loopvar name="task1">6</loopvar>
+        </looprow>
+
+        <looprow label="7">
+          <loopvar name="task1">7</loopvar>
+        </looprow>
+
+        <looprow label="8">
+          <loopvar name="task1">8</loopvar>
+        </looprow>
+
+        <looprow label="9">
+          <loopvar name="task1">9</loopvar>
+        </looprow>
+
+        <looprow label="10">
+          <loopvar name="task1">10</loopvar>
+        </looprow>
+
+        <looprow label="11">
+          <loopvar name="task1">11</loopvar>
+        </looprow>
+
+        <looprow label="12">
+          <loopvar name="task1">12</loopvar>
+        </looprow>
+
+        <looprow label="13">
+          <loopvar name="task1">13</loopvar>
+        </looprow>
+
+        <looprow label="14">
+          <loopvar name="task1">14</loopvar>
+        </looprow>
+
+        <looprow label="15">
+          <loopvar name="task1">15</loopvar>
+        </looprow>
+      </loop>
+
+      <float 
+     label="Q2_Timer"
+     size="15"
+     where="execute,survey,report">
+        <title>Q2 - MaxDiff Timer (Minutes)</title>
+        <exec>
+Q2_Timer.val = (timeSpent() - p.startTime) / 60.0
+        </exec>
+
+      </float>
+
+      <suspend/>
+    </block>
+
+    <suspend/>
+    
+ <exec>
+print p.arr2
+for itr in range(len(p.arr2)):
+  D1Score2.rows[itr].val = p.arr2[itr]
+  
+for x in range(len(progScore2.rows)):
+    if p.arr2[x] == -5 or p.arr2[x] == -6:  progScore2.rows[x].c1.val = 1
+    if p.arr2[x] == -4:  progScore2.rows[x].c2.val = 1
+    if p.arr2[x] == -3:  progScore2.rows[x].c3.val = 1
+    if p.arr2[x] == -2:  progScore2.rows[x].c4.val = 1
+    if p.arr2[x] == -1:  progScore2.rows[x].c5.val = 1
+    if p.arr2[x] == 0:  progScore2.rows[x].c6.val = 1
+    if p.arr2[x] == 1:  progScore2.rows[x].c7.val = 1
+    if p.arr2[x] == 2:  progScore2.rows[x].c8.val = 1
+    if p.arr2[x] == 3:  progScore2.rows[x].c9.val = 1
+    if p.arr2[x] == 4:  progScore2.rows[x].c10.val = 1
+    if p.arr2[x] == 5 or p.arr2[x] == 6:  progScore2.rows[x].c11.val = 1
+  </exec>
+
+  <suspend/>
+
+  <checkbox 
+   label="progScore2"
+   translateable="0"
+   where="execute,survey,report,notdp">
+    <title>Hidden for punching score</title>
+  <row label="item1">${Maxdiff_Statements.r1.text}</row>
+            <row label="item2">${Maxdiff_Statements.r2.text}</row>
+            <row label="item3">${Maxdiff_Statements.r3.text}</row>
+            <row label="item4">${Maxdiff_Statements.r4.text}</row>
+            <row label="item5">${Maxdiff_Statements.r5.text}</row>
+            <row label="item6">${Maxdiff_Statements.r6.text}</row>
+            <row label="item7">${Maxdiff_Statements.r7.text}</row>
+            <row label="item8">${Maxdiff_Statements.r8.text}</row>
+            <row label="item9">${Maxdiff_Statements.r9.text}</row>
+            <row label="item10">${Maxdiff_Statements.r10.text}</row>
+            <row label="item11">${Maxdiff_Statements.r11.text}</row>
+            <row label="item12">${Maxdiff_Statements.r12.text}</row>
+            <row label="item13">${Maxdiff_Statements.r13.text}</row>
+            <row label="item14">${Maxdiff_Statements.r14.text}</row>
+            <row label="item15">${Maxdiff_Statements.r15.text}</row>
+            <row label="item16">${Maxdiff_Statements.r16.text}</row>
+            <row label="item17">${Maxdiff_Statements.r17.text}</row>
+            <row label="item18">${Maxdiff_Statements.r18.text}</row>
+            <row label="item19">${Maxdiff_Statements.r19.text}</row>
+            <row label="item20">${Maxdiff_Statements.r20.text}</row>
+            <row label="item21">${Maxdiff_Statements.r21.text}</row>
+            <row label="item22">${Maxdiff_Statements.r22.text}</row>
+            <row label="item23">${Maxdiff_Statements.r23.text}</row>
+            <row label="item24">${Maxdiff_Statements.r24.text}</row>
+            <row label="item25">${Maxdiff_Statements.r25.text}</row>
+            <row label="item26">${Maxdiff_Statements.r26.text}</row>
+            <row label="item27">${Maxdiff_Statements.r27.text}</row>
+            <row label="item28">${Maxdiff_Statements.r28.text}</row>
+            <row label="item29">${Maxdiff_Statements.r29.text}</row>
+            <row label="item30">${Maxdiff_Statements.r30.text}</row>
+    <col label="c1">-5</col>
+    <col label="c2">-4</col>
+    <col label="c3">-3</col>
+    <col label="c4">-2</col>
+    <col label="c5">-1</col>
+    <col label="c6">0</col>
+    <col label="c7">1</col>
+    <col label="c8">2</col>
+    <col label="c9">3</col>
+    <col label="c10">4</col>
+    <col label="c11">5</col>
+  </checkbox>
+
+  <suspend/>
+
+  <text 
+   label="D1Score2"
+   rowLegend="right"
+   size="3"
+   translateable="0"
+   where="execute,survey,report">
+    <title>Hidden for punching score</title>
+    <row label="item1">${Maxdiff_Statements.r1.text}</row>
+            <row label="item2">${Maxdiff_Statements.r2.text}</row>
+            <row label="item3">${Maxdiff_Statements.r3.text}</row>
+            <row label="item4">${Maxdiff_Statements.r4.text}</row>
+            <row label="item5">${Maxdiff_Statements.r5.text}</row>
+            <row label="item6">${Maxdiff_Statements.r6.text}</row>
+            <row label="item7">${Maxdiff_Statements.r7.text}</row>
+            <row label="item8">${Maxdiff_Statements.r8.text}</row>
+            <row label="item9">${Maxdiff_Statements.r9.text}</row>
+            <row label="item10">${Maxdiff_Statements.r10.text}</row>
+            <row label="item11">${Maxdiff_Statements.r11.text}</row>
+            <row label="item12">${Maxdiff_Statements.r12.text}</row>
+            <row label="item13">${Maxdiff_Statements.r13.text}</row>
+            <row label="item14">${Maxdiff_Statements.r14.text}</row>
+            <row label="item15">${Maxdiff_Statements.r15.text}</row>
+            <row label="item16">${Maxdiff_Statements.r16.text}</row>
+            <row label="item17">${Maxdiff_Statements.r17.text}</row>
+            <row label="item18">${Maxdiff_Statements.r18.text}</row>
+            <row label="item19">${Maxdiff_Statements.r19.text}</row>
+            <row label="item20">${Maxdiff_Statements.r20.text}</row>
+            <row label="item21">${Maxdiff_Statements.r21.text}</row>
+            <row label="item22">${Maxdiff_Statements.r22.text}</row>
+            <row label="item23">${Maxdiff_Statements.r23.text}</row>
+            <row label="item24">${Maxdiff_Statements.r24.text}</row>
+            <row label="item25">${Maxdiff_Statements.r25.text}</row>
+            <row label="item26">${Maxdiff_Statements.r26.text}</row>
+            <row label="item27">${Maxdiff_Statements.r27.text}</row>
+            <row label="item28">${Maxdiff_Statements.r28.text}</row>
+            <row label="item29">${Maxdiff_Statements.r29.text}</row>
+            <row label="item30">${Maxdiff_Statements.r30.text}</row>
+  </text>
+
+  <suspend/>    
+  </block>
+</block>

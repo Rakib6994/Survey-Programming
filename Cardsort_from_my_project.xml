@@ -1,0 +1,98 @@
+<radio 
+  label="A2"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  uses="cardsort.6">
+  <title>Please select your level of agreement or disagreement for the following statements. </title>
+  <comment>Please select one response for each statement.</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <row label="r1">I like to be the centre of attention</row>
+  <row label="r2">I love shopping</row>
+  <row label="r3">I love sharing my style advice with others</row>
+  <row label="r4">I know exactly what styles and shapes are flattering to my body type</row>
+  <row label="r5">I feel confident about my body shape and know how to bring out my best features</row>
+  <col label="c5"><strong>Agree<br />strongly</strong></col>
+  <col label="c4"><strong>Agree</strong></col>
+  <col label="c3"><strong>Neither agree nor disagree</strong></col>
+  <col label="c2"><strong>Disagree</strong></col>
+  <col label="c1"><strong>Disagree strongly</strong></col>
+</radio>
+
+<suspend/>
+
+
+
+
+
+ss:questionClassNames="demo"
+
+
+cardrating:lrg_maxwidth="120px"
+
+
+  <radio 
+   label="Q_Custom3"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>How much do you agree or disagree with each of the following statements for the Excedrin Cooling Head Patch and the Excedrin Cooling Head Mask? </title>
+    <comment>[pipe: PH_IMG]</comment>
+    <row label="r1"><span style="font-size: 18pt;">These products fulfill different needs and are complementary to each other</span></row>
+    <row label="r2"><span style="font-size: 18pt;">The Head Patch allows me to move around and get things done</span></row>
+    <row label="r3"><span style="font-size: 18pt;">The Head Patch allows me to sit/lay down and rest</span></row>
+    <row label="r4"><span style="font-size: 18pt;">The Head Mask allows me to move around and get things done</span></row>
+    <row label="r5"><span style="font-size: 18pt;">The Head Mask allows me to sit/lay down and rest</span></row>
+    <col label="c1" value="7">Agree Strongly</col>
+    <col label="c2" value="6">6</col>
+    <col label="c3" value="5">5</col>
+    <col label="c4" value="4">Neither Agree Nor Disagree</col>
+    <col label="c5" value="3">3</col>
+    <col label="c6" value="2">2</col>
+    <col label="c7" value="1">Strongly Disagree</col>
+    <style name="question.after"><![CDATA[
+<script>
+$ ('.question-text').insertAfter($ ('.sq-cardrating-carousel'));
+$ ('.sq-cardrating-card').css('font-size','18pt');
+$ ('.instruction-text').css('font-size','14pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+      $ ("#btn_continue").hide();
+    }
+  
+  var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+  var num_attr = qn.rows.length
+  console.log(num_attr);
+  var iteration = 1
+  
+  
+   $ (document).on('click', '.sq-cardrating-buttons', function() {
+          if(iteration == num_attr){
+            $ ("#btn_continue").click();
+          }
+          iteration++;
+          
+        })
+
+  </script>
+]]></style>
+  </radio>
+
+  <suspend/>

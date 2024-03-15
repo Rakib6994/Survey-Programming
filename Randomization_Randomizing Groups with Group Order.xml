@@ -1,0 +1,36 @@
+<exec when="init">
+def group_rows_with_order( question, grouped_rows ):
+    current_order = [row.index for row in question.rows.order]
+    new_order     = []
+
+    grouped_rows     = [question.attr(row).index for row in grouped_rows]
+    first_item_index = current_order.index(grouped_rows[0])
+
+    current_order.insert(first_item_index, grouped_rows)
+
+    for row in current_order:
+        if row == grouped_rows:
+            new_order = new_order + row
+        elif row not in grouped_rows:
+            new_order.append(row)
+
+    question.rows.order = new_order
+</exec>
+
+<radio label="Q1" shuffle="rows" exec="group_rows_with_order(Q1, ['r5', 'r6', 'r7'])">
+    <title>Standard radio question</title>
+    <comment>Please choose one.</comment>
+    <row label="r1">r1</row>
+    <row label="r2">r2</row>
+    <row label="r3">r3</row>
+    <row label="r4">r4</row>
+    <row label="r5">r5</row>
+    <row label="r6">r6</row>
+    <row label="r7">r7</row>
+    <row label="r8">r8</row>
+</radio>
+
+
+
+
+Result: You can assert that your function is working correctly by verifying that each time the question is loaded, rows 5, 6, and 7 are randomized together and in the order specified.

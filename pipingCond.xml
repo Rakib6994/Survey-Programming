@@ -1,0 +1,6 @@
+ rowCond="B1[row.index]"   <!--Row Piping-->
+ colCond="A8.rows[col.index]"  <!--Column Piping-->
+ rowCond="not Q5[row.index]"
+ rowCond="S_Frequency.rows[row.index].c2 or S_Frequency.rows[row.index].c3 or S_Frequency.rows[row.index].c4"    >--->> Direct pipe from a grid.
+ 
+

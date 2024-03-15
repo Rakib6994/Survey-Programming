@@ -1,0 +1,2060 @@
+{
+  "images": {
+    "SHELF5_HR.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF5_HR.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF5_HR.jpg",
+      "name": "SHELF5_HR.jpg"
+    },
+    "PACK2A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK2A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK2A_40x40.jpg",
+      "hidden": true,
+      "name": "PACK2A.jpg",
+      "title": ""
+    },
+    "Cart0_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart0_40x40.png",
+      "path": "selfserve/1da7/1907177/static/Cart0_40x40.png",
+      "hidden": true,
+      "name": "Cart0.png",
+      "title": ""
+    },
+    "LINEPR5_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR5_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR5_40x40.jpg",
+      "hidden": true,
+      "name": "LINEPR5.jpg",
+      "title": ""
+    },
+    "38c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38c.jpg",
+      "path": "selfserve/1da7/af122/static/38c.jpg",
+      "name": "38c.jpg"
+    },
+    "PACK4C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK4C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK4C_40x40.jpg",
+      "hidden": true,
+      "name": "PACK4C.jpg",
+      "title": ""
+    },
+    "REALPACK4B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK4B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK4B_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK4B.jpg",
+      "title": ""
+    },
+    "11c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/11c_40x40.jpg",
+      "hidden": true,
+      "name": "11c.jpg",
+      "title": ""
+    },
+    "10a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/10a_40x40.jpg",
+      "hidden": true,
+      "name": "10a.jpg",
+      "title": ""
+    },
+    "PACK5B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK5B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK5B_40x40.jpg",
+      "hidden": true,
+      "name": "PACK5B.jpg",
+      "title": ""
+    },
+    "Cart1.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart1.png",
+      "path": "selfserve/1da7/1907177/static/Cart1.png",
+      "name": "Cart1.png"
+    },
+    "03.jpg": {
+      "url": "/survey/selfserve/1da7/af122/03.jpg",
+      "path": "selfserve/1da7/af122/static/03.jpg",
+      "name": "03.jpg"
+    },
+    "38e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/38e_40x40.jpg",
+      "hidden": true,
+      "name": "38e.jpg",
+      "title": ""
+    },
+    "SHELF5_HR_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF5_HR_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF5_HR_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF5_HR.jpg",
+      "title": ""
+    },
+    "male.png": {
+      "url": "/survey/selfserve/1da7/1907177/male.png",
+      "path": "selfserve/1da7/1907177/static/male.png",
+      "name": "male.png"
+    },
+    "14b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14b.jpg",
+      "path": "selfserve/1da7/af122/static/14b.jpg",
+      "name": "14b.jpg"
+    },
+    "49_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/49_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/49_40x40.jpg",
+      "hidden": true,
+      "name": "49.jpg",
+      "title": ""
+    },
+    "48.jpg": {
+      "url": "/survey/selfserve/1da7/af122/48.jpg",
+      "path": "selfserve/1da7/af122/static/48.jpg",
+      "name": "48.jpg"
+    },
+    "45_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/45_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/45_40x40.jpg",
+      "hidden": true,
+      "name": "45.jpg",
+      "title": ""
+    },
+    "Cart3_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart3_40x40.png",
+      "path": "selfserve/1da7/1907177/static/Cart3_40x40.png",
+      "hidden": true,
+      "name": "Cart3.png",
+      "title": ""
+    },
+    "LINEPR2.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR2.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR2.jpg",
+      "name": "LINEPR2.jpg"
+    },
+    "38d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38d.jpg",
+      "path": "selfserve/1da7/af122/static/38d.jpg",
+      "name": "38d.jpg"
+    },
+    "PACK3B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK3B.jpg",
+      "path": "selfserve/1da7/af122/static/PACK3B.jpg",
+      "name": "PACK3B.jpg"
+    },
+    "33b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33b.jpg",
+      "path": "selfserve/1da7/af122/static/33b.jpg",
+      "name": "33b.jpg"
+    },
+    "14d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/14d_40x40.jpg",
+      "hidden": true,
+      "name": "14d.jpg",
+      "title": ""
+    },
+    "PACK3C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK3C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK3C_40x40.jpg",
+      "hidden": true,
+      "name": "PACK3C.jpg",
+      "title": ""
+    },
+    "PACK4A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK4A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK4A_40x40.jpg",
+      "hidden": true,
+      "name": "PACK4A.jpg",
+      "title": ""
+    },
+    "10c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10c.jpg",
+      "path": "selfserve/1da7/af122/static/10c.jpg",
+      "name": "10c.jpg"
+    },
+    "37_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/37_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/37_40x40.jpg",
+      "hidden": true,
+      "name": "37.jpg",
+      "title": ""
+    },
+    "REALPACK5C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK5C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK5C_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK5C.jpg",
+      "title": ""
+    },
+    "21.jpg": {
+      "url": "/survey/selfserve/1da7/af122/21.jpg",
+      "path": "selfserve/1da7/af122/static/21.jpg",
+      "name": "21.jpg"
+    },
+    "27d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/27d_40x40.jpg",
+      "hidden": true,
+      "name": "27d.jpg",
+      "title": ""
+    },
+    "LINE2.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE2.jpg",
+      "path": "selfserve/1da7/af122/static/LINE2.jpg",
+      "name": "LINE2.jpg"
+    },
+    "REALPACK2C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK2C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK2C_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK2C.jpg",
+      "title": ""
+    },
+    "start.png": {
+      "url": "/survey/selfserve/1da7/180203/start.png",
+      "path": "selfserve/1da7/180203/static/start.png",
+      "diskSize": 7716,
+      "name": "start.png",
+      "hash": "069871d16e68097b048634a8874c8ba4"
+    },
+    "16_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/16_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/16_40x40.jpg",
+      "hidden": true,
+      "name": "16.jpg",
+      "title": ""
+    },
+    "34c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34c.jpg",
+      "path": "selfserve/1da7/af122/static/34c.jpg",
+      "name": "34c.jpg"
+    },
+    "PACK2A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK2A.jpg",
+      "path": "selfserve/1da7/af122/static/PACK2A.jpg",
+      "name": "PACK2A.jpg"
+    },
+    "36b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/36b_40x40.jpg",
+      "hidden": true,
+      "name": "36b.jpg",
+      "title": ""
+    },
+    "40a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40a.jpg",
+      "path": "selfserve/1da7/af122/static/40a.jpg",
+      "name": "40a.jpg"
+    },
+    "SHELF1_HR_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF1_HR_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF1_HR_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF1_HR.jpg",
+      "title": ""
+    },
+    "12a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/12a_40x40.jpg",
+      "hidden": true,
+      "name": "12a.jpg",
+      "title": ""
+    },
+    "REALPACK1B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK1B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK1B_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK1B.jpg",
+      "title": ""
+    },
+    "34e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34e.jpg",
+      "path": "selfserve/1da7/af122/static/34e.jpg",
+      "name": "34e.jpg"
+    },
+    "LINEPR1_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR1_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR1_40x40.jpg",
+      "hidden": true,
+      "name": "LINEPR1.jpg",
+      "title": ""
+    },
+    "19.jpg": {
+      "url": "/survey/selfserve/1da7/af122/19.jpg",
+      "path": "selfserve/1da7/af122/static/19.jpg",
+      "name": "19.jpg"
+    },
+    "Cart3.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart3.png",
+      "path": "selfserve/1da7/1907177/static/Cart3.png",
+      "name": "Cart3.png"
+    },
+    "REALPACK3A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK3A.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK3A.jpg",
+      "name": "REALPACK3A.jpg"
+    },
+    "18_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/18_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/18_40x40.jpg",
+      "hidden": true,
+      "name": "18.jpg",
+      "title": ""
+    },
+    "34d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/34d_40x40.jpg",
+      "hidden": true,
+      "name": "34d.jpg",
+      "title": ""
+    },
+    "Stopwatch_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/Stopwatch_40x40.jpg",
+      "path": "selfserve/1da7/1907177/static/Stopwatch_40x40.jpg",
+      "hidden": true,
+      "name": "Stopwatch.jpg",
+      "title": ""
+    },
+    "SHELF1_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF1_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF1_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF1.jpg",
+      "title": ""
+    },
+    "08.jpg": {
+      "url": "/survey/selfserve/1da7/af122/08.jpg",
+      "path": "selfserve/1da7/af122/static/08.jpg",
+      "name": "08.jpg"
+    },
+    "SHELF3_HR_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF3_HR_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF3_HR_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF3_HR.jpg",
+      "title": ""
+    },
+    "15.jpg": {
+      "url": "/survey/selfserve/1da7/af122/15.jpg",
+      "path": "selfserve/1da7/af122/static/15.jpg",
+      "name": "15.jpg"
+    },
+    "REALPACK2B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK2B.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK2B.jpg",
+      "name": "REALPACK2B.jpg"
+    },
+    "27a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/27a_40x40.jpg",
+      "hidden": true,
+      "name": "27a.jpg",
+      "title": ""
+    },
+    "40e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/40e_40x40.jpg",
+      "hidden": true,
+      "name": "40e.jpg",
+      "title": ""
+    },
+    "male_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/male_40x40.png",
+      "path": "selfserve/1da7/1907177/static/male_40x40.png",
+      "hidden": true,
+      "name": "male.png",
+      "title": ""
+    },
+    "15_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/15_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/15_40x40.jpg",
+      "hidden": true,
+      "name": "15.jpg",
+      "title": ""
+    },
+    "36b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36b.jpg",
+      "path": "selfserve/1da7/af122/static/36b.jpg",
+      "name": "36b.jpg"
+    },
+    "40c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40c.jpg",
+      "path": "selfserve/1da7/af122/static/40c.jpg",
+      "name": "40c.jpg"
+    },
+    "REALPACK5A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK5A.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK5A.jpg",
+      "name": "REALPACK5A.jpg"
+    },
+    "48_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/48_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/48_40x40.jpg",
+      "hidden": true,
+      "name": "48.jpg",
+      "title": ""
+    },
+    "REALPACK5A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK5A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK5A_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK5A.jpg",
+      "title": ""
+    },
+    "REALPACKCOMP2_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACKCOMP2_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACKCOMP2_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACKCOMP2.jpg",
+      "title": ""
+    },
+    "start_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/start_40x40.png",
+      "path": "selfserve/1da7/1907177/static/start_40x40.png",
+      "hidden": true,
+      "name": "start.png",
+      "title": ""
+    },
+    "SHELF4.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF4.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF4.jpg",
+      "name": "SHELF4.jpg"
+    },
+    "32.jpg": {
+      "url": "/survey/selfserve/1da7/af122/32.jpg",
+      "path": "selfserve/1da7/af122/static/32.jpg",
+      "name": "32.jpg"
+    },
+    "13b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13b.jpg",
+      "path": "selfserve/1da7/af122/static/13b.jpg",
+      "name": "13b.jpg"
+    },
+    "08_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/08_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/08_40x40.jpg",
+      "hidden": true,
+      "name": "08.jpg",
+      "title": ""
+    },
+    "06.jpg": {
+      "url": "/survey/selfserve/1da7/af122/06.jpg",
+      "path": "selfserve/1da7/af122/static/06.jpg",
+      "name": "06.jpg"
+    },
+    "36d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/36d_40x40.jpg",
+      "hidden": true,
+      "name": "36d.jpg",
+      "title": ""
+    },
+    "30_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/30_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/30_40x40.jpg",
+      "hidden": true,
+      "name": "30.jpg",
+      "title": ""
+    },
+    "27d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27d.jpg",
+      "path": "selfserve/1da7/af122/static/27d.jpg",
+      "name": "27d.jpg"
+    },
+    "REALPACK3C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK3C.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK3C.jpg",
+      "name": "REALPACK3C.jpg"
+    },
+    "38a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/38a_40x40.jpg",
+      "hidden": true,
+      "name": "38a.jpg",
+      "title": ""
+    },
+    "20_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/20_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/20_40x40.jpg",
+      "hidden": true,
+      "name": "20.jpg",
+      "title": ""
+    },
+    "43.jpg": {
+      "url": "/survey/selfserve/1da7/af122/43.jpg",
+      "path": "selfserve/1da7/af122/static/43.jpg",
+      "name": "43.jpg"
+    },
+    "REALPACK4C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK4C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK4C_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK4C.jpg",
+      "title": ""
+    },
+    "REALPACK4B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK4B.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK4B.jpg",
+      "name": "REALPACK4B.jpg"
+    },
+    "SHELF4_HR_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF4_HR_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF4_HR_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF4_HR.jpg",
+      "title": ""
+    },
+    "29_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/29_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/29_40x40.jpg",
+      "hidden": true,
+      "name": "29.jpg",
+      "title": ""
+    },
+    "39_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/39_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/39_40x40.jpg",
+      "hidden": true,
+      "name": "39.jpg",
+      "title": ""
+    },
+    "SHELF2.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF2.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF2.jpg",
+      "name": "SHELF2.jpg"
+    },
+    "26a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/26a_40x40.jpg",
+      "hidden": true,
+      "name": "26a.jpg",
+      "title": ""
+    },
+    "PACK4A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK4A.jpg",
+      "path": "selfserve/1da7/af122/static/PACK4A.jpg",
+      "name": "PACK4A.jpg"
+    },
+    "35_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/35_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/35_40x40.jpg",
+      "hidden": true,
+      "name": "35.jpg",
+      "title": ""
+    },
+    "LINEPR4_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR4_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR4_40x40.jpg",
+      "hidden": true,
+      "name": "LINEPR4.jpg",
+      "title": ""
+    },
+    "LINE4.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE4.jpg",
+      "path": "selfserve/1da7/af122/static/LINE4.jpg",
+      "name": "LINE4.jpg"
+    },
+    "26b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26b.jpg",
+      "path": "selfserve/1da7/af122/static/26b.jpg",
+      "name": "26b.jpg"
+    },
+    "REALPACK2A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK2A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK2A_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK2A.jpg",
+      "title": ""
+    },
+    "05_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/05_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/05_40x40.jpg",
+      "hidden": true,
+      "name": "05.jpg",
+      "title": ""
+    },
+    "04.jpg": {
+      "url": "/survey/selfserve/1da7/af122/04.jpg",
+      "path": "selfserve/1da7/af122/static/04.jpg",
+      "name": "04.jpg"
+    },
+    "09_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/09_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/09_40x40.jpg",
+      "hidden": true,
+      "name": "09.jpg",
+      "title": ""
+    },
+    "SHELF2_HR.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF2_HR.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF2_HR.jpg",
+      "name": "SHELF2_HR.jpg"
+    },
+    "Cart2.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart2.png",
+      "path": "selfserve/1da7/1907177/static/Cart2.png",
+      "name": "Cart2.png"
+    },
+    "12b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12b.jpg",
+      "path": "selfserve/1da7/af122/static/12b.jpg",
+      "name": "12b.jpg"
+    },
+    "REALPACKCOMP2.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACKCOMP2.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACKCOMP2.jpg",
+      "name": "REALPACKCOMP2.jpg"
+    },
+    "28.jpg": {
+      "url": "/survey/selfserve/1da7/af122/28.jpg",
+      "path": "selfserve/1da7/af122/static/28.jpg",
+      "name": "28.jpg"
+    },
+    "REALPACK1A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK1A.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK1A.jpg",
+      "name": "REALPACK1A.jpg"
+    },
+    "07.jpg": {
+      "url": "/survey/selfserve/1da7/af122/07.jpg",
+      "path": "selfserve/1da7/af122/static/07.jpg",
+      "name": "07.jpg"
+    },
+    "41_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/41_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/41_40x40.jpg",
+      "hidden": true,
+      "name": "41.jpg",
+      "title": ""
+    },
+    "12e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12e.jpg",
+      "path": "selfserve/1da7/af122/static/12e.jpg",
+      "name": "12e.jpg"
+    },
+    "Cart0.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart0.png",
+      "path": "selfserve/1da7/1907177/static/Cart0.png",
+      "name": "Cart0.png"
+    },
+    "LINE4_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE4_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINE4_40x40.jpg",
+      "hidden": true,
+      "name": "LINE4.jpg",
+      "title": ""
+    },
+    "stopwatch_sm_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/stopwatch_sm_40x40.png",
+      "path": "selfserve/1da7/1907177/static/stopwatch_sm_40x40.png",
+      "hidden": true,
+      "name": "stopwatch_sm.png",
+      "title": ""
+    },
+    "26c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26c.jpg",
+      "path": "selfserve/1da7/af122/static/26c.jpg",
+      "name": "26c.jpg"
+    },
+    "IntroPage_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/IntroPage_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/IntroPage_40x40.jpg",
+      "hidden": true,
+      "name": "IntroPage.jpg",
+      "title": ""
+    },
+    "39.jpg": {
+      "url": "/survey/selfserve/1da7/af122/39.jpg",
+      "path": "selfserve/1da7/af122/static/39.jpg",
+      "name": "39.jpg"
+    },
+    "11d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11d.jpg",
+      "path": "selfserve/1da7/af122/static/11d.jpg",
+      "name": "11d.jpg"
+    },
+    "34b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/34b_40x40.jpg",
+      "hidden": true,
+      "name": "34b.jpg",
+      "title": ""
+    },
+    "46_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/46_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/46_40x40.jpg",
+      "hidden": true,
+      "name": "46.jpg",
+      "title": ""
+    },
+    "PACK1A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK1A.jpg",
+      "path": "selfserve/1da7/af122/static/PACK1A.jpg",
+      "name": "PACK1A.jpg"
+    },
+    "33b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/33b_40x40.jpg",
+      "hidden": true,
+      "name": "33b.jpg",
+      "title": ""
+    },
+    "16.jpg": {
+      "url": "/survey/selfserve/1da7/af122/16.jpg",
+      "path": "selfserve/1da7/af122/static/16.jpg",
+      "name": "16.jpg"
+    },
+    "05.jpg": {
+      "url": "/survey/selfserve/1da7/af122/05.jpg",
+      "path": "selfserve/1da7/af122/static/05.jpg",
+      "name": "05.jpg"
+    },
+    "07_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/07_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/07_40x40.jpg",
+      "hidden": true,
+      "name": "07.jpg",
+      "title": ""
+    },
+    "25.jpg": {
+      "url": "/survey/selfserve/1da7/af122/25.jpg",
+      "path": "selfserve/1da7/af122/static/25.jpg",
+      "name": "25.jpg"
+    },
+    "LINEPR4.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR4.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR4.jpg",
+      "name": "LINEPR4.jpg"
+    },
+    "11b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11b.jpg",
+      "path": "selfserve/1da7/af122/static/11b.jpg",
+      "name": "11b.jpg"
+    },
+    "14c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14c.jpg",
+      "path": "selfserve/1da7/af122/static/14c.jpg",
+      "name": "14c.jpg"
+    },
+    "14c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/14c_40x40.jpg",
+      "hidden": true,
+      "name": "14c.jpg",
+      "title": ""
+    },
+    "33a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33a.jpg",
+      "path": "selfserve/1da7/af122/static/33a.jpg",
+      "name": "33a.jpg"
+    },
+    "13b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/13b_40x40.jpg",
+      "hidden": true,
+      "name": "13b.jpg",
+      "title": ""
+    },
+    "REALPACK1C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK1C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK1C_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK1C.jpg",
+      "title": ""
+    },
+    "REALPACK4A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK4A.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK4A.jpg",
+      "name": "REALPACK4A.jpg"
+    },
+    "13c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13c.jpg",
+      "path": "selfserve/1da7/af122/static/13c.jpg",
+      "name": "13c.jpg"
+    },
+    "41.jpg": {
+      "url": "/survey/selfserve/1da7/af122/41.jpg",
+      "path": "selfserve/1da7/af122/static/41.jpg",
+      "name": "41.jpg"
+    },
+    "PACK1C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK1C.jpg",
+      "path": "selfserve/1da7/af122/static/PACK1C.jpg",
+      "name": "PACK1C.jpg"
+    },
+    "SHELF5_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF5_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF5_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF5.jpg",
+      "title": ""
+    },
+    "14d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14d.jpg",
+      "path": "selfserve/1da7/af122/static/14d.jpg",
+      "name": "14d.jpg"
+    },
+    "13d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/13d_40x40.jpg",
+      "hidden": true,
+      "name": "13d.jpg",
+      "title": ""
+    },
+    "31_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/31_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/31_40x40.jpg",
+      "hidden": true,
+      "name": "31.jpg",
+      "title": ""
+    },
+    "36e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/36e_40x40.jpg",
+      "hidden": true,
+      "name": "36e.jpg",
+      "title": ""
+    },
+    "SHELF1.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF1.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF1.jpg",
+      "name": "SHELF1.jpg"
+    },
+    "34a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34a.jpg",
+      "path": "selfserve/1da7/af122/static/34a.jpg",
+      "name": "34a.jpg"
+    },
+    "33e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33e.jpg",
+      "path": "selfserve/1da7/af122/static/33e.jpg",
+      "name": "33e.jpg"
+    },
+    "23.jpg": {
+      "url": "/survey/selfserve/1da7/af122/23.jpg",
+      "path": "selfserve/1da7/af122/static/23.jpg",
+      "name": "23.jpg"
+    },
+    "38b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38b.jpg",
+      "path": "selfserve/1da7/af122/static/38b.jpg",
+      "name": "38b.jpg"
+    },
+    "LINEPR3_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR3_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR3_40x40.jpg",
+      "hidden": true,
+      "name": "LINEPR3.jpg",
+      "title": ""
+    },
+    "34a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/34a_40x40.jpg",
+      "hidden": true,
+      "name": "34a.jpg",
+      "title": ""
+    },
+    "PACK1C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK1C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK1C_40x40.jpg",
+      "hidden": true,
+      "name": "PACK1C.jpg",
+      "title": ""
+    },
+    "13c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/13c_40x40.jpg",
+      "hidden": true,
+      "name": "13c.jpg",
+      "title": ""
+    },
+    "04_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/04_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/04_40x40.jpg",
+      "hidden": true,
+      "name": "04.jpg",
+      "title": ""
+    },
+    "SHELF5.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF5.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF5.jpg",
+      "name": "SHELF5.jpg"
+    },
+    "SHELF3_HR.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF3_HR.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF3_HR.jpg",
+      "name": "SHELF3_HR.jpg"
+    },
+    "38e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38e.jpg",
+      "path": "selfserve/1da7/af122/static/38e.jpg",
+      "name": "38e.jpg"
+    },
+    "stopwatch_sm.png": {
+      "url": "/survey/selfserve/1da7/1907177/stopwatch_sm.png",
+      "path": "selfserve/1da7/1907177/static/stopwatch_sm.png",
+      "name": "stopwatch_sm.png"
+    },
+    "13e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13e.jpg",
+      "path": "selfserve/1da7/af122/static/13e.jpg",
+      "name": "13e.jpg"
+    },
+    "02_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/02_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/02_40x40.jpg",
+      "hidden": true,
+      "name": "02.jpg",
+      "title": ""
+    },
+    "clickNdrag.gif": {
+      "url": "/survey/selfserve/1da7/1907177/clickNdrag.gif",
+      "path": "selfserve/1da7/1907177/static/clickNdrag.gif",
+      "name": "clickNdrag.gif"
+    },
+    "PACK5B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK5B.jpg",
+      "path": "selfserve/1da7/af122/static/PACK5B.jpg",
+      "name": "PACK5B.jpg"
+    },
+    "d2_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/d2_40x40.jpg",
+      "path": "selfserve/1da7/1907177/static/d2_40x40.jpg",
+      "hidden": true,
+      "name": "d2.jpg",
+      "title": ""
+    },
+    "REALPACK3A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK3A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK3A_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK3A.jpg",
+      "title": ""
+    },
+    "PACK5C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK5C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK5C_40x40.jpg",
+      "hidden": true,
+      "name": "PACK5C.jpg",
+      "title": ""
+    },
+    "33c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33c.jpg",
+      "path": "selfserve/1da7/af122/static/33c.jpg",
+      "name": "33c.jpg"
+    },
+    "PACK1B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK1B.jpg",
+      "path": "selfserve/1da7/af122/static/PACK1B.jpg",
+      "name": "PACK1B.jpg"
+    },
+    "LINE3_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE3_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINE3_40x40.jpg",
+      "hidden": true,
+      "name": "LINE3.jpg",
+      "title": ""
+    },
+    "LINEPR3.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR3.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR3.jpg",
+      "name": "LINEPR3.jpg"
+    },
+    "PACK2B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK2B.jpg",
+      "path": "selfserve/1da7/af122/static/PACK2B.jpg",
+      "name": "PACK2B.jpg"
+    },
+    "stop_sign.png": {
+      "url": "/survey/selfserve/1da7/1907177/stop_sign.png",
+      "path": "selfserve/1da7/1907177/static/stop_sign.png",
+      "name": "stop_sign.png"
+    },
+    "10b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/10b_40x40.jpg",
+      "hidden": true,
+      "name": "10b.jpg",
+      "title": ""
+    },
+    "female_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/female_40x40.png",
+      "path": "selfserve/1da7/1907177/static/female_40x40.png",
+      "hidden": true,
+      "name": "female.png",
+      "title": ""
+    },
+    "10b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10b.jpg",
+      "path": "selfserve/1da7/af122/static/10b.jpg",
+      "name": "10b.jpg"
+    },
+    "11a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11a.jpg",
+      "path": "selfserve/1da7/af122/static/11a.jpg",
+      "name": "11a.jpg"
+    },
+    "done_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/done_40x40.png",
+      "path": "selfserve/1da7/1907177/static/done_40x40.png",
+      "hidden": true,
+      "name": "done.png",
+      "title": ""
+    },
+    "PACK2B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK2B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK2B_40x40.jpg",
+      "hidden": true,
+      "name": "PACK2B.jpg",
+      "title": ""
+    },
+    "17_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/17_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/17_40x40.jpg",
+      "hidden": true,
+      "name": "17.jpg",
+      "title": ""
+    },
+    "10a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10a.jpg",
+      "path": "selfserve/1da7/af122/static/10a.jpg",
+      "name": "10a.jpg"
+    },
+    "13a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13a.jpg",
+      "path": "selfserve/1da7/af122/static/13a.jpg",
+      "name": "13a.jpg"
+    },
+    "28_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/28_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/28_40x40.jpg",
+      "hidden": true,
+      "name": "28.jpg",
+      "title": ""
+    },
+    "REALPACK1A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK1A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK1A_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK1A.jpg",
+      "title": ""
+    },
+    "12d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/12d_40x40.jpg",
+      "hidden": true,
+      "name": "12d.jpg",
+      "title": ""
+    },
+    "11e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11e.jpg",
+      "path": "selfserve/1da7/af122/static/11e.jpg",
+      "name": "11e.jpg"
+    },
+    "10d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10d.jpg",
+      "path": "selfserve/1da7/af122/static/10d.jpg",
+      "name": "10d.jpg"
+    },
+    "32_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/32_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/32_40x40.jpg",
+      "hidden": true,
+      "name": "32.jpg",
+      "title": ""
+    },
+    "PACK3B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK3B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK3B_40x40.jpg",
+      "hidden": true,
+      "name": "PACK3B.jpg",
+      "title": ""
+    },
+    "47.jpg": {
+      "url": "/survey/selfserve/1da7/af122/47.jpg",
+      "path": "selfserve/1da7/af122/static/47.jpg",
+      "name": "47.jpg"
+    },
+    "PACK5A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK5A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK5A_40x40.jpg",
+      "hidden": true,
+      "name": "PACK5A.jpg",
+      "title": ""
+    },
+    "REALPACK3B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK3B.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK3B.jpg",
+      "name": "REALPACK3B.jpg"
+    },
+    "11b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/11b_40x40.jpg",
+      "hidden": true,
+      "name": "11b.jpg",
+      "title": ""
+    },
+    "d1.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/d1.jpg",
+      "path": "selfserve/1da7/1907177/static/d1.jpg",
+      "name": "d1.jpg"
+    },
+    "Stopwatch.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/Stopwatch.jpg",
+      "path": "selfserve/1da7/1907177/static/Stopwatch.jpg",
+      "name": "Stopwatch.jpg"
+    },
+    "ShoppingCartNew.jpg": {
+      "url": "/survey/selfserve/1da7/af122/ShoppingCartNew.jpg",
+      "path": "selfserve/1da7/af122/static/ShoppingCartNew.jpg",
+      "name": "ShoppingCartNew.jpg"
+    },
+    "REALPACK4C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK4C.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK4C.jpg",
+      "name": "REALPACK4C.jpg"
+    },
+    "27c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/27c_40x40.jpg",
+      "hidden": true,
+      "name": "27c.jpg",
+      "title": ""
+    },
+    "REALPACK2B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK2B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK2B_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK2B.jpg",
+      "title": ""
+    },
+    "36c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/36c_40x40.jpg",
+      "hidden": true,
+      "name": "36c.jpg",
+      "title": ""
+    },
+    "50.jpg": {
+      "url": "/survey/selfserve/1da7/af122/50.jpg",
+      "path": "selfserve/1da7/af122/static/50.jpg",
+      "name": "50.jpg"
+    },
+    "30.jpg": {
+      "url": "/survey/selfserve/1da7/af122/30.jpg",
+      "path": "selfserve/1da7/af122/static/30.jpg",
+      "name": "30.jpg"
+    },
+    "36d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36d.jpg",
+      "path": "selfserve/1da7/af122/static/36d.jpg",
+      "name": "36d.jpg"
+    },
+    "11e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/11e_40x40.jpg",
+      "hidden": true,
+      "name": "11e.jpg",
+      "title": ""
+    },
+    "02.jpg": {
+      "url": "/survey/selfserve/1da7/af122/02.jpg",
+      "path": "selfserve/1da7/af122/static/02.jpg",
+      "name": "02.jpg"
+    },
+    "PACK1B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK1B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK1B_40x40.jpg",
+      "hidden": true,
+      "name": "PACK1B.jpg",
+      "title": ""
+    },
+    "01.jpg": {
+      "url": "/survey/selfserve/1da7/af122/01.jpg",
+      "path": "selfserve/1da7/af122/static/01.jpg",
+      "name": "01.jpg"
+    },
+    "stop_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/stop_40x40.png",
+      "path": "selfserve/1da7/1907177/static/stop_40x40.png",
+      "hidden": true,
+      "name": "stop.png",
+      "title": ""
+    },
+    "female.png": {
+      "url": "/survey/selfserve/1da7/1907177/female.png",
+      "path": "selfserve/1da7/1907177/static/female.png",
+      "name": "female.png"
+    },
+    "done.png": {
+      "url": "/survey/selfserve/1da7/1907177/done.png",
+      "path": "selfserve/1da7/1907177/static/done.png",
+      "name": "done.png"
+    },
+    "26c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/26c_40x40.jpg",
+      "hidden": true,
+      "name": "26c.jpg",
+      "title": ""
+    },
+    "REALPACK3B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK3B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK3B_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK3B.jpg",
+      "title": ""
+    },
+    "REALPACK5B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK5B.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK5B.jpg",
+      "name": "REALPACK5B.jpg"
+    },
+    "11a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/11a_40x40.jpg",
+      "hidden": true,
+      "name": "11a.jpg",
+      "title": ""
+    },
+    "27b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/27b_40x40.jpg",
+      "hidden": true,
+      "name": "27b.jpg",
+      "title": ""
+    },
+    "14a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/14a_40x40.jpg",
+      "hidden": true,
+      "name": "14a.jpg",
+      "title": ""
+    },
+    "PACK4C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK4C.jpg",
+      "path": "selfserve/1da7/af122/static/PACK4C.jpg",
+      "name": "PACK4C.jpg"
+    },
+    "34d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34d.jpg",
+      "path": "selfserve/1da7/af122/static/34d.jpg",
+      "name": "34d.jpg"
+    },
+    "33a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/33a_40x40.jpg",
+      "hidden": true,
+      "name": "33a.jpg",
+      "title": ""
+    },
+    "LINEPR5.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR5.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR5.jpg",
+      "name": "LINEPR5.jpg"
+    },
+    "03_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/03_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/03_40x40.jpg",
+      "hidden": true,
+      "name": "03.jpg",
+      "title": ""
+    },
+    "REALPACK5C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK5C.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK5C.jpg",
+      "name": "REALPACK5C.jpg"
+    },
+    "REALPACK1B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK1B.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK1B.jpg",
+      "name": "REALPACK1B.jpg"
+    },
+    "PACK3A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK3A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK3A_40x40.jpg",
+      "hidden": true,
+      "name": "PACK3A.jpg",
+      "title": ""
+    },
+    "PACK2C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK2C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK2C_40x40.jpg",
+      "hidden": true,
+      "name": "PACK2C.jpg",
+      "title": ""
+    },
+    "34b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34b.jpg",
+      "path": "selfserve/1da7/af122/static/34b.jpg",
+      "name": "34b.jpg"
+    },
+    "26b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/26b_40x40.jpg",
+      "hidden": true,
+      "name": "26b.jpg",
+      "title": ""
+    },
+    "36c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36c.jpg",
+      "path": "selfserve/1da7/af122/static/36c.jpg",
+      "name": "36c.jpg"
+    },
+    "37.jpg": {
+      "url": "/survey/selfserve/1da7/af122/37.jpg",
+      "path": "selfserve/1da7/af122/static/37.jpg",
+      "name": "37.jpg"
+    },
+    "PACK3C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK3C.jpg",
+      "path": "selfserve/1da7/af122/static/PACK3C.jpg",
+      "name": "PACK3C.jpg"
+    },
+    "45.jpg": {
+      "url": "/survey/selfserve/1da7/af122/45.jpg",
+      "path": "selfserve/1da7/af122/static/45.jpg",
+      "name": "45.jpg"
+    },
+    "REALPACK2C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK2C.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK2C.jpg",
+      "name": "REALPACK2C.jpg"
+    },
+    "36a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36a.jpg",
+      "path": "selfserve/1da7/af122/static/36a.jpg",
+      "name": "36a.jpg"
+    },
+    "10c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/10c_40x40.jpg",
+      "hidden": true,
+      "name": "10c.jpg",
+      "title": ""
+    },
+    "LINE5.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE5.jpg",
+      "path": "selfserve/1da7/af122/static/LINE5.jpg",
+      "name": "LINE5.jpg"
+    },
+    "40d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/40d_40x40.jpg",
+      "hidden": true,
+      "name": "40d.jpg",
+      "title": ""
+    },
+    "38d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/38d_40x40.jpg",
+      "hidden": true,
+      "name": "38d.jpg",
+      "title": ""
+    },
+    "REALPACK3C_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK3C_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK3C_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK3C.jpg",
+      "title": ""
+    },
+    "d3_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/d3_40x40.jpg",
+      "path": "selfserve/1da7/1907177/static/d3_40x40.jpg",
+      "hidden": true,
+      "name": "d3.jpg",
+      "title": ""
+    },
+    "REALPACKCOMP1.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACKCOMP1.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACKCOMP1.jpg",
+      "name": "REALPACKCOMP1.jpg"
+    },
+    "PACK2C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK2C.jpg",
+      "path": "selfserve/1da7/af122/static/PACK2C.jpg",
+      "name": "PACK2C.jpg"
+    },
+    "33e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/33e_40x40.jpg",
+      "hidden": true,
+      "name": "33e.jpg",
+      "title": ""
+    },
+    "LINE2_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE2_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINE2_40x40.jpg",
+      "hidden": true,
+      "name": "LINE2.jpg",
+      "title": ""
+    },
+    "timer_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/timer_40x40.png",
+      "path": "selfserve/1da7/1907177/static/timer_40x40.png",
+      "hidden": true,
+      "name": "timer.png",
+      "title": ""
+    },
+    "23_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/23_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/23_40x40.jpg",
+      "hidden": true,
+      "name": "23.jpg",
+      "title": ""
+    },
+    "19_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/19_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/19_40x40.jpg",
+      "hidden": true,
+      "name": "19.jpg",
+      "title": ""
+    },
+    "22.jpg": {
+      "url": "/survey/selfserve/1da7/af122/22.jpg",
+      "path": "selfserve/1da7/af122/static/22.jpg",
+      "name": "22.jpg"
+    },
+    "SHELF2_HR_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF2_HR_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF2_HR_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF2_HR.jpg",
+      "title": ""
+    },
+    "40c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/40c_40x40.jpg",
+      "hidden": true,
+      "name": "40c.jpg",
+      "title": ""
+    },
+    "11d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/11d_40x40.jpg",
+      "hidden": true,
+      "name": "11d.jpg",
+      "title": ""
+    },
+    "42.jpg": {
+      "url": "/survey/selfserve/1da7/af122/42.jpg",
+      "path": "selfserve/1da7/af122/static/42.jpg",
+      "name": "42.jpg"
+    },
+    "REALPACKCOMP1_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACKCOMP1_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACKCOMP1_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACKCOMP1.jpg",
+      "title": ""
+    },
+    "33d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/33d_40x40.jpg",
+      "hidden": true,
+      "name": "33d.jpg",
+      "title": ""
+    },
+    "27c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27c.jpg",
+      "path": "selfserve/1da7/af122/static/27c.jpg",
+      "name": "27c.jpg"
+    },
+    "26e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/26e_40x40.jpg",
+      "hidden": true,
+      "name": "26e.jpg",
+      "title": ""
+    },
+    "SHELF3.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF3.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF3.jpg",
+      "name": "SHELF3.jpg"
+    },
+    "33c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/33c_40x40.jpg",
+      "hidden": true,
+      "name": "33c.jpg",
+      "title": ""
+    },
+    "PACK5C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK5C.jpg",
+      "path": "selfserve/1da7/af122/static/PACK5C.jpg",
+      "name": "PACK5C.jpg"
+    },
+    "stop.png": {
+      "url": "/survey/selfserve/1da7/180203/stop.png",
+      "path": "selfserve/1da7/180203/static/stop.png",
+      "diskSize": 6327,
+      "name": "stop.png",
+      "hash": "bffcf16cd7ce5116ab9f09939c5da7b3"
+    },
+    "27e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/27e_40x40.jpg",
+      "hidden": true,
+      "name": "27e.jpg",
+      "title": ""
+    },
+    "SHELF1_HR.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF1_HR.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF1_HR.jpg",
+      "name": "SHELF1_HR.jpg"
+    },
+    "40d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40d.jpg",
+      "path": "selfserve/1da7/af122/static/40d.jpg",
+      "name": "40d.jpg"
+    },
+    "10d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/10d_40x40.jpg",
+      "hidden": true,
+      "name": "10d.jpg",
+      "title": ""
+    },
+    "20.jpg": {
+      "url": "/survey/selfserve/1da7/af122/20.jpg",
+      "path": "selfserve/1da7/af122/static/20.jpg",
+      "name": "20.jpg"
+    },
+    "12c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/12c_40x40.jpg",
+      "hidden": true,
+      "name": "12c.jpg",
+      "title": ""
+    },
+    "PACK4B.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK4B.jpg",
+      "path": "selfserve/1da7/af122/static/PACK4B.jpg",
+      "name": "PACK4B.jpg"
+    },
+    "21_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/21_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/21_40x40.jpg",
+      "hidden": true,
+      "name": "21.jpg",
+      "title": ""
+    },
+    "IntroPage.jpg": {
+      "url": "/survey/selfserve/1da7/af122/IntroPage.jpg",
+      "path": "selfserve/1da7/af122/static/IntroPage.jpg",
+      "name": "IntroPage.jpg"
+    },
+    "PACK3A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK3A.jpg",
+      "path": "selfserve/1da7/af122/static/PACK3A.jpg",
+      "name": "PACK3A.jpg"
+    },
+    "stopwatch_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/stopwatch_40x40.png",
+      "path": "selfserve/1da7/1907177/static/stopwatch_40x40.png",
+      "hidden": true,
+      "name": "stopwatch.png",
+      "title": ""
+    },
+    "14b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/14b_40x40.jpg",
+      "hidden": true,
+      "name": "14b.jpg",
+      "title": ""
+    },
+    "stop_sign_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/stop_sign_40x40.png",
+      "path": "selfserve/1da7/1907177/static/stop_sign_40x40.png",
+      "hidden": true,
+      "name": "stop_sign.png",
+      "title": ""
+    },
+    "34c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/34c_40x40.jpg",
+      "hidden": true,
+      "name": "34c.jpg",
+      "title": ""
+    },
+    "36a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/36a_40x40.jpg",
+      "hidden": true,
+      "name": "36a.jpg",
+      "title": ""
+    },
+    "26e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26e.jpg",
+      "path": "selfserve/1da7/af122/static/26e.jpg",
+      "name": "26e.jpg"
+    },
+    "d1_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/d1_40x40.jpg",
+      "path": "selfserve/1da7/1907177/static/d1_40x40.jpg",
+      "hidden": true,
+      "name": "d1.jpg",
+      "title": ""
+    },
+    "34e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/34e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/34e_40x40.jpg",
+      "hidden": true,
+      "name": "34e.jpg",
+      "title": ""
+    },
+    "12b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/12b_40x40.jpg",
+      "hidden": true,
+      "name": "12b.jpg",
+      "title": ""
+    },
+    "LINE1_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE1_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINE1_40x40.jpg",
+      "hidden": true,
+      "name": "LINE1.jpg",
+      "title": ""
+    },
+    "12a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12a.jpg",
+      "path": "selfserve/1da7/af122/static/12a.jpg",
+      "name": "12a.jpg"
+    },
+    "Cart1_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart1_40x40.png",
+      "path": "selfserve/1da7/1907177/static/Cart1_40x40.png",
+      "hidden": true,
+      "name": "Cart1.png",
+      "title": ""
+    },
+    "11c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/11c.jpg",
+      "path": "selfserve/1da7/af122/static/11c.jpg",
+      "name": "11c.jpg"
+    },
+    "49.jpg": {
+      "url": "/survey/selfserve/1da7/af122/49.jpg",
+      "path": "selfserve/1da7/af122/static/49.jpg",
+      "name": "49.jpg"
+    },
+    "LINE3.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE3.jpg",
+      "path": "selfserve/1da7/af122/static/LINE3.jpg",
+      "name": "LINE3.jpg"
+    },
+    "Cart4.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart4.png",
+      "path": "selfserve/1da7/1907177/static/Cart4.png",
+      "name": "Cart4.png"
+    },
+    "26a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26a.jpg",
+      "path": "selfserve/1da7/af122/static/26a.jpg",
+      "name": "26a.jpg"
+    },
+    "LINE1.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE1.jpg",
+      "path": "selfserve/1da7/af122/static/LINE1.jpg",
+      "name": "LINE1.jpg"
+    },
+    "Cart2_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart2_40x40.png",
+      "path": "selfserve/1da7/1907177/static/Cart2_40x40.png",
+      "hidden": true,
+      "name": "Cart2.png",
+      "title": ""
+    },
+    "14a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14a.jpg",
+      "path": "selfserve/1da7/af122/static/14a.jpg",
+      "name": "14a.jpg"
+    },
+    "22_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/22_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/22_40x40.jpg",
+      "hidden": true,
+      "name": "22.jpg",
+      "title": ""
+    },
+    "10e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10e.jpg",
+      "path": "selfserve/1da7/af122/static/10e.jpg",
+      "name": "10e.jpg"
+    },
+    "46.jpg": {
+      "url": "/survey/selfserve/1da7/af122/46.jpg",
+      "path": "selfserve/1da7/af122/static/46.jpg",
+      "name": "46.jpg"
+    },
+    "LINE5_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINE5_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINE5_40x40.jpg",
+      "hidden": true,
+      "name": "LINE5.jpg",
+      "title": ""
+    },
+    "24_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/24_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/24_40x40.jpg",
+      "hidden": true,
+      "name": "24.jpg",
+      "title": ""
+    },
+    "47_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/47_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/47_40x40.jpg",
+      "hidden": true,
+      "name": "47.jpg",
+      "title": ""
+    },
+    "ShoppingCartNew_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/ShoppingCartNew_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/ShoppingCartNew_40x40.jpg",
+      "hidden": true,
+      "name": "ShoppingCartNew.jpg",
+      "title": ""
+    },
+    "18.jpg": {
+      "url": "/survey/selfserve/1da7/af122/18.jpg",
+      "path": "selfserve/1da7/af122/static/18.jpg",
+      "name": "18.jpg"
+    },
+    "PACK4B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK4B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK4B_40x40.jpg",
+      "hidden": true,
+      "name": "PACK4B.jpg",
+      "title": ""
+    },
+    "clickNdrag_40x40.gif": {
+      "url": "/survey/selfserve/1da7/1907177/clickNdrag_40x40.gif",
+      "path": "selfserve/1da7/1907177/static/clickNdrag_40x40.gif",
+      "hidden": true,
+      "name": "clickNdrag.gif",
+      "title": ""
+    },
+    "27a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27a.jpg",
+      "path": "selfserve/1da7/af122/static/27a.jpg",
+      "name": "27a.jpg"
+    },
+    "14e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/14e_40x40.jpg",
+      "hidden": true,
+      "name": "14e.jpg",
+      "title": ""
+    },
+    "36e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/36e.jpg",
+      "path": "selfserve/1da7/af122/static/36e.jpg",
+      "name": "36e.jpg"
+    },
+    "31.jpg": {
+      "url": "/survey/selfserve/1da7/af122/31.jpg",
+      "path": "selfserve/1da7/af122/static/31.jpg",
+      "name": "31.jpg"
+    },
+    "40a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/40a_40x40.jpg",
+      "hidden": true,
+      "name": "40a.jpg",
+      "title": ""
+    },
+    "17.jpg": {
+      "url": "/survey/selfserve/1da7/af122/17.jpg",
+      "path": "selfserve/1da7/af122/static/17.jpg",
+      "name": "17.jpg"
+    },
+    "LINEPR1.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR1.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR1.jpg",
+      "name": "LINEPR1.jpg"
+    },
+    "38c_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38c_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/38c_40x40.jpg",
+      "hidden": true,
+      "name": "38c.jpg",
+      "title": ""
+    },
+    "27b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27b.jpg",
+      "path": "selfserve/1da7/af122/static/27b.jpg",
+      "name": "27b.jpg"
+    },
+    "01_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/01_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/01_40x40.jpg",
+      "hidden": true,
+      "name": "01.jpg",
+      "title": ""
+    },
+    "06_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/06_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/06_40x40.jpg",
+      "hidden": true,
+      "name": "06.jpg",
+      "title": ""
+    },
+    "29.jpg": {
+      "url": "/survey/selfserve/1da7/af122/29.jpg",
+      "path": "selfserve/1da7/af122/static/29.jpg",
+      "name": "29.jpg"
+    },
+    "09.jpg": {
+      "url": "/survey/selfserve/1da7/af122/09.jpg",
+      "path": "selfserve/1da7/af122/static/09.jpg",
+      "name": "09.jpg"
+    },
+    "10e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/10e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/10e_40x40.jpg",
+      "hidden": true,
+      "name": "10e.jpg",
+      "title": ""
+    },
+    "12c.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12c.jpg",
+      "path": "selfserve/1da7/af122/static/12c.jpg",
+      "name": "12c.jpg"
+    },
+    "REALPACK5B_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK5B_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK5B_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK5B.jpg",
+      "title": ""
+    },
+    "d2.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/d2.jpg",
+      "path": "selfserve/1da7/1907177/static/d2.jpg",
+      "name": "d2.jpg"
+    },
+    "13e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/13e_40x40.jpg",
+      "hidden": true,
+      "name": "13e.jpg",
+      "title": ""
+    },
+    "27e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/27e.jpg",
+      "path": "selfserve/1da7/af122/static/27e.jpg",
+      "name": "27e.jpg"
+    },
+    "42_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/42_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/42_40x40.jpg",
+      "hidden": true,
+      "name": "42.jpg",
+      "title": ""
+    },
+    "40e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40e.jpg",
+      "path": "selfserve/1da7/af122/static/40e.jpg",
+      "name": "40e.jpg"
+    },
+    "38b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/38b_40x40.jpg",
+      "hidden": true,
+      "name": "38b.jpg",
+      "title": ""
+    },
+    "12e_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12e_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/12e_40x40.jpg",
+      "hidden": true,
+      "name": "12e.jpg",
+      "title": ""
+    },
+    "33d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/33d.jpg",
+      "path": "selfserve/1da7/af122/static/33d.jpg",
+      "name": "33d.jpg"
+    },
+    "26d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26d.jpg",
+      "path": "selfserve/1da7/af122/static/26d.jpg",
+      "name": "26d.jpg"
+    },
+    "LINEPR2_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/LINEPR2_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/LINEPR2_40x40.jpg",
+      "hidden": true,
+      "name": "LINEPR2.jpg",
+      "title": ""
+    },
+    "43_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/43_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/43_40x40.jpg",
+      "hidden": true,
+      "name": "43.jpg",
+      "title": ""
+    },
+    "38a.jpg": {
+      "url": "/survey/selfserve/1da7/af122/38a.jpg",
+      "path": "selfserve/1da7/af122/static/38a.jpg",
+      "name": "38a.jpg"
+    },
+    "44.jpg": {
+      "url": "/survey/selfserve/1da7/af122/44.jpg",
+      "path": "selfserve/1da7/af122/static/44.jpg",
+      "name": "44.jpg"
+    },
+    "40b.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40b.jpg",
+      "path": "selfserve/1da7/af122/static/40b.jpg",
+      "name": "40b.jpg"
+    },
+    "14e.jpg": {
+      "url": "/survey/selfserve/1da7/af122/14e.jpg",
+      "path": "selfserve/1da7/af122/static/14e.jpg",
+      "name": "14e.jpg"
+    },
+    "12d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/12d.jpg",
+      "path": "selfserve/1da7/af122/static/12d.jpg",
+      "name": "12d.jpg"
+    },
+    "PACK5A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK5A.jpg",
+      "path": "selfserve/1da7/af122/static/PACK5A.jpg",
+      "name": "PACK5A.jpg"
+    },
+    "35.jpg": {
+      "url": "/survey/selfserve/1da7/af122/35.jpg",
+      "path": "selfserve/1da7/af122/static/35.jpg",
+      "name": "35.jpg"
+    },
+    "d3.jpg": {
+      "url": "/survey/selfserve/1da7/1907177/d3.jpg",
+      "path": "selfserve/1da7/1907177/static/d3.jpg",
+      "name": "d3.jpg"
+    },
+    "40b_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/40b_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/40b_40x40.jpg",
+      "hidden": true,
+      "name": "40b.jpg",
+      "title": ""
+    },
+    "REALPACK2A.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK2A.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK2A.jpg",
+      "name": "REALPACK2A.jpg"
+    },
+    "SHELF4_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF4_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF4_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF4.jpg",
+      "title": ""
+    },
+    "24.jpg": {
+      "url": "/survey/selfserve/1da7/af122/24.jpg",
+      "path": "selfserve/1da7/af122/static/24.jpg",
+      "name": "24.jpg"
+    },
+    "REALPACK4A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK4A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK4A_40x40.jpg",
+      "hidden": true,
+      "name": "REALPACK4A.jpg",
+      "title": ""
+    },
+    "stopwatch.png": {
+      "url": "/survey/selfserve/1da7/1907177/stopwatch.png",
+      "path": "selfserve/1da7/1907177/static/stopwatch.png",
+      "name": "stopwatch.png"
+    },
+    "13d.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13d.jpg",
+      "path": "selfserve/1da7/af122/static/13d.jpg",
+      "name": "13d.jpg"
+    },
+    "50_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/50_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/50_40x40.jpg",
+      "hidden": true,
+      "name": "50.jpg",
+      "title": ""
+    },
+    "PACK1A_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/PACK1A_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/PACK1A_40x40.jpg",
+      "hidden": true,
+      "name": "PACK1A.jpg",
+      "title": ""
+    },
+    "SHELF2_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF2_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF2_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF2.jpg",
+      "title": ""
+    },
+    "timer.png": {
+      "url": "/survey/selfserve/1da7/1907177/timer.png",
+      "path": "selfserve/1da7/1907177/static/timer.png",
+      "name": "timer.png"
+    },
+    "13a_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/13a_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/13a_40x40.jpg",
+      "hidden": true,
+      "name": "13a.jpg",
+      "title": ""
+    },
+    "SHELF3_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF3_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF3_40x40.jpg",
+      "hidden": true,
+      "name": "SHELF3.jpg",
+      "title": ""
+    },
+    "REALPACK1C.jpg": {
+      "url": "/survey/selfserve/1da7/af122/REALPACK1C.jpg",
+      "path": "selfserve/1da7/af122/static/REALPACK1C.jpg",
+      "name": "REALPACK1C.jpg"
+    },
+    "25_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/25_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/25_40x40.jpg",
+      "hidden": true,
+      "name": "25.jpg",
+      "title": ""
+    },
+    "SHELF4_HR.jpg": {
+      "url": "/survey/selfserve/1da7/af122/SHELF4_HR.jpg",
+      "path": "selfserve/1da7/af122/static/SHELF4_HR.jpg",
+      "name": "SHELF4_HR.jpg"
+    },
+    "26d_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/26d_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/26d_40x40.jpg",
+      "hidden": true,
+      "name": "26d.jpg",
+      "title": ""
+    },
+    "44_40x40.jpg": {
+      "url": "/survey/selfserve/1da7/af122/44_40x40.jpg",
+      "path": "selfserve/1da7/af122/static/44_40x40.jpg",
+      "hidden": true,
+      "name": "44.jpg",
+      "title": ""
+    },
+    "Cart4_40x40.png": {
+      "url": "/survey/selfserve/1da7/1907177/Cart4_40x40.png",
+      "path": "selfserve/1da7/1907177/static/Cart4_40x40.png",
+      "hidden": true,
+      "name": "Cart4.png",
+      "title": ""
+    }
+  }
+}

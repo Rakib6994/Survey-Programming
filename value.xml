@@ -1,0 +1,31 @@
+<exec>
+print Q10.c5.value # prints 5
+print Q10.c4.value # prints 4
+print Q10.c3.value # prints 3
+
+print Q11.r1.value # prints 2
+print Q11.r2.value # prints 4
+print Q11.r3.value # prints 6
+print Q11.r4.value # prints 8
+
+print Q12.r1.value # prints 9001
+</exec>
+<radio label="Q10" type="rating" values="order" ratingDirection="reverse">
+  <title>Please rate your experience:</title>
+  <col label="c1">1 - Bad</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">5 - Good</col>
+</radio>
+
+<radio label="Q11" title="Please select one:">
+  <row label="r1" value="2">Row 1</row>
+  <row label="r2" value="4">Row 2</row>
+  <row label="r3" value="6">Row 3</row>
+  <row label="r4" value="8">Row 4</row>
+</radio>
+
+<checkbox label="Q12" title="Yes?">
+  <row label="r1" value="9001">Yes</row>
+</checkbox>

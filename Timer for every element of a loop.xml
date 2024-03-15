@@ -1,0 +1,7 @@
+<style label="disable_continue" arg:timeout="5" mode="after" name="respview.client.js" with="cm1_Lr1,cm1_Lr2,cm1_Lr3,cm1_Lr4,cm1_Lr5,cm1_Lr6" wrap="ready"><![CDATA[
+var $submitButton = $ ("#btn_continue, #btn_finish");
+$submitButton.hide();
+setTimeout( function() {
+$submitButton.show();
+}, $(timeout) * 1000);
+]]></style>

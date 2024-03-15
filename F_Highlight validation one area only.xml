@@ -1,0 +1,54 @@
+ <block label="F_HighlightBlock" cond="vFindCorrect.r1" builder:title="F_Highlight_ImageMap">
+    <loop label="F_Highlight_Loop" vars="image">
+      <title>Findability- Heatmap</title>
+      <block label="F_Highlight_Block" builder:title="F_Highlight Heatmap Block">
+        <textarea 
+      label="F_Highlight_[loopvar: label]"
+      imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+      optional="0"
+      sst="0"
+      uses="imgmap.2020">
+          <title>When finding <b>[pipe: Finda]</b>, which <b>one</b> part of the packaging was <b>most useful</b> in helping you find what you were looking for? </title>
+          <comment>Using your mouse, highlight the <b>single part</b> of the packaging that was <b>most useful</b>.<br /><img src="/survey/selfserve/1da7/220614/clickNdragcrop.gif" alt="" width="200px" /></comment>
+          <validate>
+splitq1 = F_Highlight_[loopvar: label].c1.val 
+
+splitq1 = splitq1.split("\n")
+if len(splitq1) gt 1:
+  error("Please select only one area of the image.")
+          </validate>
+
+          <col label="c1" imgmap:color="#32CD32" optional="0">most useful</col>
+        </textarea>
+
+        <suspend/>
+      </block>
+
+      <looprow label="1" cond="Phase.r1 and Version.r1">
+        <loopvar name="image">PACK1A.jpg</loopvar>
+      </looprow>
+
+      <looprow label="2" cond="Phase.r1 and Version.r2">
+        <loopvar name="image">PACK1B.jpg</loopvar>
+      </looprow>
+
+      <looprow label="3" cond="Phase.r1 and Version.r3">
+        <loopvar name="image">PACK1C.jpg</loopvar>
+      </looprow>
+
+      <looprow label="4" cond="Phase.r2 and Version.r1">
+        <loopvar name="image">PACK2A.jpg</loopvar>
+      </looprow>
+
+      <looprow label="5" cond="Phase.r2 and Version.r2">
+        <loopvar name="image">PACK2B.jpg</loopvar>
+      </looprow>
+
+      <looprow label="6" cond="Phase.r2 and Version.r3">
+        <loopvar name="image">PACK2C.jpg</loopvar>
+      </looprow>
+    </loop>
+  </block>
+</block>
+
+<suspend/>

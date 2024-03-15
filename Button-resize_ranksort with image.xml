@@ -1,0 +1,85 @@
+<select 
+  label="CQ2_Ranking2"
+  minRanks="3"
+  optional="1"
+  ranksort:bucketCSS="height: 200px;"
+  ranksort:cardCSS="height: 200px;"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>Based on what you see here, please rank the packages from most premium to least premium.</title>
+  <comment><em><em>Click or drag each item into a rank position. </em>Please be sure to view all product lines before proceeding. You may need to scroll over/down to do so.</em></comment>
+  <row label="r1">[pipe:realpackA]</row>
+  <row label="r2">[pipe:realpackB]</row>
+  <row label="r3">[pipe:realpackC]</row>
+  <choice label="ch1">1 -&amp;nbsp;<em>Most Premium</em></choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3 - <em>Least&amp;nbsp;Premium</em></choice>
+</select>
+
+<suspend/>
+
+
+
+ <select 
+   label="Q_Rank"
+   minRanks="3"
+   optional="1"
+   randomize="0"
+   ranksort:bucketCSS="height: 200px;"
+   ranksort:cardCSS="height: 200px;"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>Please rank the following based on your overall preference.</title>
+    <comment>Click or drag each item into a rank position.</comment>
+    <choice label="ch1">First choice</choice>
+    <choice label="ch2">Second choice</choice>
+    <choice label="ch3">Third choice</choice>
+    <choice label="ch4">Fourth choice</choice>
+    <choice label="ch5">Fifth choice</choice>
+    <choice label="ch6">Sixth choice</choice>
+    <choice label="ch7">Seventh choice</choice>
+    <row label="r1"><img src="[rel PACK1.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r2"><img src="[rel PACK2.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r3"><img src="[rel PACK3.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r4"><img src="[rel PACK4.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r5"><img src="[rel PACK5.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r6"><img src="[rel PACK6.jpg]" title="" height="200" alt="" constrain="true" /></row>
+    <row label="r7"><img src="[rel PACK7.jpg]" title="" height="200" alt="" constrain="true" /></row>
+  </select>
+
+  <suspend/>
+
+
+
+
+
+
+
+    <select 
+   label="Q_Custom1"
+   minRanks="3"
+   optional="1"
+   randomize="0"
+   ranksort:bucketCSS="width: 400px; height: 80px;"
+   
+   ranksort:cardCSS="width: 300px; height: 270px;"
+   
+   unique="none,cols"
+   uses="ranksort.4">
+    <title>Please rank which product best fits the usage occasion shown.</title>
+    <row label="r1">[pipe:Comp_1]</row>
+    <row label="r2">[pipe:pack_1]</row>
+    <row label="r3">[pipe:Comp_2]</row>
+    <choice label="ch1">After School Snack</choice>
+    <choice label="ch2">Dinner</choice>
+    <choice label="ch3">Post workout meal</choice>
+    <choice label="ch4">Special occasion / celebration</choice>
+    <choice label="ch5">Late Night Snack</choice>
+    <choice label="ch6">Game time Snack</choice>
+    <choice label="ch7">Made for tweens/teens</choice>
+    <choice label="ch8">Made for toddlers</choice>
+    <choice label="ch9">Makes a great side dish</choice>
+    <choice label="ch10">For Lunch</choice>
+  </select>
+
+  <suspend/>

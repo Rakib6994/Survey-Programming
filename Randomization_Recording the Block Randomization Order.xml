@@ -1,0 +1,73 @@
+<checkbox label="Q1" atleast="1" shuffle="rows">
+  <title>
+    Which brands have you heard of?
+  </title>
+  <comment>Please select all that apply</comment>
+  <row label="r1">Brand 1</row>
+  <row label="r2">Brand 2</row>
+  <row label="r3">Brand 3</row>
+  <row label="r4">Brand 4</row>
+</checkbox>
+<suspend/>
+
+
+<exec>Brands_Section.order = Q1.rows.order</exec>
+<block label="Brands_Section" randomizeChildren="1">
+
+  <block label="Brand_1" randomize="1" cond="Q1.r1">
+     <radio label="B1_1" type="rating" values="order">
+       <title>
+         On a scale from 1 - 5, how do you feel about Brand 1?
+       </title>
+       <comment>Please select one</comment>
+       <col label="c1">1</col>
+       <col label="c2">2</col>
+       <col label="c3">3</col>
+       <col label="c4">4</col>
+       <col label="c5">5</col>
+     </radio>
+     <suspend/>
+  </block>
+
+  <block label="Brand_2" randomize="1" cond="Q1.r2">
+     <radio label="B2_1" type="rating" values="order" onLoad="copy('B1_1', cols=True)">
+       <title>
+         On a scale from 1 - 5, how do you feel about Brand 2?
+       </title>
+       <comment>Please select one</comment>
+     </radio>
+     <suspend/>
+  </block>
+
+  <block label="Brand_3" randomize="1" cond="Q1.r3">
+     <radio label="B3_1" type="rating" values="order" onLoad="copy('B1_1', cols=True)">
+       <title>
+         On a scale from 1 - 5, how do you feel about Brand 3?
+       </title>
+       <comment>Please select one</comment>
+     </radio>
+     <suspend/>
+  </block>
+
+  <block label="Brand_4" randomize="1" cond="Q1.r4">
+     <radio label="B4_1" type="rating" values="order" onLoad="copy('B1_1', cols=True)">
+       <title>
+         On a scale from 1 - 5, how do you feel about Brand 4?
+       </title>
+       <comment>Please select one</comment>
+     </radio>
+     <suspend/>
+  </block>
+
+</block>
+
+<number label="vBrand_Order" size="1">
+  <virtual>assignRandomOrder('Brands_Section', 'children')</virtual>
+  <title>
+    Order of Brands Shown
+  </title>
+  <row label="Brand_1">Brand 1</row>
+  <row label="Brand_2">Brand 2</row>
+  <row label="Brand_3">Brand 3</row>
+  <row label="Brand_4">Brand 4</row>
+</number>

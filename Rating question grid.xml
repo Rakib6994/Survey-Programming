@@ -1,0 +1,16 @@
+<radio label="q3"
+  atmtable:btn_css="border-radius: 10px; background: #fff; color: #444; border: 4px solid #888; font-family: 'Times New Roman', Times, serif; font-size: 36px;  padding: 0; width: 12%;"
+  atmtable:btn_selected_css="border-color: #f80"
+  atmtable:row_dividers="1"
+  atmtable:row_dividers_css="background: #888; height: 1px"
+  uses="atmtable.6">
+  <title>How interested are you in the following movies?</title>
+  <col label="c1" atmtable:col_legend_text="Not at All">1</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5" atmtable:col_legend_text="Very Much">5</col>
+  <row label="r1">Flight</row>
+  <row label="r2">Argo</row>
+  <row label="r4">Skyfall</row>
+</radio>

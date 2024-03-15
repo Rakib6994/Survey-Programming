@@ -1,0 +1,76 @@
+###>>>Some Keywords/Syntax!
+verify="range(1-99)"
+autofill="S1.check('&lt;40')"
+autofill="S1.check('&gt;=60')"
+open="1"  openSize="25"
+verify="Email"
+atleast="2"
+atmost="4"
+####>>>Radio doesn't support autofill tag#
+
+
+#Python Code to see shuffling orders!
+
+<exec>
+	print S1.rows.order
+	print S2.cols.order
+	Print S3.choices.order
+</exec>
+
+Q1.rows.order  >-------------->  [[Q1.r1], [Q1.r3], [Q1.r2], [Q1.r4]]
+Q1.cols.order  >-------------->  [[Q1.c3], [Q1.c1], [Q1.c4], [Q1.c2]]
+
+[x.index for x in Q1.rows.order] >--------------> [0, 2, 1, 3]
+
+[x.label for x in Q1.cols.order] >--------------> ['c3', 'c1', 'c4', 'c2']
+
+[x.text for x in Q1.rows.order] >--------------> ['1', '3', '2', '4']
+
+Q1.cols.order[1].text == "1" >--------------> True
+
+
+
+#--RANDOMIZATION----------------------------------------------------------------#
+
+Q1.rows.order = Q0.rows.order >--------------> Q0's row order
+Q1.rows.order = Q0.cols.order >--------------> Q0's col order
+Q1.rows.order = Q0.choices.order >--------------> Q0's choice order
+Q1.rows.order = [0, 1, 2, 3] >--------------> Ascending
+Q1.rows.order = [0, 1, 2, 3, 4, 5, 6] >--------------> Ascending
+Q1.rows.order = [0] >--------------> Ascending
+Q1.rows.order = [Q1.r1, Q1.r2, Q1.r3, Q1.r4] >--------------> Ascending
+Q1.rows.order = [3, 2, 1, 0] >--------------> Descending
+Q1.rows.order = [6, 5, 4, 3, 2, 1, 0] >--------------> Descending
+Q1.rows.order = [Q1.r4, Q1.r3, Q1.r2, Q1.r1] >--------------> Descending
+Q1.rows.order = Q1.rows[::-1] >--------------> Descending
+Q1.rows.order = [3] >--------------> "r4", "r1", "r2", "r3"
+Q1.rows.order = [1, 2] >--------------> "r2", "r3", "r1", "r4"
+Q1.rows.order = Q1.rows.order >--------------> Random (unnecessary)
+Q1.rows.order = random.sample(xrange(4), 4) >--------------> Random (unnecessary)
+random.shuffle(Q1.rows.order) >--------------> Random (unnecessary)
+
+#--RANDOMIZATION----------------------------------------------------------------#
+
+
+
+#PIPE--------------------------------------------------------------------------#
+
+[pipe: LABEL upper]       >--------------> Upper-cases all letters of the pipe
+											(e.g., PIPE TEXT LOOKS LIKE THIS)
+
+[pipe: LABEL lower]		  >-------------->Lower-cases all letters of the pipe
+											(e.g., pipe text looks like this)
+
+[pipe: LABEL title]		  >-------------->Title-cases all letters of the pipe
+											(e.g., Pipe Text Looks Like This)
+
+[pipe: LABEL capitalize]  >-------------->Capitalizes the first letter of the pipe
+											(e.g., Pipe text looks like this)
+
+
+
+
+#PIPE--------------------------------------------------------------------------#
+
+
+

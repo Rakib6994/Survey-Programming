@@ -1,0 +1,35 @@
+<checkbox 
+  label="B9"
+  atleast="1"
+  atm1d:numCols="3"
+  atm1d:viewMode="tiled"
+  uses="atm1d.9">
+  <title>${this.label + ". " if showQID.r1 else ""}Where do you usually go to look for information or treatments for your condition?</title>
+  <comment>Please select all applicable responses.</comment>
+  <style name="page.head"><![CDATA[
+<style>
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 280px;
+    min-width: 255px;
+}
+
+\@if not device.desktop
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 250px;
+    min-width: 235px;
+}
+
+\@endif
+
+</style>
+]]></style>
+  <row label="r1" cond="A1.r1">Spouse/ partner</row>
+  <row label="r2" cond="A1.r1">Family member (other than spouse/ partner)</row>
+  <row label="r3" cond="A1.r1">Friend/ colleague</row>
+  <row label="r4" cond="A1.r1">Doctor - General Practitioner</row>
+  <row label="r5" cond="A1.r1">Specialist Doctor (e.g. Psychologist, Ophthalmologist etc.)</row>
+  <row label="r6" cond="A1.r1">Nurse</row>
+</checkbox>
+
+<!--Line 4: 3 options in a row-->
+<!--Line 5:Tiled view-->

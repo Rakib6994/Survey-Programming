@@ -1,0 +1,252 @@
+<style name="respview.client.js" with="A1"><![CDATA[
+<script>
+$ (document).on("ready click change",function() {
+
+if ($ ('input[type=checkbox]').eq(0).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(0).prop( "disabled", true );
+    $ ("input[type=text]").eq(1).prop( "disabled", true );
+    $ ("input[type=text]").eq(2).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(0).val("");
+    $ ("input[type=text]").eq(1).val("");
+    $ ("input[type=text]").eq(2).val("");
+    
+    $ ("input[type=text]").eq(0).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(1).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(2).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(0).prop( "disabled", false );
+    $ ("input[type=text]").eq(1).prop( "disabled", false );
+    $ ("input[type=text]").eq(2).prop( "disabled", false );
+    $ ("input[type=text]").eq(0).css( "background", "#fff" );
+    $ ("input[type=text]").eq(1).css( "background", "#fff" );
+    $ ("input[type=text]").eq(2).css( "background", "#fff" );
+
+  }
+
+if ($ ('input[type=checkbox]').eq(1).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(3).prop( "disabled", true );
+    $ ("input[type=text]").eq(4).prop( "disabled", true );
+    $ ("input[type=text]").eq(5).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(3).val("");
+    $ ("input[type=text]").eq(4).val("");
+    $ ("input[type=text]").eq(5).val("");
+    
+    $ ("input[type=text]").eq(3).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(4).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(5).css( "background", "#ccc" );
+
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(3).prop( "disabled", false );
+    $ ("input[type=text]").eq(4).prop( "disabled", false );
+    $ ("input[type=text]").eq(5).prop( "disabled", false );
+    
+    $ ("input[type=text]").eq(3).css( "background", "#fff" );
+    $ ("input[type=text]").eq(4).css( "background", "#fff" );
+    $ ("input[type=text]").eq(5).css( "background", "#fff" );
+
+  }
+
+if ($ ('input[type=checkbox]').eq(2).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(6).prop( "disabled", true );
+    $ ("input[type=text]").eq(7).prop( "disabled", true );
+    $ ("input[type=text]").eq(8).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(6).val("");
+    $ ("input[type=text]").eq(7).val("");
+    $ ("input[type=text]").eq(8).val("");
+
+    $ ("input[type=text]").eq(6).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(7).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(8).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(6).prop( "disabled", false );
+    $ ("input[type=text]").eq(7).prop( "disabled", false );
+    $ ("input[type=text]").eq(8).prop( "disabled", false );
+
+    $ ("input[type=text]").eq(6).css( "background", "#fff" );
+    $ ("input[type=text]").eq(7).css( "background", "#fff" );
+    $ ("input[type=text]").eq(8).css( "background", "#fff" );
+
+  }
+if ($ ('input[type=checkbox]').eq(3).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(9).prop( "disabled", true );
+    $ ("input[type=text]").eq(10).prop( "disabled", true );
+    $ ("input[type=text]").eq(11).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(9).val("");
+    $ ("input[type=text]").eq(10).val("");
+    $ ("input[type=text]").eq(11).val("");
+
+    $ ("input[type=text]").eq(9).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(10).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(11).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(9).prop( "disabled", false );
+    $ ("input[type=text]").eq(10).prop( "disabled", false );
+    $ ("input[type=text]").eq(11).prop( "disabled", false );
+    
+    $ ("input[type=text]").eq(9).css( "background", "#fff" );
+    $ ("input[type=text]").eq(10).css( "background", "#fff" );
+    $ ("input[type=text]").eq(11).css( "background", "#fff" );
+
+  }
+
+if ($ ('input[type=checkbox]').eq(4).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(12).prop( "disabled", true );
+    $ ("input[type=text]").eq(13).prop( "disabled", true );
+    $ ("input[type=text]").eq(14).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(12).val("");
+    $ ("input[type=text]").eq(13).val("");
+    $ ("input[type=text]").eq(14).val("");
+
+    $ ("input[type=text]").eq(12).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(13).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(14).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(12).prop( "disabled", false );
+    $ ("input[type=text]").eq(13).prop( "disabled", false );
+    $ ("input[type=text]").eq(14).prop( "disabled", false );
+    
+    $ ("input[type=text]").eq(12).css( "background", "#fff" );
+    $ ("input[type=text]").eq(13).css( "background", "#fff" );
+    $ ("input[type=text]").eq(14).css( "background", "#fff" );
+
+  }
+
+if ($ ('input[type=checkbox]').eq(5).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(15).prop( "disabled", true );
+    $ ("input[type=text]").eq(16).prop( "disabled", true );
+    $ ("input[type=text]").eq(17).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(15).val("");
+    $ ("input[type=text]").eq(16).val("");
+    $ ("input[type=text]").eq(17).val("");
+
+    $ ("input[type=text]").eq(15).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(16).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(17).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(15).prop( "disabled", false );
+    $ ("input[type=text]").eq(16).prop( "disabled", false );
+    $ ("input[type=text]").eq(17).prop( "disabled", false );
+    
+    $ ("input[type=text]").eq(15).css( "background", "#fff" );
+    $ ("input[type=text]").eq(16).css( "background", "#fff" );
+    $ ("input[type=text]").eq(17).css( "background", "#fff" );
+
+  }
+
+if ($ ('input[type=checkbox]').eq(6).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(18).prop( "disabled", true );
+    $ ("input[type=text]").eq(19).prop( "disabled", true );
+    $ ("input[type=text]").eq(20).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(18).val("");
+    $ ("input[type=text]").eq(19).val("");
+    $ ("input[type=text]").eq(20).val("");
+
+    $ ("input[type=text]").eq(18).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(19).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(20).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(18).prop( "disabled", false );
+    $ ("input[type=text]").eq(19).prop( "disabled", false );
+    $ ("input[type=text]").eq(20).prop( "disabled", false );
+    
+    $ ("input[type=text]").eq(18).css( "background", "#fff" );
+    $ ("input[type=text]").eq(19).css( "background", "#fff" );
+    $ ("input[type=text]").eq(20).css( "background", "#fff" );
+
+  }
+
+if ($ ('input[type=checkbox]').eq(7).prop('checked') == true)
+  {
+    $ ("input[type=text]").eq(21).prop( "disabled", true );
+    $ ("input[type=text]").eq(22).prop( "disabled", true );
+    $ ("input[type=text]").eq(23).prop( "disabled", true );
+
+    $ ("input[type=text]").eq(21).val("");
+    $ ("input[type=text]").eq(22).val("");
+    $ ("input[type=text]").eq(23).val("");
+
+    $ ("input[type=text]").eq(21).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(22).css( "background", "#ccc" );
+    $ ("input[type=text]").eq(23).css( "background", "#ccc" );
+
+  }
+else
+  {
+    $ ("input[type=text]").eq(21).prop( "disabled", false );
+    $ ("input[type=text]").eq(22).prop( "disabled", false );
+    $ ("input[type=text]").eq(23).prop( "disabled", false );
+    
+    $ ("input[type=text]").eq(21).css( "background", "#fff" );
+    $ ("input[type=text]").eq(22).css( "background", "#fff" );
+    $ ("input[type=text]").eq(23).css( "background", "#fff" );
+
+  }
+
+});
+</script>
+]]></style>
+<text 
+  label="A1"
+  shuffle="rows"
+  ss:listDisplay="0">
+  <title>When you look at the <b>logos</b> below which, if any, <b>financial institutions</b> come to mind? Please tick ‘No brand’ if you don’t think of any.  If you think of more than one brand please put each brand in a separate box, you can write up to three brands.</title>
+  <comment>Please be as specific as possible</comment>
+  <validate>
+if A1x2.c4.count == 8:
+   error("Please review your response.")
+  </validate>
+
+  <style name="page.head"><![CDATA[
+<style>
+img {
+  max-width: 90px ;
+}
+</style>
+]]></style>
+  <row label="r1" alt="CBA"><div style="text-align:center;">[pipe: pipeCBAImg]</div></row>
+  <row label="r2" alt="Westpac"><div style="text-align:center;"><img src="[rel westpac.png]" /></div></row>
+  <row label="r3" alt="NAB"><div style="text-align:center;"><img src="[rel NAB.png]" /></div></row>
+  <row label="r4" alt="St George"><div style="text-align:center;"><img src="[rel st_george.png]" /></div></row>
+  <row label="r5" alt="ANZ"><div style="text-align:center;"><img src="[rel anz.png]" /></div></row>
+  <row label="r6" alt="ING"><div style="text-align:center;"><img src="[rel ing.png]" /></div></row>
+  <row label="r7" alt="ME Bank"><div style="text-align:center;"><img src="[rel me_bank.png]" /></div></row>
+  <row label="r8" alt="Bank Australia"><div style="text-align:center;"><img src="[rel bank_au.png]" /></div></row>
+  <col label="c1">First brand</col>
+  <col label="c2">Second brand</col>
+  <col label="c3">Third brand</col>
+</text>

@@ -1,0 +1,3 @@
+S_Frequency.TB.c1: 100%
+S_Brand_PastPurchased3.r1: 100%
+S_Brand_BUMO3.r1: 100%

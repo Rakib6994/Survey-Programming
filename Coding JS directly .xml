@@ -1,0 +1,11 @@
+<style name='respview.client.js' mode="after"><![CDATA[
+    <script type="text/javascript" src="[rel JAVASCRIPT_FILENAME]"></script>
+    <script>
+    $ (function() {
+
+        // your code goes here
+        alert("JavaScript is running!");
+
+    });
+    </script>
+]]></style>

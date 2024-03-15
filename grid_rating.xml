@@ -1,0 +1,16 @@
+  <radio 
+  label="Q26"
+  grouping="rows"
+  optional="1"
+  uses="ratingscale.5">
+  <title><br /><b>Rating Scale<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+  <row label="r1">Friendliness</row>
+  <row label="r2">Ability to answer your questions</row>
+  <row label="r3">Quality of service</row>
+  <col label="c1">Hated It</col>
+  <col label="c2">Didn't Like It</col>
+  <col label="c3">It was OK</col>
+  <col label="c4">Liked It</col>
+  <col label="c5">Loved It</col>
+</radio>
+<suspend/>

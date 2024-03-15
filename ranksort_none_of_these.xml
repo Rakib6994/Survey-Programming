@@ -1,0 +1,35 @@
+<select 
+  label="Q_USAGE_TOT"
+  minRanks="9"
+  optional="1"
+  ranksort:bucketCSS="width: 250px; height:80px !important;"
+  ranksort:bucketsContainerCSS="width: 250px; margin-left:90px;"
+  ranksort:cardCSS="width: 250px; height:80px !important;; color: #000000;"
+  ranksort:cardsContainerCSS="width: 580px;"
+  shuffle="rows"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>When you're buying Non-Chocolate Halloween candy for Trick or Treating, what is the most important factor in purchasing?  </title>
+  <comment>Rank from most to least important.</comment>
+  <choice label="ch1">Most-important</choice>
+  <choice label="ch2">2nd-important</choice>
+  <choice label="ch3">3rd-important</choice>
+  <choice label="ch4">4th-important</choice>
+  <choice label="ch5">5th-important</choice>
+  <choice label="ch6">6th-important</choice>
+  <choice label="ch7">7th-important</choice>
+  <choice label="ch8">8th-important</choice>
+  <choice label="ch9">Least-important</choice>
+  <row label="r1">Single Brand offering (i.e., Skittles only, Nerds only, Starburst only)</row>
+  <row label="r2">Multiple Brands offering (i.e. - Skittles, Starburst or Nerds, Trolli, SweeTARTS)</row>
+  <row label="r3">Price of the bag</row>
+  <row label="r4">Piece count (i.e.. - 100 or 200 pieces per bag)</row>
+  <row label="r5">Price per piece count (i.e. - 30 cents per piece)</row>
+  <row label="r6">Type of candy (i.e. - fun/treat size vs. lollipop)</row>
+  <row label="r7">Packaging appeal (Halloween or Autumn pictures)</row>
+  <row label="r8">Flavors of the candy in the bag (sweet vs. sour)</row>
+  <row label="r9" randomize="0">Other (Please Specify )</row>
+  <noanswer label="r10">None of these – I do not buy Non-Chocolate Halloween candy for Trick or Treating</noanswer>
+</select>
+
+<suspend/>

@@ -1,0 +1,4099 @@
+Resp	Phase	City	CityN	Conf
+100	1	Test	2	965
+1000	1	Test	2	307
+1001	1	Test	2	443
+1002	1	Test	2	361
+1003	1	Test	2	852
+1004	1	Test	2	806
+1005	1	Test	2	579
+1006	1	Test	2	451
+1007	1	Test	2	823
+1008	1	Test	2	979
+1009	1	Test	2	395
+101	1	Test	2	339
+1010	1	Test	2	005
+1011	1	Test	2	881
+1012	1	Test	2	438
+1013	1	Test	2	615
+1014	1	Test	2	475
+1015	1	Test	2	586
+1016	1	Test	2	906
+1017	1	Test	2	559
+1018	1	Test	2	235
+1019	1	Test	2	823
+102	1	Test	2	433
+1020	1	Test	2	352
+1021	1	Test	2	806
+1022	1	Test	2	804
+1023	1	Test	2	985
+1024	1	Test	2	555
+1025	1	Test	2	007
+1026	1	Test	2	507
+1027	1	Test	2	363
+1028	1	Test	2	347
+1029	1	Test	2	081
+103	1	Test	2	565
+1030	1	Test	2	354
+1031	1	Test	2	013
+1032	1	Test	2	813
+1033	1	Test	2	321
+1034	1	Test	2	532
+1035	1	Test	2	487
+1036	1	Test	2	062
+1037	1	Test	2	344
+1038	1	Test	2	773
+1039	1	Test	2	292
+104	1	Test	2	157
+1040	1	Test	2	751
+1041	1	Test	2	641
+1042	1	Test	2	497
+1043	1	Test	2	571
+1044	1	Test	2	649
+1045	1	Test	2	797
+1046	1	Test	2	809
+1047	1	Test	2	767
+1048	1	Test	2	924
+1049	1	Test	2	814
+105	1	Test	2	297
+1050	1	Test	2	367
+1051	1	Test	2	436
+1052	1	Test	2	147
+1053	1	Test	2	714
+1054	1	Test	2	445
+1055	1	Test	2	387
+1056	1	Test	2	248
+1057	1	Test	2	042
+1058	1	Test	2	019
+1059	1	Test	2	315
+106	1	Test	2	176
+1060	1	Test	2	979
+1061	1	Test	2	071
+1062	1	Test	2	685
+1063	1	Test	2	301
+1064	1	Test	2	387
+1065	1	Test	2	896
+1066	1	Test	2	313
+1067	1	Test	2	161
+1068	1	Test	2	584
+1069	1	Test	2	097
+107	1	Test	2	231
+1070	1	Test	2	463
+1071	1	Test	2	906
+1072	1	Test	2	075
+1073	1	Test	2	911
+1074	1	Test	2	853
+1075	1	Test	2	431
+1076	1	Test	2	337
+1077	1	Test	2	617
+1078	1	Test	2	782
+1079	1	Test	2	227
+108	1	Test	2	439
+1080	1	Test	2	629
+1081	1	Test	2	871
+1082	1	Test	2	787
+1083	1	Test	2	362
+1084	1	Test	2	751
+1085	1	Test	2	944
+1086	1	Test	2	927
+1087	1	Test	2	508
+1088	1	Test	2	717
+1089	1	Test	2	731
+109	1	Test	2	237
+1090	1	Test	2	106
+1091	1	Test	2	292
+1092	1	Test	2	492
+1093	1	Test	2	941
+1094	1	Test	2	426
+1095	1	Test	2	852
+1096	1	Test	2	528
+1097	1	Test	2	867
+1098	1	Test	2	268
+1099	1	Test	2	553
+110	1	Test	2	303
+1100	1	Test	2	985
+1101	1	Test	2	164
+1102	1	Test	2	174
+1103	1	Test	2	333
+1104	1	Test	2	528
+1105	1	Test	2	132
+1106	1	Test	2	544
+1107	1	Test	2	105
+1108	1	Test	2	456
+1109	1	Test	2	636
+111	1	Test	2	838
+1110	1	Test	2	165
+1111	1	Test	2	433
+1112	1	Test	2	663
+1113	1	Test	2	056
+1114	1	Test	2	919
+1115	1	Test	2	013
+1116	1	Test	2	685
+1117	1	Test	2	794
+1118	1	Test	2	744
+1119	1	Test	2	526
+112	1	Test	2	813
+1120	1	Test	2	041
+1121	1	Test	2	245
+1122	1	Test	2	679
+1123	1	Test	2	998
+1124	1	Test	2	901
+1125	1	Test	2	409
+1126	1	Test	2	241
+1127	1	Test	2	033
+1128	1	Test	2	904
+1129	1	Test	2	853
+113	1	Test	2	179
+1130	1	Test	2	671
+1131	1	Test	2	743
+1132	1	Test	2	693
+1133	1	Test	2	533
+1134	1	Test	2	062
+1135	1	Test	2	317
+1136	1	Test	2	316
+1137	1	Test	2	209
+1138	1	Test	2	015
+1139	1	Test	2	739
+114	1	Test	2	362
+1140	1	Test	2	858
+1141	1	Test	2	522
+1142	1	Test	2	228
+1143	1	Test	2	449
+1144	1	Test	2	802
+1145	1	Test	2	559
+1146	1	Test	2	218
+1147	1	Test	2	545
+1148	1	Test	2	999
+1149	1	Test	2	409
+115	1	Test	2	079
+1150	1	Test	2	955
+1151	1	Test	2	731
+1152	1	Test	2	106
+1153	1	Test	2	697
+1154	1	Test	2	951
+1155	1	Test	2	276
+1156	1	Test	2	458
+1157	1	Test	2	608
+1158	1	Test	2	212
+1159	1	Test	2	413
+116	1	Test	2	199
+1160	1	Test	2	942
+1161	1	Test	2	595
+1162	1	Test	2	743
+1163	1	Test	2	779
+1164	1	Test	2	555
+1165	1	Test	2	608
+1166	1	Test	2	091
+1167	1	Test	2	675
+1168	1	Test	2	561
+1169	1	Test	2	827
+117	1	Test	2	591
+1170	1	Test	2	373
+1171	1	Test	2	319
+1172	1	Test	2	745
+1173	1	Test	2	415
+1174	1	Test	2	416
+1175	1	Test	2	534
+1176	1	Test	2	732
+1177	1	Test	2	791
+1178	1	Test	2	686
+1179	1	Test	2	248
+118	1	Test	2	583
+1180	1	Test	2	366
+1181	1	Test	2	578
+1182	1	Test	2	399
+1183	1	Test	2	591
+1184	1	Test	2	304
+1185	1	Test	2	886
+1186	1	Test	2	306
+1187	1	Test	2	616
+1188	1	Test	2	844
+1189	1	Test	2	354
+119	1	Test	2	538
+1190	1	Test	2	547
+1191	1	Test	2	525
+1192	1	Test	2	124
+1193	1	Test	2	147
+1194	1	Test	2	184
+1195	1	Test	2	274
+1196	1	Test	2	431
+1197	1	Test	2	855
+1198	1	Test	2	164
+1199	1	Test	2	278
+120	1	Test	2	403
+1200	1	Test	2	793
+1201	1	Test	2	139
+1202	1	Test	2	304
+1203	1	Test	2	927
+1204	1	Test	2	519
+1205	1	Test	2	324
+1206	1	Test	2	193
+1207	1	Test	2	524
+1208	1	Test	2	526
+1209	1	Test	2	059
+121	1	Test	2	443
+1210	1	Test	2	021
+1211	1	Test	2	046
+1212	1	Test	2	102
+1213	1	Test	2	945
+1214	1	Test	2	184
+1215	1	Test	2	585
+1216	1	Test	2	878
+1217	1	Test	2	309
+1218	1	Test	2	107
+1219	1	Test	2	457
+122	1	Test	2	262
+1220	1	Test	2	236
+1221	1	Test	2	992
+1222	1	Test	2	556
+1223	1	Test	2	447
+1224	1	Test	2	733
+1225	1	Test	2	394
+1226	1	Test	2	631
+1227	1	Test	2	837
+1228	1	Test	2	354
+1229	1	Test	2	781
+123	1	Test	2	098
+1230	1	Test	2	367
+1231	1	Test	2	776
+1232	1	Test	2	833
+1233	1	Test	2	751
+1234	1	Test	2	406
+1235	1	Test	2	043
+1236	1	Test	2	584
+1237	1	Test	2	307
+1238	1	Test	2	469
+1239	1	Test	2	931
+124	1	Test	2	267
+1240	1	Test	2	704
+1241	1	Test	2	639
+1242	1	Test	2	187
+1243	1	Test	2	022
+1244	1	Test	2	214
+1245	1	Test	2	424
+1246	1	Test	2	638
+1247	1	Test	2	397
+1248	1	Test	2	611
+1249	1	Test	2	789
+125	1	Test	2	422
+1250	1	Test	2	182
+1251	1	Test	2	691
+1252	1	Test	2	957
+1253	1	Test	2	494
+1254	1	Test	2	827
+1255	1	Test	2	968
+1256	1	Test	2	143
+1257	1	Test	2	614
+1258	1	Test	2	214
+1259	1	Test	2	991
+126	1	Test	2	392
+1260	1	Test	2	435
+1261	1	Test	2	936
+1262	1	Test	2	809
+1263	1	Test	2	186
+1264	1	Test	2	701
+1265	1	Test	2	572
+1266	1	Test	2	132
+1267	1	Test	2	237
+1268	1	Test	2	766
+1269	1	Test	2	153
+127	1	Test	2	082
+1270	1	Test	2	371
+1271	1	Test	2	208
+1272	1	Test	2	484
+1273	1	Test	2	059
+1274	1	Test	2	631
+1275	1	Test	2	266
+1276	1	Test	2	729
+1277	1	Test	2	056
+1278	1	Test	2	371
+1279	1	Test	2	416
+128	1	Test	2	365
+1280	1	Test	2	781
+1281	1	Test	2	039
+1282	1	Test	2	486
+1283	1	Test	2	076
+1284	1	Test	2	742
+1285	1	Test	2	743
+1286	1	Test	2	181
+1287	1	Test	2	638
+1288	1	Test	2	583
+1289	1	Test	2	634
+129	1	Test	2	349
+1290	1	Test	2	776
+1291	1	Test	2	866
+1292	1	Test	2	662
+1293	1	Test	2	417
+1294	1	Test	2	452
+1295	1	Test	2	066
+1296	1	Test	2	376
+1297	1	Test	2	844
+1298	1	Test	2	459
+1299	1	Test	2	326
+130	1	Test	2	996
+1300	1	Test	2	079
+1301	1	Test	2	938
+1302	1	Test	2	503
+1303	1	Test	2	255
+1304	1	Test	2	252
+1305	1	Test	2	083
+1306	1	Test	2	696
+1307	1	Test	2	494
+1308	1	Test	2	815
+1309	1	Test	2	904
+131	1	Test	2	453
+1310	1	Test	2	901
+1311	1	Test	2	972
+1312	1	Test	2	434
+1313	1	Test	2	771
+1314	1	Test	2	794
+1315	1	Test	2	336
+1316	1	Test	2	133
+1317	1	Test	2	369
+1318	1	Test	2	949
+1319	1	Test	2	706
+132	1	Test	2	928
+1320	1	Test	2	637
+1321	1	Test	2	418
+1322	1	Test	2	457
+1323	1	Test	2	858
+1324	1	Test	2	515
+1325	1	Test	2	391
+1326	1	Test	2	001
+1327	1	Test	2	442
+1328	1	Test	2	844
+1329	1	Test	2	266
+133	1	Test	2	027
+1330	1	Test	2	078
+1331	1	Test	2	517
+1332	1	Test	2	822
+1333	1	Test	2	224
+1334	1	Test	2	695
+1335	1	Test	2	372
+1336	1	Test	2	387
+1337	1	Test	2	389
+1338	1	Test	2	386
+1339	1	Test	2	636
+134	1	Test	2	863
+1340	1	Test	2	538
+1341	1	Test	2	476
+1342	1	Test	2	785
+1343	1	Test	2	576
+1344	1	Test	2	252
+1345	1	Test	2	616
+1346	1	Test	2	112
+1347	1	Test	2	271
+1348	1	Test	2	206
+1349	1	Test	2	752
+135	1	Test	2	262
+1350	1	Test	2	889
+1351	1	Test	2	114
+1352	1	Test	2	213
+1353	1	Test	2	723
+1354	1	Test	2	103
+1355	1	Test	2	718
+1356	1	Test	2	468
+1357	1	Test	2	718
+1358	1	Test	2	684
+1359	1	Test	2	798
+136	1	Test	2	929
+1360	1	Test	2	224
+1361	1	Test	2	118
+1362	1	Test	2	065
+1363	1	Test	2	228
+1364	1	Test	2	836
+1365	1	Test	2	438
+1366	1	Test	2	167
+1367	1	Test	2	214
+1368	1	Test	2	203
+1369	1	Test	2	536
+137	1	Test	2	503
+1370	1	Test	2	054
+1371	1	Test	2	218
+1372	1	Test	2	538
+1373	1	Test	2	135
+1374	1	Test	2	194
+1375	1	Test	2	769
+1376	1	Test	2	041
+1377	1	Test	2	467
+1378	1	Test	2	678
+1379	1	Test	2	693
+138	1	Test	2	994
+1380	1	Test	2	159
+1381	1	Test	2	424
+1382	1	Test	2	306
+1383	1	Test	2	179
+1384	1	Test	2	347
+1385	1	Test	2	571
+1386	1	Test	2	469
+1387	1	Test	2	022
+1388	1	Test	2	761
+1389	1	Test	2	085
+139	1	Test	2	369
+1390	1	Test	2	432
+1391	1	Test	2	354
+1392	1	Test	2	453
+1393	1	Test	2	861
+1394	1	Test	2	993
+1395	1	Test	2	997
+1396	1	Test	2	165
+1397	1	Test	2	657
+1398	1	Test	2	444
+1399	1	Test	2	326
+140	1	Test	2	124
+1400	1	Test	2	457
+1401	1	Test	2	804
+1402	1	Test	2	393
+1403	1	Test	2	656
+1404	1	Test	2	253
+1405	1	Test	2	709
+1406	1	Test	2	634
+1407	1	Test	2	854
+1408	1	Test	2	888
+1409	1	Test	2	206
+141	1	Test	2	245
+1410	1	Test	2	005
+1411	1	Test	2	401
+1412	1	Test	2	488
+1413	1	Test	2	901
+1414	1	Test	2	664
+1415	1	Test	2	813
+1416	1	Test	2	953
+1417	1	Test	2	295
+1418	1	Test	2	455
+1419	1	Test	2	238
+142	1	Test	2	384
+1420	1	Test	2	378
+1421	1	Test	2	795
+1422	1	Test	2	903
+1423	1	Test	2	365
+1424	1	Test	2	595
+1425	1	Test	2	111
+1426	1	Test	2	059
+1427	1	Test	2	405
+1428	1	Test	2	406
+1429	1	Test	2	029
+143	1	Test	2	209
+1430	1	Test	2	349
+1431	1	Test	2	918
+1432	1	Test	2	969
+1433	1	Test	2	027
+1434	1	Test	2	908
+1435	1	Test	2	311
+1436	1	Test	2	726
+1437	1	Test	2	919
+1438	1	Test	2	752
+1439	1	Test	2	994
+144	1	Test	2	846
+1440	1	Test	2	814
+1441	1	Test	2	155
+1442	1	Test	2	247
+1443	1	Test	2	658
+1444	1	Test	2	099
+1445	1	Test	2	317
+1446	1	Test	2	181
+1447	1	Test	2	904
+1448	1	Test	2	395
+1449	1	Test	2	887
+145	1	Test	2	741
+1450	1	Test	2	289
+1451	1	Test	2	379
+1452	1	Test	2	407
+1453	1	Test	2	491
+1454	1	Test	2	747
+1455	1	Test	2	253
+1456	1	Test	2	554
+1457	1	Test	2	745
+1458	1	Test	2	014
+1459	1	Test	2	107
+146	1	Test	2	287
+1460	1	Test	2	963
+1461	1	Test	2	579
+1462	1	Test	2	389
+1463	1	Test	2	779
+1464	1	Test	2	974
+1465	1	Test	2	298
+1466	1	Test	2	816
+1467	1	Test	2	707
+1468	1	Test	2	674
+1469	1	Test	2	185
+147	1	Test	2	451
+1470	1	Test	2	655
+1471	1	Test	2	614
+1472	1	Test	2	438
+1473	1	Test	2	992
+1474	1	Test	2	099
+1475	1	Test	2	029
+1476	1	Test	2	092
+1477	1	Test	2	007
+1478	1	Test	2	578
+1479	1	Test	2	512
+148	1	Test	2	763
+1480	1	Test	2	928
+1481	1	Test	2	762
+1482	1	Test	2	529
+1483	1	Test	2	292
+1484	1	Test	2	688
+1485	1	Test	2	936
+1486	1	Test	2	558
+1487	1	Test	2	212
+1488	1	Test	2	798
+1489	1	Test	2	892
+149	1	Test	2	823
+1490	1	Test	2	826
+1491	1	Test	2	639
+1492	1	Test	2	055
+1493	1	Test	2	669
+1494	1	Test	2	502
+1495	1	Test	2	776
+1496	1	Test	2	175
+1497	1	Test	2	122
+1498	1	Test	2	122
+1499	1	Test	2	457
+150	1	Test	2	389
+1500	1	Test	2	581
+151	1	Test	2	597
+152	1	Test	2	478
+153	1	Test	2	827
+154	1	Test	2	719
+155	1	Test	2	052
+156	1	Test	2	812
+157	1	Test	2	168
+158	1	Test	2	142
+159	1	Test	2	897
+160	1	Test	2	045
+161	1	Test	2	223
+162	1	Test	2	622
+163	1	Test	2	437
+164	1	Test	2	343
+165	1	Test	2	048
+166	1	Test	2	482
+167	1	Test	2	187
+168	1	Test	2	217
+169	1	Test	2	299
+170	1	Test	2	933
+171	1	Test	2	762
+172	1	Test	2	531
+173	1	Test	2	326
+174	1	Test	2	999
+175	1	Test	2	627
+176	1	Test	2	261
+177	1	Test	2	926
+178	1	Test	2	332
+179	1	Test	2	697
+180	1	Test	2	759
+181	1	Test	2	807
+182	1	Test	2	169
+183	1	Test	2	937
+184	1	Test	2	407
+185	1	Test	2	097
+186	1	Test	2	676
+187	1	Test	2	551
+188	1	Test	2	719
+189	1	Test	2	473
+190	1	Test	2	238
+191	1	Test	2	049
+192	1	Test	2	336
+193	1	Test	2	549
+194	1	Test	2	356
+195	1	Test	2	843
+196	1	Test	2	198
+197	1	Test	2	946
+198	1	Test	2	096
+199	1	Test	2	185
+200	1	Test	2	367
+201	1	Test	2	729
+202	1	Test	2	266
+203	1	Test	2	829
+204	1	Test	2	294
+205	1	Test	2	324
+206	1	Test	2	758
+207	1	Test	2	403
+208	1	Test	2	347
+209	1	Test	2	052
+210	1	Test	2	098
+211	1	Test	2	683
+21101	1	Jakarta (Mitra Market Research )	1	551
+21102	1	Jakarta (Mitra Market Research )	1	871
+21103	1	Jakarta (Mitra Market Research )	1	334
+21104	1	Jakarta (Mitra Market Research )	1	141
+21105	1	Jakarta (Mitra Market Research )	1	896
+21106	1	Jakarta (Mitra Market Research )	1	402
+21107	1	Jakarta (Mitra Market Research )	1	549
+21108	1	Jakarta (Mitra Market Research )	1	001
+21109	1	Jakarta (Mitra Market Research )	1	736
+21110	1	Jakarta (Mitra Market Research )	1	358
+21111	1	Jakarta (Mitra Market Research )	1	437
+21112	1	Jakarta (Mitra Market Research )	1	425
+21113	1	Jakarta (Mitra Market Research )	1	542
+21114	1	Jakarta (Mitra Market Research )	1	707
+21115	1	Jakarta (Mitra Market Research )	1	979
+21116	1	Jakarta (Mitra Market Research )	1	621
+21117	1	Jakarta (Mitra Market Research )	1	934
+21118	1	Jakarta (Mitra Market Research )	1	789
+21119	1	Jakarta (Mitra Market Research )	1	245
+21120	1	Jakarta (Mitra Market Research )	1	504
+21121	1	Jakarta (Mitra Market Research )	1	924
+21122	1	Jakarta (Mitra Market Research )	1	433
+21123	1	Jakarta (Mitra Market Research )	1	391
+21124	1	Jakarta (Mitra Market Research )	1	913
+21125	1	Jakarta (Mitra Market Research )	1	262
+21126	1	Jakarta (Mitra Market Research )	1	393
+21127	1	Jakarta (Mitra Market Research )	1	567
+21128	1	Jakarta (Mitra Market Research )	1	722
+21129	1	Jakarta (Mitra Market Research )	1	332
+21130	1	Jakarta (Mitra Market Research )	1	628
+21131	1	Jakarta (Mitra Market Research )	1	854
+21132	1	Jakarta (Mitra Market Research )	1	013
+21133	1	Jakarta (Mitra Market Research )	1	601
+21134	1	Jakarta (Mitra Market Research )	1	683
+21135	1	Jakarta (Mitra Market Research )	1	607
+21136	1	Jakarta (Mitra Market Research )	1	342
+21137	1	Jakarta (Mitra Market Research )	1	367
+21138	1	Jakarta (Mitra Market Research )	1	986
+21139	1	Jakarta (Mitra Market Research )	1	364
+21140	1	Jakarta (Mitra Market Research )	1	106
+21141	1	Jakarta (Mitra Market Research )	1	308
+21142	1	Jakarta (Mitra Market Research )	1	755
+21143	1	Jakarta (Mitra Market Research )	1	338
+21144	1	Jakarta (Mitra Market Research )	1	266
+21145	1	Jakarta (Mitra Market Research )	1	287
+21146	1	Jakarta (Mitra Market Research )	1	207
+21147	1	Jakarta (Mitra Market Research )	1	074
+21148	1	Jakarta (Mitra Market Research )	1	289
+21149	1	Jakarta (Mitra Market Research )	1	615
+21150	1	Jakarta (Mitra Market Research )	1	002
+21151	1	Jakarta (Mitra Market Research )	1	747
+21152	1	Jakarta (Mitra Market Research )	1	326
+21153	1	Jakarta (Mitra Market Research )	1	038
+21154	1	Jakarta (Mitra Market Research )	1	198
+21155	1	Jakarta (Mitra Market Research )	1	918
+21156	1	Jakarta (Mitra Market Research )	1	014
+21157	1	Jakarta (Mitra Market Research )	1	481
+21158	1	Jakarta (Mitra Market Research )	1	758
+21159	1	Jakarta (Mitra Market Research )	1	466
+21160	1	Jakarta (Mitra Market Research )	1	043
+21161	1	Jakarta (Mitra Market Research )	1	219
+21162	1	Jakarta (Mitra Market Research )	1	268
+21163	1	Jakarta (Mitra Market Research )	1	557
+21164	1	Jakarta (Mitra Market Research )	1	708
+21165	1	Jakarta (Mitra Market Research )	1	177
+21166	1	Jakarta (Mitra Market Research )	1	408
+21167	1	Jakarta (Mitra Market Research )	1	337
+21168	1	Jakarta (Mitra Market Research )	1	312
+21169	1	Jakarta (Mitra Market Research )	1	546
+21170	1	Jakarta (Mitra Market Research )	1	295
+21171	1	Jakarta (Mitra Market Research )	1	275
+21172	1	Jakarta (Mitra Market Research )	1	463
+21173	1	Jakarta (Mitra Market Research )	1	653
+21174	1	Jakarta (Mitra Market Research )	1	655
+21175	1	Jakarta (Mitra Market Research )	1	456
+21176	1	Jakarta (Mitra Market Research )	1	718
+21177	1	Jakarta (Mitra Market Research )	1	167
+21178	1	Jakarta (Mitra Market Research )	1	509
+21179	1	Jakarta (Mitra Market Research )	1	693
+21180	1	Jakarta (Mitra Market Research )	1	548
+21181	1	Jakarta (Mitra Market Research )	1	172
+21182	1	Jakarta (Mitra Market Research )	1	725
+21183	1	Jakarta (Mitra Market Research )	1	004
+21184	1	Jakarta (Mitra Market Research )	1	855
+21185	1	Jakarta (Mitra Market Research )	1	258
+21186	1	Jakarta (Mitra Market Research )	1	685
+21187	1	Jakarta (Mitra Market Research )	1	331
+21188	1	Jakarta (Mitra Market Research )	1	259
+21189	1	Jakarta (Mitra Market Research )	1	082
+21190	1	Jakarta (Mitra Market Research )	1	027
+21191	1	Jakarta (Mitra Market Research )	1	302
+21192	1	Jakarta (Mitra Market Research )	1	934
+21193	1	Jakarta (Mitra Market Research )	1	027
+21194	1	Jakarta (Mitra Market Research )	1	667
+21195	1	Jakarta (Mitra Market Research )	1	959
+21196	1	Jakarta (Mitra Market Research )	1	191
+21197	1	Jakarta (Mitra Market Research )	1	638
+21198	1	Jakarta (Mitra Market Research )	1	923
+21199	1	Jakarta (Mitra Market Research )	1	793
+212	1	Test	2	628
+21200	1	Jakarta (Mitra Market Research )	1	699
+21201	1	Jakarta (Mitra Market Research )	1	298
+21202	1	Jakarta (Mitra Market Research )	1	571
+21203	1	Jakarta (Mitra Market Research )	1	379
+21204	1	Jakarta (Mitra Market Research )	1	579
+21205	1	Jakarta (Mitra Market Research )	1	662
+21206	1	Jakarta (Mitra Market Research )	1	999
+21207	1	Jakarta (Mitra Market Research )	1	316
+21208	1	Jakarta (Mitra Market Research )	1	569
+21209	1	Jakarta (Mitra Market Research )	1	535
+21210	1	Jakarta (Mitra Market Research )	1	056
+21211	1	Jakarta (Mitra Market Research )	1	052
+21212	1	Jakarta (Mitra Market Research )	1	801
+21213	1	Jakarta (Mitra Market Research )	1	253
+21214	1	Jakarta (Mitra Market Research )	1	982
+21215	1	Jakarta (Mitra Market Research )	1	025
+21216	1	Jakarta (Mitra Market Research )	1	503
+21217	1	Jakarta (Mitra Market Research )	1	671
+21218	1	Jakarta (Mitra Market Research )	1	434
+21219	1	Jakarta (Mitra Market Research )	1	031
+21220	1	Jakarta (Mitra Market Research )	1	646
+21221	1	Jakarta (Mitra Market Research )	1	123
+21222	1	Jakarta (Mitra Market Research )	1	508
+21223	1	Jakarta (Mitra Market Research )	1	223
+21224	1	Jakarta (Mitra Market Research )	1	311
+21225	1	Jakarta (Mitra Market Research )	1	851
+21226	1	Jakarta (Mitra Market Research )	1	599
+21227	1	Jakarta (Mitra Market Research )	1	141
+21228	1	Jakarta (Mitra Market Research )	1	646
+21229	1	Jakarta (Mitra Market Research )	1	839
+21230	1	Jakarta (Mitra Market Research )	1	105
+21231	1	Jakarta (Mitra Market Research )	1	132
+21232	1	Jakarta (Mitra Market Research )	1	888
+21233	1	Jakarta (Mitra Market Research )	1	095
+21234	1	Jakarta (Mitra Market Research )	1	449
+21235	1	Jakarta (Mitra Market Research )	1	798
+21236	1	Jakarta (Mitra Market Research )	1	744
+21237	1	Jakarta (Mitra Market Research )	1	093
+21238	1	Jakarta (Mitra Market Research )	1	752
+21239	1	Jakarta (Mitra Market Research )	1	514
+21240	1	Jakarta (Mitra Market Research )	1	343
+21241	1	Jakarta (Mitra Market Research )	1	084
+21242	1	Jakarta (Mitra Market Research )	1	629
+21243	1	Jakarta (Mitra Market Research )	1	597
+21244	1	Jakarta (Mitra Market Research )	1	622
+21245	1	Jakarta (Mitra Market Research )	1	655
+21246	1	Jakarta (Mitra Market Research )	1	345
+21247	1	Jakarta (Mitra Market Research )	1	357
+21248	1	Jakarta (Mitra Market Research )	1	019
+21249	1	Jakarta (Mitra Market Research )	1	158
+21250	1	Jakarta (Mitra Market Research )	1	401
+21251	1	Jakarta (Mitra Market Research )	1	379
+21252	1	Jakarta (Mitra Market Research )	1	896
+21253	1	Jakarta (Mitra Market Research )	1	793
+21254	1	Jakarta (Mitra Market Research )	1	289
+21255	1	Jakarta (Mitra Market Research )	1	777
+21256	1	Jakarta (Mitra Market Research )	1	684
+21257	1	Jakarta (Mitra Market Research )	1	258
+21258	1	Jakarta (Mitra Market Research )	1	216
+21259	1	Jakarta (Mitra Market Research )	1	137
+21260	1	Jakarta (Mitra Market Research )	1	162
+21261	1	Jakarta (Mitra Market Research )	1	173
+21262	1	Jakarta (Mitra Market Research )	1	928
+21263	1	Jakarta (Mitra Market Research )	1	735
+21264	1	Jakarta (Mitra Market Research )	1	361
+21265	1	Jakarta (Mitra Market Research )	1	567
+21266	1	Jakarta (Mitra Market Research )	1	171
+21267	1	Jakarta (Mitra Market Research )	1	387
+21268	1	Jakarta (Mitra Market Research )	1	316
+21269	1	Jakarta (Mitra Market Research )	1	221
+21270	1	Jakarta (Mitra Market Research )	1	007
+21271	1	Jakarta (Mitra Market Research )	1	495
+21272	1	Jakarta (Mitra Market Research )	1	994
+21273	1	Jakarta (Mitra Market Research )	1	228
+21274	1	Jakarta (Mitra Market Research )	1	982
+21275	1	Jakarta (Mitra Market Research )	1	928
+21276	1	Jakarta (Mitra Market Research )	1	733
+21277	1	Jakarta (Mitra Market Research )	1	183
+21278	1	Jakarta (Mitra Market Research )	1	797
+21279	1	Jakarta (Mitra Market Research )	1	239
+21280	1	Jakarta (Mitra Market Research )	1	172
+21281	1	Jakarta (Mitra Market Research )	1	032
+21282	1	Jakarta (Mitra Market Research )	1	011
+21283	1	Jakarta (Mitra Market Research )	1	179
+21284	1	Jakarta (Mitra Market Research )	1	791
+21285	1	Jakarta (Mitra Market Research )	1	056
+21286	1	Jakarta (Mitra Market Research )	1	864
+21287	1	Jakarta (Mitra Market Research )	1	155
+21288	1	Jakarta (Mitra Market Research )	1	328
+21289	1	Jakarta (Mitra Market Research )	1	399
+21290	1	Jakarta (Mitra Market Research )	1	381
+21291	1	Jakarta (Mitra Market Research )	1	455
+21292	1	Jakarta (Mitra Market Research )	1	651
+21293	1	Jakarta (Mitra Market Research )	1	835
+21294	1	Jakarta (Mitra Market Research )	1	054
+21295	1	Jakarta (Mitra Market Research )	1	956
+21296	1	Jakarta (Mitra Market Research )	1	998
+21297	1	Jakarta (Mitra Market Research )	1	364
+21298	1	Jakarta (Mitra Market Research )	1	376
+21299	1	Jakarta (Mitra Market Research )	1	976
+213	1	Test	2	006
+21300	1	Jakarta (Mitra Market Research )	1	758
+21301	1	Jakarta (Mitra Market Research )	1	521
+21302	1	Jakarta (Mitra Market Research )	1	033
+21303	1	Jakarta (Mitra Market Research )	1	104
+21304	1	Jakarta (Mitra Market Research )	1	322
+21305	1	Jakarta (Mitra Market Research )	1	026
+21306	1	Jakarta (Mitra Market Research )	1	803
+21307	1	Jakarta (Mitra Market Research )	1	612
+21308	1	Jakarta (Mitra Market Research )	1	709
+21309	1	Jakarta (Mitra Market Research )	1	718
+21310	1	Jakarta (Mitra Market Research )	1	796
+21311	1	Jakarta (Mitra Market Research )	1	059
+21312	1	Jakarta (Mitra Market Research )	1	649
+21313	1	Jakarta (Mitra Market Research )	1	984
+21314	1	Jakarta (Mitra Market Research )	1	056
+21315	1	Jakarta (Mitra Market Research )	1	873
+21316	1	Jakarta (Mitra Market Research )	1	038
+21317	1	Jakarta (Mitra Market Research )	1	059
+21318	1	Jakarta (Mitra Market Research )	1	243
+21319	1	Jakarta (Mitra Market Research )	1	109
+21320	1	Jakarta (Mitra Market Research )	1	192
+21321	1	Jakarta (Mitra Market Research )	1	394
+21322	1	Jakarta (Mitra Market Research )	1	894
+21323	1	Jakarta (Mitra Market Research )	1	254
+21324	1	Jakarta (Mitra Market Research )	1	614
+21325	1	Jakarta (Mitra Market Research )	1	093
+21326	1	Jakarta (Mitra Market Research )	1	299
+21327	1	Jakarta (Mitra Market Research )	1	114
+21328	1	Jakarta (Mitra Market Research )	1	268
+21329	1	Jakarta (Mitra Market Research )	1	663
+21330	1	Jakarta (Mitra Market Research )	1	781
+21331	1	Jakarta (Mitra Market Research )	1	061
+21332	1	Jakarta (Mitra Market Research )	1	519
+21333	1	Jakarta (Mitra Market Research )	1	583
+21334	1	Jakarta (Mitra Market Research )	1	598
+21335	1	Jakarta (Mitra Market Research )	1	049
+21336	1	Jakarta (Mitra Market Research )	1	201
+21337	1	Jakarta (Mitra Market Research )	1	142
+21338	1	Jakarta (Mitra Market Research )	1	402
+21339	1	Jakarta (Mitra Market Research )	1	771
+21340	1	Jakarta (Mitra Market Research )	1	781
+21341	1	Jakarta (Mitra Market Research )	1	684
+21342	1	Jakarta (Mitra Market Research )	1	335
+21343	1	Jakarta (Mitra Market Research )	1	303
+21344	1	Jakarta (Mitra Market Research )	1	668
+21345	1	Jakarta (Mitra Market Research )	1	925
+21346	1	Jakarta (Mitra Market Research )	1	747
+21347	1	Jakarta (Mitra Market Research )	1	928
+21348	1	Jakarta (Mitra Market Research )	1	479
+21349	1	Jakarta (Mitra Market Research )	1	668
+21350	1	Jakarta (Mitra Market Research )	1	068
+21351	1	Jakarta (Mitra Market Research )	1	191
+21352	1	Jakarta (Mitra Market Research )	1	413
+21353	1	Jakarta (Mitra Market Research )	1	719
+21354	1	Jakarta (Mitra Market Research )	1	666
+21355	1	Jakarta (Mitra Market Research )	1	414
+21356	1	Jakarta (Mitra Market Research )	1	073
+21357	1	Jakarta (Mitra Market Research )	1	698
+21358	1	Jakarta (Mitra Market Research )	1	126
+21359	1	Jakarta (Mitra Market Research )	1	464
+21360	1	Jakarta (Mitra Market Research )	1	586
+21361	1	Jakarta (Mitra Market Research )	1	626
+21362	1	Jakarta (Mitra Market Research )	1	337
+21363	1	Jakarta (Mitra Market Research )	1	371
+21364	1	Jakarta (Mitra Market Research )	1	293
+21365	1	Jakarta (Mitra Market Research )	1	414
+21366	1	Jakarta (Mitra Market Research )	1	792
+21367	1	Jakarta (Mitra Market Research )	1	799
+21368	1	Jakarta (Mitra Market Research )	1	129
+21369	1	Jakarta (Mitra Market Research )	1	897
+21370	1	Jakarta (Mitra Market Research )	1	346
+21371	1	Jakarta (Mitra Market Research )	1	006
+21372	1	Jakarta (Mitra Market Research )	1	348
+21373	1	Jakarta (Mitra Market Research )	1	136
+21374	1	Jakarta (Mitra Market Research )	1	147
+21375	1	Jakarta (Mitra Market Research )	1	654
+21376	1	Jakarta (Mitra Market Research )	1	163
+21377	1	Jakarta (Mitra Market Research )	1	975
+21378	1	Jakarta (Mitra Market Research )	1	308
+21379	1	Jakarta (Mitra Market Research )	1	074
+21380	1	Jakarta (Mitra Market Research )	1	637
+21381	1	Jakarta (Mitra Market Research )	1	984
+21382	1	Jakarta (Mitra Market Research )	1	755
+21383	1	Jakarta (Mitra Market Research )	1	298
+21384	1	Jakarta (Mitra Market Research )	1	445
+21385	1	Jakarta (Mitra Market Research )	1	261
+21386	1	Jakarta (Mitra Market Research )	1	275
+21387	1	Jakarta (Mitra Market Research )	1	474
+21388	1	Jakarta (Mitra Market Research )	1	101
+21389	1	Jakarta (Mitra Market Research )	1	213
+21390	1	Jakarta (Mitra Market Research )	1	206
+21391	1	Jakarta (Mitra Market Research )	1	556
+21392	1	Jakarta (Mitra Market Research )	1	222
+21393	1	Jakarta (Mitra Market Research )	1	459
+21394	1	Jakarta (Mitra Market Research )	1	244
+21395	1	Jakarta (Mitra Market Research )	1	796
+21396	1	Jakarta (Mitra Market Research )	1	966
+21397	1	Jakarta (Mitra Market Research )	1	555
+21398	1	Jakarta (Mitra Market Research )	1	405
+21399	1	Jakarta (Mitra Market Research )	1	197
+214	1	Test	2	063
+21400	1	Jakarta (Mitra Market Research )	1	767
+21401	1	Jakarta (Mitra Market Research )	1	953
+21402	1	Jakarta (Mitra Market Research )	1	095
+21403	1	Jakarta (Mitra Market Research )	1	316
+21404	1	Jakarta (Mitra Market Research )	1	765
+21405	1	Jakarta (Mitra Market Research )	1	609
+21406	1	Jakarta (Mitra Market Research )	1	296
+21407	1	Jakarta (Mitra Market Research )	1	768
+21408	1	Jakarta (Mitra Market Research )	1	033
+21409	1	Jakarta (Mitra Market Research )	1	824
+21410	1	Jakarta (Mitra Market Research )	1	037
+21411	1	Jakarta (Mitra Market Research )	1	224
+21412	1	Jakarta (Mitra Market Research )	1	045
+21413	1	Jakarta (Mitra Market Research )	1	806
+21414	1	Jakarta (Mitra Market Research )	1	349
+21415	1	Jakarta (Mitra Market Research )	1	409
+21416	1	Jakarta (Mitra Market Research )	1	916
+21417	1	Jakarta (Mitra Market Research )	1	321
+21418	1	Jakarta (Mitra Market Research )	1	509
+21419	1	Jakarta (Mitra Market Research )	1	925
+21420	1	Jakarta (Mitra Market Research )	1	525
+21421	1	Jakarta (Mitra Market Research )	1	437
+21422	1	Jakarta (Mitra Market Research )	1	319
+21423	1	Jakarta (Mitra Market Research )	1	434
+21424	1	Jakarta (Mitra Market Research )	1	451
+21425	1	Jakarta (Mitra Market Research )	1	981
+21426	1	Jakarta (Mitra Market Research )	1	948
+21427	1	Jakarta (Mitra Market Research )	1	178
+21428	1	Jakarta (Mitra Market Research )	1	123
+21429	1	Jakarta (Mitra Market Research )	1	011
+21430	1	Jakarta (Mitra Market Research )	1	199
+21431	1	Jakarta (Mitra Market Research )	1	172
+21432	1	Jakarta (Mitra Market Research )	1	399
+21433	1	Jakarta (Mitra Market Research )	1	561
+21434	1	Jakarta (Mitra Market Research )	1	584
+21435	1	Jakarta (Mitra Market Research )	1	295
+21436	1	Jakarta (Mitra Market Research )	1	278
+21437	1	Jakarta (Mitra Market Research )	1	878
+21438	1	Jakarta (Mitra Market Research )	1	386
+21439	1	Jakarta (Mitra Market Research )	1	687
+21440	1	Jakarta (Mitra Market Research )	1	701
+21441	1	Jakarta (Mitra Market Research )	1	131
+21442	1	Jakarta (Mitra Market Research )	1	933
+21443	1	Jakarta (Mitra Market Research )	1	939
+21444	1	Jakarta (Mitra Market Research )	1	047
+21445	1	Jakarta (Mitra Market Research )	1	343
+21446	1	Jakarta (Mitra Market Research )	1	905
+21447	1	Jakarta (Mitra Market Research )	1	392
+21448	1	Jakarta (Mitra Market Research )	1	157
+21449	1	Jakarta (Mitra Market Research )	1	324
+21450	1	Jakarta (Mitra Market Research )	1	303
+21451	1	Jakarta (Mitra Market Research )	1	234
+21452	1	Jakarta (Mitra Market Research )	1	711
+21453	1	Jakarta (Mitra Market Research )	1	781
+21454	1	Jakarta (Mitra Market Research )	1	993
+21455	1	Jakarta (Mitra Market Research )	1	981
+21456	1	Jakarta (Mitra Market Research )	1	346
+21457	1	Jakarta (Mitra Market Research )	1	857
+21458	1	Jakarta (Mitra Market Research )	1	934
+21459	1	Jakarta (Mitra Market Research )	1	205
+21460	1	Jakarta (Mitra Market Research )	1	213
+21461	1	Jakarta (Mitra Market Research )	1	197
+21462	1	Jakarta (Mitra Market Research )	1	272
+21463	1	Jakarta (Mitra Market Research )	1	751
+21464	1	Jakarta (Mitra Market Research )	1	813
+21465	1	Jakarta (Mitra Market Research )	1	954
+21466	1	Jakarta (Mitra Market Research )	1	082
+21467	1	Jakarta (Mitra Market Research )	1	059
+21468	1	Jakarta (Mitra Market Research )	1	483
+21469	1	Jakarta (Mitra Market Research )	1	616
+21470	1	Jakarta (Mitra Market Research )	1	694
+21471	1	Jakarta (Mitra Market Research )	1	332
+21472	1	Jakarta (Mitra Market Research )	1	559
+21473	1	Jakarta (Mitra Market Research )	1	452
+21474	1	Jakarta (Mitra Market Research )	1	995
+21475	1	Jakarta (Mitra Market Research )	1	462
+21476	1	Jakarta (Mitra Market Research )	1	665
+21477	1	Jakarta (Mitra Market Research )	1	086
+21478	1	Jakarta (Mitra Market Research )	1	838
+21479	1	Jakarta (Mitra Market Research )	1	298
+21480	1	Jakarta (Mitra Market Research )	1	468
+21481	1	Jakarta (Mitra Market Research )	1	012
+21482	1	Jakarta (Mitra Market Research )	1	148
+21483	1	Jakarta (Mitra Market Research )	1	162
+21484	1	Jakarta (Mitra Market Research )	1	909
+21485	1	Jakarta (Mitra Market Research )	1	765
+21486	1	Jakarta (Mitra Market Research )	1	655
+21487	1	Jakarta (Mitra Market Research )	1	666
+21488	1	Jakarta (Mitra Market Research )	1	117
+21489	1	Jakarta (Mitra Market Research )	1	933
+21490	1	Jakarta (Mitra Market Research )	1	538
+21491	1	Jakarta (Mitra Market Research )	1	702
+21492	1	Jakarta (Mitra Market Research )	1	674
+21493	1	Jakarta (Mitra Market Research )	1	409
+21494	1	Jakarta (Mitra Market Research )	1	068
+21495	1	Jakarta (Mitra Market Research )	1	539
+21496	1	Jakarta (Mitra Market Research )	1	813
+21497	1	Jakarta (Mitra Market Research )	1	848
+21498	1	Jakarta (Mitra Market Research )	1	346
+21499	1	Jakarta (Mitra Market Research )	1	603
+215	1	Test	2	214
+21500	1	Jakarta (Mitra Market Research )	1	676
+21501	1	Jakarta (Mitra Market Research )	1	573
+21502	1	Jakarta (Mitra Market Research )	1	862
+21503	1	Jakarta (Mitra Market Research )	1	683
+21504	1	Jakarta (Mitra Market Research )	1	331
+21505	1	Jakarta (Mitra Market Research )	1	462
+21506	1	Jakarta (Mitra Market Research )	1	265
+21507	1	Jakarta (Mitra Market Research )	1	827
+21508	1	Jakarta (Mitra Market Research )	1	799
+21509	1	Jakarta (Mitra Market Research )	1	643
+21510	1	Jakarta (Mitra Market Research )	1	511
+21511	1	Jakarta (Mitra Market Research )	1	388
+21512	1	Jakarta (Mitra Market Research )	1	333
+21513	1	Jakarta (Mitra Market Research )	1	264
+21514	1	Jakarta (Mitra Market Research )	1	291
+21515	1	Jakarta (Mitra Market Research )	1	567
+21516	1	Jakarta (Mitra Market Research )	1	817
+21517	1	Jakarta (Mitra Market Research )	1	507
+21518	1	Jakarta (Mitra Market Research )	1	892
+21519	1	Jakarta (Mitra Market Research )	1	181
+21520	1	Jakarta (Mitra Market Research )	1	402
+21521	1	Jakarta (Mitra Market Research )	1	038
+21522	1	Jakarta (Mitra Market Research )	1	129
+21523	1	Jakarta (Mitra Market Research )	1	622
+21524	1	Jakarta (Mitra Market Research )	1	443
+21525	1	Jakarta (Mitra Market Research )	1	066
+21526	1	Jakarta (Mitra Market Research )	1	399
+21527	1	Jakarta (Mitra Market Research )	1	615
+21528	1	Jakarta (Mitra Market Research )	1	358
+21529	1	Jakarta (Mitra Market Research )	1	702
+21530	1	Jakarta (Mitra Market Research )	1	437
+21531	1	Jakarta (Mitra Market Research )	1	862
+21532	1	Jakarta (Mitra Market Research )	1	114
+21533	1	Jakarta (Mitra Market Research )	1	828
+21534	1	Jakarta (Mitra Market Research )	1	228
+21535	1	Jakarta (Mitra Market Research )	1	831
+21536	1	Jakarta (Mitra Market Research )	1	058
+21537	1	Jakarta (Mitra Market Research )	1	018
+21538	1	Jakarta (Mitra Market Research )	1	503
+21539	1	Jakarta (Mitra Market Research )	1	729
+21540	1	Jakarta (Mitra Market Research )	1	713
+21541	1	Jakarta (Mitra Market Research )	1	985
+21542	1	Jakarta (Mitra Market Research )	1	488
+21543	1	Jakarta (Mitra Market Research )	1	692
+21544	1	Jakarta (Mitra Market Research )	1	298
+21545	1	Jakarta (Mitra Market Research )	1	892
+21546	1	Jakarta (Mitra Market Research )	1	383
+21547	1	Jakarta (Mitra Market Research )	1	762
+21548	1	Jakarta (Mitra Market Research )	1	329
+21549	1	Jakarta (Mitra Market Research )	1	945
+21550	1	Jakarta (Mitra Market Research )	1	744
+21551	1	Jakarta (Mitra Market Research )	1	242
+21552	1	Jakarta (Mitra Market Research )	1	379
+21553	1	Jakarta (Mitra Market Research )	1	089
+21554	1	Jakarta (Mitra Market Research )	1	763
+21555	1	Jakarta (Mitra Market Research )	1	889
+21556	1	Jakarta (Mitra Market Research )	1	317
+21557	1	Jakarta (Mitra Market Research )	1	102
+21558	1	Jakarta (Mitra Market Research )	1	664
+21559	1	Jakarta (Mitra Market Research )	1	745
+21560	1	Jakarta (Mitra Market Research )	1	814
+21561	1	Jakarta (Mitra Market Research )	1	759
+21562	1	Jakarta (Mitra Market Research )	1	469
+21563	1	Jakarta (Mitra Market Research )	1	219
+21564	1	Jakarta (Mitra Market Research )	1	238
+21565	1	Jakarta (Mitra Market Research )	1	315
+21566	1	Jakarta (Mitra Market Research )	1	538
+21567	1	Jakarta (Mitra Market Research )	1	904
+21568	1	Jakarta (Mitra Market Research )	1	866
+21569	1	Jakarta (Mitra Market Research )	1	889
+21570	1	Jakarta (Mitra Market Research )	1	211
+21571	1	Jakarta (Mitra Market Research )	1	042
+21572	1	Jakarta (Mitra Market Research )	1	107
+21573	1	Jakarta (Mitra Market Research )	1	727
+21574	1	Jakarta (Mitra Market Research )	1	413
+21575	1	Jakarta (Mitra Market Research )	1	337
+21576	1	Jakarta (Mitra Market Research )	1	246
+21577	1	Jakarta (Mitra Market Research )	1	447
+21578	1	Jakarta (Mitra Market Research )	1	381
+21579	1	Jakarta (Mitra Market Research )	1	246
+21580	1	Jakarta (Mitra Market Research )	1	878
+21581	1	Jakarta (Mitra Market Research )	1	839
+21582	1	Jakarta (Mitra Market Research )	1	415
+21583	1	Jakarta (Mitra Market Research )	1	942
+21584	1	Jakarta (Mitra Market Research )	1	244
+21585	1	Jakarta (Mitra Market Research )	1	571
+21586	1	Jakarta (Mitra Market Research )	1	272
+21587	1	Jakarta (Mitra Market Research )	1	904
+21588	1	Jakarta (Mitra Market Research )	1	157
+21589	1	Jakarta (Mitra Market Research )	1	821
+21590	1	Jakarta (Mitra Market Research )	1	917
+21591	1	Jakarta (Mitra Market Research )	1	604
+21592	1	Jakarta (Mitra Market Research )	1	991
+21593	1	Jakarta (Mitra Market Research )	1	921
+21594	1	Jakarta (Mitra Market Research )	1	956
+21595	1	Jakarta (Mitra Market Research )	1	073
+21596	1	Jakarta (Mitra Market Research )	1	631
+21597	1	Jakarta (Mitra Market Research )	1	999
+21598	1	Jakarta (Mitra Market Research )	1	313
+21599	1	Jakarta (Mitra Market Research )	1	879
+216	1	Test	2	977
+21600	1	Jakarta (Mitra Market Research )	1	643
+21601	1	Jakarta (Mitra Market Research )	1	533
+21602	1	Jakarta (Mitra Market Research )	1	703
+21603	1	Jakarta (Mitra Market Research )	1	436
+21604	1	Jakarta (Mitra Market Research )	1	877
+21605	1	Jakarta (Mitra Market Research )	1	214
+21606	1	Jakarta (Mitra Market Research )	1	588
+21607	1	Jakarta (Mitra Market Research )	1	514
+21608	1	Jakarta (Mitra Market Research )	1	211
+21609	1	Jakarta (Mitra Market Research )	1	856
+21610	1	Jakarta (Mitra Market Research )	1	178
+21611	1	Jakarta (Mitra Market Research )	1	086
+21612	1	Jakarta (Mitra Market Research )	1	657
+21613	1	Jakarta (Mitra Market Research )	1	305
+21614	1	Jakarta (Mitra Market Research )	1	256
+21615	1	Jakarta (Mitra Market Research )	1	914
+21616	1	Jakarta (Mitra Market Research )	1	693
+21617	1	Jakarta (Mitra Market Research )	1	939
+21618	1	Jakarta (Mitra Market Research )	1	357
+21619	1	Jakarta (Mitra Market Research )	1	259
+21620	1	Jakarta (Mitra Market Research )	1	473
+21621	1	Jakarta (Mitra Market Research )	1	083
+21622	1	Jakarta (Mitra Market Research )	1	889
+21623	1	Jakarta (Mitra Market Research )	1	925
+21624	1	Jakarta (Mitra Market Research )	1	304
+21625	1	Jakarta (Mitra Market Research )	1	486
+21626	1	Jakarta (Mitra Market Research )	1	942
+21627	1	Jakarta (Mitra Market Research )	1	754
+21628	1	Jakarta (Mitra Market Research )	1	342
+21629	1	Jakarta (Mitra Market Research )	1	356
+21630	1	Jakarta (Mitra Market Research )	1	222
+21631	1	Jakarta (Mitra Market Research )	1	736
+21632	1	Jakarta (Mitra Market Research )	1	968
+21633	1	Jakarta (Mitra Market Research )	1	703
+21634	1	Jakarta (Mitra Market Research )	1	223
+21635	1	Jakarta (Mitra Market Research )	1	424
+21636	1	Jakarta (Mitra Market Research )	1	294
+21637	1	Jakarta (Mitra Market Research )	1	464
+21638	1	Jakarta (Mitra Market Research )	1	496
+21639	1	Jakarta (Mitra Market Research )	1	686
+21640	1	Jakarta (Mitra Market Research )	1	173
+21641	1	Jakarta (Mitra Market Research )	1	179
+21642	1	Jakarta (Mitra Market Research )	1	124
+21643	1	Jakarta (Mitra Market Research )	1	338
+21644	1	Jakarta (Mitra Market Research )	1	477
+21645	1	Jakarta (Mitra Market Research )	1	671
+21646	1	Jakarta (Mitra Market Research )	1	029
+21647	1	Jakarta (Mitra Market Research )	1	217
+21648	1	Jakarta (Mitra Market Research )	1	944
+21649	1	Jakarta (Mitra Market Research )	1	127
+21650	1	Jakarta (Mitra Market Research )	1	533
+21651	1	Jakarta (Mitra Market Research )	1	799
+21652	1	Jakarta (Mitra Market Research )	1	926
+21653	1	Jakarta (Mitra Market Research )	1	747
+21654	1	Jakarta (Mitra Market Research )	1	169
+21655	1	Jakarta (Mitra Market Research )	1	743
+21656	1	Jakarta (Mitra Market Research )	1	939
+21657	1	Jakarta (Mitra Market Research )	1	983
+21658	1	Jakarta (Mitra Market Research )	1	578
+21659	1	Jakarta (Mitra Market Research )	1	062
+21660	1	Jakarta (Mitra Market Research )	1	553
+21661	1	Jakarta (Mitra Market Research )	1	729
+21662	1	Jakarta (Mitra Market Research )	1	762
+21663	1	Jakarta (Mitra Market Research )	1	302
+21664	1	Jakarta (Mitra Market Research )	1	902
+21665	1	Jakarta (Mitra Market Research )	1	806
+21666	1	Jakarta (Mitra Market Research )	1	525
+21667	1	Jakarta (Mitra Market Research )	1	057
+21668	1	Jakarta (Mitra Market Research )	1	075
+21669	1	Jakarta (Mitra Market Research )	1	604
+21670	1	Jakarta (Mitra Market Research )	1	729
+21671	1	Jakarta (Mitra Market Research )	1	029
+21672	1	Jakarta (Mitra Market Research )	1	966
+21673	1	Jakarta (Mitra Market Research )	1	361
+21674	1	Jakarta (Mitra Market Research )	1	994
+21675	1	Jakarta (Mitra Market Research )	1	208
+21676	1	Jakarta (Mitra Market Research )	1	204
+21677	1	Jakarta (Mitra Market Research )	1	511
+21678	1	Jakarta (Mitra Market Research )	1	676
+21679	1	Jakarta (Mitra Market Research )	1	832
+21680	1	Jakarta (Mitra Market Research )	1	022
+21681	1	Jakarta (Mitra Market Research )	1	535
+21682	1	Jakarta (Mitra Market Research )	1	381
+21683	1	Jakarta (Mitra Market Research )	1	497
+21684	1	Jakarta (Mitra Market Research )	1	865
+21685	1	Jakarta (Mitra Market Research )	1	442
+21686	1	Jakarta (Mitra Market Research )	1	997
+21687	1	Jakarta (Mitra Market Research )	1	073
+21688	1	Jakarta (Mitra Market Research )	1	326
+21689	1	Jakarta (Mitra Market Research )	1	198
+21690	1	Jakarta (Mitra Market Research )	1	063
+21691	1	Jakarta (Mitra Market Research )	1	009
+21692	1	Jakarta (Mitra Market Research )	1	663
+21693	1	Jakarta (Mitra Market Research )	1	054
+21694	1	Jakarta (Mitra Market Research )	1	314
+21695	1	Jakarta (Mitra Market Research )	1	843
+21696	1	Jakarta (Mitra Market Research )	1	816
+21697	1	Jakarta (Mitra Market Research )	1	918
+21698	1	Jakarta (Mitra Market Research )	1	486
+21699	1	Jakarta (Mitra Market Research )	1	039
+217	1	Test	2	048
+21700	1	Jakarta (Mitra Market Research )	1	285
+21701	1	Jakarta (Mitra Market Research )	1	652
+21702	1	Jakarta (Mitra Market Research )	1	868
+21703	1	Jakarta (Mitra Market Research )	1	126
+21704	1	Jakarta (Mitra Market Research )	1	212
+21705	1	Jakarta (Mitra Market Research )	1	547
+21706	1	Jakarta (Mitra Market Research )	1	334
+21707	1	Jakarta (Mitra Market Research )	1	861
+21708	1	Jakarta (Mitra Market Research )	1	828
+21709	1	Jakarta (Mitra Market Research )	1	468
+21710	1	Jakarta (Mitra Market Research )	1	524
+21711	1	Jakarta (Mitra Market Research )	1	728
+21712	1	Jakarta (Mitra Market Research )	1	457
+21713	1	Jakarta (Mitra Market Research )	1	722
+21714	1	Jakarta (Mitra Market Research )	1	991
+21715	1	Jakarta (Mitra Market Research )	1	987
+21716	1	Jakarta (Mitra Market Research )	1	367
+21717	1	Jakarta (Mitra Market Research )	1	781
+21718	1	Jakarta (Mitra Market Research )	1	824
+21719	1	Jakarta (Mitra Market Research )	1	881
+21720	1	Jakarta (Mitra Market Research )	1	211
+21721	1	Jakarta (Mitra Market Research )	1	119
+21722	1	Jakarta (Mitra Market Research )	1	624
+21723	1	Jakarta (Mitra Market Research )	1	022
+21724	1	Jakarta (Mitra Market Research )	1	808
+21725	1	Jakarta (Mitra Market Research )	1	979
+21726	1	Jakarta (Mitra Market Research )	1	537
+21727	1	Jakarta (Mitra Market Research )	1	154
+21728	1	Jakarta (Mitra Market Research )	1	688
+21729	1	Jakarta (Mitra Market Research )	1	064
+21730	1	Jakarta (Mitra Market Research )	1	777
+21731	1	Jakarta (Mitra Market Research )	1	197
+21732	1	Jakarta (Mitra Market Research )	1	985
+21733	1	Jakarta (Mitra Market Research )	1	261
+21734	1	Jakarta (Mitra Market Research )	1	125
+21735	1	Jakarta (Mitra Market Research )	1	524
+21736	1	Jakarta (Mitra Market Research )	1	825
+21737	1	Jakarta (Mitra Market Research )	1	935
+21738	1	Jakarta (Mitra Market Research )	1	472
+21739	1	Jakarta (Mitra Market Research )	1	034
+21740	1	Jakarta (Mitra Market Research )	1	347
+21741	1	Jakarta (Mitra Market Research )	1	561
+21742	1	Jakarta (Mitra Market Research )	1	392
+21743	1	Jakarta (Mitra Market Research )	1	771
+21744	1	Jakarta (Mitra Market Research )	1	865
+21745	1	Jakarta (Mitra Market Research )	1	739
+21746	1	Jakarta (Mitra Market Research )	1	464
+21747	1	Jakarta (Mitra Market Research )	1	189
+21748	1	Jakarta (Mitra Market Research )	1	475
+21749	1	Jakarta (Mitra Market Research )	1	873
+21750	1	Jakarta (Mitra Market Research )	1	285
+21751	1	Jakarta (Mitra Market Research )	1	128
+21752	1	Jakarta (Mitra Market Research )	1	953
+21753	1	Jakarta (Mitra Market Research )	1	496
+21754	1	Jakarta (Mitra Market Research )	1	226
+21755	1	Jakarta (Mitra Market Research )	1	407
+21756	1	Jakarta (Mitra Market Research )	1	362
+21757	1	Jakarta (Mitra Market Research )	1	188
+21758	1	Jakarta (Mitra Market Research )	1	172
+21759	1	Jakarta (Mitra Market Research )	1	804
+21760	1	Jakarta (Mitra Market Research )	1	252
+21761	1	Jakarta (Mitra Market Research )	1	097
+21762	1	Jakarta (Mitra Market Research )	1	442
+21763	1	Jakarta (Mitra Market Research )	1	001
+21764	1	Jakarta (Mitra Market Research )	1	875
+21765	1	Jakarta (Mitra Market Research )	1	446
+21766	1	Jakarta (Mitra Market Research )	1	687
+21767	1	Jakarta (Mitra Market Research )	1	924
+21768	1	Jakarta (Mitra Market Research )	1	422
+21769	1	Jakarta (Mitra Market Research )	1	054
+21770	1	Jakarta (Mitra Market Research )	1	574
+21771	1	Jakarta (Mitra Market Research )	1	448
+21772	1	Jakarta (Mitra Market Research )	1	468
+21773	1	Jakarta (Mitra Market Research )	1	149
+21774	1	Jakarta (Mitra Market Research )	1	848
+21775	1	Jakarta (Mitra Market Research )	1	226
+21776	1	Jakarta (Mitra Market Research )	1	538
+21777	1	Jakarta (Mitra Market Research )	1	014
+21778	1	Jakarta (Mitra Market Research )	1	323
+21779	1	Jakarta (Mitra Market Research )	1	638
+21780	1	Jakarta (Mitra Market Research )	1	735
+21781	1	Jakarta (Mitra Market Research )	1	824
+21782	1	Jakarta (Mitra Market Research )	1	102
+21783	1	Jakarta (Mitra Market Research )	1	361
+21784	1	Jakarta (Mitra Market Research )	1	179
+21785	1	Jakarta (Mitra Market Research )	1	273
+21786	1	Jakarta (Mitra Market Research )	1	599
+21787	1	Jakarta (Mitra Market Research )	1	973
+21788	1	Jakarta (Mitra Market Research )	1	014
+21789	1	Jakarta (Mitra Market Research )	1	616
+21790	1	Jakarta (Mitra Market Research )	1	607
+21791	1	Jakarta (Mitra Market Research )	1	759
+21792	1	Jakarta (Mitra Market Research )	1	033
+21793	1	Jakarta (Mitra Market Research )	1	066
+21794	1	Jakarta (Mitra Market Research )	1	712
+21795	1	Jakarta (Mitra Market Research )	1	771
+21796	1	Jakarta (Mitra Market Research )	1	889
+21797	1	Jakarta (Mitra Market Research )	1	324
+21798	1	Jakarta (Mitra Market Research )	1	367
+21799	1	Jakarta (Mitra Market Research )	1	668
+218	1	Test	2	357
+21800	1	Jakarta (Mitra Market Research )	1	591
+21801	1	Jakarta (Mitra Market Research )	1	256
+21802	1	Jakarta (Mitra Market Research )	1	531
+21803	1	Jakarta (Mitra Market Research )	1	234
+21804	1	Jakarta (Mitra Market Research )	1	909
+21805	1	Jakarta (Mitra Market Research )	1	271
+21806	1	Jakarta (Mitra Market Research )	1	635
+21807	1	Jakarta (Mitra Market Research )	1	086
+21808	1	Jakarta (Mitra Market Research )	1	734
+21809	1	Jakarta (Mitra Market Research )	1	494
+21810	1	Jakarta (Mitra Market Research )	1	638
+21811	1	Jakarta (Mitra Market Research )	1	851
+21812	1	Jakarta (Mitra Market Research )	1	784
+21813	1	Jakarta (Mitra Market Research )	1	254
+21814	1	Jakarta (Mitra Market Research )	1	558
+21815	1	Jakarta (Mitra Market Research )	1	431
+21816	1	Jakarta (Mitra Market Research )	1	308
+21817	1	Jakarta (Mitra Market Research )	1	818
+21818	1	Jakarta (Mitra Market Research )	1	666
+21819	1	Jakarta (Mitra Market Research )	1	698
+21820	1	Jakarta (Mitra Market Research )	1	856
+21821	1	Jakarta (Mitra Market Research )	1	682
+21822	1	Jakarta (Mitra Market Research )	1	144
+21823	1	Jakarta (Mitra Market Research )	1	517
+21824	1	Jakarta (Mitra Market Research )	1	133
+21825	1	Jakarta (Mitra Market Research )	1	474
+21826	1	Jakarta (Mitra Market Research )	1	959
+21827	1	Jakarta (Mitra Market Research )	1	052
+21828	1	Jakarta (Mitra Market Research )	1	428
+21829	1	Jakarta (Mitra Market Research )	1	123
+21830	1	Jakarta (Mitra Market Research )	1	308
+21831	1	Jakarta (Mitra Market Research )	1	795
+21832	1	Jakarta (Mitra Market Research )	1	578
+21833	1	Jakarta (Mitra Market Research )	1	751
+21834	1	Jakarta (Mitra Market Research )	1	531
+21835	1	Jakarta (Mitra Market Research )	1	719
+21836	1	Jakarta (Mitra Market Research )	1	002
+21837	1	Jakarta (Mitra Market Research )	1	642
+21838	1	Jakarta (Mitra Market Research )	1	719
+21839	1	Jakarta (Mitra Market Research )	1	496
+21840	1	Jakarta (Mitra Market Research )	1	333
+21841	1	Jakarta (Mitra Market Research )	1	034
+21842	1	Jakarta (Mitra Market Research )	1	242
+21843	1	Jakarta (Mitra Market Research )	1	864
+21844	1	Jakarta (Mitra Market Research )	1	793
+21845	1	Jakarta (Mitra Market Research )	1	906
+21846	1	Jakarta (Mitra Market Research )	1	877
+21847	1	Jakarta (Mitra Market Research )	1	038
+21848	1	Jakarta (Mitra Market Research )	1	875
+21849	1	Jakarta (Mitra Market Research )	1	822
+21850	1	Jakarta (Mitra Market Research )	1	083
+21851	1	Jakarta (Mitra Market Research )	1	787
+21852	1	Jakarta (Mitra Market Research )	1	865
+21853	1	Jakarta (Mitra Market Research )	1	146
+21854	1	Jakarta (Mitra Market Research )	1	769
+21855	1	Jakarta (Mitra Market Research )	1	961
+21856	1	Jakarta (Mitra Market Research )	1	697
+21857	1	Jakarta (Mitra Market Research )	1	791
+21858	1	Jakarta (Mitra Market Research )	1	336
+21859	1	Jakarta (Mitra Market Research )	1	657
+21860	1	Jakarta (Mitra Market Research )	1	413
+21861	1	Jakarta (Mitra Market Research )	1	757
+21862	1	Jakarta (Mitra Market Research )	1	016
+21863	1	Jakarta (Mitra Market Research )	1	391
+21864	1	Jakarta (Mitra Market Research )	1	978
+21865	1	Jakarta (Mitra Market Research )	1	425
+21866	1	Jakarta (Mitra Market Research )	1	204
+21867	1	Jakarta (Mitra Market Research )	1	442
+21868	1	Jakarta (Mitra Market Research )	1	101
+21869	1	Jakarta (Mitra Market Research )	1	508
+21870	1	Jakarta (Mitra Market Research )	1	869
+21871	1	Jakarta (Mitra Market Research )	1	068
+21872	1	Jakarta (Mitra Market Research )	1	216
+21873	1	Jakarta (Mitra Market Research )	1	558
+21874	1	Jakarta (Mitra Market Research )	1	648
+21875	1	Jakarta (Mitra Market Research )	1	644
+21876	1	Jakarta (Mitra Market Research )	1	488
+21877	1	Jakarta (Mitra Market Research )	1	448
+21878	1	Jakarta (Mitra Market Research )	1	607
+21879	1	Jakarta (Mitra Market Research )	1	795
+21880	1	Jakarta (Mitra Market Research )	1	869
+21881	1	Jakarta (Mitra Market Research )	1	822
+21882	1	Jakarta (Mitra Market Research )	1	424
+21883	1	Jakarta (Mitra Market Research )	1	233
+21884	1	Jakarta (Mitra Market Research )	1	772
+21885	1	Jakarta (Mitra Market Research )	1	298
+21886	1	Jakarta (Mitra Market Research )	1	943
+21887	1	Jakarta (Mitra Market Research )	1	913
+21888	1	Jakarta (Mitra Market Research )	1	965
+21889	1	Jakarta (Mitra Market Research )	1	909
+21890	1	Jakarta (Mitra Market Research )	1	268
+21891	1	Jakarta (Mitra Market Research )	1	902
+21892	1	Jakarta (Mitra Market Research )	1	957
+21893	1	Jakarta (Mitra Market Research )	1	736
+21894	1	Jakarta (Mitra Market Research )	1	884
+21895	1	Jakarta (Mitra Market Research )	1	126
+21896	1	Jakarta (Mitra Market Research )	1	505
+21897	1	Jakarta (Mitra Market Research )	1	384
+21898	1	Jakarta (Mitra Market Research )	1	124
+21899	1	Jakarta (Mitra Market Research )	1	414
+219	1	Test	2	164
+21900	1	Jakarta (Mitra Market Research )	1	244
+21901	1	Jakarta (Mitra Market Research )	1	649
+21902	1	Jakarta (Mitra Market Research )	1	236
+21903	1	Jakarta (Mitra Market Research )	1	564
+21904	1	Jakarta (Mitra Market Research )	1	798
+21905	1	Jakarta (Mitra Market Research )	1	269
+21906	1	Jakarta (Mitra Market Research )	1	673
+21907	1	Jakarta (Mitra Market Research )	1	193
+21908	1	Jakarta (Mitra Market Research )	1	372
+21909	1	Jakarta (Mitra Market Research )	1	131
+21910	1	Jakarta (Mitra Market Research )	1	053
+21911	1	Jakarta (Mitra Market Research )	1	943
+21912	1	Jakarta (Mitra Market Research )	1	924
+21913	1	Jakarta (Mitra Market Research )	1	351
+21914	1	Jakarta (Mitra Market Research )	1	244
+21915	1	Jakarta (Mitra Market Research )	1	471
+21916	1	Jakarta (Mitra Market Research )	1	848
+21917	1	Jakarta (Mitra Market Research )	1	097
+21918	1	Jakarta (Mitra Market Research )	1	732
+21919	1	Jakarta (Mitra Market Research )	1	018
+21920	1	Jakarta (Mitra Market Research )	1	538
+21921	1	Jakarta (Mitra Market Research )	1	976
+21922	1	Jakarta (Mitra Market Research )	1	693
+21923	1	Jakarta (Mitra Market Research )	1	018
+21924	1	Jakarta (Mitra Market Research )	1	476
+21925	1	Jakarta (Mitra Market Research )	1	255
+21926	1	Jakarta (Mitra Market Research )	1	858
+21927	1	Jakarta (Mitra Market Research )	1	506
+21928	1	Jakarta (Mitra Market Research )	1	618
+21929	1	Jakarta (Mitra Market Research )	1	706
+21930	1	Jakarta (Mitra Market Research )	1	791
+21931	1	Jakarta (Mitra Market Research )	1	747
+21932	1	Jakarta (Mitra Market Research )	1	439
+21933	1	Jakarta (Mitra Market Research )	1	171
+21934	1	Jakarta (Mitra Market Research )	1	629
+21935	1	Jakarta (Mitra Market Research )	1	142
+21936	1	Jakarta (Mitra Market Research )	1	794
+21937	1	Jakarta (Mitra Market Research )	1	921
+21938	1	Jakarta (Mitra Market Research )	1	199
+21939	1	Jakarta (Mitra Market Research )	1	654
+21940	1	Jakarta (Mitra Market Research )	1	781
+21941	1	Jakarta (Mitra Market Research )	1	289
+21942	1	Jakarta (Mitra Market Research )	1	751
+21943	1	Jakarta (Mitra Market Research )	1	144
+21944	1	Jakarta (Mitra Market Research )	1	401
+21945	1	Jakarta (Mitra Market Research )	1	027
+21946	1	Jakarta (Mitra Market Research )	1	993
+21947	1	Jakarta (Mitra Market Research )	1	266
+21948	1	Jakarta (Mitra Market Research )	1	757
+21949	1	Jakarta (Mitra Market Research )	1	939
+21950	1	Jakarta (Mitra Market Research )	1	512
+21951	1	Jakarta (Mitra Market Research )	1	397
+21952	1	Jakarta (Mitra Market Research )	1	061
+21953	1	Jakarta (Mitra Market Research )	1	634
+21954	1	Jakarta (Mitra Market Research )	1	005
+21955	1	Jakarta (Mitra Market Research )	1	149
+21956	1	Jakarta (Mitra Market Research )	1	554
+21957	1	Jakarta (Mitra Market Research )	1	574
+21958	1	Jakarta (Mitra Market Research )	1	594
+21959	1	Jakarta (Mitra Market Research )	1	088
+21960	1	Jakarta (Mitra Market Research )	1	947
+21961	1	Jakarta (Mitra Market Research )	1	482
+21962	1	Jakarta (Mitra Market Research )	1	044
+21963	1	Jakarta (Mitra Market Research )	1	519
+21964	1	Jakarta (Mitra Market Research )	1	357
+21965	1	Jakarta (Mitra Market Research )	1	837
+21966	1	Jakarta (Mitra Market Research )	1	694
+21967	1	Jakarta (Mitra Market Research )	1	594
+21968	1	Jakarta (Mitra Market Research )	1	969
+21969	1	Jakarta (Mitra Market Research )	1	794
+21970	1	Jakarta (Mitra Market Research )	1	974
+21971	1	Jakarta (Mitra Market Research )	1	217
+21972	1	Jakarta (Mitra Market Research )	1	808
+21973	1	Jakarta (Mitra Market Research )	1	664
+21974	1	Jakarta (Mitra Market Research )	1	864
+21975	1	Jakarta (Mitra Market Research )	1	307
+21976	1	Jakarta (Mitra Market Research )	1	076
+21977	1	Jakarta (Mitra Market Research )	1	296
+21978	1	Jakarta (Mitra Market Research )	1	973
+21979	1	Jakarta (Mitra Market Research )	1	294
+21980	1	Jakarta (Mitra Market Research )	1	145
+21981	1	Jakarta (Mitra Market Research )	1	574
+21982	1	Jakarta (Mitra Market Research )	1	932
+21983	1	Jakarta (Mitra Market Research )	1	428
+21984	1	Jakarta (Mitra Market Research )	1	635
+21985	1	Jakarta (Mitra Market Research )	1	944
+21986	1	Jakarta (Mitra Market Research )	1	701
+21987	1	Jakarta (Mitra Market Research )	1	142
+21988	1	Jakarta (Mitra Market Research )	1	744
+21989	1	Jakarta (Mitra Market Research )	1	147
+21990	1	Jakarta (Mitra Market Research )	1	679
+21991	1	Jakarta (Mitra Market Research )	1	141
+21992	1	Jakarta (Mitra Market Research )	1	391
+21993	1	Jakarta (Mitra Market Research )	1	661
+21994	1	Jakarta (Mitra Market Research )	1	427
+21995	1	Jakarta (Mitra Market Research )	1	799
+21996	1	Jakarta (Mitra Market Research )	1	067
+21997	1	Jakarta (Mitra Market Research )	1	816
+21998	1	Jakarta (Mitra Market Research )	1	906
+21999	1	Jakarta (Mitra Market Research )	1	177
+220	1	Test	2	022
+221	1	Test	2	306
+22101	2	Jakarta (Mitra Market Research )	1	679
+22102	2	Jakarta (Mitra Market Research )	1	981
+22103	2	Jakarta (Mitra Market Research )	1	169
+22104	2	Jakarta (Mitra Market Research )	1	547
+22105	2	Jakarta (Mitra Market Research )	1	588
+22106	2	Jakarta (Mitra Market Research )	1	842
+22107	2	Jakarta (Mitra Market Research )	1	943
+22108	2	Jakarta (Mitra Market Research )	1	376
+22109	2	Jakarta (Mitra Market Research )	1	145
+22110	2	Jakarta (Mitra Market Research )	1	125
+22111	2	Jakarta (Mitra Market Research )	1	193
+22112	2	Jakarta (Mitra Market Research )	1	437
+22113	2	Jakarta (Mitra Market Research )	1	184
+22114	2	Jakarta (Mitra Market Research )	1	116
+22115	2	Jakarta (Mitra Market Research )	1	957
+22116	2	Jakarta (Mitra Market Research )	1	171
+22117	2	Jakarta (Mitra Market Research )	1	527
+22118	2	Jakarta (Mitra Market Research )	1	691
+22119	2	Jakarta (Mitra Market Research )	1	073
+22120	2	Jakarta (Mitra Market Research )	1	288
+22121	2	Jakarta (Mitra Market Research )	1	412
+22122	2	Jakarta (Mitra Market Research )	1	019
+22123	2	Jakarta (Mitra Market Research )	1	672
+22124	2	Jakarta (Mitra Market Research )	1	199
+22125	2	Jakarta (Mitra Market Research )	1	519
+22126	2	Jakarta (Mitra Market Research )	1	724
+22127	2	Jakarta (Mitra Market Research )	1	424
+22128	2	Jakarta (Mitra Market Research )	1	769
+22129	2	Jakarta (Mitra Market Research )	1	794
+22130	2	Jakarta (Mitra Market Research )	1	071
+22131	2	Jakarta (Mitra Market Research )	1	171
+22132	2	Jakarta (Mitra Market Research )	1	769
+22133	2	Jakarta (Mitra Market Research )	1	831
+22134	2	Jakarta (Mitra Market Research )	1	435
+22135	2	Jakarta (Mitra Market Research )	1	847
+22136	2	Jakarta (Mitra Market Research )	1	819
+22137	2	Jakarta (Mitra Market Research )	1	785
+22138	2	Jakarta (Mitra Market Research )	1	228
+22139	2	Jakarta (Mitra Market Research )	1	624
+22140	2	Jakarta (Mitra Market Research )	1	203
+22141	2	Jakarta (Mitra Market Research )	1	029
+22142	2	Jakarta (Mitra Market Research )	1	814
+22143	2	Jakarta (Mitra Market Research )	1	619
+22144	2	Jakarta (Mitra Market Research )	1	583
+22145	2	Jakarta (Mitra Market Research )	1	917
+22146	2	Jakarta (Mitra Market Research )	1	934
+22147	2	Jakarta (Mitra Market Research )	1	763
+22148	2	Jakarta (Mitra Market Research )	1	975
+22149	2	Jakarta (Mitra Market Research )	1	502
+22150	2	Jakarta (Mitra Market Research )	1	584
+22151	2	Jakarta (Mitra Market Research )	1	748
+22152	2	Jakarta (Mitra Market Research )	1	251
+22153	2	Jakarta (Mitra Market Research )	1	109
+22154	2	Jakarta (Mitra Market Research )	1	483
+22155	2	Jakarta (Mitra Market Research )	1	877
+22156	2	Jakarta (Mitra Market Research )	1	531
+22157	2	Jakarta (Mitra Market Research )	1	181
+22158	2	Jakarta (Mitra Market Research )	1	277
+22159	2	Jakarta (Mitra Market Research )	1	577
+22160	2	Jakarta (Mitra Market Research )	1	154
+22161	2	Jakarta (Mitra Market Research )	1	082
+22162	2	Jakarta (Mitra Market Research )	1	392
+22163	2	Jakarta (Mitra Market Research )	1	035
+22164	2	Jakarta (Mitra Market Research )	1	917
+22165	2	Jakarta (Mitra Market Research )	1	906
+22166	2	Jakarta (Mitra Market Research )	1	495
+22167	2	Jakarta (Mitra Market Research )	1	068
+22168	2	Jakarta (Mitra Market Research )	1	705
+22169	2	Jakarta (Mitra Market Research )	1	572
+22170	2	Jakarta (Mitra Market Research )	1	914
+22171	2	Jakarta (Mitra Market Research )	1	236
+22172	2	Jakarta (Mitra Market Research )	1	934
+22173	2	Jakarta (Mitra Market Research )	1	254
+22174	2	Jakarta (Mitra Market Research )	1	124
+22175	2	Jakarta (Mitra Market Research )	1	743
+22176	2	Jakarta (Mitra Market Research )	1	877
+22177	2	Jakarta (Mitra Market Research )	1	977
+22178	2	Jakarta (Mitra Market Research )	1	694
+22179	2	Jakarta (Mitra Market Research )	1	408
+22180	2	Jakarta (Mitra Market Research )	1	608
+22181	2	Jakarta (Mitra Market Research )	1	472
+22182	2	Jakarta (Mitra Market Research )	1	998
+22183	2	Jakarta (Mitra Market Research )	1	979
+22184	2	Jakarta (Mitra Market Research )	1	808
+22185	2	Jakarta (Mitra Market Research )	1	158
+22186	2	Jakarta (Mitra Market Research )	1	409
+22187	2	Jakarta (Mitra Market Research )	1	613
+22188	2	Jakarta (Mitra Market Research )	1	905
+22189	2	Jakarta (Mitra Market Research )	1	335
+22190	2	Jakarta (Mitra Market Research )	1	769
+22191	2	Jakarta (Mitra Market Research )	1	497
+22192	2	Jakarta (Mitra Market Research )	1	801
+22193	2	Jakarta (Mitra Market Research )	1	015
+22194	2	Jakarta (Mitra Market Research )	1	832
+22195	2	Jakarta (Mitra Market Research )	1	867
+22196	2	Jakarta (Mitra Market Research )	1	344
+22197	2	Jakarta (Mitra Market Research )	1	779
+22198	2	Jakarta (Mitra Market Research )	1	008
+22199	2	Jakarta (Mitra Market Research )	1	473
+222	1	Test	2	273
+22200	2	Jakarta (Mitra Market Research )	1	874
+22201	2	Jakarta (Mitra Market Research )	1	592
+22202	2	Jakarta (Mitra Market Research )	1	343
+22203	2	Jakarta (Mitra Market Research )	1	433
+22204	2	Jakarta (Mitra Market Research )	1	569
+22205	2	Jakarta (Mitra Market Research )	1	209
+22206	2	Jakarta (Mitra Market Research )	1	439
+22207	2	Jakarta (Mitra Market Research )	1	968
+22208	2	Jakarta (Mitra Market Research )	1	248
+22209	2	Jakarta (Mitra Market Research )	1	219
+22210	2	Jakarta (Mitra Market Research )	1	617
+22211	2	Jakarta (Mitra Market Research )	1	596
+22212	2	Jakarta (Mitra Market Research )	1	662
+22213	2	Jakarta (Mitra Market Research )	1	432
+22214	2	Jakarta (Mitra Market Research )	1	563
+22215	2	Jakarta (Mitra Market Research )	1	419
+22216	2	Jakarta (Mitra Market Research )	1	383
+22217	2	Jakarta (Mitra Market Research )	1	991
+22218	2	Jakarta (Mitra Market Research )	1	186
+22219	2	Jakarta (Mitra Market Research )	1	551
+22220	2	Jakarta (Mitra Market Research )	1	792
+22221	2	Jakarta (Mitra Market Research )	1	546
+22222	2	Jakarta (Mitra Market Research )	1	117
+22223	2	Jakarta (Mitra Market Research )	1	113
+22224	2	Jakarta (Mitra Market Research )	1	637
+22225	2	Jakarta (Mitra Market Research )	1	432
+22226	2	Jakarta (Mitra Market Research )	1	025
+22227	2	Jakarta (Mitra Market Research )	1	682
+22228	2	Jakarta (Mitra Market Research )	1	623
+22229	2	Jakarta (Mitra Market Research )	1	243
+22230	2	Jakarta (Mitra Market Research )	1	568
+22231	2	Jakarta (Mitra Market Research )	1	819
+22232	2	Jakarta (Mitra Market Research )	1	956
+22233	2	Jakarta (Mitra Market Research )	1	114
+22234	2	Jakarta (Mitra Market Research )	1	189
+22235	2	Jakarta (Mitra Market Research )	1	562
+22236	2	Jakarta (Mitra Market Research )	1	136
+22237	2	Jakarta (Mitra Market Research )	1	119
+22238	2	Jakarta (Mitra Market Research )	1	261
+22239	2	Jakarta (Mitra Market Research )	1	592
+22240	2	Jakarta (Mitra Market Research )	1	454
+22241	2	Jakarta (Mitra Market Research )	1	391
+22242	2	Jakarta (Mitra Market Research )	1	494
+22243	2	Jakarta (Mitra Market Research )	1	573
+22244	2	Jakarta (Mitra Market Research )	1	721
+22245	2	Jakarta (Mitra Market Research )	1	169
+22246	2	Jakarta (Mitra Market Research )	1	292
+22247	2	Jakarta (Mitra Market Research )	1	689
+22248	2	Jakarta (Mitra Market Research )	1	964
+22249	2	Jakarta (Mitra Market Research )	1	976
+22250	2	Jakarta (Mitra Market Research )	1	264
+22251	2	Jakarta (Mitra Market Research )	1	161
+22252	2	Jakarta (Mitra Market Research )	1	243
+22253	2	Jakarta (Mitra Market Research )	1	558
+22254	2	Jakarta (Mitra Market Research )	1	137
+22255	2	Jakarta (Mitra Market Research )	1	935
+22256	2	Jakarta (Mitra Market Research )	1	487
+22257	2	Jakarta (Mitra Market Research )	1	631
+22258	2	Jakarta (Mitra Market Research )	1	175
+22259	2	Jakarta (Mitra Market Research )	1	655
+22260	2	Jakarta (Mitra Market Research )	1	874
+22261	2	Jakarta (Mitra Market Research )	1	229
+22262	2	Jakarta (Mitra Market Research )	1	994
+22263	2	Jakarta (Mitra Market Research )	1	972
+22264	2	Jakarta (Mitra Market Research )	1	737
+22265	2	Jakarta (Mitra Market Research )	1	627
+22266	2	Jakarta (Mitra Market Research )	1	491
+22267	2	Jakarta (Mitra Market Research )	1	899
+22268	2	Jakarta (Mitra Market Research )	1	346
+22269	2	Jakarta (Mitra Market Research )	1	359
+22270	2	Jakarta (Mitra Market Research )	1	142
+22271	2	Jakarta (Mitra Market Research )	1	946
+22272	2	Jakarta (Mitra Market Research )	1	334
+22273	2	Jakarta (Mitra Market Research )	1	307
+22274	2	Jakarta (Mitra Market Research )	1	297
+22275	2	Jakarta (Mitra Market Research )	1	055
+22276	2	Jakarta (Mitra Market Research )	1	739
+22277	2	Jakarta (Mitra Market Research )	1	313
+22278	2	Jakarta (Mitra Market Research )	1	921
+22279	2	Jakarta (Mitra Market Research )	1	708
+22280	2	Jakarta (Mitra Market Research )	1	792
+22281	2	Jakarta (Mitra Market Research )	1	051
+22282	2	Jakarta (Mitra Market Research )	1	186
+22283	2	Jakarta (Mitra Market Research )	1	287
+22284	2	Jakarta (Mitra Market Research )	1	918
+22285	2	Jakarta (Mitra Market Research )	1	292
+22286	2	Jakarta (Mitra Market Research )	1	621
+22287	2	Jakarta (Mitra Market Research )	1	102
+22288	2	Jakarta (Mitra Market Research )	1	047
+22289	2	Jakarta (Mitra Market Research )	1	927
+22290	2	Jakarta (Mitra Market Research )	1	779
+22291	2	Jakarta (Mitra Market Research )	1	494
+22292	2	Jakarta (Mitra Market Research )	1	804
+22293	2	Jakarta (Mitra Market Research )	1	442
+22294	2	Jakarta (Mitra Market Research )	1	136
+22295	2	Jakarta (Mitra Market Research )	1	304
+22296	2	Jakarta (Mitra Market Research )	1	589
+22297	2	Jakarta (Mitra Market Research )	1	229
+22298	2	Jakarta (Mitra Market Research )	1	052
+22299	2	Jakarta (Mitra Market Research )	1	771
+223	1	Test	2	328
+22300	2	Jakarta (Mitra Market Research )	1	089
+22301	2	Jakarta (Mitra Market Research )	1	893
+22302	2	Jakarta (Mitra Market Research )	1	866
+22303	2	Jakarta (Mitra Market Research )	1	458
+22304	2	Jakarta (Mitra Market Research )	1	018
+22305	2	Jakarta (Mitra Market Research )	1	476
+22306	2	Jakarta (Mitra Market Research )	1	955
+22307	2	Jakarta (Mitra Market Research )	1	254
+22308	2	Jakarta (Mitra Market Research )	1	489
+22309	2	Jakarta (Mitra Market Research )	1	737
+22310	2	Jakarta (Mitra Market Research )	1	527
+22311	2	Jakarta (Mitra Market Research )	1	734
+22312	2	Jakarta (Mitra Market Research )	1	121
+22313	2	Jakarta (Mitra Market Research )	1	541
+22314	2	Jakarta (Mitra Market Research )	1	164
+22315	2	Jakarta (Mitra Market Research )	1	638
+22316	2	Jakarta (Mitra Market Research )	1	267
+22317	2	Jakarta (Mitra Market Research )	1	316
+22318	2	Jakarta (Mitra Market Research )	1	304
+22319	2	Jakarta (Mitra Market Research )	1	158
+22320	2	Jakarta (Mitra Market Research )	1	108
+22321	2	Jakarta (Mitra Market Research )	1	731
+22322	2	Jakarta (Mitra Market Research )	1	148
+22323	2	Jakarta (Mitra Market Research )	1	597
+22324	2	Jakarta (Mitra Market Research )	1	286
+22325	2	Jakarta (Mitra Market Research )	1	871
+22326	2	Jakarta (Mitra Market Research )	1	753
+22327	2	Jakarta (Mitra Market Research )	1	385
+22328	2	Jakarta (Mitra Market Research )	1	152
+22329	2	Jakarta (Mitra Market Research )	1	649
+22330	2	Jakarta (Mitra Market Research )	1	459
+22331	2	Jakarta (Mitra Market Research )	1	587
+22332	2	Jakarta (Mitra Market Research )	1	579
+22333	2	Jakarta (Mitra Market Research )	1	924
+22334	2	Jakarta (Mitra Market Research )	1	991
+22335	2	Jakarta (Mitra Market Research )	1	719
+22336	2	Jakarta (Mitra Market Research )	1	625
+22337	2	Jakarta (Mitra Market Research )	1	665
+22338	2	Jakarta (Mitra Market Research )	1	062
+22339	2	Jakarta (Mitra Market Research )	1	213
+22340	2	Jakarta (Mitra Market Research )	1	508
+22341	2	Jakarta (Mitra Market Research )	1	007
+22342	2	Jakarta (Mitra Market Research )	1	746
+22343	2	Jakarta (Mitra Market Research )	1	219
+22344	2	Jakarta (Mitra Market Research )	1	579
+22345	2	Jakarta (Mitra Market Research )	1	533
+22346	2	Jakarta (Mitra Market Research )	1	869
+22347	2	Jakarta (Mitra Market Research )	1	033
+22348	2	Jakarta (Mitra Market Research )	1	953
+22349	2	Jakarta (Mitra Market Research )	1	651
+22350	2	Jakarta (Mitra Market Research )	1	417
+22351	2	Jakarta (Mitra Market Research )	1	092
+22352	2	Jakarta (Mitra Market Research )	1	973
+22353	2	Jakarta (Mitra Market Research )	1	713
+22354	2	Jakarta (Mitra Market Research )	1	668
+22355	2	Jakarta (Mitra Market Research )	1	481
+22356	2	Jakarta (Mitra Market Research )	1	018
+22357	2	Jakarta (Mitra Market Research )	1	421
+22358	2	Jakarta (Mitra Market Research )	1	981
+22359	2	Jakarta (Mitra Market Research )	1	585
+22360	2	Jakarta (Mitra Market Research )	1	284
+22361	2	Jakarta (Mitra Market Research )	1	394
+22362	2	Jakarta (Mitra Market Research )	1	568
+22363	2	Jakarta (Mitra Market Research )	1	458
+22364	2	Jakarta (Mitra Market Research )	1	736
+22365	2	Jakarta (Mitra Market Research )	1	672
+22366	2	Jakarta (Mitra Market Research )	1	075
+22367	2	Jakarta (Mitra Market Research )	1	728
+22368	2	Jakarta (Mitra Market Research )	1	053
+22369	2	Jakarta (Mitra Market Research )	1	694
+22370	2	Jakarta (Mitra Market Research )	1	698
+22371	2	Jakarta (Mitra Market Research )	1	386
+22372	2	Jakarta (Mitra Market Research )	1	523
+22373	2	Jakarta (Mitra Market Research )	1	658
+22374	2	Jakarta (Mitra Market Research )	1	516
+22375	2	Jakarta (Mitra Market Research )	1	893
+22376	2	Jakarta (Mitra Market Research )	1	357
+22377	2	Jakarta (Mitra Market Research )	1	251
+22378	2	Jakarta (Mitra Market Research )	1	943
+22379	2	Jakarta (Mitra Market Research )	1	412
+22380	2	Jakarta (Mitra Market Research )	1	168
+22381	2	Jakarta (Mitra Market Research )	1	685
+22382	2	Jakarta (Mitra Market Research )	1	317
+22383	2	Jakarta (Mitra Market Research )	1	489
+22384	2	Jakarta (Mitra Market Research )	1	614
+22385	2	Jakarta (Mitra Market Research )	1	146
+22386	2	Jakarta (Mitra Market Research )	1	276
+22387	2	Jakarta (Mitra Market Research )	1	328
+22388	2	Jakarta (Mitra Market Research )	1	535
+22389	2	Jakarta (Mitra Market Research )	1	544
+22390	2	Jakarta (Mitra Market Research )	1	233
+22391	2	Jakarta (Mitra Market Research )	1	851
+22392	2	Jakarta (Mitra Market Research )	1	008
+22393	2	Jakarta (Mitra Market Research )	1	851
+22394	2	Jakarta (Mitra Market Research )	1	879
+22395	2	Jakarta (Mitra Market Research )	1	525
+22396	2	Jakarta (Mitra Market Research )	1	396
+22397	2	Jakarta (Mitra Market Research )	1	008
+22398	2	Jakarta (Mitra Market Research )	1	334
+22399	2	Jakarta (Mitra Market Research )	1	599
+224	1	Test	2	387
+22400	2	Jakarta (Mitra Market Research )	1	948
+22401	2	Jakarta (Mitra Market Research )	1	441
+22402	2	Jakarta (Mitra Market Research )	1	078
+22403	2	Jakarta (Mitra Market Research )	1	838
+22404	2	Jakarta (Mitra Market Research )	1	015
+22405	2	Jakarta (Mitra Market Research )	1	112
+22406	2	Jakarta (Mitra Market Research )	1	554
+22407	2	Jakarta (Mitra Market Research )	1	191
+22408	2	Jakarta (Mitra Market Research )	1	815
+22409	2	Jakarta (Mitra Market Research )	1	142
+22410	2	Jakarta (Mitra Market Research )	1	808
+22411	2	Jakarta (Mitra Market Research )	1	098
+22412	2	Jakarta (Mitra Market Research )	1	384
+22413	2	Jakarta (Mitra Market Research )	1	006
+22414	2	Jakarta (Mitra Market Research )	1	146
+22415	2	Jakarta (Mitra Market Research )	1	891
+22416	2	Jakarta (Mitra Market Research )	1	728
+22417	2	Jakarta (Mitra Market Research )	1	728
+22418	2	Jakarta (Mitra Market Research )	1	842
+22419	2	Jakarta (Mitra Market Research )	1	147
+22420	2	Jakarta (Mitra Market Research )	1	849
+22421	2	Jakarta (Mitra Market Research )	1	396
+22422	2	Jakarta (Mitra Market Research )	1	782
+22423	2	Jakarta (Mitra Market Research )	1	232
+22424	2	Jakarta (Mitra Market Research )	1	509
+22425	2	Jakarta (Mitra Market Research )	1	763
+22426	2	Jakarta (Mitra Market Research )	1	648
+22427	2	Jakarta (Mitra Market Research )	1	782
+22428	2	Jakarta (Mitra Market Research )	1	867
+22429	2	Jakarta (Mitra Market Research )	1	995
+22430	2	Jakarta (Mitra Market Research )	1	541
+22431	2	Jakarta (Mitra Market Research )	1	148
+22432	2	Jakarta (Mitra Market Research )	1	206
+22433	2	Jakarta (Mitra Market Research )	1	637
+22434	2	Jakarta (Mitra Market Research )	1	008
+22435	2	Jakarta (Mitra Market Research )	1	967
+22436	2	Jakarta (Mitra Market Research )	1	904
+22437	2	Jakarta (Mitra Market Research )	1	239
+22438	2	Jakarta (Mitra Market Research )	1	809
+22439	2	Jakarta (Mitra Market Research )	1	477
+22440	2	Jakarta (Mitra Market Research )	1	748
+22441	2	Jakarta (Mitra Market Research )	1	188
+22442	2	Jakarta (Mitra Market Research )	1	783
+22443	2	Jakarta (Mitra Market Research )	1	934
+22444	2	Jakarta (Mitra Market Research )	1	286
+22445	2	Jakarta (Mitra Market Research )	1	506
+22446	2	Jakarta (Mitra Market Research )	1	134
+22447	2	Jakarta (Mitra Market Research )	1	712
+22448	2	Jakarta (Mitra Market Research )	1	601
+22449	2	Jakarta (Mitra Market Research )	1	805
+22450	2	Jakarta (Mitra Market Research )	1	451
+22451	2	Jakarta (Mitra Market Research )	1	352
+22452	2	Jakarta (Mitra Market Research )	1	629
+22453	2	Jakarta (Mitra Market Research )	1	153
+22454	2	Jakarta (Mitra Market Research )	1	933
+22455	2	Jakarta (Mitra Market Research )	1	723
+22456	2	Jakarta (Mitra Market Research )	1	046
+22457	2	Jakarta (Mitra Market Research )	1	526
+22458	2	Jakarta (Mitra Market Research )	1	004
+22459	2	Jakarta (Mitra Market Research )	1	402
+22460	2	Jakarta (Mitra Market Research )	1	963
+22461	2	Jakarta (Mitra Market Research )	1	068
+22462	2	Jakarta (Mitra Market Research )	1	976
+22463	2	Jakarta (Mitra Market Research )	1	963
+22464	2	Jakarta (Mitra Market Research )	1	321
+22465	2	Jakarta (Mitra Market Research )	1	649
+22466	2	Jakarta (Mitra Market Research )	1	085
+22467	2	Jakarta (Mitra Market Research )	1	839
+22468	2	Jakarta (Mitra Market Research )	1	207
+22469	2	Jakarta (Mitra Market Research )	1	572
+22470	2	Jakarta (Mitra Market Research )	1	302
+22471	2	Jakarta (Mitra Market Research )	1	077
+22472	2	Jakarta (Mitra Market Research )	1	649
+22473	2	Jakarta (Mitra Market Research )	1	173
+22474	2	Jakarta (Mitra Market Research )	1	931
+22475	2	Jakarta (Mitra Market Research )	1	566
+22476	2	Jakarta (Mitra Market Research )	1	381
+22477	2	Jakarta (Mitra Market Research )	1	364
+22478	2	Jakarta (Mitra Market Research )	1	478
+22479	2	Jakarta (Mitra Market Research )	1	417
+22480	2	Jakarta (Mitra Market Research )	1	285
+22481	2	Jakarta (Mitra Market Research )	1	748
+22482	2	Jakarta (Mitra Market Research )	1	211
+22483	2	Jakarta (Mitra Market Research )	1	147
+22484	2	Jakarta (Mitra Market Research )	1	718
+22485	2	Jakarta (Mitra Market Research )	1	424
+22486	2	Jakarta (Mitra Market Research )	1	985
+22487	2	Jakarta (Mitra Market Research )	1	535
+22488	2	Jakarta (Mitra Market Research )	1	172
+22489	2	Jakarta (Mitra Market Research )	1	368
+22490	2	Jakarta (Mitra Market Research )	1	024
+22491	2	Jakarta (Mitra Market Research )	1	778
+22492	2	Jakarta (Mitra Market Research )	1	347
+22493	2	Jakarta (Mitra Market Research )	1	412
+22494	2	Jakarta (Mitra Market Research )	1	358
+22495	2	Jakarta (Mitra Market Research )	1	273
+22496	2	Jakarta (Mitra Market Research )	1	916
+22497	2	Jakarta (Mitra Market Research )	1	334
+22498	2	Jakarta (Mitra Market Research )	1	608
+22499	2	Jakarta (Mitra Market Research )	1	523
+225	1	Test	2	686
+22500	2	Jakarta (Mitra Market Research )	1	408
+22501	2	Jakarta (Mitra Market Research )	1	733
+22502	2	Jakarta (Mitra Market Research )	1	105
+22503	2	Jakarta (Mitra Market Research )	1	644
+22504	2	Jakarta (Mitra Market Research )	1	514
+22505	2	Jakarta (Mitra Market Research )	1	152
+22506	2	Jakarta (Mitra Market Research )	1	866
+22507	2	Jakarta (Mitra Market Research )	1	782
+22508	2	Jakarta (Mitra Market Research )	1	911
+22509	2	Jakarta (Mitra Market Research )	1	641
+22510	2	Jakarta (Mitra Market Research )	1	851
+22511	2	Jakarta (Mitra Market Research )	1	011
+22512	2	Jakarta (Mitra Market Research )	1	169
+22513	2	Jakarta (Mitra Market Research )	1	047
+22514	2	Jakarta (Mitra Market Research )	1	822
+22515	2	Jakarta (Mitra Market Research )	1	409
+22516	2	Jakarta (Mitra Market Research )	1	502
+22517	2	Jakarta (Mitra Market Research )	1	094
+22518	2	Jakarta (Mitra Market Research )	1	356
+22519	2	Jakarta (Mitra Market Research )	1	688
+22520	2	Jakarta (Mitra Market Research )	1	784
+22521	2	Jakarta (Mitra Market Research )	1	546
+22522	2	Jakarta (Mitra Market Research )	1	169
+22523	2	Jakarta (Mitra Market Research )	1	191
+22524	2	Jakarta (Mitra Market Research )	1	339
+22525	2	Jakarta (Mitra Market Research )	1	778
+22526	2	Jakarta (Mitra Market Research )	1	742
+22527	2	Jakarta (Mitra Market Research )	1	484
+22528	2	Jakarta (Mitra Market Research )	1	126
+22529	2	Jakarta (Mitra Market Research )	1	355
+22530	2	Jakarta (Mitra Market Research )	1	631
+22531	2	Jakarta (Mitra Market Research )	1	495
+22532	2	Jakarta (Mitra Market Research )	1	407
+22533	2	Jakarta (Mitra Market Research )	1	893
+22534	2	Jakarta (Mitra Market Research )	1	821
+22535	2	Jakarta (Mitra Market Research )	1	853
+22536	2	Jakarta (Mitra Market Research )	1	451
+22537	2	Jakarta (Mitra Market Research )	1	709
+22538	2	Jakarta (Mitra Market Research )	1	947
+22539	2	Jakarta (Mitra Market Research )	1	588
+22540	2	Jakarta (Mitra Market Research )	1	026
+22541	2	Jakarta (Mitra Market Research )	1	933
+22542	2	Jakarta (Mitra Market Research )	1	147
+22543	2	Jakarta (Mitra Market Research )	1	747
+22544	2	Jakarta (Mitra Market Research )	1	561
+22545	2	Jakarta (Mitra Market Research )	1	432
+22546	2	Jakarta (Mitra Market Research )	1	612
+22547	2	Jakarta (Mitra Market Research )	1	945
+22548	2	Jakarta (Mitra Market Research )	1	468
+22549	2	Jakarta (Mitra Market Research )	1	843
+22550	2	Jakarta (Mitra Market Research )	1	937
+22551	2	Jakarta (Mitra Market Research )	1	837
+22552	2	Jakarta (Mitra Market Research )	1	793
+22553	2	Jakarta (Mitra Market Research )	1	274
+22554	2	Jakarta (Mitra Market Research )	1	308
+22555	2	Jakarta (Mitra Market Research )	1	596
+22556	2	Jakarta (Mitra Market Research )	1	232
+22557	2	Jakarta (Mitra Market Research )	1	739
+22558	2	Jakarta (Mitra Market Research )	1	156
+22559	2	Jakarta (Mitra Market Research )	1	146
+22560	2	Jakarta (Mitra Market Research )	1	382
+22561	2	Jakarta (Mitra Market Research )	1	318
+22562	2	Jakarta (Mitra Market Research )	1	459
+22563	2	Jakarta (Mitra Market Research )	1	795
+22564	2	Jakarta (Mitra Market Research )	1	802
+22565	2	Jakarta (Mitra Market Research )	1	483
+22566	2	Jakarta (Mitra Market Research )	1	192
+22567	2	Jakarta (Mitra Market Research )	1	637
+22568	2	Jakarta (Mitra Market Research )	1	716
+22569	2	Jakarta (Mitra Market Research )	1	987
+22570	2	Jakarta (Mitra Market Research )	1	702
+22571	2	Jakarta (Mitra Market Research )	1	284
+22572	2	Jakarta (Mitra Market Research )	1	609
+22573	2	Jakarta (Mitra Market Research )	1	124
+22574	2	Jakarta (Mitra Market Research )	1	899
+22575	2	Jakarta (Mitra Market Research )	1	557
+22576	2	Jakarta (Mitra Market Research )	1	747
+22577	2	Jakarta (Mitra Market Research )	1	962
+22578	2	Jakarta (Mitra Market Research )	1	095
+22579	2	Jakarta (Mitra Market Research )	1	036
+22580	2	Jakarta (Mitra Market Research )	1	904
+22581	2	Jakarta (Mitra Market Research )	1	579
+22582	2	Jakarta (Mitra Market Research )	1	189
+22583	2	Jakarta (Mitra Market Research )	1	701
+22584	2	Jakarta (Mitra Market Research )	1	338
+22585	2	Jakarta (Mitra Market Research )	1	762
+22586	2	Jakarta (Mitra Market Research )	1	894
+22587	2	Jakarta (Mitra Market Research )	1	451
+22588	2	Jakarta (Mitra Market Research )	1	364
+22589	2	Jakarta (Mitra Market Research )	1	811
+22590	2	Jakarta (Mitra Market Research )	1	354
+22591	2	Jakarta (Mitra Market Research )	1	871
+22592	2	Jakarta (Mitra Market Research )	1	664
+22593	2	Jakarta (Mitra Market Research )	1	694
+22594	2	Jakarta (Mitra Market Research )	1	565
+22595	2	Jakarta (Mitra Market Research )	1	731
+22596	2	Jakarta (Mitra Market Research )	1	433
+22597	2	Jakarta (Mitra Market Research )	1	715
+22598	2	Jakarta (Mitra Market Research )	1	319
+22599	2	Jakarta (Mitra Market Research )	1	348
+226	1	Test	2	158
+22600	2	Jakarta (Mitra Market Research )	1	068
+22601	2	Jakarta (Mitra Market Research )	1	388
+22602	2	Jakarta (Mitra Market Research )	1	796
+22603	2	Jakarta (Mitra Market Research )	1	423
+22604	2	Jakarta (Mitra Market Research )	1	276
+22605	2	Jakarta (Mitra Market Research )	1	446
+22606	2	Jakarta (Mitra Market Research )	1	342
+22607	2	Jakarta (Mitra Market Research )	1	194
+22608	2	Jakarta (Mitra Market Research )	1	383
+22609	2	Jakarta (Mitra Market Research )	1	585
+22610	2	Jakarta (Mitra Market Research )	1	127
+22611	2	Jakarta (Mitra Market Research )	1	798
+22612	2	Jakarta (Mitra Market Research )	1	255
+22613	2	Jakarta (Mitra Market Research )	1	174
+22614	2	Jakarta (Mitra Market Research )	1	882
+22615	2	Jakarta (Mitra Market Research )	1	217
+22616	2	Jakarta (Mitra Market Research )	1	143
+22617	2	Jakarta (Mitra Market Research )	1	238
+22618	2	Jakarta (Mitra Market Research )	1	999
+22619	2	Jakarta (Mitra Market Research )	1	809
+22620	2	Jakarta (Mitra Market Research )	1	545
+22621	2	Jakarta (Mitra Market Research )	1	789
+22622	2	Jakarta (Mitra Market Research )	1	784
+22623	2	Jakarta (Mitra Market Research )	1	806
+22624	2	Jakarta (Mitra Market Research )	1	991
+22625	2	Jakarta (Mitra Market Research )	1	769
+22626	2	Jakarta (Mitra Market Research )	1	466
+22627	2	Jakarta (Mitra Market Research )	1	902
+22628	2	Jakarta (Mitra Market Research )	1	667
+22629	2	Jakarta (Mitra Market Research )	1	845
+22630	2	Jakarta (Mitra Market Research )	1	539
+22631	2	Jakarta (Mitra Market Research )	1	773
+22632	2	Jakarta (Mitra Market Research )	1	108
+22633	2	Jakarta (Mitra Market Research )	1	103
+22634	2	Jakarta (Mitra Market Research )	1	226
+22635	2	Jakarta (Mitra Market Research )	1	712
+22636	2	Jakarta (Mitra Market Research )	1	178
+22637	2	Jakarta (Mitra Market Research )	1	566
+22638	2	Jakarta (Mitra Market Research )	1	766
+22639	2	Jakarta (Mitra Market Research )	1	621
+22640	2	Jakarta (Mitra Market Research )	1	524
+22641	2	Jakarta (Mitra Market Research )	1	219
+22642	2	Jakarta (Mitra Market Research )	1	621
+22643	2	Jakarta (Mitra Market Research )	1	413
+22644	2	Jakarta (Mitra Market Research )	1	372
+22645	2	Jakarta (Mitra Market Research )	1	207
+22646	2	Jakarta (Mitra Market Research )	1	408
+22647	2	Jakarta (Mitra Market Research )	1	124
+22648	2	Jakarta (Mitra Market Research )	1	329
+22649	2	Jakarta (Mitra Market Research )	1	901
+22650	2	Jakarta (Mitra Market Research )	1	438
+22651	2	Jakarta (Mitra Market Research )	1	022
+22652	2	Jakarta (Mitra Market Research )	1	078
+22653	2	Jakarta (Mitra Market Research )	1	567
+22654	2	Jakarta (Mitra Market Research )	1	167
+22655	2	Jakarta (Mitra Market Research )	1	106
+22656	2	Jakarta (Mitra Market Research )	1	313
+22657	2	Jakarta (Mitra Market Research )	1	732
+22658	2	Jakarta (Mitra Market Research )	1	333
+22659	2	Jakarta (Mitra Market Research )	1	039
+22660	2	Jakarta (Mitra Market Research )	1	542
+22661	2	Jakarta (Mitra Market Research )	1	816
+22662	2	Jakarta (Mitra Market Research )	1	658
+22663	2	Jakarta (Mitra Market Research )	1	727
+22664	2	Jakarta (Mitra Market Research )	1	993
+22665	2	Jakarta (Mitra Market Research )	1	087
+22666	2	Jakarta (Mitra Market Research )	1	777
+22667	2	Jakarta (Mitra Market Research )	1	402
+22668	2	Jakarta (Mitra Market Research )	1	626
+22669	2	Jakarta (Mitra Market Research )	1	675
+22670	2	Jakarta (Mitra Market Research )	1	069
+22671	2	Jakarta (Mitra Market Research )	1	796
+22672	2	Jakarta (Mitra Market Research )	1	028
+22673	2	Jakarta (Mitra Market Research )	1	483
+22674	2	Jakarta (Mitra Market Research )	1	593
+22675	2	Jakarta (Mitra Market Research )	1	984
+22676	2	Jakarta (Mitra Market Research )	1	893
+22677	2	Jakarta (Mitra Market Research )	1	121
+22678	2	Jakarta (Mitra Market Research )	1	688
+22679	2	Jakarta (Mitra Market Research )	1	388
+22680	2	Jakarta (Mitra Market Research )	1	551
+22681	2	Jakarta (Mitra Market Research )	1	562
+22682	2	Jakarta (Mitra Market Research )	1	242
+22683	2	Jakarta (Mitra Market Research )	1	175
+22684	2	Jakarta (Mitra Market Research )	1	305
+22685	2	Jakarta (Mitra Market Research )	1	397
+22686	2	Jakarta (Mitra Market Research )	1	508
+22687	2	Jakarta (Mitra Market Research )	1	692
+22688	2	Jakarta (Mitra Market Research )	1	788
+22689	2	Jakarta (Mitra Market Research )	1	593
+22690	2	Jakarta (Mitra Market Research )	1	387
+22691	2	Jakarta (Mitra Market Research )	1	524
+22692	2	Jakarta (Mitra Market Research )	1	842
+22693	2	Jakarta (Mitra Market Research )	1	218
+22694	2	Jakarta (Mitra Market Research )	1	968
+22695	2	Jakarta (Mitra Market Research )	1	968
+22696	2	Jakarta (Mitra Market Research )	1	332
+22697	2	Jakarta (Mitra Market Research )	1	954
+22698	2	Jakarta (Mitra Market Research )	1	583
+22699	2	Jakarta (Mitra Market Research )	1	915
+227	1	Test	2	257
+22700	2	Jakarta (Mitra Market Research )	1	682
+22701	2	Jakarta (Mitra Market Research )	1	698
+22702	2	Jakarta (Mitra Market Research )	1	033
+22703	2	Jakarta (Mitra Market Research )	1	104
+22704	2	Jakarta (Mitra Market Research )	1	282
+22705	2	Jakarta (Mitra Market Research )	1	784
+22706	2	Jakarta (Mitra Market Research )	1	137
+22707	2	Jakarta (Mitra Market Research )	1	797
+22708	2	Jakarta (Mitra Market Research )	1	966
+22709	2	Jakarta (Mitra Market Research )	1	387
+22710	2	Jakarta (Mitra Market Research )	1	422
+22711	2	Jakarta (Mitra Market Research )	1	309
+22712	2	Jakarta (Mitra Market Research )	1	689
+22713	2	Jakarta (Mitra Market Research )	1	581
+22714	2	Jakarta (Mitra Market Research )	1	941
+22715	2	Jakarta (Mitra Market Research )	1	922
+22716	2	Jakarta (Mitra Market Research )	1	304
+22717	2	Jakarta (Mitra Market Research )	1	998
+22718	2	Jakarta (Mitra Market Research )	1	448
+22719	2	Jakarta (Mitra Market Research )	1	971
+22720	2	Jakarta (Mitra Market Research )	1	789
+22721	2	Jakarta (Mitra Market Research )	1	296
+22722	2	Jakarta (Mitra Market Research )	1	589
+22723	2	Jakarta (Mitra Market Research )	1	408
+22724	2	Jakarta (Mitra Market Research )	1	137
+22725	2	Jakarta (Mitra Market Research )	1	325
+22726	2	Jakarta (Mitra Market Research )	1	068
+22727	2	Jakarta (Mitra Market Research )	1	399
+22728	2	Jakarta (Mitra Market Research )	1	675
+22729	2	Jakarta (Mitra Market Research )	1	642
+22730	2	Jakarta (Mitra Market Research )	1	416
+22731	2	Jakarta (Mitra Market Research )	1	584
+22732	2	Jakarta (Mitra Market Research )	1	215
+22733	2	Jakarta (Mitra Market Research )	1	475
+22734	2	Jakarta (Mitra Market Research )	1	668
+22735	2	Jakarta (Mitra Market Research )	1	626
+22736	2	Jakarta (Mitra Market Research )	1	104
+22737	2	Jakarta (Mitra Market Research )	1	111
+22738	2	Jakarta (Mitra Market Research )	1	516
+22739	2	Jakarta (Mitra Market Research )	1	684
+22740	2	Jakarta (Mitra Market Research )	1	473
+22741	2	Jakarta (Mitra Market Research )	1	995
+22742	2	Jakarta (Mitra Market Research )	1	565
+22743	2	Jakarta (Mitra Market Research )	1	308
+22744	2	Jakarta (Mitra Market Research )	1	394
+22745	2	Jakarta (Mitra Market Research )	1	912
+22746	2	Jakarta (Mitra Market Research )	1	235
+22747	2	Jakarta (Mitra Market Research )	1	827
+22748	2	Jakarta (Mitra Market Research )	1	049
+22749	2	Jakarta (Mitra Market Research )	1	267
+22750	2	Jakarta (Mitra Market Research )	1	559
+22751	2	Jakarta (Mitra Market Research )	1	703
+22752	2	Jakarta (Mitra Market Research )	1	482
+22753	2	Jakarta (Mitra Market Research )	1	786
+22754	2	Jakarta (Mitra Market Research )	1	871
+22755	2	Jakarta (Mitra Market Research )	1	656
+22756	2	Jakarta (Mitra Market Research )	1	598
+22757	2	Jakarta (Mitra Market Research )	1	378
+22758	2	Jakarta (Mitra Market Research )	1	263
+22759	2	Jakarta (Mitra Market Research )	1	832
+22760	2	Jakarta (Mitra Market Research )	1	261
+22761	2	Jakarta (Mitra Market Research )	1	761
+22762	2	Jakarta (Mitra Market Research )	1	728
+22763	2	Jakarta (Mitra Market Research )	1	999
+22764	2	Jakarta (Mitra Market Research )	1	096
+22765	2	Jakarta (Mitra Market Research )	1	219
+22766	2	Jakarta (Mitra Market Research )	1	812
+22767	2	Jakarta (Mitra Market Research )	1	449
+22768	2	Jakarta (Mitra Market Research )	1	507
+22769	2	Jakarta (Mitra Market Research )	1	019
+22770	2	Jakarta (Mitra Market Research )	1	553
+22771	2	Jakarta (Mitra Market Research )	1	565
+22772	2	Jakarta (Mitra Market Research )	1	276
+22773	2	Jakarta (Mitra Market Research )	1	355
+22774	2	Jakarta (Mitra Market Research )	1	243
+22775	2	Jakarta (Mitra Market Research )	1	578
+22776	2	Jakarta (Mitra Market Research )	1	838
+22777	2	Jakarta (Mitra Market Research )	1	457
+22778	2	Jakarta (Mitra Market Research )	1	136
+22779	2	Jakarta (Mitra Market Research )	1	241
+22780	2	Jakarta (Mitra Market Research )	1	922
+22781	2	Jakarta (Mitra Market Research )	1	232
+22782	2	Jakarta (Mitra Market Research )	1	393
+22783	2	Jakarta (Mitra Market Research )	1	395
+22784	2	Jakarta (Mitra Market Research )	1	052
+22785	2	Jakarta (Mitra Market Research )	1	893
+22786	2	Jakarta (Mitra Market Research )	1	103
+22787	2	Jakarta (Mitra Market Research )	1	696
+22788	2	Jakarta (Mitra Market Research )	1	788
+22789	2	Jakarta (Mitra Market Research )	1	619
+22790	2	Jakarta (Mitra Market Research )	1	132
+22791	2	Jakarta (Mitra Market Research )	1	766
+22792	2	Jakarta (Mitra Market Research )	1	953
+22793	2	Jakarta (Mitra Market Research )	1	396
+22794	2	Jakarta (Mitra Market Research )	1	902
+22795	2	Jakarta (Mitra Market Research )	1	934
+22796	2	Jakarta (Mitra Market Research )	1	781
+22797	2	Jakarta (Mitra Market Research )	1	319
+22798	2	Jakarta (Mitra Market Research )	1	933
+22799	2	Jakarta (Mitra Market Research )	1	402
+228	1	Test	2	919
+22800	2	Jakarta (Mitra Market Research )	1	862
+22801	2	Jakarta (Mitra Market Research )	1	932
+22802	2	Jakarta (Mitra Market Research )	1	866
+22803	2	Jakarta (Mitra Market Research )	1	277
+22804	2	Jakarta (Mitra Market Research )	1	311
+22805	2	Jakarta (Mitra Market Research )	1	191
+22806	2	Jakarta (Mitra Market Research )	1	303
+22807	2	Jakarta (Mitra Market Research )	1	469
+22808	2	Jakarta (Mitra Market Research )	1	644
+22809	2	Jakarta (Mitra Market Research )	1	864
+22810	2	Jakarta (Mitra Market Research )	1	625
+22811	2	Jakarta (Mitra Market Research )	1	292
+22812	2	Jakarta (Mitra Market Research )	1	027
+22813	2	Jakarta (Mitra Market Research )	1	491
+22814	2	Jakarta (Mitra Market Research )	1	249
+22815	2	Jakarta (Mitra Market Research )	1	589
+22816	2	Jakarta (Mitra Market Research )	1	861
+22817	2	Jakarta (Mitra Market Research )	1	797
+22818	2	Jakarta (Mitra Market Research )	1	182
+22819	2	Jakarta (Mitra Market Research )	1	151
+22820	2	Jakarta (Mitra Market Research )	1	323
+22821	2	Jakarta (Mitra Market Research )	1	208
+22822	2	Jakarta (Mitra Market Research )	1	395
+22823	2	Jakarta (Mitra Market Research )	1	478
+22824	2	Jakarta (Mitra Market Research )	1	924
+22825	2	Jakarta (Mitra Market Research )	1	205
+22826	2	Jakarta (Mitra Market Research )	1	961
+22827	2	Jakarta (Mitra Market Research )	1	847
+22828	2	Jakarta (Mitra Market Research )	1	201
+22829	2	Jakarta (Mitra Market Research )	1	009
+22830	2	Jakarta (Mitra Market Research )	1	849
+22831	2	Jakarta (Mitra Market Research )	1	347
+22832	2	Jakarta (Mitra Market Research )	1	421
+22833	2	Jakarta (Mitra Market Research )	1	768
+22834	2	Jakarta (Mitra Market Research )	1	051
+22835	2	Jakarta (Mitra Market Research )	1	945
+22836	2	Jakarta (Mitra Market Research )	1	927
+22837	2	Jakarta (Mitra Market Research )	1	571
+22838	2	Jakarta (Mitra Market Research )	1	806
+22839	2	Jakarta (Mitra Market Research )	1	323
+22840	2	Jakarta (Mitra Market Research )	1	758
+22841	2	Jakarta (Mitra Market Research )	1	713
+22842	2	Jakarta (Mitra Market Research )	1	358
+22843	2	Jakarta (Mitra Market Research )	1	066
+22844	2	Jakarta (Mitra Market Research )	1	353
+22845	2	Jakarta (Mitra Market Research )	1	635
+22846	2	Jakarta (Mitra Market Research )	1	749
+22847	2	Jakarta (Mitra Market Research )	1	008
+22848	2	Jakarta (Mitra Market Research )	1	329
+22849	2	Jakarta (Mitra Market Research )	1	127
+22850	2	Jakarta (Mitra Market Research )	1	032
+22851	2	Jakarta (Mitra Market Research )	1	383
+22852	2	Jakarta (Mitra Market Research )	1	521
+22853	2	Jakarta (Mitra Market Research )	1	135
+22854	2	Jakarta (Mitra Market Research )	1	835
+22855	2	Jakarta (Mitra Market Research )	1	726
+22856	2	Jakarta (Mitra Market Research )	1	831
+22857	2	Jakarta (Mitra Market Research )	1	696
+22858	2	Jakarta (Mitra Market Research )	1	636
+22859	2	Jakarta (Mitra Market Research )	1	863
+22860	2	Jakarta (Mitra Market Research )	1	966
+22861	2	Jakarta (Mitra Market Research )	1	021
+22862	2	Jakarta (Mitra Market Research )	1	512
+22863	2	Jakarta (Mitra Market Research )	1	127
+22864	2	Jakarta (Mitra Market Research )	1	647
+22865	2	Jakarta (Mitra Market Research )	1	635
+22866	2	Jakarta (Mitra Market Research )	1	789
+22867	2	Jakarta (Mitra Market Research )	1	808
+22868	2	Jakarta (Mitra Market Research )	1	813
+22869	2	Jakarta (Mitra Market Research )	1	901
+22870	2	Jakarta (Mitra Market Research )	1	953
+22871	2	Jakarta (Mitra Market Research )	1	265
+22872	2	Jakarta (Mitra Market Research )	1	297
+22873	2	Jakarta (Mitra Market Research )	1	788
+22874	2	Jakarta (Mitra Market Research )	1	457
+22875	2	Jakarta (Mitra Market Research )	1	837
+22876	2	Jakarta (Mitra Market Research )	1	521
+22877	2	Jakarta (Mitra Market Research )	1	297
+22878	2	Jakarta (Mitra Market Research )	1	734
+22879	2	Jakarta (Mitra Market Research )	1	171
+22880	2	Jakarta (Mitra Market Research )	1	476
+22881	2	Jakarta (Mitra Market Research )	1	334
+22882	2	Jakarta (Mitra Market Research )	1	526
+22883	2	Jakarta (Mitra Market Research )	1	924
+22884	2	Jakarta (Mitra Market Research )	1	371
+22885	2	Jakarta (Mitra Market Research )	1	202
+22886	2	Jakarta (Mitra Market Research )	1	544
+22887	2	Jakarta (Mitra Market Research )	1	093
+22888	2	Jakarta (Mitra Market Research )	1	274
+22889	2	Jakarta (Mitra Market Research )	1	099
+22890	2	Jakarta (Mitra Market Research )	1	046
+22891	2	Jakarta (Mitra Market Research )	1	959
+22892	2	Jakarta (Mitra Market Research )	1	155
+22893	2	Jakarta (Mitra Market Research )	1	898
+22894	2	Jakarta (Mitra Market Research )	1	718
+22895	2	Jakarta (Mitra Market Research )	1	453
+22896	2	Jakarta (Mitra Market Research )	1	189
+22897	2	Jakarta (Mitra Market Research )	1	684
+22898	2	Jakarta (Mitra Market Research )	1	913
+22899	2	Jakarta (Mitra Market Research )	1	071
+229	1	Test	2	596
+22900	2	Jakarta (Mitra Market Research )	1	016
+22901	2	Jakarta (Mitra Market Research )	1	851
+22902	2	Jakarta (Mitra Market Research )	1	688
+22903	2	Jakarta (Mitra Market Research )	1	805
+22904	2	Jakarta (Mitra Market Research )	1	304
+22905	2	Jakarta (Mitra Market Research )	1	258
+22906	2	Jakarta (Mitra Market Research )	1	176
+22907	2	Jakarta (Mitra Market Research )	1	486
+22908	2	Jakarta (Mitra Market Research )	1	113
+22909	2	Jakarta (Mitra Market Research )	1	784
+22910	2	Jakarta (Mitra Market Research )	1	189
+22911	2	Jakarta (Mitra Market Research )	1	149
+22912	2	Jakarta (Mitra Market Research )	1	844
+22913	2	Jakarta (Mitra Market Research )	1	609
+22914	2	Jakarta (Mitra Market Research )	1	012
+22915	2	Jakarta (Mitra Market Research )	1	679
+22916	2	Jakarta (Mitra Market Research )	1	492
+22917	2	Jakarta (Mitra Market Research )	1	006
+22918	2	Jakarta (Mitra Market Research )	1	036
+22919	2	Jakarta (Mitra Market Research )	1	884
+22920	2	Jakarta (Mitra Market Research )	1	495
+22921	2	Jakarta (Mitra Market Research )	1	363
+22922	2	Jakarta (Mitra Market Research )	1	762
+22923	2	Jakarta (Mitra Market Research )	1	837
+22924	2	Jakarta (Mitra Market Research )	1	581
+22925	2	Jakarta (Mitra Market Research )	1	511
+22926	2	Jakarta (Mitra Market Research )	1	798
+22927	2	Jakarta (Mitra Market Research )	1	248
+22928	2	Jakarta (Mitra Market Research )	1	453
+22929	2	Jakarta (Mitra Market Research )	1	694
+22930	2	Jakarta (Mitra Market Research )	1	456
+22931	2	Jakarta (Mitra Market Research )	1	907
+22932	2	Jakarta (Mitra Market Research )	1	383
+22933	2	Jakarta (Mitra Market Research )	1	012
+22934	2	Jakarta (Mitra Market Research )	1	203
+22935	2	Jakarta (Mitra Market Research )	1	649
+22936	2	Jakarta (Mitra Market Research )	1	665
+22937	2	Jakarta (Mitra Market Research )	1	424
+22938	2	Jakarta (Mitra Market Research )	1	081
+22939	2	Jakarta (Mitra Market Research )	1	539
+22940	2	Jakarta (Mitra Market Research )	1	377
+22941	2	Jakarta (Mitra Market Research )	1	262
+22942	2	Jakarta (Mitra Market Research )	1	364
+22943	2	Jakarta (Mitra Market Research )	1	525
+22944	2	Jakarta (Mitra Market Research )	1	396
+22945	2	Jakarta (Mitra Market Research )	1	969
+22946	2	Jakarta (Mitra Market Research )	1	192
+22947	2	Jakarta (Mitra Market Research )	1	731
+22948	2	Jakarta (Mitra Market Research )	1	037
+22949	2	Jakarta (Mitra Market Research )	1	141
+22950	2	Jakarta (Mitra Market Research )	1	125
+22951	2	Jakarta (Mitra Market Research )	1	019
+22952	2	Jakarta (Mitra Market Research )	1	583
+22953	2	Jakarta (Mitra Market Research )	1	661
+22954	2	Jakarta (Mitra Market Research )	1	699
+22955	2	Jakarta (Mitra Market Research )	1	278
+22956	2	Jakarta (Mitra Market Research )	1	989
+22957	2	Jakarta (Mitra Market Research )	1	251
+22958	2	Jakarta (Mitra Market Research )	1	919
+22959	2	Jakarta (Mitra Market Research )	1	269
+22960	2	Jakarta (Mitra Market Research )	1	003
+22961	2	Jakarta (Mitra Market Research )	1	384
+22962	2	Jakarta (Mitra Market Research )	1	159
+22963	2	Jakarta (Mitra Market Research )	1	565
+22964	2	Jakarta (Mitra Market Research )	1	621
+22965	2	Jakarta (Mitra Market Research )	1	365
+22966	2	Jakarta (Mitra Market Research )	1	754
+22967	2	Jakarta (Mitra Market Research )	1	905
+22968	2	Jakarta (Mitra Market Research )	1	532
+22969	2	Jakarta (Mitra Market Research )	1	421
+22970	2	Jakarta (Mitra Market Research )	1	922
+22971	2	Jakarta (Mitra Market Research )	1	517
+22972	2	Jakarta (Mitra Market Research )	1	727
+22973	2	Jakarta (Mitra Market Research )	1	939
+22974	2	Jakarta (Mitra Market Research )	1	575
+22975	2	Jakarta (Mitra Market Research )	1	692
+22976	2	Jakarta (Mitra Market Research )	1	883
+22977	2	Jakarta (Mitra Market Research )	1	427
+22978	2	Jakarta (Mitra Market Research )	1	956
+22979	2	Jakarta (Mitra Market Research )	1	655
+22980	2	Jakarta (Mitra Market Research )	1	954
+22981	2	Jakarta (Mitra Market Research )	1	508
+22982	2	Jakarta (Mitra Market Research )	1	135
+22983	2	Jakarta (Mitra Market Research )	1	395
+22984	2	Jakarta (Mitra Market Research )	1	278
+22985	2	Jakarta (Mitra Market Research )	1	374
+22986	2	Jakarta (Mitra Market Research )	1	167
+22987	2	Jakarta (Mitra Market Research )	1	845
+22988	2	Jakarta (Mitra Market Research )	1	854
+22989	2	Jakarta (Mitra Market Research )	1	079
+22990	2	Jakarta (Mitra Market Research )	1	548
+22991	2	Jakarta (Mitra Market Research )	1	153
+22992	2	Jakarta (Mitra Market Research )	1	288
+22993	2	Jakarta (Mitra Market Research )	1	024
+22994	2	Jakarta (Mitra Market Research )	1	915
+22995	2	Jakarta (Mitra Market Research )	1	901
+22996	2	Jakarta (Mitra Market Research )	1	575
+22997	2	Jakarta (Mitra Market Research )	1	396
+22998	2	Jakarta (Mitra Market Research )	1	168
+22999	2	Jakarta (Mitra Market Research )	1	616
+230	1	Test	2	938
+231	1	Test	2	059
+23101	3	Jakarta (Mitra Market Research )	1	544
+23102	3	Jakarta (Mitra Market Research )	1	658
+23103	3	Jakarta (Mitra Market Research )	1	651
+23104	3	Jakarta (Mitra Market Research )	1	782
+23105	3	Jakarta (Mitra Market Research )	1	652
+23106	3	Jakarta (Mitra Market Research )	1	912
+23107	3	Jakarta (Mitra Market Research )	1	901
+23108	3	Jakarta (Mitra Market Research )	1	787
+23109	3	Jakarta (Mitra Market Research )	1	353
+23110	3	Jakarta (Mitra Market Research )	1	603
+23111	3	Jakarta (Mitra Market Research )	1	631
+23112	3	Jakarta (Mitra Market Research )	1	568
+23113	3	Jakarta (Mitra Market Research )	1	677
+23114	3	Jakarta (Mitra Market Research )	1	579
+23115	3	Jakarta (Mitra Market Research )	1	361
+23116	3	Jakarta (Mitra Market Research )	1	448
+23117	3	Jakarta (Mitra Market Research )	1	721
+23118	3	Jakarta (Mitra Market Research )	1	068
+23119	3	Jakarta (Mitra Market Research )	1	858
+23120	3	Jakarta (Mitra Market Research )	1	442
+23121	3	Jakarta (Mitra Market Research )	1	952
+23122	3	Jakarta (Mitra Market Research )	1	852
+23123	3	Jakarta (Mitra Market Research )	1	587
+23124	3	Jakarta (Mitra Market Research )	1	867
+23125	3	Jakarta (Mitra Market Research )	1	568
+23126	3	Jakarta (Mitra Market Research )	1	549
+23127	3	Jakarta (Mitra Market Research )	1	627
+23128	3	Jakarta (Mitra Market Research )	1	952
+23129	3	Jakarta (Mitra Market Research )	1	287
+23130	3	Jakarta (Mitra Market Research )	1	945
+23131	3	Jakarta (Mitra Market Research )	1	809
+23132	3	Jakarta (Mitra Market Research )	1	545
+23133	3	Jakarta (Mitra Market Research )	1	077
+23134	3	Jakarta (Mitra Market Research )	1	395
+23135	3	Jakarta (Mitra Market Research )	1	471
+23136	3	Jakarta (Mitra Market Research )	1	462
+23137	3	Jakarta (Mitra Market Research )	1	917
+23138	3	Jakarta (Mitra Market Research )	1	697
+23139	3	Jakarta (Mitra Market Research )	1	715
+23140	3	Jakarta (Mitra Market Research )	1	088
+23141	3	Jakarta (Mitra Market Research )	1	115
+23142	3	Jakarta (Mitra Market Research )	1	982
+23143	3	Jakarta (Mitra Market Research )	1	612
+23144	3	Jakarta (Mitra Market Research )	1	142
+23145	3	Jakarta (Mitra Market Research )	1	665
+23146	3	Jakarta (Mitra Market Research )	1	103
+23147	3	Jakarta (Mitra Market Research )	1	931
+23148	3	Jakarta (Mitra Market Research )	1	747
+23149	3	Jakarta (Mitra Market Research )	1	382
+23150	3	Jakarta (Mitra Market Research )	1	315
+23151	3	Jakarta (Mitra Market Research )	1	224
+23152	3	Jakarta (Mitra Market Research )	1	377
+23153	3	Jakarta (Mitra Market Research )	1	057
+23154	3	Jakarta (Mitra Market Research )	1	202
+23155	3	Jakarta (Mitra Market Research )	1	012
+23156	3	Jakarta (Mitra Market Research )	1	755
+23157	3	Jakarta (Mitra Market Research )	1	559
+23158	3	Jakarta (Mitra Market Research )	1	391
+23159	3	Jakarta (Mitra Market Research )	1	408
+23160	3	Jakarta (Mitra Market Research )	1	192
+23161	3	Jakarta (Mitra Market Research )	1	412
+23162	3	Jakarta (Mitra Market Research )	1	766
+23163	3	Jakarta (Mitra Market Research )	1	581
+23164	3	Jakarta (Mitra Market Research )	1	693
+23165	3	Jakarta (Mitra Market Research )	1	948
+23166	3	Jakarta (Mitra Market Research )	1	041
+23167	3	Jakarta (Mitra Market Research )	1	192
+23168	3	Jakarta (Mitra Market Research )	1	694
+23169	3	Jakarta (Mitra Market Research )	1	358
+23170	3	Jakarta (Mitra Market Research )	1	768
+23171	3	Jakarta (Mitra Market Research )	1	737
+23172	3	Jakarta (Mitra Market Research )	1	253
+23173	3	Jakarta (Mitra Market Research )	1	169
+23174	3	Jakarta (Mitra Market Research )	1	255
+23175	3	Jakarta (Mitra Market Research )	1	521
+23176	3	Jakarta (Mitra Market Research )	1	456
+23177	3	Jakarta (Mitra Market Research )	1	437
+23178	3	Jakarta (Mitra Market Research )	1	014
+23179	3	Jakarta (Mitra Market Research )	1	225
+23180	3	Jakarta (Mitra Market Research )	1	681
+23181	3	Jakarta (Mitra Market Research )	1	879
+23182	3	Jakarta (Mitra Market Research )	1	485
+23183	3	Jakarta (Mitra Market Research )	1	285
+23184	3	Jakarta (Mitra Market Research )	1	094
+23185	3	Jakarta (Mitra Market Research )	1	587
+23186	3	Jakarta (Mitra Market Research )	1	223
+23187	3	Jakarta (Mitra Market Research )	1	426
+23188	3	Jakarta (Mitra Market Research )	1	214
+23189	3	Jakarta (Mitra Market Research )	1	455
+23190	3	Jakarta (Mitra Market Research )	1	381
+23191	3	Jakarta (Mitra Market Research )	1	733
+23192	3	Jakarta (Mitra Market Research )	1	406
+23193	3	Jakarta (Mitra Market Research )	1	117
+23194	3	Jakarta (Mitra Market Research )	1	935
+23195	3	Jakarta (Mitra Market Research )	1	909
+23196	3	Jakarta (Mitra Market Research )	1	335
+23197	3	Jakarta (Mitra Market Research )	1	909
+23198	3	Jakarta (Mitra Market Research )	1	265
+23199	3	Jakarta (Mitra Market Research )	1	111
+232	1	Test	2	178
+23200	3	Jakarta (Mitra Market Research )	1	757
+23201	3	Jakarta (Mitra Market Research )	1	223
+23202	3	Jakarta (Mitra Market Research )	1	678
+23203	3	Jakarta (Mitra Market Research )	1	989
+23204	3	Jakarta (Mitra Market Research )	1	862
+23205	3	Jakarta (Mitra Market Research )	1	965
+23206	3	Jakarta (Mitra Market Research )	1	619
+23207	3	Jakarta (Mitra Market Research )	1	555
+23208	3	Jakarta (Mitra Market Research )	1	175
+23209	3	Jakarta (Mitra Market Research )	1	727
+23210	3	Jakarta (Mitra Market Research )	1	209
+23211	3	Jakarta (Mitra Market Research )	1	588
+23212	3	Jakarta (Mitra Market Research )	1	505
+23213	3	Jakarta (Mitra Market Research )	1	569
+23214	3	Jakarta (Mitra Market Research )	1	572
+23215	3	Jakarta (Mitra Market Research )	1	125
+23216	3	Jakarta (Mitra Market Research )	1	128
+23217	3	Jakarta (Mitra Market Research )	1	528
+23218	3	Jakarta (Mitra Market Research )	1	613
+23219	3	Jakarta (Mitra Market Research )	1	889
+23220	3	Jakarta (Mitra Market Research )	1	962
+23221	3	Jakarta (Mitra Market Research )	1	414
+23222	3	Jakarta (Mitra Market Research )	1	932
+23223	3	Jakarta (Mitra Market Research )	1	872
+23224	3	Jakarta (Mitra Market Research )	1	109
+23225	3	Jakarta (Mitra Market Research )	1	571
+23226	3	Jakarta (Mitra Market Research )	1	185
+23227	3	Jakarta (Mitra Market Research )	1	075
+23228	3	Jakarta (Mitra Market Research )	1	924
+23229	3	Jakarta (Mitra Market Research )	1	458
+23230	3	Jakarta (Mitra Market Research )	1	499
+23231	3	Jakarta (Mitra Market Research )	1	537
+23232	3	Jakarta (Mitra Market Research )	1	135
+23233	3	Jakarta (Mitra Market Research )	1	899
+23234	3	Jakarta (Mitra Market Research )	1	753
+23235	3	Jakarta (Mitra Market Research )	1	173
+23236	3	Jakarta (Mitra Market Research )	1	987
+23237	3	Jakarta (Mitra Market Research )	1	981
+23238	3	Jakarta (Mitra Market Research )	1	338
+23239	3	Jakarta (Mitra Market Research )	1	689
+23240	3	Jakarta (Mitra Market Research )	1	683
+23241	3	Jakarta (Mitra Market Research )	1	776
+23242	3	Jakarta (Mitra Market Research )	1	808
+23243	3	Jakarta (Mitra Market Research )	1	029
+23244	3	Jakarta (Mitra Market Research )	1	161
+23245	3	Jakarta (Mitra Market Research )	1	489
+23246	3	Jakarta (Mitra Market Research )	1	678
+23247	3	Jakarta (Mitra Market Research )	1	343
+23248	3	Jakarta (Mitra Market Research )	1	137
+23249	3	Jakarta (Mitra Market Research )	1	571
+23250	3	Jakarta (Mitra Market Research )	1	876
+23251	3	Jakarta (Mitra Market Research )	1	086
+23252	3	Jakarta (Mitra Market Research )	1	146
+23253	3	Jakarta (Mitra Market Research )	1	877
+23254	3	Jakarta (Mitra Market Research )	1	215
+23255	3	Jakarta (Mitra Market Research )	1	517
+23256	3	Jakarta (Mitra Market Research )	1	249
+23257	3	Jakarta (Mitra Market Research )	1	629
+23258	3	Jakarta (Mitra Market Research )	1	132
+23259	3	Jakarta (Mitra Market Research )	1	499
+23260	3	Jakarta (Mitra Market Research )	1	044
+23261	3	Jakarta (Mitra Market Research )	1	673
+23262	3	Jakarta (Mitra Market Research )	1	094
+23263	3	Jakarta (Mitra Market Research )	1	047
+23264	3	Jakarta (Mitra Market Research )	1	936
+23265	3	Jakarta (Mitra Market Research )	1	005
+23266	3	Jakarta (Mitra Market Research )	1	849
+23267	3	Jakarta (Mitra Market Research )	1	918
+23268	3	Jakarta (Mitra Market Research )	1	693
+23269	3	Jakarta (Mitra Market Research )	1	735
+23270	3	Jakarta (Mitra Market Research )	1	476
+23271	3	Jakarta (Mitra Market Research )	1	477
+23272	3	Jakarta (Mitra Market Research )	1	192
+23273	3	Jakarta (Mitra Market Research )	1	704
+23274	3	Jakarta (Mitra Market Research )	1	375
+23275	3	Jakarta (Mitra Market Research )	1	883
+23276	3	Jakarta (Mitra Market Research )	1	912
+23277	3	Jakarta (Mitra Market Research )	1	615
+23278	3	Jakarta (Mitra Market Research )	1	599
+23279	3	Jakarta (Mitra Market Research )	1	286
+23280	3	Jakarta (Mitra Market Research )	1	632
+23281	3	Jakarta (Mitra Market Research )	1	427
+23282	3	Jakarta (Mitra Market Research )	1	876
+23283	3	Jakarta (Mitra Market Research )	1	677
+23284	3	Jakarta (Mitra Market Research )	1	364
+23285	3	Jakarta (Mitra Market Research )	1	813
+23286	3	Jakarta (Mitra Market Research )	1	059
+23287	3	Jakarta (Mitra Market Research )	1	053
+23288	3	Jakarta (Mitra Market Research )	1	654
+23289	3	Jakarta (Mitra Market Research )	1	641
+23290	3	Jakarta (Mitra Market Research )	1	336
+23291	3	Jakarta (Mitra Market Research )	1	102
+23292	3	Jakarta (Mitra Market Research )	1	758
+23293	3	Jakarta (Mitra Market Research )	1	547
+23294	3	Jakarta (Mitra Market Research )	1	291
+23295	3	Jakarta (Mitra Market Research )	1	568
+23296	3	Jakarta (Mitra Market Research )	1	233
+23297	3	Jakarta (Mitra Market Research )	1	377
+23298	3	Jakarta (Mitra Market Research )	1	337
+23299	3	Jakarta (Mitra Market Research )	1	351
+233	1	Test	2	497
+23300	3	Jakarta (Mitra Market Research )	1	677
+23301	3	Jakarta (Mitra Market Research )	1	012
+23302	3	Jakarta (Mitra Market Research )	1	595
+23303	3	Jakarta (Mitra Market Research )	1	907
+23304	3	Jakarta (Mitra Market Research )	1	808
+23305	3	Jakarta (Mitra Market Research )	1	754
+23306	3	Jakarta (Mitra Market Research )	1	203
+23307	3	Jakarta (Mitra Market Research )	1	865
+23308	3	Jakarta (Mitra Market Research )	1	872
+23309	3	Jakarta (Mitra Market Research )	1	822
+23310	3	Jakarta (Mitra Market Research )	1	474
+23311	3	Jakarta (Mitra Market Research )	1	572
+23312	3	Jakarta (Mitra Market Research )	1	254
+23313	3	Jakarta (Mitra Market Research )	1	156
+23314	3	Jakarta (Mitra Market Research )	1	275
+23315	3	Jakarta (Mitra Market Research )	1	843
+23316	3	Jakarta (Mitra Market Research )	1	961
+23317	3	Jakarta (Mitra Market Research )	1	183
+23318	3	Jakarta (Mitra Market Research )	1	375
+23319	3	Jakarta (Mitra Market Research )	1	364
+23320	3	Jakarta (Mitra Market Research )	1	305
+23321	3	Jakarta (Mitra Market Research )	1	172
+23322	3	Jakarta (Mitra Market Research )	1	803
+23323	3	Jakarta (Mitra Market Research )	1	045
+23324	3	Jakarta (Mitra Market Research )	1	178
+23325	3	Jakarta (Mitra Market Research )	1	031
+23326	3	Jakarta (Mitra Market Research )	1	625
+23327	3	Jakarta (Mitra Market Research )	1	959
+23328	3	Jakarta (Mitra Market Research )	1	696
+23329	3	Jakarta (Mitra Market Research )	1	435
+23330	3	Jakarta (Mitra Market Research )	1	482
+23331	3	Jakarta (Mitra Market Research )	1	827
+23332	3	Jakarta (Mitra Market Research )	1	283
+23333	3	Jakarta (Mitra Market Research )	1	455
+23334	3	Jakarta (Mitra Market Research )	1	284
+23335	3	Jakarta (Mitra Market Research )	1	751
+23336	3	Jakarta (Mitra Market Research )	1	096
+23337	3	Jakarta (Mitra Market Research )	1	171
+23338	3	Jakarta (Mitra Market Research )	1	346
+23339	3	Jakarta (Mitra Market Research )	1	164
+23340	3	Jakarta (Mitra Market Research )	1	513
+23341	3	Jakarta (Mitra Market Research )	1	971
+23342	3	Jakarta (Mitra Market Research )	1	682
+23343	3	Jakarta (Mitra Market Research )	1	004
+23344	3	Jakarta (Mitra Market Research )	1	033
+23345	3	Jakarta (Mitra Market Research )	1	345
+23346	3	Jakarta (Mitra Market Research )	1	952
+23347	3	Jakarta (Mitra Market Research )	1	472
+23348	3	Jakarta (Mitra Market Research )	1	096
+23349	3	Jakarta (Mitra Market Research )	1	327
+23350	3	Jakarta (Mitra Market Research )	1	213
+23351	3	Jakarta (Mitra Market Research )	1	509
+23352	3	Jakarta (Mitra Market Research )	1	637
+23353	3	Jakarta (Mitra Market Research )	1	021
+23354	3	Jakarta (Mitra Market Research )	1	719
+23355	3	Jakarta (Mitra Market Research )	1	365
+23356	3	Jakarta (Mitra Market Research )	1	339
+23357	3	Jakarta (Mitra Market Research )	1	062
+23358	3	Jakarta (Mitra Market Research )	1	396
+23359	3	Jakarta (Mitra Market Research )	1	191
+23360	3	Jakarta (Mitra Market Research )	1	294
+23361	3	Jakarta (Mitra Market Research )	1	492
+23362	3	Jakarta (Mitra Market Research )	1	571
+23363	3	Jakarta (Mitra Market Research )	1	594
+23364	3	Jakarta (Mitra Market Research )	1	526
+23365	3	Jakarta (Mitra Market Research )	1	782
+23366	3	Jakarta (Mitra Market Research )	1	798
+23367	3	Jakarta (Mitra Market Research )	1	069
+23368	3	Jakarta (Mitra Market Research )	1	085
+23369	3	Jakarta (Mitra Market Research )	1	235
+23370	3	Jakarta (Mitra Market Research )	1	469
+23371	3	Jakarta (Mitra Market Research )	1	433
+23372	3	Jakarta (Mitra Market Research )	1	368
+23373	3	Jakarta (Mitra Market Research )	1	321
+23374	3	Jakarta (Mitra Market Research )	1	397
+23375	3	Jakarta (Mitra Market Research )	1	818
+23376	3	Jakarta (Mitra Market Research )	1	284
+23377	3	Jakarta (Mitra Market Research )	1	031
+23378	3	Jakarta (Mitra Market Research )	1	344
+23379	3	Jakarta (Mitra Market Research )	1	608
+23380	3	Jakarta (Mitra Market Research )	1	608
+23381	3	Jakarta (Mitra Market Research )	1	804
+23382	3	Jakarta (Mitra Market Research )	1	895
+23383	3	Jakarta (Mitra Market Research )	1	833
+23384	3	Jakarta (Mitra Market Research )	1	428
+23385	3	Jakarta (Mitra Market Research )	1	943
+23386	3	Jakarta (Mitra Market Research )	1	182
+23387	3	Jakarta (Mitra Market Research )	1	325
+23388	3	Jakarta (Mitra Market Research )	1	278
+23389	3	Jakarta (Mitra Market Research )	1	488
+23390	3	Jakarta (Mitra Market Research )	1	455
+23391	3	Jakarta (Mitra Market Research )	1	643
+23392	3	Jakarta (Mitra Market Research )	1	743
+23393	3	Jakarta (Mitra Market Research )	1	036
+23394	3	Jakarta (Mitra Market Research )	1	059
+23395	3	Jakarta (Mitra Market Research )	1	945
+23396	3	Jakarta (Mitra Market Research )	1	876
+23397	3	Jakarta (Mitra Market Research )	1	751
+23398	3	Jakarta (Mitra Market Research )	1	922
+23399	3	Jakarta (Mitra Market Research )	1	959
+234	1	Test	2	664
+23400	3	Jakarta (Mitra Market Research )	1	814
+23401	3	Jakarta (Mitra Market Research )	1	776
+23402	3	Jakarta (Mitra Market Research )	1	087
+23403	3	Jakarta (Mitra Market Research )	1	763
+23404	3	Jakarta (Mitra Market Research )	1	103
+23405	3	Jakarta (Mitra Market Research )	1	195
+23406	3	Jakarta (Mitra Market Research )	1	367
+23407	3	Jakarta (Mitra Market Research )	1	888
+23408	3	Jakarta (Mitra Market Research )	1	411
+23409	3	Jakarta (Mitra Market Research )	1	361
+23410	3	Jakarta (Mitra Market Research )	1	032
+23411	3	Jakarta (Mitra Market Research )	1	136
+23412	3	Jakarta (Mitra Market Research )	1	144
+23413	3	Jakarta (Mitra Market Research )	1	467
+23414	3	Jakarta (Mitra Market Research )	1	338
+23415	3	Jakarta (Mitra Market Research )	1	872
+23416	3	Jakarta (Mitra Market Research )	1	403
+23417	3	Jakarta (Mitra Market Research )	1	178
+23418	3	Jakarta (Mitra Market Research )	1	188
+23419	3	Jakarta (Mitra Market Research )	1	377
+23420	3	Jakarta (Mitra Market Research )	1	059
+23421	3	Jakarta (Mitra Market Research )	1	795
+23422	3	Jakarta (Mitra Market Research )	1	619
+23423	3	Jakarta (Mitra Market Research )	1	617
+23424	3	Jakarta (Mitra Market Research )	1	569
+23425	3	Jakarta (Mitra Market Research )	1	108
+23426	3	Jakarta (Mitra Market Research )	1	749
+23427	3	Jakarta (Mitra Market Research )	1	249
+23428	3	Jakarta (Mitra Market Research )	1	824
+23429	3	Jakarta (Mitra Market Research )	1	391
+23430	3	Jakarta (Mitra Market Research )	1	727
+23431	3	Jakarta (Mitra Market Research )	1	111
+23432	3	Jakarta (Mitra Market Research )	1	743
+23433	3	Jakarta (Mitra Market Research )	1	096
+23434	3	Jakarta (Mitra Market Research )	1	417
+23435	3	Jakarta (Mitra Market Research )	1	812
+23436	3	Jakarta (Mitra Market Research )	1	623
+23437	3	Jakarta (Mitra Market Research )	1	795
+23438	3	Jakarta (Mitra Market Research )	1	585
+23439	3	Jakarta (Mitra Market Research )	1	397
+23440	3	Jakarta (Mitra Market Research )	1	829
+23441	3	Jakarta (Mitra Market Research )	1	141
+23442	3	Jakarta (Mitra Market Research )	1	571
+23443	3	Jakarta (Mitra Market Research )	1	141
+23444	3	Jakarta (Mitra Market Research )	1	176
+23445	3	Jakarta (Mitra Market Research )	1	196
+23446	3	Jakarta (Mitra Market Research )	1	354
+23447	3	Jakarta (Mitra Market Research )	1	675
+23448	3	Jakarta (Mitra Market Research )	1	283
+23449	3	Jakarta (Mitra Market Research )	1	243
+23450	3	Jakarta (Mitra Market Research )	1	556
+23451	3	Jakarta (Mitra Market Research )	1	717
+23452	3	Jakarta (Mitra Market Research )	1	072
+23453	3	Jakarta (Mitra Market Research )	1	554
+23454	3	Jakarta (Mitra Market Research )	1	158
+23455	3	Jakarta (Mitra Market Research )	1	485
+23456	3	Jakarta (Mitra Market Research )	1	175
+23457	3	Jakarta (Mitra Market Research )	1	163
+23458	3	Jakarta (Mitra Market Research )	1	264
+23459	3	Jakarta (Mitra Market Research )	1	425
+23460	3	Jakarta (Mitra Market Research )	1	669
+23461	3	Jakarta (Mitra Market Research )	1	998
+23462	3	Jakarta (Mitra Market Research )	1	638
+23463	3	Jakarta (Mitra Market Research )	1	194
+23464	3	Jakarta (Mitra Market Research )	1	783
+23465	3	Jakarta (Mitra Market Research )	1	673
+23466	3	Jakarta (Mitra Market Research )	1	227
+23467	3	Jakarta (Mitra Market Research )	1	672
+23468	3	Jakarta (Mitra Market Research )	1	829
+23469	3	Jakarta (Mitra Market Research )	1	286
+23470	3	Jakarta (Mitra Market Research )	1	545
+23471	3	Jakarta (Mitra Market Research )	1	038
+23472	3	Jakarta (Mitra Market Research )	1	071
+23473	3	Jakarta (Mitra Market Research )	1	152
+23474	3	Jakarta (Mitra Market Research )	1	175
+23475	3	Jakarta (Mitra Market Research )	1	389
+23476	3	Jakarta (Mitra Market Research )	1	466
+23477	3	Jakarta (Mitra Market Research )	1	315
+23478	3	Jakarta (Mitra Market Research )	1	938
+23479	3	Jakarta (Mitra Market Research )	1	618
+23480	3	Jakarta (Mitra Market Research )	1	938
+23481	3	Jakarta (Mitra Market Research )	1	686
+23482	3	Jakarta (Mitra Market Research )	1	428
+23483	3	Jakarta (Mitra Market Research )	1	288
+23484	3	Jakarta (Mitra Market Research )	1	774
+23485	3	Jakarta (Mitra Market Research )	1	533
+23486	3	Jakarta (Mitra Market Research )	1	257
+23487	3	Jakarta (Mitra Market Research )	1	669
+23488	3	Jakarta (Mitra Market Research )	1	933
+23489	3	Jakarta (Mitra Market Research )	1	308
+23490	3	Jakarta (Mitra Market Research )	1	759
+23491	3	Jakarta (Mitra Market Research )	1	012
+23492	3	Jakarta (Mitra Market Research )	1	621
+23493	3	Jakarta (Mitra Market Research )	1	799
+23494	3	Jakarta (Mitra Market Research )	1	377
+23495	3	Jakarta (Mitra Market Research )	1	754
+23496	3	Jakarta (Mitra Market Research )	1	012
+23497	3	Jakarta (Mitra Market Research )	1	928
+23498	3	Jakarta (Mitra Market Research )	1	355
+23499	3	Jakarta (Mitra Market Research )	1	888
+235	1	Test	2	538
+23500	3	Jakarta (Mitra Market Research )	1	097
+23501	3	Jakarta (Mitra Market Research )	1	931
+23502	3	Jakarta (Mitra Market Research )	1	169
+23503	3	Jakarta (Mitra Market Research )	1	862
+23504	3	Jakarta (Mitra Market Research )	1	905
+23505	3	Jakarta (Mitra Market Research )	1	314
+23506	3	Jakarta (Mitra Market Research )	1	983
+23507	3	Jakarta (Mitra Market Research )	1	344
+23508	3	Jakarta (Mitra Market Research )	1	001
+23509	3	Jakarta (Mitra Market Research )	1	738
+23510	3	Jakarta (Mitra Market Research )	1	331
+23511	3	Jakarta (Mitra Market Research )	1	874
+23512	3	Jakarta (Mitra Market Research )	1	757
+23513	3	Jakarta (Mitra Market Research )	1	842
+23514	3	Jakarta (Mitra Market Research )	1	955
+23515	3	Jakarta (Mitra Market Research )	1	151
+23516	3	Jakarta (Mitra Market Research )	1	806
+23517	3	Jakarta (Mitra Market Research )	1	851
+23518	3	Jakarta (Mitra Market Research )	1	784
+23519	3	Jakarta (Mitra Market Research )	1	065
+23520	3	Jakarta (Mitra Market Research )	1	829
+23521	3	Jakarta (Mitra Market Research )	1	782
+23522	3	Jakarta (Mitra Market Research )	1	624
+23523	3	Jakarta (Mitra Market Research )	1	682
+23524	3	Jakarta (Mitra Market Research )	1	961
+23525	3	Jakarta (Mitra Market Research )	1	881
+23526	3	Jakarta (Mitra Market Research )	1	054
+23527	3	Jakarta (Mitra Market Research )	1	589
+23528	3	Jakarta (Mitra Market Research )	1	068
+23529	3	Jakarta (Mitra Market Research )	1	211
+23530	3	Jakarta (Mitra Market Research )	1	357
+23531	3	Jakarta (Mitra Market Research )	1	782
+23532	3	Jakarta (Mitra Market Research )	1	646
+23533	3	Jakarta (Mitra Market Research )	1	519
+23534	3	Jakarta (Mitra Market Research )	1	281
+23535	3	Jakarta (Mitra Market Research )	1	081
+23536	3	Jakarta (Mitra Market Research )	1	094
+23537	3	Jakarta (Mitra Market Research )	1	104
+23538	3	Jakarta (Mitra Market Research )	1	574
+23539	3	Jakarta (Mitra Market Research )	1	224
+23540	3	Jakarta (Mitra Market Research )	1	847
+23541	3	Jakarta (Mitra Market Research )	1	146
+23542	3	Jakarta (Mitra Market Research )	1	585
+23543	3	Jakarta (Mitra Market Research )	1	949
+23544	3	Jakarta (Mitra Market Research )	1	662
+23545	3	Jakarta (Mitra Market Research )	1	528
+23546	3	Jakarta (Mitra Market Research )	1	322
+23547	3	Jakarta (Mitra Market Research )	1	301
+23548	3	Jakarta (Mitra Market Research )	1	198
+23549	3	Jakarta (Mitra Market Research )	1	509
+23550	3	Jakarta (Mitra Market Research )	1	874
+23551	3	Jakarta (Mitra Market Research )	1	384
+23552	3	Jakarta (Mitra Market Research )	1	255
+23553	3	Jakarta (Mitra Market Research )	1	847
+23554	3	Jakarta (Mitra Market Research )	1	524
+23555	3	Jakarta (Mitra Market Research )	1	238
+23556	3	Jakarta (Mitra Market Research )	1	036
+23557	3	Jakarta (Mitra Market Research )	1	106
+23558	3	Jakarta (Mitra Market Research )	1	718
+23559	3	Jakarta (Mitra Market Research )	1	359
+23560	3	Jakarta (Mitra Market Research )	1	606
+23561	3	Jakarta (Mitra Market Research )	1	939
+23562	3	Jakarta (Mitra Market Research )	1	456
+23563	3	Jakarta (Mitra Market Research )	1	032
+23564	3	Jakarta (Mitra Market Research )	1	432
+23565	3	Jakarta (Mitra Market Research )	1	776
+23566	3	Jakarta (Mitra Market Research )	1	484
+23567	3	Jakarta (Mitra Market Research )	1	049
+23568	3	Jakarta (Mitra Market Research )	1	771
+23569	3	Jakarta (Mitra Market Research )	1	132
+23570	3	Jakarta (Mitra Market Research )	1	227
+23571	3	Jakarta (Mitra Market Research )	1	755
+23572	3	Jakarta (Mitra Market Research )	1	531
+23573	3	Jakarta (Mitra Market Research )	1	892
+23574	3	Jakarta (Mitra Market Research )	1	881
+23575	3	Jakarta (Mitra Market Research )	1	266
+23576	3	Jakarta (Mitra Market Research )	1	381
+23577	3	Jakarta (Mitra Market Research )	1	187
+23578	3	Jakarta (Mitra Market Research )	1	777
+23579	3	Jakarta (Mitra Market Research )	1	634
+23580	3	Jakarta (Mitra Market Research )	1	458
+23581	3	Jakarta (Mitra Market Research )	1	484
+23582	3	Jakarta (Mitra Market Research )	1	724
+23583	3	Jakarta (Mitra Market Research )	1	531
+23584	3	Jakarta (Mitra Market Research )	1	929
+23585	3	Jakarta (Mitra Market Research )	1	582
+23586	3	Jakarta (Mitra Market Research )	1	341
+23587	3	Jakarta (Mitra Market Research )	1	801
+23588	3	Jakarta (Mitra Market Research )	1	466
+23589	3	Jakarta (Mitra Market Research )	1	932
+23590	3	Jakarta (Mitra Market Research )	1	199
+23591	3	Jakarta (Mitra Market Research )	1	307
+23592	3	Jakarta (Mitra Market Research )	1	047
+23593	3	Jakarta (Mitra Market Research )	1	554
+23594	3	Jakarta (Mitra Market Research )	1	172
+23595	3	Jakarta (Mitra Market Research )	1	324
+23596	3	Jakarta (Mitra Market Research )	1	446
+23597	3	Jakarta (Mitra Market Research )	1	892
+23598	3	Jakarta (Mitra Market Research )	1	517
+23599	3	Jakarta (Mitra Market Research )	1	463
+236	1	Test	2	807
+23600	3	Jakarta (Mitra Market Research )	1	443
+23601	3	Jakarta (Mitra Market Research )	1	425
+23602	3	Jakarta (Mitra Market Research )	1	851
+23603	3	Jakarta (Mitra Market Research )	1	482
+23604	3	Jakarta (Mitra Market Research )	1	975
+23605	3	Jakarta (Mitra Market Research )	1	536
+23606	3	Jakarta (Mitra Market Research )	1	581
+23607	3	Jakarta (Mitra Market Research )	1	204
+23608	3	Jakarta (Mitra Market Research )	1	007
+23609	3	Jakarta (Mitra Market Research )	1	373
+23610	3	Jakarta (Mitra Market Research )	1	085
+23611	3	Jakarta (Mitra Market Research )	1	833
+23612	3	Jakarta (Mitra Market Research )	1	788
+23613	3	Jakarta (Mitra Market Research )	1	944
+23614	3	Jakarta (Mitra Market Research )	1	094
+23615	3	Jakarta (Mitra Market Research )	1	619
+23616	3	Jakarta (Mitra Market Research )	1	715
+23617	3	Jakarta (Mitra Market Research )	1	869
+23618	3	Jakarta (Mitra Market Research )	1	522
+23619	3	Jakarta (Mitra Market Research )	1	435
+23620	3	Jakarta (Mitra Market Research )	1	472
+23621	3	Jakarta (Mitra Market Research )	1	707
+23622	3	Jakarta (Mitra Market Research )	1	021
+23623	3	Jakarta (Mitra Market Research )	1	269
+23624	3	Jakarta (Mitra Market Research )	1	652
+23625	3	Jakarta (Mitra Market Research )	1	958
+23626	3	Jakarta (Mitra Market Research )	1	499
+23627	3	Jakarta (Mitra Market Research )	1	714
+23628	3	Jakarta (Mitra Market Research )	1	383
+23629	3	Jakarta (Mitra Market Research )	1	756
+23630	3	Jakarta (Mitra Market Research )	1	771
+23631	3	Jakarta (Mitra Market Research )	1	524
+23632	3	Jakarta (Mitra Market Research )	1	288
+23633	3	Jakarta (Mitra Market Research )	1	319
+23634	3	Jakarta (Mitra Market Research )	1	792
+23635	3	Jakarta (Mitra Market Research )	1	943
+23636	3	Jakarta (Mitra Market Research )	1	642
+23637	3	Jakarta (Mitra Market Research )	1	173
+23638	3	Jakarta (Mitra Market Research )	1	021
+23639	3	Jakarta (Mitra Market Research )	1	049
+23640	3	Jakarta (Mitra Market Research )	1	624
+23641	3	Jakarta (Mitra Market Research )	1	404
+23642	3	Jakarta (Mitra Market Research )	1	539
+23643	3	Jakarta (Mitra Market Research )	1	202
+23644	3	Jakarta (Mitra Market Research )	1	659
+23645	3	Jakarta (Mitra Market Research )	1	035
+23646	3	Jakarta (Mitra Market Research )	1	648
+23647	3	Jakarta (Mitra Market Research )	1	744
+23648	3	Jakarta (Mitra Market Research )	1	874
+23649	3	Jakarta (Mitra Market Research )	1	613
+23650	3	Jakarta (Mitra Market Research )	1	259
+23651	3	Jakarta (Mitra Market Research )	1	227
+23652	3	Jakarta (Mitra Market Research )	1	569
+23653	3	Jakarta (Mitra Market Research )	1	907
+23654	3	Jakarta (Mitra Market Research )	1	429
+23655	3	Jakarta (Mitra Market Research )	1	783
+23656	3	Jakarta (Mitra Market Research )	1	013
+23657	3	Jakarta (Mitra Market Research )	1	205
+23658	3	Jakarta (Mitra Market Research )	1	483
+23659	3	Jakarta (Mitra Market Research )	1	229
+23660	3	Jakarta (Mitra Market Research )	1	182
+23661	3	Jakarta (Mitra Market Research )	1	477
+23662	3	Jakarta (Mitra Market Research )	1	426
+23663	3	Jakarta (Mitra Market Research )	1	304
+23664	3	Jakarta (Mitra Market Research )	1	204
+23665	3	Jakarta (Mitra Market Research )	1	004
+23666	3	Jakarta (Mitra Market Research )	1	858
+23667	3	Jakarta (Mitra Market Research )	1	225
+23668	3	Jakarta (Mitra Market Research )	1	296
+23669	3	Jakarta (Mitra Market Research )	1	768
+23670	3	Jakarta (Mitra Market Research )	1	649
+23671	3	Jakarta (Mitra Market Research )	1	625
+23672	3	Jakarta (Mitra Market Research )	1	513
+23673	3	Jakarta (Mitra Market Research )	1	332
+23674	3	Jakarta (Mitra Market Research )	1	288
+23675	3	Jakarta (Mitra Market Research )	1	659
+23676	3	Jakarta (Mitra Market Research )	1	521
+23677	3	Jakarta (Mitra Market Research )	1	186
+23678	3	Jakarta (Mitra Market Research )	1	566
+23679	3	Jakarta (Mitra Market Research )	1	569
+23680	3	Jakarta (Mitra Market Research )	1	844
+23681	3	Jakarta (Mitra Market Research )	1	116
+23682	3	Jakarta (Mitra Market Research )	1	564
+23683	3	Jakarta (Mitra Market Research )	1	343
+23684	3	Jakarta (Mitra Market Research )	1	236
+23685	3	Jakarta (Mitra Market Research )	1	645
+23686	3	Jakarta (Mitra Market Research )	1	652
+23687	3	Jakarta (Mitra Market Research )	1	752
+23688	3	Jakarta (Mitra Market Research )	1	059
+23689	3	Jakarta (Mitra Market Research )	1	917
+23690	3	Jakarta (Mitra Market Research )	1	363
+23691	3	Jakarta (Mitra Market Research )	1	202
+23692	3	Jakarta (Mitra Market Research )	1	264
+23693	3	Jakarta (Mitra Market Research )	1	882
+23694	3	Jakarta (Mitra Market Research )	1	027
+23695	3	Jakarta (Mitra Market Research )	1	634
+23696	3	Jakarta (Mitra Market Research )	1	335
+23697	3	Jakarta (Mitra Market Research )	1	445
+23698	3	Jakarta (Mitra Market Research )	1	988
+23699	3	Jakarta (Mitra Market Research )	1	087
+237	1	Test	2	617
+23700	3	Jakarta (Mitra Market Research )	1	232
+23701	3	Jakarta (Mitra Market Research )	1	419
+23702	3	Jakarta (Mitra Market Research )	1	693
+23703	3	Jakarta (Mitra Market Research )	1	384
+23704	3	Jakarta (Mitra Market Research )	1	306
+23705	3	Jakarta (Mitra Market Research )	1	234
+23706	3	Jakarta (Mitra Market Research )	1	578
+23707	3	Jakarta (Mitra Market Research )	1	889
+23708	3	Jakarta (Mitra Market Research )	1	061
+23709	3	Jakarta (Mitra Market Research )	1	491
+23710	3	Jakarta (Mitra Market Research )	1	221
+23711	3	Jakarta (Mitra Market Research )	1	135
+23712	3	Jakarta (Mitra Market Research )	1	062
+23713	3	Jakarta (Mitra Market Research )	1	336
+23714	3	Jakarta (Mitra Market Research )	1	825
+23715	3	Jakarta (Mitra Market Research )	1	803
+23716	3	Jakarta (Mitra Market Research )	1	074
+23717	3	Jakarta (Mitra Market Research )	1	874
+23718	3	Jakarta (Mitra Market Research )	1	397
+23719	3	Jakarta (Mitra Market Research )	1	421
+23720	3	Jakarta (Mitra Market Research )	1	008
+23721	3	Jakarta (Mitra Market Research )	1	685
+23722	3	Jakarta (Mitra Market Research )	1	594
+23723	3	Jakarta (Mitra Market Research )	1	403
+23724	3	Jakarta (Mitra Market Research )	1	362
+23725	3	Jakarta (Mitra Market Research )	1	424
+23726	3	Jakarta (Mitra Market Research )	1	734
+23727	3	Jakarta (Mitra Market Research )	1	186
+23728	3	Jakarta (Mitra Market Research )	1	502
+23729	3	Jakarta (Mitra Market Research )	1	422
+23730	3	Jakarta (Mitra Market Research )	1	921
+23731	3	Jakarta (Mitra Market Research )	1	107
+23732	3	Jakarta (Mitra Market Research )	1	637
+23733	3	Jakarta (Mitra Market Research )	1	836
+23734	3	Jakarta (Mitra Market Research )	1	063
+23735	3	Jakarta (Mitra Market Research )	1	066
+23736	3	Jakarta (Mitra Market Research )	1	436
+23737	3	Jakarta (Mitra Market Research )	1	454
+23738	3	Jakarta (Mitra Market Research )	1	186
+23739	3	Jakarta (Mitra Market Research )	1	771
+23740	3	Jakarta (Mitra Market Research )	1	403
+23741	3	Jakarta (Mitra Market Research )	1	153
+23742	3	Jakarta (Mitra Market Research )	1	137
+23743	3	Jakarta (Mitra Market Research )	1	509
+23744	3	Jakarta (Mitra Market Research )	1	968
+23745	3	Jakarta (Mitra Market Research )	1	448
+23746	3	Jakarta (Mitra Market Research )	1	383
+23747	3	Jakarta (Mitra Market Research )	1	233
+23748	3	Jakarta (Mitra Market Research )	1	468
+23749	3	Jakarta (Mitra Market Research )	1	136
+23750	3	Jakarta (Mitra Market Research )	1	651
+23751	3	Jakarta (Mitra Market Research )	1	633
+23752	3	Jakarta (Mitra Market Research )	1	233
+23753	3	Jakarta (Mitra Market Research )	1	308
+23754	3	Jakarta (Mitra Market Research )	1	754
+23755	3	Jakarta (Mitra Market Research )	1	904
+23756	3	Jakarta (Mitra Market Research )	1	382
+23757	3	Jakarta (Mitra Market Research )	1	056
+23758	3	Jakarta (Mitra Market Research )	1	313
+23759	3	Jakarta (Mitra Market Research )	1	853
+23760	3	Jakarta (Mitra Market Research )	1	407
+23761	3	Jakarta (Mitra Market Research )	1	847
+23762	3	Jakarta (Mitra Market Research )	1	076
+23763	3	Jakarta (Mitra Market Research )	1	218
+23764	3	Jakarta (Mitra Market Research )	1	844
+23765	3	Jakarta (Mitra Market Research )	1	579
+23766	3	Jakarta (Mitra Market Research )	1	054
+23767	3	Jakarta (Mitra Market Research )	1	667
+23768	3	Jakarta (Mitra Market Research )	1	076
+23769	3	Jakarta (Mitra Market Research )	1	688
+23770	3	Jakarta (Mitra Market Research )	1	509
+23771	3	Jakarta (Mitra Market Research )	1	063
+23772	3	Jakarta (Mitra Market Research )	1	429
+23773	3	Jakarta (Mitra Market Research )	1	039
+23774	3	Jakarta (Mitra Market Research )	1	424
+23775	3	Jakarta (Mitra Market Research )	1	386
+23776	3	Jakarta (Mitra Market Research )	1	914
+23777	3	Jakarta (Mitra Market Research )	1	443
+23778	3	Jakarta (Mitra Market Research )	1	571
+23779	3	Jakarta (Mitra Market Research )	1	923
+23780	3	Jakarta (Mitra Market Research )	1	047
+23781	3	Jakarta (Mitra Market Research )	1	695
+23782	3	Jakarta (Mitra Market Research )	1	517
+23783	3	Jakarta (Mitra Market Research )	1	469
+23784	3	Jakarta (Mitra Market Research )	1	822
+23785	3	Jakarta (Mitra Market Research )	1	264
+23786	3	Jakarta (Mitra Market Research )	1	323
+23787	3	Jakarta (Mitra Market Research )	1	387
+23788	3	Jakarta (Mitra Market Research )	1	278
+23789	3	Jakarta (Mitra Market Research )	1	853
+23790	3	Jakarta (Mitra Market Research )	1	561
+23791	3	Jakarta (Mitra Market Research )	1	583
+23792	3	Jakarta (Mitra Market Research )	1	206
+23793	3	Jakarta (Mitra Market Research )	1	022
+23794	3	Jakarta (Mitra Market Research )	1	896
+23795	3	Jakarta (Mitra Market Research )	1	226
+23796	3	Jakarta (Mitra Market Research )	1	986
+23797	3	Jakarta (Mitra Market Research )	1	089
+23798	3	Jakarta (Mitra Market Research )	1	166
+23799	3	Jakarta (Mitra Market Research )	1	663
+238	1	Test	2	546
+23800	3	Jakarta (Mitra Market Research )	1	974
+23801	3	Jakarta (Mitra Market Research )	1	333
+23802	3	Jakarta (Mitra Market Research )	1	396
+23803	3	Jakarta (Mitra Market Research )	1	308
+23804	3	Jakarta (Mitra Market Research )	1	468
+23805	3	Jakarta (Mitra Market Research )	1	879
+23806	3	Jakarta (Mitra Market Research )	1	406
+23807	3	Jakarta (Mitra Market Research )	1	765
+23808	3	Jakarta (Mitra Market Research )	1	329
+23809	3	Jakarta (Mitra Market Research )	1	177
+23810	3	Jakarta (Mitra Market Research )	1	692
+23811	3	Jakarta (Mitra Market Research )	1	871
+23812	3	Jakarta (Mitra Market Research )	1	886
+23813	3	Jakarta (Mitra Market Research )	1	321
+23814	3	Jakarta (Mitra Market Research )	1	481
+23815	3	Jakarta (Mitra Market Research )	1	108
+23816	3	Jakarta (Mitra Market Research )	1	135
+23817	3	Jakarta (Mitra Market Research )	1	376
+23818	3	Jakarta (Mitra Market Research )	1	474
+23819	3	Jakarta (Mitra Market Research )	1	379
+23820	3	Jakarta (Mitra Market Research )	1	501
+23821	3	Jakarta (Mitra Market Research )	1	801
+23822	3	Jakarta (Mitra Market Research )	1	138
+23823	3	Jakarta (Mitra Market Research )	1	955
+23824	3	Jakarta (Mitra Market Research )	1	328
+23825	3	Jakarta (Mitra Market Research )	1	457
+23826	3	Jakarta (Mitra Market Research )	1	009
+23827	3	Jakarta (Mitra Market Research )	1	855
+23828	3	Jakarta (Mitra Market Research )	1	306
+23829	3	Jakarta (Mitra Market Research )	1	937
+23830	3	Jakarta (Mitra Market Research )	1	524
+23831	3	Jakarta (Mitra Market Research )	1	797
+23832	3	Jakarta (Mitra Market Research )	1	787
+23833	3	Jakarta (Mitra Market Research )	1	261
+23834	3	Jakarta (Mitra Market Research )	1	416
+23835	3	Jakarta (Mitra Market Research )	1	221
+23836	3	Jakarta (Mitra Market Research )	1	707
+23837	3	Jakarta (Mitra Market Research )	1	106
+23838	3	Jakarta (Mitra Market Research )	1	688
+23839	3	Jakarta (Mitra Market Research )	1	053
+23840	3	Jakarta (Mitra Market Research )	1	685
+23841	3	Jakarta (Mitra Market Research )	1	504
+23842	3	Jakarta (Mitra Market Research )	1	581
+23843	3	Jakarta (Mitra Market Research )	1	439
+23844	3	Jakarta (Mitra Market Research )	1	068
+23845	3	Jakarta (Mitra Market Research )	1	056
+23846	3	Jakarta (Mitra Market Research )	1	682
+23847	3	Jakarta (Mitra Market Research )	1	421
+23848	3	Jakarta (Mitra Market Research )	1	-05
+23849	3	Jakarta (Mitra Market Research )	1	953
+23850	3	Jakarta (Mitra Market Research )	1	882
+23851	3	Jakarta (Mitra Market Research )	1	346
+23852	3	Jakarta (Mitra Market Research )	1	227
+23853	3	Jakarta (Mitra Market Research )	1	318
+23854	3	Jakarta (Mitra Market Research )	1	305
+23855	3	Jakarta (Mitra Market Research )	1	858
+23856	3	Jakarta (Mitra Market Research )	1	296
+23857	3	Jakarta (Mitra Market Research )	1	699
+23858	3	Jakarta (Mitra Market Research )	1	271
+23859	3	Jakarta (Mitra Market Research )	1	219
+23860	3	Jakarta (Mitra Market Research )	1	642
+23861	3	Jakarta (Mitra Market Research )	1	126
+23862	3	Jakarta (Mitra Market Research )	1	725
+23863	3	Jakarta (Mitra Market Research )	1	647
+23864	3	Jakarta (Mitra Market Research )	1	098
+23865	3	Jakarta (Mitra Market Research )	1	098
+23866	3	Jakarta (Mitra Market Research )	1	955
+23867	3	Jakarta (Mitra Market Research )	1	314
+23868	3	Jakarta (Mitra Market Research )	1	172
+23869	3	Jakarta (Mitra Market Research )	1	837
+23870	3	Jakarta (Mitra Market Research )	1	849
+23871	3	Jakarta (Mitra Market Research )	1	878
+23872	3	Jakarta (Mitra Market Research )	1	167
+23873	3	Jakarta (Mitra Market Research )	1	958
+23874	3	Jakarta (Mitra Market Research )	1	581
+23875	3	Jakarta (Mitra Market Research )	1	972
+23876	3	Jakarta (Mitra Market Research )	1	801
+23877	3	Jakarta (Mitra Market Research )	1	457
+23878	3	Jakarta (Mitra Market Research )	1	137
+23879	3	Jakarta (Mitra Market Research )	1	306
+23880	3	Jakarta (Mitra Market Research )	1	948
+23881	3	Jakarta (Mitra Market Research )	1	278
+23882	3	Jakarta (Mitra Market Research )	1	953
+23883	3	Jakarta (Mitra Market Research )	1	038
+23884	3	Jakarta (Mitra Market Research )	1	942
+23885	3	Jakarta (Mitra Market Research )	1	268
+23886	3	Jakarta (Mitra Market Research )	1	454
+23887	3	Jakarta (Mitra Market Research )	1	958
+23888	3	Jakarta (Mitra Market Research )	1	603
+23889	3	Jakarta (Mitra Market Research )	1	262
+23890	3	Jakarta (Mitra Market Research )	1	452
+23891	3	Jakarta (Mitra Market Research )	1	991
+23892	3	Jakarta (Mitra Market Research )	1	824
+23893	3	Jakarta (Mitra Market Research )	1	859
+23894	3	Jakarta (Mitra Market Research )	1	771
+23895	3	Jakarta (Mitra Market Research )	1	847
+23896	3	Jakarta (Mitra Market Research )	1	185
+23897	3	Jakarta (Mitra Market Research )	1	291
+23898	3	Jakarta (Mitra Market Research )	1	795
+23899	3	Jakarta (Mitra Market Research )	1	409
+239	1	Test	2	967
+23900	3	Jakarta (Mitra Market Research )	1	181
+23901	3	Jakarta (Mitra Market Research )	1	428
+23902	3	Jakarta (Mitra Market Research )	1	422
+23903	3	Jakarta (Mitra Market Research )	1	622
+23904	3	Jakarta (Mitra Market Research )	1	725
+23905	3	Jakarta (Mitra Market Research )	1	758
+23906	3	Jakarta (Mitra Market Research )	1	747
+23907	3	Jakarta (Mitra Market Research )	1	084
+23908	3	Jakarta (Mitra Market Research )	1	222
+23909	3	Jakarta (Mitra Market Research )	1	779
+23910	3	Jakarta (Mitra Market Research )	1	542
+23911	3	Jakarta (Mitra Market Research )	1	824
+23912	3	Jakarta (Mitra Market Research )	1	284
+23913	3	Jakarta (Mitra Market Research )	1	175
+23914	3	Jakarta (Mitra Market Research )	1	569
+23915	3	Jakarta (Mitra Market Research )	1	052
+23916	3	Jakarta (Mitra Market Research )	1	952
+23917	3	Jakarta (Mitra Market Research )	1	298
+23918	3	Jakarta (Mitra Market Research )	1	827
+23919	3	Jakarta (Mitra Market Research )	1	997
+23920	3	Jakarta (Mitra Market Research )	1	817
+23921	3	Jakarta (Mitra Market Research )	1	941
+23922	3	Jakarta (Mitra Market Research )	1	188
+23923	3	Jakarta (Mitra Market Research )	1	489
+23924	3	Jakarta (Mitra Market Research )	1	863
+23925	3	Jakarta (Mitra Market Research )	1	393
+23926	3	Jakarta (Mitra Market Research )	1	187
+23927	3	Jakarta (Mitra Market Research )	1	389
+23928	3	Jakarta (Mitra Market Research )	1	646
+23929	3	Jakarta (Mitra Market Research )	1	407
+23930	3	Jakarta (Mitra Market Research )	1	193
+23931	3	Jakarta (Mitra Market Research )	1	957
+23932	3	Jakarta (Mitra Market Research )	1	762
+23933	3	Jakarta (Mitra Market Research )	1	006
+23934	3	Jakarta (Mitra Market Research )	1	818
+23935	3	Jakarta (Mitra Market Research )	1	236
+23936	3	Jakarta (Mitra Market Research )	1	236
+23937	3	Jakarta (Mitra Market Research )	1	946
+23938	3	Jakarta (Mitra Market Research )	1	394
+23939	3	Jakarta (Mitra Market Research )	1	955
+23940	3	Jakarta (Mitra Market Research )	1	908
+23941	3	Jakarta (Mitra Market Research )	1	709
+23942	3	Jakarta (Mitra Market Research )	1	107
+23943	3	Jakarta (Mitra Market Research )	1	282
+23944	3	Jakarta (Mitra Market Research )	1	645
+23945	3	Jakarta (Mitra Market Research )	1	495
+23946	3	Jakarta (Mitra Market Research )	1	162
+23947	3	Jakarta (Mitra Market Research )	1	094
+23948	3	Jakarta (Mitra Market Research )	1	836
+23949	3	Jakarta (Mitra Market Research )	1	287
+23950	3	Jakarta (Mitra Market Research )	1	575
+23951	3	Jakarta (Mitra Market Research )	1	731
+23952	3	Jakarta (Mitra Market Research )	1	744
+23953	3	Jakarta (Mitra Market Research )	1	986
+23954	3	Jakarta (Mitra Market Research )	1	419
+23955	3	Jakarta (Mitra Market Research )	1	723
+23956	3	Jakarta (Mitra Market Research )	1	072
+23957	3	Jakarta (Mitra Market Research )	1	863
+23958	3	Jakarta (Mitra Market Research )	1	535
+23959	3	Jakarta (Mitra Market Research )	1	636
+23960	3	Jakarta (Mitra Market Research )	1	756
+23961	3	Jakarta (Mitra Market Research )	1	793
+23962	3	Jakarta (Mitra Market Research )	1	146
+23963	3	Jakarta (Mitra Market Research )	1	934
+23964	3	Jakarta (Mitra Market Research )	1	211
+23965	3	Jakarta (Mitra Market Research )	1	588
+23966	3	Jakarta (Mitra Market Research )	1	557
+23967	3	Jakarta (Mitra Market Research )	1	543
+23968	3	Jakarta (Mitra Market Research )	1	906
+23969	3	Jakarta (Mitra Market Research )	1	351
+23970	3	Jakarta (Mitra Market Research )	1	736
+23971	3	Jakarta (Mitra Market Research )	1	905
+23972	3	Jakarta (Mitra Market Research )	1	254
+23973	3	Jakarta (Mitra Market Research )	1	875
+23974	3	Jakarta (Mitra Market Research )	1	327
+23975	3	Jakarta (Mitra Market Research )	1	127
+23976	3	Jakarta (Mitra Market Research )	1	336
+23977	3	Jakarta (Mitra Market Research )	1	956
+23978	3	Jakarta (Mitra Market Research )	1	594
+23979	3	Jakarta (Mitra Market Research )	1	408
+23980	3	Jakarta (Mitra Market Research )	1	611
+23981	3	Jakarta (Mitra Market Research )	1	659
+23982	3	Jakarta (Mitra Market Research )	1	591
+23983	3	Jakarta (Mitra Market Research )	1	398
+23984	3	Jakarta (Mitra Market Research )	1	896
+23985	3	Jakarta (Mitra Market Research )	1	162
+23986	3	Jakarta (Mitra Market Research )	1	046
+23987	3	Jakarta (Mitra Market Research )	1	029
+23988	3	Jakarta (Mitra Market Research )	1	198
+23989	3	Jakarta (Mitra Market Research )	1	867
+23990	3	Jakarta (Mitra Market Research )	1	143
+23991	3	Jakarta (Mitra Market Research )	1	663
+23992	3	Jakarta (Mitra Market Research )	1	914
+23993	3	Jakarta (Mitra Market Research )	1	536
+23994	3	Jakarta (Mitra Market Research )	1	818
+23995	3	Jakarta (Mitra Market Research )	1	615
+23996	3	Jakarta (Mitra Market Research )	1	045
+23997	3	Jakarta (Mitra Market Research )	1	169
+23998	3	Jakarta (Mitra Market Research )	1	326
+23999	3	Jakarta (Mitra Market Research )	1	901
+240	1	Test	2	921
+241	1	Test	2	496
+242	1	Test	2	943
+243	1	Test	2	391
+244	1	Test	2	569
+245	1	Test	2	111
+246	1	Test	2	868
+247	1	Test	2	604
+248	1	Test	2	639
+249	1	Test	2	303
+250	1	Test	2	582
+251	1	Test	2	788
+252	1	Test	2	042
+253	1	Test	2	419
+254	1	Test	2	414
+255	1	Test	2	866
+256	1	Test	2	491
+257	1	Test	2	598
+258	1	Test	2	098
+259	1	Test	2	176
+260	1	Test	2	346
+261	1	Test	2	274
+262	1	Test	2	221
+263	1	Test	2	551
+264	1	Test	2	049
+265	1	Test	2	034
+266	1	Test	2	889
+267	1	Test	2	271
+268	1	Test	2	855
+269	1	Test	2	396
+270	1	Test	2	501
+271	1	Test	2	388
+272	1	Test	2	317
+273	1	Test	2	111
+274	1	Test	2	965
+275	1	Test	2	861
+276	1	Test	2	509
+277	1	Test	2	961
+278	1	Test	2	542
+279	1	Test	2	878
+280	1	Test	2	191
+281	1	Test	2	071
+282	1	Test	2	375
+283	1	Test	2	939
+284	1	Test	2	109
+285	1	Test	2	048
+286	1	Test	2	635
+287	1	Test	2	733
+288	1	Test	2	026
+289	1	Test	2	908
+290	1	Test	2	015
+291	1	Test	2	487
+292	1	Test	2	682
+293	1	Test	2	992
+294	1	Test	2	575
+295	1	Test	2	776
+296	1	Test	2	363
+297	1	Test	2	936
+298	1	Test	2	903
+299	1	Test	2	048
+300	1	Test	2	036
+301	1	Test	2	742
+302	1	Test	2	402
+303	1	Test	2	764
+304	1	Test	2	656
+305	1	Test	2	827
+306	1	Test	2	043
+307	1	Test	2	682
+308	1	Test	2	244
+309	1	Test	2	983
+310	1	Test	2	806
+311	1	Test	2	659
+312	1	Test	2	255
+313	1	Test	2	468
+314	1	Test	2	158
+315	1	Test	2	542
+316	1	Test	2	979
+317	1	Test	2	884
+318	1	Test	2	732
+319	1	Test	2	324
+320	1	Test	2	954
+321	1	Test	2	806
+322	1	Test	2	866
+323	1	Test	2	582
+324	1	Test	2	341
+325	1	Test	2	331
+326	1	Test	2	043
+327	1	Test	2	486
+328	1	Test	2	496
+329	1	Test	2	774
+330	1	Test	2	343
+331	1	Test	2	408
+332	1	Test	2	083
+333	1	Test	2	894
+334	1	Test	2	394
+335	1	Test	2	853
+336	1	Test	2	759
+337	1	Test	2	748
+338	1	Test	2	434
+339	1	Test	2	283
+340	1	Test	2	814
+341	1	Test	2	645
+342	1	Test	2	343
+343	1	Test	2	184
+344	1	Test	2	294
+345	1	Test	2	241
+346	1	Test	2	001
+347	1	Test	2	979
+348	1	Test	2	053
+349	1	Test	2	477
+350	1	Test	2	182
+351	1	Test	2	385
+352	1	Test	2	194
+353	1	Test	2	447
+354	1	Test	2	787
+355	1	Test	2	713
+356	1	Test	2	496
+357	1	Test	2	445
+358	1	Test	2	723
+359	1	Test	2	556
+360	1	Test	2	365
+361	1	Test	2	229
+362	1	Test	2	523
+363	1	Test	2	327
+364	1	Test	2	391
+365	1	Test	2	126
+366	1	Test	2	253
+367	1	Test	2	487
+368	1	Test	2	305
+369	1	Test	2	737
+370	1	Test	2	758
+371	1	Test	2	893
+372	1	Test	2	557
+373	1	Test	2	636
+374	1	Test	2	613
+375	1	Test	2	657
+376	1	Test	2	685
+377	1	Test	2	538
+378	1	Test	2	729
+379	1	Test	2	136
+380	1	Test	2	087
+381	1	Test	2	717
+382	1	Test	2	236
+383	1	Test	2	806
+384	1	Test	2	971
+385	1	Test	2	728
+386	1	Test	2	899
+387	1	Test	2	142
+388	1	Test	2	856
+389	1	Test	2	387
+390	1	Test	2	819
+391	1	Test	2	058
+392	1	Test	2	302
+393	1	Test	2	294
+394	1	Test	2	835
+395	1	Test	2	324
+396	1	Test	2	609
+397	1	Test	2	688
+398	1	Test	2	258
+399	1	Test	2	299
+400	1	Test	2	271
+401	1	Test	2	193
+402	1	Test	2	749
+403	1	Test	2	346
+404	1	Test	2	417
+405	1	Test	2	189
+406	1	Test	2	653
+407	1	Test	2	325
+408	1	Test	2	691
+409	1	Test	2	258
+410	1	Test	2	587
+411	1	Test	2	084
+412	1	Test	2	558
+413	1	Test	2	393
+414	1	Test	2	259
+415	1	Test	2	464
+416	1	Test	2	934
+417	1	Test	2	492
+418	1	Test	2	275
+419	1	Test	2	943
+420	1	Test	2	416
+421	1	Test	2	086
+422	1	Test	2	794
+423	1	Test	2	881
+424	1	Test	2	587
+425	1	Test	2	121
+426	1	Test	2	602
+427	1	Test	2	684
+428	1	Test	2	071
+429	1	Test	2	308
+430	1	Test	2	968
+431	1	Test	2	667
+432	1	Test	2	107
+433	1	Test	2	818
+434	1	Test	2	774
+435	1	Test	2	152
+436	1	Test	2	907
+437	1	Test	2	218
+438	1	Test	2	321
+439	1	Test	2	105
+440	1	Test	2	786
+441	1	Test	2	205
+442	1	Test	2	229
+443	1	Test	2	785
+444	1	Test	2	644
+445	1	Test	2	998
+446	1	Test	2	569
+447	1	Test	2	062
+448	1	Test	2	955
+449	1	Test	2	939
+450	1	Test	2	319
+451	1	Test	2	288
+452	1	Test	2	149
+453	1	Test	2	895
+454	1	Test	2	108
+455	1	Test	2	224
+456	1	Test	2	572
+457	1	Test	2	764
+458	1	Test	2	358
+459	1	Test	2	246
+460	1	Test	2	547
+461	1	Test	2	055
+462	1	Test	2	426
+463	1	Test	2	892
+464	1	Test	2	607
+465	1	Test	2	199
+466	1	Test	2	531
+467	1	Test	2	131
+468	1	Test	2	703
+469	1	Test	2	104
+470	1	Test	2	492
+471	1	Test	2	588
+472	1	Test	2	048
+473	1	Test	2	366
+474	1	Test	2	808
+475	1	Test	2	808
+476	1	Test	2	235
+477	1	Test	2	743
+478	1	Test	2	571
+479	1	Test	2	431
+480	1	Test	2	222
+481	1	Test	2	045
+482	1	Test	2	095
+483	1	Test	2	092
+484	1	Test	2	316
+485	1	Test	2	555
+486	1	Test	2	741
+487	1	Test	2	101
+488	1	Test	2	405
+489	1	Test	2	242
+490	1	Test	2	251
+491	1	Test	2	293
+492	1	Test	2	075
+493	1	Test	2	711
+494	1	Test	2	168
+495	1	Test	2	148
+496	1	Test	2	224
+497	1	Test	2	042
+498	1	Test	2	241
+499	1	Test	2	808
+500	1	Test	2	195
+501	1	Test	2	082
+502	1	Test	2	196
+503	1	Test	2	516
+504	1	Test	2	482
+505	1	Test	2	074
+506	1	Test	2	419
+507	1	Test	2	656
+508	1	Test	2	673
+509	1	Test	2	657
+510	1	Test	2	376
+511	1	Test	2	447
+512	1	Test	2	108
+513	1	Test	2	717
+514	1	Test	2	936
+515	1	Test	2	581
+516	1	Test	2	564
+517	1	Test	2	109
+518	1	Test	2	228
+519	1	Test	2	692
+520	1	Test	2	955
+521	1	Test	2	479
+522	1	Test	2	575
+523	1	Test	2	327
+524	1	Test	2	343
+525	1	Test	2	804
+526	1	Test	2	925
+527	1	Test	2	472
+528	1	Test	2	592
+529	1	Test	2	612
+530	1	Test	2	648
+531	1	Test	2	687
+532	1	Test	2	979
+533	1	Test	2	085
+534	1	Test	2	884
+535	1	Test	2	709
+536	1	Test	2	803
+537	1	Test	2	691
+538	1	Test	2	933
+539	1	Test	2	082
+540	1	Test	2	392
+541	1	Test	2	829
+542	1	Test	2	333
+543	1	Test	2	826
+544	1	Test	2	145
+545	1	Test	2	005
+546	1	Test	2	952
+547	1	Test	2	199
+548	1	Test	2	512
+549	1	Test	2	719
+550	1	Test	2	184
+551	1	Test	2	802
+552	1	Test	2	752
+553	1	Test	2	245
+554	1	Test	2	063
+555	1	Test	2	838
+556	1	Test	2	877
+557	1	Test	2	235
+558	1	Test	2	736
+559	1	Test	2	877
+560	1	Test	2	791
+561	1	Test	2	023
+562	1	Test	2	333
+563	1	Test	2	637
+564	1	Test	2	365
+565	1	Test	2	271
+566	1	Test	2	361
+567	1	Test	2	494
+568	1	Test	2	979
+569	1	Test	2	695
+570	1	Test	2	739
+571	1	Test	2	528
+572	1	Test	2	119
+573	1	Test	2	957
+574	1	Test	2	312
+575	1	Test	2	964
+576	1	Test	2	777
+577	1	Test	2	082
+578	1	Test	2	124
+579	1	Test	2	126
+580	1	Test	2	933
+581	1	Test	2	705
+582	1	Test	2	679
+583	1	Test	2	841
+584	1	Test	2	333
+585	1	Test	2	775
+586	1	Test	2	971
+587	1	Test	2	036
+588	1	Test	2	481
+589	1	Test	2	309
+590	1	Test	2	128
+591	1	Test	2	359
+592	1	Test	2	946
+593	1	Test	2	921
+594	1	Test	2	205
+595	1	Test	2	177
+596	1	Test	2	885
+597	1	Test	2	122
+598	1	Test	2	991
+599	1	Test	2	252
+600	1	Test	2	706
+601	1	Test	2	144
+602	1	Test	2	049
+603	1	Test	2	908
+604	1	Test	2	655
+605	1	Test	2	552
+606	1	Test	2	932
+607	1	Test	2	843
+608	1	Test	2	072
+609	1	Test	2	643
+610	1	Test	2	459
+611	1	Test	2	608
+612	1	Test	2	385
+613	1	Test	2	204
+614	1	Test	2	304
+615	1	Test	2	361
+616	1	Test	2	851
+617	1	Test	2	123
+618	1	Test	2	931
+619	1	Test	2	097
+620	1	Test	2	029
+621	1	Test	2	939
+622	1	Test	2	993
+623	1	Test	2	701
+624	1	Test	2	811
+625	1	Test	2	228
+626	1	Test	2	631
+627	1	Test	2	523
+628	1	Test	2	444
+629	1	Test	2	298
+630	1	Test	2	387
+631	1	Test	2	388
+632	1	Test	2	476
+633	1	Test	2	745
+634	1	Test	2	792
+635	1	Test	2	069
+636	1	Test	2	945
+637	1	Test	2	053
+638	1	Test	2	252
+639	1	Test	2	134
+640	1	Test	2	848
+641	1	Test	2	705
+642	1	Test	2	146
+643	1	Test	2	161
+644	1	Test	2	825
+645	1	Test	2	878
+646	1	Test	2	208
+647	1	Test	2	194
+648	1	Test	2	552
+649	1	Test	2	701
+650	1	Test	2	158
+651	1	Test	2	377
+652	1	Test	2	977
+653	1	Test	2	397
+654	1	Test	2	319
+655	1	Test	2	747
+656	1	Test	2	615
+657	1	Test	2	271
+658	1	Test	2	141
+659	1	Test	2	741
+660	1	Test	2	584
+661	1	Test	2	387
+662	1	Test	2	216
+663	1	Test	2	572
+664	1	Test	2	109
+665	1	Test	2	621
+666	1	Test	2	137
+667	1	Test	2	897
+668	1	Test	2	896
+669	1	Test	2	675
+670	1	Test	2	255
+671	1	Test	2	172
+672	1	Test	2	462
+673	1	Test	2	618
+674	1	Test	2	416
+675	1	Test	2	319
+676	1	Test	2	967
+677	1	Test	2	526
+678	1	Test	2	532
+679	1	Test	2	023
+680	1	Test	2	938
+681	1	Test	2	644
+682	1	Test	2	509
+683	1	Test	2	151
+684	1	Test	2	058
+685	1	Test	2	243
+686	1	Test	2	995
+687	1	Test	2	654
+688	1	Test	2	682
+689	1	Test	2	092
+690	1	Test	2	537
+691	1	Test	2	884
+692	1	Test	2	425
+693	1	Test	2	845
+694	1	Test	2	845
+695	1	Test	2	259
+696	1	Test	2	602
+697	1	Test	2	734
+698	1	Test	2	992
+699	1	Test	2	922
+700	1	Test	2	386
+701	1	Test	2	726
+702	1	Test	2	993
+703	1	Test	2	882
+704	1	Test	2	948
+705	1	Test	2	133
+706	1	Test	2	138
+707	1	Test	2	971
+708	1	Test	2	385
+709	1	Test	2	343
+710	1	Test	2	937
+711	1	Test	2	112
+712	1	Test	2	097
+713	1	Test	2	971
+714	1	Test	2	489
+715	1	Test	2	777
+716	1	Test	2	876
+717	1	Test	2	655
+718	1	Test	2	861
+719	1	Test	2	605
+720	1	Test	2	746
+721	1	Test	2	135
+722	1	Test	2	094
+723	1	Test	2	913
+724	1	Test	2	842
+725	1	Test	2	187
+726	1	Test	2	984
+727	1	Test	2	693
+728	1	Test	2	786
+729	1	Test	2	974
+730	1	Test	2	204
+731	1	Test	2	912
+732	1	Test	2	819
+733	1	Test	2	763
+734	1	Test	2	435
+735	1	Test	2	933
+736	1	Test	2	113
+737	1	Test	2	767
+738	1	Test	2	686
+739	1	Test	2	551
+740	1	Test	2	953
+741	1	Test	2	112
+742	1	Test	2	582
+743	1	Test	2	735
+744	1	Test	2	299
+745	1	Test	2	827
+746	1	Test	2	778
+747	1	Test	2	406
+748	1	Test	2	706
+749	1	Test	2	903
+750	1	Test	2	183
+751	1	Test	2	499
+752	1	Test	2	119
+753	1	Test	2	148
+754	1	Test	2	124
+755	1	Test	2	025
+756	1	Test	2	632
+757	1	Test	2	294
+758	1	Test	2	733
+759	1	Test	2	496
+760	1	Test	2	166
+761	1	Test	2	405
+762	1	Test	2	688
+763	1	Test	2	395
+764	1	Test	2	207
+765	1	Test	2	867
+766	1	Test	2	303
+767	1	Test	2	198
+768	1	Test	2	127
+769	1	Test	2	359
+770	1	Test	2	211
+771	1	Test	2	673
+772	1	Test	2	922
+773	1	Test	2	619
+774	1	Test	2	025
+775	1	Test	2	139
+776	1	Test	2	752
+777	1	Test	2	916
+778	1	Test	2	117
+779	1	Test	2	212
+780	1	Test	2	483
+781	1	Test	2	193
+782	1	Test	2	843
+783	1	Test	2	316
+784	1	Test	2	547
+785	1	Test	2	107
+786	1	Test	2	053
+787	1	Test	2	751
+788	1	Test	2	488
+789	1	Test	2	463
+790	1	Test	2	073
+791	1	Test	2	439
+792	1	Test	2	644
+793	1	Test	2	967
+794	1	Test	2	887
+795	1	Test	2	165
+796	1	Test	2	122
+797	1	Test	2	219
+798	1	Test	2	182
+799	1	Test	2	814
+800	1	Test	2	169
+801	1	Test	2	796
+802	1	Test	2	249
+803	1	Test	2	027
+804	1	Test	2	675
+805	1	Test	2	776
+806	1	Test	2	224
+807	1	Test	2	665
+808	1	Test	2	155
+809	1	Test	2	373
+810	1	Test	2	248
+811	1	Test	2	419
+812	1	Test	2	217
+813	1	Test	2	033
+814	1	Test	2	582
+815	1	Test	2	809
+816	1	Test	2	876
+817	1	Test	2	377
+818	1	Test	2	518
+819	1	Test	2	374
+820	1	Test	2	199
+821	1	Test	2	286
+822	1	Test	2	214
+823	1	Test	2	316
+824	1	Test	2	243
+825	1	Test	2	583
+826	1	Test	2	114
+827	1	Test	2	523
+828	1	Test	2	462
+829	1	Test	2	785
+830	1	Test	2	196
+831	1	Test	2	163
+832	1	Test	2	685
+833	1	Test	2	062
+834	1	Test	2	847
+835	1	Test	2	055
+836	1	Test	2	954
+837	1	Test	2	191
+838	1	Test	2	677
+839	1	Test	2	033
+840	1	Test	2	325
+841	1	Test	2	672
+842	1	Test	2	706
+843	1	Test	2	191
+844	1	Test	2	567
+845	1	Test	2	005
+846	1	Test	2	557
+847	1	Test	2	933
+848	1	Test	2	316
+849	1	Test	2	416
+850	1	Test	2	116
+851	1	Test	2	262
+852	1	Test	2	826
+853	1	Test	2	975
+854	1	Test	2	942
+855	1	Test	2	154
+856	1	Test	2	575
+857	1	Test	2	371
+858	1	Test	2	474
+859	1	Test	2	868
+860	1	Test	2	545
+861	1	Test	2	621
+862	1	Test	2	932
+863	1	Test	2	712
+864	1	Test	2	191
+865	1	Test	2	647
+866	1	Test	2	735
+867	1	Test	2	911
+868	1	Test	2	028
+869	1	Test	2	945
+870	1	Test	2	954
+871	1	Test	2	372
+872	1	Test	2	716
+873	1	Test	2	072
+874	1	Test	2	551
+875	1	Test	2	777
+876	1	Test	2	339
+877	1	Test	2	011
+878	1	Test	2	147
+879	1	Test	2	001
+880	1	Test	2	775
+881	1	Test	2	341
+882	1	Test	2	667
+883	1	Test	2	907
+884	1	Test	2	349
+885	1	Test	2	542
+886	1	Test	2	735
+887	1	Test	2	694
+888	1	Test	2	398
+889	1	Test	2	837
+890	1	Test	2	054
+891	1	Test	2	682
+892	1	Test	2	797
+893	1	Test	2	107
+894	1	Test	2	677
+895	1	Test	2	889
+896	1	Test	2	281
+897	1	Test	2	278
+898	1	Test	2	968
+899	1	Test	2	675
+900	1	Test	2	264
+901	1	Test	2	078
+902	1	Test	2	185
+903	1	Test	2	484
+904	1	Test	2	112
+905	1	Test	2	559
+906	1	Test	2	065
+907	1	Test	2	657
+908	1	Test	2	012
+909	1	Test	2	842
+910	1	Test	2	204
+911	1	Test	2	232
+912	1	Test	2	296
+913	1	Test	2	574
+914	1	Test	2	349
+915	1	Test	2	452
+916	1	Test	2	827
+917	1	Test	2	604
+918	1	Test	2	574
+919	1	Test	2	273
+920	1	Test	2	488
+921	1	Test	2	123
+922	1	Test	2	207
+923	1	Test	2	685
+924	1	Test	2	269
+925	1	Test	2	536
+926	1	Test	2	931
+927	1	Test	2	704
+928	1	Test	2	761
+929	1	Test	2	597
+930	1	Test	2	342
+931	1	Test	2	553
+932	1	Test	2	737
+933	1	Test	2	989
+934	1	Test	2	901
+935	1	Test	2	904
+936	1	Test	2	119
+937	1	Test	2	362
+938	1	Test	2	093
+939	1	Test	2	212
+940	1	Test	2	277
+941	1	Test	2	563
+942	1	Test	2	042
+943	1	Test	2	941
+944	1	Test	2	522
+945	1	Test	2	894
+946	1	Test	2	714
+947	1	Test	2	254
+948	1	Test	2	138
+949	1	Test	2	817
+950	1	Test	2	974
+951	1	Test	2	578
+952	1	Test	2	486
+953	1	Test	2	831
+954	1	Test	2	528
+955	1	Test	2	958
+956	1	Test	2	577
+957	1	Test	2	535
+958	1	Test	2	711
+959	1	Test	2	936
+960	1	Test	2	796
+961	1	Test	2	922
+962	1	Test	2	041
+963	1	Test	2	946
+964	1	Test	2	119
+965	1	Test	2	305
+966	1	Test	2	763
+967	1	Test	2	349
+968	1	Test	2	977
+969	1	Test	2	398
+970	1	Test	2	873
+971	1	Test	2	708
+972	1	Test	2	987
+973	1	Test	2	366
+974	1	Test	2	476
+975	1	Test	2	193
+976	1	Test	2	275
+977	1	Test	2	463
+978	1	Test	2	182
+979	1	Test	2	507
+980	1	Test	2	898
+981	1	Test	2	103
+982	1	Test	2	742
+983	1	Test	2	856
+984	1	Test	2	654
+985	1	Test	2	152
+986	1	Test	2	686
+987	1	Test	2	356
+988	1	Test	2	114
+989	1	Test	2	298
+990	1	Test	2	694
+991	1	Test	2	692
+992	1	Test	2	572
+993	1	Test	2	026
+994	1	Test	2	378
+995	1	Test	2	669
+996	1	Test	2	689
+997	1	Test	2	327
+998	1	Test	2	484
+999	1	Test	2	874

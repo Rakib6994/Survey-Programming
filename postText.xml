@@ -1,0 +1,13 @@
+ <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="2"
+   ss:postText="years old"
+   verify="range(0,99)">
+    <title>Please tell me your age.</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('18-64'))">Age</term>
