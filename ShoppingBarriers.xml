@@ -1,0 +1,23 @@
+<checkbox 
+  label="ShoppingBarriers_List"
+  cond="vProductsBought.No"
+  atleast="1"
+  grouping="cols"
+  shuffle="rows">
+  <title> You did not purchase any of the COLGATE products while shopping. Why did you choose not to purchase these products?</title>
+  <comment>[pipe: SHELF_IMG]<br /><br />Please be as detailed and thorough as possible.<font color="#ff0000"><b> </b></font>RECORD RESPONSES IN BOXES BELOW. CODE ALL ANSWERS IN 1<sup>ST</sup> COLUMN, AND SPECIFY 1<sup>ST</sup> ANSWER IN 2<sup>nd</sup> COLUMN.&amp;nbsp;</comment>
+  <res label="sys_noAnswerSelected">IN COLUMN 2, PLEASE SPECIFY THE 1st REASON CITED.</res>
+  <col label="c1">Reason Cited</col>
+  <col label="c2" favorite="1">1st Reason Cited</col>
+  <row label="r1">Another brand had a design that was more appealing</row>
+  <row label="r2">Another brand looked like it'd be more effective at cleaning</row>
+  <row label="r3">Another brand was more age-appropriate for my child(ren)</row>
+  <row label="r4">I didnt notice it on the shelf</row>
+  <row label="r5">I didn't think my dentist/hygienist would recommend this</row>
+  <row label="r6">I'm in the habit of buying a different brand than Colgate</row>
+  <row label="r7">I trust another brand more than Colgate</row>
+  <row label="r8">I didn't think my child would like the Colgate product(s).</row>
+  <row label="r9" open="1" openSize="25" randomize="0">Other (Please specify)</row>
+</checkbox>
+
+<suspend/>
