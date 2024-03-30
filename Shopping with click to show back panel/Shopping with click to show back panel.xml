@@ -1,0 +1,2939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="Marcus' Copy of Shopping with click to show back panel - (K9902-  Kramer)"
+  autoRecover="1"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="144"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="tablet,desktop"
+  name="Survey"
+  otherLanguages="french"
+  remerged="20180914_12:33"
+  setup="term,decLang,quota,time"
+  smartphoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoPosition="left"
+  state="testing"
+  theme="company/behaviorally-theme-2-1"
+  unusedLanguages="french"
+  version="9">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+
+
+  .sq-mgshelf-cart-view-content table td input {
+    width: 50px !important;
+  }
+  
+  .modal-body {
+  	text-align:center;
+  }
+  
+  .sq-atm1d-button-align-center .sq-atm1d-buttons {
+    text-align: center
+  }
+  
+    
+  .instruction-text {
+    text-align: center
+  }
+  
+  .sq-atm1d-td {
+    vertical-align: middle;
+  }
+  
+  .sq-atm1d-block {
+    text-align: center
+  }
+  
+  #comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  width: 600px;
+  height: 400px;
+  border-radius: 30px;
+  }
+  
+  .sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+  }
+  
+  .sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+  }
+  
+  .grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  }
+
+ .comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+
+ .question-text{
+ text-align: center;
+}
+
+ .question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+function jloupe() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+}
+jloupe();
+
+</script>
+<script>
+$ (document).ready(function() {
+
+	$ (".clickable").addClass( "hvr-underline-from-center" )
+	$ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+	
+	if(!$ (".sq-cardsort-Q_PackAtt").length){
+		$ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+	}
+
+	if($ (".p1").length){
+    	$ (".survey-page").css("background", "url('[rel PRSIV_Intro.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");    	
+    	$ (".comment-text").css("color", "black");
+    	$ (".comment-text").css("background-color","lightgrey");
+    	$ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+
+    }
+    
+    if($ (".label_Agreement").length){
+    	$ (".survey-page").css("background", "url('[rel PRSIV_Intro.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");
+    	$ (".question").css("background-color","lightgrey");
+    	$ (".question-text").css("color","black");
+    	$ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+
+/*Gender 1*/
+
+	if($ (".radio .sq-atm1d-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	$ (document).on('click', '.radio .sq-atm1d-button', function() {
+		$ ("#btn_continue").click();
+	})
+
+
+
+
+
+
+/*Gender 2*/
+       
+    if($ (".radio .sq-atmtable-btn").length){
+    	$ ("#btn_continue").hide();
+    }
+
+
+	$ (document).on('click', '.sq-atmtable-btn', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Slider*/
+       
+    if($ (".select .sq-sliderpoints-container").length){
+    	$ ("#btn_continue").hide();
+    }
+
+
+	$ (document).on('click', '.sq-sliderpoints-container', function() {
+		$ ("#btn_continue").click();
+	})
+
+       
+       
+/*Textbox*/
+
+	$ ('.element').css('text-align','center');
+
+
+
+/*Rating Q_OA Auto Advance 
+       
+    if($ (".sq-atmrating-container").length){
+    	$ ("#btn_continue").hide();
+    }
+
+	$ (document).on('click', '.sq-atmrating-container', function() {
+		$ ("#btn_continue").click();
+	})
+	
+*/
+
+
+       
+/*Change Font*/
+	$ ('.dropdown').css("font-family", "Verdana");
+       
+
+
+
+});
+ 
+</script>
+]]></style>
+<samplesources default="0">
+  <samplesource list="3">
+    <title>Critical Mix - Use This </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="https://r.oneopinion.com/r/sid?o=22&amp;sid=${sid}"/>
+    <exit cond="overquota" url="https://r.oneopinion.com/r/sid?o=23&amp;sid=${sid}"/>
+    <exit cond="qualified" url="https://r.oneopinion.com/r/sid?o=3PKWKCVZ&amp;sid=${sid}"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Lucid - USE THIS</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=20&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://www.samplicio.us/s/ClientCallBack.aspx?RIS=40&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://notch.insights.supply/cb?token=034082ed-beea-4416-afb1-a88543392ce1&amp;RID=${RID}"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="Resp" required="1"/>
+    <exit cond="terminated"><p>Thank you for taking our survey. This is a terminate.</p></exit>
+    <exit cond="overquota"><p>Thank you for taking our survey. This is an over quota.</p></exit>
+    <exit cond="qualified"><p>Thank you for taking our survey. This is a complete. Your efforts are greatly appreciated!</p></exit>
+  </samplesource>
+
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<html label="Intro" where="survey"><p class="p1">Hello and welcome to our survey!<br /><br /> Thank you in advance for your participation. This study is very important to us and we ask that you answer each question carefully and completely.<br /><br /> While going through the survey, please use the scroll bar on the right and bottom of your screen to move up and down through questions and images.&amp;nbsp; Please remember that there are no right or wrong answers.&amp;nbsp; We are only interested in your opinions.<br />&amp;nbsp;<br /><strong>Thank you again!&amp;nbsp; Let’s begin…</strong></p></html>
+
+<text 
+  label="Browser"
+  randomize="0">
+  <title>&amp;nbsp;</title>
+  <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(id)" value="$(value)" size="$(size)" class="input text-input" $(extra) hidden/>
+]]></style>
+  <style name="question.after" wrap="ready"><![CDATA[
+$ ('.even').hide();
+           var isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+           var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+           var isSafari = (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) 
+           console.log(isChrome);
+           console.log(isFirefox);
+           console.log(isSafari);
+           if (isChrome) 
+           { 
+               $ ('input[type=text]').val('Y');
+
+           }
+          else if(isFirefox)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+          else if(isSafari)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+         else {
+        $ ('input[type=text]').val('N');
+}
+]]></style>
+</text>
+
+<suspend/>
+
+<autofill label="CompatBrowser" where="execute,survey,report">
+  <title>New Autofill</title>
+  <row label="r1" autofill="Browser.val == 'Y'">Compatible browsers</row>
+  <row label="r2" autofill="not Browser.val == 'Y'">Incompatible browsers</row>
+  <row label="none" autofill="CompatBrowser.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+</autofill>
+
+<suspend/>
+
+<term label="x" cond="not CompatBrowser.r1 and not(gv.isSST())">Browser</term>
+
+<suspend/>
+
+<block label="Screener" cond="False" builder:title="Screener">
+  <checkbox 
+   label="S_WebPastParticipation"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Have you participated in a market research study within the <u>2 weeks</u>, on any of the following topics?</title>
+    <comment><strong>SELECT <u>ALL</u> THAT APPLY</strong></comment>
+    <row label="r1">Pain relief products</row>
+    <row label="r2">Over the counter products to treat fungus under and around the toenail</row>
+    <row label="r3">Vitamin products</row>
+    <row label="r4">Supplement products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you know anyone who works for any of the following industries?</title>
+    <row label="r1">Market research or Marketing</row>
+    <row label="r2">Advertising agency or Public Relations Firm</row>
+    <row label="r3">A graphic design or packaging firm</row>
+    <row label="r4">A company involved in the manufacturing, distribution or sale of <strong>pain relief </strong>products</row>
+    <row label="r5">A company involved in the manufacturing, distribution or sale of <strong>vitamin </strong>products</row>
+    <row label="r6">A company involved in the manufacturing, distribution or sale of <strong>over the counter products to treat fungus under and around the toenail </strong></row>
+    <row label="r7" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>With which gender do you most identify?</title>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.sq-atm1d-button').css('background','transparent');
+        $ ('.sq-atm1d-button').hover(
+        function(){
+            $ (this).css('background','translucent');
+            $ (this).css('background-color','lightgrey');
+        },
+        function(){
+            $ (this).css('background','transparent');
+        });
+]]></style>
+    <row label="r1"><img src="[rel male.png]" constrain="true" height="165" /></row>
+    <row label="r2"><img src="[rel female.png]" constrain="true" height="165" /></row>
+  </radio>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="3"
+   verify="range(0,99)">
+    <title>How old are you?</title>
+  </number>
+
+  <suspend/>
+
+  <select 
+   label="S_GroceryShop"
+   randomize="0"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>How much of the household <strong>over the counter (non-prescription) product </strong> shopping do you, yourself do?</title>
+    <choice label="ch1"><span style="font-size: 10pt;" align="center">None<br /><img src="[rel Cart0.png]" constrain="true" height="50" title="image" /></span></choice>
+    <choice label="ch2"><span style="font-size: 10pt;" align="center">Less than half<br /><img src="[rel Cart1.png]" constrain="true" height="50" title="image" /></span></choice>
+    <choice label="ch3"><span style="font-size: 10pt;" align="center">Half or more<br /><img src="[rel Cart3.png]" constrain="true" height="50" title="image" /></span></choice>
+    <choice label="ch4"><span style="font-size: 10pt;" align="center">All<br /><img src="[rel Cart4.png]" constrain="true" height="50" title="image" /></span></choice>
+  </select>
+
+  <suspend/>
+
+  <radio 
+   label="S_Affliction"
+   builderHint="{&quot;rocochoName&quot;:&quot;radiogrid&quot;}"
+   randomize="0">
+    <title>When was the last time (if ever) you have suffered from the following common ailments?</title>
+    <comment><strong>SELECT <u>ALL</u> THAT APPLY.</strong></comment>
+    <col label="c1">Within the past month</col>
+    <col label="c2">2-6 months ago</col>
+    <col label="c3">7-12 months ago</col>
+    <col label="c4">1-2 years ago</col>
+    <col label="c5">More than 2 years ago</col>
+    <col label="c6">Never</col>
+    <row label="r1">Fungus under and around the toenail&amp;nbsp;</row>
+    <row label="r2">Athlete's Foot (fungus between the toes and on the feet)</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Treatment"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please select the treatment methods you have used to treat fungus under and around the toenail.</title>
+    <comment>SELECT ALL THAT APPLY.</comment>
+    <row label="r1">Over the counter (non-prescription) anti-fungal remedy</row>
+    <row label="r2">Prescription remedies</row>
+    <row label="r3">Home remedies</row>
+    <row label="r4" exclusive="1">Did not treat</row>
+  </checkbox>
+
+  <suspend/>
+
+  <block label="Category1" builder:title="Category 1">
+    <checkbox 
+    label="S_Brand_PastPurchased"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>Which brand or brands of over the counter products to treat fungus under and around the toenail have you purchased and used in the <u>past 12 months</u>?</title>
+      <row label="r1">Fungi Nail</row>
+      <row label="r2">Fungi Cure</row>
+      <row label="r3">Pro Clearz</row>
+      <row label="r4">Mycocide</row>
+      <row label="r5">Tineacide</row>
+      <row label="r6">Kerasal</row>
+      <row label="r7">Nonyx</row>
+      <row label="r8">Store Brand</row>
+      <row label="r9">Other</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="S_Brand_BUMO"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Brand_PastPurchased[row.index]"
+    uses="atm1d.9">
+      <title>And which one brand of over the counter products to treat fungus under and around the toenail have you purchased and used <u>most often</u> in the <u>past 12 months</u>?</title>
+      <row label="r1">Fungi Nail</row>
+      <row label="r2">Fungi Cure</row>
+      <row label="r3">Pro Clearz</row>
+      <row label="r4">Mycocide</row>
+      <row label="r5">Tineacide</row>
+      <row label="r6">Kerasal</row>
+      <row label="r7">Nonyx</row>
+      <row label="r8">Store Brand</row>
+      <row label="r9">Other</row>
+    </radio>
+
+    <suspend/>
+
+    <checkbox 
+    label="S_Brand_NonRejecter1"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>Which brands of over the counter products to treat fungus under and around the toenail, <u>if any</u>, would you <u>NOT</u> consider purchasing in the future?</title>
+      <row label="r1" cond="not S_Brand_BUMO.r1">Fungi Nail</row>
+      <row label="r2" cond="not S_Brand_BUMO.r2">Fungi Cure</row>
+      <row label="r3" cond="not S_Brand_BUMO.r3">Pro Clearz</row>
+      <row label="r4" cond="not S_Brand_BUMO.r4">Mycocide</row>
+      <row label="r5" cond="not S_Brand_BUMO.r5">Tineacide</row>
+      <row label="r6" cond="not S_Brand_BUMO.r6">Kerasal</row>
+      <row label="r7" cond="not S_Brand_BUMO.r7">Nonyx</row>
+      <row label="r8" cond="not S_Brand_BUMO.r8">Store Brand</row>
+      <row label="r9">Other</row>
+      <row label="r10" exclusive="1">None, I would consider all</row>
+    </checkbox>
+  </block>
+</block>
+
+<suspend/>
+
+<block label="Quotas" builder:title="Quotas">
+  <suspend/>
+
+  <block label="SETQuotas" builder:title="Quotas">
+    <autofill label="PhaseQ" randomize="0" where="execute,survey,report">
+      <title>PhaseQ</title>
+      <row label="r1" autofill="True">1</row>
+      <row label="r2" autofill="hasMarker('ph2*')">2</row>
+      <row label="r3" autofill="hasMarker('ph3*')">3</row>
+      <row label="r4" autofill="hasMarker('ph4*')">4</row>
+    </autofill>
+
+    <autofill label="Competitor" randomize="0" where="execute,survey,report">
+      <title>Competitor</title>
+      <row label="r1" autofill="True">Fungi Cure</row>
+      <row label="r2" autofill="hasMarker('comp2')">Kerasal</row>
+    </autofill>
+
+    <autofill label="Sample" randomize="0" where="execute,survey,report">
+      <title>Sample</title>
+      <row label="r1" autofill="True">Category Sample</row>
+      <row label="r2" autofill="hasMarker('*sam2')">Supplement Sample</row>
+    </autofill>
+  </block>
+</block>
+
+<suspend/>
+
+<exec>
+if PhaseQ.r1:
+  Phase.val=0
+if PhaseQ.r2:
+  Phase.val=1
+if PhaseQ.r3:
+  Phase.val=2
+if PhaseQ.r4:
+  Phase.val=3
+</exec>
+
+<radio 
+  label="Phase"
+  randomize="0"
+  where="report">
+  <title>Phase</title>
+  <row label="r1">1</row>
+  <row label="r2">2</row>
+  <row label="r3">3</row>
+  <row label="r4">4</row>
+</radio>
+
+<suspend/>
+
+<block label="Images" builder:title="IMAGES">
+  <autofill label="SHELF_IMG" randomize="0" where="execute,survey,report">
+    <title>Shelf Image</title>
+    <row label="r1" autofill="(Phase.r1)"><div align="center"><img src="[rel a1x.jpg]" title="" height="200" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r2" autofill="(Phase.r2)"><div align="center"><img src="[rel b1x.jpg]" title="" height="200" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r3" autofill="(Phase.r3)"><div align="center"><img src="[rel c1x.jpg]" title="" height="200" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r4" autofill="(Phase.r4)"><div align="center"><img src="[rel d1x.jpg]" title="" height="200" alt="" constrain="true" class="jloupeme" /></div></row>
+  </autofill>
+
+  <autofill label="PH_IMG" randomize="0" where="execute,survey,report">
+    <title>Phase Image</title>
+    <row label="r1" autofill="(Phase.r1)"><div align="center"><img src="[rel aaa.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r2" autofill="(Phase.r2)"><div align="center"><img src="[rel bbb.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r3" autofill="(Phase.r3)"><div align="center"><img src="[rel ccc.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r4" autofill="(Phase.r4)"><div align="center"><img src="[rel ddd.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></div></row>
+  </autofill>
+
+  <autofill label="COMP_IMG" randomize="0" where="execute,survey,report">
+    <title>Competitor Image</title>
+    <row label="r1" autofill="(Competitor.r1)"><div align="center"><img src="[rel xxx.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></div></row>
+    <row label="r2" autofill="(Competitor.r2)"><div align="center"><img src="[rel yyy.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></div></row>
+  </autofill>
+
+  <pipe label="EmotionImage" capture="">
+    <case label="r1" cond="Phase.r1"><div align="center"><img src="[rel aa_e.jpg]" constrain="true" title="" alt="" height="275" /></div></case>
+    <case label="r2" cond="Phase.r2"><div align="center"><img src="[rel ab_e.jpg]" constrain="true" title="" alt="" height="275" /></div></case>
+    <case label="r3" cond="Phase.r3"><div align="center"><img src="[rel ac_e.jpg]" constrain="true" title="" alt="" height="275" /></div></case>
+    <case label="r4" cond="Phase.r4"><div align="center"><img src="[rel ad_e.jpg]" constrain="true" title="" alt="" height="275" /></div></case>
+    <case label="r10" cond="1"/></pipe></block>
+
+<suspend/>
+
+<block label="Variables" builder:title="VARIABLES">
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Test Category</title>
+    <row label="r1" autofill="True"><strong>over the counter products to treat fungus under and around the toenail </strong></row>
+  </autofill>
+
+  <autofill label="TestBrand" randomize="0" where="execute,survey,report">
+    <title>Test Brand</title>
+    <row label="r1" autofill="True"><strong><span style="color: #333333;">Fungi-Nail </span></strong></row>
+    <row label="none" autofill="TestBrand.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+  </autofill>
+
+  <autofill label="Price" randomize="0" where="execute,survey,report">
+    <title>Test Brand Price</title>
+    <row label="r1" autofill="True"><strong>Fungi Nail Anti-Fungal Pen: $8.38<br />Fungi-Nail Anti-Fungal Liquid Solution $9.84<br />Fungi-Nail Anti-Fungal Ointment $9.84</strong></row>
+  </autofill>
+
+  <autofill label="CompBrand" randomize="0" where="execute,survey,report">
+    <title>Competitor Brand</title>
+    <row label="r1" autofill="Competitor.r1">Fungi Cure</row>
+    <row label="r2" autofill="Competitor.r2">Kerasal</row>
+  </autofill>
+
+  <autofill label="Finda" randomize="0" where="execute,survey,report">
+    <title>Findability Brand</title>
+    <row label="r1" autofill="True"><strong><span style="color: #333333;">Fungi-Nail Anti-Fungal Pen</span></strong></row>
+  </autofill>
+</block>
+
+<suspend/>
+
+<radio 
+  label="Agreement"
+  cond="False"
+  atm1d:large_buttonAlign="center"
+  atm1d:large_contentAlign="center"
+  atm1d:showInput="0"
+  atm1d:small_buttonAlign="center"
+  atm1d:small_contentAlign="center"
+  randomize="0"
+  uses="atm1d.9">
+  <title><div align="center"><strong><em>Congratulations! You qualify&amp;nbsp;for an online study about Over the counter products to treat fungus under and around the toenail<br />It will take about 15 minutes of your time.</em></strong><hr />Thank you for agreeing to participate in this consumer study on behalf of PRS IN VIVO. Before you can participate in this research, we would like you to understand that it will involve products which may be confidential. By signing this agreement you agree as follows:<br /><br /></div>
+<ul>
+<li>You will hold in confidence any information about the products or packaging that may be disclosed to you directly or indirectly by participating in this research.</li>
+</ul>
+<ul>
+<li>You will not discuss or otherwise reveal any of the information about the products or packaging disclosed to you.</li>
+<li>You will use information disclosed to you only for the purpose of participating in this consumer study, and you will not otherwise use the information for your own benefit or the benefit of any third party.</li>
+</ul>
+<div align="center">You will be compensated for your time, commitment, and confidential obligation. &amp;nbsp;<br />Please confirm your acceptance of these terms by checking the agreement below.</div></title>
+  <row label="r1"><b>I hereby acknowledge and agree to the terms.</b></row>
+</radio>
+
+<suspend/>
+
+<text 
+  label="DateTime"
+  optional="0"
+  randomize="0"
+  size="25"
+  where="report">
+  <title>DateTime</title>
+  <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+  </exec>
+
+</text>
+
+<block label="ShoppingSection" builder:title="Shopping Exercise">
+  <pipe label="letter" capture="">
+    <case label="r1" cond="(Phase.r1)">a</case>
+    <case label="r2" cond="(Phase.r2)">b</case>
+    <case label="r3" cond="(Phase.r3)">c</case>
+    <case label="r4" cond="(Phase.r4)">d</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="shop_price_text" capture="">
+    <case label="r1" cond="True">Price</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="shop_quantity_text" capture="">
+    <case label="r1" cond="True">Quantity</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="shop_subtotal_text" capture="">
+    <case label="r1" cond="True">Subtotal</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="shop_cancel_text" capture="">
+    <case label="r1" cond="True">Put Back</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="shop_purchase" capture="">
+    <case label="r1" cond="True">Purchase</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="find_select" capture="">
+    <case label="r1" cond="True">Select</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="continue_text" capture="">
+    <case label="r1" cond="True">Please click the Continue button to proceed</case>
+    <case label="r10" cond="1"/></pipe>
+  <suspend/>
+
+  <block label="SHOP" builder:title="SHOPPING EXERCISE">
+    <html label="P1Text" where="survey"><p class="ShoppingQuestion"><b>Throughout this survey, you are going to be shown several pictures. Please be sure that you maximize your window at this time, such that you can see these pictures with as much clarity as possible. You can also mouse over the images to see them magnified at any time. Clicking on a product will allow you to view the item in more detail and see images of all sides of the packaging (front, sides, back panel etc.).</b></p></html>
+
+    <suspend/>
+
+    <number 
+    label="P1"
+    mgshelf:cancel_text="${pipe.shop_cancel_text}"
+    mgshelf:completed_text="${pipe.continue_text}"
+    mgshelf:currency_position="before"
+    mgshelf:currency_sign="$"
+    mgshelf:findability="0"
+    mgshelf:magnifier_border_radius="50%"
+    mgshelf:magnifier_height="275"
+    mgshelf:magnifier_image="[rel ${pipe.letter}1x.jpg]"
+    mgshelf:magnifier_style="follow"
+    mgshelf:magnifier_width="275"
+    mgshelf:name_text=""
+    mgshelf:popup_show_name="1"
+    mgshelf:popup_show_price="1"
+    mgshelf:popup_show_quantity="1"
+    mgshelf:popup_show_subtotal="1"
+    mgshelf:price_text="${pipe.shop_price_text}"
+    mgshelf:purchase_text="${pipe.shop_purchase}"
+    mgshelf:quantity_text="${pipe.shop_quantity_text}"
+    mgshelf:shelf_image="[rel ${pipe.letter}1.jpg]"
+    mgshelf:shelf_width="1000"
+    mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+    randomize="0"
+    size="10"
+    uses="prsshelf2.5">
+      <title>Assume for a moment that you have come to the store to shop for <strong>[pipe: Category]</strong>. Please select the products that you wish to purchase by clicking on the individual products on the shelf. You may purchase as many or as few products as you like.<br /><br /><br />
+
+<li>If you would like to see a close-up of a product, hover your mouse over the product.</li>
+<li>If you would like to view the item in more detail, click the arrows on either side to see images of all sides of the packaging (front, sides, back panel etc.).</li>
+<li>If you would like to purchase a product, click on the product and use the "+/-" buttons to add quantity and click "Purchase"</li>
+<li>To change your mind about purchasing a product, click on the "back" button or click on the shopping cart to remove products.</li>
+<li>When finished with the shopping trip, click the "continue" button on the bottom of your screen.</li>
+<li>Please be sure to view the entire shelf before proceeding.&amp;nbsp; You may need to scroll over/down to do so.</li>
+</title>
+      <col label="c1">Quantity</col>
+      <col label="c2">Order of click</col>
+      <col label="c3">Time opened</col>
+      <row label="r1" mgshelf:coord="21,143,183,284" mgshelf:image="[rel 01${pipe.letter}.jpg]" mgshelf:price="8.38" mgshelf:width="250">A1  Fungi Nail Pen</row>
+      <row label="r2" mgshelf:coord="185,105,242,284" mgshelf:image="[rel 02${pipe.letter}.jpg]" mgshelf:price="9.84" mgshelf:width="150">A2  Fungi Nail Liquid Solution</row>
+      <row label="r3" mgshelf:coord="241,100,321,277" mgshelf:image="[rel 03${pipe.letter}.jpg]" mgshelf:price="9.84" mgshelf:width="200">A3  Fungi Nail Ointment</row>
+      <row label="r4" mgshelf:coord="328,178,443,284" mgshelf:image="[rel 04.jpg]" mgshelf:price="8.48" mgshelf:width="250">A4  Fungi Cure Liquid</row>
+      <row label="r5" mgshelf:coord="446,116,524,284" mgshelf:image="[rel 05.jpg]" mgshelf:price="8.48" mgshelf:width="250">A5  Fungi Cure Gel</row>
+      <row label="r6" mgshelf:coord="529,136,632,282" mgshelf:image="[rel 06.jpg]" mgshelf:price="5.32" mgshelf:width="250">A6  Pro Clearz Liquid</row>
+      <row label="r7" mgshelf:coord="630,87,734,279" mgshelf:image="[rel 07.jpg]" mgshelf:price="5.32" mgshelf:width="250">A7  Pro Clearz Pen</row>
+      <row label="r8" mgshelf:coord="738,100,798,284" mgshelf:image="[rel 08.jpg]" mgshelf:price="13.36" mgshelf:width="150">A8  Tineacide Cream</row>
+      <row label="r9" mgshelf:coord="808,99,910,297" mgshelf:image="[rel 09.jpg]" mgshelf:price="18.86" mgshelf:width="250">A9  Kerasal Fungal Nail Renew</row>
+      <row label="r10" mgshelf:coord="908,53,980,288" mgshelf:image="[rel 10.jpg]" mgshelf:price="18.97" mgshelf:width="150">A10  Nonyx Nail Gel</row>
+      <style name="question.after"><![CDATA[
+<script>
+		//define images
+		var images = {
+			'01${pipe.letter}': [
+				{ width: 250, name: '01${pipe.letter}', zoom: true },
+				{ width: 250, name: '01_b${pipe.letter}', zoom: true },
+			],
+			'02${pipe.letter}': [
+				{ width: 150, name: '02${pipe.letter}', zoom: true },
+				{ width: 150, name: '02_s1${pipe.letter}', zoom: true },
+				{ width: 150, name: '02_b${pipe.letter}', zoom: true },
+				{ width: 150, name: '02_s2${pipe.letter}', zoom: true },
+			],
+			'03${pipe.letter}': [
+				{ width: 200, name: '03${pipe.letter}', zoom: true },
+				{ width: 200, name: '03_s1${pipe.letter}', zoom: true},
+				{ width: 200, name: '03_b${pipe.letter}', zoom: true},
+				{ width: 200, name: '03_s2${pipe.letter}', zoom: true},
+			],
+			'04': [
+				{ width: 250, name: '04', zoom: true  },
+				{ width: 250, name: '04_b', zoom: true  },
+			],
+			'05': [
+				{ width: 250, name: '05', zoom: true  },
+				{ width: 100, name: '05_s1', zoom: true  },
+				{ width: 250, name: '05_b', zoom: true  },
+				{ width: 100, name: '05_s2', zoom: true  },
+			],
+			'06': [
+				{ width: 250, name: '06', zoom: true  },
+				{ width: 100, name: '06_s1', zoom: true  },
+				{ width: 250, name: '06_b', zoom: true  },
+				{ width: 100, name: '06_s2', zoom: true  },
+			],
+			'07': [
+				{ width: 250, name: '07', zoom: true  },
+				{ width: 100, name: '07_s1', zoom: true  },
+				{ width: 250, name: '07_b', zoom: true  },
+				{ width: 100, name: '07_s2', zoom: true  },
+			],
+			'08': [
+				{ width: 150, name: '08', zoom: true  },
+				{ width: 75, name: '08_s1', zoom: true  },
+				{ width: 150, name: '08_b', zoom: true  },
+				{ width: 75, name: '08_s2', zoom: true  },
+			],
+			'09': [
+				{ width: 250, name: '09', zoom: true  },
+				{ width: 100, name: '09_s1', zoom: true  },
+				{ width: 250, name: '09_b', zoom: true  },
+				{ width: 100, name: '09_s2', zoom: true  },
+			],
+			'10': [
+				{ width: 150, name: '10', zoom: true  },
+				{ width: 100, name: '10_s1', zoom: true  },
+				{ width: 150, name: '10_b', zoom: true  },
+				{ width: 100, name: '10_s2', zoom: true  },
+			],
+		};
+
+		//other variables
+		var job = $ ('form').attr("action").split('/').reverse()[0];
+		var product;
+		var index = 0;
+		var modIndex = 0;
+		var modalFirstOpen = false;
+		
+		//definition for buttons added to modal
+		var btns = $ ('<div class="btnDiv">')
+			.append($ ('<button>').attr({onClick:"changeImage(-1)"}).html('<span style="font-size: 14pt;"><b><</b></span>'))
+			.append($ ('<span>').html('<span style="font-size: 14pt;"> CHANGE IMAGE </span>'))
+			.append($ ('<button>').attr({onClick:"changeImage(1)"}).html('<span style="font-size: 14pt;"><b>></b></span>'));
+			
+		var btnLeft = $ ('<i>').attr({onClick:"changeImage(-1)", title:'Change Image'}).css({
+			'border': 'solid black',
+            'border-width': '0 7px 7px 0',
+            'display': 'inline-block',
+            'padding': '3px',
+            'transform': 'rotate(135deg)',
+    		'-webkit-transform': 'rotate(135deg)',
+    		'height': '40px',
+    		'width': '40px',
+		});
+		
+		var btnRight = btnLeft.clone().attr({onClick:"changeImage(1)"}).css({
+			'transform': 'rotate(-45deg)',
+    		'-webkit-transform': 'rotate(-45deg)'
+		});
+      	
+      	//an event to run code when the modal is loaded into the DOM
+      	$ ('body').on('DOMNodeInserted', '.modal-dialog', function (e) {
+      		if(e.target.classList.value !== 'modal-dialog ng-scope'){ return; }
+      		modalFirstOpen = true
+      		index = 0;
+      		
+      		//when the image loads
+      		$ ('img').on('load', function(){
+      			if(modalFirstOpen){
+      				$ ('.modal-content').width($ ('.modal-content').width() + 100);
+      				modalFirstOpen = false;
+      			}
+      			
+      			//get the product name from the image src 
+        		product = $ ('.sq-mgshelf-small').attr('ng-src').split('/').reverse()[0].split(".")[0];
+        		
+        		if(images[product] && images[product].length > 1){
+        			$ ('.modal-body div:first').prepend(btnLeft).append(btnRight).css({'display': 'flex', 'justify-content': 'center', 'align-items': 'center'});
+        		}
+        		
+        		setUpZoom();
+      		});
+ 
+        	
+        });
+        
+        var imageBack = {
+		  '01${pipe.letter}': {index: 1, back: 0},
+		  '02${pipe.letter}': {index: 2, back: 0},
+		  '03${pipe.letter}': {index: 3, back: 0},
+		  '04': {index: 4, back: 0},
+		  '05': {index: 5, back: 0},
+		  '06': {index: 6, back: 0},
+		  '07': {index: 7, back: 0},
+		  '08': {index: 8, back: 0},
+		  '09': {index: 9, back: 0},
+		  '10': {index: 10, back: 0}
+		}
+		
+        function changeImage(change){
+        	//get the array of images for this product
+        	var imageArray = images[product];
+        	
+        	//if it exists, update the image
+        	if(imageArray){
+        		index += change;
+        	
+        		if(index === -1){
+        			index = imageArray.length-1
+        		}
+        		modIndex = index % imageArray.length;
+        	
+        		//set img src and width
+        		$ ('.sq-mgshelf-small').attr({
+        			'src': job + '/' + imageArray[modIndex].name + '.jpg',
+        			'width': imageArray[modIndex].width,
+        		});
+        		
+        		var backIndex = (imageArray.length) * 0.5
+        		
+        		if (modIndex == backIndex) {
+        			console.log(product);
+        		  imageBack[product].back = 1;
+        		  let ind = imageBack[product].index + 2;
+        		  console.log(ind);
+        		  if ($ ('#question_vBackPanelViewed > div > div:nth-child(' + ind + ') > span > span.cell-input.cell-sub-column > input').data('clicked')) {
+                      console.log('aleady seen back panel');
+                  } else {
+                  	$ ('#question_vBackPanelViewed > div > div:nth-child(' + ind + ') > span > span.cell-input.cell-sub-column > input').click();
+                  	$ ('#question_vBackPanelViewed > div > div:nth-child(' + ind + ') > span > span.cell-input.cell-sub-column > input').data('clicked', true); 
+                  }
+                  
+                }
+                
+        	}
+        }
+        
+        var qn = ${jsexport()}; //returns json object of the question
+        console.log(qn);
+        
+        function setUpZoom(){
+        	$ ('.thejloupe').remove();
+        	if(images[product][modIndex].zoom){
+        		$ ('.sq-mgshelf-small').addClass('jloupeme');
+        		jloupe();
+        		$ ('.thejloupe').css('z-index', '10000');
+        	}
+        	
+        }
+      	
+      	
+      	</script>
+]]></style>
+    </number>
+
+    <number 
+    label="P1_Total_Products"
+    optional="0"
+    randomize="0"
+    size="3">
+      <title>Total Products Purchased</title>
+      <virtual>
+data.val = sum([int(r.c1.val) for r in P1.rows if r.c1.val and int(r.c1.val) gt 0])
+      </virtual>
+
+    </number>
+
+    <number 
+    label="P1_Number_Bought_Per_Product"
+    onLoad="copy('P1', rows=True)"
+    randomize="0"
+    size="3">
+      <title>Quantity Per Product</title>
+      <virtual>
+for eachRow in P1.rows:
+  if eachRow.c1.val:
+    if int(eachRow.c1.val) &gt; 0:
+                 data.rows[eachRow.index].val = int(eachRow.c1.val or 0)
+      </virtual>
+
+    </number>
+
+    <checkbox 
+    label="P1_Items_Bought"
+    atleast="1"
+    onLoad="copy('P1', rows=True)"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Products Bought</title>
+      <virtual>
+for r in P1.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      data.rows[r.index].val = 1
+      </virtual>
+
+    </checkbox>
+
+    <block label="Skip" cond="False" builder:title="skip">
+      <checkbox 
+     label="vBackPanelViewed"
+     adim="cols"
+     optional="1"
+     randomize="0">
+        <title>vBackPanelViewed</title>
+        <row label="r1">A1  Fungi Nail Pen</row>
+        <row label="r2">A2  Fungi Nail Liquid Solution</row>
+        <row label="r3">A3  Fungi Nail Ointment</row>
+        <row label="r4">A4  Fungi Cure Liquid</row>
+        <row label="r5">A5  Fungi Cure Gel</row>
+        <row label="r6">A6  Pro Clearz Liquid</row>
+        <row label="r7">A7  Pro Clearz Pen</row>
+        <row label="r8">A8  Tineacide Cream</row>
+        <row label="r9">A9  Kerasal Fungal Nail Renew</row>
+        <row label="r10">A10  Nonyx Nail Gel</row>
+      </checkbox>
+    </block>
+  </block>
+
+  <suspend/>
+
+  <block label="F1Text" cond="False" builder:title="Findability Section">
+    <html label="cm5" where="survey"><span style="color: #333333;">Next, you are going to see the display of <strong>over the counter products to treat fungus under and around the toenail</strong>&amp;nbsp;again. This time, you will be looking for a particular item.&amp;nbsp; </span><br /><span style="color: #333333;">&amp;nbsp;</span><br /><span style="color: #333333;">When you see the display, please find <strong>Fungi-Nail Anti-Fungal Pen.</strong></span><span style="color: #333333;"> When you find this product, please use your mouse and click on the center of the product to select it.<br /><br />Again, you are looking for <strong>Fungi-Nail Anti-Fungal Pen.</strong></span><br /><span style="color: #333333;"><br />When you are ready, click next to begin.</span></html>
+
+    <suspend/>
+
+    <number 
+    label="F1"
+    mgshelf:cancel_text="${pipe.shop_cancel_text}"
+    mgshelf:completed_text=""
+    mgshelf:currency_position="before"
+    mgshelf:currency_sign="$"
+    mgshelf:findability="1"
+    mgshelf:magnifier_border_radius="50%"
+    mgshelf:magnifier_height="275"
+    mgshelf:magnifier_image="[rel ${pipe.letter}1x.jpg]"
+    mgshelf:magnifier_width="275"
+    mgshelf:name_text=""
+    mgshelf:popup_show_name="1"
+    mgshelf:popup_show_price="1"
+    mgshelf:popup_show_quantity="1"
+    mgshelf:popup_show_subtotal="1"
+    mgshelf:price_text="${pipe.shop_price_text}"
+    mgshelf:purchase_text="${pipe.find_select}"
+    mgshelf:quantity_text="${pipe.shop_quantity_text}"
+    mgshelf:shelf_image="[rel ${pipe.letter}1.jpg]"
+    mgshelf:shelf_width="1000"
+    mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+    randomize="0"
+    size="10"
+    uses="prsshelf2.5">
+      <title><div align="center">Please find: <br /><span style="font-size: 36pt;"><b>[pipe: Finda upper]</b></span></div></title>
+      <row label="r1" mgshelf:coord="21,143,183,284" mgshelf:image="[rel 01${pipe.letter}.jpg]" mgshelf:price="8.38" mgshelf:width="250">A1  Fungi Nail Pen</row>
+      <row label="r2" mgshelf:coord="185,105,242,284" mgshelf:image="[rel 02${pipe.letter}.jpg]" mgshelf:price="9.84" mgshelf:width="150">A2  Fungi Nail Liquid Solution</row>
+      <row label="r3" mgshelf:coord="241,100,321,277" mgshelf:image="[rel 03${pipe.letter}.jpg]" mgshelf:price="9.84" mgshelf:width="200">A3  Fungi Nail Ointment</row>
+      <row label="r4" mgshelf:coord="328,178,443,284" mgshelf:image="[rel 04.jpg]" mgshelf:price="8.48" mgshelf:width="250">A4  Fungi Cure Liquid</row>
+      <row label="r5" mgshelf:coord="446,116,524,284" mgshelf:image="[rel 05.jpg]" mgshelf:price="8.48" mgshelf:width="250">A5  Fungi Cure Gel</row>
+      <row label="r6" mgshelf:coord="529,136,632,282" mgshelf:image="[rel 06.jpg]" mgshelf:price="5.32" mgshelf:width="250">A6  Pro Clearz Liquid</row>
+      <row label="r7" mgshelf:coord="630,87,734,279" mgshelf:image="[rel 07.jpg]" mgshelf:price="5.32" mgshelf:width="250">A7  Pro Clearz Pen</row>
+      <row label="r8" mgshelf:coord="738,100,798,284" mgshelf:image="[rel 08.jpg]" mgshelf:price="13.36" mgshelf:width="150">A8  Tineacide Cream</row>
+      <row label="r9" mgshelf:coord="808,99,910,297" mgshelf:image="[rel 09.jpg]" mgshelf:price="18.86" mgshelf:width="250">A9  Kerasal Fungal Nail Renew</row>
+      <row label="r10" mgshelf:coord="908,53,980,288" mgshelf:image="[rel 10.jpg]" mgshelf:price="18.97" mgshelf:width="150">A10  Nonyx Nail Gel</row>
+      <col label="c1">Quantity</col>
+      <col label="c2">Order of click</col>
+      <col label="c3">Time opened</col>
+      <style name="question.after"><![CDATA[
+<script>
+		
+      	$ (document).on('click', '.bs-btn-primary', function() {
+      		$ ("#btn_continue").click();
+      		
+      	})
+      	</script>
+]]></style>
+    </number>
+
+    <suspend/>
+
+    <radio 
+    label="F1_Item_Found"
+    onLoad="copy('F1', rows=True)"
+    randomize="0">
+      <title>Product Found</title>
+      <virtual>
+for r in F1.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      data.val = r.index
+      </virtual>
+
+    </radio>
+
+    <radio 
+    label="F_EaseOfFind"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How easy or difficult was it to find that product&amp;nbsp;in this display?</title>
+      <comment>[pipe:SHELF_IMG]</comment>
+      <row label="r1">Very easy to find</row>
+      <row label="r2">Somewhat easy to find</row>
+      <row label="r3">Neither easy nor difficult to find</row>
+      <row label="r4">Somewhat difficult to find</row>
+      <row label="r5">Very difficult to find</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="F_Diff"
+    atm1d:showInput="0"
+    atm1d:viewMode="horizontal"
+    randomize="0"
+    uses="atm1d.9">
+      <title>Using the statements below, please indicate how easy or difficult the packaging makes it to tell the difference between <strong>Fungi-Nail&amp;nbsp;</strong>and the various other<strong>&amp;nbsp;over the counter products to treat fungus under and around the toenail</strong>&amp;nbsp;you see on this shelf.</title>
+      <comment>[pipe: SHELF_IMG]</comment>
+      <row label="r1">Very easy to tell the difference</row>
+      <row label="r2">Somewhat easy to tell the difference&amp;nbsp;</row>
+      <row label="r3">Neither easy nor difficult to tell the difference</row>
+      <row label="r4">Somewhat difficult to tell the difference&amp;nbsp;</row>
+      <row label="r5">Very difficult to tell the difference&amp;nbsp;</row>
+    </radio>
+  </block>
+
+  <suspend/>
+
+  <block label="FlashExposure" cond="False" builder:title="FlashExposure">
+    <suspend/>
+
+    <html label="PracticeIntro1" where="survey">You are now going to be shown a picture on the screen. Please pay attention as it’s going to be a very short exposure.</html>
+
+    <suspend/>
+
+    <checkbox 
+    label="F_Practice"
+    optional="1"
+    randomize="0"
+    ss:questionClassNames="sq-timertest"
+    timertest:image="/survey/selfserve/1da7/141208/ShoppingCart.jpg"
+    timertest:timerLimit="500"
+    uses="prstimer.2">
+      <title>Please review the image below. After 1/2 second, you will automatically be advanced to the next page.</title>
+      <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+<style>
+.sq-timertest .sq-timertestContainer {
+	background-color:white;
+}
+
+</style>
+]]></style>
+    </checkbox>
+
+    <suspend/>
+
+    <textarea 
+    label="F_Practice2"
+    height="10"
+    optional="0"
+    randomize="0"
+    width="50">
+      <title>Describe what you have just seen. Indicate everything you remember about it, even if you are not completely sure what it is.</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <html label="F_FlashIntro1" where="survey">You are now going to be shown a picture on the screen. Please pay attention as it’s going to be a very short exposure.</html>
+
+    <suspend/>
+
+    <pipe label="FEImage" capture="">
+      <case label="r1" cond="(Phase.r1)">aa_f</case>
+      <case label="r2" cond="(Phase.r2)">ab_f</case>
+      <case label="r3" cond="(Phase.r3)">ac_f</case>
+      <case label="r4" cond="(Phase.r4)">ad_f</case>
+      <case label="r10" cond="1"/></pipe>
+    <suspend/>
+
+    <checkbox 
+    label="F_Flash1A"
+    optional="1"
+    randomize="0"
+    ss:questionClassNames="sq-timertest"
+    timertest:image="[rel ${pipe.FEImage}.jpg]"
+    timertest:timerLimit="500"
+    uses="prstimer.2">
+      <title>Please review the image below. After 1/2 second, you will automatically be advanced to the next page.</title>
+      <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+<style>
+.sq-timertest .sq-timertestContainer {
+	background-color:white;
+}
+
+</style>
+]]></style>
+    </checkbox>
+
+    <suspend/>
+
+    <textarea 
+    label="F_Flash1B"
+    height="10"
+    optional="0"
+    randomize="0"
+    width="50">
+      <title>Describe what you have just seen. Indicate everything you remember about it, even if you are not completely sure what it is.</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <html label="F_FlashIntro2" where="survey">Here again is the same picture. Pay attention as it’s going to be a short exposure. <br /><br /><em>Please click continue when you are ready to see the picture.</em></html>
+
+    <suspend/>
+
+    <checkbox 
+    label="F_Flash2A"
+    optional="1"
+    randomize="0"
+    ss:questionClassNames="sq-timertest"
+    timertest:image="[rel ${pipe.FEImage}.jpg]"
+    timertest:timerLimit="1000"
+    uses="prstimer.2">
+      <title>Please review the image below. After 1 second, you will automatically be advanced to the next page.</title>
+      <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+<style>
+.sq-timertest .sq-timertestContainer {
+	background-color:white;
+}
+
+</style>
+]]></style>
+    </checkbox>
+
+    <suspend/>
+
+    <textarea 
+    label="F_Flash2B"
+    height="10"
+    optional="0"
+    randomize="0"
+    width="50">
+      <title>What <u>else</u> have you seen? How would you describe this product to a friend? What is your understanding of this product?</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <block label="ImplicitArrow" cond="False" builder:title="Attitudinal">
+    <autofill label="ARROW_IMG" randomize="0" where="execute,survey,report">
+      <title>a new autofill question</title>
+      <row label="r1" autofill="True"><img src="[rel arrows.jpg]" constrain="true" title="survey image" class="survey_image" height="150" /></row>
+    </autofill>
+
+    <suspend/>
+
+    <block label="ImplicitPractice" builder:title="Implicit with Arrows Practice">
+      <html label="IM0a"><h2>&amp;nbsp;</h2>
+<span style="font-size: 12pt; color: #000000;"><span style="font-size: 12pt; color: #000000;">You are now going to see an image containing 3 products on your screen. Please pay attention as it’s going to be a short exposure.<br /><br />This brief exposure will be followed by several words.&amp;nbsp; For each word, you will have <u>3 seconds</u> to select the product that <u>best fits</u> the statement, <u>using the left, up/down and right keys of your keyboard</u><strong>:</strong><br /><br /></span></span>
+<ul>
+<li><span style="font-size: 12pt;"><strong>Left key</strong> selects the product <strong>on the left<br /></strong></span></li>
+<li><span style="font-size: 12pt;"><strong>Up/down keys</strong> select the product <strong>in the middle<br /></strong></span></li>
+<li><span style="font-size: 12pt;"><strong>Right key</strong> selects the product <strong>on the right</strong></span></li>
+</ul>
+<span style="font-size: 12pt; color: #000000;"><span style="font-size: 12pt; color: #000000;"><br /><br /></span></span>
+<div align="center"><img src="[rel arrows.jpg]" constrain="true" title="survey image" class="survey_image" height="150" /></div></html>
+
+      <suspend/>
+
+      <html label="ReadyScreen"><span style="font-size: 12pt;">Again, be as quick as possible, you only have <strong>3</strong><strong> seconds</strong> to answer for each word.</span><br /><br /><span style="font-size: 12pt;">Ready? Please prepare your 2 hands / fingers above above the left, up or down, and right keys.</span></html>
+
+      <suspend/>
+
+      <pipe label="FEImage1" capture="">
+        <case label="r1" cond="True">p01</case>
+        <case label="r10" cond="1"/></pipe>
+      <pipe label="FEImage2" capture="">
+        <case label="r1" cond="Phase.r1">aa1</case>
+        <case label="r2" cond="Phase.r2">bb1</case>
+        <case label="r3" cond="Phase.r3">cc1</case>
+        <case label="r4" cond="Phase.r4">dd1</case>
+        <case label="r10" cond="1"/></pipe>
+      <suspend/>
+
+      <checkbox 
+     label="IM0A"
+     optional="1"
+     randomize="0"
+     ss:questionClassNames="sq-timertest"
+     timertest:image="[rel ${pipe.FEImage1}.jpg]"
+     timertest:showText="Click here to see the visual."
+     timertest:timerLimit="4000"
+     uses="prstimer.2">
+        <title>Please review the image below. After 1/2&amp;nbsp;second, you will automatically be advanced to the next page.</title>
+        <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+]]></style>
+      </checkbox>
+
+      <suspend/>
+
+      <radio 
+     label="IM0B"
+     cardsort:animationDuration="0"
+     cardsort:bucketCSS="width: 33%; background: white;"
+     cardsort:bucketSelectCSS="background: white;"
+     cardsort:cardCSS="height: 100px;"
+     cardsort:completionHTML=" "
+     cardsort:displayCounter="0"
+     cardsort:displayNavigation="0"
+     cardsort:displayProgress="0"
+     cardsort:dragAndDrop="0"
+     optional="1"
+     randomize="0"
+     shuffle="rows"
+     uses="cardsort.6">
+        <title>&amp;nbsp;</title>
+        <row label="r1"><span style="font-size: 36pt;">Fresh-scented</span></row>
+        <row label="r2"><span style="font-size: 36pt;">Removes stains</span></row>
+        <row label="r3"><span style="font-size: 36pt;">Efficient</span></row>
+        <row label="r4"><span style="font-size: 36pt;">Natural</span></row>
+        <row label="r5"><span style="font-size: 36pt;">Gentle</span></row>
+        <col label="c1"><img src="/survey/selfserve/1da7/2009118/Left.jpg" style="max-height: 75px;" title="Left.jpg" /></col>
+        <col label="c2"><img src="/survey/selfserve/1da7/2009118/Down.jpg" style="max-height: 75px;" title="Down.jpg" /></col>
+        <col label="c3"><img src="/survey/selfserve/1da7/2009118/Right.jpg" style="max-height: 75px;" title="Right.jpg" /></col>
+        <style name="question.after"><![CDATA[
+<style>
+#question_packAttTimes{
+	display:none;
+}
+
+</style>
+]]></style>
+        <style name="question.after" wrap="ready"><![CDATA[
+var nextButton = $ (".sq-cardsort-next");
+    var prevButton = $ (".sq-cardsort-previous");
+    nextButton.hide();
+    prevButton.hide();
+    nextFunction();
+    
+    nextButton.click(function(){
+      nextFunction();
+    });
+    
+    var timeOut;
+    
+var qn = ${jsexport()}; //returns json object of the question
+var order = [];
+
+for (var i = 0; i < qn.rows.length; i++) {
+    order.push(qn.rows[i].index);
+}
+
+console.log(order)
+
+        
+    function setTimeOut() {
+    	clearTimeout(timeOut);
+        timeOut = setTimeout( function() {
+                        nextButton.click();
+    					order.shift();
+            			timeStart = $ .now();
+            			if (isNaN( $ ('.sq-cardsort-card:visible').attr('index'))) {
+            				$ ("#btn_continue").click();
+            			}
+                    }, 3000);
+    }
+
+    
+    
+    function nextFunction(){
+    	setTimeOut()
+    	
+    }
+    
+    
+
+
+
+    
+
+console.log(qn)    	
+  
+  		timeStart = $ .now();
+  		
+        $ (document).on('click','.sq-cardsort-bucket',function(){ 
+            
+            time = ($ .now()-timeStart)/1000;
+            
+            var ind = $ ('.sq-cardsort-card:visible').attr('index'); //return index of row shown
+            
+            console.log(ind)
+            console.log(order)
+
+            index = order.shift();
+            
+            console.log("index:"+index);
+            console.log(time);
+            	
+            $ ('input[type=text]:eq('+index+')').val(time);
+
+            
+            if (isNaN( $ ('.sq-cardsort-card:visible').attr('index'))) {
+            				$ ("#btn_continue").click();
+            			}
+                        
+            
+        });		
+		
+		$ (document).keydown(function( event ) {
+			$ ('.sq-cardsort-bucket-c1').removeClass('sq-cardsort-state-hovered');
+			$ ('.sq-cardsort-bucket-c2').removeClass('sq-cardsort-state-hovered');
+			$ ('.sq-cardsort-bucket-c3').removeClass('sq-cardsort-state-hovered');
+			var key = event.keyCode;
+          	switch(true) {
+				case (key == 37): //Left
+                    
+    				setTimeOut();
+					$ ('.sq-cardsort-bucket-c1').addClass('sq-cardsort-state-hovered');
+					setTimeout( function() {
+                        $ ('.sq-cardsort-bucket-c1').trigger("click");
+            			timeStart = $ .now();
+                    }, 50);
+					break;
+				case (key == 38): //Up
+				case (key == 40): //down
+                    
+    				setTimeOut();
+					$ ('.sq-cardsort-bucket-c2').addClass('sq-cardsort-state-hovered');
+          			setTimeout( function() {
+                        $ ('.sq-cardsort-bucket-c2').trigger("click");
+            			timeStart = $ .now();
+                    }, 50);
+                    break;
+				case (key == 39): //right
+                      
+    				setTimeOut();
+					$ ('.sq-cardsort-bucket-c3').addClass('sq-cardsort-state-hovered');
+          			setTimeout( function() {
+                        $ ('.sq-cardsort-bucket-c3').trigger("click");
+            			timeStart = $ .now();
+                    }, 50);
+                    break;
+                
+				default:
+					break;
+		  	}
+             
+		});
+]]></style>
+      </radio>
+
+      <text 
+     label="packAttTimes"
+     cond="not(gv.isSST())"
+     randomize="0">
+        <title>Pack Attribute Times</title>
+        <row label="r1">Fresh-scented</row>
+        <row label="r2">Removes stains</row>
+        <row label="r3">Efficient</row>
+        <row label="r4">Natural</row>
+        <row label="r5">Gentle</row>
+      </text>
+
+      <suspend/>
+
+      <float 
+     label="packAttTimesnlive"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Pack Attribute Times</title>
+        <exec>
+for row in packAttTimes.rows:
+	packAttTimesnlive.rows[row.index].val = float(packAttTimes.rows[row.index].val or 0)
+        </exec>
+
+        <row label="r1">Fresh-scented</row>
+        <row label="r2">Removes stains</row>
+        <row label="r3">Efficient</row>
+        <row label="r4">Natural</row>
+        <row label="r5">Gentle</row>
+      </float>
+    </block>
+
+    <suspend/>
+
+    <block label="ImplicitTest" cond="False" builder:title="Implicit with Arrows Test">
+      <html label="IM2Intro"><h2>&amp;nbsp;</h2>
+<span style="font-size: 12pt; color: #000000;"><span style="font-size: 12pt; color: #000000;">You are now going to see another image containing 3 products on your screen. Please pay attention as it’s going to be a short exposure.<br /><br />This brief exposure will be followed by several words. Again, for each word, please select <u>as quickly as possible</u> the product that <u>best fits</u> the statement, <u>using the left, up/down and right keys of your keyboard</u>:<br /><br /></span></span>
+
+<ul>
+<li><span style="font-size: 12pt;"><strong>Left key</strong> selects the product <strong>on the left<br /></strong></span></li>
+<li><span style="font-size: 12pt;"><strong>Up/down keys</strong> select the product <strong>in the middle<br /></strong></span></li>
+<li><span style="font-size: 12pt;"><strong>Right key</strong> selects the product <strong>on the right</strong></span></li>
+</ul>
+<span style="font-size: 12pt; color: #000000;"><span style="font-size: 12pt; color: #000000;"><br /><br /></span></span>
+<div align="center"><img src="[rel arrows.jpg]" constrain="true" title="survey image" class="survey_image" height="150" /></div>
+<span style="font-size: 12pt; color: #000000;"><br />Again, please be as quick as possible.<br /><br />Ready? Please click continue to proceed.<br /></span></html>
+
+      <suspend/>
+
+      <checkbox 
+     label="IM2A"
+     optional="1"
+     randomize="0"
+     ss:questionClassNames="sq-timertest"
+     timertest:image="[rel ${pipe.FEImage2}.jpg]"
+     timertest:showText="Click here to see the visual."
+     timertest:timerLimit="4000"
+     uses="prstimer.2">
+        <title>Please review the image below. After 1/2&amp;nbsp;second, you will automatically be advanced to the next page.</title>
+        <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel fe_updated.js]"></script>
+]]></style>
+      </checkbox>
+
+      <suspend/>
+
+      <radio 
+     label="IM2B"
+     cardsort:animationDuration="0"
+     cardsort:bucketCSS="width: 33%; background: white;"
+     cardsort:bucketSelectCSS="background: white;"
+     cardsort:cardCSS="height: 100px;"
+     cardsort:completionHTML=" "
+     cardsort:displayCounter="0"
+     cardsort:displayNavigation="0"
+     cardsort:displayProgress="0"
+     cardsort:dragAndDrop="0"
+     optional="1"
+     randomize="0"
+     shuffle="rows"
+     uses="cardsort.6">
+        <title>&amp;nbsp;</title>
+        <row label="r1"><span style="font-size: 36pt;">Effective</span></row>
+        <row label="r2"><span style="font-size: 36pt;">Trustworthy</span></row>
+        <row label="r3"><span style="font-size: 36pt;">Clinical</span></row>
+        <row label="r4"><span style="font-size: 36pt;">Premium</span></row>
+        <col label="c1"><img src="/survey/selfserve/1da7/2009118/Left.jpg" style="max-height: 75px;" title="Left.jpg" /></col>
+        <col label="c2"><img src="/survey/selfserve/1da7/2009118/Down.jpg" style="max-height: 75px;" title="Down.jpg" /></col>
+        <col label="c3"><img src="/survey/selfserve/1da7/2009118/Right.jpg" style="max-height: 75px;" title="Right.jpg" /></col>
+        <style name="question.after"><![CDATA[
+<style>
+#question_packAttTimes2{
+	display:none;
+}
+
+</style>
+]]></style>
+        <style name="question.after" wrap="ready"><![CDATA[
+var nextButton = $ (".sq-cardsort-next");
+    var prevButton = $ (".sq-cardsort-previous");
+    nextButton.hide();
+    prevButton.hide();
+    nextFunction();
+    
+    nextButton.click(function(){
+      nextFunction();
+    });
+    
+    var timeOut;
+    
+var qn = ${jsexport()}; //returns json object of the question
+var order = [];
+
+for (var i = 0; i < qn.rows.length; i++) {
+    order.push(qn.rows[i].index);
+}
+
+console.log(order)
+
+        
+    function setTimeOut() {
+    	clearTimeout(timeOut);
+        timeOut = setTimeout( function() {
+                        nextButton.click();
+    					order.shift();
+            			timeStart = $ .now();
+            			if (isNaN( $ ('.sq-cardsort-card:visible').attr('index'))) {
+            				$ ("#btn_continue").click();
+            			}
+                    }, 400000);
+    }
+
+    
+    
+    function nextFunction(){
+    	setTimeOut()
+    	
+    }
+    
+    
+
+
+
+    
+
+console.log(qn)    	
+  
+  		timeStart = $ .now();
+  		
+        $ (document).on('click','.sq-cardsort-bucket',function(){ 
+            
+            time = ($ .now()-timeStart)/1000;
+            
+            var ind = $ ('.sq-cardsort-card:visible').attr('index'); //return index of row shown
+            
+            console.log(ind)
+            console.log(order)
+
+            index = order.shift();
+            
+            console.log("index:"+index);
+            console.log(time);
+            	
+            $ ('input[type=text]:eq('+index+')').val(time);
+
+            
+            if (isNaN( $ ('.sq-cardsort-card:visible').attr('index'))) {
+            				$ ("#btn_continue").click();
+            			}
+                        
+            
+        });		
+		
+		$ (document).keydown(function( event ) {
+			$ ('.sq-cardsort-bucket-c1').removeClass('sq-cardsort-state-hovered');
+			$ ('.sq-cardsort-bucket-c2').removeClass('sq-cardsort-state-hovered');
+			$ ('.sq-cardsort-bucket-c3').removeClass('sq-cardsort-state-hovered');
+			var key = event.keyCode;
+          	switch(true) {
+				case (key == 37): //Left
+                    
+    				setTimeOut();
+					$ ('.sq-cardsort-bucket-c1').addClass('sq-cardsort-state-hovered');
+					setTimeout( function() {
+                        $ ('.sq-cardsort-bucket-c1').trigger("click");
+            			timeStart = $ .now();
+                    }, 50);
+					break;
+				case (key == 38): //Up
+				case (key == 40): //down
+                    
+    				setTimeOut();
+					$ ('.sq-cardsort-bucket-c2').addClass('sq-cardsort-state-hovered');
+          			setTimeout( function() {
+                        $ ('.sq-cardsort-bucket-c2').trigger("click");
+            			timeStart = $ .now();
+                    }, 50);
+                    break;
+				case (key == 39): //right
+                      
+    				setTimeOut();
+					$ ('.sq-cardsort-bucket-c3').addClass('sq-cardsort-state-hovered');
+          			setTimeout( function() {
+                        $ ('.sq-cardsort-bucket-c3').trigger("click");
+            			timeStart = $ .now();
+                    }, 50);
+                    break;
+                
+				default:
+					break;
+		  	}
+             
+		});
+]]></style>
+      </radio>
+
+      <text 
+     label="packAttTimes2"
+     cond="not(gv.isSST())"
+     randomize="0">
+        <title>Pack Attribute Times</title>
+        <row label="r1">Effective</row>
+        <row label="r2">Trustworthy</row>
+        <row label="r3">Clinical</row>
+        <row label="r4">Premium</row>
+      </text>
+
+      <suspend/>
+
+      <float 
+     label="packAttTimesnlive2"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Pack Attribute Times</title>
+        <exec>
+for row in packAttTimes2.rows:
+	packAttTimesnlive2.rows[row.index].val = float(packAttTimes2.rows[row.index].val or 0)
+        </exec>
+
+        <row label="r1">Effective</row>
+        <row label="r2">Trustworthy</row>
+        <row label="r3">Clinical</row>
+        <row label="r4">Premium</row>
+      </float>
+    </block>
+
+    <suspend/>
+
+    <block label="Attitudinal" builder:title="Attitudinal">
+      <suspend/>
+
+      <html label="EmotionInstruction" where="survey"><strong>In a moment you will see a picture of a package. Once the pack appears, please select the one face below that best represents the way this package makes you feel....</strong><br /><br /><img width="1000px" src="/survey/selfserve/1da7/Facesx.jpg" /></html>
+
+      <suspend/>
+
+      <exec where="execute,survey,report">
+p.startTime = timeSpent()
+      </exec>
+
+      <suspend/>
+
+      <radio 
+     label="Emotion"
+     atm1d:showInput="0"
+     atm1d:viewMode="horizontal"
+     randomize="0"
+     uses="atm1d.9">
+        <title>Please select the one face that best fits the way this packaging makes you feel.</title>
+        <comment><div align="center">[pipe: EmotionImage]</div></comment>
+        <row label="r1"><img width="125px" src="[rel NewFace1x.jpg]" /></row>
+        <row label="r2"><img width="125px" src="[rel NewFace2x.jpg]" /></row>
+        <row label="r3"><img width="125px" src="[rel NewFace3x.jpg]" /></row>
+        <row label="r4"><img width="125px" src="[rel NewFace4x.jpg]" /></row>
+        <row label="r5"><img width="125px" src="[rel NewFace5x.jpg]" /></row>
+      </radio>
+
+      <suspend/>
+
+      <exec where="execute,survey,report">
+p.endTime = timeSpent()
+      </exec>
+
+      <suspend/>
+
+      <float 
+     label="EmotionTime"
+     optional="0"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Q1 Time</title>
+        <comment>Time it took for Q1</comment>
+        <exec>
+EmotionTime.val = p.endTime - p.startTime
+        </exec>
+
+      </float>
+
+      <suspend/>
+
+      <loop label="l1" vars="image">
+        <title>Likes</title>
+        <block label="b1_likes" builder:title="default loop block">
+          <textarea 
+       label="Q_Likes_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       width="50">
+            <title>Using your mouse, please highlight the items/aspects of the packaging you like most (if any).&amp;nbsp;&amp;nbsp;If there's nothing that you specifically like, please click "Nothing" at the bottom of the page.<br /><img src="/survey/selfserve/1da7/2009118/clickNdrag.gif" width="200px" /></title>
+            <comment>Using your mouse, map each region using the specified color.</comment>
+            <col label="c1" optional="1">Like</col>
+          </textarea>
+
+          <checkbox 
+       label="Q_LikesNone_[loopvar: label]"
+       atleast="0"
+       optional="1"
+       randomize="0">
+            <title>&amp;nbsp;</title>
+            <validate>
+if Q_Likes_[loopvar: label].c1.val != "" and Q_LikesNone_[loopvar: label].r1:
+      error(res.MapError)
+if Q_Likes_[loopvar: label].c1.val == "" and not(Q_LikesNone_[loopvar: label].r1):
+      error(res.MapError2)
+            </validate>
+
+            <row label="r1">Nothing</row>
+          </checkbox>
+
+          <textarea 
+       label="Q_Likes_First_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       where="execute"
+       width="50">
+            <title>First highlight</title>
+            <virtual>
+Q_Likes_First_[loopvar: label].c1.val = Q_Likes_[loopvar: label].c1.val.split('\r\n')[0]
+            </virtual>
+
+            <col label="c1" optional="1">First Like</col>
+          </textarea>
+
+          <textarea 
+       label="Q_Likes_Second_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       where="execute"
+       width="50">
+            <title>Second highlight</title>
+            <virtual>
+if len(Q_Likes_[loopvar: label].c1.val.split('\r\n')) gt 1:
+        Q_Likes_Second_[loopvar: label].c1.val = Q_Likes_[loopvar: label].c1.val.split('\r\n')[1]
+            </virtual>
+
+            <col label="c1" optional="1">Second Like</col>
+          </textarea>
+
+          <textarea 
+       label="Q_Likes_Third_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       where="execute"
+       width="50">
+            <title>Third highlight</title>
+            <virtual>
+if len(Q_Likes_[loopvar: label].c1.val.split('\r\n')) gt 2:
+        Q_Likes_Third_[loopvar: label].c1.val = Q_Likes_[loopvar: label].c1.val.split('\r\n')[2]
+            </virtual>
+
+            <col label="c1" optional="1">Third Like</col>
+          </textarea>
+        </block>
+
+        <looprow label="1" cond="Phase.r1">
+          <loopvar name="image">aa_e.jpg</loopvar>
+        </looprow>
+
+        <looprow label="2" cond="Phase.r2">
+          <loopvar name="image">ab_e.jpg</loopvar>
+        </looprow>
+
+        <looprow label="3" cond="Phase.r3">
+          <loopvar name="image">ac_e.jpg</loopvar>
+        </looprow>
+
+        <looprow label="4" cond="Phase.r4">
+          <loopvar name="image">ad_e.jpg</loopvar>
+        </looprow>
+      </loop>
+
+      <suspend/>
+
+      <loop label="l2" vars="image">
+        <title>Dislikes</title>
+        <block label="b1_dislikes" builder:title="default loop block">
+          <textarea 
+       label="Q_Dislikes_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       width="50">
+            <title>And now, using your mouse, please highlight the items/aspects of the packaging you like the least (if any). If there's nothing that you specifically like, please click "Nothing" at the bottom of the page.<br /><img src="/survey/selfserve/1da7/2009118/clickNdrag.gif" width="200px" /></title>
+            <comment>Using your mouse, map each region using the specified color.</comment>
+            <col label="c1" imgmap:color="#ED1C24" optional="1">Dislike</col>
+          </textarea>
+
+          <checkbox 
+       label="Q_DislikesNone_[loopvar: label]"
+       atleast="0"
+       optional="1"
+       randomize="0">
+            <title>&amp;nbsp;</title>
+            <validate>
+if Q_Dislikes_[loopvar: label].c1.val != "" and Q_DislikesNone_[loopvar: label].r1:
+      error(res.MapError)
+if Q_Dislikes_[loopvar: label].c1.val == "" and not(Q_DislikesNone_[loopvar: label].r1):
+      error(res.MapError2)
+            </validate>
+
+            <row label="r1">Nothing</row>
+          </checkbox>
+
+          <textarea 
+       label="Q_Dislikes_First_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       where="execute"
+       width="50">
+            <title>First highlight</title>
+            <virtual>
+Q_Dislikes_First_[loopvar: label].c1.val = Q_Dislikes_[loopvar: label].c1.val.split('\r\n')[0]
+            </virtual>
+
+            <col label="c1" optional="1">First Dislike</col>
+          </textarea>
+
+          <textarea 
+       label="Q_Dislikes_Second_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       where="execute"
+       width="50">
+            <title>Second highlight</title>
+            <virtual>
+if len(Q_Dislikes_[loopvar: label].c1.val.split('\r\n')) gt 1:
+        Q_Dislikes_Second_[loopvar: label].c1.val = Q_Dislikes_[loopvar: label].c1.val.split('\r\n')[1]
+            </virtual>
+
+            <col label="c1" optional="1">Second Dislike</col>
+          </textarea>
+
+          <textarea 
+       label="Q_Dislikes_Third_[loopvar: label]"
+       grouping="rows"
+       height="10"
+       imgmap:image="[loopvar: image]"
+       randomize="0"
+       ss:questionClassNames="sq-imgmap"
+       sst="0"
+       uses="imgmap.4"
+       where="execute"
+       width="50">
+            <title>Third highlight</title>
+            <virtual>
+if len(Q_Dislikes_[loopvar: label].c1.val.split('\r\n')) gt 2:
+        Q_Dislikes_Third_[loopvar: label].c1.val = Q_Dislikes_[loopvar: label].c1.val.split('\r\n')[2]
+            </virtual>
+
+            <col label="c1" optional="1">Third Dislike</col>
+          </textarea>
+        </block>
+
+        <looprow label="1" cond="Phase.r1">
+          <loopvar name="image">aa_e.jpg</loopvar>
+        </looprow>
+
+        <looprow label="2" cond="Phase.r2">
+          <loopvar name="image">ab_e.jpg</loopvar>
+        </looprow>
+
+        <looprow label="3" cond="Phase.r3">
+          <loopvar name="image">ac_e.jpg</loopvar>
+        </looprow>
+
+        <looprow label="4" cond="Phase.r4">
+          <loopvar name="image">ad_e.jpg</loopvar>
+        </looprow>
+      </loop>
+
+      <suspend/>
+
+      <textarea 
+     label="Q_InitialImpressions"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="60">
+        <title>Based on this <strong>[pipe: TestBrand]</strong> packaging, what are your impressions of this <u>product</u>? What, if anything, is different about this product relative to others in the category?<br /><br /><em><strong>Please be as detailed and thorough as possible and indicate whether your response is positive or negative in nature.</strong></em></title>
+        <comment>[pipe: PH_IMG]</comment>
+      </textarea>
+
+      <suspend/>
+
+      <radio 
+     label="Q_OA"
+     atm1d:showInput="0"
+     atm1d:viewMode="horizontal"
+     randomize="0"
+     uses="atm1d.9">
+        <title>How much do you like or dislike the <strong>[pipe: TestBrand]</strong> <u>packaging?</u></title>
+        <comment>[pipe: PH_IMG]</comment>
+        <row label="r1">Like it very much</row>
+        <row label="r2">Like it somewhat</row>
+        <row label="r3">Neither like nor dislike it</row>
+        <row label="r4">Dislike it somewhat</row>
+        <row label="r5">Dislike it very much</row>
+      </radio>
+
+      <suspend/>
+
+      <block label="Implicit" builder:title="Implicit">
+        <pipe label="JobNumberI" capture="">
+          <case label="r1" cond="True">k9902</case>
+          <case label="r10" cond="1"/></pipe>
+        <suspend/>
+
+        <pipe label="ImplicitImage" capture="">
+          <case label="r1" cond="Phase.r1">aaa</case>
+          <case label="r2" cond="Phase.r2">bbb</case>
+          <case label="r3" cond="Phase.r3">ccc</case>
+          <case label="r4" cond="Phase.r4">ddd</case>
+          <case label="r10" cond="1"/></pipe>
+        <pipe label="ImplicitImage2" capture="">
+          <case label="r1" cond="Competitor.r1">xxx</case>
+          <case label="r2" cond="Competitor.r2">yyy</case>
+          <case label="r10" cond="1"/></pipe>
+        <suspend/>
+
+        <html label="ImplicitInstructions" where="survey">You will now see some words and phrases that could be used to describe the appearance of various products. <br /><br />Which of the words or phrases below, describe the design and appearance of this <strong>[pipe: TestBrand]</strong> packaging?<br /><br />When the product appears, use your left/right arrows on your keyboard to select which phrase best describes that product. Please go as fast as you can while selecting the appropriate phrase.<br /><br /><img src="/survey/selfserve/1da7/arrows.gif" class="survey_image survey-image-original" title="arrows.gif" /><br /><br />Click "continue" to begin.<br /><br />
+<div style="display: none;"><img src="/survey/selfserve/1da7/${pipe.JobNumberI}/${pipe.ImplicitImage}.jpg" /></div></html>
+
+        <checkbox 
+      label="vPackAtt_unfiltered"
+      atleast="1"
+      onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+      randomize="0">
+          <title>Pack Att Data</title>
+          <virtual>
+for col in Q_PackAtt_Implicit.cols:
+	if Q_PackAtt_Implicit.cols[col.index].ival gt 0:
+		data.cols[col.index].val=1
+          </virtual>
+
+        </checkbox>
+
+        <checkbox 
+      label="vPackAtt_filtered"
+      atleast="1"
+      onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+      randomize="0">
+          <title>Pack Att Data omiting those more than 10 seconds</title>
+          <virtual>
+for col in Q_PackAtt_Implicit.cols:
+	if (Q_PackAtt_Implicit.cols[col.index].ival gt 0 and Q_PackAtt_Implicit.cols[col.index].ival lt 10001):
+		data.cols[col.index].val=1
+          </virtual>
+
+        </checkbox>
+
+        <suspend/>
+
+        <number 
+      label="Q_PackAtt_Implicit"
+      randomize="0"
+      size="5">
+          <title>You will now see some words and phrases that could be used to describe the appearance of various products.<br />Which of the words or phrases below describe the design and appearance of this<strong>&amp;nbsp;Fungi-Nail&amp;nbsp;</strong>packaging?</title>
+          <comment>Do you think the <strong>Fungi-Nail</strong>&amp;nbsp;packaging is…</comment>
+          <col label="c1">Attractive</col>
+          <col label="c2">Unattractive</col>
+          <col label="c3">Premium</col>
+          <col label="c4">Cheap</col>
+          <col label="c5">Professional</col>
+          <col label="c6">Amateur</col>
+          <col label="c7">Modern</col>
+          <col label="c8">Old-Fashioned</col>
+          <col label="c9">Informative</col>
+          <col label="c10">Not Informative</col>
+          <col label="c11">Clear</col>
+          <col label="c12">Confusing</col>
+          <col label="c13">Exciting</col>
+          <col label="c14">Boring</col>
+          <col label="c15">Easy to Read</col>
+          <col label="c16">Hard to Read</col>
+          <row label="r1">USE THE LEFT AND RIGHT ARROW KEYS TO MOVE THE PRODUCT TO THE ATTRIBUTE.<br />Do you think the <strong>Fungi-Nail</strong>&amp;nbsp;packaging is...</row>
+          <style name="question.after"><![CDATA[
+<style>
+            #middle {
+                height:90%;
+                width:100%;
+                //overflow:auto;
+                margin:auto;
+                position:absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+
+            #container {
+                min-height:800px;
+                width:100%;
+                background-size: contain;
+            }
+
+            .survey-page {
+            	padding: 0;
+            	
+            }
+
+            .survey-body {
+            	width: 100%;
+            	background-color: white;
+            	border: 0;
+            	box-shadow: none !important;
+            	-webkit-box-shadow: none !important;
+            	margin: 0;
+            	padding: 0;
+            	
+            }
+
+
+
+            #product img {
+                vertical-align: middle;
+                max-width: 85%;
+                max-height:400px;
+                position:relative;
+                z-index:10;
+            }
+
+            .svg-triangle{
+              margin: 0 auto;
+              width: 100%;
+              height: 100%;
+              fill: rgba(106, 90, 205, .5);
+              stroke-width:0;
+            }
+
+            #leftTxt{
+            	color: white;
+
+            }
+
+            #rightTxt{
+            	color: white;
+
+            }
+
+        </style>
+    </head>
+    <body>
+    <div id="count" style="display:none">0</div>
+            <div id="container">
+            <p style="text-align:center; font-size:1.5em; margin-top: 2%;">
+                ${Q_PackAtt_Implicit.r1.text}
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        <div id="middle">
+            <div id="left" style="width:30%; float:left; overflow: hidden;">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 400 600" preserveAspectRatio="xMinYMax"  >
+                    <path id="leftPath" d="M 0 0 L 385 285 A 20 20, 0, 0, 1, 385 315 L 0 600"/>
+                    <foreignobject class="node" x="10%" y="45%" text-anchor="middle" width="300" height="100"  >
+                    	<div id="leftTxt" style="font-family: 'Arial';font-size:24px;text-transform: uppercase;color:white;"></div>
+                    </foreignobject>
+                </svg>
+            </div>
+            <div id="product" style="float:left; width:40%;margin-top:5%;text-align:center"></div>
+            <div id="right" style="width:30%; float:right;">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 400 600" preserveAspectRatio="xMaxYMax" >
+                    <path id="rightPath" d="M 400 0 L 15 285 A 20 20, 0, 0, 0, 15 315 L 400 600"/>
+                    <foreignobject class="node" x="20%" y="45%" text-anchor="middle" width="300" height="100" >
+                    	<div id="rightTxt" style="font-family: 'Arial';font-size:24px;text-transform: uppercase;color:white;"></div>
+                    </foreignobject>
+                </svg>
+            </div>
+        </div>
+            <p style="clear:both;">&nbsp;</p>
+        </div>
+        <script>
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+images = ['${pipe.ImplicitImage}.jpg'];
+
+var qn = ${jsexport()}; //returns json object of the question
+console.log(qn)
+
+// Create a list from columns of question
+
+var responses = [];
+
+for (var i = 0; i < qn.cols.length; i=i+2) {
+	var left = qn.cols[i].text;
+	var right = qn.cols[i+1].text;
+	responses.push(left + "|" + right);
+}
+
+console.log(responses)
+
+
+
+combinedarray = [];
+
+for (i=0;i<images.length;i++){
+	for (r=0;r<responses.length;r++){
+		combinedarray.push([images[i],responses[r]]);
+  	}
+}
+
+
+window.array = shuffle(combinedarray);
+
+  $ ('#leftTxt').html(window.array[0][1].split('|')[0]);
+  $ ('#rightTxt').html(window.array[0][1].split('|')[1]);
+  $ ('#product').html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[0][0]+'"/>');
+
+            //var audioElement = document.createElement('audio');
+            //audioElement.setAttribute('src', '1606121/Laser2.mp3');
+
+            $ (document).ready(function() {
+    			$ ('.question').hide();
+    			$ ('.survey-header').hide();
+    			$ ('.survey-buttons').hide();
+            });
+		start = $.now();
+		moved = false;
+            $ (document).keydown(function(e) {
+            	count = parseInt($ ('#count').html());
+            	row = $.inArray(window.array[count][0],images);
+			      if((e.which == 37 || e.which == 39) && moved == false) {
+			        $ ('#count').html(count+1);
+      				moved = true;
+        			time = $.now()-start;
+					//audioElement.play();
+                		if (e.keyCode == 37) { //left arrow
+			        		col = $.inArray(window.array[count][1],responses)*2;
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                    		$ ("#product img").animate({
+                        		left: '-600px',
+                           		height: '40px',
+                        		top: '+200px',
+                        		opacity: '0'
+                    		}, 500, function() {
+                        		if (count+1==window.array.length){
+                              		$ ('#btn_continue').click();
+	                        		return false;
+                        		}
+                        		$ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+	                            moved = false;
+			                });
+		                }
+                		else if (e.keyCode == 39) { //right arrow
+			        		col = $.inArray(window.array[count][1],responses)*2+1;
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                    		$ ("#product img").animate({
+                        		left: '600px',
+                           		height: '40px',
+                        		top: '+200px',
+                        		opacity: '0'
+                    		}, 500, function() {
+                        		if (count+1==window.array.length){
+                              		$ ('#btn_continue').click();
+	                        		return false;
+                        		}
+                        		$ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+                                moved = false;
+			                });
+		                }
+						start = $.now();
+	        		}
+            	});
+
+</script>
+]]></style>
+        </number>
+
+        <float 
+      label="Q_PackAtt_Implicit_Seconds"
+      onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+      randomize="0"
+      size="3">
+          <title>PackAtt in Seconds</title>
+          <virtual>
+for col in Q_PackAtt_Implicit.cols:
+	if (Q_PackAtt_Implicit.cols[col.index].ival gt 0 and Q_PackAtt_Implicit.cols[col.index].ival lt 10001):
+		data.cols[col.index].val = Q_PackAtt_Implicit.cols[col.index].ival / 1000.0
+          </virtual>
+
+        </float>
+
+        <float 
+      label="Implicit_TotalTimeSpent"
+      optional="0"
+      randomize="0"
+      where="execute,survey,report">
+          <title>PackAtt Total Time Spent in Seconds</title>
+          <virtual>
+Implicit_TotalTimeSpent.val =  (Q_PackAtt_Implicit.sum) / 1000.0
+          </virtual>
+
+        </float>
+
+        <radio 
+      label="ImplicitStraightliner"
+      randomize="0">
+          <title>Straightlined responses</title>
+          <virtual>
+if vPackAtt_unfiltered.c1 and vPackAtt_unfiltered.c3 and vPackAtt_unfiltered.c5 and vPackAtt_unfiltered.c7 and vPackAtt_unfiltered.c9 and vPackAtt_unfiltered.c11 and vPackAtt_unfiltered.c13 and vPackAtt_unfiltered.c15:  data.val=0
+elif vPackAtt_unfiltered.c2 and vPackAtt_unfiltered.c4 and vPackAtt_unfiltered.c6 and vPackAtt_unfiltered.c8 and vPackAtt_unfiltered.c10 and vPackAtt_unfiltered.c12 and vPackAtt_unfiltered.c14 and vPackAtt_unfiltered.c16:  data.val=1
+else:  data.val = 2
+          </virtual>
+
+          <row label="r1">Left straightliner</row>
+          <row label="r2">Right straightliner</row>
+          <row label="r3">Non straightliner</row>
+        </radio>
+      </block>
+
+      <suspend/>
+
+      <exec where="execute,survey,report">
+p.startTime = timeSpent()
+      </exec>
+
+      <suspend/>
+
+      <radio 
+     label="Q_Communication"
+     cardrating:navigation="0"
+     cardrating:progress="0"
+     randomize="0"
+     shuffle="rows"
+     uses="cardrating.1"
+     values="order">
+        <title>You will now see various phrases that could be used to describe <strong>over the counter products to treat fungus under and around the toenail&amp;nbsp;</strong>products. As you read each one, please select the one statement that best expresses how much you agree or disagree that the phrase applies to <strong>Fungi-Nail</strong>&amp;nbsp;products, <strong><u>based on the packaging you see here</u></strong>.</title>
+        <comment>[pipe: PH_IMG]<br /><br /><span style="font-size: 18pt; font-weight: bold;">[pipe: TestBrand] products...</span></comment>
+        <row label="r9">Are high quality products</row>
+        <row label="r10">Are for someone like me</row>
+        <row label="r11">Are made by a brand I can trust</row>
+        <row label="r12">Are better than other brands</row>
+        <row label="r13">Are effective at repairing skin</row>
+        <row label="r14">Are effective at killing fungus</row>
+        <row label="r15">Are fast acting</row>
+        <row label="r16">Provide maximum strength anti-fungal action</row>
+        <row label="r17">Improve nail appearance</row>
+        <row label="r18">Are effective at curing and preventing fungal infections</row>
+        <col label="c1" value="5">Agree Strongly</col>
+        <col label="c2" value="4">Agree Somewhat</col>
+        <col label="c3" value="3">Neither Agree Nor Disagree</col>
+        <col label="c4" value="2">Disagree Somewhat</col>
+        <col label="c5" value="1">Disagree Strongly</col>
+        <style name="question.after"><![CDATA[
+<script>
+$ ('.sq-cardrating-card').css('font-size','18pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1
+	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      		
+      	})
+
+	</script>
+]]></style>
+      </radio>
+
+      <exec where="execute,survey,report">
+p.endTime = timeSpent()
+      </exec>
+
+      <suspend/>
+
+      <radio 
+     label="Q_PI"
+     atm1d:showInput="0"
+     atm1d:viewMode="horizontal"
+     randomize="0"
+     uses="atm1d.9">
+        <title>Based on this packaging, how likely would you be to buy these<strong> [pipe: TestBrand]</strong> products, if they were available for the prices listed below?<br /><br /><strong>[pipe: Price]</strong></title>
+        <comment>[pipe: PH_IMG]</comment>
+        <row label="r1">Definitely would buy</row>
+        <row label="r2">Probably would buy</row>
+        <row label="r3">Might or might not buy</row>
+        <row label="r4">Probably would not buy</row>
+        <row label="r5">Definitely would not buy</row>
+      </radio>
+
+      <suspend/>
+
+      <radio 
+     label="Q_Value"
+     atm1d:showInput="0"
+     atm1d:viewMode="horizontal"
+     randomize="0"
+     uses="atm1d.9">
+        <title>How do you feel about the value of these <strong>Fungi-Nail</strong>&amp;nbsp;products if they were available for the prices listed below?<br /><br /><strong>[pipe: Price]</strong></title>
+        <comment>[pipe: PH_IMG]</comment>
+        <row label="r1">A very good value</row>
+        <row label="r2">A somewhat good value</row>
+        <row label="r3">An average value</row>
+        <row label="r4">A somewhat poor value</row>
+        <row label="r5">A very poor value</row>
+      </radio>
+
+      <suspend/>
+
+      <block label="CompetitorBlock" builder:title="New Block">
+        <block label="ImplicitComp" builder:title="Competitor Implicit">
+          <html label="ImplicitInstructions2" where="survey">You will now see some words and phrases that could be used to describe the appearance of various products. <br /><br />Which of the words or phrases below, describe the design and appearance of this <strong>[pipe: CompBrand]</strong> packaging?<br /><br />When the product appears, use your left/right arrows on your keyboard to select which phrase best describes that product. Please go as fast as you can while selecting the appropriate phrase.<br /><br /><img src="/survey/selfserve/1da7/arrows.gif" class="survey_image survey-image-original" title="arrows.gif" /><br /><br />Click "continue" to begin.<br /><br />
+<div style="display: none;"><img src="/survey/selfserve/1da7/${pipe.JobNumberI}/${pipe.ImplicitImage2}.jpg" /></div></html>
+
+          <checkbox 
+       label="vPackAtt2_unfiltered"
+       atleast="1"
+       onLoad="copy('Q_PackAtt_Implicit2', cols=True)"
+       randomize="0">
+            <title>Pack Att Data</title>
+            <virtual>
+for col in Q_PackAtt_Implicit2.cols:
+	if Q_PackAtt_Implicit2.cols[col.index].ival gt 0:
+		data.cols[col.index].val=1
+            </virtual>
+
+          </checkbox>
+
+          <checkbox 
+       label="vPackAtt2_filtered"
+       atleast="1"
+       onLoad="copy('Q_PackAtt_Implicit2', cols=True)"
+       randomize="0">
+            <title>Pack Att Data omiting those more than 10 seconds</title>
+            <virtual>
+for col in Q_PackAtt_Implicit2.cols:
+	if (Q_PackAtt_Implicit2.cols[col.index].ival gt 0 and Q_PackAtt_Implicit2.cols[col.index].ival lt 10001):
+		data.cols[col.index].val=1
+            </virtual>
+
+          </checkbox>
+
+          <suspend/>
+
+          <number 
+       label="Q_PackAtt_Implicit2"
+       randomize="0"
+       size="5">
+            <title>You will now see some words and phrases that could be used to describe the appearance of various products.<br />Which of the words or phrases below describe the design and appearance of this<strong>&amp;nbsp;[pipe: Competitor]&amp;nbsp;</strong>packaging?</title>
+            <comment>Do you think the <strong>[pipe: Competitor]</strong>&amp;nbsp;packaging is…</comment>
+            <col label="c1">Attractive</col>
+            <col label="c2">Unattractive</col>
+            <col label="c3">Premium</col>
+            <col label="c4">Cheap</col>
+            <col label="c5">Professional</col>
+            <col label="c6">Amateur</col>
+            <col label="c7">Modern</col>
+            <col label="c8">Old-Fashioned</col>
+            <col label="c9">Informative</col>
+            <col label="c10">Not Informative</col>
+            <col label="c11">Clear</col>
+            <col label="c12">Confusing</col>
+            <col label="c13">Exciting</col>
+            <col label="c14">Boring</col>
+            <col label="c15">Easy to Read</col>
+            <col label="c16">Hard to Read</col>
+            <row label="r1">USE THE LEFT AND RIGHT ARROW KEYS TO MOVE THE PRODUCT TO THE ATTRIBUTE.<br />Do you think the <strong>[pipe: Competitor]</strong>&amp;nbsp;packaging is...</row>
+            <style name="question.after"><![CDATA[
+<style>
+            #middle {
+                height:90%;
+                width:100%;
+                //overflow:auto;
+                margin:auto;
+                position:absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+
+            #container {
+                min-height:800px;
+                width:100%;
+                background-size: contain;
+            }
+
+            .survey-page {
+            	padding: 0;
+            	
+            }
+
+            .survey-body {
+            	width: 100%;
+            	background-color: white;
+            	border: 0;
+            	box-shadow: none !important;
+            	-webkit-box-shadow: none !important;
+            	margin: 0;
+            	padding: 0;
+            	
+            }
+
+
+
+            #product img {
+                vertical-align: middle;
+                max-width: 85%;
+                max-height:400px;
+                position:relative;
+                z-index:10;
+            }
+
+            .svg-triangle{
+              margin: 0 auto;
+              width: 100%;
+              height: 100%;
+              fill: rgba(106, 90, 205, .5);
+              stroke-width:0;
+            }
+
+            #leftTxt{
+            	color: white;
+
+            }
+
+            #rightTxt{
+            	color: white;
+
+            }
+
+        </style>
+    </head>
+    <body>
+    <div id="count" style="display:none">0</div>
+            <div id="container">
+            <p style="text-align:center; font-size:1.5em; margin-top: 2%;">
+                ${Q_PackAtt_Implicit2.r1.text}
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        <div id="middle">
+            <div id="left" style="width:30%; float:left; overflow: hidden;">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 400 600" preserveAspectRatio="xMinYMax"  >
+                    <path id="leftPath" d="M 0 0 L 385 285 A 20 20, 0, 0, 1, 385 315 L 0 600"/>
+                    <foreignobject class="node" x="10%" y="45%" text-anchor="middle" width="300" height="100"  >
+                    	<div id="leftTxt" style="font-family: 'Arial';font-size:24px;text-transform: uppercase;color:white;"></div>
+                    </foreignobject>
+                </svg>
+            </div>
+            <div id="product" style="float:left; width:40%;margin-top:5%;text-align:center"></div>
+            <div id="right" style="width:30%; float:right;">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 400 600" preserveAspectRatio="xMaxYMax" >
+                    <path id="rightPath" d="M 400 0 L 15 285 A 20 20, 0, 0, 0, 15 315 L 400 600"/>
+                    <foreignobject class="node" x="20%" y="45%" text-anchor="middle" width="300" height="100" >
+                    	<div id="rightTxt" style="font-family: 'Arial';font-size:24px;text-transform: uppercase;color:white;"></div>
+                    </foreignobject>
+                </svg>
+            </div>
+        </div>
+            <p style="clear:both;">&nbsp;</p>
+        </div>
+        <script>
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+images = ['${pipe.ImplicitImage2}.jpg'];
+
+var qn = ${jsexport()}; //returns json object of the question
+console.log(qn)
+
+// Create a list from columns of question
+
+var responses = [];
+
+for (var i = 0; i < qn.cols.length; i=i+2) {
+	var left = qn.cols[i].text;
+	var right = qn.cols[i+1].text;
+	responses.push(left + "|" + right);
+}
+
+console.log(responses)
+
+
+
+combinedarray = [];
+
+for (i=0;i<images.length;i++){
+	for (r=0;r<responses.length;r++){
+		combinedarray.push([images[i],responses[r]]);
+  	}
+}
+
+
+window.array = shuffle(combinedarray);
+
+  $ ('#leftTxt').html(window.array[0][1].split('|')[0]);
+  $ ('#rightTxt').html(window.array[0][1].split('|')[1]);
+  $ ('#product').html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[0][0]+'"/>');
+
+            //var audioElement = document.createElement('audio');
+            //audioElement.setAttribute('src', '1606121/Laser2.mp3');
+
+            $ (document).ready(function() {
+    			$ ('.question').hide();
+    			$ ('.survey-header').hide();
+    			$ ('.survey-buttons').hide();
+            });
+		start = $.now();
+		moved = false;
+            $ (document).keydown(function(e) {
+            	count = parseInt($ ('#count').html());
+            	row = $.inArray(window.array[count][0],images);
+			      if((e.which == 37 || e.which == 39) && moved == false) {
+			        $ ('#count').html(count+1);
+      				moved = true;
+        			time = $.now()-start;
+					//audioElement.play();
+                		if (e.keyCode == 37) { //left arrow
+			        		col = $.inArray(window.array[count][1],responses)*2;
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                    		$ ("#product img").animate({
+                        		left: '-600px',
+                           		height: '40px',
+                        		top: '+200px',
+                        		opacity: '0'
+                    		}, 500, function() {
+                        		if (count+1==window.array.length){
+                              		$ ('#btn_continue').click();
+	                        		return false;
+                        		}
+                        		$ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+	                            moved = false;
+			                });
+		                }
+                		else if (e.keyCode == 39) { //right arrow
+			        		col = $.inArray(window.array[count][1],responses)*2+1;
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                    		$ ("#product img").animate({
+                        		left: '600px',
+                           		height: '40px',
+                        		top: '+200px',
+                        		opacity: '0'
+                    		}, 500, function() {
+                        		if (count+1==window.array.length){
+                              		$ ('#btn_continue').click();
+	                        		return false;
+                        		}
+                        		$ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+                                moved = false;
+			                });
+		                }
+						start = $.now();
+	        		}
+            	});
+
+</script>
+]]></style>
+          </number>
+
+          <float 
+       label="Q_PackAtt_Implicit_Seconds2"
+       onLoad="copy('Q_PackAtt_Implicit2', cols=True)"
+       randomize="0"
+       size="3">
+            <title>PackAtt in Seconds</title>
+            <virtual>
+for col in Q_PackAtt_Implicit2.cols:
+	if (Q_PackAtt_Implicit2.cols[col.index].ival gt 0 and Q_PackAtt_Implicit2.cols[col.index].ival lt 10001):
+		data.cols[col.index].val = Q_PackAtt_Implicit2.cols[col.index].ival / 1000.0
+            </virtual>
+
+          </float>
+
+          <float 
+       label="Implicit_TotalTimeSpent2"
+       optional="0"
+       randomize="0"
+       where="execute,survey,report">
+            <title>PackAtt Total Time Spent in Seconds</title>
+            <virtual>
+Implicit_TotalTimeSpent2.val =  (Q_PackAtt_Implicit2.sum) / 1000.0
+            </virtual>
+
+          </float>
+
+          <radio 
+       label="ImplicitStraightliner2"
+       randomize="0">
+            <title>Straightlined responses</title>
+            <virtual>
+if vPackAtt2_unfiltered.c1 and vPackAtt2_unfiltered.c3 and vPackAtt2_unfiltered.c5 and vPackAtt2_unfiltered.c7 and vPackAtt2_unfiltered.c9 and vPackAtt2_unfiltered.c11 and vPackAtt2_unfiltered.c13 and vPackAtt2_unfiltered.c15:  data.val=0
+elif vPackAtt2_unfiltered.c2 and vPackAtt2_unfiltered.c4 and vPackAtt2_unfiltered.c6 and vPackAtt2_unfiltered.c8 and vPackAtt2_unfiltered.c10 and vPackAtt2_unfiltered.c12 and vPackAtt2_unfiltered.c14 and vPackAtt2_unfiltered.c16:  data.val=1
+else:  data.val = 2
+            </virtual>
+
+            <row label="r1">Left straightliner</row>
+            <row label="r2">Right straightliner</row>
+            <row label="r3">Non straightliner</row>
+          </radio>
+        </block>
+
+        <suspend/>
+
+        <radio 
+      label="Q_Communication2"
+      cardrating:navigation="0"
+      cardrating:progress="0"
+      randomize="0"
+      shuffle="rows"
+      uses="cardrating.1"
+      values="order">
+          <title>You will now see various phrases that could be used to describe <strong>over the counter products to treat fungus under and around the toenail&amp;nbsp;</strong>products. As you read each one, please select the one statement that best expresses how much you agree or disagree that the phrase applies to <strong>[pipe: Competitor]</strong>&amp;nbsp;products, <strong><u>based on the packaging you see here</u></strong>.</title>
+          <comment>[pipe: COMP_IMG]<br /><br /><span style="font-size: 18pt; font-weight: bold;">[pipe: Competitor] products...</span></comment>
+          <row label="r9">Are high quality products</row>
+          <row label="r10">Are for someone like me</row>
+          <row label="r11">Are made by a brand I can trust</row>
+          <row label="r12">Are better than other brands</row>
+          <row label="r13">Are effective at repairing skin</row>
+          <row label="r14">Are effective at killing fungus</row>
+          <row label="r15">Are fast acting</row>
+          <row label="r16">Provide maximum strength anti-fungal action</row>
+          <row label="r17">Improve nail appearance</row>
+          <row label="r18">Are effective at curing and preventing fungal infections</row>
+          <col label="c1" value="5">Agree Strongly</col>
+          <col label="c2" value="4">Agree Somewhat</col>
+          <col label="c3" value="3">Neither Agree Nor Disagree</col>
+          <col label="c4" value="2">Disagree Somewhat</col>
+          <col label="c5" value="1">Disagree Strongly</col>
+          <style name="question.after"><![CDATA[
+<script>
+$ ('.sq-cardrating-card').css('font-size','18pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1
+	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      		
+      	})
+
+	</script>
+]]></style>
+        </radio>
+      </block>
+    </block>
+  </block>
+
+  <suspend/>
+
+  <block label="Class" cond="False" builder:title="Classification Section">
+    <html label="cm1" where="survey"><strong><em>Now, just a few questions for classification purposes…</em></strong></html>
+
+    <select 
+    label="C_Frequency"
+    randomize="0"
+    values="reverse">
+      <title>Think about your typical shopping habits when visiting your local store to shop for <strong>over the counter products to treat fungus under and around the toenail. &amp;nbsp;</strong>How frequently do you shop for <strong>over the counter products to treat fungus under and around the toenail?</strong></title>
+      <comment><em>Select one response.</em></comment>
+      <choice label="ch1" value="6">Once a month or more often</choice>
+      <choice label="ch2" value="5">Once every 2 months</choice>
+      <choice label="ch3" value="4">Once every 3-4 months</choice>
+      <choice label="ch4" value="3">Once every 5-6 months</choice>
+      <choice label="ch5" value="2">Once or twice a year</choice>
+      <choice label="ch6" value="1">Less often than once a year</choice>
+    </select>
+
+    <select 
+    label="C_Quantity"
+    randomize="0">
+      <title>Still thinking about your typical shopping habits for <strong>over the counter products to treat fungus under and around the toenail, &amp;nbsp;</strong>when you are in your local store shopping for this type of product, how many individual <strong>over the counter products to treat fungus under and around the toenail</strong>&amp;nbsp;do you typically purchase in a single shopping trip?</title>
+      <comment><em>Select one response.</em></comment>
+      <choice label="ch1" value="6">1</choice>
+      <choice label="ch2" value="5">2</choice>
+      <choice label="ch6" value="4">3</choice>
+      <choice label="ch3" value="3">4</choice>
+      <choice label="ch4" value="2">5</choice>
+      <choice label="ch5" value="1">6 or more</choice>
+    </select>
+
+    <select 
+    label="C_MaritalStat"
+    randomize="0">
+      <title>What is your marital status?</title>
+      <comment><em>Select one response.</em></comment>
+      <choice label="ch1">Married</choice>
+      <choice label="ch2">Living with someone</choice>
+      <choice label="ch3">Single</choice>
+      <choice label="ch4">Divorced/separated/widowed</choice>
+      <choice label="ch5">Other</choice>
+      <choice label="ch6">I prefer not to answer</choice>
+    </select>
+
+    <select 
+    label="C_Education"
+    randomize="0">
+      <title>What was the last year of schooling that you completed.</title>
+      <comment>Select one response.</comment>
+      <choice label="ch1">Some high school or less</choice>
+      <choice label="ch2">Completed high school</choice>
+      <choice label="ch3">Some college (less than 4 years)</choice>
+      <choice label="ch4">Completed college</choice>
+      <choice label="ch5">Post-graduate work</choice>
+      <choice label="ch6">Other</choice>
+      <choice label="ch7">I prefer not to answer</choice>
+    </select>
+
+    <select 
+    label="C_Employment"
+    randomize="0">
+      <title>Which of the following best describes your current employment status.</title>
+      <comment>Select one response.</comment>
+      <choice label="ch1">Working full-time</choice>
+      <choice label="ch2">Working part-time</choice>
+      <choice label="ch3">Looking for work, temporarily unemployed</choice>
+      <choice label="ch4">Full-time student</choice>
+      <choice label="ch5">Full-time homemaker</choice>
+      <choice label="ch6">Retired</choice>
+      <choice label="ch7">Not employed</choice>
+      <choice label="ch8">I prefer not to answer</choice>
+    </select>
+
+    <select 
+    label="C_HHIncome"
+    randomize="0">
+      <title>Please select the range that best represents your total annual household income.</title>
+      <choice label="ch1">Under $30,000</choice>
+      <choice label="ch2">$30,000-$39,999</choice>
+      <choice label="ch3">$40,000-$49,999</choice>
+      <choice label="ch4">$50,000-$59,999</choice>
+      <choice label="ch5">$60,000-$69,999</choice>
+      <choice label="ch6">$70,000-$79,999</choice>
+      <choice label="ch7">$80,000-$89,999</choice>
+      <choice label="ch8">$90,000-$99,999</choice>
+      <choice label="ch9">$100,000 or more</choice>
+      <choice label="ch10">I prefer not to answer</choice>
+    </select>
+
+    <suspend/>
+  </block>
+</block>
+</survey>
