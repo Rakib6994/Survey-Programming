@@ -1,0 +1,186 @@
+<checkbox 
+  label="DummyOreo"
+  where="execute,survey,report">
+  <title>Oreo Franchise</title>
+
+    <row label="r1">Oreo Min Snak Sak 8oz -$2.68</row>
+    <row label="r2">Oreo Golden Mini Snak Sak 8oz -$2.68</row>
+    <row label="r3">Oreo Fudge Covered 7.9oz -$3.78</row>
+    <row label="r4">Oreo Thins Sandwich Cookies 10.1oz -$4.58</row>
+    <row label="r18">Oreo Mint Choc Sandwich Cookies Fam Size 18.12oz -$4.58</row>
+    <row label="r19">Oreo Chocolate Crème Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r20">Oreo Thins Mint Choc Sandwich Family Size 13.1oz -$4.58</row>
+    <row label="r34">Oreo Chocolate Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r35">Oreo Thins Family Size 13.1oz -$3.98</row>
+    <row label="r50">Oreo Chocolate Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r51">Oreo Golden Sandwich Cookies Fam Size 18.12oz -$4.58</row>
+    <row label="r52">Oreo Golden Thins Sanswich Cookies 13.1oz -$4.58</row>
+    <row label="r64">Oreo Double Stuff Choc Sandwich Cookies Fam size 18.71oz -$4.58</row>
+    <row label="r65">Oreo Mega Stuff Choc Sandwich Cookies Fam Size 17.6oz -$4.28</row>
+    <row label="r66">Oreo Golden Sandwich Cookies Double Stuff Fam Size 18.71oz -$4.58</row>
+    <row label="r67">Oreo Lemon Sandwich Cookies Family Size 18.71oz -$4.58</row>
+    <row label="r79">Oreo Choc Sandwich Cookies Party Size 25.5oz -$5.98</row>
+    <row label="r80">Oreo Double Stuff Choc Sandwich Cookies Party Size 26.7oz -$5.98</row>
+    <row label="r81">Oreo Golden Sandwich Cookies Party Size 25.5oz -$5.98</row>
+    <row label="r90">Oreo Choc Sandwich Cookie 13.29oz -$3.98</row>
+    <row label="r91">Oreo Choc Sandwich Cookie Double Stuff 14.03oz -$3.98</row>
+    <row label="r92">Oreo Glutten Free Double Stuff 12.47oz -$4.58</row>
+    <row label="r93">Oreo Glutten Free Choc Sandwich Cookie 12.08oz -$4.58</row>
+    <row label="r94">Oreo Golden Cookie Sandwich 13.29oz -$3.98</row>  
+
+</checkbox>
+
+<suspend/>
+
+
+<number 
+  label="Units_BoughtPerProduct_Oreo"
+  randomize="0"
+  size="3">
+  <title>Total units Purchased Per Product.</title>
+  <virtual>
+for x in DummyOreo.rows:
+    Units_BoughtPerProduct_Oreo[x].val = Units_BoughtPerProduct_All[x].val
+  </virtual>
+
+    <row label="r1">Oreo Min Snak Sak 8oz -$2.68</row>
+    <row label="r2">Oreo Golden Mini Snak Sak 8oz -$2.68</row>
+    <row label="r3">Oreo Fudge Covered 7.9oz -$3.78</row>
+    <row label="r4">Oreo Thins Sandwich Cookies 10.1oz -$4.58</row>
+    <row label="r18">Oreo Mint Choc Sandwich Cookies Fam Size 18.12oz -$4.58</row>
+    <row label="r19">Oreo Chocolate Crème Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r20">Oreo Thins Mint Choc Sandwich Family Size 13.1oz -$4.58</row>
+    <row label="r34">Oreo Chocolate Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r35">Oreo Thins Family Size 13.1oz -$3.98</row>
+    <row label="r50">Oreo Chocolate Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r51">Oreo Golden Sandwich Cookies Fam Size 18.12oz -$4.58</row>
+    <row label="r52">Oreo Golden Thins Sanswich Cookies 13.1oz -$4.58</row>
+    <row label="r64">Oreo Double Stuff Choc Sandwich Cookies Fam size 18.71oz -$4.58</row>
+    <row label="r65">Oreo Mega Stuff Choc Sandwich Cookies Fam Size 17.6oz -$4.28</row>
+    <row label="r66">Oreo Golden Sandwich Cookies Double Stuff Fam Size 18.71oz -$4.58</row>
+    <row label="r67">Oreo Lemon Sandwich Cookies Family Size 18.71oz -$4.58</row>
+    <row label="r79">Oreo Choc Sandwich Cookies Party Size 25.5oz -$5.98</row>
+    <row label="r80">Oreo Double Stuff Choc Sandwich Cookies Party Size 26.7oz -$5.98</row>
+    <row label="r81">Oreo Golden Sandwich Cookies Party Size 25.5oz -$5.98</row>
+    <row label="r90">Oreo Choc Sandwich Cookie 13.29oz -$3.98</row>
+    <row label="r91">Oreo Choc Sandwich Cookie Double Stuff 14.03oz -$3.98</row>
+    <row label="r92">Oreo Glutten Free Double Stuff 12.47oz -$4.58</row>
+    <row label="r93">Oreo Glutten Free Choc Sandwich Cookie 12.08oz -$4.58</row>
+    <row label="r94">Oreo Golden Cookie Sandwich 13.29oz -$3.98</row>  
+</number>
+
+<suspend/>
+
+<number 
+  label="Total_QuantityPurchased_Oreo"
+  optional="0"
+  randomize="0"
+  size="3">
+  <title>Total units purchased.</title>
+  <virtual>
+sumOreo = 0
+for x in Units_BoughtPerProduct_Oreo.rows:
+  if Units_BoughtPerProduct_Oreo[x]:
+      sumOreo = sumOreo + Units_BoughtPerProduct_Oreo[x].val
+
+Total_QuantityPurchased_Oreo.val =  sumOreo
+  </virtual>
+
+</number>
+
+<suspend/>
+
+
+
+<checkbox 
+  label="Oreo_QuantityPurchased"
+  where="execute,survey,report">
+  <title>Units purchased.</title>
+  <virtual>
+if (Total_QuantityPurchased_Oreo.val lt 1):  Oreo_QuantityPurchased.Or0.val=1      
+if (Total_QuantityPurchased_Oreo.val==1):  Oreo_QuantityPurchased.Or1.val=1
+if (Total_QuantityPurchased_Oreo.val==2):  Oreo_QuantityPurchased.Or2.val=1
+if (Total_QuantityPurchased_Oreo.val==3):  Oreo_QuantityPurchased.Or3.val=1
+if (Total_QuantityPurchased_Oreo.val==4):  Oreo_QuantityPurchased.Or4.val=1
+if (Total_QuantityPurchased_Oreo.val==5):  Oreo_QuantityPurchased.Or5.val=1
+if (Total_QuantityPurchased_Oreo.val==6):  Oreo_QuantityPurchased.Or6.val=1
+if (Total_QuantityPurchased_Oreo.val==7):  Oreo_QuantityPurchased.Or7.val=1
+if (Total_QuantityPurchased_Oreo.val==8):  Oreo_QuantityPurchased.Or8.val=1
+if (Total_QuantityPurchased_Oreo.val==9):  Oreo_QuantityPurchased.Or9.val=1
+if (Total_QuantityPurchased_Oreo.val==10): Oreo_QuantityPurchased.Or10.val=1
+  </virtual>
+
+  <row label="Or0">Oreo - 0 Unit</row>
+  <row label="Or1">Oreo - 1 Unit</row>
+  <row label="Or2">Oreo - 2 Units</row>
+  <row label="Or3">Oreo - 3 Units</row>
+  <row label="Or4">Oreo - 4 Units</row>
+  <row label="Or5">Oreo - 5 Units</row>
+  <row label="Or6">Oreo - 6 Units</row>
+  <row label="Or7">Oreo - 7 Units</row>
+  <row label="Or8">Oreo - 8 Units</row>
+  <row label="Or9">Oreo - 9 Units</row>
+  <row label="Or10">Oreo - 10 Units</row>
+</checkbox>
+
+<suspend/>
+
+
+<float 
+  label="SpentPerProduct_Oreo"
+  randomize="0"
+  size="10">
+  <title>Total spent Per Product</title>
+  <virtual>
+for x in DummyOreo.rows:
+    SpentPerProduct_Oreo[x].val = SpentPerProduct_All[x].val
+  </virtual>
+
+    <row label="r1">Oreo Min Snak Sak 8oz -$2.68</row>
+    <row label="r2">Oreo Golden Mini Snak Sak 8oz -$2.68</row>
+    <row label="r3">Oreo Fudge Covered 7.9oz -$3.78</row>
+    <row label="r4">Oreo Thins Sandwich Cookies 10.1oz -$4.58</row>
+    <row label="r18">Oreo Mint Choc Sandwich Cookies Fam Size 18.12oz -$4.58</row>
+    <row label="r19">Oreo Chocolate Crème Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r20">Oreo Thins Mint Choc Sandwich Family Size 13.1oz -$4.58</row>
+    <row label="r34">Oreo Chocolate Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r35">Oreo Thins Family Size 13.1oz -$3.98</row>
+    <row label="r50">Oreo Chocolate Sandwich Cookies Family Size 18.12oz -$4.58</row>
+    <row label="r51">Oreo Golden Sandwich Cookies Fam Size 18.12oz -$4.58</row>
+    <row label="r52">Oreo Golden Thins Sanswich Cookies 13.1oz -$4.58</row>
+    <row label="r64">Oreo Double Stuff Choc Sandwich Cookies Fam size 18.71oz -$4.58</row>
+    <row label="r65">Oreo Mega Stuff Choc Sandwich Cookies Fam Size 17.6oz -$4.28</row>
+    <row label="r66">Oreo Golden Sandwich Cookies Double Stuff Fam Size 18.71oz -$4.58</row>
+    <row label="r67">Oreo Lemon Sandwich Cookies Family Size 18.71oz -$4.58</row>
+    <row label="r79">Oreo Choc Sandwich Cookies Party Size 25.5oz -$5.98</row>
+    <row label="r80">Oreo Double Stuff Choc Sandwich Cookies Party Size 26.7oz -$5.98</row>
+    <row label="r81">Oreo Golden Sandwich Cookies Party Size 25.5oz -$5.98</row>
+    <row label="r90">Oreo Choc Sandwich Cookie 13.29oz -$3.98</row>
+    <row label="r91">Oreo Choc Sandwich Cookie Double Stuff 14.03oz -$3.98</row>
+    <row label="r92">Oreo Glutten Free Double Stuff 12.47oz -$4.58</row>
+    <row label="r93">Oreo Glutten Free Choc Sandwich Cookie 12.08oz -$4.58</row>
+    <row label="r94">Oreo Golden Cookie Sandwich 13.29oz -$3.98</row>  
+</float>
+
+<suspend/>
+
+
+
+<float 
+  label="Oreo_TotalSpent"
+  size="10"
+  where="execute,survey,report">
+  <title>Total Spent</title>
+  <virtual>
+
+sumOreo_TotalSpent=0
+for x in DummyOreo.rows:
+    if SpentPerProduct_Oreo[x]:
+       sumOreo_TotalSpent=sumOreo_TotalSpent+SpentPerProduct_Oreo[x].val
+      
+Oreo_TotalSpent.val=sumOreo_TotalSpent
+  </virtual>
+
+</float>
+
+<suspend/>

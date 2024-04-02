@@ -1,0 +1,183 @@
+
+<number 
+  label="Scenario_Units_BoughtPerProduct_LaColombe"
+  randomize="0"
+  size="3">
+  <title>Total units Purchased Per Product.</title>
+  <virtual>
+for x in DummyQ17.rows:
+    Scenario_Units_BoughtPerProduct_LaColombe[x].val = Scenario_Units_BoughtPerProduct_All[x].val
+  </virtual>
+
+      <row label="r123">La Colombe Unsweetened Colombian Light Roast Cold Brew Coffee - 42 fl oz - $6.49</row>
+      <row label="r124">La Colombe Unsweetened Brazilian Med Dark Roast Cold Brew Coffee - 42 fl oz - $6.49</row>
+
+</number>
+
+<suspend/>
+
+<number 
+  label="Scenario_Total_QuantityPurchased_LaColombe"
+  optional="0"
+  randomize="0"
+  size="3">
+  <title>Total units purchased.</title>
+  <virtual>
+sumLaColombe = 0
+for x in Scenario_Units_BoughtPerProduct_LaColombe.rows:
+  if Scenario_Units_BoughtPerProduct_LaColombe[x]:
+      sumLaColombe = sumLaColombe + Scenario_Units_BoughtPerProduct_LaColombe[x].val
+
+Scenario_Total_QuantityPurchased_LaColombe.val =  sumLaColombe
+  </virtual>
+
+</number>
+
+<suspend/>
+
+
+
+<checkbox 
+  label="Scenario_LaColombe_QuantityPurchased"
+  where="execute,survey,report">
+  <title>Units purchased.</title>
+  <virtual>
+if (Scenario_Total_QuantityPurchased_LaColombe.val lt 1):  Scenario_LaColombe_QuantityPurchased.r0.val=1      
+if (Scenario_Total_QuantityPurchased_LaColombe.val==1):  Scenario_LaColombe_QuantityPurchased.r1.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==2):  Scenario_LaColombe_QuantityPurchased.r2.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==3):  Scenario_LaColombe_QuantityPurchased.r3.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==4):  Scenario_LaColombe_QuantityPurchased.r4.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==5):  Scenario_LaColombe_QuantityPurchased.r5.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==6):  Scenario_LaColombe_QuantityPurchased.r6.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==7):  Scenario_LaColombe_QuantityPurchased.r7.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==8):  Scenario_LaColombe_QuantityPurchased.r8.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==9):  Scenario_LaColombe_QuantityPurchased.r9.val=1
+if (Scenario_Total_QuantityPurchased_LaColombe.val==10): Scenario_LaColombe_QuantityPurchased.r10.val=1
+  </virtual>
+
+  <row label="r0">LaColombe - 0 Unit</row>
+  <row label="r1">LaColombe - 1 Unit</row>
+  <row label="r2">LaColombe - 2 Units</row>
+  <row label="r3">LaColombe - 3 Units</row>
+  <row label="r4">LaColombe - 4 Units</row>
+  <row label="r5">LaColombe - 5 Units</row>
+  <row label="r6">LaColombe - 6 Units</row>
+  <row label="r7">LaColombe - 7 Units</row>
+  <row label="r8">LaColombe - 8 Units</row>
+  <row label="r9">LaColombe - 9 Units</row>
+  <row label="r10">LaColombe - 10 Units</row>
+</checkbox>
+
+<suspend/>
+
+
+<float 
+  label="Scenario_SpentPerProduct_LaColombe"
+  randomize="0"
+  size="10">
+  <title>Total spent Per Product</title>
+  <virtual>
+for x in DummyQ17.rows:
+    Scenario_SpentPerProduct_LaColombe[x].val = Scenario_SpentPerProduct_All[x].val
+  </virtual>
+
+      <row label="r123">La Colombe Unsweetened Colombian Light Roast Cold Brew Coffee - 42 fl oz - $6.49</row>
+      <row label="r124">La Colombe Unsweetened Brazilian Med Dark Roast Cold Brew Coffee - 42 fl oz - $6.49</row>
+
+
+</float>
+
+<suspend/>
+
+
+
+<float 
+  label="Scenario_LaColombe_TotalSpent"
+  size="10"
+  where="execute,survey,report">
+  <title>Total Spent</title>
+  <virtual>
+
+sumScenario_LaColombe_TotalSpent=0
+for x in DummyQ17.rows:
+    if Scenario_SpentPerProduct_LaColombe[x]:
+       sumScenario_LaColombe_TotalSpent=sumScenario_LaColombe_TotalSpent+Scenario_SpentPerProduct_LaColombe[x].val
+      
+Scenario_LaColombe_TotalSpent.val=sumScenario_LaColombe_TotalSpent
+  </virtual>
+
+</float>
+
+<suspend/>
+
+
+
+
+
+<float 
+  label="Scenario_TotalSpent"
+  optional="0"
+  size="3">
+  <title>TotalSpent</title>
+  <virtual>
+Scenario_TotalSpent.r1.val =  Scenario_P_TotalSpend.val
+Scenario_TotalSpent.r2.val =  Scenario_DelightFranchise_TotalSpent.val
+Scenario_TotalSpent.r3.val =  Scenario_DelightColdFoam_TotalSpent.val
+Scenario_TotalSpent.r4.val =  Scenario_DunkinFranchise_TotalSpent.val
+Scenario_TotalSpent.r5.val =  Scenario_DunkinColdFoam_TotalSpent.val
+Scenario_TotalSpent.r6.val =  Scenario_SilkFranchise_TotalSpent.val
+Scenario_TotalSpent.r7.val =  Scenario_SilkColdFoam_TotalSpent.val
+Scenario_TotalSpent.r8.val =  Scenario_CoffeeMate_TotalSpent.val
+Scenario_TotalSpent.r9.val =  Scenario_StarbucksFranchise_TotalSpent.val
+Scenario_TotalSpent.r10.val = Scenario_KrogerFranchise_TotalSpent.val
+Scenario_TotalSpent.r11.val = Scenario_ChobaniFranchise_TotalSpent.val
+Scenario_TotalSpent.r12.val = Scenario_OatlyFranchise_TotalSpent.val
+Scenario_TotalSpent.r13.val = Scenario_STokFranchise_TotalSpent.val
+Scenario_TotalSpent.r14.val = Scenario_Reddiwip_TotalSpent.val
+Scenario_TotalSpent.r15.val = Scenario_HorizonFranchise_TotalSpent.val
+Scenario_TotalSpent.r16.val = Scenario_CalifiaFarms_TotalSpent.val
+Scenario_TotalSpent.r17.val = Scenario_BizzyOrganic_TotalSpent.val
+Scenario_TotalSpent.r18.val = Scenario_LaColombe_TotalSpent.val
+  </virtual>
+   <row label="r1">All</row>
+   <row label="r2">DelightFranchise</row>
+   <row label="r3">DelightColdFoam</row>
+   <row label="r4">DunkinFranchise</row>
+   <row label="r5">DunkinColdFoam</row>
+   <row label="r6">SilkFranchise</row>
+   <row label="r7">SilkColdFoam</row>
+   <row label="r8">CoffeeMate</row>
+   <row label="r9">StarbucksFranchise</row>
+  <row label="r10">KrogerFranchise</row>
+  <row label="r11">ChobaniFranchise</row>
+  <row label="r12">OatlyFranchise</row>
+  <row label="r13">STokFranchise</row>
+  <row label="r14">Reddiwip</row>
+  <row label="r15">HorizonFranchise</row>
+  <row label="r16">CalifiaFarms</row>
+  <row label="r17">BizzyOrganic</row>
+  <row label="r18">LaColombe</row>
+
+
+</float>
+
+<suspend/>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

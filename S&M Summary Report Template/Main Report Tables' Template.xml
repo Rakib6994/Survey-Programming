@@ -1,0 +1,144 @@
+<block label="ReportTables">
+  <checkbox 
+   label="All_QuantityPurchased"
+   where="execute,survey,report">
+    <title>Product units purchased.</title>
+    <virtual>
+if (P1_Total_Products.val==0):  All_QuantityPurchased.r0.val=1   
+if (P1_Total_Products.val==1):  All_QuantityPurchased.r1.val=1
+if (P1_Total_Products.val==2):  All_QuantityPurchased.r2.val=1
+if (P1_Total_Products.val==3):  All_QuantityPurchased.r3.val=1
+if (P1_Total_Products.val==4):  All_QuantityPurchased.r4.val=1
+if (P1_Total_Products.val==5):  All_QuantityPurchased.r5.val=1
+if (P1_Total_Products.val==6):  All_QuantityPurchased.r6.val=1
+if (P1_Total_Products.val==7):  All_QuantityPurchased.r7.val=1
+if (P1_Total_Products.val==8):  All_QuantityPurchased.r8.val=1
+if (P1_Total_Products.val==9):  All_QuantityPurchased.r9.val=1
+if (P1_Total_Products.val==10): All_QuantityPurchased.r10.val=1
+if (P1_Total_Products.val &gt;10):  All_QuantityPurchased.r11.val=1
+    </virtual>
+
+    <row label="r0">0 Unit</row>
+    <row label="r1">1 Unit</row>
+    <row label="r2">2 Units</row>
+    <row label="r3">3 Units</row>
+    <row label="r4">4 Units</row>
+    <row label="r5">5 Units</row>
+    <row label="r6">6 Units</row>
+    <row label="r7">7 Units</row>
+    <row label="r8">8 Units</row>
+    <row label="r9">9 Units</row>
+    <row label="r10">10 Units</row>
+    <row label="r11">11 Units</row>
+  </checkbox>
+
+  <suspend/>
+
+  <number 
+   label="Total_QuantityPurchased"
+   optional="0"
+   randomize="0"
+   size="3">
+    <title>Total units Purchased.</title>
+    <virtual>
+Total_QuantityPurchased.val = P1_Total_Products.val
+    </virtual>
+
+  </number>
+
+  <suspend/>
+
+  <number 
+   label="Units_BoughtPerProduct_All"
+   randomize="0"
+   size="3">
+    <title>Quantity Purchased Per Product.</title>
+    <virtual>
+for x in P1_Number_Bought_Per_Product.rows:
+    Units_BoughtPerProduct_All[x].val = P1_Number_Bought_Per_Product[x].val
+    </virtual>
+
+    <row label="r1_W">HVR RANCH SEASONING MIX 8 OZ  - Phase1 = $8.58, Phase2&amp;3 = $7.98</row>
+    <row label="r2_W">HVR SPICY RANCH SEASONING 8OZ  - Phase1 = $8.58, Phase2&amp;3 = $7.98</row>
+    <row label="r3_W">Hidden Valley Ranch Seasoning Mix 1 oz  - $1.88</row>
+    <row label="r4_W">HVR ORIGINAL RANCH SEASONING 2 PACK  - $2.98</row>
+    <row label="r5_W">HVR ORIGINAL RANCH SEASONING 4 PACK  - $5.38</row>
+    <row label="r6_W">HVR RANCH BTTRMILK MX .4 OZ  - $1.88</row>
+    <row label="r7_W">HVR SPCY RNCH DRY DRSS 1 OZ  - $1.88</row>
+    <row label="r8_W">HVR RANCH DIP MIX 1 OZ  - $1.88</row>
+    <row label="r9_W">HVR DIP MX ORIG 4 PACK  - $5.38</row>
+    <row label="r10_W">HVR DIPS FIESTA MIX 1 OZ  - $1.88</row>
+    <row label="r11_W">GV CLASSIC RANCH SALAD DRESSING MIX 8 OZ  - $3.98</row>
+    <row label="r12_W">GV RANCH DRESSING &amp; RECIPE MIX CLASSIC 1 OZ  - $0.50</row>
+    <row label="r13_W">GV CLASSIC RANCH DRESSING MIX 4 PACK  - $2.48</row>
+    <row label="r14_W">GV ITALIAN SALAD DRESSING &amp; RECIPE MIX 0.7 OZ  - $0.50</row>
+    <row label="r15_W">GV GREEK DRY SALAD DRESSING 1 OZ  - $0.50</row>
+    <row label="r16_W">GDSN ITALIAN DRSNG MX 4CT 2.8 OZ  - $4.98</row>
+    <row label="r17_W">GDSN ITALIAN DRSNG MX 0.7 OZ  - $1.78</row>
+    <row label="r1_k">HVR ORIGINAL RANCH SEASONING 4 PACK  - $5.99</row>
+    <row label="r2_k">HVR DIP MX ORIG  4 PACK  - $5.99</row>
+    <row label="r3_k">HVR RANCH BTTRMILK MIX .4 OZ  - $2.19</row>
+    <row label="r4_k">HVR RANCH DRESSING MIX 1 OZ  - $2.19</row>
+    <row label="r5_k">HVR RANCH DIP MIX 1 OZ  - $2.19</row>
+    <row label="r6_k">HVR SPCY RNCH DRY DRSS 1 OZ  - $2.19</row>
+    <row label="r7_k">HVR RANCH SEASONING MIX 8 OZ  - Phase4 = $9.99, Phase5 = $8.99</row>
+    <row label="r8_k">HVR SPICY RANCH SEASONING 8OZ  - Phase4 = $10.49, Phase5 = $9.49</row>
+    <row label="r9_k">KROGER PARTY DIP RANCH 1 OZ  - $0.55</row>
+    <row label="r10_k">KROGER SALAD MAGIC RANCH 1 OZ  - $0.59</row>
+    <row label="r11_k">KROGER SALAD MAGIC RANCH MIX 4 OZ  - $1.99</row>
+    <row label="r12_k">KROGER SALAD MAGIC ZESTY ITALIAN .6OZ  - $0.59</row>
+    <row label="r13_k">KROGER SALAD MAGIC ZESTY ITALIAN 2.4 OZ  - $1.99</row>
+    <row label="r14_k">GDSN ZESTY ITAL DRSNG MIX .6 OZ  - $1.89</row>
+    <row label="r15_k">GDSN ITALIAN DRSNG MX 4CT 2.8 OZ  - $5.49</row>
+    <row label="r16_k">GDSN GARLIC HRB DRSG MX .75 OZ - $1.99</row>
+  </number>
+
+  <suspend/>
+
+  <float 
+   label="SpentPerProduct_All"
+   randomize="0"
+   size="10">
+    <title>Spent Per Product.</title>
+    <virtual>
+for x in P_SpendPerProduct.rows:
+    SpentPerProduct_All[x].val = P_SpendPerProduct[x].val
+    </virtual>
+
+    <row label="r1_W">HVR RANCH SEASONING MIX 8 OZ  - Phase1 = $8.58, Phase2&amp;3 = $7.98</row>
+    <row label="r2_W">HVR SPICY RANCH SEASONING 8OZ  - Phase1 = $8.58, Phase2&amp;3 = $7.98</row>
+    <row label="r3_W">Hidden Valley Ranch Seasoning Mix 1 oz  - $1.88</row>
+    <row label="r4_W">HVR ORIGINAL RANCH SEASONING 2 PACK  - $2.98</row>
+    <row label="r5_W">HVR ORIGINAL RANCH SEASONING 4 PACK  - $5.38</row>
+    <row label="r6_W">HVR RANCH BTTRMILK MX .4 OZ  - $1.88</row>
+    <row label="r7_W">HVR SPCY RNCH DRY DRSS 1 OZ  - $1.88</row>
+    <row label="r8_W">HVR RANCH DIP MIX 1 OZ  - $1.88</row>
+    <row label="r9_W">HVR DIP MX ORIG 4 PACK  - $5.38</row>
+    <row label="r10_W">HVR DIPS FIESTA MIX 1 OZ  - $1.88</row>
+    <row label="r11_W">GV CLASSIC RANCH SALAD DRESSING MIX 8 OZ  - $3.98</row>
+    <row label="r12_W">GV RANCH DRESSING &amp; RECIPE MIX CLASSIC 1 OZ  - $0.50</row>
+    <row label="r13_W">GV CLASSIC RANCH DRESSING MIX 4 PACK  - $2.48</row>
+    <row label="r14_W">GV ITALIAN SALAD DRESSING &amp; RECIPE MIX 0.7 OZ  - $0.50</row>
+    <row label="r15_W">GV GREEK DRY SALAD DRESSING 1 OZ  - $0.50</row>
+    <row label="r16_W">GDSN ITALIAN DRSNG MX 4CT 2.8 OZ  - $4.98</row>
+    <row label="r17_W">GDSN ITALIAN DRSNG MX 0.7 OZ  - $1.78</row>
+    <row label="r1_k">HVR ORIGINAL RANCH SEASONING 4 PACK  - $5.99</row>
+    <row label="r2_k">HVR DIP MX ORIG  4 PACK  - $5.99</row>
+    <row label="r3_k">HVR RANCH BTTRMILK MIX .4 OZ  - $2.19</row>
+    <row label="r4_k">HVR RANCH DRESSING MIX 1 OZ  - $2.19</row>
+    <row label="r5_k">HVR RANCH DIP MIX 1 OZ  - $2.19</row>
+    <row label="r6_k">HVR SPCY RNCH DRY DRSS 1 OZ  - $2.19</row>
+    <row label="r7_k">HVR RANCH SEASONING MIX 8 OZ  - Phase4 = $9.99, Phase5 = $8.99</row>
+    <row label="r8_k">HVR SPICY RANCH SEASONING 8OZ  - Phase4 = $10.49, Phase5 = $9.49</row>
+    <row label="r9_k">KROGER PARTY DIP RANCH 1 OZ  - $0.55</row>
+    <row label="r10_k">KROGER SALAD MAGIC RANCH 1 OZ  - $0.59</row>
+    <row label="r11_k">KROGER SALAD MAGIC RANCH MIX 4 OZ  - $1.99</row>
+    <row label="r12_k">KROGER SALAD MAGIC ZESTY ITALIAN .6OZ  - $0.59</row>
+    <row label="r13_k">KROGER SALAD MAGIC ZESTY ITALIAN 2.4 OZ  - $1.99</row>
+    <row label="r14_k">GDSN ZESTY ITAL DRSNG MIX .6 OZ  - $1.89</row>
+    <row label="r15_k">GDSN ITALIAN DRSNG MX 4CT 2.8 OZ  - $5.49</row>
+    <row label="r16_k">GDSN GARLIC HRB DRSG MX .75 OZ - $1.99</row>
+  </float>
+
+  <suspend/>
+</block>
