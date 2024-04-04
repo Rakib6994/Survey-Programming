@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AE853 - SoftSoap Body Wash Visual Equities PackFlash 360"
+  autoRecover="1"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="138"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="noMobile"
+  mobileDevices="desktop"
+  name="Survey"
+  remerged="20211104_17:21"
+  secure="1"
+  setup="term,decLang,quota,time"
+  smartphoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png"
+  ss:logoPosition="left"
+  state="testing"
+  theme="frozen:company/behaviorally-theme-2-1"
+  version="27">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<res label="Agetxt">years old</res>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+
+
+  .sq-mgshelf-cart-view-content table td input {
+    width: 50px !important;
+  }
+  
+  .modal-body {
+  	text-align:center;
+  }
+  
+  .sq-atm1d-button-align-center .sq-atm1d-buttons {
+    text-align: center
+  }
+  
+    
+  .instruction-text {
+    text-align: center
+  }
+  
+  .sq-atm1d-td {
+    vertical-align: middle;
+  }
+  
+  .sq-atm1d-block {
+    text-align: center
+  }
+  
+  #comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  border-radius: 30px;
+  }
+  
+  .sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+  }
+  
+  .sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+  }
+  
+  .grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  }
+
+ .comment-text{
+ text-align: left;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+
+ .question-text{
+ text-align: center;
+}
+
+ .question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+
+</script>
+<script>
+$ (document).ready(function() {
+
+	$ (".clickable").addClass( "hvr-underline-from-center" )
+	$ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+	
+	if(!$ (".sq-cardsort-Q_PackAtt").length){
+		$ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+	}
+
+	if($ (".p1").length){
+    	$ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");    	
+    	$ (".comment-text").css("color", "black");
+    	$ (".comment-text").css("background-color","lightgrey");
+    	$ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+
+    }
+    
+    if($ (".label_Agreement").length){
+    	$ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");
+    	$ (".question").css("background-color","lightgrey");
+    	$ (".question-text").css("color","black");
+    	$ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+
+/*Gender 1*/
+
+	if($ (".radio .sq-atm1d-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	$ (document).on('click', '.radio .sq-atm1d-button', function() {
+		$ ("#btn_continue").click();
+	})
+
+
+
+
+
+
+/*Gender 2*/
+       
+    if($ (".radio .sq-atmtable-btn").length){
+    	$ ("#btn_continue").hide();
+    }
+
+
+	$ (document).on('click', '.sq-atmtable-btn', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Slider*/
+       
+    if($ (".select .sq-sliderpoints-container").length){
+    	$ ("#btn_continue").hide();
+    }
+
+
+	$ (document).on('click', '.sq-sliderpoints-container', function() {
+		$ ("#btn_continue").click();
+	})
+
+       
+       
+/*Textbox*/
+
+	$ ('.element').css('text-align','center');
+
+
+
+/*Rating Q_OA Auto Advance 
+       
+    if($ (".sq-atmrating-container").length){
+    	$ ("#btn_continue").hide();
+    }
+
+	$ (document).on('click', '.sq-atmrating-container', function() {
+		$ ("#btn_continue").click();
+	})
+*/
+       
+/*Change Font*/
+	$ ('.dropdown').css("font-family", "Verdana");    
+});
+ 
+</script>
+]]></style>
+<samplesources>
+  <samplesource list="3">
+    <title>Wise Works 10/23/2019</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="wspid" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;wspid=${wspid}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;wspid=${wspid}"/>
+    <exit cond="qualified" url="https://pollrouting.com/router/ViTo231826078423f0deb87958998e28f35c03e/passback.php?bvl=b&amp;st=jNWCZ1WOhQaR&amp;wspid=${wspid}"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Schlesinger (previously Market cube)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending/?RS=3&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending/?RS=2&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending/?RS=1&amp;RID=${RID}&amp;secret=606"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="Resp" required="1"/>
+    <exit cond="terminated"><p>Thank you for taking our survey. This is a terminate.</p></exit>
+    <exit cond="overquota"><p>Thank you for taking our survey. This is an over quota.</p></exit>
+    <exit cond="qualified"><p>Thank you for taking our survey. This is a complete. Your efforts are greatly appreciated!</p></exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<radio 
+  label="Location"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.8">
+  <title>Sample Source (web) / Location (web to clt)</title>
+  <row label="US166" cond="list=='3'" value="592487365">Torfac (previously Wise Works)</row>
+  <row label="US167" cond="list=='2'" value="592490403">Schlesinger (previously Market cube)</row>
+  <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+  <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+  <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+  <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+  <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+  <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+  <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+  <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+  <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+  <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+  <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+  <row label="US213" cond="list=='24'" value="1314418229">SampleGurus</row>
+  <row label="RU007" cond="list=='25'" value="833513838">OMI (Online Market Intelligence)</row>
+  <row label="IN021" cond="list=='26'" value="1422500825">Orchidea Research ()</row>
+  <row label="US220" cond="list=='141'" value="7535526">Cint</row>
+  <row label="IN200" cond="list=='150'" value="7535529">Cognitive Intelligence</row>
+  <row label="GB030" cond="list=='152'" value="1244">Bilendi &amp; Respondi ()</row>
+  <row label="US215" cond="list=='153'" value="69019">Veritolytics</row>
+  <row label="US230" cond="list=='154'" value="30846">Paradigm Sample</row>
+  <row label="US234" cond="list=='160'" value="30816">Question Lab</row>
+</radio>
+
+<suspend/>
+
+<text 
+  label="LocationCode"
+  cond="not(gv.isSST())"
+  optional="0"
+  size="25">
+  <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+  <virtual>
+if Location.any:
+	LocationCode.val = Location.selected.label
+  </virtual>
+
+</text>
+
+<suspend/>
+
+<text 
+  label="IP_ID"
+  optional="0"
+  randomize="0"
+  size="50"
+  where="execute,survey,report">
+  <title>IP ID</title>
+  <exec>
+IP_ID.val = gv.request.getRemote()
+  </exec>
+
+</text>
+
+<suspend/>
+
+<html label="Intro" where="survey"><p class="p1" style="text-align: center;">Hello and welcome to our survey!<br /><br />Thank you in advance for your participation. This study is very important to us and we ask that you answer each question carefully and completely.<br /><br />While going through the survey, please use the scroll bar on the right and bottom of your screen to move up and down through questions and images. Please remember that there are no right or wrong answers. We are only interested in your opinions.<br /><br /><strong>Thank you again! Let’s begin…</strong></p></html>
+
+<text 
+  label="Browser"
+  randomize="0">
+  <title>&amp;nbsp;</title>
+  <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(id)" value="$(value)" size="$(size)" class="input text-input" $(extra) hidden/>
+]]></style>
+  <style name="question.after" wrap="ready"><![CDATA[
+$ ('.even').hide();
+           var isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+           var isEdge = (navigator.userAgent.indexOf('Edge') >= 0);
+           var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+           var isSafari = (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+           console.log('The value for browser is ' + isEdge);
+           console.log(isChrome);
+           console.log(isFirefox);
+           console.log(isSafari);
+           if (isEdge)
+           {
+               $ ('input[type=text]').val('N');
+
+           }
+          else if (isChrome)
+           {
+               $ ('input[type=text]').val('Y');
+
+           }
+          else if(isFirefox)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+          else if(isSafari)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+         else {
+        $ ('input[type=text]').val('N');
+}
+]]></style>
+</text>
+
+<suspend/>
+
+<autofill label="CompatBrowser" where="execute,survey,report">
+  <title>New Autofill</title>
+  <row label="r1" autofill="Browser.val == 'Y'">Compatible browsers</row>
+  <row label="r2" autofill="not Browser.val == 'Y'">Incompatible browsers</row>
+  <row label="none" autofill="CompatBrowser.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+</autofill>
+
+<suspend/>
+
+<autofill label="vChanges" where="execute,survey,report">
+  <title>Change log</title>
+  <row label="r1" autofill="True">Quota added</row>
+</autofill>
+
+<term cond="CompatBrowser.r2 and not(gv.isSST())">Browser</term>
+
+<suspend/>
+
+<block label="Screener" builder:title="Screener">
+  <checkbox 
+   label="S_PastParticipation"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>Have you participated in a market research study within the past month, on any of the following topics?</title>
+    <row label="r1">Household cleaning products like laundry detergent</row>
+    <row label="r2">Personal care products like soap or shampoo</row>
+    <row label="r3">Cookies or crackers</row>
+    <row label="r4">Frozen treats like ice cream or popsicles</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term cond="S_PastParticipation.r2">Past Participation</term>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>Do you, your friends or anyone in your family, work for any of the following industries?</title>
+    <row label="r1">Market research or marketing</row>
+    <row label="r2">Advertising agency or public relations firms</row>
+    <row label="r3">A graphic design or packaging firm</row>
+    <row label="r4">A company involved in the manufacturing, distribution, or sale of <b>household cleaning products like laundry detergent</b> products</row>
+    <row label="r5">A company involved in the manufacturing, distribution, or sale of <b>cookies or crackers</b> products</row>
+    <row label="r6">A company involved in the manufacturing, distribution, or sale of <b>personal care products like soap or shampoo</b> products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term cond="(S_Industry.r1 or S_Industry.r2 or S_Industry.r3 or S_Industry.r6)">Industry</term>
+
+  <suspend/>
+
+  <select 
+   label="S_GroceryShop"
+   randomize="0"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>How much of the household’s personal care shopping (i.e., soap, oral care, hair products, etc.) do you, yourself, do?</title>
+    <choice label="r1"><span style="font-size: 10pt;" align="center">All of it<br /><img src="[rel Cart4.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r2"><span style="font-size: 10pt;" align="center">Half of it or more<br /><img src="[rel Cart3.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r3"><span style="font-size: 10pt;" align="center">Less than half of it<br /><img src="[rel Cart1.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r4"><span style="font-size: 10pt;" align="center">None of it<br /><img src="[rel Cart0.png]" constrain="true" title="image" height="50" /></span></choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERM_HHShopping" cond="(S_GroceryShop.r3 or S_GroceryShop.r4)">Household Grocery Shopping</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>With which gender do you identify most?</title>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3">Non-Binary</row>
+    <row label="r4">Gender Non-Conforming</row>
+    <row label="r5">Gender Fluid</row>
+    <row label="r6">Prefer to self-identify</row>
+    <row label="r7">I prefer not to answer</row>
+  </radio>
+
+  <suspend/>
+
+  <term cond="S_Gender.r1 or S_Gender.r3 or S_Gender.r4 or S_Gender.r5 or S_Gender.r6 or S_Gender.r7">Term Gender</term>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="3"
+   ss:postText="${res.Agetxt}"
+   verify="range(0,99)">
+    <title>Please type in your age below.</title>
+  </number>
+
+  <suspend/>
+
+  <term cond="not(S_Age.check('18-54'))">Age</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Frequency"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   shuffle="rows"
+   uses="atm1d.8">
+    <title>Which of the following types of products, if any, have you personally purchased in the past 6 months?</title>
+    <comment>Select all that apply</comment>
+    <row label="r1"><b>Deodorant or antiperspirant</b></row>
+    <row label="r2"><b>Body wash</b></row>
+    <row label="r3"><b>Bar soap</b></row>
+    <row label="r4"><b>Shampoo</b></row>
+    <row label="r5"><b>Conditioner</b></row>
+    <row label="r6" exclusive="1" randomize="0"><b>None of the above</b></row>
+  </checkbox>
+
+  <suspend/>
+
+  <term cond="not(S_Frequency.r2)">Term Frequency</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_BrandAwareness"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>Which of the following <b>Body wash</b> brands have you ever seen or heard of?</title>
+    <row label="r1">Aveeno</row>
+    <row label="r2">Axe</row>
+    <row label="r3">Bath &amp; Body Works</row>
+    <row label="r4">Caress</row>
+    <row label="r5">Dial</row>
+    <row label="r6">Dial Men</row>
+    <row label="r7">Dove</row>
+    <row label="r8">Dove Men + Care</row>
+    <row label="r9">Irish Spring</row>
+    <row label="r10">Ivory</row>
+    <row label="r11">Method</row>
+    <row label="r12">Native</row>
+    <row label="r13">Neutrogena</row>
+    <row label="r14">Nivea</row>
+    <row label="r15">Olay</row>
+    <row label="r16">Old Spice</row>
+    <row label="r17">Softsoap</row>
+    <row label="r18">ST. Ives</row>
+    <row label="r19">Suave</row>
+    <row label="r20">Suave Men</row>
+    <row label="r21">Zest</row>
+    <row label="r22" randomize="0">Store brand</row>
+    <row label="r23" randomize="0">Other brand</row>
+    <row label="r24" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term cond="not(S_BrandAwareness.r4 and S_BrandAwareness.r5 and S_BrandAwareness.r17 and S_BrandAwareness.r19)">S_BrandAwareness</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Brand_P6M"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>Which brand or brands of <b>Body wash</b>, have you purchased and used in the <u>past 6 months</u>? </title>
+    <row label="r1">Aveeno</row>
+    <row label="r2">Axe</row>
+    <row label="r3">Bath &amp; Body Works</row>
+    <row label="r4">Caress</row>
+    <row label="r5">Dial</row>
+    <row label="r6">Dial Men</row>
+    <row label="r7">Dove</row>
+    <row label="r8">Dove Men + Care</row>
+    <row label="r9">Irish Spring</row>
+    <row label="r10">Ivory</row>
+    <row label="r11">Method</row>
+    <row label="r12">Native</row>
+    <row label="r13">Neutrogena</row>
+    <row label="r14">Nivea</row>
+    <row label="r15">Olay</row>
+    <row label="r16">Old Spice</row>
+    <row label="r17">Softsoap</row>
+    <row label="r18">St. Ives</row>
+    <row label="r19">Suave</row>
+    <row label="r20">Suave Men</row>
+    <row label="r21">Zest</row>
+    <row label="r22" randomize="0">Store brand</row>
+    <row label="r23" randomize="0">Other brand</row>
+    <row label="r24" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term cond="not(S_Brand_P6M.r1 or S_Brand_P6M.r3 or S_Brand_P6M.r4 or S_Brand_P6M.r5 or S_Brand_P6M.r7 or S_Brand_P6M.r10 or S_Brand_P6M.r11 or S_Brand_P6M.r12 or S_Brand_P6M.r13 or S_Brand_P6M.r14 or S_Brand_P6M.r15 or S_Brand_P6M.r17 or S_Brand_P6M.r18 or S_Brand_P6M.r19 or S_Brand_P6M.r21)">S_Brand_P6M</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Brand_BUMO2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   rowCond="S_Brand_P6M[row.index]"
+   uses="atm1d.8">
+    <title>And which one do you purchase most often in a grocery, supermarket, or retail store? </title>
+    <row label="r1">Aveeno</row>
+    <row label="r2">Axe</row>
+    <row label="r3">Bath &amp; Body Works</row>
+    <row label="r4">Caress</row>
+    <row label="r5">Dial</row>
+    <row label="r6">Dial Men</row>
+    <row label="r7">Dove</row>
+    <row label="r8">Dove Men + Care</row>
+    <row label="r9">Irish Spring</row>
+    <row label="r10">Ivory</row>
+    <row label="r11">Method</row>
+    <row label="r12">Native</row>
+    <row label="r13">Neutrogena</row>
+    <row label="r14">Nivea</row>
+    <row label="r15">Olay</row>
+    <row label="r16">Old Spice</row>
+    <row label="r17">Softsoap</row>
+    <row label="r18">St. Ives</row>
+    <row label="r19">Suave</row>
+    <row label="r20">Suave Men</row>
+    <row label="r21">Zest</row>
+    <row label="r22" randomize="0">Store brand</row>
+    <row label="r23" randomize="0">Other brand</row>
+    <row label="r24" exclusive="1" randomize="0">None of the above</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="S_Brand_PastPurchased" randomize="0" where="execute,survey,report">
+    <title>Usage Past purchased (P3M) - User/Non User for Database</title>
+    <row label="TB" autofill="S_Brand_P6M.r17">Test Brand User - all test brands netted</row>
+    <row label="NonUser" autofill="S_Brand_PastPurchased.count==0">Test Brand NON User</row>
+  </autofill>
+
+  <autofill label="S_Brand_BUMO" randomize="0" where="execute,survey,report">
+    <title>BUMO - User/Non User for Database</title>
+    <row label="TB" autofill="S_Brand_BUMO2.r17">Test Brand User - all test brands netted</row>
+    <row label="NonUser" autofill="S_Brand_BUMO.count==0">Test Brand NON User</row>
+  </autofill>
+</block>
+
+<suspend/>
+
+<block label="Quotas" builder:title="Quotas">
+  <autofill label="Sample" randomize="0" where="execute,survey,report">
+    <title>Sample</title>
+    <row label="r1" autofill="True">Category Shoppers</row>
+  </autofill>
+
+  <autofill label="Age" randomize="0" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="(S_Age.check('18-34'))">18-34</row>
+    <row label="r2" autofill="(S_Age.check('35-54'))">35-54</row>
+  </autofill>
+
+  <autofill label="Gender" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r2" autofill="S_Gender.r2">Female</row>
+  </autofill>
+
+  <autofill label="Usage" randomize="0" where="execute,survey,report">
+    <title>P6M Usage</title>
+    <row label="r1" autofill="S_Brand_P6M.r4">Caress</row>
+    <row label="r2" autofill="S_Brand_P6M.r5">Dial</row>
+    <row label="r3" autofill="S_Brand_P6M.r17">Softsoap</row>
+    <row label="r4" autofill="S_Brand_P6M.r19">Suave</row>
+    <row label="r5" autofill="Usage.count==0">Other</row>
+  </autofill>
+
+  <autofill label="BrandAwareness" randomize="0" where="execute,survey,report">
+    <title>Awareness</title>
+    <row label="r1" autofill="S_BrandAwareness.r17">Softsoap User</row>
+    <row label="r2" autofill="not(S_BrandAwareness.r17)">Non Softsoap User</row>
+  </autofill>
+
+  <suspend/>
+
+  <quota doit="1" overquota="noqual" sheet="Quota"/>
+
+  <suspend/>
+
+  <block label="SETQuotas" builder:title="Quotas">
+    <autofill label="PhaseQ" where="execute,survey,report">
+      <title>PhaseQ</title>
+      <row label="r1" autofill="True">1</row>
+    </autofill>
+  </block>
+
+  <suspend/>
+
+  <block label="Images" builder:title="IMAGES">
+    <autofill label="EX1_IMGA" randomize="0" where="execute,survey,report">
+      <title>EX1 Image</title>
+      <row label="r1" autofill="True"><div align="center"><img src="[rel Neutrogena_example1a.png]" constrain="true" height="300" alt="" title="" /></div></row>
+      <row label="none" autofill="EX1_IMGA.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+    </autofill>
+
+    <autofill label="EX1_IMGB" randomize="0" where="execute,survey,report">
+      <title>EX1 Image</title>
+      <row label="r2" autofill="True"><div align="center"><img src="[rel Neutrogena_example2b.png]" constrain="true" height="300" alt="" title="" /></div></row>
+      <row label="none" autofill="EX1_IMGB.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+    </autofill>
+  </block>
+</block>
+
+<suspend/>
+
+<exec>
+if PhaseQ.r1:  Phase.val=0
+</exec>
+
+<radio 
+  label="Phase"
+  randomize="0"
+  where="report">
+  <title>Phase</title>
+  <row label="r1">1</row>
+</radio>
+
+<suspend/>
+
+<autofill label="Brand" randomize="0" where="execute,survey,report">
+  <title>Brand</title>
+  <row label="r1" autofill="True"><strong>K-Y Personal Lubricant product</strong></row>
+</autofill>
+
+<suspend/>
+
+<radio 
+  label="Agreement"
+  atm1d:large_buttonAlign="center"
+  atm1d:large_contentAlign="center"
+  atm1d:showInput="0"
+  atm1d:small_buttonAlign="center"
+  atm1d:small_contentAlign="center"
+  randomize="0"
+  uses="atm1d.8">
+  <title><strong><span style="color: #0091da;">Respondent Confidentiality Disclosure Agreement (RCDA)<br /></span></strong><hr /><strong><em>Congratulations!<br /></em></strong><br />
+<div align="left">
+<ul>
+   Thank you for agreeing to participate in this consumer study on behalf of <strong><span style="color: #0091da;">Behaviorally</span></strong>. Before you can participate in this research, we would like you to understand that it will involve Confidential Information and you must agree to these terms and conditions. If you do not agree, you will not be eligible to participate in this study. By signing this agreement, you agree as follows:
+<li>You will use information or material disclosed to you or which may be available as part of this study only for the purpose of participating in this study, and you will not otherwise use the information or material for your own benefit or the benefit of any third party.</li>
+<li>You agree to keep confidential and not disclose, copy, transmit, or use for any purpose other than your participation in this study any information or material disclosed or made available to you as part of the study, including about products or packaging that may be disclosed to you directly or indirectly by participating in this study. Any disclosure, copying, transmitting or misuse of any information or material in any form (including hard copy and/or electronic/data) whether intentional or unintentional may subject you to disqualification, and any other remedies available to Behaviorally or its study partners in law or equity.</li>
+<li>You agree that Behaviorally (and its partners) will be irreparably harmed and monetary damages may not be adequate compensation if you fail to meet your obligations under this agreement, and that, in addition to other remedies, Behaviorally (or its partners) shall be entitled to seek injunctive relief to prevent any threatened or continued breach. The parties hereby waive any requirements for security for obtaining any provisional relief.</li>
+<li>Each of Behaviorally’s partners is an intended third-party beneficiary of this agreement and each partner may enforce the terms of this agreement.<br /><br /><br /></li>
+</ul>
+</div>
+As further detailed in our privacy policy (<a href="https://www.behaviorally.com/privacy-policy" target="_blank" rel="noopener">https://www.behaviorally.com/privacy-policy</a>), we take reasonable precautions to protect the privacy and security of your information during the market research survey. All information collected as part of this survey is treated in accordance with our online privacy policy and is destroyed 2 months after you have taken this survey. You will be compensated for your time, commitment, and confidential obligation.<br /><br /><strong>Please confirm your acceptance of these terms by checking the agreement below.</strong></title>
+  <row label="r1"><b>I hereby acknowledge and agree to the terms.</b></row>
+</radio>
+
+<text 
+  label="DateTime"
+  optional="0"
+  randomize="0"
+  size="25"
+  where="report">
+  <title>DateTime</title>
+  <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+  </exec>
+
+</text>
+
+<suspend/>
+
+<block label="DrawingExercise" builder:title="Drawing Exercise Practice">
+  <html label="Intro1" where="survey">During this interview, you will be asked to describe in your own words, as well as, draw different brands and types of products on your computer.  <br />Please do not worry about artistic ability or accuracy. We are just interested in knowing what you <i>remember</i> about the packaging.<br />Below you can review a few examples of responses when asked to draw "Neutrogena Make Up Remover Wipes" packaging.<br /><br /><strong><b>[pipe: EX1_IMGA][pipe: EX1_IMGB]<br /><br /></b></strong>If you are ready to begin the interview, please click continue...<strong><b></b></strong></html>
+
+  <suspend/>
+
+  <html label="DrawingIntro" where="survey"><img src="/survey/selfserve/1da7/ae853/Drawing.gif" class="survey_image survey-image-original" title="" /><br /><br /><br /><span>Please review the video above of an online response when asked to draw </span><strong style="font-weight: bolder;">KRAFT MACARONI &amp;amp; CHEESE</strong> packaging.</html>
+
+  <suspend/>
+
+  <textarea 
+   label="D_Drawing_Practice1"
+   height="10"
+   optional="0"
+   randomize="0"
+   width="50">
+    <title>As mentioned, we will now ask you draw different types of products on your computer.<br /><br />
+<div align="left">
+<ul>
+<li />Please test and&amp;nbsp;practice&amp;nbsp;with the drawing tools&amp;nbsp;in the drawing area below.
+<li />Please hover over all the tools before you begin. 
+<li /><span style="color: red;">From left to right: </span><strong><span style="color: red;">Undo; Redo; Clear All; Rectangle Shape; Elipse Shape; Line; Pencil Tool; Text Tool; Eraser; Fill Tool; Fill Color; Stroke Width; Stroke Color</span></strong>
+<li />You must select the color you wish to use before using each tool, shape, or adding text. 
+<li />If you wish to restart, use the '<strong>X</strong>' clear all option on the top right.
+<li />Using the tools and your mouse, you can begin drawing in the area below. You may take as little or as much time as you need.
+</ul>
+</div>
+<br /><strong>When you are ready to begin the online drawing exercise, please click continue...</strong></title>
+    <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel wColorPicker.min.js]"></script>
+<link rel="Stylesheet" type="text/css" href="[rel wColorPicker.min.css]" />
+<link rel="Stylesheet" type="text/css" href="[rel wPaint.min.css]" />
+<script type="text/javascript" src="[rel wPaint.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.shapes.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.text.min.js]"></script>
+<script>
+	$ (window).load(function() {
+		$ ("#btn_continue").hide();
+  		$ (".survey-buttons").prepend('<button id="continue" class="button">Continue</button>');
+  		
+        var questionID = $ (".question").attr('id');
+
+        $ (".instruction-text, .answers").hide();
+        $ ("#"+questionID).css('margin-bottom', '0');
+        $ ("#"+questionID).after('<div id="drawing" style="border:1px solid #ccc; height:600px; width:600px; position:relative; margin:auto;"></div>');
+
+        $.extend($.fn.wPaint.defaults, {
+          mode:        'pencil',  // set mode
+          lineWidth:   '3',       // starting line width
+          fillStyle:   '#000000', // starting fill style
+          strokeStyle: '#000000'  // start stroke style
+        });
+
+        $ ("#drawing").wPaint({
+            path: 'ae853/'
+            
+        });
+  	
+  		$ (document).on('click', '#continue', function (e) {
+  			e.preventDefault();
+          $ ("#"+questionID+" .answers textarea").val("${uuid}-"+questionID+".png");
+          var canvas = document.getElementsByClassName('wPaint-canvas')[0];
+          canvas.toBlob(function(blob) {
+              var form = new FormData();
+              form.append("image", blob, "${uuid}-"+questionID+".png");
+              $.ajax({
+                  crossDomain: true,
+                  type: 'POST',
+                  url: 'https://connect.behaviorally.com/drawings/upload.php',
+                  data: form,
+                  processData: false,
+                  contentType: false,
+                  success: function () {
+                  	$ ("#btn_continue").click();
+                  }
+              })
+          })
+      });
+    }); 
+</script>
+]]></style>
+  </textarea>
+
+  <suspend/>
+
+  <block label="b3" builder:title="Order" randomizeChildren="1">
+    <block label="b1" builder:title="Clearasil Open End and Drawing Exercise" randomize="1">
+      <block label="b4" builder:title="New Block">
+        <suspend/>
+
+        <html label="cm3" where="survey">You will now be&amp;nbsp;asked to describe and then draw from memory the&amp;nbsp;<u><strong>Softsoap body wash packaging</strong></u> you are most familiar with.<br /><strong><br />Please DO NOT look at the actual packaging&amp;nbsp;</strong>when completing this exercise. We are just interested in knowing what you remember about the packaging. Do not worry about accuracy or artistic ability.<strong><br /></strong></html>
+
+        <suspend/>
+
+        <textarea 
+      label="S1"
+      height="5"
+      optional="0"
+      randomize="0"
+      width="75">
+          <title>Please describe as best you can everything you remember about the&amp;nbsp;<strong><u>Softsoap body wash</u></strong> you are most familiar with.<br /> Please try to be as specific as possible by including  name of product, colors, shapes, illustrations, symbols, type of lettering, as well as the material it is made of.</title>
+          <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+        </textarea>
+
+        <suspend/>
+
+        <html label="S2_Draw" where="survey">Now as best as you can, please draw a picture of the <strong><u>Softsoap body wash</u></strong> you are most familiar with from your memory.<br /><br />
+Please make your drawing as close as possible to <strong><u>Softsoap body wash</u></strong> packaging you are thinking of. Be as specific as you can and use any/all the tools, colors, shapes, lettering, symbols, illustrations, words and anything else you think is included on the <strong><u>Softsoap body wash</u></strong> packaging label.</html>
+
+        <textarea 
+      label="D_Drawing_1"
+      height="5"
+      optional="0"
+      randomize="0"
+      width="75">
+          <title><em style="font-size: 13.3333px;">x</em></title>
+          <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel wColorPicker.min.js]"></script>
+<link rel="Stylesheet" type="text/css" href="[rel wColorPicker.min.css]" />
+<link rel="Stylesheet" type="text/css" href="[rel wPaint.min.css]" />
+<script type="text/javascript" src="[rel wPaint.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.shapes.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.text.min.js]"></script>
+<script>
+	$ (window).load(function() {
+		$ ("#btn_continue").hide();
+  		$ (".survey-buttons").prepend('<button id="continue" class="button">Continue</button>');
+  		
+        var questionID = $ (".question").attr('id');
+
+        $ ("#"+questionID + ".textarea").hide();
+        $ ("#"+questionID).css('margin-bottom', '0');
+        $ ("#"+questionID).after('<div id="drawing" style="border:1px solid #ccc; height:600px; width:600px; position:relative; margin:auto;"></div>');
+
+        $.extend($.fn.wPaint.defaults, {
+          mode:        'pencil',  // set mode
+          lineWidth:   '3',       // starting line width
+          fillStyle:   '#000000', // starting fill style
+          strokeStyle: '#000000'  // start stroke style
+        });
+
+        $ ("#drawing").wPaint({
+            path: 'ae853/'
+        });
+  	
+  		$ (document).on('click', '#continue', function (e) {
+  			e.preventDefault();
+          $ ("#"+questionID+" .answers textarea").val("${uuid}-"+questionID+".png");
+          var canvas = document.getElementsByClassName('wPaint-canvas')[0];
+          canvas.toBlob(function(blob) {
+              var form = new FormData();
+              form.append("image", blob, "${uuid}-"+questionID+".png");
+              $.ajax({
+                  crossDomain: true,
+                  type: 'POST',
+                  url: 'https://connect.behaviorally.com/drawings/upload.php',
+                  data: form,
+                  processData: false,
+                  contentType: false,
+                  success: function () {
+                  	$ ("#btn_continue").click();
+                  }
+              })
+          })
+      });
+    }); 
+</script>
+]]></style>
+        </textarea>
+
+        <suspend/>
+
+        <textarea 
+      label="S2_OE"
+      height="5"
+      optional="0"
+      randomize="0"
+      width="75">
+          <title>If you would like to indicate or describe any part of your drawing, specific color or additional visual of your drawing, you can type any additional text below.</title>
+          <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+        </textarea>
+      </block>
+
+      <suspend/>
+    </block>
+
+    <block label="b5" builder:title="New Block" randomize="1">
+      <suspend/>
+
+      <html label="cm4" where="survey">You will now be&amp;nbsp;asked to describe and then draw from memory the&amp;nbsp;<u><strong>Dial body wash packaging</strong></u> you are most familiar with.<br /><strong><br />Please DO NOT look at the actual packaging&amp;nbsp;</strong>when completing this exercise. We are just interested in knowing what you remember about the packaging. Do not worry about accuracy or artistic ability.<strong><br /></strong></html>
+
+      <suspend/>
+
+      <textarea 
+     label="S3"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title>Please describe as best you can everything you remember about the&amp;nbsp;<strong><u>Dial body wash</u></strong> you are most familiar with.<br /> Please try to be as specific as possible by including  name of product, colors, shapes, illustrations, symbols, type of lettering, as well as the material it is made of.</title>
+        <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+      </textarea>
+
+      <suspend/>
+
+      <html label="S4_Draw" where="survey">Now as best as you can, please draw a picture of the <strong><u>Dial body wash</u></strong> you are most familiar with from your memory.<br /><br />
+Please make your drawing as close as possible to <strong><u>Dial body wash</u></strong> packaging you are thinking of. Be as specific as you can and use any/all the tools, colors, shapes, lettering, symbols, illustrations, words and anything else you think is included on the <strong><u>Dial body wash</u></strong> packaging label.</html>
+
+      <textarea 
+     label="D_Drawing_2"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title><em style="font-size: 13.3333px;">x</em></title>
+        <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel wColorPicker.min.js]"></script>
+<link rel="Stylesheet" type="text/css" href="[rel wColorPicker.min.css]" />
+<link rel="Stylesheet" type="text/css" href="[rel wPaint.min.css]" />
+<script type="text/javascript" src="[rel wPaint.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.shapes.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.text.min.js]"></script>
+<script>
+	$ (window).load(function() {
+		$ ("#btn_continue").hide();
+  		$ (".survey-buttons").prepend('<button id="continue" class="button">Continue</button>');
+  		
+        var questionID = $ (".question").attr('id');
+
+        $ ("#"+questionID + ".textarea").hide();
+        $ ("#"+questionID).css('margin-bottom', '0');
+        $ ("#"+questionID).after('<div id="drawing" style="border:1px solid #ccc; height:600px; width:600px; position:relative; margin:auto;"></div>');
+
+        $.extend($.fn.wPaint.defaults, {
+          mode:        'pencil',  // set mode
+          lineWidth:   '3',       // starting line width
+          fillStyle:   '#000000', // starting fill style
+          strokeStyle: '#000000'  // start stroke style
+        });
+
+        $ ("#drawing").wPaint({
+            path: 'ae853/'
+        });
+  	
+  		$ (document).on('click', '#continue', function (e) {
+  			e.preventDefault();
+          $ ("#"+questionID+" .answers textarea").val("${uuid}-"+questionID+".png");
+          var canvas = document.getElementsByClassName('wPaint-canvas')[0];
+          canvas.toBlob(function(blob) {
+              var form = new FormData();
+              form.append("image", blob, "${uuid}-"+questionID+".png");
+              $.ajax({
+                  crossDomain: true,
+                  type: 'POST',
+                  url: 'https://connect.behaviorally.com/drawings/upload.php',
+                  data: form,
+                  processData: false,
+                  contentType: false,
+                  success: function () {
+                  	$ ("#btn_continue").click();
+                  }
+              })
+          })
+      });
+    }); 
+</script>
+]]></style>
+      </textarea>
+
+      <suspend/>
+
+      <textarea 
+     label="S4_OE"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title>If you would like to indicate or describe any part of your drawing, specific color or additional visual of your drawing, you can type any additional text below.</title>
+        <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+      </textarea>
+    </block>
+
+    <suspend/>
+
+    <block label="b6" builder:title="New Block" randomize="1">
+      <suspend/>
+
+      <html label="cm5" where="survey">You will now be&amp;nbsp;asked to describe and then draw from memory the&amp;nbsp;<u><strong>Caress body wash</strong></u> you are most familiar with.<br /><strong><br />Please DO NOT look at the actual packaging&amp;nbsp;</strong>when completing this exercise. We are just interested in knowing what you remember about the packaging. Do not worry about accuracy or artistic ability.<strong><br /></strong></html>
+
+      <suspend/>
+
+      <textarea 
+     label="S5"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title>Please describe as best you can everything you remember about the&amp;nbsp;<strong><u>Caress body wash</u></strong> you are most familiar with.<br /> Please try to be as specific as possible by including  name of product, colors, shapes, illustrations, symbols, type of lettering, as well as the material it is made of.</title>
+        <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+      </textarea>
+
+      <suspend/>
+
+      <html label="S6_Draw" where="survey">Now as best as you can, please draw a picture of the <strong><u>Caress body wash</u></strong> you are most familiar with from your memory.<br /><br />
+Please make your drawing as close as possible to <strong><u>Caress body wash</u></strong> packaging you are thinking of. Be as specific as you can and use any/all the tools, colors, shapes, lettering, symbols, illustrations, words and anything else you think is included on the <strong><u>Caress body wash</u></strong> packaging label.</html>
+
+      <textarea 
+     label="D_Drawing_3"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title><em style="font-size: 13.3333px;">x</em></title>
+        <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel wColorPicker.min.js]"></script>
+<link rel="Stylesheet" type="text/css" href="[rel wColorPicker.min.css]" />
+<link rel="Stylesheet" type="text/css" href="[rel wPaint.min.css]" />
+<script type="text/javascript" src="[rel wPaint.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.shapes.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.text.min.js]"></script>
+<script>
+	$ (window).load(function() {
+		$ ("#btn_continue").hide();
+  		$ (".survey-buttons").prepend('<button id="continue" class="button">Continue</button>');
+  		
+        var questionID = $ (".question").attr('id');
+
+        $ ("#"+questionID + ".textarea").hide();
+        $ ("#"+questionID).css('margin-bottom', '0');
+        $ ("#"+questionID).after('<div id="drawing" style="border:1px solid #ccc; height:600px; width:600px; position:relative; margin:auto;"></div>');
+
+        $.extend($.fn.wPaint.defaults, {
+          mode:        'pencil',  // set mode
+          lineWidth:   '3',       // starting line width
+          fillStyle:   '#000000', // starting fill style
+          strokeStyle: '#000000'  // start stroke style
+        });
+
+        $ ("#drawing").wPaint({
+            path: 'ae853/'
+        });
+  	
+  		$ (document).on('click', '#continue', function (e) {
+  			e.preventDefault();
+          $ ("#"+questionID+" .answers textarea").val("${uuid}-"+questionID+".png");
+          var canvas = document.getElementsByClassName('wPaint-canvas')[0];
+          canvas.toBlob(function(blob) {
+              var form = new FormData();
+              form.append("image", blob, "${uuid}-"+questionID+".png");
+              $.ajax({
+                  crossDomain: true,
+                  type: 'POST',
+                  url: 'https://connect.behaviorally.com/drawings/upload.php',
+                  data: form,
+                  processData: false,
+                  contentType: false,
+                  success: function () {
+                  	$ ("#btn_continue").click();
+                  }
+              })
+          })
+      });
+    }); 
+</script>
+]]></style>
+      </textarea>
+
+      <suspend/>
+
+      <textarea 
+     label="S6_OE"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title>If you would like to indicate or describe any part of your drawing, specific color or additional visual of your drawing, you can type any additional text below.</title>
+        <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+      </textarea>
+
+      <suspend/>
+    </block>
+
+    <block label="b7" builder:title="New Block" randomize="1">
+      <suspend/>
+
+      <html label="cm6" where="survey">You will now be&amp;nbsp;asked to describe and then draw from memory the&amp;nbsp;<u><strong>Suave body wash</strong></u> you are most familiar with.<br /><strong><br />Please DO NOT look at the actual packaging&amp;nbsp;</strong>when completing this exercise. We are just interested in knowing what you remember about the packaging. Do not worry about accuracy or artistic ability.<strong><br /></strong></html>
+
+      <suspend/>
+
+      <textarea 
+     label="S6"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title>Please describe as best you can everything you remember about the&amp;nbsp;<strong><u>Suave body wash</u></strong> you are most familiar with.<br /> Please try to be as specific as possible by including  name of product, colors, shapes, illustrations, symbols, type of lettering, as well as the material it is made of.</title>
+        <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+      </textarea>
+
+      <suspend/>
+
+      <html label="S7_Draw" where="survey">Now as best as you can, please draw a picture of the <strong><u>Suave body wash</u></strong> you are most familiar with from your memory.<br /><br />
+Please make your drawing as close as possible to <strong><u>Suave body wash</u></strong> packaging you are thinking of. Be as specific as you can and use any/all the tools, colors, shapes, lettering, symbols, illustrations, words and anything else you think is included on the <strong><u>Suave body wash</u></strong> packaging label.</html>
+
+      <textarea 
+     label="D_Drawing_4"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title><em style="font-size: 13.3333px;">x</em></title>
+        <style name="question.after"><![CDATA[
+<script type="text/javascript" src="[rel wColorPicker.min.js]"></script>
+<link rel="Stylesheet" type="text/css" href="[rel wColorPicker.min.css]" />
+<link rel="Stylesheet" type="text/css" href="[rel wPaint.min.css]" />
+<script type="text/javascript" src="[rel wPaint.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.main.shapes.min.js]"></script>
+<script type="text/javascript" src="[rel wPaint.menu.text.min.js]"></script>
+<script>
+	$ (window).load(function() {
+		$ ("#btn_continue").hide();
+  		$ (".survey-buttons").prepend('<button id="continue" class="button">Continue</button>');
+  		
+        var questionID = $ (".question").attr('id');
+
+        $ ("#"+questionID + ".textarea").hide();
+        $ ("#"+questionID).css('margin-bottom', '0');
+        $ ("#"+questionID).after('<div id="drawing" style="border:1px solid #ccc; height:600px; width:600px; position:relative; margin:auto;"></div>');
+
+        $.extend($.fn.wPaint.defaults, {
+          mode:        'pencil',  // set mode
+          lineWidth:   '3',       // starting line width
+          fillStyle:   '#000000', // starting fill style
+          strokeStyle: '#000000'  // start stroke style
+        });
+
+        $ ("#drawing").wPaint({
+            path: 'ae853/'
+        });
+  	
+  		$ (document).on('click', '#continue', function (e) {
+  			e.preventDefault();
+          $ ("#"+questionID+" .answers textarea").val("${uuid}-"+questionID+".png");
+          var canvas = document.getElementsByClassName('wPaint-canvas')[0];
+          canvas.toBlob(function(blob) {
+              var form = new FormData();
+              form.append("image", blob, "${uuid}-"+questionID+".png");
+              $.ajax({
+                  crossDomain: true,
+                  type: 'POST',
+                  url: 'https://connect.behaviorally.com/drawings/upload.php',
+                  data: form,
+                  processData: false,
+                  contentType: false,
+                  success: function () {
+                  	$ ("#btn_continue").click();
+                  }
+              })
+          })
+      });
+    }); 
+</script>
+]]></style>
+      </textarea>
+
+      <suspend/>
+
+      <textarea 
+     label="S7_OE"
+     height="5"
+     optional="0"
+     randomize="0"
+     width="75">
+        <title>If you would like to indicate or describe any part of your drawing, specific color or additional visual of your drawing, you can type any additional text below.</title>
+        <comment><strong>Please be as detailed and thorough as possible.</strong></comment>
+      </textarea>
+    </block>
+  </block>
+</block>
+
+<suspend/>
+
+<block label="Class" builder:title="Classification Section">
+  <html label="cm1" where="survey"><strong><em>Now, just a few questions for classification purposes…</em></strong></html>
+
+  <suspend/>
+
+  <radio 
+   label="C_Store"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>Where do you typically buy Body Wash?</title>
+    <comment>select one response</comment>
+    <row label="r1">At a physical store only (like a pharmacy, grocery store or mass merchandiser)</row>
+    <row label="r2">Online Only</row>
+    <row label="r3">Mostly online and occasionally at a physical store</row>
+    <row label="r4">Mostly at a physical store and occasionally online</row>
+    <row label="r5">Both online and at a physical store equally</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_Devices"
+   cond="not(C_Store.r1)"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>You mentioned you bought Body Wash online, what devices do you use to shop for Body Wash online?</title>
+    <comment>select all that apply</comment>
+    <row label="desk">Desktop Computer</row>
+    <row label="laptop">Laptop</row>
+    <row label="mobile">Mobile Phone/ Smartphone</row>
+    <row label="watch">Smartwatch</row>
+    <row label="tablet">Tablet</row>
+    <row label="voice">Voice (Alexa, Google Home, etc.)</row>
+    <row label="other">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_OnlineStores"
+   cond="not(C_Store.r1)"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>You mentioned you bought Body Wash online, where specifically?</title>
+    <comment>select all that apply</comment>
+    <row label="r1">Amazon App</row>
+    <row label="r2">Amazon Website (Amazon.com)</row>
+    <row label="r3">Amazon Fresh App</row>
+    <row label="r4">Amazon Fresh Website (amazon.com/ AmazonFresh)</row>
+    <row label="r5">Instacart App</row>
+    <row label="r6">Instacart Website (instacart.com)</row>
+    <row label="r7">Target App</row>
+    <row label="r8">Target Website (Target.com)</row>
+    <row label="r9">Walmart Grocery App</row>
+    <row label="r10">Walmart Grocery Website (grocery.walmart.com)</row>
+    <row label="r11">Walmart App</row>
+    <row label="r12">Walmart Website (walmart.com)</row>
+    <row label="r13">Other – Other Grocery Store App</row>
+    <row label="r14">Other – Other Grocery Store Website</row>
+    <row label="r15" open="1" openSize="15">Other (Specify)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_Delivery"
+   cond="not(C_Store.r1)"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.8">
+    <title>You mentioned you bought Body Wash online, how do you usually get the Body Wash product after you buy it?</title>
+    <comment>select all that apply</comment>
+    <row label="r1">Buy online and pick up at the store</row>
+    <row label="r2">Buy online and get it delivered to my home</row>
+    <row label="r3">Buy online and get it delivered to my work</row>
+    <row label="r4">Buy online and get it delivered to a locker or place where I can pick it up</row>
+    <row label="r5">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <select 
+   label="C_Employment"
+   randomize="0">
+    <title>Which of the following best describes your current employment status?</title>
+    <comment>Select one response.</comment>
+    <choice label="ch1">Working full-time</choice>
+    <choice label="ch2">Working part-time</choice>
+    <choice label="ch3">Looking for work, temporarily unemployed</choice>
+    <choice label="ch4">Full-time student</choice>
+    <choice label="ch5">Full-time homemaker</choice>
+    <choice label="ch6">Retired</choice>
+    <choice label="ch7">Not employed</choice>
+    <choice label="ch8">I prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_RELATIONSHIP"
+   randomize="0">
+    <title>What is your relationship status?</title>
+    <comment>Select one response.</comment>
+    <choice label="ch1">Single, never married</choice>
+    <choice label="ch2">Married</choice>
+    <choice label="ch3">Separated, divorced, or widowed</choice>
+    <choice label="ch4">Domestic partnership/living with someone</choice>
+    <choice label="ch5">Prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_EDUCATION"
+   randomize="0">
+    <title>What is the highest level of education you have completed?</title>
+    <choice label="ch1">3rd Grade or less</choice>
+    <choice label="ch2">Middle School - Grades 4 - 8</choice>
+    <choice label="ch3">Completed some high school</choice>
+    <choice label="ch4">High school graduate</choice>
+    <choice label="ch5">Other post high school vocational training</choice>
+    <choice label="ch6">Completed some college, but no degree</choice>
+    <choice label="ch7">Associate Degree</choice>
+    <choice label="ch8">College Degree (such as B.A., B.S.)</choice>
+    <choice label="ch9">Completed some graduate, but no degree</choice>
+    <choice label="ch10">Master's degree</choice>
+    <choice label="ch11">Doctorate degree</choice>
+    <choice label="ch12" exclusive="1">None of the Above</choice>
+  </select>
+
+  <select 
+   label="STANDARD_Income"
+   randomize="0">
+    <title>Please select the range that best represents your total annual household income.</title>
+    <choice label="ch1">Less than $15 000</choice>
+    <choice label="ch2">$15 000 to $19 999</choice>
+    <choice label="ch3">$20 000 to $24 999</choice>
+    <choice label="ch4">$25 000 to $29 999</choice>
+    <choice label="ch5">$30 000 to $34 999</choice>
+    <choice label="ch6">$35 000 to $39 999</choice>
+    <choice label="ch7">$40 000 to $44 999</choice>
+    <choice label="ch8">$45 000 to $49 999</choice>
+    <choice label="ch9">$50 000 to $59 999</choice>
+    <choice label="ch10">$60 000 to $74 999</choice>
+    <choice label="ch11">$75 000 to $84 999</choice>
+    <choice label="ch12">$85 000 to $99 999</choice>
+    <choice label="ch13">$100 000 to $124 999</choice>
+    <choice label="ch14">$125 000 to $149 999</choice>
+    <choice label="ch15">$150 000 to $174 999</choice>
+    <choice label="ch16">$175 000 to $199 999</choice>
+    <choice label="ch17">$200,000 or more</choice>
+    <choice label="ch18">Prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_Ethnicity"
+   randomize="0">
+    <title>Please select one of these races/ethnicities that best describes you.</title>
+    <choice label="ch1">White</choice>
+    <choice label="ch2">Black, or African American, or Black British</choice>
+    <choice label="ch3">Asian</choice>
+    <choice label="ch4">Pacific Islander</choice>
+    <choice label="ch5">Hispanic</choice>
+    <choice label="ch6">Some other race</choice>
+    <choice label="ch7">Mixed or multiple</choice>
+    <choice label="ch8">Prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_HISPANIC"
+   randomize="0">
+    <title>Are you of Hispanic, Latino, or Spanish origin?  </title>
+    <choice label="ch1">No, not of Hispanic, Latino, or Spanish origin</choice>
+    <choice label="ch2">Yes, South American (e.g., Peru, Columbia, etc.)</choice>
+    <choice label="ch3">Yes, North American (e.g., Mexican, Puerto Rican, Cuban, etc)</choice>
+    <choice label="ch4">Yes, Central American (e.g., Panama, Costa Rica, Nicaragua, etc.)</choice>
+    <choice label="ch5">Yes, European (e.g., Spain)</choice>
+    <choice label="ch6">Prefer not to answer</choice>
+  </select>
+
+  <suspend/>
+</block>
+</survey>
