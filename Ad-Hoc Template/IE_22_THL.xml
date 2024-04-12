@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="IE_22_THL"
+  atm1d:showInput="0"
+  autoRecover="1"
+  autosaveKey="CID,transaction_id,ppid,psid,pid"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="141"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  otherLanguages="english_za,afrikaans"
+  remerged="20240323_14:01"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="0"
+  ss:listDisplay="1"
+  ss:logoAlt=""
+  ss:logoFile=""
+  ss:logoPosition=""
+  state="testing"
+  theme="frozen:survey"
+  trackVars="checkbox"
+  unusedLanguages="english_za"
+  version="66">
+
+<res label="startbtn">START</res>
+<res label="errAFFIN1">Please select at least 1 answer.</res>
+<res label="errXDFRN_2">Please provide valid name of the child.</res>
+<res label="errXDFRN">You have entered an age the same as a previous child – is this correct.</res>
+<res label="errSSQ4">Please review your response. Expenditure on toys cannot be more than the total expenditure.</res>
+<res label="errHQ1x1">Please select an answer.</res>
+<res label="errHQ1x2">Please select an answer only if browse website on computer or use Internet on mobile phone.</res>
+<res label="errVFC1">You’ve entered a wrong numbers or alphabets. Please enter the correct number or alphabet again. You can try 2 more times.</res>
+<res label="errVFC2">You’ve entered a wrong numbers or alphabets. Please enter the correct number or alphabet again. You can try 1 more time.</res>
+<res label="Attr1">Makes me <b>FEEL NEGATIVE</b> about Xero</res>
+<res label="Attr2"><b>HARD</b> to understand</res>
+<res label="Attr3">It does <b>NOT FIT</b> with the Xero brand</res>
+<res label="Attr4"><b>DOESN’T</b> make Xero <b>APPEAR DIFFERENT</b> from the other brands</res>
+<res label="Attr5">It is <b>NOT RELEVANT</b> to my business or businesses like mine</res>
+<res label="Attr6">It makes me <b>LESS LIKELY TO BUY/CONTINUE TO USE</b> Xero in the future</res>
+<res label="Attr7">It is <b>NOT RELEVANT</b> to the work I do with clients</res>
+<res label="Attr8">It makes me <b>LESS LIKELY TO RECOMMEND/CONTINUE TO USE</b> Xero with my clients in the future</res>
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="CID" unique="1"/>
+    <var name="co" required="1" values="us,uk,au,ca,nz,sg,za"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=3c910634-3453-ed7e-a27f-baaa01b29f08&amp;CID=${CID}"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=9be6a4ce-f11e-4de3-9789-fcf3c0d5c830&amp;CID=${CID}"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=3c910634-3453-ed7e-a27f-baaa01b29f08&amp;CID=${CID}"/>
+  </samplesource>
+
+  <samplesource list="12">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="CID" unique="1"/>
+    <var name="co" required="1" values="us,uk,au,ca,nz,sg,za"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=3c910634-3453-ed7e-a27f-baaa01b29f08&amp;CID=${CID}"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=9be6a4ce-f11e-4de3-9789-fcf3c0d5c830&amp;CID=${CID}"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=3c910634-3453-ed7e-a27f-baaa01b29f08&amp;CID=${CID}"/>
+  </samplesource>
+
+  <samplesource list="13">
+    <title>THL</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="co" required="1" values="us,uk,au,ca,nz,sg,za"/>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}&amp;ps_hash=B4Rl9cco"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="14">
+    <title>THL</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <var name="co" required="1" values="us,uk,au,ca,nz,sg,za"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}&amp;ps_hash=B4Rl9cco"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+.rnkclass1 {
+  display: inline-block;
+}
+.rnkclass {
+  list-style:none;
+  background-color: #57585b;
+  border-color: #57585b;
+  color: #fff;
+  min-height: 170px;
+  margin: 10px;
+  padding: 10px;
+  \@if (gv.request.device.properties["isMobileDevice"] == "0")
+  width: 20%;
+  \@endif
+  font-size: 14px;
+  text-align:center;
+  float: left;
+}
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+  </style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/240211/hideContinue.js"></script>
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/240211/AutoContinue.js"></script>
+<script src="https://paralleldata.decipherinc.com/survey/selfserve/202d/j2300299brandw1/unctrl.js"></script>
+]]></style>
+<exec>
+for eachRow in pipeCountry.rows:
+  if eachRow.label == co:
+    pipeCountry.val = eachRow.index
+    break
+
+if gv.isSST():
+  pipeCountry.val = random.randrange(0,48)
+</exec>
+
+<suspend/>
+
+<block label="Cap" builder:title="Captcha">
+  <logic label="ln1" uses="recaptcha.1">
+    <title>New Recaptcha</title></logic>
+  <html label="ln1_h" cond="0" where="survey">You are human</html>
+
+  <html label="ln1_nh" cond="0" final="1" where="survey">You are not human! You cannot proceed further.</html>
+
+  <radio 
+   label="ln1_results"
+   where="execute,survey,report">
+    <title>Results</title>
+    <comment>Please select one.</comment>
+    <exec>
+ln1_results.val = int(not ln1.human)
+    </exec>
+
+    <row label="r1">Human</row>
+    <row label="r2">Not Human</row>
+  </radio>
+</block>
+
+<suspend/>
+
+<term label="TERM_reCaptcha" cond="ln1_results.r2" sst="0">reCatptcha</term>
+
+<suspend/>
+
+<radio 
+  label="pipeCountry"
+  optional="1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punchin country code</title>
+  <comment>Please select one answer.</comment>
+  <row label="au">Australia</row>
+  <row label="at">Austria</row>
+  <row label="be">Belgium</row>
+  <row label="ca">Canada</row>
+  <row label="cn">China</row>
+  <row label="cz">Czech Republic</row>
+  <row label="dk">Denmark</row>
+  <row label="fn">Finland</row>
+  <row label="fr">France</row>
+  <row label="de">Germany</row>
+  <row label="gr">Greece</row>
+  <row label="hk">Hong Kong</row>
+  <row label="hu">Hungary</row>
+  <row label="il">Israel</row>
+  <row label="it">Italy</row>
+  <row label="jp">Japan</row>
+  <row label="ksa">KSA</row>
+  <row label="lt">Lithuania</row>
+  <row label="my">Malaysia</row>
+  <row label="mx">Mexico</row>
+  <row label="nl">Netherlands</row>
+  <row label="no">Norway</row>
+  <row label="pl">Poland</row>
+  <row label="pt">Portugal</row>
+  <row label="ro">Romania</row>
+  <row label="ru">Russia</row>
+  <row label="rs">Serbia</row>
+  <row label="sg">Singapore</row>
+  <row label="kr">South Korea</row>
+  <row label="es">Spain</row>
+  <row label="sw">Sweden</row>
+  <row label="ch">Switzerland</row>
+  <row label="tw">Taiwan</row>
+  <row label="tr">Turkey</row>
+  <row label="ae">UAE</row>
+  <row label="uk">UK</row>
+  <row label="ua">Ukraine</row>
+  <row label="us">USA</row>
+  <row label="br">Brazil</row>
+  <row label="bg">Bulgaria</row>
+  <row label="hr">Croatia</row>
+  <row label="ee">Estonia</row>
+  <row label="ie">Ireland</row>
+  <row label="lv">Latvia</row>
+  <row label="nz">New Zealand</row>
+  <row label="sk">Slovakia</row>
+  <row label="si">Slovenia</row>
+  <row label="za">South Africa</row>
+  <row label="ph">Philippines</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if pipeCountry.us:  dCountry.val = 0
+if pipeCountry.uk:  dCountry.val = 1
+if pipeCountry.au:  dCountry.val = 2
+if pipeCountry.ca:  dCountry.val = 3
+if pipeCountry.nz:  dCountry.val = 4
+if pipeCountry.sg:  dCountry.val = 5
+if pipeCountry.za:  dCountry.val = 6
+</exec>
+
+<radio 
+  label="dCountry"
+  optional="1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punching country</title>
+  <row label="r1">US = United States</row>
+  <row label="r2">UK = United Kingdoms</row>
+  <row label="r3">AU = Australia</row>
+  <row label="r4">CA = Canada</row>
+  <row label="r5">NZ = New Zealand</row>
+  <row label="r6">SG = Singapore</row>
+  <row label="r7">ZA = South Africa</row>
+</radio>
+
+<exec>
+if pipeCountry.us:  LNG.val = 0
+if pipeCountry.uk:  LNG.val = 1
+if pipeCountry.au:  LNG.val = 2
+if pipeCountry.ca:  LNG.val = 3
+if pipeCountry.nz:  LNG.val = 4
+if pipeCountry.sg:  LNG.val = 5
+if pipeCountry.za:  LNG.val = 6
+</exec>
+
+<radio 
+  label="LNG"
+  optional="1"
+  where="execute,survey,report">
+  <title>Please select the language which you would like to answer this survey in.</title>
+  <comment>Please select one answer.</comment>
+  <row label="r1">US = United States</row>
+  <row label="r2">UK = United Kingdoms</row>
+  <row label="r3">AU = Australia</row>
+  <row label="r4">CA = Canada</row>
+  <row label="r5">NZ = New Zealand</row>
+  <row label="r6">SG = Singapore</row>
+  <row label="r7">ZA = South Africa</row>
+</radio>
+
+<suspend/>
+
+<term label="TERM_country" cond="0">Country</term>
+
+<suspend/>
+
+<exec sst="0">
+if LNG.r1:
+  setLanguage('english')
+if LNG.r2:
+  setLanguage('english')
+if LNG.r3:
+  setLanguage('english')
+if LNG.r4:
+  setLanguage('english') 
+if LNG.r5:
+  setLanguage('english')
+   
+if LNG.r6:
+  setLanguage('english')
+    
+if LNG.r7:
+  setLanguage('english')
+</exec>
+
+<suspend/>
+
+<text 
+  label="sst"
+  cond="0"
+  size="40">
+  <title>section time</title>
+  <row label="S">screener</row>
+  <row label="A">Current Assessment</row>
+  <row label="B">Distinctive Asset Evaluation</row>
+  <row label="C">Territory Evaluation</row>
+  <row label="D">Demographics</row>
+  <row label="E">BRAND PERFORMANCE</row>
+  <row label="F">ATTITUDES AND DEMOS</row>
+</text>
+
+<suspend/>
+
+<exec>
+p.timeS = time.time()
+</exec>
+
+<suspend/>
+
+<style name="survey.respview.footer"/>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+html:not(.lte-ie9) .fir-select .input.dropdown {
+    font-family: Arial,sans-serif;
+}
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+.sq-atmrating .atmrating_rightPosition {
+    text-align: left;
+}
+.sq-atmrating .atmrating_leftPosition {
+    text-align: right;
+}
+.grid.grid-table-mode .row-legend {
+    line-height: 20px;
+}
+.table1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 100%
+}
+
+.td1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 15%;
+      background-color: lightgrey;
+}
+.td2 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 200px;
+}
+.td3 {
+     border: 0.5px solid black;
+     padding: 5px;
+     text-align: center;
+     width: 300px;
+}
+.td_Image {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: center;
+     width: 300px;
+}
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+.instruction-text {
+    font-style: italic;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-large .sq-atm1d-button {      
+    min-width: 150px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: auto !important;
+    min-width: 200px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-width: 165px;
+}
+.sq-atm1d .sq-atm1d-buttons {
+    display: block;
+}
+
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+ body { direction: rtl; }
+ .survey-buttons { text-align: left !important; }
+ #surveyContent, .survey-body, .question-text, .instruction-text,
+ .grid.grid-table-mode .row-legend, .grid-desktop-mode.grid-list-mode .cell-section,
+ .grid-single-col .cell, .grid[data-settings*='single-col'] .cell,
+ .noRows .grid.grid.grid-table-mode .colCount-1 .element,
+ .noRows .grid.grid.grid-table-mode .colCount-1 .col-legend { text-align: right !important; }
+ .survey-body .fir-hidden { left: auto !important; right: -9999px !important; }
+
+</style>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+.table1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 100%
+}
+.grid.grid-table-mode .row-legend {
+    line-height: 20px;
+}
+.td1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 15%;
+      background-color: lightgrey;
+}
+.td2 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 200px;
+}
+.td3 {
+     border: 0.5px solid black;
+     padding: 5px;
+     text-align: center;
+     width: 300px;
+}
+.td_Image {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: center;
+     width: 300px;
+}
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+.instruction-text {
+    font-style: italic;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-large .sq-atm1d-button {      
+    min-width: 150px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: auto !important;
+    min-width: 200px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-width: 165px;
+}
+.sq-atm1d .sq-atm1d-buttons {
+    display: block;
+}
+
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+</style>
+]]></style>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) 
+${col.group.styles.ss.groupClassNames 
+if col.group 
+else
+ (row.group.styles.ss.groupClassNames if row.group else "")}
+ $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) 
+${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}    
+${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) 
+${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) 
+${col.group.styles.ss.groupClassNames 
+if col.group 
+else
+ (row.group.styles.ss.groupClassNames if row.group else "")} 
+$(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames)
+ ${"clickableCell" if isClickable else ""}"$(extra)> 
+   ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<suspend/>
+
+<style label="QNumstyle" arg:mlen="2" name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="$(name)" value="$(value)" maxLength="$(mlen)" size="$(size)" onkeypress="return isNumberKey(event)" style="height:40px; font-size:16px;border-radius:10px;text-align:center;" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+<script>
+function isNumberKey(evt)
+{
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+               return false;
+
+       return true;
+}
+</script>
+]]></style>
+<exec>
+p.times1 = time.time()
+</exec>
+
+<suspend/>
+
+<quota overquota="noqual" sheet="rateOrder_quota"/>
+
+<exec>
+if hasMarker("/rateOrder_quota/LTH"):
+  ratingOrder.val=0
+if hasMarker("/rateOrder_quota/HTL"):
+  ratingOrder.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="ratingOrder"
+  where="execute,survey,report">
+  <title>Record the order of the rating question</title>
+  <comment>This is a hide question, will be auto hide during the FW.</comment>
+  <row label="r1" value="1">Order from negative - positive</row>
+  <row label="r2" value="2">Order from positive - negative</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="changelog"
+  where="execute,survey,report">
+  <title>Will be hidden after live</title>
+  <row label="r1">Balanced leastfill</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+if (list=="11" or list=="13"): List_sample.val=0
+if (list=="12" or list=="14"): List_sample.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="List_sample"
+  optional="1"
+  style="dev"
+  where="execute,survey,report">
+  <title>Record the Supplier</title>
+  <row label="r1" value="1">Cint</row>
+  <row label="r2" value="2">THL</row>
+</radio>
+
+<suspend/>
+
+<term label="Term_list" cond="0">term list</term>
+
+<suspend/>
+
+<block label="b0" builder:title="SCREENER">
+  <html label="INTRODUCTION" where="survey">Thank you for agreeing to take part in this survey. This survey will take approximately 15 minutes to complete.<br /><br />
+
+The data is being collected and collated by an independent marketing research company who will ensure the anonymity of your responses. There are no right or wrong answers, it is your opinion that is important.<br /><br />
+
+Please click on the ‘Continue &gt;&gt;’ button below to begin the survey.</html>
+
+  <suspend/>
+
+  <radio 
+   label="S1"
+   uses="atm1d.10">
+    <title>A few questions about you to start. Are you……</title>
+    <comment>Please select one.</comment>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3">Non-binary</row>
+    <row label="r4">Would rather not say</row>
+  </radio>
+
+  <suspend/>
+
+  <number 
+   label="S2"
+   optional="0"
+   randomize="0"
+   size="3"
+   ss:postText="years old"
+   verify="range(0,99)">
+    <title>How old are you?</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S2.check('35-74'))">Age</term>
+
+  <checkbox 
+   label="Agegroup"
+   where="execute,survey,report">
+    <title>AUTOCODE S2 INTO</title>
+    <comment>hidden</comment>
+    <row label="r1" autofill="S2.check('35-44')">35-44yrs</row>
+    <row label="r2" autofill="S2.check('45-54')">45-54yrs</row>
+    <row label="r3" autofill="S2.check('55-64')">55-64yrs</row>
+    <row label="r4" autofill="S2.check('65-74')">65-74yrs</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="S3"
+   uses="atm1d.10">
+    <title>Where do you live?</title>
+    <comment>Please select one.</comment>
+    <row label="r1">ACT / Canberra</row>
+    <row label="r2">NSW</row>
+    <row label="r3">VIC</row>
+    <row label="r4">QLD</row>
+    <row label="r5">WA</row>
+    <row label="r6">SA</row>
+    <row label="r7">Northern Territory</row>
+    <row label="r8">Tasmania</row>
+    <row label="r9">Other</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_S3" cond="S3.r9">S3</term>
+
+  <radio 
+   label="S4"
+   uses="atm1d.10">
+    <title>Which of the following best describers the area where you live? </title>
+    <comment>Please select one.</comment>
+    <row label="r1" value="1">Urban area, e.g. city centre</row>
+    <row label="r2" value="2">Suburban area</row>
+    <row label="r3" value="3">Semi-rural area, e.g. lifestyle block</row>
+    <row label="r4" value="4">Rural area</row>
+    <row label="r9" value="9">Other</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="S5"
+   atleast="1"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Which of the following do you currently own? </title>
+    <comment>Please select as many as apply.</comment>
+    <row label="r1">Camping trailer</row>
+    <row label="r2">Caravan</row>
+    <row label="r3">RV / Motorised home</row>
+    <row label="r4">Car</row>
+    <row label="r5">Motorbike</row>
+    <row label="r6">Boat</row>
+    <row label="r7">Canoe / Kayak / Paddleboard</row>
+    <row label="r8">Mountain bike / Road bike</row>
+    <row label="r9" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="S6"
+   atleast="1"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Which, if any, of the following have you <u>purchased</u> in the <u>last 18 months</u>? </title>
+    <comment>Please select as many as apply.</comment>
+    <row label="r1">Camping trailer</row>
+    <row label="r2">Caravan</row>
+    <row label="r3">RV / Motorised home</row>
+    <row label="r4">Car</row>
+    <row label="r5">Motorbike</row>
+    <row label="r6">Boat</row>
+    <row label="r7">Canoe / Kayak / Paddleboard</row>
+    <row label="r8">Mountain bike / Road bike</row>
+    <row label="r9" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="S7"
+   atleast="1"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Which, if any, of the following are you <u>seriously considering purchasing</u> in the <u>next 12 months</u>? <br />By this we mean you have at least started to look into options. </title>
+    <comment>Please select as many as apply.</comment>
+    <row label="r1">Camping trailer</row>
+    <row label="r2">Caravan</row>
+    <row label="r3">RV / Motorised home</row>
+    <row label="r4">Car</row>
+    <row label="r5">Motorbike</row>
+    <row label="r6">Boat</row>
+    <row label="r7">Canoe / Kayak / Paddleboard</row>
+    <row label="r8">Mountain bike / Road bike</row>
+    <row label="r9" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Auto_S8"
+   where="execute,survey,report">
+    <title>Selected in S6 and S7 </title>
+    <row label="r1" autofill="S6.r1 or S7.r1">Camping trailer</row>
+    <row label="r2" autofill="S6.r2 or S7.r2">Caravan</row>
+    <row label="r3" autofill="S6.r3 or S7.r3">RV / Motorised home</row>
+    <row label="r4" autofill="S6.r4 or S7.r4">Car</row>
+    <row label="r5" autofill="S6.r5 or S7.r5">Motorbike</row>
+    <row label="r6" autofill="S6.r6 or S7.r6">Boat</row>
+    <row label="r7" autofill="S6.r7 or S7.r7">Canoe / Kayak / Paddleboard</row>
+    <row label="r8" autofill="S6.r8 or S7.r8">Mountain bike / Road bike</row>
+    <row label="r9" autofill="S6.r9 or S7.r9">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="S8"
+   atleast="1"
+   rowCond="(not Auto_S8[row.index])"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>And which, if any, of the following did you <u>seriously considering purchasing</u> in the last 12 months, but decided not to? By this we mean you looked at different options. </title>
+    <comment>Please select as many as apply.</comment>
+    <row label="r1">Camping trailer</row>
+    <row label="r2">Caravan</row>
+    <row label="r3">RV / Motorised home</row>
+    <row label="r4">Car</row>
+    <row label="r5">Motorbike</row>
+    <row label="r6">Boat</row>
+    <row label="r7">Canoe / Kayak / Paddleboard</row>
+    <row label="r8">Mountain bike / Road bike</row>
+    <row label="r9" cond="1" exclusive="1" randomize="0">None of the above</row>
+  </checkbox>
+
+  <suspend/>
+
+  <exec>
+if ratingOrder.r2:
+  QC1.rows.order = reversed(QC1.rows)
+else:
+ QC1.rows.order = QC1.rows
+  </exec>
+
+  <radio 
+   label="QC1"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Please select “<strong>Strongly agree</strong>” from the list below. This is a quality check question.</title>
+    <row label="r1" value="5">Strongly disagree</row>
+    <row label="r2" value="4">Somewhat disagree</row>
+    <row label="r3" value="3">Neither agree or disagree</row>
+    <row label="r4" value="2">Somewhat agree</row>
+    <row label="r5" value="1">Strongly agree</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_QC1" cond="not(QC1.r5)">QC1</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="quota_group"
+   cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+   optional="1"
+   style="dev,testing">
+    <title>Used in quota<br />This will be hidden in live</title>
+    <row label="r1" autofill="S6.r1 or S6.r2 or S6.r3">PURCHASERS</row>
+    <row label="r2" autofill="not(S6.r1 or S6.r2 or S6.r3) and (S7.r1 or S7.r2 or S7.r3)">INTENDERS</row>
+    <row label="r3" autofill="(S8.r1 or S8.r2 or S8.r3) and not(S7.r1 or S7.r2 or S7.r3 or S6.r1 or S6.r2 or S6.r3)">CHANGED MIND</row>
+    <row label="r4" autofill="quota_group.count==0">None</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_group" cond="quota_group.r4">Quota group</term>
+
+  <suspend/>
+</block>
+
+<exec>
+sst.S.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times2 = time.time()
+VAR_TIME_1.r1.val = ("%.2f" % ((p.times2- p.times1) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_1"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Screener section</row>
+</float>
+
+<suspend/>
+
+<checkbox 
+  label="Prog_QUOTA_GROUP"
+  where="execute,survey,report">
+  <title>QUOTA GROUP </title>
+  <comment>hidden question</comment>
+  <row label="r1" autofill="S6.r1 or S6.r2 or S6.r3">PURCHASERS</row>
+  <row label="r2" autofill="not(S6.r1 or S6.r2 or S6.r3) and (S7.r1 or S7.r2 or S7.r3)">INTENDERS</row>
+  <row label="r3" autofill="(S8.r1 or S8.r2 or S8.r3) and not(S7.r1 or S7.r2 or S7.r3 or S6.r1 or S6.r2 or S6.r3)">CHANGED MIND</row>
+</checkbox>
+
+<suspend/>
+
+<quota doit="1" overquota="noqual" sheet="Group"/>
+
+<suspend/>
+
+<exec>
+arr =['group1','group2','group3']
+for itr in range(len(arr)):
+  if (hasMarker('/Group/' + arr[itr])):
+      QUOTA_GROUP.rows[itr].val = 1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="QUOTA_GROUP"
+  where="execute,survey,report">
+  <title>QUOTA GROUP </title>
+  <comment>hidden question</comment>
+  <row label="r1">PURCHASERS</row>
+  <row label="r2">INTENDERS</row>
+  <row label="r3">CHANGED MIND</row>
+</checkbox>
+
+<suspend/>
+
+<quota doit="1" overquota="noqual" sheet="Quota"/>
+
+<suspend/>
+
+<html label="INTRODUCTION_A" where="survey">Thank you! You are the type of person we are looking to talk to today. We will be asking questions about the camping trailer / caravan / RV (motorised home) you recently purchased, planned to or are planning to purchase.<br /><br />
+
+Thanks for your time and honesty.</html>
+
+<suspend/>
+
+<text 
+  label="A1"
+  optional="0">
+  <title>Firstly, what brands of camping trailer, caravan or RV (motorised home) come to mind?
+</title>
+  <comment>Please write as many as you can think of, putting each brand in a separate box.</comment>
+  <row label="r1"/>
+  <row label="r2" optional="1"/>
+  <row label="r3" optional="1"/>
+  <row label="r4" optional="1"/>
+  <row label="r5" optional="1"/>
+  <row label="r6" optional="1"/>
+  <row label="r7" optional="1"/>
+  <noanswer label="r8">Can't think of any brands</noanswer>
+</text>
+
+<suspend/>
+
+<checkbox 
+  label="A2"
+  atleast="1"
+  atm1d:viewMode="tiled"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Which, if any, of the following camping trailer, caravan or RV (motorised home) brands have you heard of (before doing this survey)?  </title>
+  <comment>Please make sure you select any that you wrote in the previous question.<br />Please select as many as apply.</comment>
+  <row label="r1">Adria</row>
+  <row label="r2">Avan</row>
+  <row label="r3">Avida</row>
+  <row label="r4">Coromal</row>
+  <row label="r5">Crusader</row>
+  <row label="r6">Design RV</row>
+  <row label="r7">Essential</row>
+  <row label="r8">Franklin</row>
+  <row label="r9">Jayco</row>
+  <row label="r10">JB Caravans</row>
+  <row label="r11">Kea</row>
+  <row label="r12">New Age</row>
+  <row label="r13">Nova</row>
+  <row label="r14">Snowy River</row>
+  <row label="r15">Sunliner</row>
+  <row label="r16">Supreme</row>
+  <row label="r17">Talvor</row>
+  <row label="r18">Windsor</row>
+  <row label="r19">Winnebago</row>
+  <row label="r20">Zone RV</row>
+  <row label="r98" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  <row label="r99" exclusive="1" randomize="0">I'm not sure / I can't remember</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="A3"
+  rowCond="(A2[row.index])"
+  shuffle="rows">
+  <title>When it comes to camping trailers / caravans / RVs, which best describes how you feel about each of the following brands?  </title>
+  <comment>Please select one answer for each brand.</comment>
+  <validate>
+if A3.c1.count gt 1:
+  error("You can select only 1 brand as PREFERRED BRAND.")
+  </validate>
+
+  <row label="r1">Adria</row>
+  <row label="r2">Avan</row>
+  <row label="r3">Avida</row>
+  <row label="r4">Coromal</row>
+  <row label="r5">Crusader</row>
+  <row label="r6">Design RV</row>
+  <row label="r7">Essential</row>
+  <row label="r8">Franklin</row>
+  <row label="r9">Jayco</row>
+  <row label="r10">JB Caravans</row>
+  <row label="r11">Kea</row>
+  <row label="r12">New Age</row>
+  <row label="r13">Nova</row>
+  <row label="r14">Snowy River</row>
+  <row label="r15">Sunliner</row>
+  <row label="r16">Supreme</row>
+  <row label="r17">Talvor</row>
+  <row label="r18">Windsor</row>
+  <row label="r19">Winnebago</row>
+  <row label="r20">Zone RV</row>
+  <row label="r98" cond="0">Other (PLEASE SPECIFY)</row>
+  <row label="r99" cond="0">I'm not sure / I can't remember</row>
+  <col label="c1">My <b>PREFERRED</b> brand</col>
+  <col label="c2">A brand I would <b>SERIOUSLY CONSIDER</b></col>
+  <col label="c3">A brand I  <b>MIGHT CONSIDER</b></col>
+  <col label="c4">I would <b>NOT CONSIDER</b> this brand</col>
+  <col label="c5">I <b>DON"T KNOW</b> enough about this brand</col>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="auto1"
+  where="execute,survey,report">
+  <title>A2 selected row1-28</title>
+  <comment>hidden question</comment>
+  <row label="r1" autofill="A2.r1 or A2.r2 or A2.r3 or A2.r4 or A2.r5 or A2.r6 or A2.r7 or A2.r8 or A2.r9 or A2.r10 or A2.r11 or A2.r12 or A2.r13 or A2.r14 or A2.r15 or A2.r16 or A2.r17 or A2.r18 or A2.r19 or A2.r20">selected</row>
+  <row label="r2" autofill="auto1.count==0">not selected</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="A4"
+  cond="QUOTA_GROUP.r1 and auto1.r1"
+  atm1d:large_buttonAlign="left"
+  atm1d:large_maxHeight="80px"
+  atm1d:large_maxWidth="400px"
+  atm1d:numCols="2"
+  atm1d:small_buttonAlign="left"
+  atm1d:small_maxHeight="80px"
+  atm1d:small_maxWidth="400px"
+  atm1d:viewMode="tiled"
+  rowCond="(A2[row.index])"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Which camping trailer, caravan or RV (motorised home) <b><u>brand</u></b> did you purchase?</title>
+  <comment>Please select one.</comment>
+  <style name="page.head"><![CDATA[
+<style>
+.sq-atm1d-multicol .sq-atm1d-button, .sq-atm1d-tiled .sq-atm1d-button, .sq-atm1d-horizontal .sq-atm1d-button {
+    max-width: 300px;
+    min-width: 200px;
+}
+</style>
+]]></style>
+  <row label="r1">Adria</row>
+  <row label="r2">Avan</row>
+  <row label="r3">Avida</row>
+  <row label="r4">Coromal</row>
+  <row label="r5">Crusader</row>
+  <row label="r6">Design RV</row>
+  <row label="r7">Essential</row>
+  <row label="r8">Franklin</row>
+  <row label="r9">Jayco</row>
+  <row label="r10">JB Caravans</row>
+  <row label="r11">Kea</row>
+  <row label="r12">New Age</row>
+  <row label="r13">Nova</row>
+  <row label="r14">Snowy River</row>
+  <row label="r15">Sunliner</row>
+  <row label="r16">Supreme</row>
+  <row label="r17">Talvor</row>
+  <row label="r18">Windsor</row>
+  <row label="r19">Winnebago</row>
+  <row label="r20">Zone RV</row>
+  <row label="r98" cond="1" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  <row label="r99" cond="1" exclusive="1" randomize="0">I'm not sure</row>
+</radio>
+
+<suspend/>
+
+<textarea 
+  label="A5"
+  cond="QUOTA_GROUP.r1"
+  optional="0">
+  <title>And what <b><u>model</u></b> camping trailer, caravan or RV (motorised home) brand did you purchase?
+</title>
+  <comment>Please write as much detail as you can remember about the model name.</comment>
+</textarea>
+
+<suspend/>
+
+<exec>
+sst.A.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times3 = time.time()
+VAR_TIME_2.r1.val = ("%.2f" % ((p.times3- p.times2) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_2"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">section A</row>
+</float>
+
+<suspend/>
+
+<checkbox 
+  label="B1"
+  atleast="1"
+  uses="atm1d.10">
+  <title>Who is/was involved in decision of which camping trailer, caravan or RV (motorised home) to purchase?  </title>
+  <comment>Please select as many as apply.</comment>
+  <row label="r1">Me</row>
+  <row label="r2">My partner</row>
+  <row label="r3">My children</row>
+  <row label="r4">My parents / in-laws</row>
+  <row label="r5">Other family member</row>
+  <row label="r6">Someone else</row>
+</checkbox>
+
+<suspend/>
+
+<textarea 
+  label="B2a"
+  cond="QUOTA_GROUP.r1"
+  optional="0">
+  <title>What were the main reasons you chose the camping trailer / caravan / RV that you did?
+</title>
+  <comment>Please explain what your decisions was mainly based on as if you were explaining to a friend why you chose what you did.</comment>
+</textarea>
+
+<suspend/>
+
+<textarea 
+  label="B2b"
+  cond="QUOTA_GROUP.r2"
+  optional="0">
+  <title>What are the main things you are looking for in the camping trailer / caravan / RV that are thinking about buying?
+</title>
+  <comment>Please explain the key criteria that will help you decide what to buy. </comment>
+</textarea>
+
+<suspend/>
+
+<textarea 
+  label="B2c"
+  cond="QUOTA_GROUP.r3"
+  optional="0">
+  <title>What were the main things you are looking for in the camping trailer / caravan / RV that you were thinking about buying?
+</title>
+  <comment>Please explain the key criteria that would have helped you decide what to buy. </comment>
+</textarea>
+
+<suspend/>
+
+<radio 
+  label="B3"
+  grouping="cols">
+  <title>How many camping trailers, caravans and RVs have you <u>ever owned</u>?  </title>
+  <comment>Please select one per column.</comment>
+  <row label="r1">None</row>
+  <row label="r2">One</row>
+  <row label="r3">Two</row>
+  <row label="r4">Three</row>
+  <row label="r5">Four</row>
+  <row label="r6">Five</row>
+  <row label="r7">Six to nine</row>
+  <row label="r8">Ten or more</row>
+  <col label="c1">Camping trailer</col>
+  <col label="c2">Caravan</col>
+  <col label="c3">RV (motorised vehicle)</col>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="B4"
+  grouping="cols">
+  <title>How often do you replace or intend to replace your camping trailers, caravans and RVs?</title>
+  <comment>Please select one per column.</comment>
+  <row label="r1">Every 2 years or more often</row>
+  <row label="r2">Every 3 to 5 years</row>
+  <row label="r3">Every 6 to 10 years</row>
+  <row label="r4">Every 11 to 15 years</row>
+  <row label="r5">Less often</row>
+  <col label="c1" cond="not(B3.c1.r1)">Camping trailer</col>
+  <col label="c2" cond="not(B3.c2.r1)">Caravan</col>
+  <col label="c3" cond="not(B3.c3.r1)">RV (motorised vehicle)</col>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="B5"
+  uses="atm1d.10">
+  <title>Did you/will you buy a new or used camping trailer, caravan or RV (motorised home)?</title>
+  <comment>If you’ve decided not to buy, what were you considering?<br />Please select one.</comment>
+  <row label="r1">New</row>
+  <row label="r2">Used</row>
+  <row label="r3" cond="QUOTA_GROUP.r2 or QUOTA_GROUP.r3">Not sure</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="B6"
+  cond="QUOTA_GROUP.r1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Where did you buy your camping trailer, caravan or RV (motorised home)?  </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Dealership</row>
+  <row label="r2">Caravaning show / event</row>
+  <row label="r3">Caravancampingsales.com.au</row>
+  <row label="r4">Online</row>
+  <row label="r5">Privately</row>
+  <row label="r98" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="B7"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>What is the <u>main reason</u> you purchased or intend to purchase your camping trailer, caravan or RV (motorised home)?  </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Replacing an older vehicle</row>
+  <row label="r2">Upgrading (buying a better quality / more expensive vehicle)</row>
+  <row label="r3">Upsizing (buying a bigger vehicle)</row>
+  <row label="r4">Downsizing (buying a smaller vehicle)</row>
+  <row label="r5">Planning / undertaking a big trip</row>
+  <row label="r6">Trying out for the first time</row>
+  <row label="r7">Retiring</row>
+  <row label="r8">Replacing a car with a caravan / RV – to use from day to day as well as for holidays</row>
+  <row label="r9" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="B8"
+  cond="QUOTA_GROUP.r3"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Which best describes why you are no longer planning to purchase a camping trailer, caravan or RV (motorised home)?  </title>
+  <comment>Please select as many as apply.</comment>
+  <row label="r1">Could no longer afford it</row>
+  <row label="r2">Decided to spend money on other things</row>
+  <row label="r3">Family situation changed</row>
+  <row label="r4">Couldn’t find the brand of camping trailer / RV that I wanted</row>
+  <row label="r5">Couldn’t find the layout that I wanted</row>
+  <row label="r6">Salesperson / dealership didn't follow up</row>
+  <row label="r7">Salesperson / dealership was not helpful</row>
+  <row label="r8">Too hard to get to a dealership / caravan show</row>
+  <row label="r9">Purchase was more expensive than I thought it would be</row>
+  <row label="r10">The after care (e.g. repairs, spare parts, insurance etc.) was too expensive</row>
+  <row label="r11" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+sst.B.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times4 = time.time()
+VAR_TIME_3.r1.val = ("%.2f" % ((p.times4- p.times3) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_3"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">section B</row>
+</float>
+
+<suspend/>
+
+<radio 
+  label="C1a"
+  cond="QUOTA_GROUP.r1"
+  uses="atm1d.10">
+  <title>How long did it take to purchase, from when you started seriously looking for a camping trailer, caravan or RV, to when you paid the money?  </title>
+  <comment>Please select one.</comment>
+  <row label="r1">A month or less</row>
+  <row label="r2">2 to 3 months</row>
+  <row label="r3">4 to 6 months</row>
+  <row label="r4">7 to 12 months</row>
+  <row label="r5">13 to 18 months</row>
+  <row label="r6">More than 18 months</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="C1b"
+  cond="QUOTA_GROUP.r2"
+  uses="atm1d.10">
+  <title>How long have you been seriously looking for a camping trailer, caravan or RV? </title>
+  <comment>Please select one.</comment>
+  <row label="r1">A month or less</row>
+  <row label="r2">2 to 3 months</row>
+  <row label="r3">4 to 6 months</row>
+  <row label="r4">7 to 12 months</row>
+  <row label="r5">13 to 18 months</row>
+  <row label="r6">More than 18 months</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="C2"
+  atleast="1"
+  grouping="cols"
+  shuffle="rows"
+  ss:listDisplay="0">
+  <title>Which of the following did you, or will you look at or consult when buying a camping trailer, caravan or RV?   </title>
+  <comment>Please select as many as apply.</comment>
+  <row label="r1">Salesperson in a dealership</row>
+  <row label="r2">Camping/ Caravan show or event</row>
+  <row label="r3">General google search</row>
+  <row label="r4">Caravan / camping websites</row>
+  <row label="r5">Camping / caravan forums and communities online</row>
+  <row label="r6">Ratings and reviews from current users</row>
+  <row label="r7">Social media posts / stories / reviews</row>
+  <row label="r8">YouTube videos and reviews</row>
+  <row label="r9">Beginners guides such as RACV</row>
+  <row label="r10">Campingcaravansales.com.au</row>
+  <row label="r11">Trade RVs online marketplace</row>
+  <row label="r12">Facebook marketplace</row>
+  <row label="r13">Friends and family</row>
+  <col label="c1">I looked at / consulted</col>
+  <col label="c2" cond="B1.r2">My partner looked at / consulted</col>
+  <col label="c3" cond="B1.r3 or B1.r4 or B1.r5 or B1.r6">Other family / friends looked at or consulted for me</col>
+</checkbox>
+
+<suspend/>
+
+<select 
+  label="C3"
+  minRanks="3"
+  optional="1"
+  shuffle="rows"
+  unique="none,cols"
+  uses="ranksort.6">
+  <title>And which three of <b><u>these</u></b> do you think was or will be <u>most influential</u> in your decision?</title>
+  <comment>Please rank your most influential, second most influential and third most influential.</comment>
+  <choice label="ch1">1st</choice>
+  <choice label="ch2">2nd</choice>
+  <choice label="ch3">3rd</choice>
+  <row label="r1">Salesperson in a dealership</row>
+  <row label="r2">Camping/ Caravan show or event</row>
+  <row label="r3">General google search</row>
+  <row label="r4">Caravan / camping websites</row>
+  <row label="r5">Camping / caravan forums and communities online</row>
+  <row label="r6">Ratings and reviews from current users</row>
+  <row label="r7">Social media posts / stories / reviews</row>
+  <row label="r8">YouTube videos and reviews</row>
+  <row label="r9">Beginners guides such as RACV</row>
+  <row label="r10">Campingcaravansales.com.au</row>
+  <row label="r11">Trade RVs online marketplace</row>
+  <row label="r12">Facebook marketplace</row>
+  <row label="r13">Friends and family</row>
+  <row label="r14" open="1" openSize="25" randomize="0">Other</row>
+</select>
+
+<exec>
+sst.C.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times5 = time.time()
+VAR_TIME_4.r1.val = ("%.2f" % ((p.times5 - p.times4) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_4"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">section C</row>
+</float>
+
+<suspend/>
+
+<number 
+  label="D1_1"
+  cond="0"
+  ignoreValues="999"
+  optional="0"
+  size="10"
+  uses="slidernumber.5"
+  verify="range(1,7)">
+  <title>When it comes to camping trailers / caravans / RVs, how important is each of the following?</title>
+  <comment><em>Please rate each from 1 to 7 where 1 = not at all important to 7 = extremely important.</em><br /><p style="text-align: center;"><strong>Trusted brand</strong></p></comment>
+  <style name="page.head"><![CDATA[
+<script type="text/javascript" src="https://au.focusvision.com/survey/selfserve/6a7/240402/slider_color_change_main.js"></script>				
+    <script>				
+      //s				
+    </script>
+]]></style>
+</number>
+
+<suspend/>
+
+<number 
+  label="D1"
+  ignoreValues="99"
+  optional="0"
+  shuffle="rows"
+  size="10"
+  uses="atmrating.5"
+  verify="range(1,7)">
+  <title>When it comes to <b><u>purchasing</u></b> camping trailers / caravans / RVs, how important is each of the following?</title>
+  <comment><em>Please rate each from 1 to 7 where 1 = not at all important to 7 = extremely important.</em></comment>
+  <row label="r1"><p style="text-align: center;"><strong>Trusted brand</strong></p></row>
+  <row label="r2"><p style="text-align: center;"><strong>Country of manufacturer</strong></p></row>
+  <row label="r3"><p style="text-align: center;"><strong>Availability e.g. in stock or reasonable delivery time</strong></p></row>
+  <row label="r4"><p style="text-align: center;"><strong>Accessibility – can view vehicle, test drive etc.</strong></p></row>
+  <row label="r5"><p style="text-align: center;"><strong>Range of brands to choose from</strong></p></row>
+  <row label="r6"><p style="text-align: center;"><strong>Range of layouts / designs to choose from</strong></p></row>
+  <row label="r7"><p style="text-align: center;"><strong>Year of manufacture</strong></p></row>
+  <row label="r8"><p style="text-align: center;"><strong>Kms on the clock / condition of vehicle</strong></p></row>
+  <row label="r9"><p style="text-align: center;"><strong>Build quality and materials (e.g. quality of the finish, weatherproofing, insulation, safety features such as smoke alarms etc.)</strong></p></row>
+  <row label="r10"><p style="text-align: center;"><strong>Size and functionality (e.g. dimensions – size, length, weight, payload, towing capacity, on/off road capability, storage size when not in use etc.)</strong></p></row>
+  <row label="r11"><p style="text-align: center;"><strong>Features and inclusions (e.g. number of berths, layout, white goods, entertainment, external features etc.)</strong></p></row>
+  <row label="r12"><p style="text-align: center;"><strong>Interior design / style</strong></p></row>
+  <row label="r13"><p style="text-align: center;"><strong>Innovative / latest design and features</strong></p></row>
+  <row label="r14"><p style="text-align: center;"><strong>Environmentally friendly features (e.g. solar panels, rechargeable batteries etc.)</strong></p></row>
+  <row label="r15"><p style="text-align: center;"><strong>Salesperson</strong></p></row>
+  <row label="r16"><p style="text-align: center;"><strong>After sales experience (e.g. ease of getting spare parts, repairs and servicing, warranty, being part of a community etc.)</strong></p></row>
+  <row label="r17"><p style="text-align: center;"><strong>Good value</strong></p></row>
+  <row label="r18"><p style="text-align: center;"><strong>On-going running costs</strong></p></row>
+  <row label="r19"><p style="text-align: center;"><strong>Good potential resale value</strong></p></row>
+  <row label="r20"><p style="text-align: center;"><strong>Finance offered through dealership</strong></p></row>
+</number>
+
+<suspend/>
+
+<checkbox 
+  label="D1_hidRating"
+  where="execute,survey,report">
+  <title>Individual Flatliner check </title>
+  <comment>hidden question</comment>
+  <row label="r1" autofill="(D1.r1.check('1')) and  (D1.r2.check('1')) and  (D1.r3.check('1')) and  (D1.r4.check('1')) and  (D1.r5.check('1')) and  (D1.r6.check('1')) and  (D1.r7.check('1')) and  (D1.r8.check('1')) and  (D1.r9.check('1')) and  (D1.r10.check('1')) and  (D1.r11.check('1')) and  (D1.r12.check('1')) and  (D1.r13.check('1')) and  (D1.r14.check('1')) and  (D1.r15.check('1')) and  (D1.r16.check('1'))  and  (D1.r17.check('1')) and  (D1.r18.check('1')) and  (D1.r19.check('1')) and  (D1.r20.check('1'))">Flatliner for rate 1</row>
+  <row label="r2" autofill="(D1.r1.check('2')) and  (D1.r2.check('2')) and  (D1.r3.check('2')) and  (D1.r4.check('2')) and  (D1.r5.check('2')) and  (D1.r6.check('2')) and  (D1.r7.check('2')) and  (D1.r8.check('2')) and  (D1.r9.check('2')) and  (D1.r10.check('2')) and  (D1.r11.check('2')) and  (D1.r12.check('2')) and  (D1.r13.check('2')) and  (D1.r14.check('2')) and  (D1.r15.check('2')) and  (D1.r16.check('2'))  and  (D1.r17.check('2')) and  (D1.r18.check('2')) and  (D1.r19.check('2')) and  (D1.r20.check('2'))">Flatliner for rate 2</row>
+  <row label="r3" autofill="(D1.r1.check('3')) and  (D1.r2.check('3')) and  (D1.r3.check('3')) and  (D1.r4.check('3')) and  (D1.r5.check('3')) and  (D1.r6.check('3')) and  (D1.r7.check('3')) and  (D1.r8.check('3')) and  (D1.r9.check('3')) and  (D1.r10.check('3')) and  (D1.r11.check('3')) and  (D1.r12.check('3')) and  (D1.r13.check('3')) and  (D1.r14.check('3')) and  (D1.r15.check('3')) and  (D1.r16.check('3'))  and  (D1.r17.check('3')) and  (D1.r18.check('3')) and  (D1.r19.check('3')) and  (D1.r20.check('3'))">Flatliner for rate 3</row>
+  <row label="r4" autofill="(D1.r1.check('4')) and  (D1.r2.check('4')) and  (D1.r3.check('4')) and  (D1.r4.check('4')) and  (D1.r5.check('4')) and  (D1.r6.check('4')) and  (D1.r7.check('4')) and  (D1.r8.check('4')) and  (D1.r9.check('4')) and  (D1.r10.check('4')) and  (D1.r11.check('4')) and  (D1.r12.check('4')) and  (D1.r13.check('4')) and  (D1.r14.check('4')) and  (D1.r15.check('4')) and  (D1.r16.check('4'))  and  (D1.r17.check('4')) and  (D1.r18.check('4')) and  (D1.r19.check('4')) and  (D1.r20.check('4'))">Flatliner for rate 4</row>
+  <row label="r5" autofill="(D1.r1.check('5')) and  (D1.r2.check('5')) and  (D1.r3.check('5')) and  (D1.r4.check('5')) and  (D1.r5.check('5')) and  (D1.r6.check('5')) and  (D1.r7.check('5')) and  (D1.r8.check('5')) and  (D1.r9.check('5')) and  (D1.r10.check('5')) and  (D1.r11.check('5')) and  (D1.r12.check('5')) and  (D1.r13.check('5')) and  (D1.r14.check('5')) and  (D1.r15.check('5')) and  (D1.r16.check('5'))  and  (D1.r17.check('5')) and  (D1.r18.check('5')) and  (D1.r19.check('5')) and  (D1.r20.check('5'))">Flatliner for rate 5</row>
+  <row label="r6" autofill="(D1.r1.check('6')) and  (D1.r2.check('6')) and  (D1.r3.check('6')) and  (D1.r4.check('6')) and  (D1.r5.check('6')) and  (D1.r6.check('6')) and  (D1.r7.check('6')) and  (D1.r8.check('6')) and  (D1.r9.check('6')) and  (D1.r10.check('6')) and  (D1.r11.check('6')) and  (D1.r12.check('6')) and  (D1.r13.check('6')) and  (D1.r14.check('6')) and  (D1.r15.check('6')) and  (D1.r16.check('6'))  and  (D1.r17.check('6')) and  (D1.r18.check('6')) and  (D1.r19.check('6')) and  (D1.r20.check('6'))">Flatliner for rate 6</row>
+  <row label="r7" autofill="(D1.r1.check('7')) and  (D1.r2.check('7')) and  (D1.r3.check('7')) and  (D1.r4.check('7')) and  (D1.r5.check('7')) and  (D1.r6.check('7')) and  (D1.r7.check('7')) and  (D1.r8.check('7')) and  (D1.r9.check('7')) and  (D1.r10.check('7')) and  (D1.r11.check('7')) and  (D1.r12.check('7')) and  (D1.r13.check('7')) and  (D1.r14.check('7')) and  (D1.r15.check('7')) and  (D1.r16.check('7'))  and  (D1.r17.check('7')) and  (D1.r18.check('7')) and  (D1.r19.check('7')) and  (D1.r20.check('7'))">Flatliner for rate 7</row>
+  <row label="r8" autofill="D1_hidRating.count==0">None</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+if D1_hidRating.r1 or D1_hidRating.r2 or D1_hidRating.r3 or D1_hidRating.r4 or D1_hidRating.r5 or D1_hidRating.r6 or D1_hidRating.r7:
+  FlatLiner_D1.val=0
+else:
+  FlatLiner_D1.val=1
+</exec>
+
+<radio 
+  label="FlatLiner_D1"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<block label="b1" builder:title="New Block" randomizeChildren="1">
+  <checkbox 
+   label="D2a"
+   cond="(D1.r9.check('5-7'))"
+   atleast="1"
+   atmost="3"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about <u>build quality and materials</u> when buying a camping trailer, caravan or RV, which of these is <u>more important</u> to you?  </title>
+    <comment>Please select up to three.</comment>
+    <row label="r1">Quality of the finish – durable materials, solid construction</row>
+    <row label="r2">Weatherproofing</row>
+    <row label="r3">Insulation</row>
+    <row label="r4">Safety features (e.g. smoke alarms, fire extinguishers)</row>
+    <row label="r5">Compliance with AU regulations and safety standards</row>
+    <row label="r6">Built to commercial standards</row>
+    <row label="r7" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="D2b"
+   cond="(D1.r10.check('5-7'))"
+   atleast="1"
+   atmost="3"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about <u>size and functionality</u> when buying a camping trailer, caravan or RV, which of these is <u>more important</u> to you?</title>
+    <comment>Please select up to three.</comment>
+    <row label="r1">Dimensions (size, length, weight or payload)</row>
+    <row label="r2">Towing capacity (vehicle required to tow the camping trailer, caravan)</row>
+    <row label="r3">On / off road capability</row>
+    <row label="r4">Suitability for specific 'lifestyle' (e.g. off-grid, beachside camping, campgrounds etc.)</row>
+    <row label="r5">Storage space when not in use</row>
+    <row label="r6">Flexibility – can adapt to different types of trips or different types of travellers</row>
+    <row label="r7" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="D2c"
+   cond="(D1.r11.check('5-7'))"
+   atleast="1"
+   atmost="3"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about <u>features and inclusions</u> when buying a camping trailer, caravan or RV, which of these is <u>more important</u> to you?</title>
+    <comment>Please select up to three.</comment>
+    <row label="r1">Number of beds / berths</row>
+    <row label="r2">Layout / floorplan</row>
+    <row label="r3">Seating arrangements</row>
+    <row label="r4">Kitchen area</row>
+    <row label="r5">Bathroom</row>
+    <row label="r6">Laundry (washing machine)</row>
+    <row label="r7">Temperature (heating / cooling) options</row>
+    <row label="r8">Entertainment / Technology (TV, wifi, connectivity etc.)</row>
+    <row label="r9">External BBQ</row>
+    <row label="r10">Awnings</row>
+    <row label="r11">Storage</row>
+    <row label="r12" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="D2d"
+   cond="(D1.r15.check('5-7'))"
+   atleast="1"
+   atmost="3"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about <u>salespeople</u> when buying a camping trailer, caravan or RV, which of these is <u>more important</u> to you?</title>
+    <comment>Please select up to three.</comment>
+    <row label="r1">Trustworthy</row>
+    <row label="r2">Knowledgeable – able to answer my questions</row>
+    <row label="r3">Helpful</row>
+    <row label="r4">Responsive – gets back to me quickly</row>
+    <row label="r5">Not overly pushy</row>
+    <row label="r6">Really understands my needs / what I am looking for</row>
+    <row label="r7" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="D2e"
+   cond="(D1.r16.check('5-7'))"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about <u>the after sales experience</u> when buying a camping trailer, caravan or RV, which of these is <u>most important</u> to you?</title>
+    <comment>Please select one.</comment>
+    <row label="r1">Ease of repairs / getting spare parts</row>
+    <row label="r2">Servicing</row>
+    <row label="r3">Warranty</row>
+    <row label="r4">Being part of a community</row>
+    <row label="r5" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="D2f"
+   cond="(D1.r8.check('5-7'))"
+   uses="atm1d.10">
+    <title>You selected KMs on the clock as important in the purchase decision when buying a caravan / RV. How many KMs were you/are you looking for?  </title>
+    <comment>Please select one.</comment>
+    <row label="r1">New / nearly new (less than 2,000km)</row>
+    <row label="r2">2,000 to 49,999kms</row>
+    <row label="r3">50,000 to 99,999kms</row>
+    <row label="r4">100,000 to 199,999kms</row>
+    <row label="r5">200,000kms or more</row>
+    <row label="r6" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="D2g"
+   cond="(D1.r2.check('5-7'))"
+   atleast="1"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about where the camping trailer, caravan or RV is <u>manufactured</u>, are there any of these countries or regions that you would prefer that the vehicle was NOT made in?</title>
+    <comment>Please select as many as apply.</comment>
+    <row label="r1">Australia</row>
+    <row label="r2">New Zealand</row>
+    <row label="r3">United States</row>
+    <row label="r4">UK</row>
+    <row label="r5">Germany</row>
+    <row label="r6">Slovenia</row>
+    <row label="r7">China</row>
+    <row label="r8" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+    <row label="r9" exclusive="1" randomize="0">Being made in none of these countries would stop me buying a vehicle if it was the right one for me</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="D2h"
+   cond="(D1.r12.check('5-7'))"
+   atleast="2"
+   atmost="3"
+   shuffle="rows"
+   uses="atm1d.10">
+    <title>Thinking more about the interior design , which of the following do you find more appealing. </title>
+    <comment>Please select your top 2 or 3. </comment>
+    <row label="r1">Modern</row>
+    <row label="r2">Minimal / Minimalistic</row>
+    <row label="r3">Country / farmhouse</row>
+    <row label="r4">Coastal / beach</row>
+    <row label="r5">European</row>
+    <row label="r6">Wood / Scandinavian</row>
+    <row label="r7">Metal / shiny (Industrial)</row>
+    <row label="r8">Colourful / bright</row>
+    <row label="r9">Bohemian</row>
+    <row label="r10" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  </checkbox>
+</block>
+
+<suspend/>
+
+<textarea 
+  label="D3a"
+  cond="QUOTA_GROUP.r1"
+  optional="0">
+  <title>Apart from making it cheaper, what is the <u>one thing</u> a camping trailer / caravan / RV brand or manufacturer could have done to improve your most recent purchase experience?
+</title>
+  <comment>Please why this would have made the purchase experience better for you. </comment>
+</textarea>
+
+<suspend/>
+
+<textarea 
+  label="D3b"
+  cond="QUOTA_GROUP.r2 or QUOTA_GROUP.r3"
+  optional="0">
+  <title>Apart from making it cheaper, what is the <u>one thing</u> a camping trailer / caravan / RV brand or manufacturer could do to make it easier for you to purchase a camping trailer, caravan or RV?
+</title>
+  <comment>Please why this would have made the purchase experience better for you. </comment>
+</textarea>
+
+<suspend/>
+
+<radio 
+  label="D4"
+  rowLegend="both"
+  shuffle="rows">
+  <title>As with many big purchases, there are lots of different trade-offs you can make. Thinking about buying a camping trailer / caravan / RV, what would you trade-off? The choices on the left would be less expense, the choices on the right would be more expensive.</title>
+  <comment>Please select one.</comment>
+  <row label="r1" rightLegend="Latest design and lots of extras">Basic design and no extras</row>
+  <row label="r2" rightLegend="A high quality vehicle that will last 5+ years with no/minimal repairs">A good quality vehicle that will last a couple of years, with some repairs</row>
+  <row label="r3" rightLegend="A great warranty, including servicing and support for repairs">A basic warranty, only covering big issues</row>
+  <row label="r4" rightLegend="Ability to customise design / layout / interior decor">Limited manufacturer supplied layouts / design / interior decor</row>
+  <col label="c1">1<br />LESS EXPENSIVE</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">5</col>
+  <col label="c6">6</col>
+  <col label="c7">7<br />MORE EXPENSIVE</col>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="D5"
+  atleast="1"
+  atmost="3"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>If you worked for a manufacturer of camping trailers, caravans or RVs, what is the main thing you would focus on in order to make customers like yourself happy?  </title>
+  <comment>Please select up to three.</comment>
+  <row label="r1">More places to view, test drive and/or buy</row>
+  <row label="r2">Better salespeople (e.g. more knowledgeable, better trained, more responsive etc.)</row>
+  <row label="r3">Bigger range of designs / layouts</row>
+  <row label="r4">Higher quality design and finishes</row>
+  <row label="r5">Ensuring products are as environmentally friendly as possible</row>
+  <row label="r6">Making it easier to find, and compare specifications and key info</row>
+  <row label="r7">More inclusions / extras (more bling!)</row>
+  <row label="r8">Being present at more camping / caravaning shows and events</row>
+  <row label="r9" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+sst.D.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times6 = time.time()
+VAR_TIME_5.r1.val = ("%.2f" % ((p.times6 - p.times5) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_5"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">section D</row>
+</float>
+
+<suspend/>
+
+<checkbox 
+  label="prog_E1"
+  where="execute,survey,report">
+  <title>Hidden qsn</title>
+  <row label="r1" autofill="A3.r1.c1 or A3.r1.c2 or A3.r1.c3">Adria</row>
+  <row label="r2" autofill="A3.r2.c1 or A3.r2.c2 or A3.r2.c3">Avan</row>
+  <row label="r3" autofill="A3.r3.c1 or A3.r3.c2 or A3.r3.c3">Avida</row>
+  <row label="r4" autofill="A3.r4.c1 or A3.r4.c2 or A3.r4.c3">Coromal</row>
+  <row label="r5" autofill="A3.r5.c1 or A3.r5.c2 or A3.r5.c3">Crusader</row>
+  <row label="r6" autofill="A3.r6.c1 or A3.r6.c2 or A3.r6.c3">Design RV</row>
+  <row label="r7" autofill="A3.r7.c1 or A3.r7.c2 or A3.r7.c3">Essential</row>
+  <row label="r8" autofill="A3.r8.c1 or A3.r8.c2 or A3.r8.c3">Franklin</row>
+  <row label="r9" autofill="A3.r9.c1 or A3.r9.c2 or A3.r9.c3">Jayco</row>
+  <row label="r10" autofill="A3.r10.c1 or A3.r10.c2 or A3.r10.c3">JB Caravans</row>
+  <row label="r11" autofill="A3.r11.c1 or A3.r11.c2 or A3.r11.c3">Kea</row>
+  <row label="r12" autofill="A3.r12.c1 or A3.r12.c2 or A3.r12.c3">New Age</row>
+  <row label="r13" autofill="A3.r13.c1 or A3.r13.c2 or A3.r13.c3">Nova</row>
+  <row label="r14" autofill="A3.r14.c1 or A3.r14.c2 or A3.r14.c3">Snowy River</row>
+  <row label="r15" autofill="A3.r15.c1 or A3.r15.c2 or A3.r15.c3">Sunliner</row>
+  <row label="r16" autofill="A3.r16.c1 or A3.r16.c2 or A3.r16.c3">Supreme</row>
+  <row label="r17" autofill="A3.r17.c1 or A3.r17.c2 or A3.r17.c3">Talvor</row>
+  <row label="r18" autofill="A3.r18.c1 or A3.r18.c2 or A3.r18.c3">Windsor</row>
+  <row label="r19" autofill="A3.r19.c1 or A3.r19.c2 or A3.r19.c3">Winnebago</row>
+  <row label="r20" autofill="A3.r20.c1 or A3.r20.c2 or A3.r20.c3">Zone RV</row>
+</checkbox>
+
+<suspend/>
+
+<quota cond="prog_E1.any" doit="1" overquota="noqual" sheet="E1_lst"/>
+
+<suspend/>
+
+<exec>
+arr =['brand1','brand2','brand3','brand4','brand5','brand6','brand7','brand8','brand9','brand10','brand11','brand12','brand13','brand14','brand15','brand16','brand17','brand18','brand19','brand20']
+for itr in range(len(arr)):
+  if (hasMarker('/E1_lst/' + arr[itr])):
+      hid_E1.rows[itr].val = 1
+</exec>
+
+<suspend/>
+
+<checkbox 
+  label="hid_E1"
+  where="execute,survey,report">
+  <title>Hidden qsn<br /> Max 7 select</title>
+  <row label="r1">Adria</row>
+  <row label="r2">Avan</row>
+  <row label="r3">Avida</row>
+  <row label="r4">Coromal</row>
+  <row label="r5">Crusader</row>
+  <row label="r6">Design RV</row>
+  <row label="r7">Essential</row>
+  <row label="r8">Franklin</row>
+  <row label="r9">Jayco</row>
+  <row label="r10">JB Caravans</row>
+  <row label="r11">Kea</row>
+  <row label="r12">New Age</row>
+  <row label="r13">Nova</row>
+  <row label="r14">Snowy River</row>
+  <row label="r15">Sunliner</row>
+  <row label="r16">Supreme</row>
+  <row label="r17">Talvor</row>
+  <row label="r18">Windsor</row>
+  <row label="r19">Winnebago</row>
+  <row label="r20">Zone RV</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="E1"
+  atleast="1"
+  grouping="rows"
+  shuffle="rows">
+  <title>For each of the following factors, select the brand or brands that you would most associate with that statement. You can pick the same brand for multiple statements, or even no brand for a statement.</title>
+  <comment>Please select as many brands as you associate with each statement.</comment>
+  <row label="r1">Trusted brand</row>
+  <row label="r2">Australian manufacturer</row>
+  <row label="r3">Has lots of stock</row>
+  <row label="r4">Vehicles are accessible – to view and test drive</row>
+  <row label="r5">Wide range of layouts / designs</row>
+  <row label="r6">Appealing décor / interior design</row>
+  <row label="r7">Uses high quality materials</row>
+  <row label="r8">Lots of added value extras</row>
+  <row label="r9">Innovative / latest design and features</row>
+  <row label="r10">Environmentally friendly features (e.g. solar panels, rechargeable batteries etc.)</row>
+  <row label="r11">Helpful, friendly sales people</row>
+  <row label="r12">Knowledgeable sales people</row>
+  <row label="r13">Good after sales experience</row>
+  <row label="r14">Durable vehicles (will last)</row>
+  <row label="r15">The experts in caravans / RVs</row>
+  <row label="r16">Good warranties</row>
+  <row label="r17">Understands my needs</row>
+  <col label="c1" cond="hid_E1.r1">Adria</col>
+  <col label="c2" cond="hid_E1.r2">Avan</col>
+  <col label="c3" cond="hid_E1.r3">Avida</col>
+  <col label="c4" cond="hid_E1.r4">Coromal</col>
+  <col label="c5" cond="hid_E1.r5">Crusader</col>
+  <col label="c6" cond="hid_E1.r6">Design RV</col>
+  <col label="c7" cond="hid_E1.r7">Essential</col>
+  <col label="c8" cond="hid_E1.r8">Franklin</col>
+  <col label="c9" cond="hid_E1.r9">Jayco</col>
+  <col label="c10" cond="hid_E1.r10">JB Caravans</col>
+  <col label="c11" cond="hid_E1.r11">Kea</col>
+  <col label="c12" cond="hid_E1.r12">New Age</col>
+  <col label="c13" cond="hid_E1.r13">Nova</col>
+  <col label="c14" cond="hid_E1.r14">Snowy River</col>
+  <col label="c15" cond="hid_E1.r15">Sunliner</col>
+  <col label="c16" cond="hid_E1.r16">Supreme</col>
+  <col label="c17" cond="hid_E1.r17">Talvor</col>
+  <col label="c18" cond="hid_E1.r18">Windsor</col>
+  <col label="c19" cond="hid_E1.r19">Winnebago</col>
+  <col label="c20" cond="hid_E1.r20">Zone RV</col>
+  <col label="c99" cond="1" exclusive="1">NONE OF THESE BRANDS</col>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="FlatLiner_E1"
+  where="execute,survey,report">
+  <title>Individual Flatliner check </title>
+  <comment>hidden question</comment>
+  <row label="r1" autofill="(hid_E1.r1) and (E1.c1.all)">Flatliner for Adria</row>
+  <row label="r2" autofill="(hid_E1.r2) and (E1.c2.all)">Flatliner for Avan</row>
+  <row label="r3" autofill="(hid_E1.r3) and (E1.c3.all)">Flatliner for Avida</row>
+  <row label="r4" autofill="(hid_E1.r4) and (E1.c4.all)">Flatliner for Coromal</row>
+  <row label="r5" autofill="(hid_E1.r5) and (E1.c5.all)">Flatliner for Crusader</row>
+  <row label="r6" autofill="(hid_E1.r6) and (E1.c6.all)">Flatliner for Design RV</row>
+  <row label="r7" autofill="(hid_E1.r7) and (E1.c7.all)">Flatliner for Essential</row>
+  <row label="r8" autofill="(hid_E1.r8) and (E1.c8.all)">Flatliner for Franklin</row>
+  <row label="r9" autofill="(hid_E1.r9) and (E1.c9.all)">Flatliner for Jayco</row>
+  <row label="r10" autofill="(hid_E1.r10) and (E1.c10.all)">Flatliner for JB Caravans</row>
+  <row label="r11" autofill="(hid_E1.r11) and (E1.c11.all)">Flatliner for Kea</row>
+  <row label="r12" autofill="(hid_E1.r12) and (E1.c12.all)">Flatliner for New Age</row>
+  <row label="r13" autofill="(hid_E1.r13) and (E1.c13.all)">Flatliner for Nova</row>
+  <row label="r14" autofill="(hid_E1.r14) and (E1.c14.all)">Flatliner for Snowy River</row>
+  <row label="r15" autofill="(hid_E1.r15) and (E1.c15.all)">Flatliner for Sunliner</row>
+  <row label="r16" autofill="(hid_E1.r16) and (E1.c16.all)">Flatliner for Supreme</row>
+  <row label="r17" autofill="(hid_E1.r17) and (E1.c17.all)">Flatliner for Talvor</row>
+  <row label="r18" autofill="(hid_E1.r18) and (E1.c18.all)">Flatliner for Windsor</row>
+  <row label="r19" autofill="(hid_E1.r19) and (E1.c19.all)">Flatliner for Winnebago</row>
+  <row label="r20" autofill="(hid_E1.r20) and (E1.c20.all)">Flatliner for Zone RV</row>
+  <row label="r29" autofill="(E1.c99.all)">Flatliner for NONE OF THESE BRANDS</row>
+  <row label="r99" autofill="FlatLiner_E1.count==0">Not flatliner for any brand</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="E2"
+  uses="atm1d.10">
+  <title>Before today, had you heard of THL?  </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Yes, but don't really know what they do</row>
+  <row label="r2">Yes and know a little bit about them</row>
+  <row label="r3">Yes and know a lot about them</row>
+  <row label="r4">No</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="E3"
+  cond="E2.r2 or E2.r3"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Which of the following would you associate with THL?  </title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Experts in caravans and RVs</row>
+  <row label="r2">Experienced in building caravans and RVs</row>
+  <row label="r3">A leading company for renting caravans and RVs</row>
+  <row label="r4">A publicly listed company</row>
+  <row label="r5">An Australian company</row>
+  <row label="r6">A New Zealand company</row>
+  <row label="r7" exclusive="1" randomize="0">None of the above</row>
+</checkbox>
+
+<suspend/>
+
+<textarea 
+  label="E4"
+  cond="E3.r4"
+  optional="0">
+  <title>When it comes to camping trailers, caravans or RVs, what are the benefits of a publicly listed company? 
+</title>
+  <comment>Please give as much detail as you can. </comment>
+</textarea>
+
+<suspend/>
+
+<exec>
+sst.E.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times7 = time.time()
+VAR_TIME_6.r1.val = ("%.2f" % ((p.times7 - p.times6) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_6"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">section E</row>
+</float>
+
+<suspend/>
+
+<checkbox 
+  label="F1"
+  atleast="1"
+  grouping="cols"
+  shuffle="rows">
+  <title>Thanks for your time and honesty so far. We have a few more questions about you before we finish. <br />
+Which of the following types of holidays have you been on in the last 12 months, or are you planning in the next 12 months?  
+</title>
+  <comment>Please select as many as apply.</comment>
+  <row label="r1">Camping</row>
+  <row label="r2">Holiday in Caravan / RV</row>
+  <row label="r3">Overseas holiday</row>
+  <row label="r4">Australia holiday – flying</row>
+  <row label="r5">Australia holiday – driving</row>
+  <row label="r6">Cruise</row>
+  <row label="r7">4x4 off-roading</row>
+  <row label="r8" exclusive="1" randomize="0">None of the above</row>
+  <col label="c1">Been in last 12 months</col>
+  <col label="c2">Planning in next 12 months</col>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="F2_Text"
+  where="execute,survey,report">
+  <title>qsn text</title>
+  <row label="r1" autofill="S5.r1 or S5.r2 or S5.r3">What type of holidays do you like to do in your camping trailer / caravan / RV?</row>
+  <row label="r2" autofill="not(S5.r1 or S5.r2 or S5.r3)">What type of holidays would you like to do in your camping trailer / caravan / RV?</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="F2"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>[pipe: F2_Text]</title>
+  <comment>Please select as many as apply.</comment>
+  <row label="r1">Coastal / beaches</row>
+  <row label="r2">In-land / outback</row>
+  <row label="r3">Off beaten track</row>
+  <row label="r4">Not too far from civilisation</row>
+  <row label="r5">A few days</row>
+  <row label="r6">One or two weeks</row>
+  <row label="r7">At least a month</row>
+  <row label="r8">Roughing it / few luxuries</row>
+  <row label="r9">As many modern conveniences as possible</row>
+  <row label="r10" open="1" openSize="25" randomize="0">Other (SPECIFY)</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="F3_Text"
+  where="execute,survey,report">
+  <title>qsn text</title>
+  <row label="r1" autofill="S5.r1 or S5.r2 or S5.r3">What are the things you like most about holidays in your camping trailer / caravan / RV?</row>
+  <row label="r2" autofill="not(S5.r1 or S5.r2 or S5.r3)">What are the things you think you would like most about holidays in a camping trailer / caravan / RV?</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="F3"
+  atleast="1"
+  atmost="5"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>[pipe: F3_Text]</title>
+  <comment>Please select up to 5.</comment>
+  <row label="r1">Sense of freedom</row>
+  <row label="r2">Sense of adventure</row>
+  <row label="r3">Being close to nature</row>
+  <row label="r4">Seeing wildlife</row>
+  <row label="r5">Discovering new places</row>
+  <row label="r6">Not being tied to one location</row>
+  <row label="r7">Not needing to plan too much / ability to be spontaneous</row>
+  <row label="r8">Disconnecting from technology</row>
+  <row label="r9">Ability to get off the beaten path</row>
+  <row label="r10">Relaxing / doing very little</row>
+  <row label="r11">Getting away from everyday stresses</row>
+  <row label="r12">Physical activities (e.g. hiking, kayaking, biking, climbing etc.)</row>
+  <row label="r13">Meeting other RV / Caravan / Camping enthusiasts</row>
+  <row label="r14">Spending time with friends</row>
+  <row label="r15">Spending time with family</row>
+  <row label="r16">Enjoying my retirement</row>
+  <row label="r17">Affordable way to travel</row>
+  <row label="r18" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+  <row label="r19" exclusive="1" randomize="0">I'm not sure</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="F4"
+  rowLegend="both"
+  shuffle="rows">
+  <title>Where do you place yourself on each of these scales? </title>
+  <comment>Please select one.</comment>
+  <row label="r1" rightLegend="I don’t do that much research; I’m happy to rely on my gut or the advice of sales people, friends etc.">I do a lot of research before buying 'big ticket' items such as caravans</row>
+  <row label="r2" rightLegend="I like camping/caravaning, but there are lots of other things I like to do as well">I would spend everyday camping/caravaning if I could</row>
+  <row label="r3" rightLegend="Being environmentally friendly is important, but I’m not looking for this from my caravan / RV">Being environmentally friendly is very important to me; I want my caravan / RV to be as sustainable as possible</row>
+  <row label="r4" rightLegend="I don’t like to compromise on most things; I’d rather spend more time or money and find exactly what I want">I’m willing to compromise on most things, especially to save time or money</row>
+  <col label="c1">1</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">5</col>
+  <col label="c6">6</col>
+  <col label="c7">7</col>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="F5"
+  uses="atm1d.10">
+  <title>Which of the following best describes your current living situation? </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Living with my parent(s)</row>
+  <row label="r2">Living in a share house / living with others</row>
+  <row label="r3">Living by myself</row>
+  <row label="r4">Living with my partner only</row>
+  <row label="r5">Couple with children at home</row>
+  <row label="r6">Single parent with children at home</row>
+  <row label="r7">Couple with children who have left home</row>
+  <row label="r8">Single parent with children who have left home</row>
+  <row label="r9" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="F6"
+  cond="F5.r5 or F5.r6"
+  atleast="1"
+  uses="atm1d.10">
+  <title>How old are the children who are living at home with you?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">5 and under</row>
+  <row label="r2">6 to 11 years</row>
+  <row label="r3">12 to 17 years</row>
+  <row label="r4">18 years or older</row>
+  <row label="r5" exclusive="1">I do not have children living at home</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="F7"
+  uses="atm1d.10">
+  <title>Which of the following <u>best describes</u> your employment status?</title>
+  <comment>Please select one.</comment>
+  <row label="r1">Business owner</row>
+  <row label="r2">Employed – full time</row>
+  <row label="r3">Employed – part time</row>
+  <row label="r4">Self employed – full time</row>
+  <row label="r5">Self employed – part time</row>
+  <row label="r6">Not employed, looking for work</row>
+  <row label="r7">Not employed and not looking for work</row>
+  <row label="r8">Full time home maker</row>
+  <row label="r9">Student</row>
+  <row label="r10">Retired</row>
+  <row label="r11" open="1" openSize="25" randomize="0">Other (PLEASE SPECIFY)</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="F8"
+  uses="atm1d.10">
+  <title>What is your households annual income, before tax?  </title>
+  <comment>Please select one.</comment>
+  <row label="r1">Less than $20,000</row>
+  <row label="r2">$20,000 to $49,999</row>
+  <row label="r3">$50,000 to $74,999</row>
+  <row label="r4">$75,000 to $99,999</row>
+  <row label="r5">$100,000 to $149,000</row>
+  <row label="r6">$150,000 to $249,999</row>
+  <row label="r7">$250,000 or more</row>
+  <row label="r8">I'd rather not say</row>
+</radio>
+
+<suspend/>
+
+<text 
+  label="F9"
+  randomize="0"
+  size="25">
+  <title>Thanks so much so answering our questions. So that we can enter you into our prize draw – and notify you if you win – please enter your name and best contact email address below</title>
+  <row label="r1">Name</row>
+  <row label="r2" verify="email">Email</row>
+</text>
+
+<suspend/>
+
+<pipe label="pipeWrongGender" capture="">
+  <case label="r1" cond="S1.r2">Male</case>
+  <case label="r2" cond="S1.r1">Female</case>
+  <case label="r99" cond="1">UNDEFINED</case></pipe>
+<suspend/>
+
+<radio 
+  label="QC3"
+  ss:questionClassNames="flexGrid">
+  <title>Finally, can we just confirm the following, please select <b>true or false</b> for each.</title>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+\@if device.desktop
+.grid.grid-table-mode .col-legend {
+  width: 120px !important;
+}
+\@endif
+</style>
+]]></style>
+  <row label="r1">Your age group is <b>[pipe:S2]</b></row>
+  <row label="r2">Your gender is <b>[pipe:pipeWrongGender]</b></row>
+  <col label="c1">True</col>
+  <col label="c2">False</col>
+</radio>
+
+<suspend/>
+
+<exec>
+if (QC3.r1.c1 and QC3.r2.c2):
+  checkQC.r1.val=1
+else:
+  checkQC.r2.val=1
+</exec>
+
+<checkbox 
+  label="checkQC"
+  cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+  optional="1"
+  style="dev,testing">
+  <title>RECORD QUILITY OR NOT FROM QC</title>
+  <row label="r1">Good</row>
+  <row label="r2">Last QC bad</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+sst.F.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<exec>
+p.times8 = time.time()
+VAR_TIME_7.r1.val = ("%.2f" % ((p.times8 - p.times7) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_7"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">section F</row>
+</float>
+
+<exec>
+p.scf = timeSpent()
+if p.scf lt 180:
+  SC.val = 0
+else:
+  SC.val = 1
+</exec>
+
+<radio 
+  label="SC"
+  where="execute,survey,report">
+  <title>Speeder checks</title>
+  <comment>Please select one.</comment>
+  <row label="r1" value="1">Speeder</row>
+  <row label="r2" value="2">Not Speeder</row>
+</radio>
+</survey>
