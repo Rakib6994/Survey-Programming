@@ -1,0 +1,11 @@
+<textarea 
+  label="A12b"
+  cond="progAskA12.r2">
+  <title>Please tell us all the <b>reasons</b> you rated your <b>satisfaction</b> with <span style='color:#e8932d'><b>Origin Energy</b></span> a <b>${A11b.val}</b>?</title>
+  <comment>Please type as much as you can in the box below.</comment>
+  <validate>
+if len(this.val) lt 5:
+   error("Please type in 5 or more characters to progress.")
+  </validate>
+
+</textarea>
