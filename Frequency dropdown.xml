@@ -1,0 +1,40 @@
+ <select 
+   label="S_Frequency"
+   randomize="0">
+    <title>Please select how often you have purchased products in each of the categories listed below in the past year.</title>
+    <row label="r1"><span style='font-size: large;'><strong>Spices or Seasoning (found in the <span style='text-decoration: underline;'>seasoning aisle</span> such as taco seasoning mix, garlic powder, etc.)</strong></span></row>
+    <row label="r3"><span style='font-size: large;'><strong>Bottled Salad Dressings (Italian, Ranch, Caesar, etc.)</strong></span></row>
+    <row label="r4"><span style='font-size: large;'><strong>Carbonated Beverages (Seltzer, Soda, etc.)</strong></span></row>
+    <row label="r2"><strong><span style='font-size: large;'>Dry Dressing or Dip Mixes (found in the <span style='text-decoration: underline;'>dressing aisle</span>, such as Ranch, Italian<span style='text-decoration: underline;'>)</span></span><br/></strong></row>
+    <choice label="c1"><strong>Once a week</strong></choice>
+    <choice label="c2"><strong>Once every 2 or 3 weeks</strong></choice>
+    <choice label="c3"><strong>Once a month</strong></choice>
+    <choice label="c4"><strong>Once every 2 or 3 months</strong></choice>
+    <choice label="c5"><strong>2 or 3 times a year</strong></choice>
+    <choice label="c6"><strong>Once a year</strong></choice>
+    <choice label="c7"><strong>Never</strong></choice>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+        $ ("#btn_continue").hide();
+    }
+    
+    var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+    var num_attr = qn.rows.length
+    console.log(num_attr);
+    var iteration = 1   
+    
+     $ (document).on('click', '.sq-cardrating-buttons', function() {
+            if(iteration == num_attr){
+                $ ("#btn_continue").click();
+            }
+            iteration++;
+        })
+    </script>
+]]></style>
+  </select>
+
+  <suspend/>
