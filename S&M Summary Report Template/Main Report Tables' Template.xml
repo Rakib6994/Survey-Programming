@@ -29,7 +29,7 @@ if (P1_Total_Products.val &gt;10):  All_QuantityPurchased.r11.val=1
     <row label="r8">8 Units</row>
     <row label="r9">9 Units</row>
     <row label="r10">10 Units</row>
-    <row label="r11">11 Units</row>
+    <row label="r11">11 Units or More</row>
   </checkbox>
 
   <suspend/>
