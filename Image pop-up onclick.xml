@@ -1,0 +1,17 @@
+<radio 
+  label="Q13"
+  atm1d:viewMode="tiled"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title><i>We are now interested in understanding what type of devices you typically use.</i><br />
+<b>Which of the following types have you used <u>at least once</u> during the past month?</b>
+</title>
+  <comment>Please select one.</comment>
+  <row label="r1"><div align="center"><img src="[rel Vape_Type_Responses_1_-_Closed.jpg]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 800, height: 750, title: &amp;quot;pop-up&amp;quot;} );" style="max-width:80%;max-height:50%" /><div style="display: none;"><img src="[rel Vape_Type_Responses_1_-_Closed.jpg]" /></div><br /><i>You may click on the image to see a larger view.</i></div><br /><br /><b>Small replaceable non refillable pod inserted into rechargeable battery</b></row>
+  <row label="r2"><div align="center"><img src="[rel Vape_Type_Responses_2_-_Closed_Hybrid.jpg]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 800, height: 750, title: &amp;quot;pop-up&amp;quot;} );" style="max-width:80%;max-height:50%" /><div style="display: none;"><img src="[rel Vape_Type_Responses_2_-_Closed_Hybrid.jpg]" /></div><br /><i>You may click on the image to see a larger view.</i></div><br /><br /><b>Large replaceable non refillable pod magnetically attached to a battery</b></row>
+  <row label="r3"><div align="center"><img src="[rel Vape_Type_Responses_3_-_Disposable.jpg]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 800, height: 750, title: &amp;quot;pop-up&amp;quot;} );" style="max-width:80%;max-height:50%" /><div style="display: none;"><img src="[rel Vape_Type_Responses_3_-_Disposable.jpg]" /></div><br /><i>You may click on the image to see a larger view.</i></div><br /><br /><b>All in one unit, typically thrown away after use</b></row>
+  <row label="r4"><div align="center"><img src="[rel Vape_Type_Responses_4_-_Open.jpg]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 800, height: 750, title: &amp;quot;pop-up&amp;quot;} );" style="max-width:80%;max-height:50%" /><div style="display: none;"><img src="[rel Vape_Type_Responses_4_-_Open.jpg]" /></div><br /><i>You may click on the image to see a larger view.</i></div><br /><br /><b>Advanced unit with replaceable heating coil that you fill with liquid</b></row>
+  <row label="r5"><div align="center"><img src="[rel Vape_Type_Responses_5_-_Refillable.jpg]" onclick="Survey.uidialog.make($ (this).next(&amp;quot;div&amp;quot;).clone(), {width: 800, height: 750, title: &amp;quot;pop-up&amp;quot;} );" style="max-width:80%;max-height:50%" /><div style="display: none;"><img src="[rel Vape_Type_Responses_5_-_Refillable.jpg]" /></div><br /><i>You may click on the image to see a larger view.</i></div><br /><br /><b>Small replaceable pod that you can open and fill with liquid inserted into rechargeable battery</b></row>
+</radio>
+
+<suspend/>
