@@ -1,0 +1,32 @@
+SHOPPING:
+
+OLD:
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/Buzz3DStore4_DLOnDemand.html?trial=AGXXX-Shelf[pipe: Phase]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/agXXX?"/>
+
+ 
+
+NEW:
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH/Buzz3DStore5_DLOnDemand.html?trial=AGXXX-Shelf[pipe: Phase]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/agXXX?"/>
+
+ 
+
+FINDA/Situational Purchase:
+
+OLD:
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/Buzz3DStore4_DLOnDemand.html?trial=AGXXX-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/agXXX?"/>
+
+ 
+
+NEW:
+
+ 
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH/Buzz3DStore5_DLOnDemand.html?trial=AGXXX-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/agXXX?"/>
+
+ 
+
+You can use AG575 for reference if needed (but it does not have situational purchase).
+
