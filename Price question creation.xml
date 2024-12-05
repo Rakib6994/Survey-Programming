@@ -1,0 +1,100 @@
+<float 
+label="P_Price"
+size="10"
+where="execute,survey,report">
+<title>Price for one.</title>
+<virtual>
+
+if P1_Items_Bought.r1: P_Price.r1.val = 112.00
+if P1_Items_Bought.r2: P_Price.r2.val = 112.00
+if P1_Items_Bought.r3: P_Price.r3.val = 112.00
+if P1_Items_Bought.r4: P_Price.r4.val = 112.00
+if P1_Items_Bought.r5: P_Price.r5.val = 98.00
+if P1_Items_Bought.r6: P_Price.r6.val = 98.00
+if P1_Items_Bought.r7: P_Price.r7.val = 98.00
+if P1_Items_Bought.r8: P_Price.r8.val = 98.00
+if P1_Items_Bought.r9: P_Price.r9.val = 114.52
+if P1_Items_Bought.r10: P_Price.r10.val = 114.52
+if P1_Items_Bought.r11: P_Price.r11.val = 114.52
+if P1_Items_Bought.r12: P_Price.r12.val = 114.52
+if P1_Items_Bought.r13: P_Price.r13.val = 92.90
+if P1_Items_Bought.r14: P_Price.r14.val = 74.90
+if P1_Items_Bought.r15: P_Price.r15.val = 49.90
+if P1_Items_Bought.r16: P_Price.r16.val = 49.90
+if P1_Items_Bought.r17: P_Price.r17.val = 34.80
+if P1_Items_Bought.r18: P_Price.r18.val = 83.90
+if P1_Items_Bought.r19: P_Price.r19.val = 105.00
+if P1_Items_Bought.r20: P_Price.r20.val = 108.20
+if P1_Items_Bought.r21: P_Price.r21.val = 98.00
+if P1_Items_Bought.r22: P_Price.r22.val = 125.97
+if P1_Items_Bought.r23: P_Price.r23.val = 125.97
+if P1_Items_Bought.r24: P_Price.r24.val = 125.97
+if P1_Items_Bought.r25: P_Price.r25.val = 125.97
+
+</virtual>
+
+<row label="r1"   >Enfagrow Pre-escolar 1.1kg - $112.00</row>
+<row label="r2"   >Enfagrow Pre-escolar 1.1kg - $112.00</row>
+<row label="r3"   >Enfagrow Pre-escolar 1.1kg - $112.00</row>
+<row label="r4"   >Enfagrow Pre-escolar 1.1kg - $112.00</row>
+<row label="r5"   >Enfagrow Pro Mental 850g - $98.00</row>
+<row label="r6"   >Enfagrow Pro Mental 850g - $98.00</row>
+<row label="r7"   >Enfagrow Pro Mental 850g - $98.00</row>
+<row label="r8"   >Enfagrow Pro Mental 850g - $98.00</row>
+<row label="r9"   >Pediasure Vanilla 900g - $114.52</row>
+<row label="r10"  >Pediasure Vanilla 900g - $114.52</row>
+<row label="r11"  >Pediasure Vanilla 900g - $114.52</row>
+<row label="r12"  >Pediasure Vanilla 900g - $114.52</row>
+<row label="r13"  >Vital Vitaminado 900g - $92.90</row>
+<row label="r14"  >Sustagen 900g - $74.90</row>
+<row label="r15"  >Ascenda 400g - $49.90</row>
+<row label="r16"  >Ascenda 400g - $49.90</row>
+<row label="r17"  >PVM Junior Vanilla 360g - $34.80</row>
+<row label="r18"  >PediaMax 900g - $83.90</row>
+<row label="r19"  >Pedialact PE 900g - $105.00</row>
+<row label="r20"  >Vitafos Junior 800g - $108.20</row>
+<row label="r21"  >Alisure Kids 1000g - $98.00</row>
+<row label="r22"  >PediaSure Night Vanilla 900g - $125.97</row>
+<row label="r23"  >PediaSure Night Vanilla 900g - $125.97</row>
+<row label="r24"  >PediaSure Night Vanilla 900g - $125.97</row>
+<row label="r25"  >PediaSure Night Vanilla 900g - $125.97</row>    
+</float>
+
+<suspend/>
+
+
+<float 
+label="P_SpendPerProduct"
+onLoad="copy('P_QuantityPurchased', rows=True)"
+size="10"
+where="execute,survey,report">
+<title>Spent Per product.</title>
+  <virtual>
+for x in P_QuantityPurchased.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (P_QuantityPurchased[x].c1.val ge 1):
+      P_SpendPerProduct.rows[x.index].val=(x.c1.ival*1.0)*y.val
+</virtual>
+</float>
+
+<suspend/>
+
+<float 
+label="P_TotalSpend"
+size="10"
+where="execute,survey,report">
+<title>Total Spent</title>
+<row label="total">Total</row>
+ <virtual>
+sumP_TotalSpend=0
+for x in P_QuantityPurchased.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (x.c1.ival ge 1):
+      sumP_TotalSpend=sumP_TotalSpend+(x.c1.ival*1.0)*y.val
+      
+
+P_TotalSpend.val=sumP_TotalSpend
+</virtual>      
+</float>
+
+<suspend/>

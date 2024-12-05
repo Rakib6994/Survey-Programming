@@ -1,0 +1,23 @@
+<radio 
+  label="S_DemandSpaces"
+  >
+  <title>When you last purchased products for <span style="text-decoration: underline;">Allergy,</span> which of these statements better explains how you used them after purchase?</title>
+  <comment>Select one response.</comment>
+  <style name="page.head"><![CDATA[
+<style>
+.cell-sub-wrapper {
+  text-align: left;
+}
+
+</style>
+]]></style>
+  <row label="r1">My allergy symptoms were getting in the way of my ability to perform and <strong>carry on with my activities through m<span style="text-decoration: underline;">y day</span></strong>, so I took the product(s) to <span style="text-decoration: underline;"><strong>quickly</strong></span> relief my symptoms so <span style="text-decoration: underline;"><strong>I could keep going</strong>.</span></row>
+  <row label="r2"><div align="left">My allergy symptoms were <strong><span style="text-decoration: underline;">interrupting an otherwise good day</span></strong>, so I took the product(s) to relax and get back to enjoying myself.</div></row>
+  <row label="r3">I was experiencing <span style="text-decoration: underline;"><strong>strong allergy symptoms</strong></span>, and I took product(s) to help me feel better, so I could <span style="text-decoration: underline;"><strong>feel stronger</strong></span> and continue to make a difference for people I care about. When I feel like this, sometimes I also take some non-OTC/natural solutions.</row>
+  <row label="r4">My allergy symptoms were stressing me out - I wanted to "target" them with <span style="text-decoration: underline;"><strong>something that I could feel working</strong></span>, so I took a product(s) that provided relief for my specific symptoms.</row>
+  <row label="r5">My severe allergy symptoms <span style="text-decoration: underline;"><strong>lingered for so long</strong></span>… I feel like they were taking over. I wanted to get back in the "driver's seat", so I took a product(s) <span style="text-decoration: underline;"><strong>to help me re-gain control</strong></span>.</row>
+  <row label="r6">I was <span style="text-decoration: underline;"><strong>starting</strong></span> to experience allergy symptoms (or my symptoms were <strong>mild</strong>), so <span style="text-decoration: underline;"><strong>I was feeling "off"</strong></span>. I took a product(s) to help me <span style="text-decoration: underline;"><strong>re-gain clarity</strong></span>. When I feel like this, sometimes I also take some non-OTC/natural solutions.</row>
+  <row label="r7">I know allergies were about to hit me (I knew they were coming, even though I wasn't experiencing symptoms then), so I took an allergy product to get ahead of my symptoms/prevent them from appearing or acting out.</row>
+</radio>
+
+<suspend/>

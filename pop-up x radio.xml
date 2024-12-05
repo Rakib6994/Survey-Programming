@@ -1,0 +1,70 @@
+<checkbox 
+  label="P1"
+  atleast="1">
+  <title><strong>Señala con cuál/es de los dos tipos de facturas nos vas a enviar.</strong></title>
+  <row label="r1" ss:rowClassNames="OPX">Electricidad</row>
+  <row label="r2" ss:rowClassNames="OPY">Gas</row>
+</checkbox>
+
+<radio 
+  label="P1_2"
+  optional="1">
+  <title><strong>Con respecto a tu factura de electricidad, indícanos por favor si el tipo de contrato es…</strong></title>
+  <validate>
+if ((P1.count == 1 and P1.r1) and not(P1_2.r1)) or (P1.count == 2 and not(P1_2.r1 or P1_3.r1)):
+    error("Por favor, selecciona 'Mercado libre' en al menos una de las preguntas sobre el tipo de contrato para continuar.")
+  </validate>  
+  <row label="r1">Mercado libre</row>
+  <row label="r2">Mercado regulado</row>
+</radio>
+
+<radio 
+  label="P1_3"
+  optional="1">
+  <title><strong>Con respecto a tu factura de gas, indícanos por favor si el tipo de contrato es…</strong></title>
+  <validate>
+if ((P1.count == 1 and P1.r2) and not(P1_3.r1)) or (P1.count == 2 and not(P1_2.r1 or P1_3.r1)):
+    error("Por favor, selecciona 'Mercado libre' en al menos una de las preguntas sobre el tipo de contrato para continuar.")
+  </validate>
+
+  <row label="r1">Mercado libre</row>
+  <row label="r2">Mercado regulado</row>
+  <style name="question.after" wrap="ready"><![CDATA[
+var P1 = $ ("#question_P1");
+var P1_2 = $ ("#question_P1_2");
+var P1_3 = $ ("#question_P1_3");
+
+
+document.querySelector(".OPX").appendChild(document.querySelector("#question_P1_2"));
+
+document.querySelector(".OPY").appendChild(document.querySelector("#question_P1_3"));
+  
+function hideQuestions()
+{
+  P1_2.hide();
+  P1_3.hide();
+
+}
+
+hideQuestions();
+
+P1.change(function () {
+  if ($ (".OPX").find("input").is(":checked"))
+  {
+    P1_2.show(1000);
+    
+    
+  }
+  if($ (".OPY").find("input").is(":checked"))
+  {
+    P1_3.show(1000);
+   
+    
+  }
+  
+  
+});
+]]></style>
+</radio>
+
+<suspend/>

@@ -1,0 +1,15 @@
+  <text 
+   label="Q_Diff_OE"
+   cond="(Q_NewDiff.r1)"
+   optional="0"
+   size="40">
+    <title>What did you notice that was new or different?</title>
+    <comment><em>Please liist the product you saw that look new or differetn be as detailed and thorough as possible. you can list up to 5 products</em></comment>
+    <row label="r1"/>
+    <row label="r2" optional="1"/>
+    <row label="r3" optional="1"/>
+    <row label="r4" optional="1"/>
+    <row label="r5" optional="1"/>
+  </text>
+
+  <suspend/>

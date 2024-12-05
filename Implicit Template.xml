@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="Implicit Pack Atts official Template Michele D 11-16-18 (IE Compat)"
+  autoRecover="1"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="138"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="desktop"
+  name="Survey"
+  otherLanguages="french"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/logo_cb8b61dbf2389c6d5068a4f7b058c07a.png"
+  ss:logoPosition="left"
+  state="testing"
+  theme="frozen:company/leahs-theme"
+  unusedLanguages="french"
+  version="6">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+
+
+  .sq-mgshelf-cart-view-content table td input {
+    width: 50px !important;
+  }
+  
+  .modal-body {
+  	text-align:center;
+  }
+  
+  .sq-atm1d-button-align-center .sq-atm1d-buttons {
+    text-align: center
+  }
+  
+    
+  .instruction-text {
+    text-align: center
+  }
+  
+  .sq-atm1d-td {
+    vertical-align: middle;
+  }
+  
+  .sq-atm1d-block {
+    text-align: center
+  }
+  
+  #comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  width: 600px;
+  height: 400px;
+  border-radius: 30px;
+  }
+  
+  .sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+  }
+  
+  .sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+  }
+  
+  .grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  }
+
+ .comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ }
+.survey-body{
+ background-color: transparent;
+}
+
+ .question-text{
+ text-align: center;
+}
+
+ .question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+
+</script>
+<script>
+$ (document).ready(function() {
+
+	$ (".clickable").addClass( "hvr-underline-from-center" )
+	$ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+	
+	if(!$ (".sq-cardsort-Q_PackAtt").length){
+		$ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+	}
+
+	if($ (".p1").length){
+    	$ (".survey-page").css("background", "url('[rel PRSIV_Intro.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");    	
+    	$ (".comment-text").css("color", "black");
+    	$ (".comment-text").css("background-color","lightgrey");
+    	$ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+
+    }
+    
+    if($ (".label_Agreement").length){
+    	$ (".survey-page").css("background", "url('[rel PRSIV_Intro.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");
+    	$ (".question").css("background-color","lightgrey");
+    	$ (".question-text").css("color","black");
+    	$ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+    
+    
+
+/*Gender 1*/
+
+	if($ (".radio .sq-atm1d-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	$ (document).on('click', '.radio .sq-atm1d-button', function() {
+		$ ("#btn_continue").click();
+	})
+
+
+
+
+
+
+/*Gender 2*/
+       
+    if($ (".radio .sq-atmtable-btn").length){
+    	$ ("#btn_continue").hide();
+    }
+
+
+	$ (document).on('click', '.sq-atmtable-btn', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Slider*/
+       
+    if($ (".select .sq-sliderpoints-container").length){
+    	$ ("#btn_continue").hide();
+    }
+
+
+	$ (document).on('click', '.sq-sliderpoints-container', function() {
+		$ ("#btn_continue").click();
+	})
+
+       
+       
+/*Textbox*/
+
+	$ ('.element').css('text-align','center');
+
+
+
+/*Rating Q_OA Auto Advance 
+       
+    if($ (".sq-atmrating-container").length){
+    	$ ("#btn_continue").hide();
+    }
+
+	$ (document).on('click', '.sq-atmrating-container', function() {
+		$ ("#btn_continue").click();
+	})
+	
+*/
+
+
+       
+/*Change Font*/
+	$ ('.dropdown').css("font-family", "Verdana");
+       
+
+
+
+});
+ 
+</script>
+]]></style>
+<samplesources default="0">
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder - do not add Resp</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><p>Thank you for taking our survey. This is a terminate.</p></exit>
+    <exit cond="overquota"><p>Thank you for taking our survey. This is an over quota.</p></exit>
+    <exit cond="qualified"><p>Thank you for taking our survey. This is a complete. Your efforts are greatly appreciated!</p></exit>
+  </samplesource>
+
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<autofill label="JobNumber" where="execute,survey,report">
+  <title>L#### - Project Name </title>
+  <row label="r1" autofill="True">170811</row>
+</autofill>
+
+<autofill label="Phase" where="execute,survey,report">
+  <title>PhaseQ- do not copy this in with template, only used for testing.</title>
+  <row label="r1" autofill="True">1</row>
+  <row label="r2" autofill="hasMarker('ph2')">2</row>
+  <row label="r3" autofill="hasMarker('ph3')">3</row>
+  <row label="r4" autofill="hasMarker('ph4')">3</row>
+  <row label="none" autofill="Phase.count == 0" builder:none="1"><i>None of These Classifications Apply</i></row>
+</autofill>
+
+<suspend/>
+
+<block label="Implicit" builder:title="Implicit">
+  <pipe label="JobNumberI" capture="">
+    <title>DoNotModify</title>
+    <case label="r1" cond="True">[pipe: JobNumber]</case>
+    <case label="r10" cond="1"/></pipe>
+  <suspend/>
+
+  <pipe label="ImplicitImage" capture="">
+    <case label="r1" cond="Phase.r1">aaa_Kxxxx_Line</case>
+    <case label="r2" cond="Phase.r2">bbb_Kxxxx_Line</case>
+    <case label="r3" cond="Phase.r3">ccc_Kxxxx_Line</case>
+    <case label="r4" cond="Phase.r4">ddd_Kxxxx_Line</case>
+    <case label="r10" cond="1"/></pipe>
+  <suspend/>
+
+  <html label="ImplicitInstructions" where="survey">You will now see some words and phrases that could be used to describe the appearance of various products.<br /><br />When the product appears, use your left/right arrows on your keyboard to select which phrase best describes that product. Please go as fast as you can while selecting the appropriate phrase.<br /><br /><img src="/survey/selfserve/1da7/arrows.gif" class="survey_image survey-image-original" title="arrows.gif" /><br /><br />Click "continue" to begin.<br /><br /></html>
+
+  <checkbox 
+   label="vPackAtt_unfiltered"
+   atleast="1"
+   onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+   randomize="0">
+    <title>Pack Att Data</title>
+    <virtual>
+for col in Q_PackAtt_Implicit.cols:
+	if Q_PackAtt_Implicit.cols[col.index].ival gt 0:
+		data.cols[col.index].val=1
+    </virtual>
+
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="vPackAtt_filtered"
+   atleast="1"
+   onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+   randomize="0">
+    <title>Pack Att Data omiting those more than 10 seconds</title>
+    <virtual>
+for col in Q_PackAtt_Implicit.cols:
+	if (Q_PackAtt_Implicit.cols[col.index].ival gt 0 and Q_PackAtt_Implicit.cols[col.index].ival lt 10001):
+		data.cols[col.index].val=1
+    </virtual>
+
+  </checkbox>
+
+  <suspend/>
+
+  <number 
+   label="Q_PackAtt_Implicit"
+   randomize="0"
+   size="5">
+    <title>Implicit Question</title>
+    <col label="c1">Attractive</col>
+    <col label="c2">Unattractive</col>
+    <col label="c3">Premium</col>
+    <col label="c4">Cheap</col>
+    <col label="c5">Unique</col>
+    <col label="c6">Ordinary</col>
+    <col label="c7">Modern</col>
+    <col label="c8">Outdated</col>
+    <col label="c9">Easy to read</col>
+    <col label="c10">Hard to read</col>
+    <col label="c11">Athletic</col>
+    <col label="c12">Relaxed</col>
+    <col label="c13">High Quality</col>
+    <col label="c14">Low Quality</col>
+    <col label="c15">Energetic</col>
+    <col label="c16">Boring</col>
+    <col label="c17">Performance</col>
+    <col label="c18">Everyday</col>
+    <row label="r1">USE THE LEFT AND RIGHT ARROW KEYS TO MOVE THE PRODUCT TO THE ATTRIBUTE.<br />Do you think the <strong>[pipe: TestBrand]</strong> packaging is...</row>
+    <style name="question.after"><![CDATA[
+<script src="https://emea.focusvision.com/survey/selfserve/1da7/1811119/hammer.js"></script>
+<style>
+	#middle {
+                height:70%; 
+                width:100%; 
+                //overflow:auto; 
+                margin-top: 20vh;
+                position:absolute; 
+                top: 0; 
+                left: 0; 
+                bottom: 0; 
+                right: 0;
+            }
+
+            #container {
+                min-height:800px;
+                width:100%;
+                background-size: contain;
+            }
+            
+            .survey-page {
+            	padding: 0;
+            	
+            }
+
+            .survey-body {
+            	width: 100%;
+            	background-color: white;
+            	border: 0;
+            	box-shadow: none !important;
+            	-webkit-box-shadow: none !important;
+            	margin: 0;
+            	padding: 0;
+            	
+            }
+            #product img {
+                vertical-align: middle;
+                max-width: 85%;
+                max-height:400px;
+                position:relative;
+                z-index:10;
+            }   
+            
+            #right, #left {
+            }
+            .arrow-right {
+  				border-top: 22vh solid transparent;
+    			border-bottom: 22vh solid transparent;
+    			border-left: 25vw solid rgba(106, 90, 205, .5);
+			}
+			.arrow-left {
+  				border-top: 22vh solid transparent;
+    			border-bottom: 22vh solid transparent;
+  				border-right: 25vw solid rgba(106, 90, 205, .5);
+			}
+			
+			.text-div {
+				position: absolute;
+    			color: white;
+    			font-size: 2rem;
+    			top: 0;
+    			width: 19vw;
+    			height: 44vh;
+    			display: flex;
+    			justify-content: center;
+                align-items: center;
+      			flex-wrap: wrap;
+    			overflow-wrap: break-word;
+			}
+			.arrow-text {
+				padding: 3%;
+			}
+			.text-left {
+				left: 5vw;
+				text-align: right;
+			}
+			.text-right {
+				right: 5vw;
+				text-align: left;
+			}
+</style>
+    </head>
+    <body>
+    <div id="count" style="display:none">0</div>
+            <div id="container">
+            <p style="text-align:center; font-size:1.5em; margin-top: 2%;">
+                ${Q_PackAtt_Implicit.r1.text}
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        <div id="middle">
+            <div id="left" style="width:25%; float:left; overflow: hidden;">
+                <div class="arrow-left arrow">
+					<div class="text-div text-left">
+                		<span id="leftTxt" class="arrow-text">test</span>
+					</div>
+                </div>
+            </div>
+            <div id="product" style="float:left; width:48%;text-align:center"></div>
+            <div id="right" style="width:25%; float:right;overflow:hidden;">
+                <div class="arrow-right arrow">
+                	<div class="text-div text-right">
+                		<span id="rightTxt" class="arrow-text">test</span>
+                	</div>
+                </div>
+            </div>
+        </div>
+            <p style="clear:both;">&nbsp;</p>
+        </div>
+        <script>
+        
+        try{
+          var hammer    = new Hammer.Manager(document.getElementById('middle'));
+          hammer.add(new Hammer.Swipe());
+          hammer.on("swipeleft swiperight", function(ev) {
+              if(ev.pointerType === 'mouse') { return; }
+              if(ev.type === 'swipeleft'){
+                  jQuery.event.trigger({ type : 'keydown', which: 37, keyCode: 37 });
+              } else {
+                  jQuery.event.trigger({ type : 'keydown', which: 39, keyCode: 39 });
+              }
+          });
+        } catch (err) {
+                console.log(err);
+        }
+
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+images = ['${pipe.ImplicitImage}.jpg'];
+
+var qn = ${jsexport()}; //returns json object of the question
+//console.log(qn)
+
+// Create a list from columns of question
+
+var responses = [];
+
+for (var i = 0; i < qn.cols.length; i=i+2) {
+	var left = qn.cols[i].text;
+	var right = qn.cols[i+1].text;
+	responses.push(left + "|" + right);
+}
+
+//console.log(responses)
+
+
+
+combinedarray = [];
+
+for (i=0;i<images.length;i++){
+	for (r=0;r<responses.length;r++){
+		combinedarray.push([images[i],responses[r]]);
+  	}
+}
+
+
+window.array = shuffle(combinedarray);
+
+  $ ('#leftTxt').html(window.array[0][1].split('|')[0]);
+  $ ('#rightTxt').html(window.array[0][1].split('|')[1]);
+  $ ('#product').html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[0][0]+'"/>');
+
+            //var audioElement = document.createElement('audio');
+            //audioElement.setAttribute('src', '1606121/Laser2.mp3');
+
+            $ (document).ready(function() {
+    			$ ('.question').hide();
+    			$ ('.survey-header').hide();
+    			$ ('.survey-buttons').hide();
+            });
+		start = $.now();
+		moved = false;
+		
+            $ (document).keydown(function(e) {
+            	count = parseInt($ ('#count').html());
+            	row = $.inArray(window.array[count][0],images);
+			      if((e.which == 37 || e.which == 39) && moved == false) {
+			        $ ('#count').html(count+1);
+      				moved = true;
+        			time = $.now()-start;
+					//audioElement.play();
+                		if (e.keyCode == 37) { //left arrow
+			        		col = $.inArray(window.array[count][1],responses)*2;
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col+1)+')').find('input').val('');
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                    		$ ("#product img").animate({
+                        		left: '-600px',
+                           		height: '40px',
+                        		top: '+200px',
+                        		opacity: '0'
+                    		}, 500, function() {
+                        		if (count+1==window.array.length){
+                              		$ ('#btn_continue').click();
+	                        		return false;
+                        		}
+                        		$ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+                                
+	                            moved = false;
+			                });
+		                }
+                		else if (e.keyCode == 39) { //right arrow
+			        		col = $.inArray(window.array[count][1],responses)*2+1;
+			        		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col-1)+')').find('input').val('');
+                    		$ ('tbody').find('tr:eq('+parseInt(row)+')').find('td:eq('+parseInt(col)+')').find('input').val(time);
+                    		$ ("#product img").animate({
+                        		left: '600px',
+                           		height: '40px',
+                        		top: '+200px',
+                        		opacity: '0'
+                    		}, 500, function() {
+                        		if (count+1==window.array.length){
+                              		$ ('#btn_continue').click();
+	                        		return false;
+                        		}
+                        		$ ("#product").html('<img src="/survey/selfserve/1da7/${pipe.JobNumberI}/'+window.array[count+1][0]+'"/>');
+                                $ ('#leftTxt').html(window.array[count+1][1].split('|')[0]);
+                                $ ('#rightTxt').html(window.array[count+1][1].split('|')[1]);
+                                
+                                moved = false;
+			                });
+		                }
+						start = $.now();
+	        		}
+            	});
+
+</script>
+]]></style>
+  </number>
+
+  <suspend/>
+
+  <float 
+   label="Q_PackAtt_Implicit_Seconds"
+   onLoad="copy('Q_PackAtt_Implicit', cols=True)"
+   randomize="0"
+   size="3">
+    <title>PackAtt in Seconds</title>
+    <virtual>
+for col in Q_PackAtt_Implicit.cols:
+	if (Q_PackAtt_Implicit.cols[col.index].ival gt 0 and Q_PackAtt_Implicit.cols[col.index].ival lt 10001):
+		data.cols[col.index].val = Q_PackAtt_Implicit.cols[col.index].ival / 1000.0
+    </virtual>
+
+  </float>
+
+  <float 
+   label="Implicit_TotalTimeSpent"
+   optional="0"
+   randomize="0"
+   where="execute,survey,report">
+    <title>PackAtt Total Time Spent in Seconds</title>
+    <virtual>
+Implicit_TotalTimeSpent.val =  (Q_PackAtt_Implicit.sum) / 1000.0
+    </virtual>
+
+  </float>
+
+  <radio 
+   label="ImplicitStraightliner"
+   randomize="0">
+    <title>Straightlined responses</title>
+    <virtual>
+if vPackAtt_unfiltered.c1 and vPackAtt_unfiltered.c3 and vPackAtt_unfiltered.c5 and vPackAtt_unfiltered.c7 and vPackAtt_unfiltered.c9 and vPackAtt_unfiltered.c11 and vPackAtt_unfiltered.c13 and vPackAtt_unfiltered.c15 and vPackAtt_unfiltered.c17:  data.val=0
+elif vPackAtt_unfiltered.c2 and vPackAtt_unfiltered.c4 and vPackAtt_unfiltered.c6 and vPackAtt_unfiltered.c8 and vPackAtt_unfiltered.c10 and vPackAtt_unfiltered.c12 and vPackAtt_unfiltered.c14 and vPackAtt_unfiltered.c16 and vPackAtt_unfiltered.c18:  data.val=1
+else:  data.val = 2
+    </virtual>
+
+    <row label="r1">Left straightliner</row>
+    <row label="r2">Right straightliner</row>
+    <row label="r3">Non straightliner</row>
+  </radio>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<exec where="execute,survey,report">
+p.startTime = timeSpent()
+</exec>
+
+<suspend/>
+</survey>

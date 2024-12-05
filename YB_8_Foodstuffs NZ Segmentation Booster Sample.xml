@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="YB_8_Foodstuffs NZ Segmentation Booster Sample"
+  atm1d:showInput="0"
+  autoRecover="1"
+  autosaveKey="yabbleid,psid,pid,transaction_id,CID"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="141"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  otherLanguages="simplifiedchinese,tagalog"
+  remerged="20240227_13:49"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="0"
+  ss:listDisplay="1"
+  ss:logoAlt=""
+  ss:logoFile=""
+  ss:logoPosition=""
+  state="testing"
+  theme="frozen:survey"
+  trackVars="checkbox"
+  version="57">
+
+<res label="startbtn">START</res>
+<res label="errAFFIN1">Please select at least 1 answer.</res>
+<res label="errXDFRN_2">Please provide valid name of the child.</res>
+<res label="errXDFRN">You have entered an age the same as a previous child – is this correct.</res>
+<res label="errSSQ4">Please review your response. Expenditure on toys cannot be more than the total expenditure.</res>
+<res label="errHQ1x1">Please select an answer.</res>
+<res label="errHQ1x2">Please select an answer only if browse website on computer or use Internet on mobile phone.</res>
+<res label="continuebtn">NEXT</res>
+<res label="cardbtn">&amp;nbsp;</res>
+<res label="Errpostcode">Please check your postcode!</res>
+<res label="S9ar1">e.g., Gauze Bandage, Adhesive Bandage, Blister Cushions</res>
+<res label="S9ar2">e.g., Disposable (vinyl, latex, nitrile, natural rubber), Reusable (leather, cotton, dipped)</res>
+<res label="S9ar3">e.g., Antibiotic ointment, Antiseptic ointment, Antifungal ointment</res>
+<res label="S9ar4">e.g., Multi-surface wipes, Grill wipes, Glass wipes</res>
+<res label="S9ar6">e.g., Sunscreen, After sun lotion</res>
+<res label="S9ar7">e.g., Body lotion, Face lotion, Hand lotion</res>
+<res label="S9ar9">e.g., liquid, bar, foam, etc.</res>
+<res label="S9ar10">e.g., Spray hand sanitizer, Foam hand sanitizer, Gel hand sanitizer</res>
+<res label="S9ar15">e.g., Adult incontinence briefs, Adult protective underwear, Adult diapers</res>
+<res label="S9ar16">e.g., Incontinence bed pads, Pet potty training pads</res>
+<res label="S9ar20">e.g., stick, spray, roll-on, wipes</res>
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>PAK’nSAVE</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Four Square</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<style cond="1" name="survey.respview.footer.support"><![CDATA[
+<div style="text-align: center;" jstcache="0"><a href="/support?decLang=english" target="_blank" jstcache="0">Help</a></div>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+.rnkclass1 {
+  display: inline-block;
+}
+.rnkclass {
+  list-style:none;
+  background-color: #57585b;
+  border-color: #57585b;
+  color: #fff;
+  min-height: 170px;
+  margin: 10px;
+  padding: 10px;
+  \@if (gv.request.device.properties["isMobileDevice"] == "0")
+  width: 20%;
+  \@endif
+  font-size: 14px;
+  text-align:center;
+  float: left;
+}
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+  </style>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+html:not(.lte-ie9) .fir-select .input.dropdown {
+    font-family: Arial,sans-serif;
+}
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+.sq-atmrating .atmrating_rightPosition {
+    text-align: left;
+}
+.sq-atmrating .atmrating_leftPosition {
+    text-align: right;
+}
+.grid.grid-table-mode .row-legend {
+    line-height: 20px;
+}
+.table1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 100%
+}
+
+.td1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 15%;
+      background-color: lightgrey;
+}
+.td2 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 200px;
+}
+.td3 {
+     border: 0.5px solid black;
+     padding: 5px;
+     text-align: center;
+     width: 300px;
+}
+.td_Image {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: center;
+     width: 300px;
+}
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+.instruction-text {
+    font-style: italic;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-large .sq-atm1d-button {      
+    min-width: 150px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: auto !important;
+    min-width: 200px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-width: 165px;
+}
+.sq-atm1d .sq-atm1d-buttons {
+    display: block;
+}
+
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+ body { direction: rtl; }
+ .survey-buttons { text-align: left !important; }
+ #surveyContent, .survey-body, .question-text, .instruction-text,
+ .grid.grid-table-mode .row-legend, .grid-desktop-mode.grid-list-mode .cell-section,
+ .grid-single-col .cell, .grid[data-settings*='single-col'] .cell,
+ .noRows .grid.grid.grid-table-mode .colCount-1 .element,
+ .noRows .grid.grid.grid-table-mode .colCount-1 .col-legend { text-align: right !important; }
+ .survey-body .fir-hidden { left: auto !important; right: -9999px !important; }
+
+</style>
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<style type="text/css">
+.sq-cardsort-bucket {
+  overflow:hidden;
+}
+.sq-cardsort-desktop .sq-cardsort-bucket {
+  font-size:1.1em;
+}
+.table1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 100%
+}
+.grid.grid-table-mode .row-legend {
+    line-height: 20px;
+}
+.td1 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 15%;
+      background-color: lightgrey;
+}
+.td2 {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: left;
+     width: 200px;
+}
+.td3 {
+     border: 0.5px solid black;
+     padding: 5px;
+     text-align: center;
+     width: 300px;
+}
+.td_Image {
+     border: 0.5px solid black;
+     padding: 15px;
+     text-align: center;
+     width: 300px;
+}
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+.instruction-text {
+    font-style: italic;
+}
+.sq-atm1d .sq-atm1d-button{
+  font-size:1.2em;
+}
+.sq-atm1d-open .oe {
+    height: 25px;
+    padding: 2px 4px !important;
+}
+.sq-atm1d-large .sq-atm1d-button {      
+    min-width: 150px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-button {
+    height: auto !important;
+    min-width: 200px ;
+}
+
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe {
+    height: 25px;
+}
+.sq-atm1d-tiled .sq-atm1d-button {
+    min-width: 165px;
+}
+.sq-atm1d .sq-atm1d-buttons {
+    display: block;
+}
+
+.grid-table-mode .col-legend {
+    vertical-align: bottom !important;
+}
+
+</style>
+]]></style>
+<style label="QNumstyle" arg:mlen="2" name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="$(name)" value="$(value)" maxLength="$(mlen)" size="$(size)" onkeypress="return isNumberKey(event)" style="height:40px; font-size:16px;border-radius:10px;text-align:center;" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+<script>
+function isNumberKey(evt)
+{
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+               return false;
+
+       return true;
+}
+</script>
+]]></style>
+<style label="disable_continue" mode="after" name="respview.client.js" wrap="ready"><![CDATA[
+$ ('.sq-cardsort-next').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').click(function() {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+$ ('.sq-cardsort-bucket').on("drop",function(e) {
+    setTimeout(function() {cardSortNext();}, 1000);
+});
+
+function cardSortNext() {
+  if ($ ('.sq-cardsort-completion').is(':visible')) {
+    $ ("#btn_continue").click();
+  }
+}
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script src="https://au.focusvision.com/survey/selfserve/6a7/231000/hideContinue.js"></script>
+<script src="https://au.focusvision.com/survey/selfserve/6a7/231000/AutoContinue.js"></script>
+]]></style>
+<style name="button.continue"><![CDATA[
+<input type="submit" name="continue" id="btn_continue" class="button continue nextbtn" value="${res.continuebtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+]]></style>
+<style name="button.finish"><![CDATA[
+<div class="wrap">
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="Finish" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+</div>
+]]></style>
+<suspend/>
+
+<checkbox 
+  label="changeLog"
+  optional="1"
+  style="dev">
+  <title>Record the changes log</title>
+  <comment>SP use only.</comment>
+  <row label="r1">1</row>
+  <row label="r2">2</row>
+</checkbox>
+
+<suspend/>
+
+<text 
+  label="sst"
+  cond="0"
+  size="40">
+  <title>section time</title>
+  <row label="S">screener</row>
+  <row label="A">section A</row>
+  <row label="B">section B</row>
+  <row label="C">section C</row>
+  <row label="D">section D</row>
+  <row label="E">section E</row>
+  <row label="F">section F</row>
+  <row label="G">section G</row>
+  <row label="Z">section Z</row>
+</text>
+
+<suspend/>
+
+<exec>
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+if list=="1":
+  qhidxSupplier.val=0
+else:
+  qhidxSupplier.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="qhidxSupplier"
+  optional="1"
+  style="dev"
+  where="execute,survey,report">
+  <title>Record the Supplier</title>
+  <row label="r1" value="1">PAK’nSAVE</row>
+  <row label="r2" value="2">Four Square</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if list=="1":
+  ListVariable.val=0
+if list=="2":
+  ListVariable.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="ListVariable"
+  optional="1"
+  style="dev"
+  where="execute,survey,report">
+  <title>Record the Supplier</title>
+  <row label="r1" value="1">Pack N Save</row>
+  <row label="r2" value="2">Four Square</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if list=="1" or list=="2" :
+  qhid.val=0
+else:
+  qhid.val=1
+</exec>
+
+<suspend/>
+
+<radio 
+  label="qhid"
+  cond="0"
+  optional="1"
+  style="dev,testing">
+  <title>Sample</title>
+  <row label="r1">AUS</row>
+  <row label="r2">NZ</row>
+</radio>
+
+<suspend/>
+
+<exec>
+p.times1 = time.time()
+</exec>
+
+<suspend/>
+
+<exec>
+pipeCountry.val = 44
+</exec>
+
+<suspend/>
+
+<radio 
+  label="pipeCountry"
+  optional="1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punchin country code</title>
+  <comment>Please select one answer.</comment>
+  <row label="au">Australia</row>
+  <row label="at">Austria</row>
+  <row label="be">Belgium</row>
+  <row label="ca">Canada</row>
+  <row label="cn">China</row>
+  <row label="cz">Czech Republic</row>
+  <row label="dk">Denmark</row>
+  <row label="fn">Finland</row>
+  <row label="fr">France</row>
+  <row label="de">Germany</row>
+  <row label="gr">Greece</row>
+  <row label="hk">Hong Kong</row>
+  <row label="hu">Hungary</row>
+  <row label="il">Israel</row>
+  <row label="it">Italy</row>
+  <row label="jp">Japan</row>
+  <row label="ksa">KSA</row>
+  <row label="lt">Lithuania</row>
+  <row label="my">Malaysia</row>
+  <row label="mx">Mexico</row>
+  <row label="nl">Netherlands</row>
+  <row label="no">Norway</row>
+  <row label="pl">Poland</row>
+  <row label="pt">Portugal</row>
+  <row label="ro">Romania</row>
+  <row label="ru">Russia</row>
+  <row label="rs">Serbia</row>
+  <row label="sg">Singapore</row>
+  <row label="kr">South Korea</row>
+  <row label="es">Spain</row>
+  <row label="sw">Sweden</row>
+  <row label="ch">Switzerland</row>
+  <row label="tw">Taiwan</row>
+  <row label="tr">Turkey</row>
+  <row label="ae">UAE</row>
+  <row label="uk">UK</row>
+  <row label="ua">Ukraine</row>
+  <row label="us">USA</row>
+  <row label="br">Brazil</row>
+  <row label="bg">Bulgaria</row>
+  <row label="hr">Croatia</row>
+  <row label="ee">Estonia</row>
+  <row label="ie">Ireland</row>
+  <row label="lv">Latvia</row>
+  <row label="nz">New Zealand</row>
+  <row label="sk">Slovakia</row>
+  <row label="si">Slovenia</row>
+  <row label="za">South Africa</row>
+  <row label="ph">Philippines</row>
+</radio>
+
+<suspend/>
+
+<exec>
+if pipeCountry.us:  dCountry.val = 0
+if pipeCountry.uk:  dCountry.val = 1
+if pipeCountry.fr:  dCountry.val = 2
+if pipeCountry.de:  dCountry.val = 3
+if pipeCountry.it:  dCountry.val = 4
+if pipeCountry.nz:  dCountry.val = 5
+</exec>
+
+<radio 
+  label="dCountry"
+  optional="1"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Hidden for punching country</title>
+  <row label="r1">United States</row>
+  <row label="r2">UK</row>
+  <row label="r3">France</row>
+  <row label="r4">Germany</row>
+  <row label="r5">Italy</row>
+  <row label="r6">New Zealand</row>
+</radio>
+
+<exec>
+if pipeCountry.us:  LNG.val = 0
+if pipeCountry.uk:  LNG.val = 1
+if pipeCountry.fr:  LNG.val = 2
+if pipeCountry.de:  LNG.val = 3
+if pipeCountry.it:  LNG.val = 4
+if pipeCountry.nz:  LNG.val = 5
+</exec>
+
+<radio 
+  label="LNG"
+  optional="1"
+  uses="atm1d.10"
+  where="execute,survey,report">
+  <title>Please select the language which you would like to answer this survey in.</title>
+  <comment><em>Please select one answer.</em></comment>
+  <row label="r1" cond="pipeCountry.us">United States</row>
+  <row label="r2" cond="pipeCountry.uk">UK</row>
+  <row label="r3" cond="pipeCountry.fr">France</row>
+  <row label="r4" cond="pipeCountry.de">German</row>
+  <row label="r5" cond="pipeCountry.it">English</row>
+  <row label="r6" cond="pipeCountry.es">New Zealand</row>
+</radio>
+
+<suspend/>
+
+<exec sst="0">
+if LNG.r1:
+  setLanguage('english')
+if LNG.r2:
+  setLanguage('english')
+if LNG.r3:
+  setLanguage('english')
+if LNG.r4:
+  setLanguage('english')  
+if LNG.r5:
+  setLanguage('english')
+if LNG.r6:
+  setLanguage('english')
+</exec>
+
+<suspend/>
+
+<logic label="ln1" uses="recaptcha.1">
+  <title>Please verify rCaptcha before clicking continue?</title></logic>
+<suspend/>
+
+<radio 
+  label="ln1_results"
+  translateable="0"
+  where="execute,survey,report">
+  <title>Results</title>
+  <comment>Select one</comment>
+  <exec>
+ln1_results.val = int(not ln1.human)
+  </exec>
+
+  <row label="r1">Human</row>
+  <row label="r2">Not Human</row>
+</radio>
+
+<suspend/>
+
+<term cond="(ln1_results.r2)">Term : Captcha</term>
+
+<suspend/>
+
+<radio 
+  label="DQC11"
+  cond="0"
+  uses="atm1d.10">
+  <title><b>Our commitment to data quality.</b><br /><br />The research that you are taking part in is conducted to help organisations make important decisions that impact the products and services that they can deliver to you. It is therefore important that the answers you provide are thoughtful and correct.<br /><br />
+As you complete the survey, we will ask some questions that are designed to ensure you are paying attention.<br /><br />
+It is critical that you answer these questions correctly. If you do not, you will be excluded from the survey, and you may lose the right to receive any incentive offered.<br /><br />
+If you are happy to proceed with the survey on this basis, please select ‘Yes’ from the options below. Selecting no will result in the termination of this survey.</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<term label="T1" cond="0">Code 2</term>
+
+<suspend/>
+
+<html label="Info" where="survey">Thank you for agreeing to participate in this survey!</html>
+
+<suspend/>
+
+<radio 
+  label="N1"
+  shuffle="rows">
+  <title>When choosing where to do your grocery shopping, <b>how important are the following factors to you</b>?  </title>
+  <comment>Please select one in each row.</comment>
+  <col label="c1">Not at all Important</col>
+  <col label="c2">A little important</col>
+  <col label="c3">Moderately Important</col>
+  <col label="c4">Very Important</col>
+  <col label="c5">Extremely Important</col>
+  <row label="r1"><strong>Prices are lower than other retailers</strong></row>
+  <row label="r2"><strong>Offers the highest quality products</strong></row>
+  <row label="r3"><strong>Offers a wide variety of natural/organic products</strong></row>
+  <row label="r4"><strong>The retailer has easy ways to shop online</strong></row>
+  <row label="r5"><strong>The retailer rewards me for shopping with them</strong></row>
+  <row label="r6"><strong>Has a selection of items that are connected to my cultural/ethnic heritage</strong></row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_N1.val = 1
+for itr in range(len(N1.cols)):
+  if N1.cols[itr].all:
+     FlatLiner_N1.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_N1"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="N2"
+  cardsort:animationDuration="200"
+  cardsort:bucketCSS="margin:0px;vertical-align:bottom;width:110px"
+  cardsort:bucketsPerRow="5"
+  cardsort:completionHTML="&amp;nbsp;"
+  cardsort:displayCounter="0"
+  cardsort:displayNavigation="1"
+  cardsort:displayProgress="1"
+  shuffle="rows"
+  uses="cardsort.6">
+  <title>Thinking about your recent grocery shopping habits, how often do you do the following?</title>
+  <comment>Please select one for each statement.</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">
+#btn_continue{
+  display:none;
+}
+</style>
+]]></style>
+  <col label="c1">Never</col>
+  <col label="c2">Less than half the time</col>
+  <col label="c3">About half the time</col>
+  <col label="c4">Most of the time</col>
+  <col label="c5">All the time</col>
+  <row label="r1">Order groceries online</row>
+  <row label="r2">Swipe, scan, or log-in when shopping in order to earn rewards</row>
+  <row label="r3">Redeem discounts or deals from a store's loyalty program</row>
+  <row label="r4">Read the diet and nutrition information on the pack before buying products</row>
+  <row label="r5">Choose organic or natural products</row>
+  <row label="r6">Instead of groceries, have restaurant-made meals (either at the restaurant or from take-away)</row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_N2.val = 1
+for itr in range(len(N2.cols)):
+  if N2.cols[itr].all:
+     FlatLiner_N2.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_N2"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="N3"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>Are there any particular food trends or dietary approaches that you or anyone in your household are following?</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">Lower or sugar-free</row>
+  <row label="r2">Lower or fat free</row>
+  <row label="r3">Low salt</row>
+  <row label="r4">Vegetarian</row>
+  <row label="r5">Pescatarian</row>
+  <row label="r6">Vegan</row>
+  <row label="r7">Organic</row>
+  <row label="r8">Gluten-free</row>
+  <row label="r9">Dairy or lactose-free</row>
+  <row label="r10">Ketogenic</row>
+  <row label="r11">Paleo</row>
+  <row label="r12">Trying to eat less meat / flexitarian / eating meat-free alternatives</row>
+  <row label="r13">Sustainably sourced/produced foods</row>
+  <row label="r14" open="1" openSize="25" randomize="0">Other not mentioned above</row>
+  <row label="r15" exclusive="1" randomize="0">No, don't follow any particular food approach or trend</row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+sst.S.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times2 = time.time()
+VAR_TIME_1.r1.val = ("%.2f" % ((p.times2- p.times1) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_1"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Screener section</row>
+</float>
+
+<suspend/>
+
+<label label="sect2" builder:title="SHOPPING BEHAVIORS "/>
+
+<number 
+  label="A2A"
+  optional="0"
+  size="5"
+  ss:preText="$"
+  verify="range(1,5000)">
+  <title>In a typical month, about how much money do you spend on groceries?  </title>
+  <comment>Please make your best guess.</comment>
+</number>
+
+<suspend/>
+
+<checkbox 
+  label="A1"
+  atleast="1"
+  shuffle="rows"
+  uses="atm1d.10">
+  <title>In a typical month, at which of the following stores do you shop at for groceries?  Again, by groceries we mean common food, beverage, and non-food items found in your typical grocery store, liquor store, or website.</title>
+  <comment>Please select all that apply.</comment>
+  <row label="r1">PAK'n SAVE</row>
+  <row label="r2">New World</row>
+  <row label="r3">Countdown/ Woolworths</row>
+  <row label="r4">Four Square</row>
+  <row label="r5">Fresh Choice</row>
+  <row label="r6">SuperValue</row>
+  <row label="r7">The Warehouse</row>
+  <row label="r8">Pharmacy (Chemist Warehouse, Bargain Chemist, Independent pharmacies)</row>
+  <row label="r9">Costco</row>
+  <row label="r10" open="1" randomize="0">Other not mentioned above</row>
+</checkbox>
+
+<suspend/>
+
+<checkbox 
+  label="HidA1"
+  atleast="1"
+  where="execute,survey,report">
+  <title>selected options from A1</title>
+  <comment>hidden</comment>
+  <row label="r1" autofill="A1.r1">PAK'n SAVE</row>
+  <row label="r2" autofill="A1.r2">New World</row>
+  <row label="r3" autofill="A1.r3">Countdown/ Woolworths</row>
+  <row label="r4" autofill="A1.r4">Four Square</row>
+  <row label="r5" autofill="A1.r5">Fresh Choice</row>
+  <row label="r6" autofill="A1.r6">SuperValue</row>
+  <row label="r7" autofill="A1.r7">The Warehouse</row>
+  <row label="r8" autofill="A1.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, Independent pharmacies)</row>
+  <row label="r9" autofill="A1.r9">Costco</row>
+  <row label="r10" autofill="A1.r10">${A1.r10.open}</row>
+</checkbox>
+
+<suspend/>
+
+<number 
+  label="A3"
+  amount="100"
+  grouping="cols"
+  optional="0"
+  size="3"
+  ss:listDisplay="0"
+  ss:postText="%"
+  uses="autosum.5"
+  verify="range(0,100)">
+  <title><b>As a percentage</b> of your total grocery spending in a typical month, about how much do you spend at each of the following stores?</title>
+  <comment>Please make your best guess.</comment>
+  <row label="r1" cond="HidA1.r1">PAK'n SAVE</row>
+  <row label="r2" cond="HidA1.r2">New World</row>
+  <row label="r3" cond="HidA1.r3">Countdown/ Woolworths</row>
+  <row label="r4" cond="HidA1.r4">Four Square</row>
+  <row label="r5" cond="HidA1.r5">Fresh Choice</row>
+  <row label="r6" cond="HidA1.r6">SuperValue</row>
+  <row label="r7" cond="HidA1.r7">The Warehouse</row>
+  <row label="r8" cond="HidA1.r8">Pharmacy (Chemist Warehouse, Bargain Chemist, Independent pharmacies)</row>
+  <row label="r9" cond="HidA1.r9">Costco</row>
+  <row label="r10" cond="HidA1.r10">${A1.r10.open}</row>
+  <row label="r11" cond="1" randomize="0">OTHER NOT MENTIONED ABOVE</row>
+</number>
+
+<suspend/>
+
+<radio 
+  label="A5B">
+  <title>When you shop at your <b>primary grocery store</b>, how many of each type of trip do you take in a typical month?</title>
+  <comment>Please select one in each row.</comment>
+  <col label="c1">0 of these trips</col>
+  <col label="c2">1 to 2 trips</col>
+  <col label="c3">3 to 4 trips</col>
+  <col label="c4">5 or more of these trips</col>
+  <row label="r1">Full-shop trips (more products, more categories across the store)</row>
+  <row label="r2">Top-up trips (fewer products, fewer categories across the store)</row>
+  <row label="r3">Specific need trip (1 or 2 items, usually because you're running low and need it soon)</row>
+  <row label="r4">Meal for later trips (items for a meal later that day or in the next few days)</row>
+  <row label="r5">Food to eat right away (for breakfast, lunch or dinner)</row>
+</radio>
+
+<suspend/>
+
+<exec>
+FlatLiner_A5B.val = 1
+for itr in range(len(A5B.cols)):
+  if A5B.cols[itr].all:
+     FlatLiner_A5B.val = 0
+</exec>
+
+<radio 
+  label="FlatLiner_A5B"
+  optional="1"
+  where="execute,survey,report">
+  <title>Hidden for flatliner</title>
+  <row label="r1">Flatliner</row>
+  <row label="r2">Not Flatliner</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="Clubcard"
+  uses="atm1d.10">
+  <title>Do you have / have you ever had a <b>New World Clubcard</b>?</title>
+  <comment>Please select one response.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<html label="Thank_TEXT" where="survey">Thanks for your time, we really appreciate you taking the time to answer this survey!</html>
+
+<suspend/>
+
+<radio 
+  label="C1"
+  cond="Clubcard.r1"
+  uses="atm1d.10">
+  <title>One more question before we finish.  This survey has been on behalf of Foodstuffs to help them provide you and other people like you with a better shopping experience.  As a current or New World Clubcard member, do you give Foodstuffs permission to link the answers you’ve provided in this survey to the information they hold on you as a New World Clubcard customer/member?
+<br />The information will not be used to directly market to you.
+</title>
+  <comment>Please select one only.</comment>
+  <row label="r1">Yes, happy to share my data to help improve the shopping experience for me and others like me</row>
+  <row label="r2">No, I’d rather not have my data linked to this survey</row>
+</radio>
+
+<suspend/>
+
+<text 
+  label="C2"
+  cond="(C1.r1)"
+  optional="0"
+  size="25">
+  <title><strong>You have indicated that you are happy to have your data linked. In order to ensure we are linking your accounts correctly can you please provide the following details:</strong></title>
+  <row label="r1" verify="email">Current Email Address:</row>
+  <row label="r2">First Name:</row>
+  <row label="r3">Last Name:</row>
+  <row label="r4" verify="number">Postcode:</row>
+</text>
+
+<suspend/>
+
+<html label="cm1" where="survey"><strong>Thank you so much for your time<br /></strong><br /><strong>&amp;nbsp;</strong><br /><strong>Please click ‘Finish’ to complete the survey.</strong></html>
+
+<exec>
+sst.A.val= timeSpent() - p.timeS
+p.timeS = timeSpent()
+</exec>
+
+<suspend/>
+
+<exec>
+p.times3 = time.time()
+VAR_TIME_2.r1.val = ("%.2f" % ((p.times3- p.times2) / 60.0))
+</exec>
+
+<suspend/>
+
+<float 
+  label="VAR_TIME_2"
+  size="9"
+  where="execute,survey,report">
+  <title>VAR_TIME</title>
+  <row label="r1">Section 2</row>
+</float>
+
+<suspend/>
+
+<exec>
+p.scf = timeSpent()
+if p.scf lt 120:
+  SC.val = 0
+else:
+  SC.val = 1
+</exec>
+
+<radio 
+  label="SC"
+  where="execute,survey,report">
+  <title>Speeder checks</title>
+  <comment>Please select one.</comment>
+  <row label="r1" value="1">Speeder</row>
+  <row label="r2" value="2">Not Speeder</row>
+</radio>
+
+<suspend/>
+
+<term label="TermSC" cond="0">Speeder</term>
+
+<suspend/>
+</survey>

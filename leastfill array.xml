@@ -14,58 +14,5 @@ for itr in range(len(arr)):
 <!--HIDLEASTFILL autocodeD here-->
 
 
-FOUNDATION
-MAKE UP FOR EYES
-MAKEUP FOR LIP
-MOISTURIZER
-SERUM
 
 
-
-
-<checkbox
-  label="prog_DL"
-  atleast="1">
-  <title></title>
-  <comment>Select all that apply</comment>
-  <row label="r1">1</row>
-<row label="r2">2</row>
-<row label="r3">3</row>
-</checkbox>
-<suspend/>
-
-
-
-<checkbox
-  label="hid_DL"
-  atleast="1">
-  <title></title>
-  <comment>Select all that apply</comment>
-  <row label="r1">1</row>
-<row label="r2">2</row>
-<row label="r3">3</row>
-</checkbox>
-<suspend/>
-
-
-
-
-['DL1','DL2','DL3','DL4','DL5','DL6','DL7','DL8','DL9','DL10','DL11','DL12','DL13','DL14','DL15','DL16']
-
-
-  <row label="r3"  autofill="hid_DL.r1">Belk (IN STORE)</row>
-  <row label="r4"  autofill="hid_DL.r2">Dillard's (IN STORE)</row>
-  <row label="r5"  autofill="hid_DL.r3">Department Store (IN STORE)</row>
-  <row label="r6"  autofill="hid_DL.r4">Belk (ONLINE)</row>
-  <row label="r7"  autofill="hid_DL.r5">Dillard's (ONLINE)</row>
-  <row label="r8"  autofill="hid_DL.r6">Department Store (ONLINE)</row>
-  <row label="r9"  autofill="hid_DL.r7">Nordstrom (IN STORE)</row>
-  <row label="r10" autofill="hid_DL.r8">Bloomingdale's (IN STORE)</row>
-  <row label="r11" autofill="hid_DL.r9">Saks Fifth Avenue (IN STORE)</row>
-  <row label="r12" autofill="hid_DL.r10">Neiman Marcus (IN STORE)</row>
-  <row label="r13" autofill="hid_DL.r11">Bergdorf Goodman (IN STORE)</row>
-  <row label="r14" autofill="hid_DL.r12">Nordstrom (ONLINE)</row>
-  <row label="r15" autofill="hid_DL.r13">Bloomingdale's (ONLINE)</row>
-  <row label="r16" autofill="hid_DL.r14">Saks Fifth Avenue (ONLINE)</row>
-  <row label="r17" autofill="hid_DL.r15">Neiman Marcus (ONLINE)</row>
-  <row label="r18" autofill="hid_DL.r16">Bergdorf Goodman (ONLINE)</row>

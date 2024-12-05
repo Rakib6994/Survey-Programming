@@ -1,0 +1,31 @@
+Hi Everyone, Please share with the rest of the team - - 
+
+We have updated links for Buzz exercises and are up to Buzz3DStore7_DLOnDemand - please use the following links (which are updated in the L3333 template):
+
+Shopping- the Buzz store version "7" is the only change:
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AX###-Shelf[pipe: Phase]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ax###?"/>
+
+Findability - along with the Buzz store version "7" change, there is a new piece of code (below in blue) to show or hide show the Findability instructions button  on shelf (this is where the respondent can see the findability brand name while going through the exercise) 
+
+We now have the ability to remove this button if it's covering the findability product or one of the client's test products - - the decision to remove this will come from the COE or customer success insights team:
+
+To show the button, use this link (this should be the default):
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AX###-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda]&amp;showinstructions=1&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ax###?"/>
+
+To hide the button, use this link:
+ 
+ <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AX###-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda]&amp;showinstructions=0&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ax###?"/>
+
+
+Situational Purchase:  the Buzz store version "7" is the only change:
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AX###-Shelf[pipe: Phase]&amp;scenario=1&amp;find=[pipe:proposition1Text]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ax###?"/>
+
+    <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AX###-Shelf[pipe: Phase]&amp;scenario=2&amp;find=[pipe:proposition2Text]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ax###?"/>
+
+
+Please refer to AH120 for reference (this study is using the new links, and is defaulted to showing the findability button instructions)
+
+Please share with the team and let me know if you have any questions. Thank you!
+Michele

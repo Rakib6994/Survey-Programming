@@ -1,0 +1,93 @@
+<block label="MET" cond="False" builder:title="MET Section">
+  <radio 
+   label="S_MET1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following do you wear in order to shop in a grocery store, whether to walk down the aisles or to read package information?</title>
+    <comment>Read list. Select one response.</comment>
+    <row label="r1">Only glasses</row>
+    <row label="r2">Only contact lenses</row>
+    <row label="r3">Either glasses or contact lenses</row>
+    <row label="r4">Neither glasses nor contact lenses</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET2"
+   cond="S_MET1.r2 or S_MET1.r3"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Are you currently wearing your contact lenses?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET3"
+   cond="S_MET1.r4 or S_MET2.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you have any eyesight problems such as current or reoccurring eye injuries, colorblindness, a glass eye, pink eye, astigmatism, or a strabismus of any kind such as crossed eyes or lazy eye?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET4"
+   cond="S_MET3.r2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>During the interview, you will be asked to wear a set of non-prescription eyeglasses. This is a new technology that we would like you to help us utilize. Is this OK?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="S_METQual" randomize="0" where="execute,survey,report">
+    <title>Qualified for MET:</title>
+    <row label="r1" autofill="S_MET4.r1">YES</row>
+    <row label="r2" autofill="not(S_MET4.r1)">NO</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="MET_Complete"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>ADD TO KEY IDENTIFIER SECTION. <b>Please indicate if respondent will complete the MET exercise:</b></title>
+    <row label="r1" cond="S_METQual.r1">Yes</row>
+    <row label="r2">No</row>
+    <row label="invisible" ss:rowClassNames="invisible"/>
+  </radio>
+
+  <suspend/>
+
+  <html label="MET_Intro" cond="S_METQual.r1" where="survey"><strong><span style="color: red">To add before Shopping:</span></strong><br /><br /><strong>MET CALIBRATION NOTES FOR INTERVIEWER:</strong>
+<div align="left">
+<ul>
+<li />Bring respondent to calibration area.
+<li />Complete the MET calibration.
+<li />On the next screen, hold the tablet up to the respondent for 3 seconds while it displays the respondent number.
+</ul>
+</div></html>
+</block>

@@ -1,0 +1,106 @@
+<block label="VFM" builder:title="VOLUME FORECAST MODULE">
+  <number 
+   label="Q_V1"
+   amount="10"
+   optional="0"
+   randomize="0"
+   size="3"
+   uses="autosum.5">
+    <title>Please tell me how you would distribute your purchases between the products in this range.<br /><br />For your next 10 purchases of this range of products, how many times would you buy each of these products?</title>
+    <comment>Allocate points to each product. Total must equal 10.</comment>
+    
+    
+  <row label="r1">Kraft Real Mayo - Squeeze Bottle - 22 fl oz</row>
+  <row label="r2">Kraft Real Mayo Olive Oil - Squeeze Bottle - 22 fl oz</row>
+  <row label="r3">Kraft Real Mayo - Squeeze Bottle - 12 fl oz</row>
+  <row label="r4">Kraft Real Mayo - Jar - 30 fl oz</row>
+  <row label="r5">Kraft Real Mayo Olive Oil - Jar - 30 fl oz</row>
+
+    
+    
+  </number>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_V1_Tie"
+   atleast="1"
+   where="execute,survey,report">
+    <title>Q_V1 Tie</title>
+    <exec>
+Q_Dist=[]
+for row in Q_V1.rows:
+                Q_Dist.append(row.ival)
+best=0
+best=max(Q_Dist)
+for row in Q_V1.rows:
+                if row.ival == max(Q_Dist):
+                                Q_V1_Tie.rows[row.index].val=1
+    </exec>
+
+  <row label="r1">Kraft Real Mayo - Squeeze Bottle - 22 fl oz</row>
+  <row label="r2">Kraft Real Mayo Olive Oil - Squeeze Bottle - 22 fl oz</row>
+  <row label="r3">Kraft Real Mayo - Squeeze Bottle - 12 fl oz</row>
+  <row label="r4">Kraft Real Mayo - Jar - 30 fl oz</row>
+  <row label="r5">Kraft Real Mayo Olive Oil - Jar - 30 fl oz</row>
+
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="Q_V2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   rowCond="Q_V1_Tie[row.index]"
+   uses="atm1d.9">
+    <title>And if you had to choose between these ${Q_V1_Tie.count} products, which one would you choose?</title>
+    
+  <row label="r1">Kraft Real Mayo - Squeeze Bottle - 22 fl oz</row>
+  <row label="r2">Kraft Real Mayo Olive Oil - Squeeze Bottle - 22 fl oz</row>
+  <row label="r3">Kraft Real Mayo - Squeeze Bottle - 12 fl oz</row>
+  <row label="r4">Kraft Real Mayo - Jar - 30 fl oz</row>
+  <row label="r5">Kraft Real Mayo Olive Oil - Jar - 30 fl oz</row>
+
+    
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_V3"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>And next time you buy <b>[pipe: Q_V2]</b>, how many packs would you say you would buy?</title>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+    <row label="r4">4</row>
+    <row label="r5">5</row>
+    <row label="r6">6</row>
+    <row label="r7">7+</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_V4"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   atm1d:large_maxHeight="200%"
+atm1d:large_maxWidth="200px"
+
+   randomize="0"
+   uses="atm1d.9">
+    <title>Assume for a moment that you are in your usual store and want to buy this <b>Kraft</b> product, but you cannot find it. Which other product would you buy instead?</title>
+    <row label="r1">SKU 1</row>
+    <row label="r2">SKU 2</row>
+    <row label="r3">SKU 3</row>
+    <row label="r4" open="1" openSize="25">Another <b>Kraft</b> product: which one?</row>
+    <row label="r5" open="1" openSize="25">Another product: which one?</row>
+    <row label="r6" exclusive="1">None of these products</row>
+  </radio>
+</block>

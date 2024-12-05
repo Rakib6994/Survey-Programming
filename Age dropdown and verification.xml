@@ -1,0 +1,138 @@
+<number 
+  label="Q2"
+  optional="0"
+  size="5"
+  ss:preText="Alter:"
+  verify="range(0,99)">
+  <title>Wie alt sind Sie?</title>
+  <noanswer label="r1">Weiß nicht / keine Angabe</noanswer>
+</number>
+
+<suspend/>
+
+
+<select 
+  label="Q23">
+  <title>In welchem Jahr sind Sie geboren?</title>
+
+  <noanswer label="k">Weiß ich nicht / keine Angabe</noanswer>
+  <choice label="ch1">1925</choice>
+  <choice label="ch2">1926</choice>
+  <choice label="ch3">1927</choice>
+  <choice label="ch4">1928</choice>
+  <choice label="ch5">1929</choice>
+  <choice label="ch6">1930</choice>
+  <choice label="ch7">1931</choice>
+  <choice label="ch8">1932</choice>
+  <choice label="ch9">1933</choice>
+  <choice label="ch10">1934</choice>
+  <choice label="ch11">1935</choice>
+  <choice label="ch12">1936</choice>
+  <choice label="ch13">1937</choice>
+  <choice label="ch14">1938</choice>
+  <choice label="ch15">1939</choice>
+  <choice label="ch16">1940</choice>
+  <choice label="ch17">1941</choice>
+  <choice label="ch18">1942</choice>
+  <choice label="ch19">1943</choice>
+  <choice label="ch20">1944</choice>
+  <choice label="ch21">1945</choice>
+  <choice label="ch22">1946</choice>
+  <choice label="ch23">1947</choice>
+  <choice label="ch24">1948</choice>
+  <choice label="ch25">1949</choice>
+  <choice label="ch26">1950</choice>
+  <choice label="ch27">1951</choice>
+  <choice label="ch28">1952</choice>
+  <choice label="ch29">1953</choice>
+  <choice label="ch30">1954</choice>
+  <choice label="ch31">1955</choice>
+  <choice label="ch32">1956</choice>
+  <choice label="ch33">1957</choice>
+  <choice label="ch34">1958</choice>
+  <choice label="ch35">1959</choice>
+  <choice label="ch36">1960</choice>
+  <choice label="ch37">1961</choice>
+  <choice label="ch38">1962</choice>
+  <choice label="ch39">1963</choice>
+  <choice label="ch40">1964</choice>
+  <choice label="ch41">1965</choice>
+  <choice label="ch42">1966</choice>
+  <choice label="ch43">1967</choice>
+  <choice label="ch44">1968</choice>
+  <choice label="ch45">1969</choice>
+  <choice label="ch46">1970</choice>
+  <choice label="ch47">1971</choice>
+  <choice label="ch48">1972</choice>
+  <choice label="ch49">1973</choice>
+  <choice label="ch50">1974</choice>
+  <choice label="ch51">1975</choice>
+  <choice label="ch52">1976</choice>
+  <choice label="ch53">1977</choice>
+  <choice label="ch54">1978</choice>
+  <choice label="ch55">1979</choice>
+  <choice label="ch56">1980</choice>
+  <choice label="ch57">1981</choice>
+  <choice label="ch58">1982</choice>
+  <choice label="ch59">1983</choice>
+  <choice label="ch60">1984</choice>
+  <choice label="ch61">1985</choice>
+  <choice label="ch62">1986</choice>
+  <choice label="ch63">1987</choice>
+  <choice label="ch64">1988</choice>
+  <choice label="ch65">1989</choice>
+  <choice label="ch66">1990</choice>
+  <choice label="ch67">1991</choice>
+  <choice label="ch68">1992</choice>
+  <choice label="ch69">1993</choice>
+  <choice label="ch70">1994</choice>
+  <choice label="ch71">1995</choice>
+  <choice label="ch72">1996</choice>
+  <choice label="ch73">1997</choice>
+  <choice label="ch74">1998</choice>
+  <choice label="ch75">1999</choice>
+  <choice label="ch76">2000</choice>
+  <choice label="ch77">2001</choice>
+  <choice label="ch78">2002</choice>
+  <choice label="ch79">2003</choice>
+  <choice label="ch80">2004</choice>
+  <choice label="ch81">2005</choice>
+  <choice label="ch82">2006</choice>
+  <choice label="ch83">2007</choice>
+  <choice label="ch84">2008</choice>
+  <choice label="ch85">2009</choice>
+  <choice label="ch86">2010</choice>
+  <choice label="ch87">2011</choice>
+  <choice label="ch88">2012</choice>
+  <choice label="ch89">2013</choice>
+  <choice label="ch90">2014</choice>
+  <choice label="ch91">2015</choice>
+  <choice label="ch92">2016</choice>
+  <choice label="ch93">2017</choice>
+  <choice label="ch94">2018</choice>
+  <choice label="ch95">2019</choice>
+  <choice label="ch96">2020</choice>
+  <choice label="ch97">2021</choice>
+  <choice label="ch98">2022</choice>
+  <choice label="ch99">2023</choice>
+  <choice label="ch100">2024</choice>
+</select>
+<suspend/>
+
+<checkbox
+  label="q24_check"
+  where="execute,survey,report">
+  <title>q24 checker!</title>
+<exec>
+if ((Q2.val == 69 and Q23.ch31) or (Q2.val == 68 and Q23.ch32) or (Q2.val == 67 and Q23.ch33) or (Q2.val == 66 and Q23.ch34) or (Q2.val == 65 and Q23.ch35) or (Q2.val == 64 and Q23.ch36) or (Q2.val == 63 and Q23.ch37) or (Q2.val == 62 and Q23.ch38) or (Q2.val == 61 and Q23.ch39) or (Q2.val == 60 and Q23.ch40) or (Q2.val == 59 and Q23.ch41) or (Q2.val == 58 and Q23.ch42) or (Q2.val == 57 and Q23.ch43) or (Q2.val == 56 and Q23.ch44) or (Q2.val == 55 and Q23.ch45) or (Q2.val == 54 and Q23.ch46) or (Q2.val == 53 and Q23.ch47) or (Q2.val == 52 and Q23.ch48) or (Q2.val == 51 and Q23.ch49) or (Q2.val == 50 and Q23.ch50) or (Q2.val == 49 and Q23.ch51) or (Q2.val == 48 and Q23.ch52) or (Q2.val == 47 and Q23.ch53) or (Q2.val == 46 and Q23.ch54) or (Q2.val == 45 and Q23.ch55) or (Q2.val == 44 and Q23.ch56) or (Q2.val == 43 and Q23.ch57) or (Q2.val == 42 and Q23.ch58) or (Q2.val == 41 and Q23.ch59) or (Q2.val == 40 and Q23.ch60) or (Q2.val == 39 and Q23.ch61) or (Q2.val == 38 and Q23.ch62) or (Q2.val == 37 and Q23.ch63) or (Q2.val == 36 and Q23.ch64) or (Q2.val == 35 and Q23.ch65) or (Q2.val == 34 and Q23.ch66) or (Q2.val == 33 and Q23.ch67) or (Q2.val == 32 and Q23.ch68) or (Q2.val == 31 and Q23.ch69) or (Q2.val == 30 and Q23.ch70) or (Q2.val == 29 and Q23.ch71) or (Q2.val == 28 and Q23.ch72) or (Q2.val == 27 and Q23.ch73) or (Q2.val == 26 and Q23.ch74) or (Q2.val == 25 and Q23.ch75) or (Q2.val == 24 and Q23.ch76) or (Q2.val == 23 and Q23.ch77) or (Q2.val == 22 and Q23.ch78) or (Q2.val == 21 and Q23.ch79) or (Q2.val == 20 and Q23.ch80) or (Q2.val == 19 and Q23.ch81) or (Q2.val == 18 and Q23.ch82)): q24_check.r1.val = 1
+if not(q24.k) and ((Q2.val == 69 and not(Q23.ch31)) or (Q2.val == 68 and not(Q23.ch32)) or (Q2.val == 67 and not(Q23.ch33)) or (Q2.val == 66 and not(Q23.ch34)) or (Q2.val == 65 and not(Q23.ch35)) or (Q2.val == 64 and not(Q23.ch36)) or (Q2.val == 63 and not(Q23.ch37)) or (Q2.val == 62 and not(Q23.ch38)) or (Q2.val == 61 and not(Q23.ch39)) or (Q2.val == 60 and not(Q23.ch40)) or (Q2.val == 59 and not(Q23.ch41)) or (Q2.val == 58 and not(Q23.ch42)) or (Q2.val == 57 and not(Q23.ch43)) or (Q2.val == 56 and not(Q23.ch44)) or (Q2.val == 55 and not(Q23.ch45)) or (Q2.val == 54 and not(Q23.ch46)) or (Q2.val == 53 and not(Q23.ch47)) or (Q2.val == 52 and not(Q23.ch48)) or (Q2.val == 51 and not(Q23.ch49)) or (Q2.val == 50 and not(Q23.ch50)) or (Q2.val == 49 and not(Q23.ch51)) or (Q2.val == 48 and not(Q23.ch52)) or (Q2.val == 47 and not(Q23.ch53)) or (Q2.val == 46 and not(Q23.ch54)) or (Q2.val == 45 and not(Q23.ch55)) or (Q2.val == 44 and not(Q23.ch56)) or (Q2.val == 43 and not(Q23.ch57)) or (Q2.val == 42 and not(Q23.ch58)) or (Q2.val == 41 and not(Q23.ch59)) or (Q2.val == 40 and not(Q23.ch60)) or (Q2.val == 39 and not(Q23.ch61)) or (Q2.val == 38 and not(Q23.ch62)) or (Q2.val == 37 and not(Q23.ch63)) or (Q2.val == 36 and not(Q23.ch64)) or (Q2.val == 35 and not(Q23.ch65)) or (Q2.val == 34 and not(Q23.ch66)) or (Q2.val == 33 and not(Q23.ch67)) or (Q2.val == 32 and not(Q23.ch68)) or (Q2.val == 31 and not(Q23.ch69)) or (Q2.val == 30 and not(Q23.ch70)) or (Q2.val == 29 and not(Q23.ch71)) or (Q2.val == 28 and not(Q23.ch72)) or (Q2.val == 27 and not(Q23.ch73)) or (Q2.val == 26 and not(Q23.ch74)) or (Q2.val == 25 and not(Q23.ch75)) or (Q2.val == 24 and not(Q23.ch76)) or (Q2.val == 23 and not(Q23.ch77)) or (Q2.val == 22 and not(Q23.ch78)) or (Q2.val == 21 and not(Q23.ch79)) or (Q2.val == 20 and not(Q23.ch80)) or (Q2.val == 19 and not(Q23.ch81)) or (Q2.val == 18 and not(Q23.ch82))): q24_check.r2.val = 1
+if q24.k: q24_check.r3.val = 1
+</exec>
+  <row label="r1">Selected correct year</row>
+  <row label="r2">Selected wrong year</row>
+  <row label="r3">Did not select any year</row>
+</checkbox>
+<suspend/>
+
+
+Q23_Check

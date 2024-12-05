@@ -97,30 +97,30 @@ Total_QuantityPurchased_Oreo.val =  sumOreo
   where="execute,survey,report">
   <title>Units purchased.</title>
   <virtual>
-if (Total_QuantityPurchased_Oreo.val lt 1):  Oreo_QuantityPurchased.Or0.val=1      
-if (Total_QuantityPurchased_Oreo.val==1):  Oreo_QuantityPurchased.Or1.val=1
-if (Total_QuantityPurchased_Oreo.val==2):  Oreo_QuantityPurchased.Or2.val=1
-if (Total_QuantityPurchased_Oreo.val==3):  Oreo_QuantityPurchased.Or3.val=1
-if (Total_QuantityPurchased_Oreo.val==4):  Oreo_QuantityPurchased.Or4.val=1
-if (Total_QuantityPurchased_Oreo.val==5):  Oreo_QuantityPurchased.Or5.val=1
-if (Total_QuantityPurchased_Oreo.val==6):  Oreo_QuantityPurchased.Or6.val=1
-if (Total_QuantityPurchased_Oreo.val==7):  Oreo_QuantityPurchased.Or7.val=1
-if (Total_QuantityPurchased_Oreo.val==8):  Oreo_QuantityPurchased.Or8.val=1
-if (Total_QuantityPurchased_Oreo.val==9):  Oreo_QuantityPurchased.Or9.val=1
-if (Total_QuantityPurchased_Oreo.val==10): Oreo_QuantityPurchased.Or10.val=1
+if (Total_QuantityPurchased_Oreo.val lt 1):  Oreo_QuantityPurchased.r0.val=1      
+if (Total_QuantityPurchased_Oreo.val==1):  Oreo_QuantityPurchased.r1.val=1
+if (Total_QuantityPurchased_Oreo.val==2):  Oreo_QuantityPurchased.r2.val=1
+if (Total_QuantityPurchased_Oreo.val==3):  Oreo_QuantityPurchased.r3.val=1
+if (Total_QuantityPurchased_Oreo.val==4):  Oreo_QuantityPurchased.r4.val=1
+if (Total_QuantityPurchased_Oreo.val==5):  Oreo_QuantityPurchased.r5.val=1
+if (Total_QuantityPurchased_Oreo.val==6):  Oreo_QuantityPurchased.r6.val=1
+if (Total_QuantityPurchased_Oreo.val==7):  Oreo_QuantityPurchased.r7.val=1
+if (Total_QuantityPurchased_Oreo.val==8):  Oreo_QuantityPurchased.r8.val=1
+if (Total_QuantityPurchased_Oreo.val==9):  Oreo_QuantityPurchased.r9.val=1
+if (Total_QuantityPurchased_Oreo.val==10): Oreo_QuantityPurchased.r10.val=1
   </virtual>
 
-  <row label="Or0">Oreo - 0 Unit</row>
-  <row label="Or1">Oreo - 1 Unit</row>
-  <row label="Or2">Oreo - 2 Units</row>
-  <row label="Or3">Oreo - 3 Units</row>
-  <row label="Or4">Oreo - 4 Units</row>
-  <row label="Or5">Oreo - 5 Units</row>
-  <row label="Or6">Oreo - 6 Units</row>
-  <row label="Or7">Oreo - 7 Units</row>
-  <row label="Or8">Oreo - 8 Units</row>
-  <row label="Or9">Oreo - 9 Units</row>
-  <row label="Or10">Oreo - 10 Units</row>
+  <row label="r0">Oreo - 0 Unit</row>
+  <row label="r1">Oreo - 1 Unit</row>
+  <row label="r2">Oreo - 2 Units</row>
+  <row label="r3">Oreo - 3 Units</row>
+  <row label="r4">Oreo - 4 Units</row>
+  <row label="r5">Oreo - 5 Units</row>
+  <row label="r6">Oreo - 6 Units</row>
+  <row label="r7">Oreo - 7 Units</row>
+  <row label="r8">Oreo - 8 Units</row>
+  <row label="r9">Oreo - 9 Units</row>
+  <row label="r10">Oreo - 10 Units</row>
 </checkbox>
 
 <suspend/>

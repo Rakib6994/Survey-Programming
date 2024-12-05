@@ -1,0 +1,3131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AH226 - Kleenex Occasion Enabling Hub PackFlash 360"
+  autoRecover="1"
+  autosaveKey="record"
+  browserDupes=""
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="147"
+  displayOnError="all"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent,digitalphase"
+  html:showNumber="0"
+  markerTimeout="3600"
+  mobile="compat"
+  mobileDevices="tablet,desktop"
+  name="Survey"
+  remerged="20240917_01:28"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="1"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_Formerly_PRS_-_Full_Logo.png"
+  ss:logoPosition="left"
+  ss:showBackButton="0"
+  state="testing"
+  theme="frozen:company/behaviorally-theme-2-1"
+  version="18">
+
+<res label="MapError">YOU CANNOT SELECT 'NONE' AND ALSO MAKE A SELECTION.</res>
+<res label="MapError2">YOU MUST MAKE A SELECTION OR SELECT 'NONE'.</res>
+<res label="ConfirmFindError">PLEASE BACK UP AND ENTER THE LETTER/NUMBER COMBINATION THAT YOU INTENDED TO ENTER.</res>
+<res label="StimuliError">THIS IS NOT THE CORRECT STIMULI. PLEASE SEE YOUR SUPERVISOR.</res>
+<res label="ShoppingError">YOU MUST SELECT AT LEAST ONE PRODUCT FOR PURCHASE</res>
+<res label="CheckError">PLEASE INFORM THE INTERVIEWER THE STIMULI IS NOT CORRECT FOR THIS VERSION.</res>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style>
+.invisible {
+    visibility: hidden;
+}
+#survey {
+ margin: 20px
+}
+.sq-atm1d-block{
+ text-align: center;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+ font-weight: bold;
+ text-transform: uppercase;
+}
+.comment-text{
+ text-align: center;
+}
+.instruction-text{
+ text-align: center;
+}
+.sq-atm1d-button-align-center {
+ text-align: center;
+}
+.sq-atm1d .sq-atm1d-buttons{
+ text-align: center;
+} 
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+  text-align: center;
+}
+.dropdown{
+  font-family:Verdana;
+}
+.element{
+  text-align: center;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+  $ (".clickable").addClass( "hvr-underline-from-center" )
+  $ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+  
+  if(!$ (".sq-cardsort-Q_PackAtt").length){
+    $ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+  }
+  
+  if($ (".p1").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");      
+      $ (".comment-text").css("color", "black");
+      $ (".comment-text").css("background-color","lightgrey");
+      $ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");
+      $ (".question").css("background-color","lightgrey");
+      $ (".question-text").css("color","black");
+      $ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+  if($ (".radio .sq-atm1d-button").length){
+      $ ("#btn_continue").hide();
+    } 
+  $ (document).on('click', '.radio .sq-atm1d-button', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmtable-btn', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-sliderpoints-container', function() {
+    $ ("#btn_continue").click();
+  })
+       
+/*Textbox*/
+  $ ('.element').css('text-align','center');
+  
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmrating-container', function() {
+    $ ("#btn_continue").click();
+  })
+*/
+
+/*Change Font*/
+  $ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+</script>
+]]></style>
+<suspend/>
+
+<exec when="init">
+db = Database("ids.dat")
+</exec>
+
+<html label="cm1" cond="db.has(str(record))" final="1" where="survey">This survey has already been completed.</html>
+
+<samplesources default="1">
+  <samplesource list="1">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="digitalphase"/>
+    <exit cond="terminated"><span style="color: #C6007E">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+  </samplesource>
+
+  <samplesource list="106">
+    <title>Paradigm</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ppsid" unique="1"/>
+    <exit cond="qualified" url="http://www.paradigmsample.com/portal/ltx/fwd.asp?sts=1&amp;ppsid=${ppsid}"/>
+    <exit cond="terminated" url="http://www.paradigmsample.com/portal/ltx/fwd.asp?sts=2&amp;ppsid=${ppsid}"/>
+    <exit cond="overquota" url="http://www.paradigmsample.com/portal/ltx/fwd.asp?sts=3&amp;ppsid=${ppsid}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<text 
+  label="IP_ID"
+  optional="0"
+  randomize="0"
+  size="80"
+  where="execute,survey,report">
+  <title>IP ID</title>
+  <exec>
+IP_ID.val = gv.request.getRemote()
+  </exec>
+
+</text>
+
+<suspend/>
+
+<block label="Logistics" builder:title="Logistics">
+  <goto cond="digitalphase" target="Shop_Intro"/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>AH226 - Kleenex Occasion Enabling Hub PackFlash 360</title>
+    <row label="r1" autofill="True">ah226</row>
+  </autofill>
+
+  <autofill label="Led" where="execute,survey,report">
+    <title><b>Set True or False based on Self Administered or Interviewer led. This drives text later. REMEMBER, no need to update text later as it should match exactly in word document.</b></title>
+    <row label="r1" autofill="True">Self-Administered</row>
+    <row label="r2" autofill="False">Interviewer Led</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+    <row label="r4">Wave 4</row>
+    <row label="r5">Wave 5</row>
+  </autofill>
+
+  <number 
+   label="Conf"
+   dataRef="Conf"
+   size="3"
+   where="execute,survey,report">
+    <title>Conf</title>
+    <exec>
+Conf.val = random.randrange(100,999)
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Recruit_Incentive"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><u>INTERVIEWER:</u> Indicate if the respondent is any of the following:</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Pre-recruit</row>
+    <row label="r2">Traditional Intercept</row>
+    <row label="r3">Raised Incentive Intercept</row>
+    <row label="r4">Raised Incentive MET</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="Location"
+   atm1d:large_buttonAlign="center"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="center"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Please select your location:</title>
+    <row label="AT" value="1">Atlanta</row>
+    <row label="LA" cond="0" value="2">Los Angeles</row>
+    <row label="ZZ999" value="9999"><span style="color:red;">Test</span></row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="LocationCode"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+	LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="ETControl" where="execute,survey,report">
+    <title>ETControl</title>
+    <row label="r1" autofill="True">With ET</row>
+    <row label="r2" autofill="False">Without ET</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Categoryfre" randomize="0" where="execute,survey,report">
+    <title>Category</title>
+    <row label="r1" autofill="True">Facial Tissue products</row>
+  </autofill>
+
+  <autofill label="Clutter1" randomize="0" where="execute,survey,report">
+    <title>Clutter Category 1</title>
+    <row label="r1" autofill="True">Chocolate</row>
+  </autofill>
+
+  <autofill label="Clutter2" randomize="0" where="execute,survey,report">
+    <title>Clutter Category 2</title>
+    <row label="r1" autofill="True">Hair Care products</row>
+  </autofill>
+
+  <autofill label="Months" randomize="0" where="execute,survey,report">
+    <title>Enter number of months here 1,3,6,12 for past purchased, BUMO</title>
+    <row label="r1" autofill="True"><strong>1,2,6,12 months</strong></row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Covid_Instruct1" cond="0" where="survey"><span style="color: #003366;"><strong><u>INSTRUCTIONS</u></strong></span>:<br /><br />
+<div align="left">
+<ul>
+<ul>
+<li />
+For the start of interview all interviewers must wear gloves and masks at all times.
+<li />
+Must have hand sanitizers available at each station for staff &amp;amp; respondents.
+<li />
+All respondents should be asked to wear gloves and a mask/facial covering. If the respondent does not have their own, please provide.
+<li />
+All hand cards &amp;amp; shopping cards should be in sheet protectors and wiped down after each respondent.
+<li />
+The use of any equipment (ET clicker &amp;amp; chair, tablets, keyboard, stylus, desks, etc.) must be sanitized before and/or after each respondent.
+<li />
+ET clicker can be covered in plastic and/or wiped down after each use.
+<li />
+Keep staff a safe distance of 6 ft. away from respondents at all times.
+<li />
+For Live Shelf &amp;amp; Printed Shelf displays, instruct respondent to point at products during the shopping exercise –</ul>
+</ul>
+<strong>NO TOUCHING OF THE PRODUCTS OR PRINTS.</strong>
+<ul>
+<ul>
+<li />
+For Digital Shelf displays, have respondents use stylus pen –</ul>
+</ul>
+<strong>NO TOUCHING OF THE SCREEN.</strong>
+<ul>
+<li />
+For ShopperLab Studies, have respondents apply a post-it to the products purchased and have them write the number of purchases on the post-it. Ensure that pens are cleaned before handling and discard all unused post-its that were handled by the respondent.</ul>
+</div></html>
+
+  <suspend/>
+
+  <html label="Intro_original" cond="False" where="survey">Good morning/afternoon/evening. I am ________ from Behaviorally, an international research organization. We are conducting research on various products and value your opinion. Could you spare some time to answer some questions?</html>
+
+  <html label="Intro_Recruit" cond="0" where="survey"><b>HELLO AND WELCOME TO OUR SURVEY!<br /><br />
+
+THANK YOU IN ADVANCE FOR YOUR PARTICIPATION.  THIS STUDY IS VERY IMPORTANT TO US AND WE ASK THAT YOU ANSWER EACH QUESTION CAREFULLY AND COMPLETELY.<br /><br />
+
+WHILE GOING THROUGH THE SURVEY, PLEASE USE THE SCROLL BAR ON THE RIGHT AND BOTTOM OF YOUR SCREEN TO MOVE UP AND DOWN THROUGH QUESTIONS AND IMAGES.  PLEASE REMEMBER THAT THERE ARE NO RIGHT OR WRONG ANSWERS.  WE ARE ONLY INTERESTED IN YOUR OPINIONS.<br /><br />
+
+THANK YOU AGAIN!  LET’S BEGIN…</b></html>
+
+  <suspend/>
+
+  <html label="Covid_Instruct2" where="survey"><span style="color: red"><strong>INSTRUCTIONS:</strong></span><br /><br />
+<div align="left">
+<ul>
+<li />Must have hand sanitizers available at each station for staff &amp; respondents
+<li />All hand cards &amp; shopping cards should be in sheet protectors and wiped down after each respondent.
+<li />The use of any equipment (Chair, tablets, keyboard, stylus, desks, etc.) must be sanitized before and/or after each respondent.
+</ul>
+</div></html>
+
+  <suspend/>
+</block>
+
+<html label="RecruitmentScript" where="survey">Hello, we are from a local market research firm looking to conduct a survey. We are interested in your opinions.<br /><br />
+If you qualify, we would like to ask you to participate in a survey at our facility.  We have taken all the measures necessary to sanitize our location.</html>
+
+<suspend/>
+
+<radio 
+  label="Q1R"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  uses="atm1d.9">
+  <title>Are you or any of your other household members currently experiencing any cold or flu-like symptoms (cough, runny nose, fever, etc.) or do you or any of your other household members have or had COVID-19 in the past month?</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<term label="TERM_Q1R" cond="(Q1R.r1)">Q1 Term</term>
+
+<suspend/>
+
+<radio 
+  label="Q2R"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  uses="atm1d.9">
+  <title>Have you recently been in close contact with anyone experiencing any cold or flu-like symptoms (cough, runny nose, fever, etc.) or anyone who has or had COVID-19 in the past month?
+</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<term label="TERM_Q2R" cond="(Q2R.r1)">Q1 Term</term>
+
+<suspend/>
+
+<block label="Screener" builder:title="Screener">
+  <suspend/>
+
+  <checkbox 
+   label="S_PastParticipation"
+   atleast="1"
+   atm1d:numCols="4"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title> Have you participated in a market research study within the past 2 weeks, on any of the following topics? </title>
+    <comment>Read list. Select all that apply.</comment>
+    <row label="r1">Chocolate products</row>
+    <row label="r2">Facial Tissue products</row>
+    <row label="r3">Hair Care products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_PastPar" cond="(S_PastParticipation.r2)">Past Participation</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you, or does anyone in your immediate family work for any of the following industries? </title>
+    <comment>Read List. Select all that apply.</comment>
+    <row label="r1">Market research or marketing</row>
+    <row label="r2">Advertising agency or public relations firms</row>
+    <row label="r3">A graphic design or packaging firm</row>
+    <row label="r4">A company involved in the manufacturing, distribution or sale of <b>Chocolate</b> products</row>
+    <row label="r5">A company involved in the manufacturing, distribution or sale of <b>Hair Care</b> products</row>
+    <row label="r6">A company involved in the manufacturing, distribution or sale of <b>Facial Tissue products</b></row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Industry" cond="(S_Industry.r1 or S_Industry.r2 or S_Industry.r3 or S_Industry.r6)">Sensitive Industry</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_GroceryShop"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How much of the household’s grocery shopping do you, yourself, do?</title>
+    <comment>Read List. Select one response.</comment>
+    <row label="r1">All of it</row>
+    <row label="r2">Half of it or more</row>
+    <row label="r3">Less than half of it</row>
+    <row label="r4">None of it</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_HHShopping" cond="(S_GroceryShop.r3 or S_GroceryShop.r4)">Household Grocery Shopping</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   shuffle="rows"
+   uses="atm1d.9">
+    <title>Which of the following best describes how you identify? </title>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3">Non-Binary</row>
+    <row label="r4">Gender Non-Conforming</row>
+    <row label="r5">Gender Fluid</row>
+    <row label="r6">Prefer to self-identify</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Gender" cond="0">Refused Gender</term>
+
+  <suspend/>
+
+  <text 
+   label="SelfIdentifyGender_OE"
+   cond="S_Gender.r6"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your identity below:</title>
+  </text>
+
+  <suspend/>
+
+  <radio 
+   label="S_Gender2"
+   cond="0"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Do you identify as transgender?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+    <row label="r3">I do not wish to disclose</row>
+  </radio>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="2"
+   ss:postText="years old"
+   verify="range(0,99)">
+    <title>Please type in your age below.</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('18-99'))">Age</term>
+
+  <suspend/>
+
+  <select 
+   label="STANDARD_ETHNICITY"
+   randomize="0">
+    <title>Which of the following best describes you?</title>
+    <choice label="eth1">Asian or Pacific Islander</choice>
+    <choice label="eth2">Black or African American, or Black British</choice>
+    <choice label="eth3">Hispanic or Latino</choice>
+    <choice label="eth4">Native American or Alaskan Native</choice>
+    <choice label="eth5">White or Caucasian</choice>
+    <choice label="eth6" randomize="0">Multiracial or Biracial</choice>
+    <choice label="eth7" randomize="0">Prefer to self-identify</choice>
+    <choice label="eth8" randomize="0">Prefer not to answer</choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERM_Ethnicity" cond="STANDARD_ETHNICITY.eth8">Refused Ethnicity</term>
+
+  <text 
+   label="SelfIdentifyEthnicity_OE"
+   cond="STANDARD_ETHNICITY.eth7"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your ethnicity below:</title>
+  </text>
+
+  <suspend/>
+
+  <checkbox 
+   label="STANDARD_ETHNICITY2"
+   cond="STANDARD_ETHNICITY.eth6"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please select all of the following that describe you.</title>
+    <row label="eth1">Asian or Pacific Islander</row>
+    <row label="eth2">Black or African American, or Black British</row>
+    <row label="eth3">Hispanic or Latino</row>
+    <row label="eth4">Native American or Alaskan Native</row>
+    <row label="eth5">White or Caucasian</row>
+    <row label="eth6">Prefer to self-identify</row>
+    <row label="eth7" exclusive="1">I prefer not to answer</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Ethnicity2" cond="STANDARD_ETHNICITY2.eth7">Refused Ethnicity 2</term>
+
+  <text 
+   label="SelfIdentifyEthnicity2_OE"
+   cond="STANDARD_ETHNICITY2.eth6"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your ethnicity below:</title>
+  </text>
+
+  <suspend/>
+
+  <select 
+   label="STANDARD_INCOME"
+   randomize="0">
+    <title>Please select the range that best represents your total annual household income.</title>
+    <choice label="ch1">Less than $15 000</choice>
+    <choice label="ch2">$15 000 to $19 999</choice>
+    <choice label="ch3">$20 000 to $24 999</choice>
+    <choice label="ch4">$25 000 to $29 999</choice>
+    <choice label="ch5">$30 000 to $34 999</choice>
+    <choice label="ch6">$35 000 to $39 999</choice>
+    <choice label="ch7">$40 000 to $44 999</choice>
+    <choice label="ch8">$45 000 to $49 999</choice>
+    <choice label="ch9">$50 000 to $59 999</choice>
+    <choice label="ch10">$60 000 to $74 999</choice>
+    <choice label="ch11">$75 000 to $84 999</choice>
+    <choice label="ch12">$85 000 to $99 999</choice>
+    <choice label="ch13">$100 000 to $124 999</choice>
+    <choice label="ch14">$125 000 to $149 999</choice>
+    <choice label="ch15">$150 000 to $174 999</choice>
+    <choice label="ch16">$175 000 to $199 999</choice>
+    <choice label="ch17">$200,000 or more</choice>
+    <choice label="ch18">Prefer not to answer</choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERmincome" cond="0">STANDARD_INCOME</term>
+
+  <radio 
+   label="S_Child"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Do you have any children under the age of 18 currently living in your home?</title>
+    <comment>Read List. Select one.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_ChildAge"
+   cond="S_Child.r1"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How old are the children currently living in your home?</title>
+    <comment>Read List. Select all that apply.</comment>
+    <row label="r1">Under 6 years old</row>
+    <row label="r2">6-12 years old</row>
+    <row label="r3">13-17 years old</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="Q1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>When was the last time you bought facial tissue?</title>
+    <comment>Read List. Select one.</comment>
+    <row label="r1">Within the past 1 year</row>
+    <row label="r2">More than 1 year ago but in the past 3 years</row>
+    <row label="r3">Greater than 3 years ago</row>
+    <row label="r4">I have never purchased</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Would you expect to purchase facial tissue in the future?</title>
+    <comment>Read List. Select one.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <select 
+   label="Q3">
+    <title>How often do you buy facial tissues per year?</title>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+    <choice label="ch4">4</choice>
+    <choice label="ch5">5</choice>
+    <choice label="ch6">6</choice>
+    <choice label="ch7">7</choice>
+    <choice label="ch8">8</choice>
+    <choice label="ch9">9</choice>
+    <choice label="ch10">10</choice>
+    <choice label="ch11">11</choice>
+    <choice label="ch12">12</choice>
+    <choice label="ch13">13</choice>
+    <choice label="ch14">14</choice>
+    <choice label="ch15">15</choice>
+    <choice label="ch16">16</choice>
+    <choice label="ch17">17</choice>
+    <choice label="ch18">18</choice>
+    <choice label="ch19">19</choice>
+    <choice label="ch20">20</choice>
+    <choice label="ch21">21</choice>
+    <choice label="ch22">22</choice>
+    <choice label="ch23">23</choice>
+    <choice label="ch24">24</choice>
+    <choice label="ch25">25+</choice>
+  </select>
+
+  <suspend/>
+
+  <radio 
+   label="Q4"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>What is the format you typically buy?</title>
+    <comment>Read List. Select one.</comment>
+    <row label="r1">Flat box</row>
+    <row label="r2">Cube (Upright) box</row>
+  </radio>
+
+  <suspend/>
+
+  <select 
+   label="Q5">
+    <title>How many cartons do you purchase at a time? (i.e. a bundle of 3 cartons would be 3)</title>
+    <choice label="ch1">1</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+    <choice label="ch4">4</choice>
+    <choice label="ch5">5</choice>
+    <choice label="ch6">6</choice>
+    <choice label="ch7">7</choice>
+    <choice label="ch8">8</choice>
+    <choice label="ch9">9</choice>
+    <choice label="ch10">10</choice>
+    <choice label="ch11">11</choice>
+    <choice label="ch12">12</choice>
+  </select>
+
+  <suspend/>
+
+  <block label="TSUM" builder:title="SEL point calculation">
+    <exec>
+Q1R1=0
+Q1R2=0
+Q1R3=0
+Q1R4=0
+
+if(Q1.r1):
+  Q1R1=1
+if(Q1.r2):
+  Q1R2=2
+if(Q1.r3):
+  Q1R3=3
+if(Q1.r4):
+  Q1R4=4
+
+  
+Total1=Q1R1+Q1R2+Q1R3+Q1R4
+
+print Total1
+
+
+
+
+Q2R1=0
+Q2R2=0
+
+
+if Q2.r1:
+  Q2R1=1
+if Q2.r2:
+  Q2R2=0
+
+
+print Q2R1
+print Q2R2
+
+Total2=Q2R1+Q2R2
+
+print Total2
+
+
+Q3R1=0
+Q3R2=0
+Q3R3=0
+Q3R4=0
+Q3R5=0
+Q3R6=0
+Q3R7=0
+Q3R8=0
+Q3R9=0
+Q3R10=0
+Q3R11=0
+Q3R12=0
+Q3R13=0
+Q3R14=0
+Q3R15=0
+Q3R16=0
+Q3R17=0
+Q3R18=0
+Q3R19=0
+Q3R20=0
+Q3R21=0
+Q3R22=0
+Q3R23=0
+Q3R24=0
+Q3R25=0
+
+if(Q3.ch1):
+  Q3R1=1
+if(Q3.ch2):
+  Q3R2=2
+if(Q3.ch3):
+  Q3R3=3
+if(Q3.ch4):
+  Q3R4=4
+if(Q3.ch5):
+  Q3R5=5
+if(Q3.ch6):
+  Q3R6=6
+if(Q3.ch7):
+  Q3R7=7
+if(Q3.ch8):
+  Q3R8=8
+if(Q3.ch9):
+  Q3R9=9 
+if(Q3.ch10):
+  Q3R10=10
+if(Q3.ch11):
+  Q3R11=11
+if(Q3.ch12):
+  Q3R12=12
+if(Q3.ch13):
+  Q3R13=13
+if(Q3.ch14):
+  Q3R14=14
+if(Q3.ch15):
+  Q3R15=15
+if(Q3.ch16):
+  Q3R16=16
+if(Q3.ch17):
+  Q3R17=17
+if(Q3.ch18):
+  Q3R18=18
+if(Q3.ch19):
+  Q3R19=19
+if(Q3.ch20):
+  Q3R20=20
+if(Q3.ch21):
+  Q3R21=21
+if(Q3.ch22):
+  Q3R22=22
+if(Q3.ch23):
+  Q3R23=23
+if(Q3.ch24):
+  Q3R24=24
+if(Q3.ch25):
+  Q3R25=25
+
+print Q3R1
+print Q3R2
+print Q3R3
+print Q3R4
+print Q3R5
+print Q3R6
+print Q3R7
+print Q3R8
+print Q3R9
+print Q3R10
+print Q3R11
+print Q3R12
+print Q3R13
+print Q3R14
+print Q3R15
+print Q3R16
+print Q3R17
+print Q3R18
+print Q3R19
+print Q3R20
+print Q3R21
+print Q3R22
+print Q3R23
+print Q3R24
+print Q3R25
+
+Total3=Q3R1+Q3R2+Q3R3+Q3R4+Q3R5+Q3R6+Q3R7+Q3R8+Q3R9+Q3R10+Q3R11+Q3R12+Q3R13+Q3R14+Q3R15+Q3R16+Q3R17+Q3R18+Q3R19+Q3R20+Q3R21+Q3R22+Q3R23+Q3R24+Q3R25
+
+print Total3
+
+
+
+Q4R1=0
+Q4R2=0
+
+
+
+
+if Q4.r1:
+  Q4R1=150
+if Q4.r2:
+  Q4R2=75
+
+print Q4R1
+print Q4R2
+
+Total4=Q4R1+Q4R2
+
+print Total4
+
+Q5R1=0
+Q5R2=0
+Q5R3=0
+Q5R4=0
+Q5R5=0
+Q5R6=0
+Q5R7=0
+Q5R8=0
+Q5R9=0
+Q5R10=0
+Q5R11=0
+Q5R12=0
+
+
+
+
+if(Q5.ch1):
+  Q5R1=1
+if(Q5.ch2):
+  Q5R2=2
+if(Q5.ch3):
+  Q5R3=3
+if(Q5.ch4):
+  Q5R4=4
+if(Q5.ch5):
+  Q5R5=5
+if(Q5.ch6):
+  Q5R6=6
+if(Q5.ch7):
+  Q5R7=7
+if(Q5.ch8):
+  Q5R8=8
+if(Q5.ch9):
+  Q5R9=9 
+if(Q5.ch10):
+  Q5R10=10
+if(Q5.ch11):
+  Q5R11=11
+if(Q5.ch12):
+  Q5R12=12
+
+print Q5R1
+print Q5R2
+print Q5R3
+print Q5R4
+print Q5R5
+print Q5R6
+print Q5R7
+print Q5R8
+print Q5R9
+print Q5R10
+print Q5R11
+print Q5R12
+
+Total5=Q5R1+Q5R2+Q5R3+Q5R4+Q5R5+Q5R6+Q5R7+Q5R8+Q5R9+Q5R10+Q5R11+Q5R12
+
+print Total5
+final=0
+
+if(Total1&gt;2 and Total2==1):
+  final=-1
+if(Total1&gt;2 and Total2==0):
+  final=-2
+if(Total1==2):
+  final=0
+if(Total1==1):
+  final=Total3*Total4*Total5
+
+
+
+
+
+if final==-2:
+  DV_BR_SEL.val = 0
+if final==-1:
+  DV_BR_SEL.val = 1
+if final==0:
+  DV_BR_SEL.val = 2
+if(final ge 1 and final le 1499):
+  DV_BR_SEL.val = 3
+if(final ge 1500 and final le 2999):
+  DV_BR_SEL.val = 4
+if final ge 3000:
+  DV_BR_SEL.val = 5
+    </exec>
+
+    <suspend/>
+
+    <radio 
+    label="DV_BR_SEL"
+    cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+    optional="1">
+      <title>Hidden question to capture SEL based on responses to Q1 – Q5. </title>
+      <comment><span style="color: #ca0b00;">This will be hidden after launch.</span></comment>
+      <row label="r1">Rejector</row>
+      <row label="r2">Non-Buyer Considering</row>
+      <row label="r3">Lapsed</row>
+      <row label="r4">Light</row>
+      <row label="r5">Medium</row>
+      <row label="r6">Heavy</row>
+    </radio>
+
+    <suspend/>
+
+    <term label="TERM_SEL" cond="DV_BR_SEL.r1 or DV_BR_SEL.r2">DV_BR_SEL term</term>
+  </block>
+
+  <radio 
+   label="S_Frequency"
+   cond="0"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>How often have you purchased products in each of the following categories?</title>
+    <row label="r1">[pipe: Clutter1]</row>
+    <row label="r2">[pipe: Clutter2]</row>
+    <row label="TB">[pipe: Categoryfre]</row>
+    <col label="c1">Once a week</col>
+    <col label="c2">Once every 2 weeks</col>
+    <col label="c3">Once a month</col>
+    <col label="c4">Once every 2 or 3 months</col>
+    <col label="c5">Once every 6 months</col>
+    <col label="c6">Once a year</col>
+    <col label="c7">Never</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      	})
+	</script>
+]]></style>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Freq" cond="S_Frequency.TB.c6 or S_Frequency.TB.c7">Category Frequency</term>
+
+  <suspend/>
+
+  <autofill label="FreqQual" cond="0" randomize="0" where="execute,survey,report">
+    <title>Frequency Qualifier</title>
+    <row label="r1" autofill="not(S_Frequency.r1.c6 or S_Frequency.r1.c7)">[pipe: Clutter1]</row>
+    <row label="r2" autofill="not(S_Frequency.r2.c6 or S_Frequency.r2.c7)">[pipe: Clutter2]</row>
+    <row label="r3" autofill="not(S_Frequency.TB.c6 or S_Frequency.TB.c7)">[pipe: Categoryfre]</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="v_FreqClutter1"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter1] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r1.c1:  data.val=0
+if S_Frequency.r1.c2:  data.val=1
+if S_Frequency.r1.c3:  data.val=2
+if S_Frequency.r1.c4:  data.val=3
+if S_Frequency.r1.c5:  data.val=4
+if S_Frequency.r1.c6:  data.val=5
+if S_Frequency.r1.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqClutter2"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter2] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r2.c1:  data.val=0
+if S_Frequency.r2.c2:  data.val=1
+if S_Frequency.r2.c3:  data.val=2
+if S_Frequency.r2.c4:  data.val=3
+if S_Frequency.r2.c5:  data.val=4
+if S_Frequency.r2.c6:  data.val=5
+if S_Frequency.r2.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqTest"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Categoryfre] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.TB.c1:  data.val=0
+if S_Frequency.TB.c2:  data.val=1
+if S_Frequency.TB.c3:  data.val=2
+if S_Frequency.TB.c4:  data.val=3
+if S_Frequency.TB.c5:  data.val=4
+if S_Frequency.TB.c6:  data.val=5
+if S_Frequency.TB.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <suspend/>
+
+  <block label="Category2" builder:title="TestCat">
+    <checkbox 
+    label="S_Brand_PastPurchased2"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>Which brand or brands of Facial Tissues have you purchased in the <u><b>past 6 months</b></u>?</title>
+      <comment>Read List. Select all that apply.</comment>
+      <row label="r1">Kleenex</row>
+      <row label="r2">Puffs</row>
+      <row label="r3">Great Value</row>
+      <row label="r4">Scotties</row>
+      <row label="r5">up&amp;up</row>
+      <row label="r6">Homeline</row>
+      <row label="r7">Kirkland Signature</row>
+      <row label="r8">Meijer</row>
+      <row label="r9">Signature Select</row>
+      <row label="r10">Walgreens</row>
+      <row label="r11">Store Brand</row>
+      <row label="r12">Other Brand</row>
+    </checkbox>
+
+    <suspend/>
+
+    <radio 
+    label="S_Brand_BUMO2"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Brand_PastPurchased2[row.index]"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>And which one brand of Facial Tissues have you purchased <u><b>most often</b></u> in the <u><b>past 6 months</b></u>?</title>
+      <comment>Read List. Please select one.</comment>
+      <row label="r1">Kleenex</row>
+      <row label="r2">Puffs</row>
+      <row label="r3">Great Value</row>
+      <row label="r4">Scotties</row>
+      <row label="r5">up&amp;up</row>
+      <row label="r6">Homeline</row>
+      <row label="r7">Kirkland Signature</row>
+      <row label="r8">Meijer</row>
+      <row label="r9">Signature Select</row>
+      <row label="r10">Walgreens</row>
+      <row label="r11">Store Brand</row>
+      <row label="r12">Other Brand</row>
+    </radio>
+
+    <suspend/>
+
+    <autofill label="S_Brand_PastPurchased" randomize="0" where="execute,survey,report">
+      <title>Usage Past Purchased (P3M, P6M, P12M) - User/Non User for Database</title>
+      <row label="TB" autofill="S_Brand_PastPurchased2.r1">TestBrand User - all test brands netted</row>
+      <row label="NonUser" autofill="S_Brand_PastPurchased.count==0">TestBrand NON User</row>
+    </autofill>
+
+    <autofill label="S_Brand_BUMO" randomize="0" where="execute,survey,report">
+      <title>BUMO - User/Non User for Database</title>
+      <row label="TB" autofill="S_Brand_BUMO2.r1">TestBrand User - all test brands netted</row>
+      <row label="NonUser" autofill="S_Brand_BUMO.count==0">TestBrand NON User</row>
+    </autofill>
+  </block>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Store"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please indicate where you purchase facial tissue products.</title>
+    <comment>Read List. Select all that apply.</comment>
+    <row label="r1">Walmart</row>
+    <row label="r2">Target</row>
+    <row label="r3">Kroger</row>
+    <row label="r4">Albertson's</row>
+    <row label="r5">CVS</row>
+    <row label="r6">Walgreens</row>
+    <row label="r7">Convenience Store</row>
+    <row label="r8">Wholesale/Club Store</row>
+    <row label="r9">Dollar Store</row>
+    <row label="r10" randomize="0">Online</row>
+    <row label="r11" randomize="0">Other Drug Store</row>
+    <row label="r12" randomize="0">Other Grocery Store</row>
+    <row label="r13" open="1" openSize="25" randomize="0">Other (Please Specify)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="Q_NonRejecter"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Would you be open to purchasing Facial tissues in the future?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_TestRejecter" cond="Q_NonRejecter.r2">Rejecter</term>
+
+  <suspend/>
+</block>
+
+<block label="MET" builder:title="MET Section">
+  <html label="Intro_MET" where="survey">During the interview you will be asked to wear a set of non-prescription eyeglasses. This is a new technology that we would like you to help us utilize. Is this OK?</html>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following do you ever wear in order to shop in a grocery store or supermarket whether to walk down the aisles or to read package information? </title>
+    <comment>Read list. Select one response.</comment>
+    <row label="r1">Only glasses</row>
+    <row label="r2">Only contact lenses</row>
+    <row label="r3">Either glasses or contact lenses</row>
+    <row label="r4">Neither glasses nor contact lenses</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>DO you have issues seeing objects from 4 feet away?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET3"
+   cond="S_MET1.r4 or S_MET2.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you have any eyesight problems such as current or reoccurring eye injuries, colorblindness, a glass eye, pink eye, astigmatism, or a strabismus of any kind such as crossed eyes or lazy eye? </title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET4"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you currently use a wheelchair, motorized scooter, walker, or any other type of walking assistance device to get around on while shopping?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET5"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Are you allergic to rubber? </title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="S_METQual" randomize="0" where="execute,survey,report">
+    <title>Qualified for MET:</title>
+    <row label="r1" autofill="not(S_MET1.r1 or S_MET2.r1 or S_MET3.r1 or S_MET4.r1 or S_MET5.r1)">YES</row>
+    <row label="r2" autofill="S_METQual.count==0">NO</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET6"
+   cond="0"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>ADD TO KEY IDENTIFIER SECTION. <b>Please indicate if respondent will complete the MET exercise:</b></title>
+    <validate>
+if S_MET6.r2:    error("ALL ATLANTA RESPONDENTS MUST QUALIFY FOR MET - ANSWER 1")
+    </validate>
+
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+</block>
+
+<autofill label="MET_Complete_Qual" cond="0" randomize="0" where="execute,survey,report">
+  <title>MET Complete Qual</title>
+  <row label="r1" autofill="S_MET6.r1">Yes</row>
+  <row label="r2" autofill="S_MET6.r2">No</row>
+  <row label="r3" autofill="MET_Complete_Qual.count == 0">None</row>
+</autofill>
+
+<suspend/>
+
+<block label="Quotas" builder:title="Quotas">
+  <autofill label="Gender" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r1" autofill="S_Gender.r1">Male</row>
+    <row label="r2" autofill="S_Gender.r2">Female</row>
+    <row label="r3" autofill="not(S_Gender.r1 or S_Gender.r2)">Other</row>
+  </autofill>
+
+  <autofill label="Age" randomize="0" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="(S_Age.check('18-44'))">18-44</row>
+    <row label="r2" autofill="(S_Age.check('45-99'))">45-99</row>
+  </autofill>
+
+  <autofill label="Usage" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P3M, P6M, P12M)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased2.r1">Kleenex</row>
+    <row label="r2" autofill="S_Brand_PastPurchased2.r2">Puffs</row>
+    <row label="r3" autofill="S_Brand_PastPurchased2.r3">Great Value</row>
+    <row label="r4" autofill="S_Brand_PastPurchased2.r4">Scotties</row>
+    <row label="r5" autofill="S_Brand_PastPurchased2.r5">up&amp;up</row>
+    <row label="r6" autofill="S_Brand_PastPurchased2.r6">Homeline</row>
+    <row label="r7" autofill="S_Brand_PastPurchased2.r7">Kirkland Signature</row>
+    <row label="r8" autofill="S_Brand_PastPurchased2.r8">Meijer</row>
+    <row label="r9" autofill="S_Brand_PastPurchased2.r9">Signature Select</row>
+    <row label="r10" autofill="S_Brand_PastPurchased2.r10">Walgreens</row>
+    <row label="r11" autofill="S_Brand_PastPurchased2.r11">Store Brand</row>
+    <row label="r12" autofill="S_Brand_PastPurchased2.r12">Other Brand</row>
+  </autofill>
+
+  <autofill label="BUMO" randomize="0" where="execute,survey,report">
+    <title>BUMO</title>
+    <row label="r1" autofill="S_Brand_BUMO2.r1">Kleenex</row>
+    <row label="r2" autofill="S_Brand_BUMO2.r2">Puffs</row>
+    <row label="r3" autofill="S_Brand_BUMO2.r3">Great Value</row>
+    <row label="r4" autofill="S_Brand_BUMO2.r4">Scotties</row>
+    <row label="r5" autofill="S_Brand_BUMO2.r5">up&amp;up</row>
+    <row label="r6" autofill="S_Brand_BUMO2.r6">Homeline</row>
+    <row label="r7" autofill="S_Brand_BUMO2.r7">Kirkland Signature</row>
+    <row label="r8" autofill="S_Brand_BUMO2.r8">Meijer</row>
+    <row label="r9" autofill="S_Brand_BUMO2.r9">Signature Select</row>
+    <row label="r10" autofill="S_Brand_BUMO2.r10">Walgreens</row>
+    <row label="r11" autofill="S_Brand_BUMO2.r11">Store Brand</row>
+    <row label="r12" autofill="S_Brand_BUMO2.r12">Other Brand</row>
+  </autofill>
+
+  <autofill label="UserPP" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (PastPurch)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased2.r1">Yes</row>
+    <row label="r2" autofill="UserPP.count==0">No</row>
+  </autofill>
+
+  <autofill label="UserBUMO" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (BUMO)</title>
+    <row label="r1" autofill="S_Brand_BUMO2.r1">Yes</row>
+    <row label="r2" autofill="UserBUMO.count==0">No</row>
+  </autofill>
+</block>
+
+<suspend/>
+
+<block label="KeyIdentifiers" builder:title="Key Identifiers">
+  <html label="Quotadisplay" cond="not(gv.isSST())"><b>HERE ARE THE QUOTAS THAT HAVE BEEN DETERMINED BY THE SCREENER:</b>
+<p></p><div align="left">
+<b>Gender:</b> [pipe: Gender]<br />
+<b>Age:</b> [pipe: Age]<br />
+<b>Usage P6M:</b> [pipe: Usage]<br />
+<b>BUMO:</b> [pipe: BUMO]<br />
+<b>Sample:</b> [pipe: DV_BR_SEL]</div>
+<br /><br /><br /><b>PLEASE CHOOSE THE FOLLOWING BASED ON YOUR QUOTA NEEDS:</b></html>
+
+  <radio 
+   label="Phase"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>Phase:</b></title>
+    <row label="r1">Phase 1</row>
+    <row label="r2">Phase 2</row>
+    <row label="r3">Phase 3</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Sample"
+   optional="1"
+   where="execute,survey,report">
+    <title><b>Sample:</b></title>
+    <exec>
+
+if DV_BR_SEL.r4: Sample.val = 0
+if DV_BR_SEL.r5 or DV_BR_SEL.r6: Sample.val = 1
+if DV_BR_SEL.r3: Sample.val = 2
+    </exec>
+
+    <row label="r1">Light Users</row>
+    <row label="r2">Medium/Heavy Users</row>
+    <row label="r3">Lapsed Users</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="PhaseXsample"
+   where="execute,survey,report">
+    <title>PhaseXsample</title>
+    <row label="r1" autofill="Phase.r1 and Sample.r1">Phase1 Lights Users</row>
+    <row label="r2" autofill="Phase.r2 and Sample.r1">Phase2 Lights Users</row>
+    <row label="r3" autofill="Phase.r3 and Sample.r1">Phase3 Lights Users</row>
+    <row label="r4" autofill="Phase.r1 and Sample.r2">Phase1 Medium Heavy Users</row>
+    <row label="r5" autofill="Phase.r2 and Sample.r2">Phase2 Medium Heavy Users</row>
+    <row label="r6" autofill="Phase.r3 and Sample.r2">Phase3 Medium Heavy Users</row>
+    <row label="r7" autofill="Phase.r1 and Sample.r3">Phase1 Lapsed Users</row>
+    <row label="r8" autofill="Phase.r2 and Sample.r3">Phase2 Lapsed Users</row>
+    <row label="r9" autofill="Phase.r3 and Sample.r3">Phase3 Lapsed Users</row>
+  </checkbox>
+
+  <suspend/>
+
+  <quota label="Quota" doit="1" overquota="noqual" sheet="Quota"/>
+
+  <suspend/>
+</block>
+
+<html label="VersionCheck" cond="not(gv.isSST())"><b>THE PHASE AND VERSION ASSIGNED TO THIS RESPONDENT ARE:</b>
+<p></p><div align="left">
+<b>Phase:</b> [pipe: Phase]<br />
+<b>Sample:</b> [pipe: Sample]</div>
+<br /><br /><br /></html>
+
+<suspend/>
+
+<number 
+  label="Resp"
+  size="6"
+  where="execute,survey,report">
+  <title>Respondent ID</title>
+  <exec>
+if Location.ZZ999:
+	IdNumber = int(record)
+else:
+	IdNumber = (Phase.val+1)*10000+int(record)
+
+Resp.val = IdNumber
+  </exec>
+
+</number>
+
+<suspend/>
+
+<block label="Variables" builder:title="Variables">
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Test Category</title>
+    <row label="r1" autofill="True"><strong>Facial Tissue products</strong></row>
+  </autofill>
+
+  <autofill label="Brand" randomize="0" where="execute,survey,report">
+    <title>Test Brand</title>
+    <row label="r1" autofill="Phase.r1"><strong>Twix</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>Milky Way</strong></row>
+  </autofill>
+
+  <autofill label="Price" randomize="0" where="execute,survey,report">
+    <title>Price</title>
+    <row label="r1" autofill="Phase.r1"><span style="font-size: 18pt;"><strong>$2.50</strong></span></row>
+    <row label="r2" autofill="Phase.r2 or Phase.r3"><span style="font-size: 18pt;"><strong>$6.58</strong></span></row>
+  </autofill>
+
+  <autofill label="PACK_Occasions" randomize="0" where="execute,survey,report">
+    <title>Pack Image for Q_OccasionsHub</title>
+    <row label="r1" autofill="Phase.r3"><img src="[rel AH226_PACK3.jpg]" title="" class="jloupeme" height="350" alt="" constrain="true" /></row>
+  </autofill>
+
+  <autofill label="PACK" randomize="0" where="execute,survey,report">
+    <title>Pack Image</title>
+    <row label="r1" autofill="Phase.r1"><img src="[rel AH226_PACK1.jpg]" title="" class="jloupeme" height="350" alt="" constrain="true" /></row>
+    <row label="r2" autofill="Phase.r2"><img src="[rel AH226_PACK2.jpg]" title="" class="jloupeme" height="350" alt="" constrain="true" /></row>
+    <row label="r3" autofill="Phase.r3"><img src="[rel AH226_PACK2.jpg]" title="" class="jloupeme" height="350" alt="" constrain="true" /></row>
+  </autofill>
+
+  <autofill label="Shelf" randomize="0" where="execute,survey,report">
+    <title>Shelf</title>
+    <row label="r1" autofill="Phase.r1"><strong>PHASE 1 = SHELF1</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>PHASE 2 = SHELF2</strong></row>
+    <row label="r3" autofill="Phase.r3"><strong>PHASE 3 = SHELF3</strong></row>
+  </autofill>
+
+  <autofill label="Finda" randomize="0" where="execute,survey,report">
+    <title>Findability Text</title>
+    <row label="r1" autofill="Phase.r1"><strong>Kleenex Ultra On the Go Facial Tissues Pocket Packs</strong></row>
+    <row label="r2" autofill="Phase.r2 or Phase.r3"><strong>Kleenex Snap &amp; Go</strong></row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="FindCard" randomize="0" where="execute,survey,report">
+    <title>Findability Text</title>
+    <row label="r1" autofill="True"><strong>F1</strong></row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<block label="AgreementBlock" builder:title="Agree">
+  <html label="HandTablet" where="survey"><b>INTERVIEWER:</b> At this point, hand the tablet over to the respondent. They <b>MUST</b> read the confidentiality agreement on the next screen and electronically sign, <u>themselves</u>, before being eligible to participate in the study.</html>
+
+  <suspend/>
+
+  <text 
+   label="Agreement"
+   optional="0"
+   randomize="0"
+   rowLegend="left"
+   size="25">
+    <title><p style="text-align: left;" class="-PRSBody"><span style="font-size: 14pt;"><strong><ol style="text-align: left;">Respondent Confidentiality Disclosure Agreement (RCDA)</ol></strong></span><br /> <ol style="text-align: left;">In exchange for receiving an incentive for participating in the Research (as defined below), which I hereby acknowledge, and understanding that I am otherwise under no other obligation to participate in this Research, I give my consent to Behaviorally, an independent market research company, and its affiliates and/or business partners to videotape, photograph, and/or record my participation in this consumer research and agree as follows:</ol></p>
+<ol style="text-align: left;">
+<li /><strong>Confidentiality: </strong>I agree to keep confidential and not disclose, copy, transmit, or use for any purpose other than your participation in this study any information or material disclosed or made available to you as part of the study, including about products or packaging that may be disclosed to you directly or indirectly by participating in this study. Any disclosure, copying, transmitting or misuse of any information or material in any form (including hard copy and/or electronic/data) whether intentional or unintentional may subject you to disqualification, and any other remedies available to Behaviorally or its study partners in law or equity.
+<li /><strong>Photo/Video Release &amp;amp; Use:</strong> I understand that as described above certain portions of the research may be audio and/or videotaped. Any recordings in which I appear and other information I provide (e.g., text, video, images or audio) (“Research Data”) may be used by Researcher for, trade presentations, product innovation, and internal training as determined by the Researcher, and I grant to Researcher and its affiliates permission to use that information in such ways.
+<li /><strong>Intellectual Property</strong>: I agree that the Research Data may or may not be used in whole or in part and I assign to Researcher and its affiliates all ideas, developments, discoveries, works of authorship, designs, software, and/or inventions, whether or not patentable, conceived by me as a result of my participation in the research, and understand that Researcher may use them in any manner it sees fit.
+<li /><strong>Data Privacy</strong>: I understand that my personal information, if any is collected, will be used for research purposes only or as otherwise described in this Informed Consent. Researcher is the controller of such data and will take all reasonable steps to ensure my personal data is protected. I will not be identified by name in any publication regarding the research. If I am a resident of the EU, I also have the right to access the personal data Researcher holds about me and, if such personal information is inaccurate or incomplete, to request the rectification, erasure or blocking of such personal data. I understand that I can exercise my data protection rights, which may include accessing, correcting, erasing, or holding processing of personal data, or withdrawing consent to use my personal data, by contacting info@behaviorally.com.
+<li /><strong>Contagious Disease</strong>: You agree that you will follow all appropriate protocols to ensure your safety. To that end, you agree to respect all the social distancing, face covering and other local and State safety, protective and reporting orders and rules in the areas and facility. You acknowledge that in consideration for Behaviorally's decision to permit you to engage in activities on behalf of the Company, you accept the inherent risk of exposure to communicable and contagious diseases such as COVID-19, and acknowledge anyone may carry and spread the virus whether symptomatic or not. By participating, you voluntarily assume the risk that you may be exposed to or infected by such virus or disease and release Behaviorally from all liability for any injury, illness, disability, death, damage, loss, or claim related to or arising out of the COVID-19 virus, provided that Behaviorally does not recklessly or knowingly expose you to the COVID-19 virus.
+<li /><strong>Limitation of Liability</strong>: RESEARCHER EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND AS TO ANY PRODUCTS OR EQUIPMENT USED IN THIS RESEARCH, EXCEPT WHERE PROHIBITED BY LAW. IN NO EVENT WILL RESEARCHER BE LIABLE TO ME FOR ANY DIRECT, INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL, DAMAGES, OR ANY DAMAGES WHATSOEVER, WHETHER IN AN ACTION UNDER CONTRACT, NEGLIGENCE, OR ANY OTHER THEORY, ARISING OUT OF OR IN CONNECTION WITH THE RESEARCH.
+</ol></title>
+    <comment><span style="font-size: 14pt;">I have read the above, and I have had the opportunity to ask questions about this study and those have been answered to my satisfaction. <strong>I voluntarily agree to be a participant and I consent to Researcher processing my personal information in accordance with this document. </strong>I have received a copy of this consent and understand I can withdraw from the study at any time.</span></comment>
+    <row label="r1">Electronic Signature (Full Name):</row>
+    <row label="r2">Person Obtaining Consent Signature:</row>
+  </text>
+
+  <text 
+   label="DateTime"
+   optional="0"
+   randomize="0"
+   size="25"
+   where="execute,survey,report">
+    <title>DateTime</title>
+    <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+    </exec>
+
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="RecruiterName"
+   cond="0"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title><strong>Recruiter:</strong> Please enter your name below.</title>
+  </text>
+
+  <suspend/>
+
+  <html label="STOP1" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" /><br /><br />Close out the screener on your tablet and bring the respondent to the next station.<br />&amp;nbsp;<br />Use the respondent number below to re-open this link on other devices.<br /><br /><strong>Respondent Number: [pipe: Resp]</strong><br /><br />If needed, tap <b><u><a href="http://emea.focusvision.com/survey/selfserve/1da7/[pipe: JobNumber]">here</a></u></b> to start a new blank screener for a new respondent.</html>
+
+  <suspend/>
+</block>
+
+<text 
+  label="Main_Interviewer"
+  cond="(Led.r2)"
+  optional="0"
+  randomize="0"
+  size="25">
+  <title><strong>Main Interviewer:</strong> Please enter your name below.</title>
+</text>
+
+<suspend/>
+
+<block label="OnlyScreenerAndRealEye1">
+  <block label="Respondent_Info" builder:title="Respondent Info">
+    <text 
+    label="Resp_Info"
+    cond="not(gv.isSST())"
+    optional="0"
+    randomize="0"
+    rowLegend="left"
+    size="25">
+      <title><b><span style="color: red;">INTERVIEWER:</span></b> BE SURE TO FILL IN THE RESPONDENTS CONTACT INFORMATION. THIS INFORMATION WILL BE NEEDED TO COMPLETE THE VALIDATION SHEET</title>
+      <row label="Name">Respondent Name:</row>
+      <row label="Address">Street Address:</row>
+      <row label="City">City:</row>
+      <row label="State" verify="len(2,2)">State:</row>
+      <row label="Zip" verify="zipcode">Zip:</row>
+      <row label="Email" verify="email">Email Address</row>
+      <row label="Phone" verify="phoneUS">Phone:</row>
+      <row label="Screener_Interviewer">Screening Interviewer's Name</row>
+    </text>
+
+    <suspend/>
+
+    <text 
+    label="Rescreen"
+    cond="not(gv.isSST())"
+    optional="0"
+    randomize="0"
+    size="3">
+      <title><b>PLEASE RESCREEN USING THE FOLLOWING INFORMATION. IF THIS INFORMATION IS <u>NOT</u> CORRECT PLEASE SEE YOUR SUPERVISOR <u>BEFORE</u> CONTINUING.<br /><br /></b>
+    <div align="left"><u>Resp ID</u>: [pipe: Resp]<br />
+    <u>Name</u>: ${Resp_Info.Name}<br />
+    <u>Phase</u>: [pipe: Phase]<br />
+    <u>Gender</u>: [pipe: Gender]<br />
+    <u>Age</u>: [pipe: Age]<br />
+    <u>Usage</u>: [pipe: Usage]<br />
+    <u>BUMO</u>: [pipe: BUMO]<br />
+    <u>Sample</u>: [pipe: Sample]<br />
+    <u>MET (ATL Only)</u>: [pipe: S_METQual]<br /><br /></div><br /><hr /><b><br /><br />
+    <u>Phone Number</u>: ${Resp_Info.Phone}<br /><br />
+    If you have tested the telephone number and successfully rescreened this respondent, please enter your initials:<br /></b>
+<p></p></title>
+      <row label="Recreening_Interviewer">Initials</row>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('.question-text').css('text-align','left');
+]]></style>
+    </text>
+  </block>
+
+  <suspend/>
+
+  <html label="STOP2" where="survey"><img src="[rel stop_sign.png]" constrain="true" title="" height="223" width="225" alt="" class="" /><br /><br />Now bring the respondent to the next station.<br />&amp;nbsp;Use the respondent number below to re-open this link on other devices.<br /><br /><strong>Respondent Number: [pipe: Resp]</strong><br /><br />If needed, tap <b><u><a href="http://emea.focusvision.com/survey/selfserve/1da7/[pipe: JobNumber]/Start.htm">here</a></u></b> to bring up a new respondent for rescreening.</html>
+
+  <suspend/>
+
+  <block label="ET" builder:title="Eye Tracking">
+    <html label="ET_CovidInstruct" cond="0" where="survey"><span style="color: red"></span></html>
+
+    <suspend/>
+
+    <html label="DisplayETInfo" cond="False" where="survey"><u>ET Information</u><br /><br />Your Respondent ID is: <span style="color:red"><strong>[pipe: Resp]</strong></span><br /><br />Your Sequence File name is: <span style="color:red"><strong>[pipe: JobNumber upper]Phase[pipe: Phase]</strong></span></html>
+
+    <suspend/>
+
+    <text 
+    label="ET_Info"
+    cond="0"
+    optional="0"
+    randomize="0"
+    rowLegend="left"
+    size="25">
+      <title><b><span style="color: rgb(255, 0, 0);">INTERVIEWER:</span> PLEASE ENTER THE FOLLOWING INFORMATION:</b></title>
+      <row label="r1">Behaviorally Eyetracking Interviewer Name</row>
+    </text>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <note>Only use this MET_Resp_Display block if there is MET</note>
+  <block label="MET_Resp_Display" cond="Location.AT" builder:title="displayResp">
+    <html label="METCal_IntNotes1" where="survey"><strong>MET CALIBRATION NOTES FOR INTERVIEWER:</strong><br /><br />
+  <div align="left"><ul>
+  <li />BRING RESPONDENT TO CALIBRATION AREA
+  <li />COMPLETE THE MET CALIBRATION
+  <li />ON THE NEXT SCREEN, HOLD THE TABLET UP TO THE RESPONDENT FOR 3 SEC. WHILE IT DISPLAYS THE RESPONDENT NUMBER</ul></div></html>
+
+    <suspend/>
+
+    <html label="RESPNO2" cond="(S_MET6.r1)" where="survey"><div style="color: red; font-size: 14pt;weight: bold;text-align:center"></div><br /><br /><br /><br /><br /><br /><br /><br />
+    <div style="color: red;font-size: 300px;weight: bold;text-align:center;height:300px" class="respnum">[pipe: Resp]</div><br /><br /><br /><br /></html>
+
+    <suspend/>
+  </block>
+
+  <text 
+   label="Shopping_Interviewer"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title><strong>Shopping Interviewer:</strong> Please enter your name below.</title>
+  </text>
+
+  <suspend/>
+
+  <pipe label="VShelfImage" capture="">
+    <case label="r1" cond="(Phase.r1) or (digitalphase == '1')">SHELF1</case>
+    <case label="r2" cond="(Phase.r2) or (digitalphase == '2')">SHELF2</case>
+    <case label="r3" cond="(Phase.r3) or (digitalphase == '3')">SHELF3</case>
+    <case label="r10" cond="1"/></pipe>
+  <pipe label="VShelfCoordinate" capture="">
+    <case label="r1" cond="(Phase.r1) or (digitalphase == '1')">coordinates_1</case>
+    <case label="r2" cond="(Phase.r2) or (digitalphase == '2')">coordinates_2</case>
+    <case label="r3" cond="(Phase.r3) or (digitalphase == '3')">coordinates_3</case>
+    <case label="r10" cond="1"/></pipe>
+  <block label="Shopping" cond="1" builder:title="Shopping">
+    <html label="Shopping_Instruction" cond="1" where="survey"><b><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" /><br /><br />
+<ul style="text-align: left;">
+<li />Keep a safe distance of 6 ft. away from respondents at all times 
+<li />For Live Shelf &amp; Printed Shelf displays, instruct respondent to point at products during the shopping exercise – NO TOUCHING OF THE PRODUCTS OR PRINTS
+<li />For Digital Shelf displays, have respondents use stylus pen – NO TOUCHING OF THE SCREEN
+<li />For ShopperLab Studies, have respondents apply a post-it to the products purchased and have them write the number of purchases on the post-it.  Ensure that pens are cleaned before handling and discard all unused post-its that were handled by the respondent.
+<li />Wipe down shopping card (in sheet protector) before respondent shops
+<li />Do not have the respondent use the shopping cart or shopping basket.</ul></b></html>
+
+    <suspend/>
+
+    <html label="Shop_Intro" where="survey"><span style="color: red;"><strong>INTERVIEWER:</strong></span> PREPARE TO SHOW SHELF/SHOPPING LIST ACCORDING TO PHASE AS INDICATED BELOW:<br /><br /><strong>[pipe: Shelf]</strong></html>
+
+    <suspend/>
+
+    <html label="ShopIntro"><strong><span style="color: red;">INTERVIEWER</span>: HAND RESPONDENT SHOPPING CARD <span style="color: red;"><span style="text-decoration: underline;">IN SHEET PROTECTOR</span></span>.</strong><br /><br />Please go shopping for <b>facial tissue products</b>, assuming you are on a typical shopping trip.<br /><br />When you see a product that you would like to purchase, please point to it and let me know how many you would like to purchase.<br /><br /><strong><span style="color: red;">INTERVIEWER NOTES</span></strong>: <strong>DO NOT READ UNLESS ASKED!</strong><br /><br />
+<div align="left">
+<ul>
+<li />Assume this is a single trip to the store, keeping your budget in mind
+<li />You can purchase as many or as few items as you would like
+<li />Assume this is a typical trip to the grocery store, not for a holiday or special occasion
+<li />Assume you have run out of these items at home
+</ul>
+</div></html>
+
+    <suspend/>
+
+    <checkbox 
+    label="P_PickUp_BackOfPack"
+    grouping="cols"
+    randomize="0">
+      <title><span style="color: #1f497d;">Enter shopping below:</span></title>
+      <validate>
+for row in P_PickUp_BackOfPack.rows:
+        if P_PickUp_BackOfPack.rows[row.index].c2 and not(P_PickUp_BackOfPack.rows[row.index].c1):   error("RESPONDENTS MUST PICK UP A PRODUCT IN ORDER TO LOOK AT THE BACK PANEL.")
+      </validate>
+
+      <row label="r1">PUFFS SOFT FACIAL TISSUE 4X124 FLAT</row>
+      <row label="r2">KLEENEX ULTRA SOFT</row>
+      <row label="r3">GREAT VALUE ULTRA FACIAL TISSUE 4X120 FLAT</row>
+      <row label="r4">PUFFS ULTRA MEGA CUBE 2 X 72</row>
+      <row label="r5">Puffs Ultra Soft Non-Lotion Facial Tissues, 4 Mega Cube Boxes, 72 tissues</row>
+      <row label="r6">Kleenex® Ultra Soft™ Upright 2 Pack Medium CT 60</row>
+      <row label="r7">KLEENEX ULTRA SOFT</row>
+      <row label="r8">KLNX RCH WHT WRP FCL TS 3 PLY 8PK 10 CT</row>
+      <row label="r9">GREAT VALUE ULTRA UPRIGHT 75 COUNT FACIAL TISSUE</row>
+      <row label="r10">GREAT VALUE LOTION 300 COUNT 4 PACK FACIAL TISSUE</row>
+      <row label="r11">GREAT VALUE EVERYDAY FLAT 160CT</row>
+      <row label="r12">PUFFS LOTION MEGA CUBE 2 X 72</row>
+      <row label="r13">Puffs Plus Mega Facial 4 Pk</row>
+      <row label="r14">KLEENEX SOOTHING LOTION</row>
+      <row label="r15">KLEENEX LOTION FACIAL TISSUE FLAT 2 PK 120</row>
+      <row label="r16">KLEENEX SOOTHING LOTION</row>
+      <row label="r17">GREAT VALUE MAINLINE FACIAL TISSUE 4X160 FLAT</row>
+      <row label="r18">PUFFS PLUS 2 CT FLAT</row>
+      <row label="r19">PUFFS PLUS FACIAL TISSUE 4X124 FLAT</row>
+      <row label="r20">KLEENEX LOTION FACIAL TISSUE FLAT 2 PK 120</row>
+      <col label="c1">3D Shelf Product Picked Up</col>
+      <col label="c2">Looked at Back of Pack</col>
+    </checkbox>
+
+    <number 
+    label="P_QuantityPurchased"
+    randomize="0"
+    rightOf="P_PickUp_BackOfPack"
+    size="3"
+    verify="range(1,99)">
+      <title><span style="color: #1f497d;">Enter shopping below:</span></title>
+      <comment>Please enter a number.</comment>
+      <validate>
+if P_QuantityPurchased.sum == 0:	error(res.ShoppingError)
+for row in P_QuantityPurchased.rows:
+        if P_QuantityPurchased.rows[row.index].c3.ival gt 0 and not(P_PickUp_BackOfPack.rows[row.index].c1):    error("RESPONDENT MUST PICK UP A PRODUCT IN ORDER TO PURCHASE IT")
+      </validate>
+
+      <row label="r1">PUFFS SOFT FACIAL TISSUE 4X124 FLAT</row>
+      <row label="r2">KLEENEX ULTRA SOFT</row>
+      <row label="r3">GREAT VALUE ULTRA FACIAL TISSUE 4X120 FLAT</row>
+      <row label="r4">PUFFS ULTRA MEGA CUBE 2 X 72</row>
+      <row label="r5">Puffs Ultra Soft Non-Lotion Facial Tissues, 4 Mega Cube Boxes, 72 tissues</row>
+      <row label="r6">Kleenex® Ultra Soft™ Upright 2 Pack Medium CT 60</row>
+      <row label="r7">KLEENEX ULTRA SOFT</row>
+      <row label="r8">KLNX RCH WHT WRP FCL TS 3 PLY 8PK 10 CT</row>
+      <row label="r9">GREAT VALUE ULTRA UPRIGHT 75 COUNT FACIAL TISSUE</row>
+      <row label="r10">GREAT VALUE LOTION 300 COUNT 4 PACK FACIAL TISSUE</row>
+      <row label="r11">GREAT VALUE EVERYDAY FLAT 160CT</row>
+      <row label="r12">PUFFS LOTION MEGA CUBE 2 X 72</row>
+      <row label="r13">Puffs Plus Mega Facial 4 Pk</row>
+      <row label="r14">KLEENEX SOOTHING LOTION</row>
+      <row label="r15">KLEENEX LOTION FACIAL TISSUE FLAT 2 PK 120</row>
+      <row label="r16">KLEENEX SOOTHING LOTION</row>
+      <row label="r17">GREAT VALUE MAINLINE FACIAL TISSUE 4X160 FLAT</row>
+      <row label="r18">PUFFS PLUS 2 CT FLAT</row>
+      <row label="r19">PUFFS PLUS FACIAL TISSUE 4X124 FLAT</row>
+      <row label="r20">KLEENEX LOTION FACIAL TISSUE FLAT 2 PK 120</row>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('.question-text').css('text-align','left');
+]]></style>
+      <col label="c3"># Purchased</col>
+    </number>
+
+    <suspend/>
+
+    <number 
+    label="O_PurchaseDuration"
+    optional="0"
+    randomize="0"
+    size="2">
+      <title><b>Enter shopping duration<br /></b></title>
+      <comment>Enter one digit in each box (including zeros).</comment>
+      <validate>
+if this.c1.ival+this.c2.ival+this.c3.ival+this.c4.ival+this.c5.ival==0:
+  error("SHOPPING TIME MUST BE GREATER THAN 0 SECONDS")
+      </validate>
+
+      <col label="c1" groups="g2" verify="range(0,9)">&amp;nbsp;</col>
+      <col label="c2" groups="g3" verify="range(0,5)">&amp;nbsp;</col>
+      <col label="c3" groups="g3" verify="range(0,9)">&amp;nbsp;</col>
+      <col label="c4" groups="g4" verify="range(0,9)">&amp;nbsp;</col>
+      <col label="c5" groups="g4" verify="range(0,9)">&amp;nbsp;</col>
+      <group label="g1" builder:axis="col" builder:default="1" where="none">no group</group>
+      <group label="g2" builder:axis="col">Minutes</group>
+      <group label="g3" builder:axis="col">Seconds</group>
+      <group label="g4" builder:axis="col">Hundredths</group>
+    </number>
+
+    <suspend/>
+
+    <block label="DoNotModifyTime" builder:title="Do Not Modify Time">
+      <float 
+     label="ShopTimeSeconds"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Shopping Time (Seconds)</title>
+        <exec>
+ShopTimeSeconds.val = O_PurchaseDuration.c1.ival*60 + O_PurchaseDuration.c2.ival*10.0 + O_PurchaseDuration.c3.ival*1.0 + O_PurchaseDuration.c4.ival/10.0 + O_PurchaseDuration.c5.ival/100.0
+        </exec>
+
+      </float>
+    </block>
+
+    <block label="DoNotModify" builder:title="Do Not Modify">
+      <checkbox 
+     label="P_PickUpTotal"
+     atleast="1"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Picked Up</title>
+        <exec>
+if P_QuantityPurchased.any:
+        for eachRow in P_PickUp_BackOfPack.rows:
+                if P_PickUp_BackOfPack.rows[eachRow.index].c1:
+                        P_PickUpTotal.rows[eachRow.index].val = 1
+                else:
+                        P_PickUpTotal.rows[eachRow.index].val = 0
+        </exec>
+
+      </checkbox>
+
+      <checkbox 
+     label="P_BackPanelTotal"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Back Panel</title>
+        <exec>
+if P_QuantityPurchased.any:
+        for eachRow in P_PickUp_BackOfPack.rows:
+                if P_PickUp_BackOfPack.rows[eachRow.index].c2:
+                        P_BackPanelTotal.rows[eachRow.index].val = 1
+                else:
+                        P_BackPanelTotal.rows[eachRow.index].val = 0
+        </exec>
+
+      </checkbox>
+
+      <checkbox 
+     label="P_Shopping"
+     atleast="1"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Products Bought</title>
+        <exec>
+if P_QuantityPurchased.any:
+	for eachRow in P_QuantityPurchased.rows:
+  		if eachRow.ival gt 0:
+			P_Shopping.rows[eachRow.index].val = 1 
+  		else:
+  			P_Shopping.rows[eachRow.index].val = 0
+        </exec>
+
+      </checkbox>
+
+      <number 
+     label="P_Total_Products"
+     optional="0"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Total Products Purchased</title>
+        <exec>
+P_Total_Products.val = sum([int(r.val) for r in P_QuantityPurchased.rows if r.val])
+        </exec>
+
+      </number>
+
+      <suspend/>
+
+      <autofill label="vProductsBought" where="execute,survey,report">
+        <title>TestBrand Purchased/Bought</title>
+        <row label="TB" autofill="P_Shopping.r2 or P_Shopping.r6 or P_Shopping.r7 or P_Shopping.r8 or P_Shopping.r14 or P_Shopping.r15 or P_Shopping.r16 or P_Shopping.r20">estBrand Purchased</row>
+        <row label="No" autofill="vProductsBought.count==0">TestBrand NOT Purchased</row>
+      </autofill>
+    </block>
+
+    <suspend/>
+
+    <block label="MET_Done" cond="Location.AT" builder:title="displayResp">
+      <html label="METCal_Done" where="survey"><strong>MET FINISHED NOTES FOR INTERVIEWER:</strong><br /><br />
+  <div align="left"><ul>
+  <li />WHEN RESPONDENT IS FINISHED, HIT THE "STOP" BUTTON TO STOP THE RECORDING PROCESS.
+  <li />THEN HIT "DONE" AND "SAVE" TO ENSURE ALL IS SAVED.
+  <li />REMOVE THE MET GLASSES.</ul></div></html>
+    </block>
+
+    <suspend/>
+
+    <html label="TURN_AWAY" where="survey"><strong><span style="color: red;">INTERVIEWER:</span> ONCE SHOPPING IS COMPLETE, PLEASE TURN RESPONDENT AWAY FROM SHELF.</strong></html>
+  </block>
+</block>
+
+<suspend/>
+
+<block label="Recall" builder:title="Recall">
+  <html label="Recall_TurnedAway1" where="survey"><strong><span style="color: red;">INTERVIEWER</span>: ENSURE RESPONDENT IS TURNED AWAY FROM SHELF UNTIL OTHERWISE INSTRUCTED.<br /><br /></strong></html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_EaseOfShop"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>How easy or difficult was it for you to find the product(s) you wanted to purchase during this shopping trip?</title>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Very easy to find</row>
+    <row label="r2" value="4">Somewhat easy to find</row>
+    <row label="r3" value="3">Neither easy nor difficult to find</row>
+    <row label="r4" value="2">Somewhat difficult to find</row>
+    <row label="r5" value="1">Very difficult to find</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_NewDiff"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>During your shopping trip, did you notice anything new or different?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <textarea 
+   label="Diff1"
+   cond="(Q_NewDiff.r1)"
+   height="10"
+   optional="0"
+   width="50">
+    <title>You mentioned that noticed something new or different. What was new or different to you? Do you like it? Why, why not?</title>
+    <comment>Please be as detailed and thorough as possible.</comment>
+  </textarea>
+
+  <suspend/>
+
+  <textarea 
+   label="Diff2"
+   height="10"
+   optional="0"
+   width="50">
+    <title>What are your thoughts on how the facial tissues are organized on the shelf? Do you like it? Why, why not?</title>
+    <comment>Please be as detailed and thorough as possible.</comment>
+  </textarea>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_PurchaseDriver_Kleenex"
+   cond="vProductsBought.TB"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   fir="off"
+   uses="atm1d.9">
+    <title><strong><span style="color: red;">INTERVIEWER</span>: <u>DO NOT READ</u> and capture what the respondents mention into what options.</strong><br /><br />Please select from the following statements the reason(s) you decided to purchase <b>Kleenex</b> products during this shopping trip.</title>
+    <row label="r1">The number of tissues in the package(s)</row>
+    <row label="r2">The number of tissue packages in the bundle</row>
+    <row label="r3">The price of the tissues</row>
+    <row label="r4">The type of tissue package that you need</row>
+    <row label="r5">The brand of the tissues</row>
+    <row label="r6">Comes in a packaging design I like</row>
+    <row label="r7">Comes in a format (box, travel, pocket, etc.) I like</row>
+    <row label="r8">Has the type of tissues I like (lotion, anti-viral, etc,)</row>
+    <row label="r9">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_PurchaseBarrier_Kleenex"
+   cond="vProductsBought.No"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   fir="off"
+   uses="atm1d.9">
+    <title><strong><span style="color: red;">INTERVIEWER</span>: <u>DO NOT READ</u> and capture what the respondents mention into what options.</strong><br /><br />Please select from the following statements the reason(s) you decided NOT to purchase <b>Kleenex</b> products during this shopping trip.</title>
+    <row label="r1">I prefer another tissue brand</row>
+    <row label="r2">I'm not familiar with this product/never tried</row>
+    <row label="r3">I didn't find the product I wanted</row>
+    <row label="r4">I didn't notice it on shelf</row>
+    <row label="r5">This is not the type of tissue product I like</row>
+    <row label="r6">The product is too expensive</row>
+    <row label="r7">The packaging does not come in a design I like</row>
+    <row label="r8">The number of tissues in the pack</row>
+    <row label="r9">Does not come in a format (box, travel, pocket, etc.) I like</row>
+    <row label="r10">Does not have the type of tissues I like (lotion, anti-viral, etc,)</row>
+    <row label="r11">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_OA_Aisle"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title><strong><span style="color: red;">INTERVIEWER</span>: <u>READ options</u></strong>.<br /><br />What is your overall opinion of the aisle you just shopped?</title>
+    <validate>
+if (Q_OA_Aisle.r2 and Q_OA_Aisle.r4):
+  error("Please do not select <b>It was organized in a way that was easy to navigate</b> and <b>It was organized in a way that was difficult to navigate</b> options at the same time")
+if (Q_OA_Aisle.r1 and Q_OA_Aisle.r3):
+  error("Please do not select <b>It was easy to understand where products were located</b> and <b>It was difficult to understand where products were located</b> options at the same time")
+    </validate>
+
+    <row label="r1">It was easy to understand where products were located</row>
+    <row label="r2">It was organized in a way that was easy to navigate</row>
+    <row label="r3">It was difficult to understand where products were located</row>
+    <row label="r4">It was organized in a way that was difficult to navigate</row>
+    <row label="r5">Other</row>
+  </checkbox>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<block label="FindabilitySection" cond="1" builder:title="Findability">
+  <suspend/>
+
+  <html label="Find_Intro" cond="0" where="survey">Now I am going to show you the display of <strong>facial tissue</strong> products again. This time, you will be looking for <span style="text-decoration: underline;">one particular item</span>.<br /><br />I am going to count down and then I would like you to turn around, walk up to the display, and <strong>find [pipe: Finda]</strong>.</html>
+
+  <html label="Findability_Instruction" cond="1" where="survey"><b><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" /><br /><br />
+<ul align="left">
+<li />Keep a safe distance of 6 ft. away from respondents at all times 
+<li />For Live Shelf &amp; Printed Shelf displays, instruct respondent to point at product – NO TOUCHING OF THE PRODUCT OR PRINT
+<li />For Digital Shelf displays, have respondents use stylus pen – NO TOUCHING OF THE SCREEN
+<li />For ShopperLab Studies, have respondents apply a post-it to the product. Discard all unused post-its that were handled by the respondent.
+<li />Wipe down hand card (in sheet protector) before handing to respondent.</ul></b></html>
+
+  <suspend/>
+
+  <html label="Finda_NoShelf" where="survey"><strong><span style="color: red;">INTERVIEWER</span>: DO NOT RE-SHOW THE SHELF UNTIL INSTRUCTIONS HAVE BEEN READ AND RESPONDENT IS READY TO BEGIN!</strong></html>
+
+  <suspend/>
+
+  <text 
+   label="FindTime"
+   randomize="0"
+   size="10">
+    <title><strong><span style="color: red;">INTERVIEWER</span>: HAND RESPONDENT CARD [pipe: FindCard] </strong>.<br /><br />
+<div align="left">Now I am going to show you the display of <strong>facial tissue</strong> products again. This time, you will be looking for <strong><span style="text-decoration: underline;">one particular item</span></strong>.<br /><br /> I am going to count down and then I would like you to turn around, walk up to the display, and find [pipe: Finda], as shown on the card.</div>
+<br /><br /><strong>IF RESPONDENT UNDERSTANDS CONTINUE WITH THE STEPS BELOW:</strong>
+<div align="left">
+<ul>
+<li /><strong><span style="color: red;">INTERVIEWER</span>:</strong> Ready? 3-2-1 GO
+<li />TAP "START" AS SHELF IS SHOWN
+<li />WHEN RESPONDENT FINDS THE SPECIFIC PRODUCT, TAP "STOP" AND CHECK WHICH PRODUCT THEY ARE POINTING TO
+</ul>
+</div></title>
+    <validate>
+if this.val == "":	error("You must use the stopwatch to record the time.")
+    </validate>
+
+    <style name="question.element"><![CDATA[
+<link rel='stylesheet' type='text/css' href='[rel Stop.css]'/>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+        <script type='text/javascript' src='[rel stop.js]'></script>
+        <script type='text/javascript' src='[rel StopWatch.js]'></script>
+      	<div class="watch"><img src="[rel Stopwatch.jpg]"/></div>
+		<div class="disp"><input type="text" name="$(name)" id="disp" value="$(value)" size="$(size)" class="text" readonly/></div>
+       	<div class="green" id="startbutton" onClick="ss()"><br/><strong>START</strong></div>
+]]></style>
+    <style name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="timer" value="$(value)"
+size="$(size)" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <radio 
+   label="F1"
+   adim="cols"
+   grouping="cols"
+   ss:listDisplay="0">
+    <title><strong><span style="color: red;">INTERVIEWER</span>: Please select the product which has been picked by the respondent in the findability exercise</strong>.</title>
+    <col label="c1"/>
+    <row label="r1">PUFFS SOFT FACIAL TISSUE 4X124 FLAT</row>
+    <row label="r2">KLEENEX ULTRA SOFT</row>
+    <row label="r3">GREAT VALUE ULTRA FACIAL TISSUE 4X120 FLAT</row>
+    <row label="r4">PUFFS ULTRA MEGA CUBE 2 X 72</row>
+    <row label="r5">Puffs Ultra Soft Non-Lotion Facial Tissues, 4 Mega Cube Boxes, 72 tissues</row>
+    <row label="r6">Kleenex® Ultra Soft™ Upright 2 Pack Medium CT 60</row>
+    <row label="r7">KLEENEX ULTRA SOFT</row>
+    <row label="r8">KLNX RCH WHT WRP FCL TS 3 PLY 8PK 10 CT</row>
+    <row label="r9">GREAT VALUE ULTRA UPRIGHT 75 COUNT FACIAL TISSUE</row>
+    <row label="r10">GREAT VALUE LOTION 300 COUNT 4 PACK FACIAL TISSUE</row>
+    <row label="r11">GREAT VALUE EVERYDAY FLAT 160CT</row>
+    <row label="r12">PUFFS LOTION MEGA CUBE 2 X 72</row>
+    <row label="r13">Puffs Plus Mega Facial 4 Pk</row>
+    <row label="r14">KLEENEX SOOTHING LOTION</row>
+    <row label="r15">KLEENEX LOTION FACIAL TISSUE FLAT 2 PK 120</row>
+    <row label="r16">KLEENEX SOOTHING LOTION</row>
+    <row label="r17">GREAT VALUE MAINLINE FACIAL TISSUE 4X160 FLAT</row>
+    <row label="r18">PUFFS PLUS 2 CT FLAT</row>
+    <row label="r19">PUFFS PLUS FACIAL TISSUE 4X124 FLAT</row>
+    <row label="r20">KLEENEX LOTION FACIAL TISSUE FLAT 2 PK 120</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="FindLetter"
+   cond="0"
+   optional="0"
+   randomize="0"
+   rowLegend="left"
+   size="2">
+    <title><strong>INTERVIEWER:</strong> ENTER THE LETTER AND NUMBER OF THE PRODUCT FOUND.</title>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(name)" value="$(value)" size="$(size)" class="input text" style="font-size:40px"/>
+]]></style>
+    <col label="Letter">Letter</col>
+  </text>
+
+  <text 
+   label="FindNumber"
+   cond="0"
+   keepWith="FindLetter"
+   optional="0"
+   randomize="0"
+   rightOf="FindLetter"
+   rowLegend="right"
+   size="2"
+   verify="digits">
+    <title><strong>INTERVIEWER:</strong> ENTER THE LETTER AND NUMBER OF THE PRODUCT FOUND.</title>
+    <validate>
+correct = 0
+ans = FindLetter.val.upper() + str(FindNumber.val)
+ans = FindLetter.val.lower() + str(FindNumber.val)
+for i, row in enumerate(P_Shopping.rows[::-1]):
+	if P_Shopping[row].text[:len(ans)] == ans and P_Shopping[row].text[len(ans)].isdigit()==False:
+		correct = 1
+if correct == 0 and False:	error("THIS LETTER/NUMBER COMBINATION DOES NOT EXIST")
+print(ans)
+    </validate>
+
+    <col label="Number">Number</col>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(name)" value="$(value)" size="$(size)" class="input text" style="font-size:40px"/>
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <block label="DoNotModify2" builder:title="Do Not Modify">
+    <float 
+    label="FindTimeSeconds"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Time in seconds</title>
+      <exec>
+if FindTime.val[-2:].isdigit() == True:
+             FindTimeSeconds.val=int(FindTime.val[0])*60+float(FindTime.val[2:])
+      </exec>
+
+    </float>
+
+    <radio 
+    label="FindProduct"
+    cond="0"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Product Found</title>
+      <exec>
+ans = FindLetter.val.upper() + str(FindNumber.val)
+for i, row in enumerate(FindProduct.rows[::-1]):
+	if FindProduct[row].text[:len(ans)] == ans and FindProduct[row].text[len(ans)].isdigit()==False:
+  		FindProduct.val = len(FindProduct.rows)-1-i
+      </exec>
+
+    </radio>
+
+    <radio 
+    label="vFindCorrect1"
+    randomize="0"
+    where="execute,survey,report">
+      <title><b>Correct Product Found?</b></title>
+      <exec>
+if F1.r2.c1: vFindCorrect1.val = 0
+else: vFindCorrect1.val = 1
+      </exec>
+
+      <row label="r1">Correct</row>
+      <row label="r2">Incorrect</row>
+    </radio>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <radio 
+   label="ConfirmFind"
+   cond="FindProduct.any"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>YOU HAVE ENTERED THAT THE RESPONDENT LOCATED<br /><strong><span style="font-size: 40px; color: red;">[pipe: Finda]</span></strong><br />IS THAT WHAT YOU INTENDED TO ENTER?</title>
+    <validate>
+if this.r2:  error(res.ConfirmFindError)
+    </validate>
+
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <html label="SelfAdmin" cond="1" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" />
+<p><b>This section is self-administered and must be completed by the respondent.</b></p></html>
+
+  <suspend/>
+
+  <radio 
+   label="EaseofFind"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How easy or difficult do you think it was to find this product?</title>
+    <comment>Select one response.</comment>
+    <row label="r1" value="5">Very easy to find</row>
+    <row label="r2" value="4">Somewhat easy to find</row>
+    <row label="r3" value="3">Neither easy nor difficult to find</row>
+    <row label="r4" value="2">Somewhat difficult to find</row>
+    <row label="r5" value="1">Very difficult to find</row>
+  </radio>
+
+  <suspend/>
+
+  <block label="DoNotModifyDataBase" builder:title="Do Not Modify - for DataBaseCollection">
+    <radio 
+    label="vEaseOfFind"
+    cond="vFindCorrect1.r1"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Ease of Find - filtered by correctly located - collapsed</title>
+      <exec>
+vEaseOfFind.val=EaseofFind.val
+      </exec>
+
+      <row label="r1" value="5">Very easy to find</row>
+      <row label="r2" value="4">Somewhat easy to find</row>
+      <row label="r3" value="3">Neither easy nor difficult to find</row>
+      <row label="r4" value="2">Somewhat difficult to find</row>
+      <row label="r5" value="1">Very difficult to find</row>
+    </radio>
+
+    <float 
+    label="vFindTimeSeconds"
+    cond="vFindCorrect1.r1"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Time in seconds - Filtered by Correctly located - collapsed</title>
+      <exec>
+if vFindCorrect1.r1:        
+	vFindTimeSeconds.val = FindTimeSeconds.ival
+      </exec>
+
+    </float>
+  </block>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<html label="Finda_RemoveShelf" where="survey"><strong><span style="color: red;">INTERVIEWER</span>: REMOVE SHELF FROM VIEW/ESCORT RESPONDENT TO THE NEXT STATION.</strong></html>
+
+<suspend/>
+
+<textarea 
+  label="EaseofFind_OE"
+  optional="0">
+  <title>What specifically made it [pipe: EaseofFind]?</title>
+  <comment>Please be as detailed and thorough as possible.</comment>
+</textarea>
+
+<suspend/>
+
+<checkbox 
+  label="Q_Layout"
+  atleast="1"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Looking at the facial tissues shelf, which of the following statements reflect your opinion of the layout?</title>
+  <comment>select all that apply.</comment>
+  <validate>
+if (Q_Layout.r1 and Q_Layout.r6): error("You can not select <b>I do not like the layout</b> and <b>I like the layout</b> at the same time, please check your answers.")
+if (Q_Layout.r8 and Q_Layout.r9): error("You can not select <b>Is informative</b> and <b>Is confusing</b> at the same time, please check your answers.")
+  </validate>
+
+  <row label="r1">I do not like the layout</row>
+  <row label="r2">Is well-organized</row>
+  <row label="r3">Has the products I need</row>
+  <row label="r4">Makes me aware of new products</row>
+  <row label="r5">Is easy to find the products I need</row>
+  <row label="r6">I like the layout</row>
+  <row label="r7">Has a good variety of items</row>
+  <row label="r8">Is informative</row>
+  <row label="r9">Is confusing</row>
+</checkbox>
+
+<suspend/>
+
+<radio 
+  label="Q_OccasionsHub"
+  cond="Phase.r3"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  uses="atm1d.9">
+  <title>Do you recall seeing the Kleenex Hub (as pictured above) when shopping the facial tissue shelf?<br /><br />[pipe: PACK_Occasions]</title>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<textarea 
+  label="Q_OccasionsHub_OE1"
+  cond="(Q_OccasionsHub.r1)"
+  height="10"
+  optional="0"
+  width="50">
+  <title>You mentioned that you noticed the Kleenex Hub (as pictured above) on the facial tissue shelf. What made the Kleenex Hub stand out to you? Do you like it? Why, why not?<br /><br />[pipe: PACK_Occasions]</title>
+  <comment>Please be as detailed and as thorough as possible.</comment>
+</textarea>
+
+<suspend/>
+
+<textarea 
+  label="Q_OccasionsHub_OE2"
+  cond="(Q_OccasionsHub.r2)"
+  height="10"
+  optional="0"
+  width="50">
+  <title>You mentioned that you did NOT notice the Kleenex Hub (as pictured above) on the facial tissue shelf. What factors or aspects led you to overlook or miss the Kleenex Hub? Do you like it? Why, why not?<br /><br />[pipe: PACK_Occasions]</title>
+  <comment>Please be as detailed and as thorough as possible.</comment>
+</textarea>
+
+<suspend/>
+
+<checkbox 
+  label="Q_PurchaseFactors"
+  atleast="1"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  uses="atm1d.9">
+  <title>The following question is regarding Kleenex on-the-go facial tissues and if there would be interest in purchasing 1-pack vs. 4-pack as there were only multi-packs available on our shelf.<br /><br />Which of the following factors, if any, would influence your decision to purchase a 1-pack instead of the 4-pack?</title>
+  <row label="r1">The price of the product</row>
+  <row label="r2">Comes in a pack count for me</row>
+  <row label="r3">Convenience</row>
+  <row label="r4">Trial Size</row>
+  <row label="r5">Less waste</row>
+  <row label="r6">Comes in designs I like</row>
+</checkbox>
+
+<suspend/>
+
+<block label="IAT" cond="Phase.r2 or Phase.r3" builder:title="Immediate Association Test">
+  <suspend/>
+
+  <html label="QNR_IAT_Text_Hidden" cond="False" where="survey">The Immediate Association Test Explained:<br /><br />
+In the immediate association test we want to find out whether the designs quickly and intuitively convey key attributes within a competitive context. For this, respondents are shown the test product and two key competitors. For each statement or attribute, respondents are given 6 seconds (maximum) to choose which product / brand best applies to the statement.</html>
+
+  <suspend/>
+
+  <note>PROGRAMMER NOTE: 0 is neutral, 00 is fair DO NOT need to be captured in the summary table - - 1 is unique and different from other brands is the FIRST data point captured here</note>
+  <checkbox 
+   label="vIM1B"
+   adim="cols"
+   atleast="1"
+   randomize="0">
+    <title>Test IAT Summary Table</title>
+    <virtual>
+ 
+if IM1B_1.c1:           vIM1B.r1.c1.val=1 
+if IM1B_1.c2:           vIM1B.r1.c2.val=1 
+if IM1B_1.c3:           vIM1B.r1.c3.val=1 
+
+
+
+if IM1B_2.c1:           vIM1B.r2.c1.val=1 
+if IM1B_2.c2:           vIM1B.r2.c2.val=1 
+if IM1B_2.c3:           vIM1B.r2.c3.val=1 
+
+
+
+if IM1B_3.c1:           vIM1B.r3.c1.val=1 
+if IM1B_3.c2:           vIM1B.r3.c2.val=1 
+if IM1B_3.c3:           vIM1B.r3.c3.val=1 
+
+
+
+if IM1B_4.c1:           vIM1B.r4.c1.val=1 
+if IM1B_4.c2:           vIM1B.r4.c2.val=1 
+if IM1B_4.c3:           vIM1B.r4.c3.val=1 
+
+
+
+if IM1B_5.c1:           vIM1B.r5.c1.val=1 
+if IM1B_5.c2:           vIM1B.r5.c2.val=1 
+if IM1B_5.c3:           vIM1B.r5.c3.val=1 
+
+
+
+if IM1B_6.c1:           vIM1B.r6.c1.val=1 
+if IM1B_6.c2:           vIM1B.r6.c2.val=1 
+if IM1B_6.c3:           vIM1B.r6.c3.val=1 
+
+
+
+if IM1B_7.c1:           vIM1B.r7.c1.val=1 
+if IM1B_7.c2:           vIM1B.r7.c2.val=1 
+if IM1B_7.c3:           vIM1B.r7.c3.val=1 
+
+
+
+if IM1B_8.c1:           vIM1B.r8.c1.val=1 
+if IM1B_8.c2:           vIM1B.r8.c2.val=1 
+if IM1B_8.c3:           vIM1B.r8.c3.val=1 
+
+
+
+if IM1B_9.c1:           vIM1B.r9.c1.val=1 
+if IM1B_9.c2:           vIM1B.r9.c2.val=1 
+if IM1B_9.c3:           vIM1B.r9.c3.val=1 
+
+
+
+if IM1B_10.c1:           vIM1B.r10.c1.val=1 
+if IM1B_10.c2:           vIM1B.r10.c2.val=1 
+if IM1B_10.c3:           vIM1B.r10.c3.val=1 
+
+
+
+if IM1B_11.c1:           vIM1B.r11.c1.val=1 
+if IM1B_11.c2:           vIM1B.r11.c2.val=1 
+if IM1B_11.c3:           vIM1B.r11.c3.val=1 
+
+
+if not(data.c1.any):     vIM1B.r99.c1.val=1 
+if not(data.c2.any):     vIM1B.r99.c2.val=1 
+if not(data.c3.any):     vIM1B.r99.c3.val=1
+    </virtual>
+
+    <row label="r1">Is unique and different from other brands</row>
+    <row label="r2">Is worth paying more for</row>
+    <row label="r3">Is a high-quality product</row>
+    <row label="r4">Is good for on-the-go</row>
+    <row label="r5">Contains tissues that leave my skin clean</row>
+    <row label="r6">Contains tissues that are soft/gentle on skin</row>
+    <row label="r7">Comes in design(s) I like</row>
+    <row label="r8">Come in durable packaging</row>
+    <row label="r9">Provides the right number of tissues</row>
+    <row label="r10">Is good for my car</row>
+    <row label="r11">Is good for my bad/backpack</row>
+    <row label="r99">Did not choose product for any statement</row>
+    <col label="c1">Protality Advanced</col>
+    <col label="c2">BOOST Max</col>
+    <col label="c3">Atkins Strong</col>
+  </checkbox>
+
+  <block label="TestRound" builder:title="Live Implicit Exercises">
+    <pipe label="Implicit_IMG_Comp1" capture="">
+      <case label="r1" cond="True"><img src="[rel AH226_COMP1.jpg]" constrain="true" height="250" title="" /></case>
+      <case label="r99" cond="1"/></pipe>
+    <pipe label="Implicit_IMG_Test" capture="">
+      <case label="r1" cond="Phase.r2 or Phase.r3"><img src="[rel AH226_PACK2.jpg]" constrain="true" title="" height="250" /></case>
+      <case label="r99" cond="1"/></pipe>
+    <pipe label="Implicit_IMG_Comp2" capture="">
+      <case label="r1" cond="True"><img src="[rel AH226_COMP2.jpg]" constrain="true" height="250" title="" /></case>
+      <case label="r99" cond="1"/></pipe>
+    <suspend/>
+
+    <html label="IM1" where="survey"><span style="font-size: 14pt;">You are now going to see another series of <u>statements</u> and <u>products</u> on your screen.<br />Please pay attention as it's going to be <u>very quick</u>.<br /><br />As soon as a statement appears you will have <u><b><span style="color: #c6007e;">5 seconds</span></b></u> to click on the product that best fits with the statement.<br /><br /><strong>Ready? Please continue. </strong></span></html>
+
+    <suspend/>
+
+    <loop label="L1a" randomizeChildren="1" vars="statement">
+      <title>New Loop</title>
+      <block label="b1a" builder:title="default loop block">
+        <radio 
+      label="IM1B_[loopvar: label]"
+      cardsort:animationDuration="0"
+      cardsort:bucketCSS="background: white;"
+      cardsort:bucketHoverCSS="background: F0F8FF;"
+      cardsort:bucketMaxWidth="550px"
+      cardsort:bucketSelectCSS="background: F0F8FF;"
+      cardsort:completionHTML=""
+      cardsort:displayCounter="0"
+      cardsort:displayProgress="0"
+      cardsort:dragAndDrop="0"
+      optional="1"
+      randomize="0"
+      shuffle="cols"
+      uses="cardsort.6">
+          <title>&amp;nbsp;</title>
+          <row label="r1"><strong><span style="font-size: 36pt;">[loopvar: statement]</span></strong></row>
+          <col label="c1">[pipe: Implicit_IMG_Comp1]</col>
+          <col label="c2">[pipe: Implicit_IMG_Test]</col>
+          <col label="c3">[pipe: Implicit_IMG_Comp2]</col>
+          <style name="question.after"><![CDATA[
+<style>
+#question_packAttTimesa_[loopvar: label]{
+	display:none;
+}
+</style>
+]]></style>
+          <style name="question.after" wrap="ready"><![CDATA[
+var nextButton = $ (".sq-cardsort-next");
+    var prevButton = $ (".sq-cardsort-previous");
+    nextButton.hide();
+    prevButton.hide();
+    nextFunction();
+    
+    nextButton.click(function(){
+      nextFunction();
+    });
+    
+    var timeOut;
+var qn = ${jsexport()}; //returns json object of the question
+var order = [qn.rows[0].index] //return order of question rows
+    
+    function setTimeOut() {
+    	clearTimeout(timeOut);
+        timeOut = setTimeout( function() {
+                        nextButton.click();
+    					order.shift();
+            			timeStart = $ .now();
+            			if (order.length==0) {
+            				$ ("#btn_continue").click();
+            			}
+                    }, 7000);
+    }
+    
+    function nextFunction(){
+    	setTimeOut()    	
+    }
+    
+console.log(qn)    	
+  
+  		timeStart = $ .now();
+        
+          $ (document).on('click','.sq-cardsort-bucket',function(){ 
+            
+            time = ($ .now()-timeStart)/1000;
+            
+            var ind = $ ('.sq-cardsort-card:visible').attr('index'); //return index of row shown
+            
+            console.log(ind)
+            console.log(order)
+            console.log(order.length)
+
+            index = order.shift();
+            
+            console.log("index:"+index);
+            console.log(time);
+            	
+            $ ('input[type=text]:eq('+index+')').val(time);
+            
+           
+            timeStart = $ .now();
+            
+        	setTimeout( function() {
+               $ ("#btn_continue").click();
+               }, 50);
+        });
+]]></style>
+        </radio>
+
+        <text 
+      label="packAttTimesa_[loopvar: label]"
+      cond="not(gv.isSST())"
+      randomize="0">
+          <title>Pack Attribute Times</title>
+          <row label="r1">[loopvar:statement]</row>
+        </text>
+
+        <suspend/>
+
+        <float 
+      label="packAttTimesnlivea_[loopvar: label]"
+      randomize="0"
+      where="execute,survey,report">
+          <title>Pack Attribute Times</title>
+          <exec>
+for row in packAttTimesa_[loopvar: label].rows:
+	packAttTimesnlivea_[loopvar: label].rows[row.index].val = float(packAttTimesa_[loopvar: label].rows[row.index].val or 0)
+          </exec>
+
+          <row label="r1">[loopvar:statement]</row>
+        </float>
+
+        <suspend/>
+
+        <note>Is Unique and different from other brands is a Plus standard statement and should always be in position 1</note>
+        <textarea 
+      label="IM2_[loopvar: label]"
+      cond="False"
+      height="5"
+      optional="0"
+      randomize="0"
+      width="60">
+          <title>What specifically about the [pipe: Brand] made you say it was "[loopvar:statement]" than the others?</title>
+        </textarea>
+
+        <suspend/>
+
+        <note>PROGRAMMER NOTE: 0 is neutral, 00 is fair, and 1 is unique and different from other brands need to remain in IAT for all studies and not edited.</note>      </block>
+
+      <looprow label="0" randomize="0">
+        <loopvar name="statement">Is neutral</loopvar>
+      </looprow>
+
+      <looprow label="00" randomize="0">
+        <loopvar name="statement">Is fair</loopvar>
+      </looprow>
+
+      <looprow label="1">
+        <loopvar name="statement">Is unique and different from other brands</loopvar>
+      </looprow>
+
+      <looprow label="2">
+        <loopvar name="statement">Is worth paying more for</loopvar>
+      </looprow>
+
+      <looprow label="3">
+        <loopvar name="statement">Is a high-quality product</loopvar>
+      </looprow>
+
+      <looprow label="4">
+        <loopvar name="statement">Is good for on-the-go</loopvar>
+      </looprow>
+
+      <looprow label="5">
+        <loopvar name="statement">Contains tissues that leave my skin clean</loopvar>
+      </looprow>
+
+      <looprow label="6">
+        <loopvar name="statement">Contains tissues that are soft/gentle on skin</loopvar>
+      </looprow>
+
+      <looprow label="7">
+        <loopvar name="statement">Comes in design(s) I like</loopvar>
+      </looprow>
+
+      <looprow label="8">
+        <loopvar name="statement">Come in durable packaging</loopvar>
+      </looprow>
+
+      <looprow label="9">
+        <loopvar name="statement">Provides the right number of tissues</loopvar>
+      </looprow>
+
+      <looprow label="10">
+        <loopvar name="statement">Is good for my car</loopvar>
+      </looprow>
+
+      <looprow label="11">
+        <loopvar name="statement">Is good for my bad/backpack</loopvar>
+      </looprow>
+    </loop>
+  </block>
+</block>
+
+<suspend/>
+
+<block label="Attitudinal" cond="1" builder:title="Attitudinal">
+  <block label="AttitudinalTest" cond="1" builder:title="TestBrand Attitudinal">
+    <html label="FOCUS" where="survey">For the next few questions, please focus your attention on the <b>Kleenex</b> packaging you see here.<br />[pipe: LINE]<br /></html>
+
+    <suspend/>
+
+    <checkbox 
+    label="Q_PackAtt"
+    atleast="1"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    shuffle="rows"
+    uses="atm1d.9">
+      <title>You will now <b>see some words and phrases</b> that could be used to describe the appearance of a product. Do you think the <b>Kleenex</b> packaging is… </title>
+      <comment>[pipe: PACK]</comment>
+      <row label="Prem">Premium</row>
+      <row label="Unique">Unique</row>
+      <row label="Modern">Modern</row>
+      <row label="Und">Easy to understand</row>
+      <row label="Inform">Informative</row>
+      <row label="Clutter">Cluttered</row>
+      <row label="Confuse">Confusing</row>
+      <row label="Out">Outdated</row>
+      <row label="r1">Colorful</row>
+      <row label="r2">Convenient</row>
+      <row label="r3">Appealing</row>
+      <row label="r4">High-quality</row>
+      <row label="r5">Easy to use on-the-go</row>
+      <row label="None" exclusive="1" randomize="0">None of the above</row>
+    </checkbox>
+
+    <suspend/>
+
+    <exec where="execute,survey,report">
+p.startTime = timeSpent()
+    </exec>
+
+    <suspend/>
+
+    <radio 
+    label="Q_Communication"
+    cardrating:navigation="0"
+    cardrating:progress="0"
+    randomize="0"
+    shuffle="rows"
+    uses="cardrating.1">
+      <title>[pipe: PACK]</title>
+      <comment>Based on what you see here, how much do you agree or disagree that the following phrases apply to this <b>Kleenex</b> product?</comment>
+      <row label="Quality">Is a high-quality product</row>
+      <row label="LikeMe">Is for someone like me</row>
+      <row label="Trust">Is made by a brand I can trust</row>
+      <row label="Better">Is better than other brands</row>
+      <row label="r1">Contains tissues that are soft/gentle on skin</row>
+      <row label="PayMore">Is worth paying more for</row>
+      <row label="r2">Good to use on-the-go</row>
+      <row label="r3">Comes in packaging that would be durable</row>
+      <row label="r4">Come in packaging that would protect tissues</row>
+      <row label="r5">Has the number of tissues per pack I prefer</row>
+      <col label="c1" value="5">Agree Strongly</col>
+      <col label="c2" value="4">Agree Somewhat</col>
+      <col label="c3" value="3">Neither Agree Nor Disagree</col>
+      <col label="c4" value="2">Disagree Somewhat</col>
+      <col label="c5" value="1">Disagree Strongly</col>
+      <style name="question.after"><![CDATA[
+<script>
+$ ('.sq-cardrating-card').css('font-size','18pt');
+$ ('.instruction-text').css('font-size','18pt');
+$ ('.instruction-text').css('font-weight','bold');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1
+	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      		
+      	})
+
+	</script>
+]]></style>
+    </radio>
+
+    <suspend/>
+
+    <exec where="execute,survey,report">
+p.endTime = timeSpent()
+    </exec>
+
+    <suspend/>
+
+    <float 
+    label="CommunicationTime"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>CommunicationTime</title>
+      <comment>Time it took for Communicatino</comment>
+      <exec>
+CommunicationTime.val = p.endTime - p.startTime
+      </exec>
+
+    </float>
+
+    <suspend/>
+
+    <radio 
+    label="Straightliner"
+    randomize="0"
+    where="execute,survey,report">
+      <title>DO NOT REMOVE OR MODIFY - Straightliner Punch</title>
+      <exec>
+if not(gv.isSST()) and p.endTime - p.startTime le 10 and (Q_Communication.c1.all or Q_Communication.c2.all or Q_Communication.c3.all or Q_Communication.c4.all or Q_Communication.c5.all):
+	Straightliner.val = 0
+else:
+	Straightliner.val = 1
+      </exec>
+
+      <row label="r1">Straightliner</row>
+      <row label="r2">Non-Straightliner</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="Q_PI"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How likely would you be to buy this <b>Kleenex</b> product, if it was available at a price of [pipe: Price]?</title>
+      <comment>[pipe: PACK]</comment>
+      <row label="r1" value="5">Definitely would buy</row>
+      <row label="r2" value="4">Probably would buy</row>
+      <row label="r3" value="3">Might or might not buy</row>
+      <row label="r4" value="2">Probably would not buy</row>
+      <row label="r5" value="1">Definitely would not buy</row>
+    </radio>
+
+    <suspend/>
+
+    <html label="ATT_TEST_COMPLETE" cond="Led.r1" where="survey"><img src="[rel stop_sign.png]" title="" class="" height="223" width="225" alt="stop_sign.png" constrain="true" /><p><b>Please inform the interviewer that you have completed this section.</b></p></html>
+
+    <suspend/>
+
+    <html label="REMOVE" where="survey"><b><span style="color: rgb(255, 0, 0);">INTERVIEWER:</span> REMOVE STIMULI FROM VIEW!</b></html>
+
+    <suspend/>
+  </block>
+</block>
+
+<block label="Classification" builder:title="Classification Section">
+  <html label="Class_Intro" where="survey"><b>Now just a few questions for classification purposes...</b></html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_TisseFormat"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Which of the following Facial Tissue formats do you typically purchase?</title>
+    <row label="r1">Travel size / On-the-go facial tissues</row>
+    <row label="r2">Tabletop / Facial tissue boxes</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_OnTheGo"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Do you take facial tissues with you on the go?</title>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_OnTheGoType"
+   cond="Q_OnTheGo.r1"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Which of the following format(s) of facial tissues do you typically take with you on-the-go?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Cube (upright) box</row>
+    <row label="r2">Rectangular box</row>
+    <row label="r3">Cylindrical container</row>
+    <row label="r4">Travel/on-the-go pack</row>
+    <row label="r5">Loose individual tissues</row>
+    <row label="r6">Tissues that in a plastic bag/small container</row>
+    <row label="r7" open="1" openSize="25" randomize="0">Other (please specify)</row>
+  </checkbox>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<html label="THANKYOU1" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="stop_sign.png" constrain="true" class="" /><p><b>Thank you for your participation in completing this survey. <br /><br />Please inform the interviewer that you have finished.</b></p></html>
+
+<suspend/>
+
+<html label="THANKYOU2" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="stop_sign.png" class="" />
+<p><strong>THANK RESPONDENT FOR THEIR TIME AND COOPERATION.<br /><br />NOTE TO INTERVIEWER: Click the "Continue" button.</strong></p></html>
+
+<suspend/>
+
+<html label="Final" cond="not(gv.isSST())" where="survey"><strong><strong>PLEASE VERIFY THE FOLLOWING INFORMATION IS CORRECT. IF THIS INFORMATION IS <u>NOT</u> CORRECT PLEASE SEE YOUR SUPERVISOR <u>BEFORE</u> CLICKING "CONTINUE".<br /><br /></strong></strong>
+<div align="left">
+<u>Resp ID</u>: [pipe: Resp]<br /> 
+<u>Name</u>: ${Resp_Info.Name}<br /> 
+<u>Phase</u>: [pipe: Phase]<br /> 
+<u>Gender</u>: [pipe: Gender]<br /> 
+<u>Age</u>: [pipe: Age]<br /> 
+<u>Usage</u>: [pipe: Usage]<br /> 
+<u>BUMO</u>: [pipe: BUMO]<br />
+<u>Sample</u>: [pipe: Sample]<br /> 
+<u>MET (ATL Only)</u>: [pipe: MET_Complete_Qual]<br /><br /></div></html>
+
+<suspend/>
+
+<term label="TERM_Test" cond="Location.ZZ999">Test Interview</term>
+
+<suspend/>
+
+<exec>
+db.add(str(record))
+</exec>
+</survey>
