@@ -1,0 +1,20 @@
+<style label="disable_continue" arg:timeout="10" mode="after" name="respview.client.js" with="S_PastParticipation" wrap="ready"><![CDATA[
+var $submitButton = $ ("#btn_continue, #btn_finish");
+ var targetDateTime = "2024-11-29T15:30:00";
+ var targetDate = new Date(targetDateTime);
+ var currentDate = new Date();
+ var remainingMilliseconds = targetDate - currentDate;
+ 
+ if (remainingMilliseconds > 0) {
+  let hours = Math.floor(remainingMilliseconds/(1000 * 60 * 60));
+  let minutes = Math.round((remainingMilliseconds - hours) * 60);
+  console.log("Remaining time: " + hours + " hours");
+    $submitButton.prop("disabled", true);
+
+    setTimeout(function () {
+      $submitButton.prop("disabled", false);
+    }, remainingMilliseconds);} 
+ else {
+    console.log("The target date-time has already passed.");
+  }
+]]></style>
