@@ -1,0 +1,69 @@
+ <number 
+   label="S_ChildAge"
+   optional="0"
+   size="3"
+   ss:listDisplay="0">
+    <title>What are the ages of all the children currently living in your home?</title>
+    <comment>Please enter a whole number</comment>
+    <validate>
+if ((S_ChildAge.r1.val lt 1) and (S_ChildAge.r2.val lt 1) and (S_ChildAge.r3.val lt 1) and (S_ChildAge.r4.val lt 1) and (S_ChildAge.r5.val lt 1) and (S_ChildAge.r6.val lt 1)):
+  error(res.AgeInHH18_Err)
+    </validate>
+
+    <row label="r1" optional="1">0-11 months</row>
+    <row label="r2" optional="1">1-2 years</row>
+    <row label="r3" optional="1">3-7 years</row>
+    <row label="r4" optional="1">8-11 years</row>
+    <row label="r5" optional="1">12-14 years</row>
+    <row label="r6" optional="1">15-18 years</row>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_ChildAge" cond="not((S_ChildAge.r3.val ge 1) or (S_ChildAge.r4.val ge 1))">Child Age Term</term>
+
+  <suspend/>
+  
+<exec>
+p.x = S_ChildAge.r3.val
+p.y = S_ChildAge.r4.val
+
+p.total = p.x + p.y
+
+Calc_ChildAge.val = p.total
+</exec>
+
+<number
+  label="Calc_ChildAge"
+  size="3"
+  optional="0"
+  where="execute,survey,report">
+  <title>Ages 3-11.</title>
+</number>
+<suspend/>  
+  
+
+  <number 
+   label="S_ChildGender"
+   optional="0"
+   size="3"
+   ss:listDisplay="0">
+    <title>Please indicate how many children ages 3-11 years you have that belong to the following genders.</title>
+    <comment>Please enter a whole number</comment>
+    <validate>
+p.m = S_ChildGender.r1.val
+p.f = S_ChildGender.r2.val
+
+p.sum = p.m + p.f
+
+if (Calc_ChildAge.val lt p.sum): error("You have entered more children aged 3-11 than the number of children aged 3-11 currently living in your home. Please check your answers!") 
+   
+if ((S_ChildGender.r1.val lt 1) and (S_ChildGender.r2.val lt 1)): error(res.AgeGen_Err)
+
+    </validate>
+
+    <row label="r1" optional="1">Male</row>
+    <row label="r2" optional="1">Female</row>
+  </number>
+
+  <suspend/>
