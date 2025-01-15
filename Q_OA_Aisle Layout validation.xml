@@ -1,0 +1,50 @@
+ <checkbox 
+   label="Q_OA_Aisle"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>What is your overall opinion of the aisle you just shopped?</title>
+    <validate>
+if Q_OA_Aisle.r1 and Q_OA_Aisle.r2: error("You can not select 'It was easy to understand where products were located' and 'It was difficult to understand where products were located' at the same time, please check your answers.")
+if Q_OA_Aisle.r3 and Q_OA_Aisle.r4: error("You can not select 'It was organized in a way that was easy to navigate' and 'It was organized in a way that was difficult to navigate' at the same time, please check your answers.")
+    </validate>
+
+    <row label="r1">It was easy to understand where products were located</row>
+    <row label="r2">It was difficult to understand where products were located</row>
+    <row label="r3">It was organized in a way that was easy to navigate</row>
+    <row label="r4">It was organized in a way that was difficult to navigate</row>
+    <row label="r5">It allowed me to see new products I was not aware of</row>
+    <row label="r6">It was easy to compare the value among the different products</row>
+    <row label="r7">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_Layout"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   fir="off"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Looking at the image of the DIAPER PRODUCTS you just shopped, which of the following statements reflect your opinion of the layout?</title>
+    <comment>[pipe: SHELF_IMG]</comment>
+    <validate>
+if Q_Layout.r1 and Q_Layout.r6: error("You can not select 'I do not like the layout' and 'I like the layout' at the same time, please check your answers.")
+    </validate>
+
+    <row label="r1">I do not like the layout</row>
+    <row label="r2">Is well-organized</row>
+    <row label="r3">Has the products I need</row>
+    <row label="r4">Makes me aware of new products</row>
+    <row label="r5">Is easy to find the products I need</row>
+    <row label="r6">I like the layout</row>
+    <row label="r7">Has a good variety of items</row>
+    <row label="r8">Is informative</row>
+    <row label="r9">Is confusing</row>
+    <row label="r10">Has the brand(s) I need</row>
+  </checkbox>
+
+  <suspend/>
