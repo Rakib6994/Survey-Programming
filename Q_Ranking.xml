@@ -1,0 +1,93 @@
+ <select 
+   label="Q_Ranking"
+   minRanks="6"
+   optional="1"
+   unique="none,cols"
+   uses="ranksort.5">
+    <title>Based on the packaging and product descriptions, which of the following best describes how you perceive each of these products?</title>
+    <comment>Please rank each product from most fitting to least fitting.<br /><br /> [pipe: PH_Ranking]</comment>
+    <row label="r1">For someone like me</row>
+    <row label="r2">Easy to understand</row>
+    <row label="r3">Durable</row>
+    <row label="r4">Informative</row>
+    <row label="r5">Good value</row>
+    <row label="r6">Good quality</row>
+    <choice label="ch1">1 - Most fitting</choice>
+    <choice label="ch2">2</choice>
+    <choice label="ch3">3</choice>
+    <choice label="ch4">4</choice>
+    <choice label="ch5">5</choice>
+    <choice label="ch6">6 - Least fitting</choice>
+  </select>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_Ranking_Ranked_First"
+   atleast="1"
+   randomize="0">
+    <title>Ranked First</title>
+    <virtual>
+for r in Q_Ranking.rows:
+  if r.ival==1:
+      data.rows[r.index].val = 1
+if data.count==0: data.r99.val=1
+    </virtual>
+
+    <row label="r1">Rankable Item 1</row>
+    <row label="r2">Rankable Item 2</row>
+    <row label="r3">Rankable Item 3</row>
+    <row label="r4">Rankable Item 4</row>
+    <row label="r5">Rankable Item 5</row>
+    <row label="r6">Rankable Item 6</row>
+    <row label="r7">Rankable Item 7</row>
+    <row label="r99">N/A</row>
+  </checkbox>
+
+  <checkbox 
+   label="Q_Ranking_Ranked_Second"
+   atleast="1"
+   randomize="0">
+    <title>Ranked Second</title>
+    <virtual>
+for r in Q_Ranking.rows:
+  if r.ival==2:
+      data.rows[r.index].val = 1
+if data.count==0: data.r99.val=1
+    </virtual>
+
+    <row label="r1">Rankable Item 1</row>
+    <row label="r2">Rankable Item 2</row>
+    <row label="r3">Rankable Item 3</row>
+    <row label="r4">Rankable Item 4</row>
+    <row label="r5">Rankable Item 5</row>
+    <row label="r6">Rankable Item 6</row>
+    <row label="r7">Rankable Item 7</row>
+    <row label="r99">N/A</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_Ranking_Ranked_FirstSecond"
+   atleast="1"
+   randomize="0">
+    <title>Ranked FirstSecond</title>
+    <virtual>
+for r in Q_Ranking.rows:
+  if r.ival==1 or r.ival==2:
+      data.rows[r.index].val = 1
+if data.count==0: data.r99.val=1
+    </virtual>
+
+    <row label="r1">Rankable Item 1</row>
+    <row label="r2">Rankable Item 2</row>
+    <row label="r3">Rankable Item 3</row>
+    <row label="r4">Rankable Item 4</row>
+    <row label="r5">Rankable Item 5</row>
+    <row label="r6">Rankable Item 6</row>
+    <row label="r7">Rankable Item 7</row>
+    <row label="r99">N/A</row>
+  </checkbox>
+
+  <suspend/>

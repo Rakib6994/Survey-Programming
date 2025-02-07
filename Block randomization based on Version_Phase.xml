@@ -1,0 +1,582 @@
+<exec>
+if Version.r1: Findability.order = [0,1]
+if Version.r2: Findability.order = [1,0]
+print(Findability.order)
+</exec>
+
+<suspend/>
+
+<block label="Findability" randomizeChildren="1">
+  <block label="Findability_Section1" builder:title="Findability Section1" randomize="1">
+    <html label="F1Text" where="survey">Next, you are going to see the display of  <b>[pipe: Category lower]</b> products again.<br />
+  This time, you will be looking for <u>one particular item.<br /></u><br />Please find <b>[pipe: Finda]</b>.<br /><br />
+  When you find this product, use your mouse and click on the center of the product to select it.<br />When you are ready, click continue to begin.</html>
+
+    <suspend/>
+
+    <note>If 2.5D SHELF: 1. REMOVE cond ="False" at 25D_FindaCode.</note>
+    <note>If 2.5D SHELF: 2. MOVE close block at "HideDecipherFinda" to after vEaseOfFind.</note>
+    <note>If 2.5D SHELF: 3. MOVE EaseOfFind and Highlighter after vFindStatus_F1</note>
+    <note>If 2.5D SHELF: MAKE SURE there are no special characters or BOLD html codes in the "Finda" brand pipe</note>
+    <block label="25D_FindaCode" builder:title="Findability Section">
+      <suspend/>
+
+      <html label="FindabilityRedreict1" where="none">Redirect to Findability questions</html>
+
+      <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore6_DLOnDemand.html?trial=AG589-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ag589?"/>
+
+      <exec when="returning">
+hiduuid2_F1.val = gv.request.get("uuid") or "NO DATA"
+      </exec>
+
+      <text 
+     label="hiduuid2_F1"
+     optional="0"
+     size="40"
+     where="execute,survey,report">
+        <title>record the uuid2 _F1</title>
+      </text>
+
+      <suspend/>
+
+      <textarea 
+     label="apiRequest_finda1"
+     where="execute,survey,report">
+        <title>hidden: api request_finda1</title>
+        <exec>
+data_finda1 = {
+	"job_number": pipe.JobNumber2,
+	"phase": pipe.Phase2,
+	"uuid": uuid,
+	"type": "findability",
+	"scenario": "0"
+}
+
+thisQuestion.val = str(data_finda1).replace("'",'*').replace('*','"')
+        </exec>
+
+      </textarea>
+
+      <suspend/>
+
+      <logic label="api_buzz_finda1" api:data="apiRequest_finda1.unsafe_val" api:method="POST" api:url="https://stgapi-merlin.behaviorally.com/get_buzz_data" uses="api.1">
+        <title>API Integration for Buzz Data from Dropbox</title></logic>
+      <exec>
+if api_buzz_finda1.status == 200:
+	data_finda1 = api_buzz_finda1.r.get('data')
+	if data_finda1:
+		
+		question_finda1 = data_finda1['question']
+		row_arr_finda1 = data_finda1['row']
+		quantity_arr_finda1 = data_finda1['quantity']
+		order_arr_finda1 = data_finda1['order']
+		time_arr_finda1 = data_finda1['time']
+		
+		if 'vFindTimeSeconds' in data_finda1:
+			vFindTimeSeconds.val = data_finda1['vFindTimeSeconds']
+		
+		for i in range(len(row_arr_finda1)):
+			eval(question_finda1 + ".c1." + row_arr_finda1[i]).val = quantity_arr_finda1[i]
+			eval(question_finda1 + ".c2." + row_arr_finda1[i]).val = order_arr_finda1[i]
+			eval(question_finda1 + ".c3." + row_arr_finda1[i]).val = time_arr_finda1[i]
+    
+	
+		print(question_finda1) 
+	
+	print(data_finda1)     
+    
+print(api_buzz_finda1.status)
+      </exec>
+
+      <suspend/>
+
+      <checkbox 
+     label="BuzzTest2"
+     where="execute,survey,report">
+        <title>Buzz Test!</title>
+        <row label="r1">Test1</row>
+      </checkbox>
+
+      <suspend/>
+
+      <float 
+     label="Find1_Time"
+     optional="0"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Find1 Time</title>
+        <comment>Time it Took for Flash3</comment>
+        <exec>
+   
+Find1_Time.val = p.endTime - p.startTime
+        </exec>
+
+      </float>
+    </block>
+
+    <suspend/>
+
+    <note>If 2.5D SHELF: 2. MOVE close block at "HideDecipherFinda" to after vEaseOfFind.</note>
+    <block label="HideDecipherFinda" cond="0" builder:title="Hide Decipher Findability">
+      <number 
+     label="F1"
+     mgshelf:cancel_text="${pipe.shop_cancel_text}"
+     mgshelf:completed_text="${pipe.continue_text}"
+     mgshelf:currency_position="before"
+     mgshelf:currency_sign="$"
+     mgshelf:findability="1"
+     mgshelf:magnifier_border_radius="50%"
+     mgshelf:magnifier_height="275"
+     mgshelf:magnifier_image="[rel ${pipe.ShelfImage}_large.jpg]"
+     mgshelf:magnifier_width="275"
+     mgshelf:name_text=""
+     mgshelf:popup_show_name="1"
+     mgshelf:popup_show_price="1"
+     mgshelf:popup_show_quantity="1"
+     mgshelf:popup_show_subtotal="1"
+     mgshelf:price_text="${pipe.shop_price_text}"
+     mgshelf:purchase_text="${pipe.find_select}"
+     mgshelf:quantity_text="${pipe.shop_quantity_text}"
+     mgshelf:shelf_image="[rel ${pipe.ShelfImage}_lowres.jpg]"
+     mgshelf:shelf_width="900"
+     mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     size="10"
+     uses="prsshelf2.5">
+        <title>Again, you are looking for: <br /><span style="font-size: 36pt;"><b>[pipe: Finda upper]</b></span></title>
+        <col label="c1">Quantity</col>
+        <col label="c2">Order of click</col>
+        <col label="c3">Time opened</col>
+        <style name="question.after"><![CDATA[
+<style type="text/css">
+        .sq-mgshelf-cart-icon { display: none !important; }
+      </style>
+<script>
+    
+        $ (document).on('click', '.bs-btn-primary', function() {
+          $ ("#btn_continue").click();
+          
+        })
+        </script>
+]]></style>
+      </number>
+
+      <suspend/>
+    </block>
+
+    <radio 
+    label="F1_Item_Found"
+    onLoad="copy('F1', rows=True)"
+    randomize="0">
+      <title>Product Found</title>
+      <virtual>
+for r in F1.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      data.val = r.index
+      </virtual>
+
+    </radio>
+
+    <radio 
+    label="vFindCorrect"
+    randomize="0"
+    where="execute,survey,report">
+      <title><b>Correct Product Found?</b></title>
+      <exec>
+if (F1.c1.r17.val &gt;0):  vFindCorrect.val = 0
+else:                   vFindCorrect.val = 1
+      </exec>
+
+      <row label="r1">Correct</row>
+      <row label="r2">Incorrect</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="EaseOfFind"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How easy or difficult do you think it was to find this product?</title>
+      <comment>[pipe:SHELF_IMG]</comment>
+      <net labels="r1,r2">T2B</net>
+      <net labels="r4,r5">B2B</net>
+      <row label="r1" value="5">Very easy to find</row>
+      <row label="r2" value="4">Somewhat easy to find</row>
+      <row label="r3" value="3">Neither easy nor difficult to find</row>
+      <row label="r4" value="2">Somewhat difficult to find</row>
+      <row label="r5" value="1">Very difficult to find</row>
+    </radio>
+
+    <suspend/>
+
+    <block label="DoNotModifyDataBase" builder:title="Do Not Modify - for DataBaseCollection">
+      <float 
+     label="vFindTimeSeconds"
+     randomize="0"
+     size="10"
+     where="execute,survey,report">
+        <title>Find Time (in seconds)</title>
+      </float>
+
+      <autofill label="CorrectlyFound" randomize="0" where="execute,survey,report">
+        <title>Correctly Found - Was the Respondent a TestBrand User (based off of Usage)</title>
+        <row label="r1" autofill="vFindCorrect.r1 and S_Brand_PastPurchased.TB">Correct - TestBrand User</row>
+        <row label="r2" autofill="vFindCorrect.r1 and S_Brand_PastPurchased.NonUser">Correct - TestBrand Non-User</row>
+        <row label="r3" autofill="vFindCorrect.r2 and S_Brand_PastPurchased.TB">Incorrect - TestBrand User</row>
+        <row label="r4" autofill="vFindCorrect.r2 and S_Brand_PastPurchased.NonUser">Incorrect - TestBrand Non-User</row>
+      </autofill>
+
+      <note>DO NOT MODIFY: EaseOfFind - Filtered by Correctly Located</note>
+      <radio 
+     label="vEaseOfFind"
+     cond="vFindCorrect.r1"
+     randomize="0"
+     where="execute,survey,report">
+        <title>DO NOT MODIFY: EaseOfFind - Filtered by Correctly Located How easy or difficult do you think it was to find this product?</title>
+        <exec>
+vEaseOfFind.val=EaseOfFind.val
+        </exec>
+
+        <net labels="r1,r2">T2B</net>
+        <net labels="r4,r5">B2B</net>
+        <row label="r1" value="5">Very easy to find</row>
+        <row label="r2" value="4">Somewhat easy to find</row>
+        <row label="r3" value="3">Neither easy nor difficult to find</row>
+        <row label="r4" value="2">Somewhat difficult to find</row>
+        <row label="r5" value="1">Very difficult to find</row>
+      </radio>
+    </block>
+
+    <suspend/>
+
+    <block label="F_HighlightBlock" cond="vFindCorrect.r1" builder:title="F_Highlight_ImageMap">
+      <loop label="F_Highlight_Loop" vars="image">
+        <title>Findability- Heatmap</title>
+        <block label="F_Highlight_Block" builder:title="F_Highlight Heatmap Block">
+          <textarea 
+       label="F_Highlight_[loopvar: label]"
+       imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+       optional="0"
+       sst="0"
+       uses="imgmap.2020">
+            <title>When finding <b>[pipe: Finda]</b>, which <b>one</b> part of the packaging was <b>most useful</b> in helping you find what you were looking for? </title>
+            <comment>Using your mouse, highlight the <b>single part</b> of the packaging that was <b>most useful</b>.<br /><img src="/survey/selfserve/1da7/220614/clickNdragcrop.gif" alt="" width="200px" /></comment>
+            <col label="c1" imgmap:color="#32CD32" optional="0">most useful</col>
+          </textarea>
+
+          <suspend/>
+        </block>
+
+        <looprow label="1" cond="Phase.r1">
+          <loopvar name="image">AG589_PACK1A.jpg</loopvar>
+        </looprow>
+
+        <looprow label="2" cond="Phase.r2">
+          <loopvar name="image">AG589_PACK2A.jpg</loopvar>
+        </looprow>
+
+        <looprow label="3" cond="Phase.r3">
+          <loopvar name="image">AG589_PACK3A.jpg</loopvar>
+        </looprow>
+      </loop>
+    </block>
+  </block>
+
+  <block label="Findability_Section2" builder:title="Findability2 Section" randomize="1">
+    <html label="F2Text" where="survey">Next, you are going to see the display of  <b>[pipe: Category lower]</b> products again.<br />
+  This time, you will be looking for <u>one particular item.<br /></u><br />Please find <b>[pipe: Finda2]</b>.<br /><br />
+  When you find this product, use your mouse and click on the center of the product to select it.<br />When you are ready, click continue to begin.</html>
+
+    <suspend/>
+
+    <block label="25D_FindaCodeF2" builder:title="Findability Section">
+      <suspend/>
+
+      <exec where="execute,survey,report">
+p.startTime = timeSpent()
+      </exec>
+
+      <suspend/>
+
+      <html label="FindabilityRedreict2" where="none">Redirect to Findability questions</html>
+
+      <suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore6_DLOnDemand.html?trial=AG589-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda2]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ag589?"/>
+
+      <exec when="returning">
+hiduuid2_F2.val = gv.request.get("uuid") or "NO DATA"
+      </exec>
+
+      <text 
+     label="hiduuid2_F2"
+     optional="0"
+     size="40"
+     where="execute,survey,report">
+        <title>record the uuid2 _F2</title>
+      </text>
+
+      <suspend/>
+
+      <textarea 
+     label="apiRequest_finda2"
+     where="execute,survey,report">
+        <title>hidden: api request_finda2</title>
+        <exec>
+data_finda2 = {
+  "job_number": pipe.JobNumber2,
+  "phase": pipe.Phase2,
+  "uuid": uuid,
+  "type": "findability",
+  "scenario": "0"
+}
+
+thisQuestion.val = str(data_finda2).replace("'",'*').replace('*','"')
+        </exec>
+
+      </textarea>
+
+      <suspend/>
+
+      <logic label="api_buzz_finda2" api:data="apiRequest_finda2.unsafe_val" api:method="POST" api:url="https://stgapi-merlin.behaviorally.com/get_buzz_data" uses="api.1">
+        <title>API Integration for Buzz Data from Dropbox</title></logic>
+      <exec>
+if api_buzz_finda2.status == 200:
+	data_finda2 = api_buzz_finda2.r.get('data')
+	if data_finda2:
+		
+		question_finda2 = data_finda2['question']
+		row_arr_finda2 = data_finda2['row']
+		quantity_arr_finda2 = data_finda2['quantity']
+		order_arr_finda2 = data_finda2['order']
+		time_arr_finda2 = data_finda2['time']
+		
+		if 'vFindTimeSeconds' in data_finda2:
+			vFindTimeSeconds2.val = data_finda2['vFindTimeSeconds']
+		
+		for i in range(len(row_arr_finda2)):
+			eval("F2" + ".c1." + row_arr_finda2[i]).val = quantity_arr_finda2[i]
+			eval("F2" + ".c2." + row_arr_finda2[i]).val = order_arr_finda2[i]
+			eval("F2" + ".c3." + row_arr_finda2[i]).val = time_arr_finda2[i]
+    
+	
+		print(question_finda2) 
+	
+	print(data_finda2)     
+    
+print(api_buzz_finda2.status)
+      </exec>
+    </block>
+
+    <suspend/>
+
+    <exec where="execute,survey,report">
+p.endTime = timeSpent()
+    </exec>
+
+    <suspend/>
+
+    <checkbox 
+    label="BuzzTest3"
+    where="execute,survey,report">
+      <title>Buzz Test!</title>
+      <row label="r1">Test1</row>
+    </checkbox>
+
+    <suspend/>
+
+    <float 
+    label="Find2_Time"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Find Time</title>
+      <comment>Time it Took for Flash3</comment>
+      <exec>
+   
+Find2_Time.val = p.endTime - p.startTime
+      </exec>
+
+    </float>
+
+    <suspend/>
+
+    <block label="HideDecipherFinda2" cond="0" builder:title="Hide Decipher Findability">
+      <number 
+     label="F2"
+     mgshelf:cancel_text="${pipe.shop_cancel_text}"
+     mgshelf:completed_text="${pipe.continue_text}"
+     mgshelf:currency_position="before"
+     mgshelf:currency_sign="$"
+     mgshelf:findability="1"
+     mgshelf:magnifier_border_radius="50%"
+     mgshelf:magnifier_height="275"
+     mgshelf:magnifier_image="[rel ${pipe.ShelfImage}_large.jpg]"
+     mgshelf:magnifier_width="275"
+     mgshelf:name_text=""
+     mgshelf:popup_show_name="1"
+     mgshelf:popup_show_price="1"
+     mgshelf:popup_show_quantity="1"
+     mgshelf:popup_show_subtotal="1"
+     mgshelf:price_text="${pipe.shop_price_text}"
+     mgshelf:purchase_text="${pipe.find_select}"
+     mgshelf:quantity_text="${pipe.shop_quantity_text}"
+     mgshelf:shelf_image="[rel ${pipe.ShelfImage}_lowres.jpg]"
+     mgshelf:shelf_width="900"
+     mgshelf:subtotal_text="${pipe.shop_subtotal_text}"
+     onLoad="copy('P_QuantityPurchased', rows=True)"
+     randomize="0"
+     size="10"
+     uses="prsshelf2.5">
+        <title>Again, you are looking for: <br /><span style="font-size: 36pt;"><b>[pipe: Finda2 upper]</b></span></title>
+        <col label="c1">Quantity</col>
+        <col label="c2">Order of click</col>
+        <col label="c3">Time opened</col>
+        <style name="question.after"><![CDATA[
+<style type="text/css">
+        .sq-mgshelf-cart-icon { display: none !important; }
+      </style>
+<script>
+    
+        $ (document).on('click', '.bs-btn-primary', function() {
+          $ ("#btn_continue").click();
+          
+        })
+        </script>
+]]></style>
+      </number>
+
+      <suspend/>
+    </block>
+
+    <radio 
+    label="F1_Item_Found2"
+    onLoad="copy('F2', rows=True)"
+    randomize="0">
+      <title>Product Found</title>
+      <virtual>
+for r in F2.rows:
+  if r.c1.val:
+    if int(r.c1.val) &gt; 0:
+      data.val = r.index
+      </virtual>
+
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="vFindCorrect2"
+    randomize="0"
+    where="execute,survey,report">
+      <title><b>Correct Product Found?</b></title>
+      <exec>
+if (F2.c1.r35.val &gt;0):  vFindCorrect2.val = 0
+else:                   vFindCorrect2.val = 1
+      </exec>
+
+      <row label="r1">Correct</row>
+      <row label="r2">Incorrect</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="EaseOfFind2"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How easy or difficult do you think it was to find this product?</title>
+      <comment>[pipe:SHELF_IMG]</comment>
+      <net labels="r1,r2">T2B</net>
+      <net labels="r4,r5">B2B</net>
+      <row label="r1" value="5">Very easy to find</row>
+      <row label="r2" value="4">Somewhat easy to find</row>
+      <row label="r3" value="3">Neither easy nor difficult to find</row>
+      <row label="r4" value="2">Somewhat difficult to find</row>
+      <row label="r5" value="1">Very difficult to find</row>
+    </radio>
+
+    <suspend/>
+
+    <block label="DoNotModifyDataBase2" builder:title="Do Not Modify - for DataBaseCollection">
+      <float 
+     label="vFindTimeSeconds2"
+     randomize="0"
+     size="10"
+     where="execute,survey,report">
+        <title>Find Time (in seconds)</title>
+      </float>
+
+      <autofill label="CorrectlyFound2" randomize="0" where="execute,survey,report">
+        <title>Correctly Found - Was the Respondent a TestBrand User (based off of Usage)</title>
+        <row label="r1" autofill="vFindCorrect2.r1 and S_Brand_PastPurchased.TB">Correct - TestBrand User</row>
+        <row label="r2" autofill="vFindCorrect2.r1 and S_Brand_PastPurchased.NonUser">Correct - TestBrand Non-User</row>
+        <row label="r3" autofill="vFindCorrect2.r2 and S_Brand_PastPurchased.TB">Incorrect - TestBrand User</row>
+        <row label="r4" autofill="vFindCorrect2.r2 and S_Brand_PastPurchased.NonUser">Incorrect - TestBrand Non-User</row>
+      </autofill>
+
+      <note>DO NOT MODIFY: EaseOfFind - Filtered by Correctly Located</note>
+      <radio 
+     label="vEaseOfFind2"
+     cond="vFindCorrect2.r1"
+     randomize="0"
+     where="execute,survey,report">
+        <title>DO NOT MODIFY: EaseOfFind - Filtered by Correctly Located How easy or difficult do you think it was to find this product?</title>
+        <exec>
+vEaseOfFind2.val=EaseOfFind2.val
+        </exec>
+
+        <net labels="r1,r2">T2B</net>
+        <net labels="r4,r5">B2B</net>
+        <row label="r1" value="5">Very easy to find</row>
+        <row label="r2" value="4">Somewhat easy to find</row>
+        <row label="r3" value="3">Neither easy nor difficult to find</row>
+        <row label="r4" value="2">Somewhat difficult to find</row>
+        <row label="r5" value="1">Very difficult to find</row>
+      </radio>
+    </block>
+
+    <suspend/>
+
+    <block label="F2_HighlightBlock" cond="vFindCorrect2.r1" builder:title="F_Highlight_ImageMap">
+      <loop label="F2_Highlight_Loop" vars="image">
+        <title>Findability- Heatmap</title>
+        <block label="F2_Highlight_Block2" builder:title="F_Highlight Heatmap Block">
+          <textarea 
+       label="F2_Highlight_[loopvar: label]"
+       imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+       optional="0"
+       sst="0"
+       uses="imgmap.2020">
+            <title>When finding <b>[pipe: Finda2]</b>, which <b>one</b> part of the packaging was <b>most useful</b> in helping you find what you were looking for? </title>
+            <comment>Using your mouse, highlight the <b>single part</b> of the packaging that was <b>most useful</b>.<br /><img src="/survey/selfserve/1da7/220614/clickNdragcrop.gif" alt="" width="200px" /></comment>
+            <col label="c1" imgmap:color="#32CD32" optional="0">most useful</col>
+          </textarea>
+
+          <suspend/>
+        </block>
+
+        <looprow label="1" cond="Phase.r1">
+          <loopvar name="image">AG589_PACK1B.jpg</loopvar>
+        </looprow>
+
+        <looprow label="2" cond="Phase.r2">
+          <loopvar name="image">AG589_PACK2B.jpg</loopvar>
+        </looprow>
+
+        <looprow label="3" cond="Phase.r3">
+          <loopvar name="image">AG589_PACK3B.jpg</loopvar>
+        </looprow>
+      </loop>
+    </block>
+
+    <suspend/>
+  </block>
+</block>
+
+<suspend/>
