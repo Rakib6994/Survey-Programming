@@ -1,0 +1,28 @@
+ <select 
+   label="Custom1"
+   minRanks="3"
+   optional="1"
+   ranksort:bucketCSS="height: 255px; width: 120px;"
+   ranksort:cardCSS="height: 255px; width: 120px;"
+   unique="none,cols"
+   uses="ranksort.5">
+    <title>If these 3 products were available at different price points, which would you expect to be the most expensive and which would be the least expensive?</title>
+    <comment>Please drag each product into a category.</comment>
+    <row label="r1" cond="Phase.r1"><img src="[rel PACK1A.jpg]" height="250" /></row>
+    <row label="r2" cond="Phase.r2"><img src="[rel PACK2A.jpg]" height="250" /></row>
+    <row label="r3" cond="Phase.r3"><img src="[rel PACK3A.jpg]" height="250" /></row>
+    <row label="r4" cond="Phase.r4"><img src="[rel PACK4A.jpg]" height="250" /></row>
+    <row label="r5" cond="Phase.r1"><img src="[rel PACK1B.jpg]" height="250" /></row>
+    <row label="r6" cond="Phase.r2"><img src="[rel PACK2B.jpg]" height="250" /></row>
+    <row label="r7" cond="Phase.r3"><img src="[rel PACK3B.jpg]" height="250" /></row>
+    <row label="r8" cond="Phase.r4"><img src="[rel PACK4B.jpg]" height="250" /></row>
+    <row label="r9" cond="Phase.r1"><img src="[rel PACK1C.jpg]" height="250" /></row>
+    <row label="r10" cond="Phase.r2"><img src="[rel PACK2C.jpg]" height="250" /></row>
+    <row label="r11" cond="Phase.r3"><img src="[rel PACK3C.jpg]" height="250" /></row>
+    <row label="r12" cond="Phase.r4"><img src="[rel PACK4C.jpg]" height="250" /></row>
+    <choice label="ch1">Most expensive</choice>
+    <choice label="ch2">Mid-priced</choice>
+    <choice label="ch3">Least expensive</choice>
+  </select>
+
+  <suspend/>
