@@ -1,0 +1,23 @@
+<float 
+  label="TotalSpent"
+  optional="0"
+  size="3">
+  <title>TotalSpent</title>
+  <virtual>
+TotalSpent.r1.val =  P_TotalSpend.val
+TotalSpent.r2.val =  UbyKotex_TotalSpent.val
+TotalSpent.r3.val =  TotalPads_TotalSpent.val
+TotalSpent.r4.val =  TotalLiners_TotalSpent.val
+TotalSpent.r5.val =  TotalTampons_TotalSpent.val
+
+  </virtual>
+
+  <row label="r1">All</row>
+  <row label="r2">UbyKotex</row>
+  <row label="r3">TotalPads</row>
+  <row label="r4">TotalLiners</row>
+  <row label="r5">TotalTampons</row>
+
+</float>
+
+<suspend/>
