@@ -1,0 +1,187 @@
+<block label="RealEyeExercise" builder:title="Real Eye Exercise">
+    <suspend/>
+
+    <html label="GreenDot_Intro" where="survey">Hi! Your privacy and comfort are important to us! <br /><br />You will be asked to turn on your webcam on the next page. <br /><br /><strong>Your face and your background will not be recorded.</strong> <br /><br />Just so you know - <u>only</u> the green dot area is being looked at for movement as you engage with our content.<br /><br />[pipe:GREENDOTS]</html>
+
+    <suspend/>
+
+    <note>Programmer NOTE: THIS RE_AreementBlock is for studies in Europe Only and is set FALSE for all other countries</note>
+    <block label="RE_AgreementBlock" cond="Country.FR or Country.UK or Country.DE or Country.IT or Country.ES or Country.PL or Country.NL or Country.CH or Country.AT or Country.DK" builder:title="RE_Agree">
+      <suspend/>
+
+      <radio 
+     label="RE_Agreement"
+     atm1d:large_buttonAlign="center"
+     atm1d:large_contentAlign="center"
+     atm1d:showInput="0"
+     atm1d:small_buttonAlign="center"
+     atm1d:small_contentAlign="center"
+     randomize="0"
+     uses="atm1d.9">
+        <title><p></p>
+<div align="left">
+<ul>
+<li />At one point in the study, you will see images and we would like to use your computer’s webcam to provide data that will allow us to analyze the movement of your eyes and their movement relative to the images you are being shown.
+<li />Please know - <i>We never store any images or videos from your webcam. By analyzing eye behavior, our client Behaviorally can understand more about how people react</i> to various images.
+<li />These data points will be analyzed by computer, and final data output will be mixed with those of other people who take part in this study.
+<li /><i>With your permission, researchers from <strong><span style="color: #0091da;">Behaviorally</span></strong> may view the gaze prediction data to check everything is working correctly</i>. The technology used is provided by our trusted partner <strong>RealEye</strong>. All data is processed and kept securely in accordance with the <strong>RealEye</strong> Privacy Policy (<a href="https://www.realeye.io/about/privacy/" target="_blank" rel="noopener">https://www.realeye.io/about/privacy/</a>).<br /><br />
+</ul>
+</div>
+<p>By consenting, you agree to share the data points reference above. This data will only be used for market research and analysis purposes associated with this Project and will not be shared in any public domain.</p></title>
+        <row label="r1"><b> Yes, I agree and consent to participate</b></row>
+        <row label="r2"><b> No, I do not agree, and I understand that the survey will end at this time</b></row>
+      </radio>
+
+      <suspend/>
+
+      <term label="TERM_RE_Decline" cond="RE_Agreement.r2">Real Eye Declined</term>
+
+      <suspend/>
+    </block>
+
+    <block label="RealEyeSection" builder:title="RealEyeSection">
+      <pipe label="ProjectID" capture="">
+        <case label="r1" cond="True">a31fe961-18d8-4655-9ce5-f335ae3624d9</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="EF_PracticeShelf" capture="">
+        <case label="r1" cond="True">EF_PracticeShelf</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="REPACK" capture="">
+        <case label="r1" cond="(Phase.r1 and Version.r1)">PACK1A</case>
+        <case label="r2" cond="(Phase.r2 and Version.r1)">PACK3A</case>
+        <case label="r3" cond="(Phase.r3 and Version.r1)">PACK5A</case>
+        <case label="r4" cond="(Phase.r4 and Version.r1)">PACK7A</case>
+        <case label="r5" cond="(Phase.r1 and Version.r2)">PACK1B</case>
+        <case label="r6" cond="(Phase.r2 and Version.r2)">PACK4B</case>
+        <case label="r7" cond="(Phase.r3 and Version.r2)">PACK7B</case>
+        <case label="r8" cond="(Phase.r4 and Version.r2)">PACK10B</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="REPACK2" capture="">
+        <case label="r1" cond="(Phase.r1 and Version.r1)">PACK2A</case>
+        <case label="r2" cond="(Phase.r2 and Version.r1)">PACK4A</case>
+        <case label="r3" cond="(Phase.r3 and Version.r1)">PACK6A</case>
+        <case label="r4" cond="(Phase.r4 and Version.r1)">PACK8A</case>
+        <case label="r5" cond="(Phase.r1 and Version.r2)">PACK2B</case>
+        <case label="r6" cond="(Phase.r2 and Version.r2)">PACK5B</case>
+        <case label="r7" cond="(Phase.r3 and Version.r2)">PACK8B</case>
+        <case label="r8" cond="(Phase.r4 and Version.r2)">PACK11B</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="REPACK3" capture="">
+        <case label="r1" cond="(Phase.r1 and Version.r2)">PACK3B</case>
+        <case label="r2" cond="(Phase.r2 and Version.r2)">PACK6B</case>
+        <case label="r3" cond="(Phase.r3 and Version.r2)">PACK9B</case>
+        <case label="r4" cond="(Phase.r4 and Version.r2)">PACK12B</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <block label="Block_V1" cond="Version.r1" builder:title="Block">
+        <html label="placeholderredirect" where="none">Redirect placeholder so that the redirect executes</html>
+
+        <suspend sst="0" url="https://www.realeye.io/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B0%5D=${pipe.REPACK}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REPACK2}.jpg&amp;participantId=${uuid}?&amp;realeye-tester-tags=bumo-[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:Sample],phase-[pipe:Phase],version-[pipe:Version],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>
+      </block>
+
+      <block label="Block_V2" cond="Version.r2" builder:title="Block">
+        <html label="placeholderredirect1" where="none">Redirect placeholder so that the redirect executes</html>
+
+        <suspend sst="0" url="https://www.realeye.io/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B0%5D=${pipe.REPACK}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REPACK2}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B2%5D=${pipe.REPACK3}.jpg&amp;participantId=${uuid}?&amp;realeye-tester-tags=bumo-[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:Sample],phase-[pipe:Phase],version-[pipe:Version],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>
+      </block>
+
+      <number 
+     label="RealEye_Status"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Real Eye: Status</title>
+        <exec>
+RE_Status= gv.request.get("ef_status")
+
+RealEye_Status.val = RE_Status
+        </exec>
+
+      </number>
+
+      <number 
+     label="RealEye_Quality"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Real Eye: Quality</title>
+        <exec>
+RE_Quality= gv.request.get("realeye-tester-quality_grade")
+
+RealEye_Quality.val = RE_Quality
+        </exec>
+
+      </number>
+
+      <text 
+     label="RealEye_ID"
+     randomize="0"
+     size="25"
+     where="execute,survey,report">
+        <title>Real Eye: ID</title>
+        <exec>
+RE_ID= gv.request.get("realeye-tester-id")
+
+RealEye_ID.val = RE_ID
+        </exec>
+
+      </text>
+
+      <suspend/>
+    </block>
+
+    <autofill label="EF_Status" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Status</title>
+      <row label="r1" autofill="RealEye_Status.check('1')">Qualified</row>
+      <row label="r2" autofill="RealEye_Status.check('2')">Skip (I don't want to participate in this test)</row>
+      <row label="r3" autofill="RealEye_Status.check('3')">Quota Full</row>
+      <row label="r4" autofill="RealEye_Status.check('4')">Screen Out</row>
+      <row label="None" autofill="EF_Status.count==0">No Status</row>
+    </autofill>
+
+    <autofill label="EF_Quality" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Quality</title>
+      <row label="net1" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5')">T2B</row>
+      <row label="net2" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5') or RealEye_Quality.check('4')">T3B</row>
+      <row label="net3" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2')">B2B</row>
+      <row label="net4" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2') or RealEye_Quality.check('3')">B3B</row>
+      <row label="r1" autofill="RealEye_Quality.check('1')">Very Low</row>
+      <row label="r2" autofill="RealEye_Quality.check('2')">Low</row>
+      <row label="r3" autofill="RealEye_Quality.check('3')">Average</row>
+      <row label="r4" autofill="RealEye_Quality.check('4')">Good</row>
+      <row label="r5" autofill="RealEye_Quality.check('5')">Very Good</row>
+      <row label="r6" autofill="RealEye_Quality.check('6')">Perfect</row>
+      <row label="None" autofill="EF_Quality.count==0">No Quality</row>
+    </autofill>
+
+    <suspend/>
+
+    <textarea 
+    label="RE_Open"
+    cond="EF_Status.r2"
+    height="5"
+    optional="0"
+    randomize="0"
+    width="80">
+      <title>Please help us to understand why you decided to not take part in the webcam eye-tracking test.</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <term label="TERM_RealEye_OptOut" cond="not(EF_Status.r1) and not(gv.isSST()) and False">Real Eye: Skip/ Screen Out/ RealEye OQ</term>
+
+    <suspend/>
+  </block>

@@ -1,2 +1,2 @@
-  <row label="r1" autofill="(A4A.check('&lt;40'))">Below 40</row>
-  <row label="r6" autofill="(A4A.check('&gt;=60'))">60 yrs and above</row>
+  <row label="r1" autofill="(Age.check('&lt;40'))">Below 40</row>
+  <row label="r2" autofill="(Age.check('&gt;=60'))">60 yrs and above</row>

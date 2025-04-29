@@ -1,0 +1,25 @@
+<number 
+   label="Q_ChildrenAge"
+   optional="0"
+   randomize="0"
+   size="2"
+   ss:colWidth="50px"
+   ss:listDisplay="0"
+   verify="range(0,99)">
+    <title>How many children do you have within each age range below?</title>
+    <comment>Please enter a number. If no children in an age group, enter "0".</comment>
+    <row label="r1">0-2 months</row>
+    <row label="r2">3-5 months</row>
+    <row label="r3">6-8 months</row>
+    <row label="r4">9-11 months</row>
+    <row label="r5">12 months – 23 months</row>
+    <row label="r6">24 months – 36 months</row>
+    <row label="r7">37 months – 48 months</row>
+    <row label="r8">More than 48 months</row>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_ChildrenAge" cond="Q_ChildrenAge.any and not(Q_ChildrenAge.r1 or Q_ChildrenAge.r2 or Q_ChildrenAge.r3 or Q_ChildrenAge.r4 or Q_ChildrenAge.r5 or Q_ChildrenAge.r6 or Q_ChildrenAge.r7)">Sensitive ChildrenAge</term>
+
+  <suspend/>

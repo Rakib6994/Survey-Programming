@@ -1,0 +1,46 @@
+<number 
+   label="S_Kids"
+   optional="0"
+   randomize="0"
+   size="3"
+   ss:postText="Children in household"
+   verify="range(0,99)">
+    <title>How many children under the age of 18 do you have currently living in your household?</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Kids" cond="not(S_Kids.check('1-99'))">S Kids</term>
+
+  <suspend/>
+
+
+<number 
+   label="S_Child_Age"
+   optional="0"
+   size="3"
+   ss:listDisplay="0">
+    <title>Which of the following age groups does your child(ren) fall into?</title>
+    <comment>Please enter a whole number</comment>
+
+<validate>
+
+p.x1 = S_Child_Age.r1.val
+p.x2 = S_Child_Age.r2.val
+p.x3 = S_Child_Age.r3.val
+p.x4 = S_Child_Age.r4.val
+
+p.total = p.x1 + p.x2 + p.x3 + p.x4
+
+
+if not(S_Kids.val == p.total): error("Please enter a valid response.")
+
+</validate>    
+    
+    <row label="r1">Less than 6 years old </row>
+    <row label="r2">6-9 years old </row>
+    <row label="r3">10-12 years old </row>
+    <row label="r4">13–17 years old </row>
+  </number>
+
+  <suspend/>

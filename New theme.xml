@@ -1,0 +1,21 @@
+I sent an update a month or so ago about our re-branding. I would like to be sure that all of your team is aware to make sure the theme and branding is updated on all of our studies.
+
+ 
+
+PackFlash should be ok, because the template creates it updated -  but if you are copying an old study or using your own template for a Transaction Path, Unpacked, ShopperLab, In person etc...please make sure everything is updated.  Please pass this to the programmers.
+
+ 
+
+1. Change the "theme" to "Behaviorally New Jan 2025"  ------------ theme="company/behaviorally-new-jan-202"
+
+
+ 2. Update Logo line of code to:  ss:logoFile="selfserve/1da7/191272/Behaviorally_HeaderLogo.jpg"
+3. Change font from Hind to arial here:  font-family: 'Hind';  font-family: 'arial';
+4. Upload attached image and update "IntroPage.jpg" logo to "IntroPage2025.jpg" in 2 places:
+      $ (".survey-page").css("background", "url('[rel IntroPage.jpg]') no-repeat center center fixed"); 
+
+      $ (".survey-page").css("background", "url('[rel IntroPage2025.jpg]') no-repeat center center fixed");
+
+ 
+
+Those are all the updates needed. Thank you!
