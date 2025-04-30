@@ -1,0 +1,23 @@
+  <checkbox 
+   label="ShoppingBarriers_List"
+   cond="vProductsBought.No"
+   atleast="1"
+   grouping="cols"
+   shuffle="rows">
+    <title>You <strong><u>did not</u></strong> purchase any of the [pipe: Brand] products while shopping. Why did you choose not to purchase these products?</title>
+    <comment>[pipe: SHELF_IMG]<br /><br />Please be as detailed and thorough as possible.<font color="#ff0000"><b> </b></font>RECORD RESPONSES IN BOXES BELOW. CODE ALL ANSWERS IN 1<sup>ST</sup> COLUMN, AND SPECIFY 1<sup>ST</sup> ANSWER IN 2<sup>nd</sup> COLUMN.&amp;nbsp;</comment>
+    <res label="sys_noAnswerSelected">IN COLUMN 2, PLEASE SPECIFY THE 1st REASON CITED.</res>
+    <col label="c1">Reason Cited</col>
+    <col label="c2" favorite="1">1st Reason Cited</col>
+    <row label="r1">I prefer another brand</row>
+    <row label="r2">Im not familiar with this product/ never tried</row>
+    <row label="r3">I didnt find the product I wanted</row>
+    <row label="r4">I didnt notice it on shelf</row>
+    <row label="r5">This is not the type of product I like</row>
+    <row label="r6">The product is too expensive</row>
+    <row label="r7">The packaging does not look appealing to me</row>
+    <row label="r8">The product does not appear appetizing</row>
+    <row label="r9" open="1" openSize="25" randomize="0">Other (Please specify)</row>
+  </checkbox>
+
+  <suspend/>
