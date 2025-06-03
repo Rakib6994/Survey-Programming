@@ -1,0 +1,21 @@
+<text 
+   label="Q7a"
+   cond="Openend_Questions.r1"
+   size="40"
+   ss:listDisplay="1"
+   uses="multicol.7">
+    <title><b>Classic Open</b><br /><br />What other brands of <b>Bottled Water</b> are you aware of?<br />Please name all brands that you can remember.</title>
+    <comment>Please type in answer below.</comment>
+    <row label="r1" optional="1"/>
+    <row label="r2" optional="1"/>
+    <row label="r3" optional="1"/>
+    <row label="r4" optional="1"/>
+    <row label="r5" optional="1"/>
+    <row label="r6" optional="1"/>
+    <row label="r7" optional="1"/>
+    <row label="r8" optional="1"/>
+    <row label="r9" optional="1"/>
+    <row label="r10" optional="1"/>
+  </text>
+
+  <suspend/>

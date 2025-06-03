@@ -1,0 +1,2778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AH517 - Palmolive  In-Context"
+  autoRecover="1"
+  autosaveKey="record"
+  browserDupes=""
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="147"
+  displayOnError="all"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent,digitalphase"
+  html:showNumber="0"
+  markerTimeout="3600"
+  mobile="compat"
+  mobileDevices="tablet,desktop"
+  name="Survey"
+  otherLanguages="polish"
+  remerged="20250524_17:41"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="1"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_HeaderLogo.jpg"
+  ss:logoPosition="left"
+  ss:showBackButton="0"
+  state="live"
+  theme="frozen:company/behaviorally-new-jan-202"
+  version="19">
+
+<res label="MapError">YOU CANNOT SELECT 'NONE' AND ALSO MAKE A SELECTION.</res>
+<res label="MapError2">YOU MUST MAKE A SELECTION OR SELECT 'NONE'.</res>
+<res label="ConfirmFindError">PLEASE BACK UP AND ENTER THE LETTER/NUMBER COMBINATION THAT YOU INTENDED TO ENTER.</res>
+<res label="StimuliError">THIS IS NOT THE CORRECT STIMULI. PLEASE SEE YOUR SUPERVISOR.</res>
+<res label="ShoppingError">YOU MUST SELECT AT LEAST ONE PRODUCT FOR PURCHASE</res>
+<res label="CheckError">PLEASE INFORM THE INTERVIEWER THE LETTERS YOU SELECTED ARE NOT CORRECT FOR THIS PHASE.</res>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style>
+.invisible {
+    visibility: hidden;
+}
+#survey {
+ margin: 20px
+}
+.sq-atm1d-block{
+ text-align: center;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+ font-weight: bold;
+ text-transform: uppercase;
+}
+.comment-text{
+ text-align: center;
+}
+.instruction-text{
+ text-align: center;
+}
+.sq-atm1d-button-align-center {
+ text-align: center;
+}
+.sq-atm1d .sq-atm1d-buttons{
+ text-align: center;
+} 
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+  text-align: center;
+}
+.dropdown{
+  font-family:Verdana;
+}
+.element{
+  text-align: center;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+  $ (".clickable").addClass( "hvr-underline-from-center" )
+  $ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+  
+  if(!$ (".sq-cardsort-Q_PackAtt").length){
+    $ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+  }
+  
+  if($ (".p1").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage2025.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");      
+      $ (".comment-text").css("color", "black");
+      $ (".comment-text").css("background-color","lightgrey");
+      $ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+      $ (".survey-page").css("background", "url('[rel IntroPage2025.jpg]') no-repeat center center fixed");
+      $ (".survey-page").css("background-size", "cover");
+      $ (".survey-page").css("-webkit-background-size", "cover");
+      $ (".survey-page").css("-moz-background-size", "cover");
+      $ (".survey-page").css("-o-background-size", "cover");
+      $ (".comment-text").css("font-size", "x-large");
+      $ (".question").css("background-color","lightgrey");
+      $ (".question-text").css("color","black");
+      $ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+  if($ (".radio .sq-atm1d-button").length){
+      $ ("#btn_continue").hide();
+    } 
+  $ (document).on('click', '.radio .sq-atm1d-button', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmtable-btn', function() {
+    $ ("#btn_continue").click();
+  })
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-sliderpoints-container', function() {
+    $ ("#btn_continue").click();
+  })
+       
+/*Textbox*/
+  $ ('.element').css('text-align','center');
+  
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+      $ ("#btn_continue").hide();
+    }
+  $ (document).on('click', '.sq-atmrating-container', function() {
+    $ ("#btn_continue").click();
+  })
+*/
+
+/*Change Font*/
+  $ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+</script>
+]]></style>
+<suspend/>
+
+<exec when="init">
+db = Database("ids.dat")
+</exec>
+
+<html label="cm1" cond="db.has(str(record))" final="1" where="survey">This survey has already been completed.</html>
+
+<samplesources default="1">
+  <samplesource list="1">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="digitalphase"/>
+    <exit cond="terminated"><span style="color: #ff42fa">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+  </samplesource>
+
+  <samplesource list="106">
+    <title>Paradigm</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ppsid" unique="1"/>
+    <exit cond="qualified" url="http://www.paradigmsample.com/portal/ltx/fwd.asp?sts=1&amp;ppsid=${ppsid}"/>
+    <exit cond="terminated" url="http://www.paradigmsample.com/portal/ltx/fwd.asp?sts=2&amp;ppsid=${ppsid}"/>
+    <exit cond="overquota" url="http://www.paradigmsample.com/portal/ltx/fwd.asp?sts=3&amp;ppsid=${ppsid}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<text 
+  label="IP_ID"
+  optional="0"
+  randomize="0"
+  size="80"
+  where="execute,survey,report">
+  <title>IP ID</title>
+  <exec>
+IP_ID.val = gv.request.getRemote()
+  </exec>
+
+</text>
+
+<suspend/>
+
+<block label="Logistics" builder:title="Logistics">
+  <goto cond="digitalphase" target="Shop_Intro"/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>AH517 - Palmolive In-Context</title>
+    <row label="r1" autofill="True">ah517</row>
+  </autofill>
+
+  <autofill label="Led" where="execute,survey,report">
+    <title><b>Set True or False based on Self Administered or Interviewer led. This drives text later. REMEMBER, no need to update text later as it should match exactly in word document.</b></title>
+    <row label="r1" autofill="True">Self-Administered</row>
+    <row label="r2" autofill="False">Interviewer Led</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+    <row label="r4">Wave 4</row>
+    <row label="r5">Wave 5</row>
+  </autofill>
+
+  <number 
+   label="Conf"
+   dataRef="Conf"
+   size="3"
+   where="execute,survey,report">
+    <title>Conf</title>
+    <exec>
+Conf.val = random.randrange(100,999)
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <radio 
+   label="Location"
+   atm1d:large_buttonAlign="center"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="center"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Please select your location:</title>
+    <row label="r1" value="1">Warsaw</row>
+    <row label="ZZ999" value="9999"><span style="color:red;">Test</span></row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="LocationCode"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+	LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL" autofill="True">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="ETControl" where="execute,survey,report">
+    <title>ETControl</title>
+    <row label="r1" autofill="True">With ET</row>
+    <row label="r2" autofill="False">Without ET</row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Intro_Recruit" where="survey">Hello, we are from a local a market research firm looking to conduct a survey. We are interested in your opinions.<br /><br />If you qualify, we would like to ask you to participate in a survey at our facility. All market research projects comply with local and state health requirements. In states that have lifted mask requirements, the option to wear a mask remains a personal choice. COVID-19 policies can and will be amended from time to time based on changes to Local State and Federal health mandates.</html>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Recruit_Incentive"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><u>INTERVIEWER:</u> Indicate if the respondent is any of the following:</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Pre-recruit</row>
+    <row label="r2">Traditional Intercept</row>
+    <row label="r3">Raised Incentive Intercept</row>
+    <row label="r4">Raised Incentive MET</row>
+  </checkbox>
+
+  <suspend/>
+
+  <html label="Intro_original" cond="False" where="survey">Good morning/afternoon/evening. I am ________ from Behaviorally, an international research organization. We are conducting research on various products and value your opinion. Could you spare some time to answer some questions?</html>
+
+  <suspend/>
+</block>
+
+<block label="Screener" builder:title="Screener">
+  <suspend/>
+
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Record gender by observation.</title>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3">Non-Binary</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Gender" cond="S_Gender.r3">Refused Gender</term>
+
+  <suspend/>
+
+  <text 
+   label="SelfIdentifyGender_OE"
+   cond="0"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your identity below:</title>
+  </text>
+
+  <suspend/>
+
+  <autofill label="gender" randomize="0" where="execute,survey,report">
+    <title>Gender for Real Eye</title>
+    <row label="r1" autofill="S_Gender.r1">1</row>
+    <row label="r2" autofill="S_Gender.r2">0</row>
+    <row label="r3" autofill="not(S_Gender.r1 or S_Gender.r2)">2</row>
+  </autofill>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="2"
+   ss:postText="lat"
+   verify="range(0,99)">
+    <title>Please tell me your age.</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('18-64'))">Age</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_PastParticipation"
+   atleast="1"
+   atm1d:numCols="4"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Have you participated in a market research study within the past month, on any of the following topics?</title>
+    <comment>Read list. Select all that apply.</comment>
+    <row label="r1">Laundry Detergent</row>
+    <row label="r2">Body Wash and Soap</row>
+    <row label="r3">Coffee and Tea</row>
+    <row label="r4">Hair Color</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_PastPar" cond="(S_PastParticipation.r2)">Past Participation</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Does anyone in your household work for any of the following industries?</title>
+    <comment>Read List. Select all that apply.</comment>
+    <row label="r1">Market research or marketing</row>
+    <row label="r2">Advertising agency or public relations firms</row>
+    <row label="r3">A graphic design or packaging firm</row>
+    <row label="r4">A company involved in the manufacturing, distribution or sale of <b>laundry</b> products</row>
+    <row label="r5">A company involved in the manufacturing, distribution or sale of <b>coffee and tea</b> products</row>
+    <row label="r6">A company involved in the manufacturing, distribution or sale of <b>body wash and soap</b> products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Industry" cond="(S_Industry.r1 or S_Industry.r2 or S_Industry.r3 or S_Industry.r6)">Sensitive Industry</term>
+
+  <suspend/>
+
+  <select 
+   label="S_Shop"
+   randomize="0"
+   sliderpoints:sliderWidth="95%"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>How much of the household’s <b>body wash and soap</b> shopping do you, yourself, do?</title>
+    <choice label="r1"><span style="font-size: 10pt;" align="center">All of it<br /><img src="/survey/selfserve/1da7/191272/Cart4.png" constrain="true" title="" height="50" /></span></choice>
+    <choice label="r2"><span style="font-size: 10pt;" align="center">Half of it or more<br /><img src="/survey/selfserve/1da7/191272/Cart3.png" constrain="true" title="" height="50" /></span></choice>
+    <choice label="r3"><span style="font-size: 10pt;" align="center">Less than half of it<br /><img src="/survey/selfserve/1da7/191272/Cart1.png" constrain="true" title="" height="50" /></span></choice>
+    <choice label="r4"><span style="font-size: 10pt;" align="center">None of it<br /><img src="/survey/selfserve/1da7/191272/Cart0.png" constrain="true" title="" height="50" /></span></choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERM_HHShopping" cond="(S_Shop.r3 or S_Shop.r4)">Household Grocery Shopping</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Frequency"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title><b>HAND RESPONDENT CARD SA.</b><br /><br />How often have you purchased products in each of the following categories?</title>
+    <comment>Read list.  Select one response. </comment>
+    <row label="r1">Body lotion</row>
+    <row label="r2">Bar Soap</row>
+    <row label="TB">Body Wash</row>
+    <col label="c1">Once a week</col>
+    <col label="c2">Once every 2 weeks</col>
+    <col label="c3">Once a month</col>
+    <col label="c4">Once every 2 or 3 months</col>
+    <col label="c5">Once every 6 months</col>
+    <col label="c6">Once a year</col>
+    <col label="c7">Never</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      	})
+	</script>
+]]></style>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Freq" cond="S_Frequency.TB.c6 or S_Frequency.TB.c7">Category Frequency</term>
+
+  <suspend/>
+
+  <autofill label="FreqQual" where="execute,survey,report">
+    <title>Frequency Qualifier</title>
+    <row label="r1" autofill="not(S_Frequency.r1.c6 or S_Frequency.r1.c7)">Body lotion</row>
+    <row label="r2" autofill="not(S_Frequency.r2.c6 or S_Frequency.r2.c7)">Bar Soap</row>
+    <row label="r3" autofill="not(S_Frequency.TB.c6 or S_Frequency.TB.c7)">Body Wash</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="v_FreqClutter1"
+   randomize="0">
+    <title>Virtual for Weighting - Body lotion Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r1.c1:  data.val=0
+if S_Frequency.r1.c2:  data.val=1
+if S_Frequency.r1.c3:  data.val=2
+if S_Frequency.r1.c4:  data.val=3
+if S_Frequency.r1.c5:  data.val=4
+if S_Frequency.r1.c6:  data.val=5
+if S_Frequency.r1.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqClutter2"
+   randomize="0">
+    <title>Virtual for Weighting - Bar Soap Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r2.c1:  data.val=0
+if S_Frequency.r2.c2:  data.val=1
+if S_Frequency.r2.c3:  data.val=2
+if S_Frequency.r2.c4:  data.val=3
+if S_Frequency.r2.c5:  data.val=4
+if S_Frequency.r2.c6:  data.val=5
+if S_Frequency.r2.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqTest"
+   randomize="0">
+    <title>Virtual for Weighting - Body Wash Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.TB.c1:  data.val=0
+if S_Frequency.TB.c2:  data.val=1
+if S_Frequency.TB.c3:  data.val=2
+if S_Frequency.TB.c4:  data.val=3
+if S_Frequency.TB.c5:  data.val=4
+if S_Frequency.TB.c6:  data.val=5
+if S_Frequency.TB.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <block label="Category1" builder:title="ClutterCat1">
+    <checkbox 
+    label="S_Brand_PastPurchased1"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title><b>HAND RESPONDENT CARD SB.</b><br /><br />Which brand or brands of <b>body wash</b> have you purchased in the past <b>6 months</b>?</title>
+      <comment>Select all that apply.</comment>
+      <row label="r1">BeBeauty</row>
+      <row label="r2">Dove</row>
+      <row label="r3">Fa</row>
+      <row label="r4">Isana</row>
+      <row label="r5">Le Petit Marseillais</row>
+      <row label="r6">Luksja</row>
+      <row label="r7">Nivea</row>
+      <row label="r8">Palmolive</row>
+      <row label="r9">Ziaja</row>
+      <row label="r10">Old Spice</row>
+      <row label="r11">Adidas</row>
+      <row label="r12">Axe</row>
+      <row label="r13">Store Brand</row>
+      <row label="r14">Other Brands</row>
+    </checkbox>
+
+    <suspend/>
+
+    <term label="TERM_Brand" cond="S_Brand_PastPurchased1.count==1 and S_Brand_PastPurchased1.r13">S_Brand_PastPurchased</term>
+
+    <suspend/>
+
+    <radio 
+    label="S_Brand_BUMO1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Brand_PastPurchased1[row.index]"
+    uses="atm1d.9">
+      <title><b>RESPONDENT STILL HAS CARD SB.</b><br /><br />And which one brand of <b>body wash</b> have you used most often in the past <b>6 months</b>?</title>
+      <comment>Select one response.</comment>
+      <row label="r1">BeBeauty</row>
+      <row label="r2">Dove</row>
+      <row label="r3">Fa</row>
+      <row label="r4">Isana</row>
+      <row label="r5">Le Petit Marseillais</row>
+      <row label="r6">Luksja</row>
+      <row label="r7">Nivea</row>
+      <row label="r8">Palmolive</row>
+      <row label="r9">Ziaja</row>
+      <row label="r10">Old Spice</row>
+      <row label="r11">Adidas</row>
+      <row label="r12">Axe</row>
+      <row label="r13">Store Brand</row>
+      <row label="r14">Other Brands</row>
+    </radio>
+
+    <suspend/>
+
+    <checkbox 
+    label="S_Brand_NonRejecter1"
+    atleast="1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>And which one brand of <b>body wash</b> would you NOT be open to buying?</title>
+      <row label="r1">BeBeauty</row>
+      <row label="r2">Dove</row>
+      <row label="r3">Fa</row>
+      <row label="r4">Isana</row>
+      <row label="r5">Le Petit Marseillais</row>
+      <row label="r6">Luksja</row>
+      <row label="r7">Nivea</row>
+      <row label="r8">Palmolive</row>
+      <row label="r9">Ziaja</row>
+      <row label="r10">Old Spice</row>
+      <row label="r11">Adidas</row>
+      <row label="r12">Axe</row>
+      <row label="r13">Store Brand</row>
+      <row label="r14">Other Brands</row>
+      <row label="None" cond="1" exclusive="1">None, I would consider all</row>
+    </checkbox>
+
+    <suspend/>
+
+    <term label="TERM_TestRejecter" cond="S_Brand_NonRejecter1.r8">Rejecter</term>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+</block>
+
+<autofill label="S_Brand_PastPurchased" randomize="0" where="execute,survey,report">
+  <title>Usage Past Purchased (P3M, P6M, P12M) - User/Non User for Database</title>
+  <row label="TB" autofill="S_Brand_PastPurchased1.r8">TestBrand User - all test brands netted</row>
+  <row label="NonUser" autofill="S_Brand_PastPurchased.count==0">TestBrand NON User</row>
+</autofill>
+
+<autofill label="S_Brand_BUMO" randomize="0" where="execute,survey,report">
+  <title>BUMO - User/Non User for Database</title>
+  <row label="TB" autofill="S_Brand_BUMO1.r8">TestBrand User - all test brands netted</row>
+  <row label="NonUser" autofill="S_Brand_BUMO.count==0">TestBrand NON User</row>
+</autofill>
+
+<suspend/>
+
+<block label="MET" cond="False" builder:title="MET Section">
+  <radio 
+   label="S_MET1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following do you wear in order to shop in a grocery store, whether to walk down the aisles or to read package information?</title>
+    <comment>Read list. Select one response.</comment>
+    <row label="r1">Only glasses</row>
+    <row label="r2">Only contact lenses</row>
+    <row label="r3">Either glasses or contact lenses</row>
+    <row label="r4">Neither glasses nor contact lenses</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET2"
+   cond="S_MET1.r2 or S_MET1.r3"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Are you currently wearing your contact lenses?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET3"
+   cond="S_MET1.r4 or S_MET2.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you have any eyesight problems such as current or reoccurring eye injuries, colorblindness, a glass eye, pink eye, astigmatism, or a strabismus of any kind such as crossed eyes or lazy eye?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="S_MET4"
+   cond="S_MET3.r2"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>During the interview, you will be asked to wear a set of non-prescription eyeglasses. This is a new technology that we would like you to help us utilize. Is this OK?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="S_METQual" randomize="0" where="execute,survey,report">
+    <title>Qualified for MET:</title>
+    <row label="r1" autofill="S_MET4.r1">YES</row>
+    <row label="r2" autofill="not(S_MET4.r1)">NO</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="MET_Complete"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>ADD TO KEY IDENTIFIER SECTION. <b>Please indicate if respondent will complete the MET exercise:</b></title>
+    <row label="r1" cond="S_METQual.r1">Yes</row>
+    <row label="r2">No</row>
+    <row label="invisible" ss:rowClassNames="invisible"/>
+  </radio>
+
+  <suspend/>
+
+  <html label="MET_Intro" cond="S_METQual.r1" where="survey"><strong><span style="color: red">To add before Shopping:</span></strong><br /><br /><strong>MET CALIBRATION NOTES FOR INTERVIEWER:</strong>
+<div align="left">
+<ul>
+<li />Bring respondent to calibration area.
+<li />Complete the MET calibration.
+<li />On the next screen, hold the tablet up to the respondent for 3 seconds while it displays the respondent number.
+</ul>
+</div></html>
+</block>
+
+<block label="Quotas" builder:title="Quotas">
+  <autofill label="Gender" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r1" autofill="S_Gender.r1">Male</row>
+    <row label="r2" autofill="S_Gender.r2">Female</row>
+    <row label="r3" autofill="S_Gender.r3">Non-Binary</row>
+  </autofill>
+
+  <autofill label="Age" randomize="0" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="(S_Age.check('18-41'))">18-41</row>
+    <row label="r2" autofill="(S_Age.check('42-64'))">42-64</row>
+  </autofill>
+
+  <autofill label="Usage" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P3M, P6M, P12M)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased1.r1">BeBeauty</row>
+    <row label="r2" autofill="S_Brand_PastPurchased1.r2">Dove</row>
+    <row label="r3" autofill="S_Brand_PastPurchased1.r3">Fa</row>
+    <row label="r4" autofill="S_Brand_PastPurchased1.r4">Isana</row>
+    <row label="r5" autofill="S_Brand_PastPurchased1.r5">Le Petit Marseillais</row>
+    <row label="r6" autofill="S_Brand_PastPurchased1.r6">Luksja</row>
+    <row label="r7" autofill="S_Brand_PastPurchased1.r7">Nivea</row>
+    <row label="r8" autofill="S_Brand_PastPurchased1.r8">Palmolive</row>
+    <row label="r9" autofill="S_Brand_PastPurchased1.r9">Ziaja</row>
+    <row label="r10" autofill="S_Brand_PastPurchased1.r10">Old Spice</row>
+    <row label="r11" autofill="S_Brand_PastPurchased1.r11">Adidas</row>
+    <row label="r12" autofill="S_Brand_PastPurchased1.r12">Axe</row>
+    <row label="r13" autofill="S_Brand_PastPurchased1.r13">Store Brand</row>
+    <row label="r14" autofill="S_Brand_PastPurchased1.r14">Other Brands</row>
+  </autofill>
+
+  <autofill label="BUMO" randomize="0" where="execute,survey,report">
+    <title>BUMO</title>
+    <row label="r1" autofill="S_Brand_BUMO1.r1">BeBeauty</row>
+    <row label="r2" autofill="S_Brand_BUMO1.r2">Dove</row>
+    <row label="r3" autofill="S_Brand_BUMO1.r3">Fa</row>
+    <row label="r4" autofill="S_Brand_BUMO1.r4">Isana</row>
+    <row label="r5" autofill="S_Brand_BUMO1.r5">Le Petit Marseillais</row>
+    <row label="r6" autofill="S_Brand_BUMO1.r6">Luksja</row>
+    <row label="r7" autofill="S_Brand_BUMO1.r7">Nivea</row>
+    <row label="r8" autofill="S_Brand_BUMO1.r8">Palmolive</row>
+    <row label="r9" autofill="S_Brand_BUMO1.r9">Ziaja</row>
+    <row label="r10" autofill="S_Brand_BUMO1.r10">Old Spice</row>
+    <row label="r11" autofill="S_Brand_BUMO1.r11">Adidas</row>
+    <row label="r12" autofill="S_Brand_BUMO1.r12">Axe</row>
+    <row label="r13" autofill="S_Brand_BUMO1.r13">Store Brand</row>
+    <row label="r14" autofill="S_Brand_BUMO1.r14">Other Brands</row>
+  </autofill>
+
+  <autofill label="UserPP" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (PastPurch)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased1.r8">Yes</row>
+    <row label="r2" autofill="UserPP.count==0">No</row>
+  </autofill>
+
+  <autofill label="UserBUMO" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (BUMO)</title>
+    <row label="r1" autofill="S_Brand_BUMO1.r8">Yes</row>
+    <row label="r2" autofill="UserBUMO.count==0">No</row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<block label="KeyIdentifiers" builder:title="Key Identifiers">
+  <html label="Quotadisplay" cond="not(gv.isSST())"><b>HERE ARE THE QUOTAS THAT HAVE BEEN DETERMINED BY THE SCREENER:</b>
+<p></p><div align="left">
+<br /><b>Gender:</b> [pipe: Gender]<br />
+<b>Age:</b> [pipe: Age]<br />
+<b>Usage P6M:</b> [pipe: Usage]<br />
+<b>BUMO:</b> [pipe: BUMO]</div>
+<br /><br /><br /><b>PLEASE CHOOSE THE FOLLOWING BASED ON YOUR QUOTA NEEDS:</b></html>
+
+  <radio 
+   label="Phase"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>Phase:</b></title>
+    <row label="r1">1</row>
+    <row label="r2">2</row>
+    <row label="r3">3</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="EM1"
+   cond="ETControl.r1 and False"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>EM #1:</b></title>
+    <row label="r1">1</row>
+    <row label="invisible" ss:rowClassNames="invisible"/>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="EM2"
+   cond="ETControl.r1 and False"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>EM #2:</b></title>
+    <row label="r1">3</row>
+    <row label="invisible" ss:rowClassNames="invisible"/>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Sample"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>Sample:</b></title>
+    <row label="r1" cond="1">Category Shoppers</row>
+    <row label="r2" cond="S_Brand_PastPurchased1.r8">Palmolive BW Users</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="PhaseXSample"
+   where="execute,survey,report">
+    <title>PhaseXSample</title>
+    <row label="r1" autofill="Phase.r1 and Sample.r1">Phase 1 Category Shoppers</row>
+    <row label="r2" autofill="Phase.r2 and Sample.r1">Phase 2 Category Shoppers</row>
+    <row label="r3" autofill="Phase.r3 and Sample.r1">Phase 3 Category Shoppers</row>
+    <row label="r4" autofill="Phase.r1 and Sample.r2">Phase 1 Palmolive BW Users</row>
+    <row label="r5" autofill="Phase.r2 and Sample.r2">Phase 2 Palmolive BW Users</row>
+    <row label="r6" autofill="Phase.r3 and Sample.r2">Phase 3 Palmolive BW Users</row>
+  </checkbox>
+
+  <suspend/>
+
+  <quota label="Quota" doit="1" overquota="noqual" sheet="Quota"/>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<number 
+  label="Resp"
+  size="6"
+  where="execute,survey,report">
+  <title>Respondent ID</title>
+  <exec>
+if Location.ZZ999:
+	IdNumber = int(record)
+else:
+	IdNumber = (Phase.val+1)*10000+int(record)
+
+Resp.val = IdNumber
+  </exec>
+
+</number>
+
+<suspend/>
+
+<autofill label="SHELF_IMG" randomize="0" where="execute,survey,report">
+  <title>Shelf Image</title>
+  <row label="r1" autofill="(Phase.r1)"><img src="[rel AH517_SHELF1_large.jpg]" title="" width="600" alt="" constrain="true" class="jloupeme" /></row>
+  <row label="r2" autofill="(Phase.r2)"><img src="[rel AH517_SHELF2_large.jpg]" title="" width="600" alt="" constrain="true" class="jloupeme" /></row>
+  <row label="r3" autofill="(Phase.r3)"><img src="[rel AH517_SHELF3_large.jpg]" title="" width="600" alt="" constrain="true" class="jloupeme" /></row>
+</autofill>
+
+<autofill label="LINE_IMG" randomize="0" where="execute,survey,report">
+  <title>LINE Image</title>
+  <row label="r1" autofill="(Phase.r1)"><img src="[rel AH517_LINE1.jpg]" title="" width="500" alt="" constrain="true" class="jloupeme" /></row>
+  <row label="r2" autofill="(Phase.r2)"><img src="[rel AH517_LINE2.jpg]" title="" width="500" alt="" constrain="true" class="jloupeme" /></row>
+  <row label="r3" autofill="(Phase.r3)"><img src="[rel AH517_LINE3.jpg]" title="" width="500" alt="" constrain="true" class="jloupeme" /></row>
+</autofill>
+
+<autofill label="Palmolive_IMG" randomize="0" where="execute,survey,report">
+  <title>Image</title>
+  <row label="r1" autofill="(Phase.r1)"><img src="[rel AH517_PACK1.jpg]" title="" width="150" alt="" constrain="true" class="jloupeme" /></row>
+  <row label="r2" autofill="(Phase.r2)"><img src="[rel AH517_PACK2.jpg]" title="" width="150" alt="" constrain="true" class="jloupeme" /></row>
+  <row label="r3" autofill="(Phase.r3)"><img src="[rel AH517_PACK3.jpg]" title="" width="150" alt="" constrain="true" class="jloupeme" /></row>
+</autofill>
+
+<autofill label="Isana_IMG" randomize="0" where="execute,survey,report">
+  <title>Image</title>
+  <row label="r1" autofill="True"><img src="[rel 4047196051641.jpg]" title="" width="150" alt="" constrain="true" class="jloupeme" /></row>
+</autofill>
+
+<autofill label="Nivea_IMG" randomize="0" where="execute,survey,report">
+  <title>Image</title>
+  <row label="r1" autofill="True"><img src="[rel 9005800282480.jpg]" title="" width="150" alt="" constrain="true" class="jloupeme" /></row>
+</autofill>
+
+<autofill label="GREENDOTS" randomize="0" where="execute,survey,report">
+  <title>Real Eye Image for RE</title>
+  <row label="r1" autofill="True"><img src="[rel GREENDOTS.jpg]" title="" height="300" constrain="true" alt="" class="jloupeme" /></row>
+</autofill>
+
+<suspend/>
+
+<block label="Variables" builder:title="Variables">
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Test Category</title>
+    <row label="r1" autofill="True"><strong>Body Wash</strong></row>
+  </autofill>
+
+  <autofill label="Brand" randomize="0" where="execute,survey,report">
+    <title>Test Brand</title>
+    <row label="r1" autofill="True"><strong>Palmolive</strong></row>
+  </autofill>
+
+  <autofill label="Price1" randomize="0" where="execute,survey,report">
+    <title>Price</title>
+    <row label="r1" autofill="Phase.r1"><strong>14.99zł</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>14.99zł</strong></row>
+    <row label="r3" autofill="Phase.r3"><strong>14.99zł</strong></row>
+  </autofill>
+
+  <autofill label="Price2" randomize="0" where="execute,survey,report">
+    <title>Price</title>
+    <row label="r1" autofill="Phase.r1"><strong>6.49zł</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>6.49zł</strong></row>
+    <row label="r3" autofill="Phase.r3"><strong>6.49zł</strong></row>
+  </autofill>
+
+  <autofill label="Price3" randomize="0" where="execute,survey,report">
+    <title>Price</title>
+    <row label="r1" autofill="Phase.r1"><strong>16.99zł</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>16.99zł</strong></row>
+    <row label="r3" autofill="Phase.r3"><strong>16.99zł</strong></row>
+  </autofill>
+
+  <autofill label="ImageText" randomize="0" where="execute,survey,report">
+    <title>Image Text</title>
+    <row label="r1" autofill="Phase.r1"><strong>PHASE 1 = LINE1</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>PHASE 2 = LINE2</strong></row>
+    <row label="r3" autofill="Phase.r3"><strong>PHASE 3 = LINE3</strong></row>
+  </autofill>
+
+  <autofill label="Shelf" randomize="0" where="execute,survey,report">
+    <title>Shelf</title>
+    <row label="r1" autofill="Phase.r1"><strong>PHASE 1 = SHELF1</strong></row>
+    <row label="r2" autofill="Phase.r2"><strong>PHASE 2 = SHELF2</strong></row>
+    <row label="r3" autofill="Phase.r3"><strong>PHASE 3 = SHELF3</strong></row>
+  </autofill>
+
+  <autofill label="Finda" randomize="0" where="execute,survey,report">
+    <title>Findability Text</title>
+    <row label="r1" autofill="1"><strong>PALMOLIVE Naturals Olive &amp; Milk</strong></row>
+  </autofill>
+
+  <autofill label="FindCard" randomize="0" where="execute,survey,report">
+    <title>Findability Text</title>
+    <row label="r1" autofill="1"><strong>F1</strong></row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<block label="AgreementBlock" builder:title="Agree">
+  <html label="HandTablet" where="survey"><b>INTERVIEWER:</b> At this point, hand the tablet over to the respondent. They <b>MUST</b> read the confidentiality agreement on the next screen and electronically sign, <u>themselves</u>, before being eligible to participate in the study.</html>
+
+  <suspend/>
+
+  <text 
+   label="Agreement"
+   optional="0"
+   randomize="0"
+   rowLegend="left"
+   size="25">
+    <title><p style="text-align: left;" class="-PRSBody"><span style="font-size: 14pt;"><strong>Respondent Confidentiality Disclosure Agreement (RCDA)</strong></span><br />In exchange for receiving an incentive for participating in the Research (as defined below), which I hereby acknowledge, and understanding that I am otherwise under no other obligation to participate in this Research, I give my consent to Behaviorally, an independent market research company, and its affiliates and/or business partners to videotape, photograph, and/or record my participation in this consumer research and agree as follows:</p>
+<ol style="text-align: left;">
+<li /><strong>Confidentiality: </strong>I agree to keep confidential and not disclose, copy, transmit, or use for any purpose other than your participation in this study any information or material disclosed or made available to you as part of the study, including about products or packaging that may be disclosed to you directly or indirectly by participating in this study. Any disclosure, copying, transmitting or misuse of any information or material in any form (including hard copy and/or electronic/data) whether intentional or unintentional may subject you to disqualification, and any other remedies available to Behaviorally or its study partners in law or equity.
+<li /><strong>Photo/Video Release &amp;amp; Use:</strong> I understand that as described above certain portions of the research may be audio and/or videotaped. Any recordings in which I appear and other information I provide (e.g., text, video, images or audio) (“Research Data”) may be used by Researcher for, trade presentations, product innovation, and internal training as determined by the Researcher, and I grant to Researcher and its affiliates permission to use that information in such ways.
+<li /><strong>Intellectual Property</strong>: I agree that the Research Data may or may not be used in whole or in part and I assign to Researcher and its affiliates all ideas, developments, discoveries, works of authorship, designs, software, and/or inventions, whether or not patentable, conceived by me as a result of my participation in the research, and understand that Researcher may use them in any manner it sees fit.
+<li /><strong>Data Privacy</strong>: I understand that my personal information, if any is collected, will be used for research purposes only or as otherwise described in this Informed Consent. Researcher is the controller of such data and will take all reasonable steps to ensure my personal data is protected. I will not be identified by name in any publication regarding the research. If I am a resident of the EU, I also have the right to access the personal data Researcher holds about me and, if such personal information is inaccurate or incomplete, to request the rectification, erasure or blocking of such personal data. I understand that I can exercise my data protection rights, which may include accessing, correcting, erasing, or holding processing of personal data, or withdrawing consent to use my personal data, by contacting info@behaviorally.com.
+<li /><strong>Contagious Disease</strong>: You agree that you will follow all appropriate protocols to ensure your safety. To that end, you agree to respect all the social distancing, face covering and other local and State safety, protective and reporting orders and rules in the areas and facility. You acknowledge that in consideration for Behaviorally's decision to permit you to engage in activities on behalf of the Company, you accept the inherent risk of exposure to communicable and contagious diseases such as COVID-19, and acknowledge anyone may carry and spread the virus whether symptomatic or not. By participating, you voluntarily assume the risk that you may be exposed to or infected by such virus or disease and release Behaviorally from all liability for any injury, illness, disability, death, damage, loss, or claim related to or arising out of the COVID-19 virus, provided that Behaviorally does not recklessly or knowingly expose you to the COVID-19 virus.
+<li /><strong>Limitation of Liability</strong>: RESEARCHER EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND AS TO ANY PRODUCTS OR EQUIPMENT USED IN THIS RESEARCH, EXCEPT WHERE PROHIBITED BY LAW. IN NO EVENT WILL RESEARCHER BE LIABLE TO ME FOR ANY DIRECT, INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL, DAMAGES, OR ANY DAMAGES WHATSOEVER, WHETHER IN AN ACTION UNDER CONTRACT, NEGLIGENCE, OR ANY OTHER THEORY, ARISING OUT OF OR IN CONNECTION WITH THE RESEARCH.
+</ol></title>
+    <comment><span style="font-size: 14pt;">I have read the above, and I have had the opportunity to ask questions about this study and those have been answered to my satisfaction. <strong>I voluntarily agree to be a participant and I consent to Researcher processing my personal information in accordance with this document. </strong>I have received a copy of this consent and understand I can withdraw from the study at any time.</span></comment>
+    <row label="r1">Electronic Signature (Full Name):</row>
+    <row label="r2">Person Obtaining Consent Signature:</row>
+  </text>
+
+  <text 
+   label="DateTime"
+   optional="0"
+   randomize="0"
+   size="25"
+   where="execute,survey,report">
+    <title>DateTime</title>
+    <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+    </exec>
+
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="RecruiterName"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title><strong>Recruiter:</strong> Please enter your name below.</title>
+  </text>
+
+  <suspend/>
+
+  <html label="STOP1" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" /><br /><br />Close out the screener on your tablet and bring the respondent to the next station.<br />&amp;nbsp;<br />Use the respondent number below to re-open this link on other devices.<br /><br /><strong>Respondent Number: [pipe: Resp]</strong><br /><br />If needed, tap <b><u><a href="http://emea.focusvision.com/survey/selfserve/1da7/[pipe: JobNumber]">here</a></u></b> to start a new blank screener for a new respondent.</html>
+
+  <suspend/>
+</block>
+
+<block label="Respondent_Info" cond="0" builder:title="Respondent Info">
+  <text 
+   label="Resp_Info"
+   cond="not(gv.isSST())"
+   randomize="0"
+   rowLegend="left"
+   size="25">
+    <title><b><span style="color: red;">INTERVIEWER:</span></b> BE SURE TO FILL IN THE RESPONDENTS CONTACT INFORMATION. THIS INFORMATION WILL BE NEEDED TO COMPLETE THE VALIDATION SHEET</title>
+    <row label="Name">Respondent Name:</row>
+    <row label="Address">Street Address:</row>
+    <row label="City">City:</row>
+    <row label="State" verify="len(2,2)">State:</row>
+    <row label="Zip" verify="zipcode">Zip:</row>
+    <row label="Email" verify="email">Email Address</row>
+    <row label="Phone" verify="phoneUS">Phone:</row>
+    <row label="Screener_Interviewer">Screening Interviewer's Name</row>
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="Rescreen"
+   cond="not(gv.isSST())"
+   optional="0"
+   randomize="0"
+   size="3">
+    <title><b>PLEASE RESCREEN USING THE FOLLOWING INFORMATION. IF THIS INFORMATION IS <u>NOT</u> CORRECT PLEASE SEE YOUR SUPERVISOR <u>BEFORE</u> CONTINUING.<br /><br /></b>
+    <div align="left"><u>Resp ID</u>: [pipe: Resp]<br />
+    <u>Name</u>: ${Resp_Info.Name}<br />
+    <u>Phase</u>: [pipe: Phase]<br />
+
+    <u>Gender</u>: [pipe: Gender]<br />
+    <u>Age</u>: [pipe: Age]<br />
+    <u>Usage</u>: [pipe: Usage]<br />
+    <u>BUMO</u>: [pipe: BUMO]<br />
+    <u>Sample</u>: [pipe: Sample]</div><br /><br /><hr /><b><br /><br />
+    <u>Phone Number</u>: ${Resp_Info.Phone}<br /><br />
+    If you have tested the telephone number and successfully rescreened this respondent, please enter your initials:<br /></b>
+<p></p></title>
+    <row label="Recreening_Interviewer">Initials</row>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.question-text').css('text-align','left');
+]]></style>
+  </text>
+</block>
+
+<suspend/>
+
+<html label="STOP2" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" constrain="true" class="" /><br /><br />Now bring the respondent to the next station.<br />&amp;nbsp;Use the respondent number below to re-open this link on other devices.<br /><br /><strong>Respondent Number: [pipe: Resp]</strong><br /><br />If needed, tap <b><u><a href="http://emea.focusvision.com/survey/selfserve/1da7/[pipe: JobNumber]/Start.htm">here</a></u></b> to bring up a new respondent for rescreening.</html>
+
+<suspend/>
+
+<block label="ET" cond="ETControl.r1" builder:title="Eye Tracking">
+  <html label="ET_CovidInstruct" cond="0" where="survey"><span style="color: red"></span></html>
+
+  <suspend/>
+
+  <html label="DisplayETInfo" where="survey"><u>ET Information</u><br /><br />Your Respondent ID is: <span style="color:red"><strong>[pipe: Resp]</strong></span><br /><br />Your Sequence File name is: <span style="color:red"><strong>[pipe: JobNumber upper]Phase[pipe: Phase]Rot[pipe: Resp]</strong></span></html>
+
+  <suspend/>
+
+  <text 
+   label="ET_Info"
+   optional="0"
+   randomize="0"
+   rowLegend="left"
+   size="25">
+    <title><b><span style="color: rgb(255, 0, 0);">INTERVIEWER:</span> PLEASE ENTER THE FOLLOWING INFORMATION:</b></title>
+    <row label="r1">Behaviorally Eyetracking Interviewer Name</row>
+  </text>
+
+  <suspend/>
+</block>
+
+<note>Only use this MET_Resp_Display block if there is MET</note>
+<block label="MET_Resp_Display" cond="False" builder:title="displayResp">
+  <html label="METCal_IntNotes1" cond="(MET_Complete.r1)" where="survey"><strong>MET CALIBRATION NOTES FOR INTERVIEWER:</strong><br /><br />
+  <div align="left"><ul>
+  <li />BRING RESPONDENT TO CALIBRATION AREA
+  <li />COMPLETE THE MET CALIBRATION
+  <li />ON THE NEXT SCREEN, HOLD THE TABLET UP TO THE RESPONDENT FOR 3 SEC. WHILE IT DISPLAYS THE RESPONDENT NUMBER</ul></div></html>
+
+  <suspend/>
+
+  <html label="RESPNO2" cond="(MET_Complete.r1)" where="survey"><div style="color: red; font-size: 14pt;weight: bold;text-align:center"></div><br /><br /><br /><br /><br /><br /><br /><br />
+    <div style="color: red;font-size: 300px;weight: bold;text-align:center;height:300px" class="respnum">[pipe: Resp]</div><br /><br /><br /><br /></html>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<pipe label="VShelfImage" capture="">
+  <case label="r1" cond="(Phase.r1) or (digitalphase == '1')">SHELF1</case>
+  <case label="r2" cond="(Phase.r2) or (digitalphase == '2')">SHELF2</case>
+  <case label="r3" cond="(Phase.r3) or (digitalphase == '3')">SHELF3</case>
+  <case label="r10" cond="1"/></pipe>
+<pipe label="VShelfCoordinate" capture="">
+  <case label="r1" cond="(Phase.r1) or (digitalphase == '1')">coordinates_1</case>
+  <case label="r2" cond="(Phase.r2) or (digitalphase == '2')">coordinates_2</case>
+  <case label="r3" cond="(Phase.r3) or (digitalphase == '3')">coordinates_3</case>
+  <case label="r10" cond="1"/></pipe>
+<block label="Shopping" builder:title="Shopping">
+  <text 
+   label="Shopping_Interviewer"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title><strong>Shopping Interviewer:</strong> Please enter your name below.</title>
+  </text>
+
+  <suspend/>
+
+  <block label="RealEyeExercise" builder:title="Real Eye Exercise">
+    <suspend/>
+
+    <html label="GreenDot_Intro" where="survey">Hi! Your privacy and comfort are important to us! <br /><br />You will be asked to turn on your webcam on the next page. <br /><br /><strong>Your face and your background will not be recorded.</strong> <br /><br />Just so you know - <u>only</u> the green dot area is being looked at for movement as you engage with our content.<br /><br />[pipe:GREENDOTS]</html>
+
+    <suspend/>
+
+    <note>Programmer NOTE: THIS RE_AreementBlock is for studies in Europe Only and is set FALSE for all other countries</note>
+    <block label="RE_AgreementBlock" cond="Country.FR or Country.UK or Country.DE or Country.IT or Country.ES or Country.PL or Country.NL or Country.CH or Country.AT or Country.DK" builder:title="RE_Agree">
+      <suspend/>
+
+      <radio 
+     label="RE_Agreement"
+     atm1d:large_buttonAlign="center"
+     atm1d:large_contentAlign="center"
+     atm1d:showInput="0"
+     atm1d:small_buttonAlign="center"
+     atm1d:small_contentAlign="center"
+     randomize="0"
+     uses="atm1d.9">
+        <title><p></p>
+<div align="left">
+<ul>
+<li />At one point in the study, you will see images and we would like to use your computer’s webcam to provide data that will allow us to analyze the movement of your eyes and their movement relative to the images you are being shown.
+<li />Please know - <i>We never store any images or videos from your webcam. By analyzing eye behavior, our client Behaviorally can understand more about how people react</i> to various images.
+<li />These data points will be analyzed by computer, and final data output will be mixed with those of other people who take part in this study.
+<li /><i>With your permission, researchers from <strong><span style="color: #0091da;">Behaviorally</span></strong> may view the gaze prediction data to check everything is working correctly</i>. The technology used is provided by our trusted partner <strong>RealEye</strong>. All data is processed and kept securely in accordance with the <strong>RealEye</strong> Privacy Policy (<a href="https://www.realeye.io/about/privacy/" target="_blank" rel="noopener">https://www.realeye.io/about/privacy/</a>).<br /><br />
+</ul>
+</div>
+<p>By consenting, you agree to share the data points reference above. This data will only be used for market research and analysis purposes associated with this Project and will not be shared in any public domain.</p></title>
+        <row label="r1"><b> Yes, I agree and consent to participate</b></row>
+        <row label="r2"><b> No, I do not agree, and I understand that the survey will end at this time</b></row>
+      </radio>
+
+      <suspend/>
+
+      <term label="TERM_RE_Decline" cond="RE_Agreement.r2">Real Eye Declined</term>
+
+      <suspend/>
+    </block>
+
+    <block label="RealEyeSection" builder:title="RealEyeSection">
+      <pipe label="ProjectID" capture="">
+        <case label="r1" cond="True">21da3fe9-9331-48ed-a82d-a1f013d1c563</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="EF_PracticeShelf" capture="">
+        <case label="r1" cond="True">EF_PracticeShelf</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="REShelf" capture="">
+        <case label="r1" cond="Phase.r1">AH517_SHELF1_medium</case>
+        <case label="r2" cond="Phase.r2">AH517_SHELF2_medium</case>
+        <case label="r3" cond="Phase.r3">AH517_SHELF3_medium</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="REPACK" capture="">
+        <case label="r1" cond="Phase.r1">AH517_REALPACK1</case>
+        <case label="r2" cond="Phase.r2">AH517_REALPACK2</case>
+        <case label="r3" cond="Phase.r3">AH517_REALPACK3</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="RECOMPPACK1" capture="">
+        <case label="r1" cond="True">AH517_REALPACKCOMP1</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <pipe label="RECOMPPACK2" capture="">
+        <case label="r1" cond="True">AH517_REALPACKCOMP2</case>
+        <case label="r99" cond="1"/></pipe>
+      <suspend/>
+
+      <html label="placeholderredirect" where="none">Redirect placeholder so that the redirect executes</html>
+
+      <suspend sst="0" url="https://www.realeye.io/pl/test/${pipe.ProjectID}/run?realeye-test-items%5Bfilenames%5D%5B0%5D=${pipe.EF_PracticeShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B1%5D=${pipe.REShelf}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B2%5D=${pipe.RECOMPPACK1}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B3%5D=${pipe.REPACK}.jpg&amp;realeye-test-items%5Bfilenames%5D%5B4%5D=${pipe.RECOMPPACK2}.jpg&amp;participantId=${uuid}?&amp;realeye-tester-tags=bumo-[pipe:UserBUMO],pp-[pipe:UserPP],sample-[pipe:Sample],phase-[pipe:Phase],&amp;realeye-tester-age=[pipe:S_Age],&amp;realeye-tester-gender=[pipe:gender]"/>
+
+      <number 
+     label="RealEye_Status"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Real Eye: Status</title>
+        <exec>
+RE_Status= gv.request.get("ef_status")
+
+RealEye_Status.val = RE_Status
+        </exec>
+
+      </number>
+
+      <number 
+     label="RealEye_Quality"
+     randomize="0"
+     size="3"
+     where="execute,survey,report">
+        <title>Real Eye: Quality</title>
+        <exec>
+RE_Quality= gv.request.get("realeye-tester-quality_grade")
+
+RealEye_Quality.val = RE_Quality
+        </exec>
+
+      </number>
+
+      <text 
+     label="RealEye_ID"
+     randomize="0"
+     size="25"
+     where="execute,survey,report">
+        <title>Real Eye: ID</title>
+        <exec>
+RE_ID= gv.request.get("realeye-tester-id")
+
+RealEye_ID.val = RE_ID
+        </exec>
+
+      </text>
+
+      <suspend/>
+    </block>
+
+    <autofill label="EF_Status" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Status</title>
+      <row label="r1" autofill="RealEye_Status.check('1')">Qualified</row>
+      <row label="r2" autofill="RealEye_Status.check('2')">Skip (I don't want to participate in this test)</row>
+      <row label="r3" autofill="RealEye_Status.check('3')">Quota Full</row>
+      <row label="r4" autofill="RealEye_Status.check('4')">Screen Out</row>
+      <row label="None" autofill="EF_Status.count==0">No Status</row>
+    </autofill>
+
+    <autofill label="EF_Quality" randomize="0" where="execute,survey,report">
+      <title>Real Eye: Quality</title>
+      <row label="net1" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5')">T2B</row>
+      <row label="net2" autofill="RealEye_Quality.check('6') or RealEye_Quality.check('5') or RealEye_Quality.check('4')">T3B</row>
+      <row label="net3" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2')">B2B</row>
+      <row label="net4" autofill="RealEye_Quality.check('1') or RealEye_Quality.check('2') or RealEye_Quality.check('3')">B3B</row>
+      <row label="r1" autofill="RealEye_Quality.check('1')">Very Low</row>
+      <row label="r2" autofill="RealEye_Quality.check('2')">Low</row>
+      <row label="r3" autofill="RealEye_Quality.check('3')">Average</row>
+      <row label="r4" autofill="RealEye_Quality.check('4')">Good</row>
+      <row label="r5" autofill="RealEye_Quality.check('5')">Very Good</row>
+      <row label="r6" autofill="RealEye_Quality.check('6')">Perfect</row>
+      <row label="None" autofill="EF_Quality.count==0">No Quality</row>
+    </autofill>
+
+    <suspend/>
+
+    <textarea 
+    label="RE_Open"
+    cond="EF_Status.r2"
+    height="5"
+    optional="0"
+    randomize="0"
+    width="80">
+      <title>Please help us to understand why you decided to not take part in the webcam eye-tracking test.</title>
+      <comment>Please be as detailed and thorough as possible.</comment>
+      <style name="question.after" wrap="ready"><![CDATA[
+$ ('#_back').hide()
+]]></style>
+    </textarea>
+
+    <suspend/>
+
+    <term label="TERM_RealEye_OptOut" cond="not(EF_Status.r1) and not(gv.isSST())">Real Eye: Skip/ Screen Out/ RealEye OQ</term>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <html label="Shop_Intro" where="survey"><span style="color: red;"><strong>INTERVIEWER:</strong></span> PREPARE TO SHOW SHELF/SHOPPING LIST ACCORDING TO PHASE AS INDICATED BELOW:<br /><br /><strong>[pipe: Shelf]</strong></html>
+
+  <suspend/>
+
+  <html label="ShopTime"><strong><span style="color: red;">INTERVIEWER</span>: HAND RESPONDENT SHOPPING CARD <span style="color: red"><u>IN SHEET PROTECTOR</u></span>.</strong><br /><br />In a moment, I am going to show you a display of <b>body wash</b> that you might find in your local store.  When I do, I’d like you to approach the display and shop for a body wash, as if you were actually in the store making your purchase.<br /><br />Please be aware of the prices you see in this display, and the typical amount that you would spend on body wash during a single trip to the store. Please purchase no more than the quantity you typically purchase on a single shopping trip. You can feel free to take the product off of the shelf for inspection if you like.<br /><br />When you see a product that you would like to purchase, please point to it, and let me know how many you would like to purchase. <br /><br /><strong><span style="color: red;">INTERVIEWER NOTES</span></strong>: <strong>DO NOT READ UNLESS ASKED!</strong><br />__________________________________________________________________<br />
+<div align="left">
+<ul>
+<li />Assume this is a single trip to the store, keeping your budget in mind
+<li />You can purchase as many or as few items as you would like
+
+</ul>
+</div></html>
+
+  <suspend/>
+
+  <checkbox 
+   label="P_PickUp_BackOfPack"
+   grouping="cols"
+   randomize="0">
+    <title><span style="color: #1f497d;">Enter shopping below:</span></title>
+    <validate>
+for row in P_PickUp_BackOfPack.rows:
+        if P_PickUp_BackOfPack.rows[row.index].c2 and not(P_PickUp_BackOfPack.rows[row.index].c1):   error("RESPONDENTS MUST PICK UP A PRODUCT IN ORDER TO LOOK AT THE BACK PANEL.")
+    </validate>
+
+    <row label="A1">A1: HOLIFY, ŻEL POD PRYSZNIC, NAWILŻAJĄCY 500 ML</row>
+    <row label="A2">A2: HOLIFY, ŻEL POD PRYSZNIC, REGENERUJĄCY 500 ML</row>
+    <row label="A3">A3: AA YOU.MMY SKIN, ŻEL POD PRYSZNIC OLEJKOWY, PEACH FIRM 400 ML</row>
+    <row label="A4">A4: AA YOU.MMY SKIN, ŻEL POD PRYSZNIC OLEJKOWY, RASPBERRY ZEN 400 ML</row>
+    <row label="A5">A5: BIELENDA VEGAN SMOOTHIE, ŻEL POD PRYSZNIC, ARBUZ I BANAN 400 G</row>
+    <row label="A6">A6: BIELENDA VEGAN SMOOTHIE, ŻEL POD PRYSZNIC, MELON I ANANAS 400 G</row>
+    <row label="A7">A7: ONLYBIO, ŻEL POD PRYSZNIC, MALINA 400 ML</row>
+    <row label="B1">B1: ISANA, ŻEL POD PRYSZNIC, KREMOWY, PEARL 300 ML</row>
+    <row label="B2">B2: ISANA, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z OLEJEM MAKADAMIA 300 ML</row>
+    <row label="B3">B3: ISANA, ŻEL POD PRYSZNIC, WODA KOKOSOWA 500 ML</row>
+    <row label="B4">B4: ISANA, ŻEL POD PRYSZNIC, KREMOWY, JOGURT I OWOCE 500 ML</row>
+    <row label="C1">C1: ISANA ŻEL POD PRYSZNIC, KREMOWY, OLIWKA 500 ML</row>
+    <row label="C2">C2: ISANA ŻEL POD PRYSZNIC, O ZAPACHU CYTRYNY I LIMONKI 500 ML</row>
+    <row label="C3">C3: ISANA ŻEL POD PRYSZNIC, KREMOWY, MLEKO I MIÓD 500 ML</row>
+    <row label="D1">D1: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, MLEKO I MIÓD 500 ML</row>
+    <row label="D2">D2: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, OLIVE &amp; MILK 500 ML</row>
+    <row label="D3">D3: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, ORCHID &amp; MILK 500 ML</row>
+    <row label="D4">D4: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, COCONUT &amp; MILK 500 ML</row>
+    <row label="E1">E1: PALMOLIVE THERMAL SPA, ŻEL POD PRYSZNIC, Z SOLĄ MORSKĄ I ALOESEM 500 ML</row>
+    <row label="E2">E2: PALMOLIVE AROMA ESSENCE ULTIMATE RELAX, ŻEL POD PRYSZNIC 500 ML</row>
+    <row label="E3">E3: PALMOLIVE THERMAL SPA, ŻEL POD PRYSZNIC, Z OLEJKIEM MAKADAMIA 500 ML</row>
+    <row label="F1">F1: LE PETIT MARSAILLAIS MALINA I PIWONIA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F2">F2: LE PETIT MARSAILLAIS TRUSKAWKA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F3">F3: LE PETIT MARSAILLAIS GRANAT, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F4">F4: LE PETIT MARSAILLAIS BIALA BRZOSKWINIA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F5">F5: LE PETIT MARSEILLAIS OLEJ ARGANOWY I MASŁO SHEA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F6">F6: LE PETIT MARSEILLAIS KWIAT TIARE, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="G1">G1: ADIDAS DEEP CARE, SERUM-ŻEL POD PRYSZNIC DLA KOBIET 400 ML</row>
+    <row label="G2">G2: ADIDAS SKIN DETOX, SERUM-ŻEL POD PRYSZNIC DLA KOBIET 400 ML</row>
+    <row label="G3">G3: ADIDAS ENERGY KICK, SERUM-ŻEL POD PRYSZNIC DLA KOBIET, ENERGETYZUJĄCY 400 ML</row>
+    <row label="G4">G4: FA ALOE VERA YOGHURT, ŻEL POD PRYSZNIC 400ML</row>
+    <row label="G5">G5: FA MAGIC OIL PINK JASMINE, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="G6">G6: FA COCONUT MILK, ŻEL POD PRYSZNIC, KREMOWY, MLEKO KOKOSOWE 400 ML</row>
+    <row label="G7">G7: FA BLUEBERRY YOGHURT, ŻEL POD PRYSZNIC 400ML</row>
+    <row label="H1">H1: YOPE, NATURALNY ŻEL POD PRYSZNIC, MANDARYNKA I MALINA 400 ML</row>
+    <row label="H2">H2: YOPE, NATURALNY ŻEL POD PRYSZNIC, BEZ I WANILIA 400 ML</row>
+    <row label="H3">H3: YOPE WOOD, ŻEL POD PRYSZNIC, DRZEWO SANDAŁOWE 400 ML</row>
+    <row label="H4">H4: YOPE WOOD, ŻEL POD PRYSZNIC, DRZEWO GWAJAKOWE 400 ML</row>
+    <row label="H5">H5: PERFECTA BUBBLE TEA, ŻEL POD PRYSZNIC, EGZ. OWOCE I HERBATA 400 G</row>
+    <row label="H6">H6: BIELENDA SHOWER COCTAIL, ŻEL POD PRYSZNIC, BRZOSKWINIA I KOMBUCHA 400 ML</row>
+    <row label="H7">H7: BIELENDA SHOWER COCTAIL, ŻEL POD PRYSZNIC, MATCHA I BORÓWKI 400 ML</row>
+    <row label="I1">I1: NIVEA CREAM SMOOTH, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z MASŁEM SHEA 500 ML</row>
+    <row label="I2">I2: NIVEA DIAMOND &amp; ARGAN OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM ARGANOWYM 500 ML</row>
+    <row label="I3">I3: NIVEA CREAM CARE, ŻEL POD PRYSZNIC, PIELEGNUJĄCY, KREMOWY 500 ML</row>
+    <row label="J1">J1: NIVEA ROSE &amp; ALMOND OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM MIGDAŁOWYM 500 ML</row>
+    <row label="J2">J2: NIVEA ORANGE &amp; AVOCADO OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM Z AWOKADO 500 ML</row>
+    <row label="J3">J3: NIVEA STAR FRUIT, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z OLEJKIEM MONOI 500 ML</row>
+    <row label="J4">J4: NIVEA CREAM SOFT, ŻEL POD PRYSZNIC, PIELEGNUJĄCY, KREMOWY, 500 ML</row>
+    <row label="K1">K1: DOVE DEEPLY NOURISHING, ŻEL POD PRYSZNIC NAWILŻAJĄCO - REGENERUJĄCY 225 ML</row>
+    <row label="K2">K2: DOVE ADVANCED CARE ANTI-STRESS, ŻEL POD PRYSZNIC 225 ML</row>
+    <row label="K3">K3: DOVE NOURISHING SILK, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="K4">K4: DOVE DEEPLY NOURISHING, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="K5">K5: DOVE REVIVING, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="L1">L1: DOVE HYDRATE, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="L2">L2: DOVE PETAL SOFT, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="L3">L3: DOVE SILKY VELVET, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="L4">L4: DOVE GENTLE PAMPER, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="M1">M1: ZIAJA OLIWKOWY ŻEL POD PRYSZNIC 500ML</row>
+    <row label="M2">M2: ZIAJA MASLO KAKAOWE, KREMOWY ŻEL MYJĄCY 500ML</row>
+    <row label="M3">M3: ZIAJA KOZIE MLEKO, KREMOWY ŻEL MYJĄCY 500ML</row>
+    <row label="M4">M4: ZIAJA ŻEL POD PRYSZNIC, MIĘTA HERBACIANA 500 ML</row>
+    <row label="M5">M5: ZIAJA ŻEL POD PRYSZNIC, FIGA WŁOSKA 500 ML</row>
+    <row label="M6">M6: ZIAJA ŻEL POD PRYSZNIC, KSIĘŻYCOWA PITAJA 500 ML</row>
+    <row label="N1">N1: BAMBINO RODZINA, ŻEL POD PRYSZNIC, KREMOWY, DLA DOROSŁYCH I DLA DZIECI 400 ML</row>
+    <row label="N2">N2: BAMBINO RODZINA, ŻEL POD PRYSZNIC, DLA DOROSŁYCH I DLA DZIECI, MIRABELKA 400 ML</row>
+    <row label="N3">N3: LUKSJA SILK CARE, ŻEL POD PRYSZNIC, KREMOWY, KOKOS I GARDENIA 500 ML</row>
+    <row label="N4">N4: LUKSJA SILK CARE, ŻEL POD PRYSZNIC, KREMOWY, ALOES I HIBISKUS 500 ML</row>
+    <row label="N5">N5: APART CREAMY CARE, ŻEL POD PRYSZNIC, KREMOWY, NAWILŻENIE, JAŚMIN 500 ML</row>
+    <row label="N6">N6: APART CREAMY CARE, ŻEL POD PRYSZNIC, KREMOWY, NAWILŻENIE, FIOŁEK 500 ML</row>
+    <col label="c1">3D Shelf Product Picked Up</col>
+    <col label="c2">Looked at Back of Pack</col>
+  </checkbox>
+
+  <number 
+   label="P_QuantityPurchased"
+   randomize="0"
+   rightOf="P_PickUp_BackOfPack"
+   size="4"
+   verify="range(1,99)">
+    <title><span style="color: #1f497d;">Enter shopping below:</span></title>
+    <comment>Please enter a number.</comment>
+    <validate>
+if P_QuantityPurchased.sum == 0:	error(res.ShoppingError)
+for row in P_QuantityPurchased.rows:
+        if P_QuantityPurchased.rows[row.index].c3.ival gt 0 and not(P_PickUp_BackOfPack.rows[row.index].c1):    error("RESPONDENT MUST PICK UP A PRODUCT IN ORDER TO PURCHASE IT")
+    </validate>
+
+    <row label="A1">A1: HOLIFY, ŻEL POD PRYSZNIC, NAWILŻAJĄCY 500 ML</row>
+    <row label="A2">A2: HOLIFY, ŻEL POD PRYSZNIC, REGENERUJĄCY 500 ML</row>
+    <row label="A3">A3: AA YOU.MMY SKIN, ŻEL POD PRYSZNIC OLEJKOWY, PEACH FIRM 400 ML</row>
+    <row label="A4">A4: AA YOU.MMY SKIN, ŻEL POD PRYSZNIC OLEJKOWY, RASPBERRY ZEN 400 ML</row>
+    <row label="A5">A5: BIELENDA VEGAN SMOOTHIE, ŻEL POD PRYSZNIC, ARBUZ I BANAN 400 G</row>
+    <row label="A6">A6: BIELENDA VEGAN SMOOTHIE, ŻEL POD PRYSZNIC, MELON I ANANAS 400 G</row>
+    <row label="A7">A7: ONLYBIO, ŻEL POD PRYSZNIC, MALINA 400 ML</row>
+    <row label="B1">B1: ISANA, ŻEL POD PRYSZNIC, KREMOWY, PEARL 300 ML</row>
+    <row label="B2">B2: ISANA, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z OLEJEM MAKADAMIA 300 ML</row>
+    <row label="B3">B3: ISANA, ŻEL POD PRYSZNIC, WODA KOKOSOWA 500 ML</row>
+    <row label="B4">B4: ISANA, ŻEL POD PRYSZNIC, KREMOWY, JOGURT I OWOCE 500 ML</row>
+    <row label="C1">C1: ISANA ŻEL POD PRYSZNIC, KREMOWY, OLIWKA 500 ML</row>
+    <row label="C2">C2: ISANA ŻEL POD PRYSZNIC, O ZAPACHU CYTRYNY I LIMONKI 500 ML</row>
+    <row label="C3">C3: ISANA ŻEL POD PRYSZNIC, KREMOWY, MLEKO I MIÓD 500 ML</row>
+    <row label="D1">D1: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, MLEKO I MIÓD 500 ML</row>
+    <row label="D2">D2: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, OLIVE &amp; MILK 500 ML</row>
+    <row label="D3">D3: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, ORCHID &amp; MILK 500 ML</row>
+    <row label="D4">D4: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, COCONUT &amp; MILK 500 ML</row>
+    <row label="E1">E1: PALMOLIVE THERMAL SPA, ŻEL POD PRYSZNIC, Z SOLĄ MORSKĄ I ALOESEM 500 ML</row>
+    <row label="E2">E2: PALMOLIVE AROMA ESSENCE ULTIMATE RELAX, ŻEL POD PRYSZNIC 500 ML</row>
+    <row label="E3">E3: PALMOLIVE THERMAL SPA, ŻEL POD PRYSZNIC, Z OLEJKIEM MAKADAMIA 500 ML</row>
+    <row label="F1">F1: LE PETIT MARSAILLAIS MALINA I PIWONIA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F2">F2: LE PETIT MARSAILLAIS TRUSKAWKA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F3">F3: LE PETIT MARSAILLAIS GRANAT, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F4">F4: LE PETIT MARSAILLAIS BIALA BRZOSKWINIA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F5">F5: LE PETIT MARSEILLAIS OLEJ ARGANOWY I MASŁO SHEA, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="F6">F6: LE PETIT MARSEILLAIS KWIAT TIARE, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="G1">G1: ADIDAS DEEP CARE, SERUM-ŻEL POD PRYSZNIC DLA KOBIET 400 ML</row>
+    <row label="G2">G2: ADIDAS SKIN DETOX, SERUM-ŻEL POD PRYSZNIC DLA KOBIET 400 ML</row>
+    <row label="G3">G3: ADIDAS ENERGY KICK, SERUM-ŻEL POD PRYSZNIC DLA KOBIET, ENERGETYZUJĄCY 400 ML</row>
+    <row label="G4">G4: FA ALOE VERA YOGHURT, ŻEL POD PRYSZNIC 400ML</row>
+    <row label="G5">G5: FA MAGIC OIL PINK JASMINE, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="G6">G6: FA COCONUT MILK, ŻEL POD PRYSZNIC, KREMOWY, MLEKO KOKOSOWE 400 ML</row>
+    <row label="G7">G7: FA BLUEBERRY YOGHURT, ŻEL POD PRYSZNIC 400ML</row>
+    <row label="H1">H1: YOPE, NATURALNY ŻEL POD PRYSZNIC, MANDARYNKA I MALINA 400 ML</row>
+    <row label="H2">H2: YOPE, NATURALNY ŻEL POD PRYSZNIC, BEZ I WANILIA 400 ML</row>
+    <row label="H3">H3: YOPE WOOD, ŻEL POD PRYSZNIC, DRZEWO SANDAŁOWE 400 ML</row>
+    <row label="H4">H4: YOPE WOOD, ŻEL POD PRYSZNIC, DRZEWO GWAJAKOWE 400 ML</row>
+    <row label="H5">H5: PERFECTA BUBBLE TEA, ŻEL POD PRYSZNIC, EGZ. OWOCE I HERBATA 400 G</row>
+    <row label="H6">H6: BIELENDA SHOWER COCTAIL, ŻEL POD PRYSZNIC, BRZOSKWINIA I KOMBUCHA 400 ML</row>
+    <row label="H7">H7: BIELENDA SHOWER COCTAIL, ŻEL POD PRYSZNIC, MATCHA I BORÓWKI 400 ML</row>
+    <row label="I1">I1: NIVEA CREAM SMOOTH, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z MASŁEM SHEA 500 ML</row>
+    <row label="I2">I2: NIVEA DIAMOND &amp; ARGAN OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM ARGANOWYM 500 ML</row>
+    <row label="I3">I3: NIVEA CREAM CARE, ŻEL POD PRYSZNIC, PIELEGNUJĄCY, KREMOWY 500 ML</row>
+    <row label="J1">J1: NIVEA ROSE &amp; ALMOND OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM MIGDAŁOWYM 500 ML</row>
+    <row label="J2">J2: NIVEA ORANGE &amp; AVOCADO OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM Z AWOKADO 500 ML</row>
+    <row label="J3">J3: NIVEA STAR FRUIT, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z OLEJKIEM MONOI 500 ML</row>
+    <row label="J4">J4: NIVEA CREAM SOFT, ŻEL POD PRYSZNIC, PIELEGNUJĄCY, KREMOWY, 500 ML</row>
+    <row label="K1">K1: DOVE DEEPLY NOURISHING, ŻEL POD PRYSZNIC NAWILŻAJĄCO - REGENERUJĄCY 225 ML</row>
+    <row label="K2">K2: DOVE ADVANCED CARE ANTI-STRESS, ŻEL POD PRYSZNIC 225 ML</row>
+    <row label="K3">K3: DOVE NOURISHING SILK, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="K4">K4: DOVE DEEPLY NOURISHING, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="K5">K5: DOVE REVIVING, ŻEL POD PRYSZNIC 400 ML</row>
+    <row label="L1">L1: DOVE HYDRATE, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="L2">L2: DOVE PETAL SOFT, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="L3">L3: DOVE SILKY VELVET, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="L4">L4: DOVE GENTLE PAMPER, ŻEL POD PRYSZNIC 450 ML</row>
+    <row label="M1">M1: ZIAJA OLIWKOWY ŻEL POD PRYSZNIC 500ML</row>
+    <row label="M2">M2: ZIAJA MASLO KAKAOWE, KREMOWY ŻEL MYJĄCY 500ML</row>
+    <row label="M3">M3: ZIAJA KOZIE MLEKO, KREMOWY ŻEL MYJĄCY 500ML</row>
+    <row label="M4">M4: ZIAJA ŻEL POD PRYSZNIC, MIĘTA HERBACIANA 500 ML</row>
+    <row label="M5">M5: ZIAJA ŻEL POD PRYSZNIC, FIGA WŁOSKA 500 ML</row>
+    <row label="M6">M6: ZIAJA ŻEL POD PRYSZNIC, KSIĘŻYCOWA PITAJA 500 ML</row>
+    <row label="N1">N1: BAMBINO RODZINA, ŻEL POD PRYSZNIC, KREMOWY, DLA DOROSŁYCH I DLA DZIECI 400 ML</row>
+    <row label="N2">N2: BAMBINO RODZINA, ŻEL POD PRYSZNIC, DLA DOROSŁYCH I DLA DZIECI, MIRABELKA 400 ML</row>
+    <row label="N3">N3: LUKSJA SILK CARE, ŻEL POD PRYSZNIC, KREMOWY, KOKOS I GARDENIA 500 ML</row>
+    <row label="N4">N4: LUKSJA SILK CARE, ŻEL POD PRYSZNIC, KREMOWY, ALOES I HIBISKUS 500 ML</row>
+    <row label="N5">N5: APART CREAMY CARE, ŻEL POD PRYSZNIC, KREMOWY, NAWILŻENIE, JAŚMIN 500 ML</row>
+    <row label="N6">N6: APART CREAMY CARE, ŻEL POD PRYSZNIC, KREMOWY, NAWILŻENIE, FIOŁEK 500 ML</row>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.question-text').css('text-align','left');
+]]></style>
+    <col label="c3"># Purchased</col>
+  </number>
+
+  <suspend/>
+
+  <number 
+   label="O_PurchaseDuration"
+   optional="0"
+   randomize="0"
+   size="2">
+    <title><b>Enter shopping duration<br /></b></title>
+    <comment>Enter one digit in each box (including zeros).</comment>
+    <validate>
+if this.c1.ival+this.c2.ival+this.c3.ival+this.c4.ival+this.c5.ival==0:
+  error("CZAS ZAKUPÓW MUSI BYĆ WIĘKSZY NIŻ 0 SEKUND")
+    </validate>
+
+    <col label="c1" groups="g2" verify="range(0,9)">&amp;nbsp;</col>
+    <col label="c2" groups="g3" verify="range(0,5)">&amp;nbsp;</col>
+    <col label="c3" groups="g3" verify="range(0,9)">&amp;nbsp;</col>
+    <col label="c4" groups="g4" verify="range(0,9)">&amp;nbsp;</col>
+    <col label="c5" groups="g4" verify="range(0,9)">&amp;nbsp;</col>
+    <group label="g1" builder:axis="col" builder:default="1" where="none">no group</group>
+    <group label="g2" builder:axis="col">Minutes</group>
+    <group label="g3" builder:axis="col">Seconds</group>
+    <group label="g4" builder:axis="col">Hundredths</group>
+  </number>
+
+  <suspend/>
+
+  <block label="DoNotModifyTime" builder:title="Do Not Modify Time">
+    <float 
+    label="ShopTimeSeconds"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Shopping Time (Seconds)</title>
+      <exec>
+ShopTimeSeconds.val = O_PurchaseDuration.c1.ival*60 + O_PurchaseDuration.c2.ival*10.0 + O_PurchaseDuration.c3.ival*1.0 + O_PurchaseDuration.c4.ival/10.0 + O_PurchaseDuration.c5.ival/100.0
+      </exec>
+
+    </float>
+  </block>
+
+  <block label="DoNotModify" builder:title="Do Not Modify">
+    <checkbox 
+    label="P_PickUpTotal"
+    atleast="1"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Picked Up</title>
+      <exec>
+if P_QuantityPurchased.any:
+        for eachRow in P_PickUp_BackOfPack.rows:
+                if P_PickUp_BackOfPack.rows[eachRow.index].c1:
+                        P_PickUpTotal.rows[eachRow.index].val = 1
+                else:
+                        P_PickUpTotal.rows[eachRow.index].val = 0
+      </exec>
+
+    </checkbox>
+
+    <checkbox 
+    label="P_BackPanelTotal"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Back Panel</title>
+      <exec>
+if P_QuantityPurchased.any:
+        for eachRow in P_PickUp_BackOfPack.rows:
+                if P_PickUp_BackOfPack.rows[eachRow.index].c2:
+                        P_BackPanelTotal.rows[eachRow.index].val = 1
+                else:
+                        P_BackPanelTotal.rows[eachRow.index].val = 0
+      </exec>
+
+    </checkbox>
+
+    <checkbox 
+    label="P_Shopping"
+    atleast="1"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Products Bought</title>
+      <exec>
+if P_QuantityPurchased.any:
+	for eachRow in P_QuantityPurchased.rows:
+  		if eachRow.ival gt 0:
+			P_Shopping.rows[eachRow.index].val = 1 
+  		else:
+  			P_Shopping.rows[eachRow.index].val = 0
+      </exec>
+
+    </checkbox>
+
+    <number 
+    label="P_Total_Products"
+    optional="0"
+    randomize="0"
+    size="3"
+    where="execute,survey,report">
+      <title>Total Products Purchased</title>
+      <exec>
+P_Total_Products.val = sum([int(r.val) for r in P_QuantityPurchased.rows if r.val])
+      </exec>
+
+    </number>
+
+    <suspend/>
+
+    <autofill label="vProductsBought" where="execute,survey,report">
+      <title>TestBrand Purchased/Bought</title>
+      <row label="TB" autofill="P_Shopping.D1 or P_Shopping.D2 or P_Shopping.D3 or P_Shopping.D4 or P_Shopping.E1 or P_Shopping.E2 or P_Shopping.E3">Palmolive Purchased</row>
+      <row label="No" autofill="vProductsBought.count==0">TestBrand NOT Purchased</row>
+    </autofill>
+
+    <autofill label="vProductsBought_Isana" where="execute,survey,report">
+      <title>TestBrand Purchased/Bought</title>
+      <row label="r1" autofill="P_Shopping.B1 or P_Shopping.B2 or P_Shopping.B3 or P_Shopping.B4 or P_Shopping.C1 or P_Shopping.C2 or P_Shopping.C3">Isana Purchased</row>
+      <row label="r2" autofill="vProductsBought_Isana.count==0">Isana NOT Purchased</row>
+    </autofill>
+
+    <autofill label="vProductsBought_Nivea" where="execute,survey,report">
+      <title>TestBrand Purchased/Bought</title>
+      <row label="r1" autofill="P_Shopping.I1 or P_Shopping.I2 or P_Shopping.I3 or P_Shopping.J1 or P_Shopping.J2 or P_Shopping.J3 or P_Shopping.J4">Nivea Purchased</row>
+      <row label="r2" autofill="vProductsBought_Nivea.count==0">Nivea NOT Purchased</row>
+    </autofill>
+  </block>
+
+  <suspend/>
+
+  <radio 
+   label="EaseofShopping1"
+   cond="vProductsBought.TB"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>HAND RESPONDENT CARD F2.</b><br /><br />How easy or difficult do you think it was to shop the Palmolive products?</title>
+    <row label="r1">Very easy to shop</row>
+    <row label="r2">Somewhat easy to shop</row>
+    <row label="r3">Neither easy nor difficult to shop</row>
+    <row label="r4">Somewhat difficult to shop</row>
+    <row label="r5">Very difficult to shop</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="EaseofShopping2"
+   cond="vProductsBought_Isana.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>HAND RESPONDENT CARD F2.</b><br /><br />How easy or difficult do you think it was to shop these Isana products?</title>
+    <row label="r1">Very easy to shop</row>
+    <row label="r2">Somewhat easy to shop</row>
+    <row label="r3">Neither easy nor difficult to shop</row>
+    <row label="r4">Somewhat difficult to shop</row>
+    <row label="r5">Very difficult to shop</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="EaseofShopping3"
+   cond="vProductsBought_Nivea.r1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>HAND RESPONDENT CARD F2.</b><br /><br />How easy or difficult do you think it was to shop these Nivea products?</title>
+    <row label="r1">Very easy to shop</row>
+    <row label="r2">Somewhat easy to shop</row>
+    <row label="r3">Neither easy nor difficult to shop</row>
+    <row label="r4">Somewhat difficult to shop</row>
+    <row label="r5">Very difficult to shop</row>
+  </radio>
+
+  <suspend/>
+
+  <html label="TURN_AWAY" where="survey"><strong><span style="color: red;">INTERVIEWER:</span> ONCE SHOPPING IS COMPLETE, PLEASE TURN RESPONDENT AWAY FROM SHELF.</strong></html>
+</block>
+
+<suspend/>
+
+<block label="FindabilitySection" builder:title="Findability">
+  <suspend/>
+
+  <html label="Finda_NoShelf" where="survey"><strong><span style="color: red;">INTERVIEWER</span>: DO NOT RE-SHOW THE SHELF UNTIL INSTRUCTIONS HAVE BEEN READ AND RESPONDENT IS READY TO BEGIN!</strong></html>
+
+  <suspend/>
+
+  <text 
+   label="FindTime"
+   randomize="0"
+   size="10">
+    <title><strong><span style="color: red;">INTERVIEWER</span>: HAND RESPONDENT CARD [pipe: FindCard]</strong>.<br /><br />
+<div align="left">Now I am going to show you the display of <b>body wash</b> products again. This time, you will be looking for <strong><u>one particular item</u></strong>.<br /><br />
+I am going to count down and then I would like you to turn around, walk up to the display, and find [pipe: Finda].</div>
+<br /><br /><strong>IF RESPONDENT UNDERSTANDS CONTINUE WITH THE STEPS BELOW:</strong>
+<div align="left">
+<ul>
+<li /><strong><span style="color: red;">INTERVIEWER</span>:</strong> Ready? 3-2-1 GO
+<li />TAP "START" AS SHELF IS SHOWN
+<li />WHEN RESPONDENT FINDS THE SPECIFIC PRODUCT, TAP "STOP" AND CHECK WHICH PRODUCT THEY ARE POINTING TO
+</ul>
+</div></title>
+    <validate>
+if this.val == "":	error("You must use the stopwatch to record the time.")
+    </validate>
+
+    <style name="question.element"><![CDATA[
+<link rel='stylesheet' type='text/css' href='[rel Stop.css]'/>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+        <script type='text/javascript' src='[rel stop.js]'></script>
+        <script type='text/javascript' src='[rel StopWatch.js]'></script>
+      	<div class="watch"><img src="[rel Stopwatch.jpg]"/></div>
+		<div class="disp"><input type="text" name="$(name)" id="disp" value="$(value)" size="$(size)" class="text" readonly/></div>
+       	<div class="green" id="startbutton" onClick="ss()"><br/><strong>START</strong></div>
+]]></style>
+    <style name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="timer" value="$(value)"
+size="$(size)" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="FindLetter"
+   optional="0"
+   randomize="0"
+   rowLegend="left"
+   size="2">
+    <title><strong>INTERVIEWER:</strong> ENTER THE LETTER AND NUMBER OF THE PRODUCT FOUND.</title>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(name)" value="$(value)" size="$(size)" class="input text" style="font-size:40px"/>
+]]></style>
+    <col label="Letter">Letter</col>
+  </text>
+
+  <text 
+   label="FindNumber"
+   keepWith="FindLetter"
+   optional="0"
+   randomize="0"
+   rightOf="FindLetter"
+   rowLegend="right"
+   size="2"
+   verify="digits">
+    <title><strong>INTERVIEWER:</strong> ENTER THE LETTER AND NUMBER OF THE PRODUCT FOUND.</title>
+    <validate>
+correct = 0
+ans = FindLetter.val.upper() + str(FindNumber.val)
+for i, row in enumerate(P_Shopping.rows[::-1]):
+	if P_Shopping[row].text[:len(ans)] == ans and P_Shopping[row].text[len(ans)].isdigit()==False:
+		correct = 1
+if correct == 0:	error("THIS LETTER/NUMBER COMBINATION DOES NOT EXIST")
+    </validate>
+
+    <col label="Number">Number</col>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(name)" value="$(value)" size="$(size)" class="input text" style="font-size:40px"/>
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <block label="DoNotModify2" builder:title="Do Not Modify">
+    <float 
+    label="FindTimeSeconds"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Time in seconds</title>
+      <exec>
+if FindTime.val[-2:].isdigit() == True:
+             FindTimeSeconds.val=int(FindTime.val[0])*60+float(FindTime.val[2:])
+      </exec>
+
+    </float>
+
+    <radio 
+    label="FindProduct"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Product Found</title>
+      <exec>
+ans = FindLetter.val.upper() + str(FindNumber.val)
+for i, row in enumerate(FindProduct.rows[::-1]):
+	if FindProduct[row].text[:len(ans)] == ans and FindProduct[row].text[len(ans)].isdigit()==False:
+  		FindProduct.val = len(FindProduct.rows)-1-i
+      </exec>
+
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="vFindCorrect"
+    randomize="0"
+    where="execute,survey,report">
+      <title><b>Correct Product Found?</b></title>
+      <exec>
+if (FindLetter.val.lower() == "d" and FindNumber.val == "2"):
+  vFindCorrect.val = 0
+else:
+  vFindCorrect.val = 1
+      </exec>
+
+      <row label="r1">Correct</row>
+      <row label="r2">Incorrect</row>
+    </radio>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <radio 
+   label="ConfirmFind"
+   cond="FindProduct.any"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><strong>INTERVIEWER</strong>: YOU HAVE ENTERED THAT THE RESPONDENT LOCATED<br /><strong><span style="font-size: 40px; color: red;">[pipe: FindProduct]</span></strong><br />IS THAT WHAT YOU INTENDED TO ENTER?</title>
+    <validate>
+if this.r2:  error(res.ConfirmFindError)
+    </validate>
+
+    <row label="r1">Yes</row>
+    <row label="r2">No</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="F_EaseOfFind"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title><b>HAND RESPONDENT CARD F3.</b><br /><br />How easy or difficult do you think it was to find the product?<br /><br />[pipe: SHELF_IMG]</title>
+    <row label="r1" value="5">Very easy to find</row>
+    <row label="r2" value="4">Somewhat easy to find</row>
+    <row label="r3" value="3">Neither easy nor difficult to find</row>
+    <row label="r4" value="2">Somewhat difficult to find</row>
+    <row label="r5" value="1">Very difficult to find</row>
+  </radio>
+
+  <suspend/>
+
+  <block label="DoNotModifyDataBase" builder:title="Do Not Modify - for DataBaseCollection">
+    <radio 
+    label="vEaseOfFind"
+    cond="vFindCorrect.r1"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Ease of Find - filtered by correctly located - collapsed</title>
+      <exec>
+vEaseOfFind.val=F_EaseOfFind.val
+      </exec>
+
+      <row label="r1" value="5">Very easy to find</row>
+      <row label="r2" value="4">Somewhat easy to find</row>
+      <row label="r3" value="3">Neither easy nor difficult to find</row>
+      <row label="r4" value="2">Somewhat difficult to find</row>
+      <row label="r5" value="1">Very difficult to find</row>
+    </radio>
+
+    <float 
+    label="vFindTimeSeconds"
+    cond="vFindCorrect.r1"
+    optional="0"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Time in seconds - Filtered by Correctly located - collapsed</title>
+      <exec>
+if vFindCorrect.r1:        
+	vFindTimeSeconds.val = FindTimeSeconds.ival
+      </exec>
+
+    </float>
+  </block>
+
+  <suspend/>
+
+  <loop label="DoNotModify3" builderSource="Finda" vars="Finda">
+    <title>Do Not Modify</title>
+    <block label="FindLoop" builder:title="default loop block">
+      <float 
+     label="FindTimeSeconds_[loopvar: label]"
+     cond="vFindCorrect.r1"
+     optional="0"
+     randomize="0"
+     where="execute,survey,report">
+        <title>(Correct product found)<br /><br />Time in seconds</title>
+        <exec>
+if vFindCorrect.r1:        
+	FindTimeSeconds_[loopvar: label].val = FindTimeSeconds.ival
+        </exec>
+
+      </float>
+
+      <radio 
+     label="FindProduct_[loopvar: label]"
+     optional="1"
+     randomize="0"
+     where="execute,survey,report">
+        <title>Product Found</title>
+        <exec>
+FindProduct_[loopvar: label].val=FindProduct.val
+        </exec>
+
+        <row label="A1">A1: HOLIFY, ŻEL POD PRYSZNIC, NAWILŻAJĄCY 500 ML</row>
+        <row label="A2">A2: HOLIFY, ŻEL POD PRYSZNIC, REGENERUJĄCY 500 ML</row>
+        <row label="A3">A3: AA YOU.MMY SKIN, ŻEL POD PRYSZNIC OLEJKOWY, PEACH FIRM 400 ML</row>
+        <row label="A4">A4: AA YOU.MMY SKIN, ŻEL POD PRYSZNIC OLEJKOWY, RASPBERRY ZEN 400 ML</row>
+        <row label="A5">A5: BIELENDA VEGAN SMOOTHIE, ŻEL POD PRYSZNIC, ARBUZ I BANAN 400 G</row>
+        <row label="A6">A6: BIELENDA VEGAN SMOOTHIE, ŻEL POD PRYSZNIC, MELON I ANANAS 400 G</row>
+        <row label="A7">A7: ONLYBIO, ŻEL POD PRYSZNIC, MALINA 400 ML</row>
+        <row label="B1">B1: ISANA, ŻEL POD PRYSZNIC, KREMOWY, PEARL 300 ML</row>
+        <row label="B2">B2: ISANA, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z OLEJEM MAKADAMIA 300 ML</row>
+        <row label="B3">B3: ISANA, ŻEL POD PRYSZNIC, WODA KOKOSOWA 500 ML</row>
+        <row label="B4">B4: ISANA, ŻEL POD PRYSZNIC, KREMOWY, JOGURT I OWOCE 500 ML</row>
+        <row label="C1">C1: ISANA ŻEL POD PRYSZNIC, KREMOWY, OLIWKA 500 ML</row>
+        <row label="C2">C2: ISANA ŻEL POD PRYSZNIC, O ZAPACHU CYTRYNY I LIMONKI 500 ML</row>
+        <row label="C3">C3: ISANA ŻEL POD PRYSZNIC, KREMOWY, MLEKO I MIÓD 500 ML</row>
+        <row label="D1">D1: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, MLEKO I MIÓD 500 ML</row>
+        <row label="D2">D2: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, OLIVE &amp; MILK 500 ML</row>
+        <row label="D3">D3: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, ORCHID &amp; MILK 500 ML</row>
+        <row label="D4">D4: PALMOLIVE NATURALS, ŻEL POD PRYSZNIC, KREMOWY, COCONUT &amp; MILK 500 ML</row>
+        <row label="E1">E1: PALMOLIVE THERMAL SPA, ŻEL POD PRYSZNIC, Z SOLĄ MORSKĄ I ALOESEM 500 ML</row>
+        <row label="E2">E2: PALMOLIVE AROMA ESSENCE ULTIMATE RELAX, ŻEL POD PRYSZNIC 500 ML</row>
+        <row label="E3">E3: PALMOLIVE THERMAL SPA, ŻEL POD PRYSZNIC, Z OLEJKIEM MAKADAMIA 500 ML</row>
+        <row label="F1">F1: LE PETIT MARSAILLAIS MALINA I PIWONIA, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="F2">F2: LE PETIT MARSAILLAIS TRUSKAWKA, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="F3">F3: LE PETIT MARSAILLAIS GRANAT, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="F4">F4: LE PETIT MARSAILLAIS BIALA BRZOSKWINIA, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="F5">F5: LE PETIT MARSEILLAIS OLEJ ARGANOWY I MASŁO SHEA, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="F6">F6: LE PETIT MARSEILLAIS KWIAT TIARE, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="G1">G1: ADIDAS DEEP CARE, SERUM-ŻEL POD PRYSZNIC DLA KOBIET 400 ML</row>
+        <row label="G2">G2: ADIDAS SKIN DETOX, SERUM-ŻEL POD PRYSZNIC DLA KOBIET 400 ML</row>
+        <row label="G3">G3: ADIDAS ENERGY KICK, SERUM-ŻEL POD PRYSZNIC DLA KOBIET, ENERGETYZUJĄCY 400 ML</row>
+        <row label="G4">G4: FA ALOE VERA YOGHURT, ŻEL POD PRYSZNIC 400ML</row>
+        <row label="G5">G5: FA MAGIC OIL PINK JASMINE, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="G6">G6: FA COCONUT MILK, ŻEL POD PRYSZNIC, KREMOWY, MLEKO KOKOSOWE 400 ML</row>
+        <row label="G7">G7: FA BLUEBERRY YOGHURT, ŻEL POD PRYSZNIC 400ML</row>
+        <row label="H1">H1: YOPE, NATURALNY ŻEL POD PRYSZNIC, MANDARYNKA I MALINA 400 ML</row>
+        <row label="H2">H2: YOPE, NATURALNY ŻEL POD PRYSZNIC, BEZ I WANILIA 400 ML</row>
+        <row label="H3">H3: YOPE WOOD, ŻEL POD PRYSZNIC, DRZEWO SANDAŁOWE 400 ML</row>
+        <row label="H4">H4: YOPE WOOD, ŻEL POD PRYSZNIC, DRZEWO GWAJAKOWE 400 ML</row>
+        <row label="H5">H5: PERFECTA BUBBLE TEA, ŻEL POD PRYSZNIC, EGZ. OWOCE I HERBATA 400 G</row>
+        <row label="H6">H6: BIELENDA SHOWER COCTAIL, ŻEL POD PRYSZNIC, BRZOSKWINIA I KOMBUCHA 400 ML</row>
+        <row label="H7">H7: BIELENDA SHOWER COCTAIL, ŻEL POD PRYSZNIC, MATCHA I BORÓWKI 400 ML</row>
+        <row label="I1">I1: NIVEA CREAM SMOOTH, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z MASŁEM SHEA 500 ML</row>
+        <row label="I2">I2: NIVEA DIAMOND &amp; ARGAN OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM ARGANOWYM 500 ML</row>
+        <row label="I3">I3: NIVEA CREAM CARE, ŻEL POD PRYSZNIC, PIELEGNUJĄCY, KREMOWY 500 ML</row>
+        <row label="J1">J1: NIVEA ROSE &amp; ALMOND OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM MIGDAŁOWYM 500 ML</row>
+        <row label="J2">J2: NIVEA ORANGE &amp; AVOCADO OIL, ŻEL POD PRYSZNIC, Z OLEJKIEM Z AWOKADO 500 ML</row>
+        <row label="J3">J3: NIVEA STAR FRUIT, ŻEL POD PRYSZNIC, PIELĘGNUJĄCY, Z OLEJKIEM MONOI 500 ML</row>
+        <row label="J4">J4: NIVEA CREAM SOFT, ŻEL POD PRYSZNIC, PIELEGNUJĄCY, KREMOWY, 500 ML</row>
+        <row label="K1">K1: DOVE DEEPLY NOURISHING, ŻEL POD PRYSZNIC NAWILŻAJĄCO - REGENERUJĄCY 225 ML</row>
+        <row label="K2">K2: DOVE ADVANCED CARE ANTI-STRESS, ŻEL POD PRYSZNIC 225 ML</row>
+        <row label="K3">K3: DOVE NOURISHING SILK, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="K4">K4: DOVE DEEPLY NOURISHING, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="K5">K5: DOVE REVIVING, ŻEL POD PRYSZNIC 400 ML</row>
+        <row label="L1">L1: DOVE HYDRATE, ŻEL POD PRYSZNIC 450 ML</row>
+        <row label="L2">L2: DOVE PETAL SOFT, ŻEL POD PRYSZNIC 450 ML</row>
+        <row label="L3">L3: DOVE SILKY VELVET, ŻEL POD PRYSZNIC 450 ML</row>
+        <row label="L4">L4: DOVE GENTLE PAMPER, ŻEL POD PRYSZNIC 450 ML</row>
+        <row label="M1">M1: ZIAJA OLIWKOWY ŻEL POD PRYSZNIC 500ML</row>
+        <row label="M2">M2: ZIAJA MASLO KAKAOWE, KREMOWY ŻEL MYJĄCY 500ML</row>
+        <row label="M3">M3: ZIAJA KOZIE MLEKO, KREMOWY ŻEL MYJĄCY 500ML</row>
+        <row label="M4">M4: ZIAJA ŻEL POD PRYSZNIC, MIĘTA HERBACIANA 500 ML</row>
+        <row label="M5">M5: ZIAJA ŻEL POD PRYSZNIC, FIGA WŁOSKA 500 ML</row>
+        <row label="M6">M6: ZIAJA ŻEL POD PRYSZNIC, KSIĘŻYCOWA PITAJA 500 ML</row>
+        <row label="N1">N1: BAMBINO RODZINA, ŻEL POD PRYSZNIC, KREMOWY, DLA DOROSŁYCH I DLA DZIECI 400 ML</row>
+        <row label="N2">N2: BAMBINO RODZINA, ŻEL POD PRYSZNIC, DLA DOROSŁYCH I DLA DZIECI, MIRABELKA 400 ML</row>
+        <row label="N3">N3: LUKSJA SILK CARE, ŻEL POD PRYSZNIC, KREMOWY, KOKOS I GARDENIA 500 ML</row>
+        <row label="N4">N4: LUKSJA SILK CARE, ŻEL POD PRYSZNIC, KREMOWY, ALOES I HIBISKUS 500 ML</row>
+        <row label="N5">N5: APART CREAMY CARE, ŻEL POD PRYSZNIC, KREMOWY, NAWILŻENIE, JAŚMIN 500 ML</row>
+        <row label="N6">N6: APART CREAMY CARE, ŻEL POD PRYSZNIC, KREMOWY, NAWILŻENIE, FIOŁEK 500 ML</row>
+      </radio>
+
+      <radio 
+     label="FindCorrect_[loopvar: label]"
+     randomize="0"
+     where="execute,survey,report">
+        <title><b>Correct Product Found?</b></title>
+        <exec>
+FindCorrect_[loopvar: label].val=vFindCorrect.val
+        </exec>
+
+        <row label="r1">Correct</row>
+        <row label="r2">Incorrect</row>
+      </radio>
+
+      <radio 
+     label="F_EaseOfFind_[loopvar: label]"
+     cond="vFindCorrect.r1"
+     randomize="0"
+     where="execute,survey,report">
+        <title>(Filtered by Correctly located)<br /><br />Using the statements on this card, how easy or difficult do you think it was to find the <b>[loopvar: Finda]</b> in this display?</title>
+        <exec>
+F_EaseOfFind_[loopvar: label].val=F_EaseOfFind.val
+        </exec>
+
+        <row label="r1">Very easy to find</row>
+        <row label="r2">Somewhat easy to find</row>
+        <row label="r3">Neither easy nor difficult to find</row>
+        <row label="r4">Somewhat difficult to find</row>
+        <row label="r5">Very difficult to find</row>
+      </radio>
+    </block>
+
+    <looprow label="FindProductA" cond="(Finda.r1)">
+      <loopvar name="Finda">Findability Product A</loopvar>
+    </looprow>
+  </loop>
+</block>
+
+<suspend/>
+
+<html label="Finda_RemoveShelf" where="survey"><strong><span style="color: red;">INTERVIEWER</span>: REMOVE SHELF FROM VIEW/ESCORT RESPONDENT TO THE NEXT STATION.</strong></html>
+
+<suspend/>
+
+<html label="Layout_Intro" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" /><strong><span style="color: red;"><br /><br />INTERVIEWER: HAVE THE RESPONDENT STAND AT 3 FOOT MARK IN FRONT OF THE SHELF AND FACING THE SHELF</span></strong></html>
+
+<suspend/>
+
+<radio 
+  label="F_Layout"
+  averages="nosummary"
+  cardrating:navigation="0"
+  cardrating:progress="0"
+  randomize="0"
+  shuffle="rows"
+  type="rating"
+  uses="cardrating.1">
+  <title>Read list. Select a response for each statement.</title>
+  <comment><b><span style="color: red;">HAND RESPONDENT CARD FC. INTERVIEWER POINT TO THE COLGATE SECTION AND ASK:</span></b><br /><br /> I am going to read a list of phrases. Using the responses on this card, please tell me how much you agree or disagree that the phrase describes the Palmolive Body Wash section. <br /><br /><b>INTERVIEWER READ: This Palmolive Body Wash bottle shape..</b><br /><br /></comment>
+  <row label="r1">Is a premium looking body wash</row>
+  <row label="r2">Would be easy to hold</row>
+  <row label="r3">Is an attractive shape</row>
+  <row label="r4">Is a modern shape</row>
+  <row label="r5">Fits the Palmolive brand</row>
+  <row label="r6">Uses a minimal amount of plastic packaging</row>
+  <row label="r7">Looks different from other brands' bottles</row>
+  <row label="r8">Looks like it will be stable in my shower</row>
+  <row label="r9">Looks similar in size to the other brands' bodywash products</row>
+  <col label="c1" value="5">Agree Strongly</col>
+  <col label="c2" value="4">Agree Somewhat</col>
+  <col label="c3" value="3">Neither Agree Nor Disagree</col>
+  <col label="c4" value="2">Disagree Somewhat</col>
+  <col label="c5" value="1">Disagree Strongly</col>
+  <style name="question.after"><![CDATA[
+<script>
+$ ('.question-text').insertAfter($ ('.sq-cardrating-carousel'));
+$ ('.sq-cardrating-card').css('font-size','18pt');
+$ ('.instruction-text').css('font-size','14pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+      $ ("#btn_continue").hide();
+    }
+  
+  var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+  var num_attr = qn.rows.length
+  console.log(num_attr);
+  var iteration = 1
+  
+  
+   $ (document).on('click', '.sq-cardrating-buttons', function() {
+          if(iteration == num_attr){
+            $ ("#btn_continue").click();
+          }
+          iteration++;
+          
+        })
+
+  </script>
+]]></style>
+</radio>
+
+<suspend/>
+
+<text 
+  label="F_BrandImpression"
+  optional="0"
+  size="40">
+  <title><strong><span style="color: red;">INTERVIEWER POINT TO THE PALMOLIVE SECTION AND ASK:</span></strong><br /><br />Looking at all of the products in this display, what three words best describe how the Palmolive body wash products make you feel? Any three words that come to mind.</title>
+  <comment>Record verbatim.</comment>
+  <row label="r1"/>
+  <row label="r2"/>
+  <row label="r3"/>
+</text>
+
+<suspend/>
+
+<exec where="execute,survey,report">
+p.startTime = timeSpent()
+</exec>
+
+<suspend/>
+
+<radio 
+  label="F_LineCommunication"
+  averages="nosummary"
+  cardrating:navigation="0"
+  cardrating:progress="0"
+  randomize="0"
+  shuffle="rows"
+  type="rating"
+  uses="cardrating.1">
+  <title>Read list. Select a response for each statement.</title>
+  <comment><b><span style="color: red;">RESPONDENT STILL HAS CARD FC.</span></b><br /><br /> Please continue to look at all the body wash displayed. I will read out a few more phrases. Using the responses on this card please tell me how much you agree or disagree that the phrase applies to Palmolive ONLY, <u>based on all the packaging you see here</u>.<br /><br /><b>INTERVIEWER READ: Palmolive Body Wash…</b><br /><br /></comment>
+  <row label="r1">Offers high quality products</row>
+  <row label="r2">Is better than other brands</row>
+  <row label="r3">Offers products that meet my needs</row>
+  <row label="r4">Are easy to understand</row>
+  <row label="r5">Offers a range of products for different needs</row>
+  <row label="r6">Is an environmentally friendly body wash brand</row>
+  <row label="r7">Elevates my body washing experience</row>
+  <row label="r8">Is made with natural ingredients</row>
+  <row label="r9">Offers pleasurable experience</row>
+  <row label="r10">Is an innovative brand</row>
+  <row label="r11">Is uplifting</row>
+  <row label="r12">Looks modern</row>
+  <row label="r13">Differentiated from other brands</row>
+  <row label="r14">Offers products with great fragrances</row>
+  <row label="r15">Is a good value for the money</row>
+  <row label="r16">I'd be proud to display this body wash in my bathroom</row>
+  <col label="c1" value="5">Agree Strongly</col>
+  <col label="c2" value="4">Agree Somewhat</col>
+  <col label="c3" value="3">Neither Agree Nor Disagree</col>
+  <col label="c4" value="2">Disagree Somewhat</col>
+  <col label="c5" value="1">Disagree Strongly</col>
+  <style name="question.after"><![CDATA[
+<script>
+$ ('.question-text').insertAfter($ ('.sq-cardrating-carousel'));
+$ ('.sq-cardrating-card').css('font-size','18pt');
+$ ('.instruction-text').css('font-size','14pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+      $ ("#btn_continue").hide();
+    }
+  
+  var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+  var num_attr = qn.rows.length
+  console.log(num_attr);
+  var iteration = 1
+  
+  
+   $ (document).on('click', '.sq-cardrating-buttons', function() {
+          if(iteration == num_attr){
+            $ ("#btn_continue").click();
+          }
+          iteration++;
+          
+        })
+
+  </script>
+]]></style>
+</radio>
+
+<suspend/>
+
+<exec where="execute,survey,report">
+p.endTime = timeSpent()
+</exec>
+
+<suspend/>
+
+<float 
+  label="F_LineCommunication_Time"
+  optional="0"
+  randomize="0"
+  where="execute,survey,report">
+  <title>F_LineCommunication Time</title>
+  <comment>Time it Took for F_LineCommunication</comment>
+  <exec>
+F_LineCommunication_Time.val = p.endTime - p.startTime
+  </exec>
+
+</float>
+
+<suspend/>
+
+<radio 
+  label="Straightliner2"
+  randomize="0"
+  where="execute,survey,report">
+  <title>DO NOT REMOVE OR MODIFY - Straightliner Punch - Just Tracking for F_LineCommunication</title>
+  <exec>
+if not(gv.isSST()) and p.endTime - p.startTime le 16 and (F_LineCommunication.c1.all or F_LineCommunication.c2.all or F_LineCommunication.c3.all or F_LineCommunication.c4.all or F_LineCommunication.c5.all):
+  Straightliner2.val = 0
+else:
+  Straightliner2.val = 1
+  </exec>
+
+  <row label="r1">Straightliner</row>
+  <row label="r2">Non-Straightliner</row>
+</radio>
+
+<suspend/>
+
+<checkbox 
+  label="F_Aesthetics"
+  atleast="1"
+  atm1d:large_maxHeight="200%"
+  atm1d:large_maxWidth="200px"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title><strong><span style="color: red;">HAND RESPONDENT CARD FD.</span></strong><br /><br /> Which of these choices best describe the appearance of this Palmolive Body Wash bottle <span style="color: red;">shape</span>?</title>
+  <comment>Select all that apply.</comment>
+  <row label="r1">Boring</row>
+  <row label="r2">Distinctive</row>
+  <row label="r3">Out-of-date</row>
+  <row label="r4">Vibrant</row>
+  <row label="r5">Premium</row>
+</checkbox>
+
+<suspend/>
+
+<block label="Attitudinal" builder:title="Attitudinal">
+  <html label="SelfAdmin" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" />
+<p><b>This section is self-administered and must be completed by the respondent.</b></p></html>
+
+  <suspend/>
+
+  <html label="Att_Intro" where="survey">You are now going to see the picture of a pack. On that picture, you will be asked to highlight the areas you <u>like</u> most about the pack, if there are any.<br /><br />Then on that same picture, you will be asked to highlight the areas you dislike about the pack, if any.</html>
+
+  <suspend/>
+
+  <block label="Likes_Dislikes" builder:title="Likes Dislikes - Self Admin Only">
+    <loop label="ES_Loop" vars="image">
+      <title>Likes-Dislikes- Heatmap</title>
+      <block label="ES_Block" builder:title="Heatmap Block">
+        <textarea 
+      label="Q_Likes_[loopvar: label]"
+      imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+      optional="1"
+      sst="0"
+      uses="imgmap.2020">
+          <title>Using your mouse, please highlight the items/aspects of the packaging you <u>like most</u> (if any). If there's nothing that you specifically like, please click "I don’t like any of it" at the bottom of the page.<br />
+        <img src="[rel clickNdrag.gif]" alt="" width="200px" /></title>
+          <validate>
+if Q_Likes_[loopvar: label].c1.val != "" and Q_LikesNone_[loopvar: label].r1:      		error(res.MapError)
+if Q_Likes_[loopvar: label].c1.val == "" and not(Q_LikesNone_[loopvar: label].r1):      error(res.MapError2)
+          </validate>
+
+          <col label="c1" imgmap:color="#32CD32" optional="1">Like</col>
+        </textarea>
+
+        <checkbox 
+      label="Q_LikesNone_[loopvar: label]"
+      atleast="0"
+      atm1d:showInput="0"
+      atm1d:viewMode="tiled"
+      optional="1"
+      randomize="0"
+      uses="atm1d.9">
+          <title>&amp;nbsp;</title>
+          <validate>
+if Q_Likes_[loopvar: label].c1.val != "" and Q_LikesNone_[loopvar: label].r1:      		error(res.MapError)
+if Q_Likes_[loopvar: label].c1.val == "" and not(Q_LikesNone_[loopvar: label].r1):      error(res.MapError2)
+          </validate>
+
+          <row label="r1">I don’t like any of it</row>
+        </checkbox>
+
+        <suspend/>
+
+        <textarea 
+      label="Q_Dislikes_[loopvar: label]"
+      imgmap:image="/survey/${gv.survey.path}/[loopvar: image]"
+      optional="1"
+      sst="0"
+      uses="imgmap.2020">
+          <title>Using your mouse, please highlight the items/aspects of the packaging you like the <u>least</u> (if any). If there's nothing that you specifically like, please click "I don’t dislike any of it" at the bottom of the page.<br />
+        <img src="[rel clickNdrag.gif]" alt="" width="200px" /></title>
+          <validate>
+if Q_Dislikes_[loopvar: label].c1.val != "" and Q_DislikesNone_[loopvar: label].r1:      	error(res.MapError)
+if Q_Dislikes_[loopvar: label].c1.val == "" and not(Q_DislikesNone_[loopvar: label].r1):    error(res.MapError2)
+          </validate>
+
+          <col label="c1" imgmap:color="#ED1C24" optional="1">Dislike</col>
+        </textarea>
+
+        <checkbox 
+      label="Q_DislikesNone_[loopvar: label]"
+      atleast="0"
+      atm1d:showInput="0"
+      atm1d:viewMode="tiled"
+      optional="1"
+      randomize="0"
+      uses="atm1d.9">
+          <title>&amp;nbsp;</title>
+          <validate>
+if Q_Dislikes_[loopvar: label].c1.val != "" and Q_DislikesNone_[loopvar: label].r1:      	error(res.MapError)
+if Q_Dislikes_[loopvar: label].c1.val == "" and not(Q_DislikesNone_[loopvar: label].r1):    error(res.MapError2)
+          </validate>
+
+          <row label="r1">I don’t dislike any of it</row>
+        </checkbox>
+      </block>
+
+      <looprow label="1" cond="Phase.r1">
+        <loopvar name="image">AH517_PACK1.jpg</loopvar>
+      </looprow>
+
+      <looprow label="2" cond="Phase.r2">
+        <loopvar name="image">AH517_PACK2.jpg</loopvar>
+      </looprow>
+
+      <looprow label="3" cond="Phase.r3">
+        <loopvar name="image">AH517_PACK3.jpg</loopvar>
+      </looprow>
+    </loop>
+
+    <suspend/>
+
+    <html label="SelfAdmin_Flash_Complete" cond="Led.r1" where="survey"><b><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="" class="" /><br /><br />
+    ALERT THE INTERVIEWER THAT YOU ARE DONE WITH THIS SECTION.</b></html>
+  </block>
+
+  <suspend/>
+
+  <block label="AttitudinalTest" builder:title="TestBrand Attitudinal">
+    <html label="FOCUS" where="survey"><b>For the next few questions, please focus your attention on each of the packaging you see here.</b><br /><br />[pipe: LINE_IMG]</html>
+
+    <suspend/>
+
+    <radio 
+    label="Q_PI1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How likely would you be to buy this Palmolive product, if they were available for the price you see below?</title>
+      <comment>[pipe: Palmolive_IMG]<br /><br />[pipe: Price1]</comment>
+      <row label="r1" value="5">Definitely would buy</row>
+      <row label="r2" value="4">Probably would buy</row>
+      <row label="r3" value="3">Might or might not buy</row>
+      <row label="r4" value="2">Probably would not buy</row>
+      <row label="r5" value="1">Definitely would not buy</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="Q_PI2"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How likely would you be to buy this Isana product, if they were available for the price you see below?</title>
+      <comment>[pipe: Isana_IMG]<br /><br />[pipe: Price2]</comment>
+      <row label="r1" value="5">Definitely would buy</row>
+      <row label="r2" value="4">Probably would buy</row>
+      <row label="r3" value="3">Might or might not buy</row>
+      <row label="r4" value="2">Probably would not buy</row>
+      <row label="r5" value="1">Definitely would not buy</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="Q_PI3"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How likely would you be to buy this Nivea product, if they were available for the price you see below?</title>
+      <comment>[pipe: Nivea_IMG]<br /><br />[pipe: Price3]</comment>
+      <row label="r1" value="5">Definitely would buy</row>
+      <row label="r2" value="4">Probably would buy</row>
+      <row label="r3" value="3">Might or might not buy</row>
+      <row label="r4" value="2">Probably would not buy</row>
+      <row label="r5" value="1">Definitely would not buy</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="Q_OA1"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How much do you like or dislike the Palmolive bottle shape?</title>
+      <comment>[pipe: Palmolive_IMG]</comment>
+      <row label="r1" value="5">Like it very much</row>
+      <row label="r2" value="4">Like it somewhat</row>
+      <row label="r3" value="3">Neither like nor dislike it</row>
+      <row label="r4" value="2">Dislike it somewhat</row>
+      <row label="r5" value="1">Dislike it very much</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="Q_OA2"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How much do you like or dislike the Isana bottle shape?</title>
+      <comment>[pipe: Isana_IMG]</comment>
+      <row label="r1" value="5">Like it very much</row>
+      <row label="r2" value="4">Like it somewhat</row>
+      <row label="r3" value="3">Neither like nor dislike it</row>
+      <row label="r4" value="2">Dislike it somewhat</row>
+      <row label="r5" value="1">Dislike it very much</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="Q_OA3"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>How much do you like or dislike the Nivea bottle shape?</title>
+      <comment>[pipe: Nivea_IMG]</comment>
+      <row label="r1" value="5">Like it very much</row>
+      <row label="r2" value="4">Like it somewhat</row>
+      <row label="r3" value="3">Neither like nor dislike it</row>
+      <row label="r4" value="2">Dislike it somewhat</row>
+      <row label="r5" value="1">Dislike it very much</row>
+    </radio>
+
+    <suspend/>
+
+    <checkbox 
+    label="IMG_Loop"
+    randomize="0"
+    where="execute,survey,report">
+      <title>Image</title>
+      <row label="r1" autofill="Phase.r1"><img src="[rel AH517_PACK1.jpg]" alt="" height="350" constrain="true" title="" /></row>
+      <row label="r2" autofill="Phase.r2"><img src="[rel AH517_PACK2.jpg]" alt="" height="350" constrain="true" title="" /></row>
+      <row label="r3" autofill="Phase.r3"><img src="[rel AH517_PACK3.jpg]" alt="" height="350" constrain="true" title="" /></row>
+      <row label="r4" autofill="1"><img src="[rel 4047196051641.jpg]" alt="" height="350" constrain="true" title="" /></row>
+      <row label="r5" autofill="1"><img src="[rel 9005800282480.jpg]" alt="" height="350" constrain="true" title="" /></row>
+    </checkbox>
+
+    <suspend/>
+
+    <loop label="L1" builderSource="IMG_Loop" vars="IMGLooprows">
+      <title>Closing OE</title>
+      <block label="b1" builder:title="default loop block">
+        <textarea 
+      label="Closing_OE1_[loopvar: label]"
+      optional="0"
+      randomize="0">
+          <title>How does the shape and grip of this bottle feel in your hand? and How does it impact your overall ease of use?<br /><br />[loopvar: IMGLooprows]</title>
+        </textarea>
+
+        <suspend/>
+
+        <textarea 
+      label="Closing_OE2_[loopvar: label]"
+      optional="0"
+      randomize="0">
+          <title>What are your impressions of the bottle’s weight and quality?<br /><br />[loopvar: IMGLooprows]</title>
+        </textarea>
+
+        <suspend/>
+
+        <textarea 
+      label="Closing_OE3_[loopvar: label]"
+      optional="0"
+      randomize="0">
+          <title>When the bottle is placed upside down, how stable does it appear to be, or would it be stable?<br /><br />[loopvar: IMGLooprows]</title>
+        </textarea>
+      </block>
+
+      <looprow label="Lr1" cond="Phase.r1">
+        <loopvar name="IMGLooprows"><img src="[rel AH517_PACK1.jpg]" title="" jstcache="0" height="350" alt="" constrain="true" class="jloupeme" /></loopvar>
+      </looprow>
+
+      <looprow label="Lr2" cond="Phase.r2">
+        <loopvar name="IMGLooprows"><img src="[rel AH517_PACK2.jpg]" title="" jstcache="0" height="350" alt="" constrain="true" class="jloupeme" /></loopvar>
+      </looprow>
+
+      <looprow label="Lr3" cond="Phase.r3">
+        <loopvar name="IMGLooprows"><img src="[rel AH517_PACK3.jpg]" title="" jstcache="0" height="350" alt="" constrain="true" class="jloupeme" /></loopvar>
+      </looprow>
+
+      <looprow label="Lr4" cond="1">
+        <loopvar name="IMGLooprows"><img src="[rel 4047196051641.jpg]" title="" jstcache="0" height="350" alt="" constrain="true" class="jloupeme" /></loopvar>
+      </looprow>
+
+      <looprow label="Lr5" cond="1">
+        <loopvar name="IMGLooprows"><img src="[rel 9005800282480.jpg]" title="" jstcache="0" height="350" alt="" constrain="true" class="jloupeme" /></loopvar>
+      </looprow>
+    </loop>
+
+    <suspend/>
+
+    <html label="ATT_TEST_COMPLETE" cond="Led.r1" where="survey"><img src="[rel stop_sign.png]" title="" class="" height="223" width="225" alt="stop_sign.png" constrain="true" /><p><b>Please inform the interviewer that you have completed this section.</b></p></html>
+
+    <suspend/>
+
+    <html label="REMOVE" where="survey"><b><span style="color: rgb(255, 0, 0);">INTERVIEWER:</span> REMOVE STIMULI FROM VIEW!</b></html>
+
+    <suspend/>
+  </block>
+</block>
+
+<block label="Classification" builder:title="Classification Section">
+  <html label="Class_Intro" where="survey"><b>Now just a few questions for classification purposes...</b></html>
+
+  <suspend/>
+
+  <radio 
+   label="Household_Situation"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which of the following best describes your current household situation?</title>
+    <row label="r1">Single, living alone</row>
+    <row label="r2">Single, living with roommates or family</row>
+    <row label="r3">Living with a partner, no children</row>
+    <row label="r4">Living with a partner and children</row>
+    <row label="r5">Single parent with children</row>
+    <row label="r6" randomize="0">Other (please specify)</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="Household_Situation_OE"
+   cond="Household_Situation.r6"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your current household situation below:</title>
+  </text>
+
+  <suspend/>
+
+  <radio 
+   label="ChildAge"
+   cond="Household_Situation.r4 or Household_Situation.r5">
+    <title>What are the ages of the children in your family?</title>
+    <comment>Please provide the age of each child.</comment>
+    <row label="r1">Child 1</row>
+    <row label="r2">Child 2</row>
+    <row label="r3">Child 3</row>
+    <row label="r4">Child 4</row>
+    <row label="r5">Child 5</row>
+    <col label="c1">0-5 years</col>
+    <col label="c2">6-10 years</col>
+    <col label="c3">11-15 years</col>
+    <col label="c4">16-18 years</col>
+    <col label="c5">18+ years</col>
+    <col label="c6">NOT APPLICABLE</col>
+  </radio>
+
+  <suspend/>
+
+  <select 
+   label="STANDARD_EDUCATION"
+   randomize="0">
+    <title>What is the last level of education that you completed?</title>
+    <choice label="ch1">Some High School or less</choice>
+    <choice label="ch2">Completed High School</choice>
+    <choice label="ch3">Some College or Technical School</choice>
+    <choice label="ch4">Completed College/Technical School</choice>
+    <choice label="ch5">Some Post-Graduate Study or more</choice>
+  </select>
+
+  <select 
+   label="STANDARD_INCOME"
+   randomize="0">
+    <title>What is your MONTHLY household income?</title>
+    <choice label="ch1">Under 3 000 PLN</choice>
+    <choice label="ch2">3 001-4 000 PLN</choice>
+    <choice label="ch3">4 001-5 000 PLN</choice>
+    <choice label="ch4">5 001-6 000 PLN</choice>
+    <choice label="ch5">6 001-7 000 PLN</choice>
+    <choice label="ch6">7 001-8 000 PLN</choice>
+    <choice label="ch7">8 001-9 000 PLN</choice>
+    <choice label="ch8">10 000 PLN or more</choice>
+    <choice label="ch9">Don't know/No Answer</choice>
+  </select>
+
+  <select 
+   label="C_Employment"
+   randomize="0">
+    <title>What is your current employment status?</title>
+    <choice label="ch1">Employed Part-Time</choice>
+    <choice label="ch2">Employed Full-Time</choice>
+    <choice label="ch3">Full-Time Homemaker</choice>
+    <choice label="ch4">Part or Full Time Student</choice>
+    <choice label="ch5">Retired</choice>
+    <choice label="ch6">Currently Seeking Employment</choice>
+  </select>
+</block>
+
+<suspend/>
+
+<html label="THANKYOU1" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="stop_sign.png" constrain="true" class="" /><p><b>Thank you for your participation in completing this survey. <br /><br />Please inform the interviewer that you have finished.</b></p></html>
+
+<suspend/>
+
+<html label="THANKYOU2" where="survey"><img src="[rel stop_sign.png]" title="" height="223" width="225" alt="stop_sign.png" class="" />
+<p><strong>Thank respondent for his/her time and cooperation.<br /><br />NOTE TO INTERVIEWER: Click the "Continue" button.</strong></p></html>
+
+<suspend/>
+
+<html label="Final" cond="not(gv.isSST())" where="survey"><strong><strong>PLEASE VERIFY THE FOLLOWING INFORMATION IS CORRECT. IF THIS INFORMATION IS <u>NOT</u> CORRECT PLEASE SEE YOUR SUPERVISOR <u>BEFORE</u> CLICKING "CONTINUE".<br /><br /></strong></strong>
+<div align="left">
+<u>Resp ID</u>: [pipe: Resp]<br /> 
+<u>Phase</u>: [pipe: Phase]<br /> 
+<u>Gender</u>: [pipe: Gender]<br /> 
+<u>Age</u>: [pipe: Age]<br /> 
+<u>Usage</u>: [pipe: Usage]<br /> 
+<u>BUMO</u>: [pipe: BUMO]<br /> 
+<u>Sample</u>: [pipe: Sample]</div></html>
+
+<suspend/>
+
+<term label="TERM_Test" cond="Location.ZZ999 and False">Test Interview</term>
+
+<suspend/>
+
+<exec>
+db.add(str(record))
+</exec>
+</survey>

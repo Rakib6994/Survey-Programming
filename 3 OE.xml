@@ -1,0 +1,33 @@
+<text 
+   label="sequence_input_openend"
+   cond="Number_type.r5"
+   optional="0"
+   size="40">
+    <title>Which organisation(s) do you believe were responsible for this advertising?</title>
+    <comment>Please write as many as you think were responsible. </comment>
+    <validate>
+for x in this.rows:				
+  if x.val:				
+    err1 = 0				
+    for y in this.rows:				
+      if y.index != x.index and y.val and (x.val).strip() == (y.val).strip():				
+        err1 = 1				
+    if err1 == 1:				
+      error(res.DupSame, row=x)				
+  if not x.val:				
+    err2 = 0				
+    for y in this.rows:				
+      if y.index gt x.index and y.val:				
+        err2 = 1				
+    if err2 == 1:				
+      error(res.DupOrder, row=x)
+    </validate>
+
+    <row label="r1"/>
+    <row label="r2" optional="1"/>
+    <row label="r3" optional="1"/>
+    <row label="r4" optional="1"/>
+    <noanswer label="r99">Don’t know</noanswer>
+  </text>
+
+  <suspend/>

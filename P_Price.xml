@@ -1,0 +1,64 @@
+<suspend/>
+
+    <exec>
+p.arr1 = [1.00,2.00,3.00,4.00,5.00]
+
+for x in P_QuantityPurchased.rows:
+  if P_QuantityPurchased[x].c1.val &gt;0:
+      P_Price[x].val=p.arr1[x.index]
+    </exec>
+
+    <suspend/>
+
+    <float 
+    label="P_Price"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    size="10"
+    where="execute,survey,report">
+      <title>Price for one.</title>
+    </float>
+
+    <suspend/>  
+
+
+      <suspend/>
+
+    <exec>
+for x in P_QuantityPurchased.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (P_QuantityPurchased[x].c1.val ge 1):
+      P_SpendPerProduct.rows[x.index].val=(x.c1.ival*1.0)*y.val
+    </exec>
+
+    <suspend/>
+
+    <float 
+    label="P_SpendPerProduct"
+    onLoad="copy('P_QuantityPurchased', rows=True)"
+    size="10"
+    where="execute,survey,report">
+      <title>Spent Per product.</title>
+    </float>
+
+    <suspend/>
+
+    <exec>
+sumP_TotalSpend=0
+for x in P_QuantityPurchased.rows:
+  for y in P_Price.rows:
+    if x.label==y.label and (x.c1.ival ge 1):
+      sumP_TotalSpend=sumP_TotalSpend+(x.c1.ival*1.0)*y.val
+      P_TotalSpend.val=sumP_TotalSpend
+    </exec>
+
+    <suspend/>
+
+    <float 
+    label="P_TotalSpend"
+    size="10"
+    where="execute,survey,report">
+      <title>Total Spent</title>
+      <row label="total">Total</row>
+    </float>
+
+    <suspend/>

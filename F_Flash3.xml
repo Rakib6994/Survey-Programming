@@ -2,9 +2,6 @@
   <exec where="execute,survey,report">
 p.startTime = timeSpent()
   </exec>
-
-  <note>PROGRAMMER NOTE: IF Fit, Und and Usual are included - they must be choice 1, 2, 3 and NOT randomized. Labels must stay as is for Norms</note>
-  <note>PROGRAMMER NOTE: Usual - ask if Past buyers Past purchased selectes Test Brand  -- logic is built in: cond="S_Brand_PastPurchased.TB"</note>
   <suspend/>
 
   <radio 

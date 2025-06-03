@@ -1,0 +1,4 @@
+<autofill label="GREENDOTS" randomize="0" where="execute,survey,report">
+    <title>Real Eye Image for RE</title>
+    <row label="r1" autofill="True"><img src="[rel GREENDOTS.jpg]" title="" height="300" alt="" constrain="true" class="jloupeme" /></row>
+  </autofill>

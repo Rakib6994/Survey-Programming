@@ -1,0 +1,24 @@
+  <checkbox 
+   label="B11_1"
+   cond="Multiselect_Questions.r10"
+   grouping="cols"
+   sortRows="asc,survey">
+    <title>Hide column for any specific row.<br />Sort accending<br />Seperate OE option for different columns</title>
+    <comment>Please select all that apply.</comment>
+    <row label="r1">Garlic</row>
+    <row label="r2">Ginger</row>
+    <row label="r3">Green beans</row>
+    <row label="r4">Mushrooms</row>
+    <row label="r5">Okra</row>
+    <row label="r6">Onions</row>
+    <row label="r7">Potato</row>
+    <row label="r8">Pumpkin</row>
+    <row label="r9">Spinach</row>
+    <col label="c1">FRESH</col>
+    <col label="c2">FROZEN</col>
+    <col label="c3">CANNED</col>
+    <style cols="c2" copy="hideElements" name="question.element" rows="r1"/>
+    <style cols="c2" copy="hideElements" name="question.element" rows="r2"/>
+    <style cols="c2" copy="hideElements" name="question.element" rows="r4"/>
+    <style cols="c2" copy="hideElements" name="question.element" rows="r6"/>
+  </checkbox>

@@ -11,6 +11,8 @@
     <choice label="r2"><span style="font-size: 10pt;" align="center">Half of it or more<br /><img src="[rel Cart3.png]" constrain="true" title="image" height="50" /></span></choice>
     <choice label="r3"><span style="font-size: 10pt;" align="center">Less than half of it<br /><img src="[rel Cart1.png]" constrain="true" title="image" height="50" /></span></choice>
     <choice label="r4"><span style="font-size: 10pt;" align="center">None of it<br /><img src="[rel Cart0.png]" constrain="true" title="image" height="50" /></span></choice>
+
+    
   </select>
 
   <suspend/>

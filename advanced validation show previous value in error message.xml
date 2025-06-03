@@ -1,0 +1,46 @@
+<block label="Validations">
+  <number 
+   label="C5a"
+   cond="validations.r1"
+   optional="0"
+   size="10"
+   ss:preText="AUD$"
+   verify="range(1,997)">
+    <title>At what price point would you consider the fragrance to be <b>priced so cheap that you would doubt it’s quality and not buy it?</b></title>
+    <comment>Please enter a number<br />range(1 to 997).</comment>
+  </number>
+
+  <number 
+   label="C5b"
+   cond="validations.r1"
+   optional="0"
+   size="10"
+   ss:preText="AUD$"
+   verify="range(1,998)">
+    <title>At what price point would you consider the fragrance <b>to be great value/a bargain and you would definitely buy it?</b></title>
+    <comment>Please enter a number.<br />Note:ALLOW RESPONDENT TO TYPE IN AMOUNT, MUST BE HIGHER THAN PREVIOUS.</comment>
+    <validate>
+				
+if ((C5b.val) lt (C5a.val)) or ((C5b.val) == (C5a.val)):  				
+    error("Your previously given value is ${C5a.val}, please give higher than ${C5a.val}")
+    </validate>
+
+  </number>
+
+  <number 
+   label="C5c"
+   cond="validations.r1"
+   optional="0"
+   size="10"
+   ss:preText="AUD$"
+   verify="range(1,999)">
+    <title>At what price point would you consider the fragrance to be <b>starting to get expensive, and you would have to give some thought before buying it?</b></title>
+    <comment>Please enter a number. <br />Note:ALLOW RESPONDENT TO TYPE IN AMOUNT, MUST BE HIGHER THAN PREVIOUS.</comment>
+    <validate>
+				
+if ((C5c.val) lt (C5b.val)) or ((C5c.val) == (C5b.val)):  				
+  error("Your previously given value is ${C5b.val}, please give higher than ${C5b.val}")
+    </validate>
+
+  </number>
+</block>

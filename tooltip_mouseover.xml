@@ -1,0 +1,28 @@
+  <checkbox 
+   label="S9a"
+   cond="Multiselect_Questions.r9"
+   atleast="1"
+   shuffle="rows">
+    <title>Which of the following have you purchased in the past year, if any? </title>
+    <comment>Please select all that apply.</comment>
+    <row label="r1"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Bandages &amp; Blister Cushions</a> <div style="display: none;">${res.S9ar1}</div></row>
+    <row label="r2"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Gloves</a> <div style="display: none;">${res.S9ar2}</div></row>
+    <row label="r3"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Topical wound care</a> <div style="display: none;">${res.S9ar3}</div></row>
+    <row label="r4"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Cleaning wipes</a> <div style="display: none;">${res.S9ar4}</div></row>
+    <row label="r5">Flushable wet wipes</row>
+    <row label="r6"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Sun protection products</a> <div style="display: none;">${res.S9ar6}</div></row>
+    <row label="r7"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Moisturizing lotion</a> <div style="display: none;">${res.S9ar7}</div></row>
+    <row label="r8">Insect repellent</row>
+    <row label="r9"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Antibacterial soap</a> <div style="display: none;">${res.S9ar9}</div></row>
+    <row label="r10"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Hand sanitizer</a> <div style="display: none;">${res.S9ar10}</div></row>
+    <row label="r11">Hot &amp; cold patches/wraps</row>
+    <row label="r15"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Wearable incontinence products</a> <div style="display: none;">${res.S9ar15}</div></row>
+    <row label="r16"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Absorbent pads</a> <div style="display: none;">${res.S9ar16}</div></row>
+    <row label="r17">Disposable baby changing pads</row>
+    <row label="r18">Body wipes</row>
+    <row label="r19">Baby wipes</row>
+    <row label="r20"><a style="color:black" onmouseover="survey_popUp.nextElement(event,'div',500,200);" onmouseout="document.getElementsByClassName('ui-dialog')&amp;#91;0].style.display='none';" href="#">Deodorant &amp; Anti-perspirant</a> <div style="display: none;">${res.S9ar20}</div></row>
+    <row label="r99" exclusive="1" randomize="0">None of these</row>
+  </checkbox>
+
+  <suspend/>
