@@ -1,0 +1,6 @@
+Hi All, Please note, the Buzz 2.5D job number and Decipher "directory" Job number have to match or data will not import back into Decipher.
+This has come up a few times lately and want to be sure everyone understands this. Behaviorally should prepare the files correctly in the first place, but sometimes there is internal miscommunication, and I look to the programmers to point it out and know that if they don't match, it won't work and to report it immediately. It's not just about the image names; it's about the link to the Buzz platform - the job numbers have to match.  
+It's not something you can fix by just changing the image name or the redirect in Decipher - BEH has to either re-set up the Buzz 2.5D or you would have to change the job directory in Decipher. 
+Please forward this to all the programmers. If this happens, consult with the BEH project person or me. 
+Thank you,
+Michele

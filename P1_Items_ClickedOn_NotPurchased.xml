@@ -1,0 +1,17 @@
+<checkbox 
+   label="P1_Items_ClickedOn_NotPurchased"
+   atleast="1"
+   onLoad="copy('P_QuantityPurchased', rows=True)"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Products Clicked On, but Not Purchased</title>
+    <exec>
+for eachRow in P_QuantityPurchased.rows:
+    if eachRow.c2.val &gt; 0 and eachRow.c1.val &lt; 1: P1_Items_ClickedOn_NotPurchased[eachRow].val = 1
+if P1_Items_ClickedOn_NotPurchased.count == 0:  P1_Items_ClickedOn_NotPurchased.r999.val = 1
+    </exec>
+
+    <row label="r999">All Items Clicked On Were Purchased</row>
+  </checkbox>
+
+  <suspend/>

@@ -1,0 +1,131 @@
+<block label="GaborExercise" builder:title="Gabor Exercise">
+<radio
+label="Q_GG"
+atm1d:showInput="0"
+atm1d:viewMode="tiled"
+randomize="0"
+uses="atm1d.9">
+<title>How likely would you be to buy this [pipe: Brand] products, if it were available for the price you see below?</title>
+<comment>[pipe: PH_IMG]<br /><br />$16.99<br /><br /><i>Select one response.</i></comment>
+<net labels="r1,r2">T2B</net>
+<net labels="r4,r5">B2B</net>
+<row label="r1" value="5">Definitely would buy</row>
+<row label="r2" value="4">Probably would buy</row>
+<row label="r3" value="3">Might or might not buy</row>
+<row label="r4" value="2">Probably would not buy</row>
+<row label="r5" value="1">Definitely would not buy</row>
+</radio>
+ 
+<suspend/>
+ 
+<radio
+label="Q_GG1"
+cond="Q_GG.r1 or Q_GG.r2"
+atm1d:showInput="0"
+atm1d:viewMode="tiled"
+randomize="0"
+uses="atm1d.9">
+<title>You mentioned you <b>[pipe:Q_GG]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+<comment>[pipe: PH_IMG]<br /><br />$18.99<br /><br /><i>Select one response.</i></comment>
+<net labels="r1,r2">T2B</net>
+<net labels="r4,r5">B2B</net>
+<row label="r1" value="5">Definitely would buy</row>
+<row label="r2" value="4">Probably would buy</row>
+<row label="r3" value="3">Might or might not buy</row>
+<row label="r4" value="2">Probably would not buy</row>
+<row label="r5" value="1">Definitely would not buy</row>
+</radio>
+ 
+<suspend/>
+ 
+<radio
+label="Q_GG2"
+cond="(Q_GG.r1 or Q_GG.r2) and (Q_GG1.r1 or Q_GG1.r2)"
+atm1d:showInput="0"
+atm1d:viewMode="tiled"
+randomize="0"
+uses="atm1d.9">
+<title>You mentioned you <b>[pipe:Q_GG1]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+<comment>[pipe: PH_IMG]<br /><br />$19.99<br /><br /><i>Select one response.</i></comment>
+<net labels="r1,r2">T2B</net>
+<net labels="r4,r5">B2B</net>
+<row label="r1" value="5">Definitely would buy</row>
+<row label="r2" value="4">Probably would buy</row>
+<row label="r3" value="3">Might or might not buy</row>
+<row label="r4" value="2">Probably would not buy</row>
+<row label="r5" value="1">Definitely would not buy</row>
+</radio>
+ 
+<suspend/>
+ 
+<radio
+label="Q_GG3"
+cond="(Q_GG.r1 or Q_GG.r2) and (Q_GG1.r1 or Q_GG1.r2) and (Q_GG2.r1 or Q_GG2.r2)"
+atm1d:showInput="0"
+atm1d:viewMode="tiled"
+randomize="0"
+uses="atm1d.9">
+<title>You mentioned you <b>[pipe:Q_GG2]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+<comment>[pipe: PH_IMG]<br /><br />$20.99<br /><br /><i>Select one response.</i></comment>
+<net labels="r1,r2">T2B</net>
+<net labels="r4,r5">B2B</net>
+<row label="r1" value="5">Definitely would buy</row>
+<row label="r2" value="4">Probably would buy</row>
+<row label="r3" value="3">Might or might not buy</row>
+<row label="r4" value="2">Probably would not buy</row>
+<row label="r5" value="1">Definitely would not buy</row>
+</radio>
+ 
+<suspend/>
+ 
+<radio
+label="Q_GG4"
+cond="(Q_GG.r3 or Q_GG.r4 or Q_GG.r5) "
+atm1d:showInput="0"
+atm1d:viewMode="tiled"
+randomize="0"
+uses="atm1d.9">
+<title>You mentioned you <b>[pipe:Q_GG]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+<comment>[pipe: PH_IMG]<br /><br />$15.99<br /><br /><i>Select one response.</i></comment>
+<net labels="r1,r2">T2B</net>
+<net labels="r4,r5">B2B</net>
+<row label="r1" value="5">Definitely would buy</row>
+<row label="r2" value="4">Probably would buy</row>
+<row label="r3" value="3">Might or might not buy</row>
+<row label="r4" value="2">Probably would not buy</row>
+<row label="r5" value="1">Definitely would not buy</row>
+</radio>
+ 
+<suspend/>
+ 
+<exec>
+if (Q_GG.r1 or Q_GG.r2) and (Q_GG1.r3 or Q_GG1.r4 or Q_GG1.r5):
+	MAXPRICE.val=18.99
+if ((Q_GG.r1 or Q_GG.r2) and (Q_GG1.r1 or Q_GG1.r2)) and (Q_GG2.r3 or Q_GG2.r4 or Q_GG2.r5):
+	MAXPRICE.val=19.99
+if ((Q_GG.r1 or Q_GG.r2) and (Q_GG1.r1 or Q_GG1.r2) and (Q_GG2.r1 or Q_GG2.r2)):
+	MAXPRICE.val=20.99
+</exec>
+ 
+<float
+label="MAXPRICE"
+cond="not gv.isSST() and (gv.survey.root.state.dev or gv.survey.root.state.testing)"
+size="3"
+ss:preText="$">
+<title>Record the max price (will be hidden after launch)</title>
+</float>
+ 
+<suspend/>
+ 
+<checkbox
+label="Pricecheck"
+where="execute,survey,report">
+<title>Respondent selected price (low,price1,price2 or price3)</title>
+<row label="r1" autofill="((Q_GG.r1 or Q_GG.r2) and (Q_GG1.r1 or Q_GG1.r2) and (Q_GG2.r1 or Q_GG2.r2))">HIGHEST PRICE- $20.99</row>
+<row label="r2" autofill="((Q_GG.r1 or Q_GG.r2) and (Q_GG1.r1 or Q_GG1.r2)) and (Q_GG2.r3 or Q_GG2.r4 or Q_GG2.r5)">HIGHER PRICE2 - $19.99</row>
+<row label="r3" autofill="(Q_GG.r1 or Q_GG.r2) and (Q_GG1.r3 or Q_GG1.r4 or Q_GG1.r5)">HIGHER PRICE1- $18.99</row>
+<row label="r4" autofill="(Q_GG.r3 or Q_GG.r4 or Q_GG.r5)">LOWER PRICE - $15.99</row>
+</checkbox>
+ 
+<suspend/>
+</block>

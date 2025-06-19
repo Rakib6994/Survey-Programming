@@ -1,0 +1,2179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="AI011 C by Charmin Price Elasticity - PackFlash 360 - US - Teaneck"
+  autosave="0"
+  browserDupes="safe"
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="147"
+  delphi="1"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="desktop"
+  name="Survey"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="1"
+  ss:logoFile="selfserve/1da7/191272/Behaviorally_HeaderLogo.jpg"
+  ss:logoPosition="left"
+  state="testing"
+  theme="company/behaviorally-new-jan-202"
+  version="6">
+
+<res label="MapError">You cannot select 'None' and also make a selection.</res>
+<res label="MapError2">You must make a selection or select 'None'.</res>
+<res label="MagOn">Turn on magnifying glass.</res>
+<res label="MagOff">Turn off magnifying glass.</res>
+<res label="sys_surveyCompleted"/>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if ec.simpleList
+<div class="element $(rowStyle) $(levels) $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</div>
+\@else
+<$(tag) $(headers) class="cell nonempty element $(levels) ${"desktop" if this.grouping.cols else "mobile"} border-collapse $(extraClasses) ${col.group.styles.ss.groupClassNames if col.group else (row.group.styles.ss.groupClassNames if row.group else "")} $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) ${"clickableCell" if isClickable else ""}"$(extra)>
+    ${v2_insertStyle('el.label.start')}
+    ${v2_insertStyle('el.label.end')}
+</$(tag)>
+\@endif
+]]></style>
+<style name="respview.client.css"><![CDATA[
+<link href="[rel hover.css]" rel="stylesheet" media="all">
+
+<style type="text/css">
+.sq-mgshelf-cart-view-content table td input {
+  width: 50px !important;
+}  
+.modal-body {
+  text-align:center;
+}  
+.sq-atm1d-button-align-center .sq-atm1d-buttons {
+  text-align: center
+}   
+.instruction-text {
+  text-align: center
+}  
+.sq-atm1d-td {
+  vertical-align: middle;
+}  
+.sq-atm1d-block {
+  text-align: center
+}
+#comment_Intro {
+  margin:0 auto;
+  opacity: 1;
+  border-radius: 30px;
+}
+.sq-cardsort-Q_PackAtt .sq-cardsort-bucket{
+  overflow: visible;
+}
+.sq-cardsort-buckets .sq-cardsort-bucket {
+  border-color: transparent;
+}
+.grid.grid-table-mode .col-legend{
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'arial';
+ }
+.survey-body{
+ background-color: transparent;
+}
+.question-text{
+ text-align: center;
+}
+.question-error-text{
+ text-align: center;
+}
+.sq-atm1d-vertical .sq-atm1d-td, .sq-atm1d-vertical .oe{
+      text-align: center;
+}
+</style>
+]]></style>
+<style mode="after" name="respview.client.js"><![CDATA[
+<script type="text/javascript" src="[rel jquery.jloupe.js]"></script>
+<script type="text/javascript">
+
+document.oncontextmenu = function(e) {
+    e = e || window.event;
+    if (/^img$/i.test((e.target || e.srcElement).nodeName)) return false;
+};
+
+$ (function() {
+    $ (".jloupeme").jloupe({
+        radiusLT: 150,
+        radiusRT: 150,
+        radiusRB: 150,
+        radiusLB: 150,     
+        width: 300,
+        height: 300,
+        borderColor: "#666",
+        backgroundColor: "#fff",
+     margin:2,
+     cursorOffsetX: 10,
+     cursorOffsetY: -100,
+        fade: false
+    });
+});
+</script>
+<script>
+$ (document).ready(function() {
+
+	$ (".clickable").addClass( "hvr-underline-from-center" )
+	$ (".sq-cardrating-button").addClass( "hvr-underline-from-center" )
+	
+	if(!$ (".sq-cardsort-Q_PackAtt").length){
+		$ (".sq-cardsort-bucket").addClass( "hvr-underline-from-center" )
+	}
+	
+	if($ (".p1").length){
+    	$ (".survey-page").css("background", "url('[rel IntroPage2025.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");    	
+    	$ (".comment-text").css("color", "black");
+    	$ (".comment-text").css("background-color","lightgrey");
+    	$ (".comment-text").css("border-radius","15px");
+        $ (".comment-text").css("opacity",".82");
+    }
+    
+    if($ (".label_Agreement").length){
+    	$ (".survey-page").css("background", "url('[rel IntroPage2025.jpg]') no-repeat center center fixed");
+    	$ (".survey-page").css("background-size", "cover");
+    	$ (".survey-page").css("-webkit-background-size", "cover");
+    	$ (".survey-page").css("-moz-background-size", "cover");
+    	$ (".survey-page").css("-o-background-size", "cover");
+    	$ (".comment-text").css("font-size", "x-large");
+    	$ (".question").css("background-color","lightgrey");
+    	$ (".question-text").css("color","black");
+    	$ (".question").css("border-radius","15px");
+        $ (".question").css("opacity",".82");
+    }
+
+/*Gender 1*/
+	if($ (".radio .sq-atm1d-button").length){
+    	$ ("#btn_continue").hide();
+    }	
+	$ (document).on('click', '.radio .sq-atm1d-button', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Gender 2*/       
+    if($ (".radio .sq-atmtable-btn").length){
+    	$ ("#btn_continue").hide();
+    }
+	$ (document).on('click', '.sq-atmtable-btn', function() {
+		$ ("#btn_continue").click();
+	})
+
+/*Slider*/       
+    if($ (".select .sq-sliderpoints-container").length){
+    	$ ("#btn_continue").hide();
+    }
+	$ (document).on('click', '.sq-sliderpoints-container', function() {
+		$ ("#btn_continue").click();
+	})
+       
+/*Textbox*/
+	$ ('.element').css('text-align','center');
+	
+/*Rating Q_OA Auto Advance 
+    if($ (".sq-atmrating-container").length){
+    	$ ("#btn_continue").hide();
+    }
+	$ (document).on('click', '.sq-atmrating-container', function() {
+		$ ("#btn_continue").click();
+	})
+*/
+
+/*Change Font*/
+	$ ('.dropdown').css("font-family", "Verdana");
+});
+ 
+ 
+</script>
+]]></style>
+<samplesources default="0">
+  <samplesource list="27">
+    <title>Borderless Access</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <exit cond="terminated" url="https://surveys.thepanelstation.com/crdct.aspx?route=${uid}D6436610E2B9956D"/>
+    <exit cond="overquota" url="https://surveys.thepanelstation.com/crdct.aspx?route=${uid}B14D84003A58F584"/>
+    <exit cond="qualified" url="https://surveys.thepanelstation.com/crdct.aspx?route=${uid}9644B9D415707A16"/>
+  </samplesource>
+
+  <samplesource list="640">
+    <title>TestSet</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tsid" unique="1"/>
+    <exit cond="terminated" url="https://tssrvy.com/r/?st=3&amp;tsid=${tsid}"/>
+    <exit cond="overquota" url="https://tssrvy.com/r/?st=2&amp;tsid=${tsid}"/>
+    <exit cond="qualified" url="https://tssrvy.com/r/?st=1&amp;tsid=${tsid}"/>
+  </samplesource>
+
+  <samplesource list="630">
+    <title>Dash</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="spid" unique="1"/>
+    <exit cond="terminated" url="https://survey.dashmr.com/callback?status=Terminate&amp;spid=${spid}"/>
+    <exit cond="overquota" url="https://survey.dashmr.com/callback?status=OQ&amp;spid=${spid}"/>
+    <exit cond="qualified" url="https://survey.dashmr.com/callback?status=Complete&amp;spid=${spid}&amp;cx=BHV123"/>
+  </samplesource>
+
+  <samplesource list="625">
+    <title>IRB</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="rid" unique="1"/>
+    <exit cond="terminated" url="https://surveys.irbureau.com/panelistResponse?panelistResponse=104&amp;rid=${rid}"/>
+    <exit cond="overquota" url="https://surveys.irbureau.com/panelistResponse?panelistResponse=105&amp;rid=${rid}"/>
+    <exit cond="qualified" url="https://surveys.irbureau.com/panelistResponse?panelistResponse=103&amp;rid=${rid}"/>
+  </samplesource>
+
+  <samplesource list="200">
+    <title>OI Research - Mindforce</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="identifier" unique="1"/>
+    <exit cond="terminated" url="https://insightsenabled.mindforceresearch.in/postredirect?status=20&amp;identifier=${identifier}"/>
+    <exit cond="overquota" url="https://insightsenabled.mindforceresearch.in/postredirect?status=40&amp;identifier=${identifier}"/>
+    <exit cond="qualified" url="https://insightsenabled.mindforceresearch.in/postredirect?status=10&amp;identifier=${identifier}"/>
+  </samplesource>
+
+  <samplesource list="151">
+    <title>Baishulai</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://www.sudiaoba.com/SurveyCallback.aspx?pid=${pid}&amp;us=s&amp;uid=${uid}"/>
+    <exit cond="overquota" url="https://www.sudiaoba.com/SurveyCallback.aspx?pid=${pid}&amp;us=q&amp;uid=${uid}"/>
+    <exit cond="qualified" url="https://www.sudiaoba.com/SurveyCallback.aspx?pid=${pid}&amp;us=c&amp;uid=${uid}"/>
+  </samplesource>
+
+  <samplesource list="195">
+    <title>Pure Profile</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ppid" unique="1"/>
+    <exit cond="terminated" url="https://surveyengine.pureprofile.com/api/v1/universal/payment/screened?num=1&amp;ppid={ppid}"/>
+    <exit cond="overquota" url="https://surveyengine.pureprofile.com/api/v1/universal/payment/quotafull?num=1&amp;ppid={ppid}"/>
+    <exit cond="qualified" url="https://surveyengine.pureprofile.com/api/v1/universal/payment/completed?num=1&amp;ppid={ppid}"/>
+  </samplesource>
+
+  <samplesource list="180">
+    <title>PanelBase</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://www.panelbase.net/end?jn=W20868&amp;id=${id}&amp;ka=Mcm2nNz&amp;r=0"/>
+    <exit cond="overquota" url="https://www.panelbase.net/end?jn=W20868&amp;id=${id}&amp;ka=Mcm2nNz&amp;r=2"/>
+    <exit cond="qualified" url="https://www.panelbase.net/end?jn=W20868&amp;id=${id}&amp;ka=Mcm2nNz&amp;r=1"/>
+  </samplesource>
+
+  <samplesource list="190">
+    <title>Mirats</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://moonknight.miratsinsights.com/21df0c3543ff3bd23cecdaf921ff4a704a113d06dc1ec21045a186ad0f2f9a42?s=20&amp;id=${id}"/>
+    <exit cond="overquota" url="https://moonknight.miratsinsights.com/21df0c3543ff3bd23cecdaf921ff4a704a113d06dc1ec21045a186ad0f2f9a42?s=40&amp;id=${id}"/>
+    <exit cond="qualified" url="https://moonknight.miratsinsights.com/21df0c3543ff3bd23cecdaf921ff4a704a113d06dc1ec21045a186ad0f2f9a42?s=10&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="175">
+    <title>Walr</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="panelist_id" unique="1"/>
+    <exit cond="terminated" url="https://welcome.walr.com/surveyout/?P3=2&amp;P1=${panelist_id}"/>
+    <exit cond="overquota" url="https://welcome.walr.com/surveyout/?P3=3&amp;P1=${panelist_id}"/>
+    <exit cond="qualified" url="https://welcome.walr.com/surveyout/?P3=1&amp;P1=${panelist_id}"/>
+  </samplesource>
+
+  <samplesource list="156">
+    <title>Data Diggers</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="memberid" unique="1"/>
+    <exit cond="terminated" url="https://api-icontrol.datadiggers-mr.com/processfinish?status=4&amp;memberid=${memberid}"/>
+    <exit cond="overquota" url="https://api-icontrol.datadiggers-mr.com/processfinish?status=3&amp;memberid=${memberid}"/>
+    <exit cond="qualified" url="https://api-icontrol.datadiggers-mr.com/processfinish?status=1&amp;dipe=ePr48xYV&amp;memberid=${memberid}"/>
+  </samplesource>
+
+  <samplesource list="170">
+    <title>Innovior Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="pid" unique="1"/>
+    <exit cond="terminated" url="https://www.gowebsurveys.com/simpleProcess.php?status=2&amp;pid=${pid}"/>
+    <exit cond="overquota" url="https://www.gowebsurveys.com/simpleProcess.php?status=3&amp;pid=${pid}"/>
+    <exit cond="qualified" url="https://www.gowebsurveys.com/simpleProcess.php?status=1&amp;pid=${pid}"/>
+  </samplesource>
+
+  <samplesource list="160">
+    <title>Question Lab</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="arid" unique="1"/>
+    <exit cond="terminated" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=2&amp;arid=${arid}"/>
+    <exit cond="overquota" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=3&amp;arid=${arid}"/>
+    <exit cond="qualified" url="https://vault.questionlab.com/audience/passback?creference=TVRRekl5TkNSVWc9&amp;status=1&amp;arid=${arid}"/>
+  </samplesource>
+
+  <samplesource list="155">
+    <title>UBO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated" url="https://uboconsulting.com/redirect/terminate.html"/>
+    <exit cond="overquota" url="https://uboconsulting.com/redirect/over-quota.html"/>
+    <exit cond="qualified" url="https://uboconsulting.com/redirect/complete.html"/>
+  </samplesource>
+
+  <samplesource list="154">
+    <title>Paradigm</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="digid" unique="1"/>
+    <exit cond="terminated" url="https://dig.ps-di.com/exitlink?statusid=2&amp;digid=${digid}"/>
+    <exit cond="overquota" url="https://dig.ps-di.com/exitlink?statusid=3&amp;digid=${digid}"/>
+    <exit cond="qualified" url="https://dig.ps-di.com/exitlink?statusid=1&amp;digid=${digid}&amp;cmpid=25o5ROxZO358P7KGoLA5HivE"/>
+  </samplesource>
+
+  <samplesource list="153">
+    <title>Veritolytics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="verito" unique="1"/>
+    <exit cond="terminated" url="http://panel.veritolytics.com/backuri/return.php?status=30&amp;verito=${verito}"/>
+    <exit cond="overquota" url="http://panel.veritolytics.com/backuri/return.php?status=40&amp;verito=${verito}"/>
+    <exit cond="qualified" url="http://panel.veritolytics.com/backuri/return.php?status=20&amp;verito=${verito}"/>
+  </samplesource>
+
+  <samplesource list="152">
+    <title>Bilendi &amp; Respondi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="m" unique="1"/>
+    <exit cond="terminated" url="https://survey.maximiles.com/screenout?p=qvs&amp;m=${m}&amp;p=qvs"/>
+    <exit cond="overquota" url="https://survey.maximiles.com/quotasfull?p=qvq&amp;m=${m}&amp;p=qvq"/>
+    <exit cond="qualified" url="https://survey.maximiles.com/complete?p=qvc&amp;m=${m}&amp;p=qvc"/>
+  </samplesource>
+
+  <samplesource list="150">
+    <title>Cognitive Intelligence</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=2&amp;co=3&amp;sample=1"/>
+    <exit cond="overquota" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=3&amp;co=3&amp;sample=1"/>
+    <exit cond="qualified" url="https://kesurvey.sawtoothsoftware.com/ST015/cgi-bin/ciwweb.pl?studyname=ST015&amp;id=${id}E&amp;status=1&amp;co=3&amp;sample=1"/>
+  </samplesource>
+
+  <samplesource list="134">
+    <title>Prodege</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=3"/>
+    <exit cond="overquota" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=2"/>
+    <exit cond="qualified" url="https://pod.prodegemr.com/prodegemr/unsigned-transaction-completion?apik=PAT!HMpwEa8t$I&amp;transaction_id=${transaction_id}&amp;completion_type=1"/>
+  </samplesource>
+
+  <samplesource list="2">
+    <title>Sago</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="RID" unique="1"/>
+    <exit cond="terminated" url="https://surveys.sample-cube.com/ending/?RS=3&amp;RID=${RID}"/>
+    <exit cond="overquota" url="https://surveys.sample-cube.com/ending/?RS=2&amp;RID=${RID}"/>
+    <exit cond="qualified" url="https://surveys.sample-cube.com/ending/?RS=1&amp;RID=${RID}&amp;secret=606"/>
+  </samplesource>
+
+  <samplesource list="3">
+    <title>Torfac - (Formerly Wise Works)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="resp" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;resp=${resp}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;resp=${resp}"/>
+    <exit cond="qualified" url="https://pollrouting.com/response/TrFc23119a656ace85b1e2fa19a6ce634e72c81/hf6uvk48n84jms7mhgrshafoxx7vu9.php?lvb=v&amp;ct=jNWCZ1WOhQaR&amp;resp=${resp}"/>
+  </samplesource>
+
+  <samplesource list="138">
+    <title>Philomath Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="guid" unique="1"/>
+    <exit cond="terminated" url="https://survey.philomathresearch.com/thanks?status=t&amp;guid=${guid}"/>
+    <exit cond="overquota" url="https://survey.philomathresearch.com/thanks?status=q&amp;guid=${guid}"/>
+    <exit cond="qualified" url="https://survey.philomathresearch.com/thanks?status=c&amp;guid=${guid}"/>
+  </samplesource>
+
+  <samplesource list="6">
+    <title>Rakuten Insights (AIP)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="uid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=s"/>
+    <exit cond="overquota" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=q"/>
+    <exit cond="qualified" url="https://message.insight.rakuten.com/survey/Passback.do?pid=${pid}&amp;uid=${uid}&amp;st=c"/>
+  </samplesource>
+
+  <samplesource list="141">
+    <title>Cint</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="sid" unique="1"/>
+    <exit cond="terminated" url="https://s.cint.com/Survey/EarlyScreenOut?ProjectToken=02a08ede-c3f8-a497-a571-5dbb15c6da66"/>
+    <exit cond="overquota" url="https://s.cint.com/Survey/QuotaFull?ProjectToken=02a08ede-c3f8-a497-a571-5dbb15c6da66"/>
+    <exit cond="qualified" url="https://s.cint.com/Survey/Complete?ProjectToken=2d612fdc-8a95-42b7-9aee-84fada79afa0"/>
+  </samplesource>
+
+  <samplesource list="24">
+    <title>SampleGurus</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <exit cond="terminated" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=2"/>
+    <exit cond="overquota" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=3"/>
+    <exit cond="qualified" url="https://redirect.mindsharesurveys.com/v1/M7FMAqNSgNBiTKRoDbiNJ4YiXPN2cBin?proj=07892571bf41cb13d35aa035a6dcbf262e4cc056&amp;id=${ID}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="26">
+    <title>Orchidea Research</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ORGID" required="1"/>
+    <exit cond="terminated" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin629587&amp;ORGID=${ORGID}"/>
+    <exit cond="overquota" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin315610&amp;ORGID=${ORGID}"/>
+    <exit cond="qualified" url="https://opinioninn.com/HandleCallBack.aspx?Qry=967b1962-0510-4504-bf63-1e9701eeff2d&amp;oppintype=oppin921274&amp;ORGID=${ORGID}"/>
+  </samplesource>
+
+  <samplesource list="25">
+    <title>OMI Russia </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ac" unique="1"/>
+    <exit cond="terminated" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=2"/>
+    <exit cond="overquota" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=3"/>
+    <exit cond="qualified" url="https://anketka.org/return.php?sn=318684&amp;ac=${ac}&amp;status=1"/>
+  </samplesource>
+
+  <samplesource list="20">
+    <title>GMO Research (JPN)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <exit cond="terminated" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=2&amp;id=${id}"/>
+    <exit cond="overquota" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=3&amp;id=${id}"/>
+    <exit cond="qualified" url="https://infopanel.jp/lpark/enqInfoUpdateForNC.do?status=1&amp;id=${id}"/>
+  </samplesource>
+
+  <samplesource list="11">
+    <title>Samplenomics</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ui" unique="1"/>
+    <exit cond="terminated" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndTerm&amp;ui=${ui}"/>
+    <exit cond="overquota" url="http://host4.dotdata.nl/dotdata/start?u=37B7BF1CE3F44B0BBAAB30BA8B2E6D32&amp;q=EndOverQ&amp;ui=${ui}"/>
+    <exit cond="qualified" url="http://host4.dotdata.nl/dotdata/start?u=EE4E2321A3984FD0BB88A3C5FD9F7977&amp;q=END&amp;ui=${ui}"/>
+  </samplesource>
+
+  <samplesource list="104">
+    <title>Kantar - (LightSpeed + GMI) all of Asia except China</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="id" unique="1"/>
+    <var name="table" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${table}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${table}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${table}"/>
+  </samplesource>
+
+  <samplesource list="10">
+    <title>Kantar - China only</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="ID" unique="1"/>
+    <var name="ProjectToken" required="1"/>
+    <exit cond="terminated" url="https://passback.lifepointspanel.com/Survey/EarlyScreenOut?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="overquota" url="https://passback.lifepointspanel.com/Survey/QuotaFull?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+    <exit cond="qualified" url="https://passback.lifepointspanel.com/Survey/Complete?ProjectToken=${ProjectToken}&amp;ID=${ID}"/>
+  </samplesource>
+
+  <samplesource list="4">
+    <title>OI Research - Online interactive research limited</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <var name="pid" required="1"/>
+    <exit cond="terminated" url="https://api.dynata.com/respondent/exit?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://api.dynata.com/respondent/exit?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://api.dynata.com/respondent/exit?rst=1&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="136">
+    <title>DISQO</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tid" unique="1"/>
+    <exit cond="terminated" url="https://go.activemeasure.com?status=12615&amp;tid=${tid}"/>
+    <exit cond="overquota" url="https://go.activemeasure.com?status=9526&amp;tid=${tid}"/>
+    <exit cond="qualified" url="https://go.activemeasure.com?status=17787&amp;tid=${tid}"/>
+  </samplesource>
+
+  <samplesource list="101">
+    <title>Dynata</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="psid" unique="1"/>
+    <exit cond="terminated" url="https://dkr1.ssisurveys.com/projects/end?rst=2&amp;psid=${psid}"/>
+    <exit cond="overquota" url="https://dkr1.ssisurveys.com/projects/end?rst=3&amp;psid=${psid}"/>
+    <exit cond="qualified" url="https://dkr1.ssisurveys.com/projects/end?rst=1&amp;psid=${psid}"/>
+  </samplesource>
+
+  <samplesource list="15">
+    <title>Pure Spectrum </title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="transaction_id" unique="1"/>
+    <exit cond="terminated" url="https://spectrumsurveys.com/surveydone?st=18&amp;transaction_id=${transaction_id}"/>
+    <exit cond="overquota" url="https://spectrumsurveys.com/surveydone?st=17&amp;transaction_id=${transaction_id}"/>
+    <exit cond="qualified" url="https://spectrumsurveys.com/surveydone?st=21&amp;transaction_id=${transaction_id}"/>
+  </samplesource>
+
+  <samplesource list="1">
+    <title>CLT Sample Source placeholder - do not add Resp</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #c6007e;">THIS IS A TERMINATE! DO NOT BACK UP AND CONTINUE ANSWERING. ALERT YOUR SUPERVISOR IMMEDIATELY!</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated"><span style="color: #c6007e;">THIS IS A TERMINATE! This message only shows up in testing - in live interviewing you will be routed to the sample company screen out page.</span></exit>
+    <exit cond="overquota">Thank you for taking our survey. This is an over quota.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated! THIS IS A COMPLETE.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<block label="Logistics" builder:title="Logistics">
+  <radio 
+   label="Location"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Sample Source (web) / Location (web to clt)</title>
+    <row label="US166" cond="list=='3'" value="592487365">Torfac (previously Wise Works)</row>
+    <row label="US167" cond="list=='2'" value="592490403">Sago</row>
+    <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+    <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+    <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+    <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+    <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+    <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+    <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+    <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+    <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+    <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+    <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+    <row label="US213" cond="list=='24'" value="1314418229">SampleGurus</row>
+    <row label="RU007" cond="list=='25'" value="833513838">OMI (Online Market Intelligence)</row>
+    <row label="IN021" cond="list=='26'" value="1422500825">Orchidea Research ()</row>
+    <row label="US220" cond="list=='141'" value="7535526">Cint</row>
+    <row label="IN200" cond="list=='150'" value="7535529">Cognitive Intelligence</row>
+    <row label="GB030" cond="list=='152'" value="1244">Bilendi &amp; Respondi ()</row>
+    <row label="US215" cond="list=='153'" value="69019">Veritolytics</row>
+    <row label="US230" cond="list=='154'" value="30846">Paradigm Sample</row>
+    <row label="US234" cond="list=='160'" value="30816">Question Lab</row>
+    <row label="US235" cond="list=='170'" value="30816">Innovior Research</row>
+    <row label="XK002" cond="list=='156'" value="3086">Data Diggers</row>
+    <row label="US237" cond="list=='175'" value="30867">Walr</row>
+    <row label="US238" cond="list=='190'" value="10867">Mirats</row>
+    <row label="GB032" cond="list=='180'" value="131516">Panel Base</row>
+    <row label="GB033" cond="list=='195'" value="131000">Pure Profile</row>
+    <row label="CN051" cond="list=='151'" value="1312">Baishulai</row>
+    <row label="GB035" cond="list=='200'" value="3084">OI Research - Mindforce</row>
+    <row label="GB060" cond="list=='625'" value="39184">IRB</row>
+    <row label="US250" cond="list=='630'" value="48122">Dash</row>
+    <row label="US260" cond="list=='640'" value="39314">TestSet</row>
+    <row label="US212" cond="list=='27'" value="4822">Borderless Access</row>
+  </radio>
+
+  <suspend/>
+
+  <text 
+   label="LocationCode"
+   cond="not(gv.isSST())"
+   optional="0"
+   size="25">
+    <title>This is used to assign each location's unique identifying code from the Location question row label. Do not edit.</title>
+    <virtual>
+if Location.any:
+	LocationCode.val = Location.selected.label
+    </virtual>
+
+  </text>
+
+  <suspend/>
+
+  <text 
+   label="IP_ID"
+   optional="0"
+   randomize="0"
+   size="50"
+   where="execute,survey,report">
+    <title>IP ID</title>
+    <exec>
+IP_ID.val = gv.request.getRemote()
+    </exec>
+
+  </text>
+
+  <suspend/>
+
+  <note>Edit logic based on country - if one country, use "True", if multiple countries, assign based on sample company. Make sure field department knows to alert you if they are adding a sample company</note>
+  <autofill label="Country" where="execute,survey,report">
+    <title>Country</title>
+    <row label="US" autofill="True">United States</row>
+    <row label="FR">France</row>
+    <row label="UK">United Kingdom</row>
+    <row label="DE">Germany</row>
+    <row label="CN">China</row>
+    <row label="BR">Brazil</row>
+    <row label="MX">Mexico</row>
+    <row label="IT">Italy</row>
+    <row label="PH">Philippines</row>
+    <row label="RU">Russia</row>
+    <row label="TH">Thailand</row>
+    <row label="ES">Spain</row>
+    <row label="SA">Saudi Arabia</row>
+    <row label="KP">South Korea</row>
+    <row label="PL">Poland</row>
+    <row label="CA">Canada</row>
+    <row label="AU">Australia</row>
+    <row label="JP">Japan</row>
+    <row label="VNM">Vietnam</row>
+    <row label="ID">Indonesia</row>
+    <row label="IN">India</row>
+    <row label="NL">Netherlands</row>
+    <row label="AR">Argentina</row>
+    <row label="MY">Malaysia</row>
+    <row label="ZA">South Africa</row>
+    <row label="CH">Switzerland</row>
+    <row label="CO">Colombia</row>
+    <row label="SG">Singapore</row>
+    <row label="AE">United Arab Emirates</row>
+    <row label="AT">Austria</row>
+    <row label="CZ">Czech Republic</row>
+    <row label="DK">Denmark</row>
+    <row label="MA">Morocco</row>
+    <row label="NG">Nigeria</row>
+    <row label="PT">Portugal</row>
+    <row label="TR">Turkey</row>
+    <row label="TW">Taiwan</row>
+    <row label="SE">Sweden</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="JobNumber" where="execute,survey,report">
+    <title>AI011 C by Charmin Price Elasticity - PackFlash 360 - US - Teaneck</title>
+    <row label="r1" autofill="True">ai011</row>
+  </autofill>
+
+  <suspend/>
+
+  <autofill label="Wave" where="execute,survey,report">
+    <title>Wave</title>
+    <row label="r1" autofill="True">Wave 1</row>
+    <row label="r2">Wave 2</row>
+    <row label="r3">Wave 3</row>
+  </autofill>
+
+  <suspend/>
+
+  <html label="Intro" where="survey"><p style="font-family:arial" class="p1"><b>Hello and welcome to our survey!</b><br /><br />Thank you in advance for your participation.&amp;nbsp; This study is very important to us and we ask that you answer each question carefully and completely.<br /><br />While going through the survey, use the scroll bar on the right and bottom of your screen to move up and down through questions and images.&amp;nbsp; Please remember that there are no right or wrong answers.&amp;nbsp; We are only interested in your opinions.<br /><br />Thank you again!&amp;nbsp; Let’s begin…</p></html>
+
+  <text 
+   label="Browser"
+   randomize="0">
+    <title>&amp;nbsp;</title>
+    <style name="el.text"><![CDATA[
+<input type="text" name="$(name)" id="$(id)" value="$(value)" size="$(size)" class="input text-input" $(extra) hidden/>
+]]></style>
+    <style name="question.after" wrap="ready"><![CDATA[
+$ ('.even').hide();
+           var isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+           var isEdge = (navigator.userAgent.indexOf('Edge') >= 0);
+           var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+           var isSafari = (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+           console.log('The value for browser is ' + isEdge);
+           console.log(isChrome);
+           console.log(isFirefox);
+           console.log(isSafari);
+           if (isEdge)
+           {
+               $ ('input[type=text]').val('N');
+
+           }
+          else if (isChrome)
+           {
+               $ ('input[type=text]').val('Y');
+
+           }
+          else if(isFirefox)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+          else if(isSafari)
+           {
+               $ ('input[type=text]').val('Y');
+           }
+         else {
+        $ ('input[type=text]').val('N');
+}
+]]></style>
+  </text>
+
+  <suspend/>
+
+  <autofill label="CompatBrowser" where="execute,survey,report">
+    <title>Compatible Browser</title>
+    <row label="r1" autofill="Browser.val == 'Y'">Yes</row>
+    <row label="none" autofill="CompatBrowser.count == 0">No</row>
+  </autofill>
+
+  <suspend/>
+
+  <term label="TERM_Compat" cond="CompatBrowser.none and not(gv.isSST())">Incompatible Browser</term>
+
+  <term label="TERM_Device" cond="not(device.desktop) and not(gv.isSST())">Incompatible Device</term>
+
+  <suspend/>
+
+  <autofill label="Category" randomize="0" where="execute,survey,report">
+    <title>Category</title>
+    <row label="r1" autofill="True">Toilet Paper products</row>
+  </autofill>
+
+  <autofill label="Clutter1" randomize="0" where="execute,survey,report">
+    <title>Clutter Category 1</title>
+    <row label="r1" autofill="True">Frozen Meal products</row>
+  </autofill>
+
+  <autofill label="Clutter2" randomize="0" where="execute,survey,report">
+    <title>Clutter Category 2</title>
+    <row label="r1" autofill="True">Beauty products</row>
+  </autofill>
+
+  <autofill label="Months" randomize="0" where="execute,survey,report">
+    <title>Enter number of months here 1,3,6,12 for past purchased, BUMO</title>
+    <row label="r1" autofill="True">3 Month</row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<block label="RecaptchaBlock" cond="Country.US or Country.UK or Country.CA or Country.ZA or Country.AU" builder:title="RecaptchaBlock">
+  <logic label="ln2" uses="recaptcha.1">
+    <title>New Recaptcha</title></logic>
+  <html label="ln2_h" cond="ln2.human" where="survey">Please select continue to proceed.</html>
+
+  <html label="ln2_nh" cond="not ln2.human" final="1" where="survey">You are not human! You cannot proceed further.</html>
+
+  <radio 
+   label="ln2_results"
+   where="execute,survey,report">
+    <title>Results</title>
+    <comment>Select one</comment>
+    <exec>
+ln2_results.val = int(not ln2.human)
+    </exec>
+
+    <row label="r1">Human</row>
+    <row label="r2">Not Human</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="te1b" cond="ln2_results.r2 and not(gv.isSST())">reCAPTCHA</term>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<number 
+  label="Red_Herring_Math"
+  optional="0"
+  size="2">
+  <title><p>Please provide an answer to this mathematical equation:</p>
+<p></p>
+<p>2 + 6 = ??</p></title>
+  <comment>Enter your response below</comment>
+</number>
+
+<suspend/>
+
+<term label="te1" cond="not(Red_Herring_Math.check('8')) and not(gv.isSST())">Math (Red Herring)</term>
+
+<suspend/>
+
+<block label="QualityControlBlock" cond="False" builder:title="QualityControlBlock">
+  <radio 
+   label="Red_Herring_Grid"
+   shuffle="rows">
+    <title>This is another question to test how well you’re able to read the question text and instructions.<br /><br />For the year 2024, do you project your purchasing behavior for each of the following categories to decrease, remain the same, or increase?</title>
+    <comment>Select one for each row</comment>
+    <col label="c1"><strong>Decrease</strong></col>
+    <col label="c2"><strong>Remain The Same</strong></col>
+    <col label="c3"><strong>Increase</strong></col>
+    <row label="r1">Home electronics and technology</row>
+    <row label="r2">Groceries</row>
+    <row label="r3">Household cleaning supplies</row>
+    <row label="r4">Health and wellness products</row>
+    <row label="r5">Apparel</row>
+    <row label="r6">Home improvement projects (indoor or outdoor)</row>
+    <row label="r7">For this row please select "remain the same"</row>
+    <row label="r8">Over-the-counter medicines</row>
+    <row label="r9">Restaurant (to-go, takeout. fast food etc.)</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="te3" cond="not(Red_Herring_Grid.r7.c2) and not(gv.isSST())">Grid (Red Herring) Not In Use</term>
+
+  <suspend/>
+</block>
+
+<block label="Screener" builder:title="Screener">
+  <checkbox 
+   label="S_PastParticipation"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Have you participated in a market research study within the past 2 weeks, on any of the following topics?</title>
+    <row label="r1">Frozen Meal products</row>
+    <row label="r2">[pipe: Category]</row>
+    <row label="r3">Beauty products</row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_PastPar" cond="(S_PastParticipation.r2)">Past Participation</term>
+
+  <suspend/>
+
+  <checkbox 
+   label="S_Industry"
+   atleast="1"
+   atm1d:large_maxWidth="300px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Do you, or does anyone in your immediate family work for any of the following industries?</title>
+    <row label="r1">Market research or marketing</row>
+    <row label="r2">Advertising agency or public relations firms</row>
+    <row label="r3">A graphic design or packaging firm</row>
+    <row label="r4">A company involved in the manufacturing, distribution or sale of <b>Frozen Meal</b> products</row>
+    <row label="r5">A company involved in the manufacturing, distribution or sale of <b>Beauty</b> products</row>
+    <row label="r6">A company involved in the manufacturing, distribution or sale of <b>Toilet Paper products</b></row>
+    <row label="None" exclusive="1">None of these</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Industry" cond="(S_Industry.r1 or S_Industry.r2 or S_Industry.r3 or S_Industry.r6)">Sensitive Industry</term>
+
+  <suspend/>
+
+  <select 
+   label="S_GroceryShop"
+   randomize="0"
+   sliderpoints:sliderWidth="95%"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>How much of the household grocery shopping do you, yourself do?</title>
+    <choice label="r1"><span style="font-size: 10pt;" align="center">All of it<br /><img src="[rel Cart4.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r2"><span style="font-size: 10pt;" align="center">Half of it or more<br /><img src="[rel Cart3.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r3"><span style="font-size: 10pt;" align="center">Less than half of it<br /><img src="[rel Cart1.png]" constrain="true" title="image" height="50" /></span></choice>
+    <choice label="r4"><span style="font-size: 10pt;" align="center">None of it<br /><img src="[rel Cart0.png]" constrain="true" title="image" height="50" /></span></choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERM_HHShopping" cond="(S_GroceryShop.r3 or S_GroceryShop.r4)">Household Grocery Shopping</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Gender"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   shuffle="rows"
+   uses="atm1d.9">
+    <title>Which of the following best describes how you identify?</title>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+    <row label="r3">Non-Binary</row>
+    <row label="r4">Gender Non-Conforming</row>
+    <row label="r5">Gender Fluid</row>
+    <row label="r6" randomize="0">Prefer to self-identify</row>
+  </radio>
+
+  <suspend/>
+
+  <autofill label="gender" randomize="0" where="execute,survey,report">
+    <title>Gender for Real Eye</title>
+    <row label="r1" autofill="S_Gender.r1">1</row>
+    <row label="r2" autofill="S_Gender.r2">0</row>
+    <row label="r3" autofill="not(S_Gender.r1 or S_Gender.r2)">2</row>
+  </autofill>
+
+  <suspend/>
+
+  <text 
+   label="SelfIdentifyGender_OE"
+   cond="S_Gender.r6"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your identity below:</title>
+  </text>
+
+  <suspend/>
+
+  <number 
+   label="S_Age"
+   optional="0"
+   randomize="0"
+   size="3"
+   ss:postText="years old"
+   verify="range(0,99)">
+    <title>Please type in your age below.</title>
+  </number>
+
+  <suspend/>
+
+  <term label="TERM_Age" cond="not(S_Age.check('18-65'))">Age</term>
+
+  <suspend/>
+
+  <select 
+   label="STANDARD_ETHNICITY"
+   randomize="0"
+   shuffle="choices">
+    <title>Which of the following best describes you?</title>
+    <choice label="eth1">Asian or Pacific Islander</choice>
+    <choice label="eth2">Black or African American, or Black British</choice>
+    <choice label="eth3">Hispanic or Latino</choice>
+    <choice label="eth4">Native American or Alaskan Native</choice>
+    <choice label="eth5">White or Caucasian</choice>
+    <choice label="eth6" randomize="0">Multiracial or Biracial</choice>
+    <choice label="eth7" randomize="0">Prefer to self-identify</choice>
+    <choice label="eth8" randomize="0">Prefer not to answer</choice>
+  </select>
+
+  <suspend/>
+
+  <term label="TERM_Ethnicity" cond="(STANDARD_ETHNICITY.eth8 and False)">Refused Ethnicity</term>
+
+  <suspend/>
+
+  <text 
+   label="SelfIdentifyEthnicity_OE"
+   cond="STANDARD_ETHNICITY.eth7"
+   optional="0"
+   randomize="0"
+   size="25">
+    <title>Please describe your ethnicity below:</title>
+  </text>
+
+  <suspend/>
+
+  <checkbox 
+   label="STANDARD_ETHNICITY2"
+   cond="STANDARD_ETHNICITY.eth6"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Please select all of the following that describe you.</title>
+    <row label="eth1">Asian or Pacific Islander</row>
+    <row label="eth2">Black or African American, or Black British</row>
+    <row label="eth3">Hispanic or Latino</row>
+    <row label="eth4">Native American or Alaskan Native</row>
+    <row label="eth5">White or Caucasian</row>
+    <row label="eth6" exclusive="1" open="1" openSize="25" randomize="0">Prefer to self-identify</row>
+    <row label="eth7" exclusive="1">I prefer not to answer</row>
+  </checkbox>
+
+  <suspend/>
+
+  <term label="TERM_Ethnicity2" cond="(STANDARD_ETHNICITY2.eth7 and False)">Refused Ethnicity 2</term>
+
+  <suspend/>
+
+  <radio 
+   label="S_Frequency"
+   cardrating:lrg_maxwidth="120px"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title>How often have you purchased products in each of the following categories?</title>
+    <row label="r1">Frozen Meal products</row>
+    <row label="r2">Beauty products</row>
+    <row label="TB">[pipe: Category]</row>
+    <col label="c1">Once a week</col>
+    <col label="c2">Once every 2 weeks</col>
+    <col label="c3">Once a month</col>
+    <col label="c4">Once every 2 or 3 months</col>
+    <col label="c5">Once every 6 months</col>
+    <col label="c6">Once a year</col>
+    <col label="c7">Never</col>
+    <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      	})
+	</script>
+]]></style>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_Freq" cond="S_Frequency.TB.c5 or S_Frequency.TB.c6 or S_Frequency.TB.c7">Category Frequency</term>
+
+  <suspend/>
+
+  <autofill label="FreqQual" randomize="0" where="execute,survey,report">
+    <title>Frequency Qualifier</title>
+    <row label="r1" autofill="not(S_Frequency.r1.c5 or S_Frequency.r1.c6 or S_Frequency.r1.c7)">[pipe: Clutter1]</row>
+    <row label="r2" autofill="not(S_Frequency.r2.c5 or S_Frequency.r2.c6 or S_Frequency.r2.c7)">[pipe: Clutter2]</row>
+    <row label="r3" autofill="not(S_Frequency.TB.c5 or S_Frequency.TB.c6 or S_Frequency.TB.c7)">[pipe: Category]</row>
+  </autofill>
+
+  <suspend/>
+
+  <radio 
+   label="v_FreqClutter1"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter1] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r1.c1:  data.val=0
+if S_Frequency.r1.c2:  data.val=1
+if S_Frequency.r1.c3:  data.val=2
+if S_Frequency.r1.c4:  data.val=3
+if S_Frequency.r1.c5:  data.val=4
+if S_Frequency.r1.c6:  data.val=5
+if S_Frequency.r1.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqClutter2"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Clutter2] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.r2.c1:  data.val=0
+if S_Frequency.r2.c2:  data.val=1
+if S_Frequency.r2.c3:  data.val=2
+if S_Frequency.r2.c4:  data.val=3
+if S_Frequency.r2.c5:  data.val=4
+if S_Frequency.r2.c6:  data.val=5
+if S_Frequency.r2.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <radio 
+   label="v_FreqTest"
+   randomize="0">
+    <title>Virtual for Weighting - [pipe: Category] Frequency - DO NOT MODIFY</title>
+    <virtual>
+if S_Frequency.TB.c1:  data.val=0
+if S_Frequency.TB.c2:  data.val=1
+if S_Frequency.TB.c3:  data.val=2
+if S_Frequency.TB.c4:  data.val=3
+if S_Frequency.TB.c5:  data.val=4
+if S_Frequency.TB.c6:  data.val=5
+if S_Frequency.TB.c7:  data.val=6
+    </virtual>
+
+    <row label="r1">Once a week</row>
+    <row label="r2">Once every 2 weeks</row>
+    <row label="r3">Once a month</row>
+    <row label="r4">Once every 2 or 3 months</row>
+    <row label="r5">Once every 6 months</row>
+    <row label="r6">Once a year</row>
+    <row label="r7">Never</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_Retailer"
+   atleast="1"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Where do you typically buy <b>Toilet Paper products</b>?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Amazon</row>
+    <row label="r3">Instacart</row>
+    <row label="r5">Target</row>
+    <row label="r7">Walmart</row>
+    <row label="r9">Costco</row>
+    <row label="r11">Sams Club</row>
+    <row label="r13">BJs Wholesale Club</row>
+    <row label="r15">Kroger</row>
+    <row label="r17">Albertsons</row>
+    <row label="r19">Publix</row>
+    <row label="r21">Meijer</row>
+    <row label="r23">Wegmans</row>
+    <row label="r25">Whole Foods Market</row>
+    <row label="r27">Dollar General</row>
+    <row label="r29">Other – Other Store</row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="Q1"
+   atm1d:large_maxWidth="900px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Which one statement best describes how you think about the price and value of toilet tissue products in general?</title>
+    <row label="r1">I buy the lowest priced toilet tissue products</row>
+    <row label="r2">I routinely buy the lowest priced toilet tissue products from among a limited set of acceptable brands I trust</row>
+    <row label="r3">I found a toilet tissue product that is better than other brands and it costs less, so I stick to it</row>
+    <row label="r4">I occasionally pay a little extra for toilet tissue products I like or think are a little better</row>
+    <row label="r5">I routinely pay a little extra for toilet tissue products I like or think are a little</row>
+    <row label="r6">Price is not something I think about when buying a toilet tissue product - I buy what I want and don't worry about price</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q2"
+   cardrating:navigation="0"
+   cardrating:progress="0"
+   randomize="0"
+   shuffle="rows"
+   uses="cardrating.1">
+    <title><i>Please provide an answer for each of the following statements</i>.</title>
+    <row label="r1">I like to treat myself to little luxuries</row>
+    <row label="r2">All toilet tissue for the home is pretty much the same</row>
+    <col label="c1" value="5">Strongly Agree</col>
+    <col label="c2" value="4">Somewhat Agree</col>
+    <col label="c3" value="3">Neither Agree nor Disagree</col>
+    <col label="c4" value="2">Somewhat Disagree</col>
+    <col label="c5" value="1">Strongly Disagree</col>
+    <style name="question.after"><![CDATA[
+<script>
+$ ('.question-text').insertAfter($ ('.sq-cardrating-carousel'));
+$ ('.sq-cardrating-card').css('font-size','18pt');
+$ ('.instruction-text').css('font-size','14pt');
+
+
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1
+	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      		
+      	})
+
+	</script>
+]]></style>
+  </radio>
+
+  <suspend/>
+
+  <block label="Category2" builder:title="TestCat">
+    <checkbox 
+    label="S_Brand_PastPurchased2"
+    atleast="1"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    uses="atm1d.9">
+      <title>Which brand or brands of <b>Toilet Paper Products</b> have you purchased in the past <b>3</b> months?</title>
+      <row label="r1">Angel Soft</row>
+      <row label="r2">Charmin</row>
+      <row label="r3">Cottonelle</row>
+      <row label="r4">Quilted Northern</row>
+      <row label="r5">Scott</row>
+      <row label="r6">Seventh Generation</row>
+      <row label="r7">Dollar General Home or Family Dollar Home</row>
+      <row label="r8">Great Value Soft &amp; Strong (Walmart brand)</row>
+      <row label="r9">Great Value Ultra Soft or Ultra Strong (Walmart brand)</row>
+      <row label="r10">Home Sense Strong &amp; Soft (Kroger brand)</row>
+      <row label="r11">Home Sense Ultra Soft or Ultra Strong (Kroger brand)</row>
+      <row label="r12">Up &amp; Up Soft &amp; Strong (Target brand)</row>
+      <row label="r13">Up &amp; Up Ultra Soft or Ultra Strong (Target brand)</row>
+      <row label="r14">Berkley &amp; Jensen (BJ's Club brand)</row>
+      <row label="r15">Kirkland Signature (Costco brand)</row>
+      <row label="r16">Members Mark (Sam's Club brand)</row>
+      <row label="r17" open="1" openSize="25" randomize="0">Other brand (please specify)</row>
+    </checkbox>
+
+    <suspend/>
+
+    <autofill label="S_Brand_PastPurchased" randomize="0" where="execute,survey,report">
+      <title>Usage Past Purchased (P3M, P6M, P12M) - User/Non User for Database</title>
+      <row label="TB" autofill="S_Brand_PastPurchased2.r2">Brand Buyers</row>
+      <row label="NonUser" autofill="S_Brand_PastPurchased.count==0">NON-Brand Buyers</row>
+    </autofill>
+
+    <suspend/>
+
+    <radio 
+    label="S_Brand_BUMO2"
+    atm1d:large_maxWidth="200px"
+    atm1d:showInput="0"
+    atm1d:viewMode="tiled"
+    randomize="0"
+    rowCond="S_Brand_PastPurchased2[row.index]"
+    uses="atm1d.9">
+      <title>And which one brand of <b>Toilet Paper Products</b> have you purchased most often in the past <b>3</b> months?</title>
+      <row label="r1">Angel Soft</row>
+      <row label="r2">Charmin</row>
+      <row label="r3">Cottonelle</row>
+      <row label="r4">Quilted Northern</row>
+      <row label="r5">Scott</row>
+      <row label="r6">Seventh Generation</row>
+      <row label="r7">Dollar General Home or Family Dollar Home</row>
+      <row label="r8">Great Value Soft &amp; Strong (Walmart brand)</row>
+      <row label="r9">Great Value Ultra Soft or Ultra Strong (Walmart brand)</row>
+      <row label="r10">Home Sense Strong &amp; Soft (Kroger brand)</row>
+      <row label="r11">Home Sense Ultra Soft or Ultra Strong (Kroger brand)</row>
+      <row label="r12">Up &amp; Up Soft &amp; Strong (Target brand)</row>
+      <row label="r13">Up &amp; Up Ultra Soft or Ultra Strong (Target brand)</row>
+      <row label="r14">Berkley &amp; Jensen (BJ's Club brand)</row>
+      <row label="r15">Kirkland Signature (Costco brand)</row>
+      <row label="r16">Members Mark (Sam's Club brand)</row>
+      <row label="r17">${S_Brand_PastPurchased2.r17.open}</row>
+    </radio>
+
+    <suspend/>
+
+    <autofill label="S_Brand_BUMO" randomize="0" where="execute,survey,report">
+      <title>BUMO - User/Non User for Database</title>
+      <row label="TB" autofill="S_Brand_BUMO2.r2">TestBrand User - all test brands netted</row>
+      <row label="NonUser" autofill="S_Brand_BUMO.count==0">TestBrand NON User</row>
+    </autofill>
+
+    <suspend/>
+  </block>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q_SubBrand"
+   cond="S_Brand_PastPurchased2.r2"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you purchased <b>Charmin</b> in the past 3 month. Which of the following have you purchased specifically?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Charmin Essentials Soft</row>
+    <row label="r2">Charmin Essentials Strong</row>
+    <row label="r3">Charmin Ultra Gentle</row>
+    <row label="r4">Charmin Ultra Soft</row>
+    <row label="r5">Charmin Ultra Strong</row>
+    <row label="r6">Charmin Forever Roll</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="SP_Buyers"
+   where="execute,survey,report">
+    <title>Super Premium Buyer.</title>
+    <row label="r1" autofill="((Q1.r5 or Q1.r6) and (Q2.r1.c1 or Q2.r1.c2) and (Q2.r2.c4 or Q2.r2.c5) and ((S_Brand_BUMO2.r4 or S_Brand_BUMO2.r5 or S_Brand_BUMO2.r9 or S_Brand_BUMO2.r11 or S_Brand_BUMO2.r13 or S_Brand_BUMO2.r14 or S_Brand_BUMO2.r15 or S_Brand_BUMO2.r16) or (Q_SubBrand.r3 or Q_SubBrand.r4 or Q_SubBrand.r5 or Q_SubBrand.r6)))">Yes</row>
+    <row label="r2" autofill="SP_Buyers.count==0">No</row>
+  </checkbox>
+
+  <suspend/>
+</block>
+
+<block label="Quotas" builder:title="Quotas">
+  <autofill label="Gender_NET" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r1" autofill="(S_Gender.r1)">Male</row>
+    <row label="r2" autofill="(S_Gender.r2)">Female</row>
+    <row label="r3" autofill="(S_Gender.r3 or S_Gender.r4 or S_Gender.r5 or S_Gender.r6)">All others</row>
+  </autofill>
+
+  <autofill label="Age" randomize="0" where="execute,survey,report">
+    <title>Age</title>
+    <row label="r1" autofill="(S_Age.check('18-34'))">18-34</row>
+    <row label="r2" autofill="(S_Age.check('35-54'))">35-54</row>
+    <row label="r3" autofill="(S_Age.check('55-65'))">55-65</row>
+  </autofill>
+
+  <autofill label="Gender" randomize="0" where="execute,survey,report">
+    <title>Gender</title>
+    <row label="r1" autofill="(S_Gender.r1)">Male</row>
+    <row label="r2" autofill="(S_Gender.r2)">Female</row>
+    <row label="r3" autofill="(S_Gender.r3)">Non-Binary</row>
+    <row label="r4" autofill="(S_Gender.r4)">Gender Non-Conforming</row>
+    <row label="r5" autofill="(S_Gender.r5)">Gender Fluid</row>
+    <row label="r6" autofill="(S_Gender.r6)">Prefer to self-identify</row>
+  </autofill>
+
+  <autofill label="Usage" randomize="0" where="execute,survey,report">
+    <title>Usage Past Purchased (P3M, P6M, P12M) FULL LIST - LEAVE AS IS UNLESS YOU NEED CREATE NETTED LIST FOR QUOTA PURPOSES - ALL BRANDS MUST BE INCLUDED IF YOU NET THIS QUESTION.</title>
+    <row label="r1" autofill="S_Brand_PastPurchased2.r1">Angel Soft</row>
+    <row label="r2" autofill="S_Brand_PastPurchased2.r2">Charmin</row>
+    <row label="r3" autofill="S_Brand_PastPurchased2.r3">Cottonelle</row>
+    <row label="r4" autofill="S_Brand_PastPurchased2.r4">Quilted Northern</row>
+    <row label="r5" autofill="S_Brand_PastPurchased2.r5">Scott</row>
+    <row label="r6" autofill="S_Brand_PastPurchased2.r6">Seventh Generation</row>
+    <row label="r7" autofill="S_Brand_PastPurchased2.r7">Dollar General Home or Family Dollar Home</row>
+    <row label="r8" autofill="S_Brand_PastPurchased2.r8">Great Value Soft &amp; Strong (Walmart brand)</row>
+    <row label="r9" autofill="S_Brand_PastPurchased2.r9">Great Value Ultra Soft or Ultra Strong (Walmart brand)</row>
+    <row label="r10" autofill="S_Brand_PastPurchased2.r10">Home Sense Strong &amp; Soft (Kroger brand)</row>
+    <row label="r11" autofill="S_Brand_PastPurchased2.r11">Home Sense Ultra Soft or Ultra Strong (Kroger brand)</row>
+    <row label="r12" autofill="S_Brand_PastPurchased2.r12">Up &amp; Up Soft &amp; Strong (Target brand)</row>
+    <row label="r13" autofill="S_Brand_PastPurchased2.r13">Up &amp; Up Ultra Soft or Ultra Strong (Target brand)</row>
+    <row label="r14" autofill="S_Brand_PastPurchased2.r14">Berkley &amp; Jensen (BJ's Club brand)</row>
+    <row label="r15" autofill="S_Brand_PastPurchased2.r15">Kirkland Signature (Costco brand)</row>
+    <row label="r16" autofill="S_Brand_PastPurchased2.r16">Members Mark (Sam's Club brand)</row>
+    <row label="r17" autofill="S_Brand_PastPurchased2.r17">Other brand</row>
+  </autofill>
+
+  <autofill label="BUMO" randomize="0" where="execute,survey,report">
+    <title>BUMO FULL LIST - LEAVE AS IS UNLESS YOU NEED CREATE NETTED LIST FOR QUOTA PURPOSES - ALL BRANDS MUST BE INCLUDED IF YOU NET THIS QUESTION.</title>
+    <row label="r1" autofill="S_Brand_BUMO2.r1">Angel Soft</row>
+    <row label="r2" autofill="S_Brand_BUMO2.r2">Charmin</row>
+    <row label="r3" autofill="S_Brand_BUMO2.r3">Cottonelle</row>
+    <row label="r4" autofill="S_Brand_BUMO2.r4">Quilted Northern</row>
+    <row label="r5" autofill="S_Brand_BUMO2.r5">Scott</row>
+    <row label="r6" autofill="S_Brand_BUMO2.r6">Seventh Generation</row>
+    <row label="r7" autofill="S_Brand_BUMO2.r7">Dollar General Home or Family Dollar Home</row>
+    <row label="r8" autofill="S_Brand_BUMO2.r8">Great Value Soft &amp; Strong (Walmart brand)</row>
+    <row label="r9" autofill="S_Brand_BUMO2.r9">Great Value Ultra Soft or Ultra Strong (Walmart brand)</row>
+    <row label="r10" autofill="S_Brand_BUMO2.r10">Home Sense Strong &amp; Soft (Kroger brand)</row>
+    <row label="r11" autofill="S_Brand_BUMO2.r11">Home Sense Ultra Soft or Ultra Strong (Kroger brand)</row>
+    <row label="r12" autofill="S_Brand_BUMO2.r12">Up &amp; Up Soft &amp; Strong (Target brand)</row>
+    <row label="r13" autofill="S_Brand_BUMO2.r13">Up &amp; Up Ultra Soft or Ultra Strong (Target brand)</row>
+    <row label="r14" autofill="S_Brand_BUMO2.r14">Berkley &amp; Jensen (BJ's Club brand)</row>
+    <row label="r15" autofill="S_Brand_BUMO2.r15">Kirkland Signature (Costco brand)</row>
+    <row label="r16" autofill="S_Brand_BUMO2.r16">Members Mark (Sam's Club brand)</row>
+    <row label="r17" autofill="S_Brand_BUMO2.r17">Other brand</row>
+  </autofill>
+
+  <autofill label="UserPP" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (PastPurch)</title>
+    <row label="r1" autofill="S_Brand_PastPurchased2.r2">Yes</row>
+    <row label="r2" autofill="UserPP.count==0">No</row>
+  </autofill>
+
+  <autofill label="UserBUMO" randomize="0" where="execute,survey,report">
+    <title>TestBrand User (BUMO)</title>
+    <row label="r1" autofill="S_Brand_BUMO2.r2">Yes</row>
+    <row label="r2" autofill="UserBUMO.count==0">No</row>
+  </autofill>
+
+  <autofill label="User" randomize="0" where="execute,survey,report">
+    <title>This is "user" as defined by the insights team - the user by which they are running their data in crosstabs (and thus the norms)- this is defined as either past purchased or BUMO – as instructed by insights. Logic will be the same as S_Brand_PastPurchased OR S_Brand_BUMO.</title>
+    <row label="Yes" autofill="S_Brand_PastPurchased2.r2">Yes</row>
+    <row label="No" autofill="User.count==0">No</row>
+  </autofill>
+
+  <suspend/>
+
+  <checkbox 
+   label="Sample_Qual"
+   where="execute,survey,report">
+    <title>Sample Qualifier.</title>
+    <row label="r1" autofill="1">Category Shoppers</row>
+    <row label="r2" autofill="SP_Buyers.r1">Super Premium Buyers</row>
+  </checkbox>
+
+  <suspend/>
+
+  <quota label="Quota" doit="1" overquota="noqual" sheet="Quota"/>
+
+  <suspend/>
+
+  <block label="SETQuotas" builder:title="Quotas">
+    <autofill label="PhaseQ" randomize="0" where="execute,survey,report">
+      <title>PhaseQ</title>
+      <row label="r1" autofill="hasMarker('ph1*')">1</row>
+    </autofill>
+
+    <autofill label="Sample" randomize="0" where="execute,survey,report">
+      <title>Sample</title>
+      <row label="r1" autofill="hasMarker('*sam1*')">Category Shoppers</row>
+      <row label="r2" autofill="hasMarker('*sam2*')">Super Premium Buyers</row>
+    </autofill>
+
+    <suspend/>
+
+    <autofill label="SubGroups" randomize="0" where="execute,survey,report">
+      <title>This is used to capture the subgroups to be combined from Cat Rep and Supplements and to be brought into RealEye filters.</title>
+      <row label="r1">Sub group 1</row>
+    </autofill>
+  </block>
+
+  <suspend/>
+
+  <exec>
+if PhaseQ.r1:  Phase.val=0
+  </exec>
+
+  <radio 
+   label="Phase"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Phase</title>
+    <row label="r1">1</row>
+  </radio>
+
+  <suspend/>
+</block>
+
+<block label="Images" builder:title="IMAGES">
+  <autofill label="PH_IMG" randomize="0" where="execute,survey,report">
+    <title>Phase Image</title>
+    <row label="r1" autofill="True"><img src="[rel dummyimage.jpg]" title="" height="370" alt="" constrain="true" class="jloupeme" /></row>
+  </autofill>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<block label="Variables" builder:title="VARIABLES">
+  <block label="Omni_Questions" cond="0" builder:title="OmniQuestions">
+    <radio 
+    label="S_Omni_Research"
+    averages="nosummary"
+    grouping="cols"
+    ss:listDisplay="1"
+    type="rating"
+    values="order">
+      <title>Thinking about the <b>[pipe: Category]</b> category, how much <b>browsing or research do you typically do "online" and "in store"&amp;nbsp;</b> before shopping?</title>
+      <comment>Select one for each option</comment>
+      <col label="c1">Online</col>
+      <col label="c2">In Store</col>
+      <row label="r1" value="1">A lot</row>
+      <row label="r2" value="2">Some</row>
+      <row label="r3" value="3">A little</row>
+      <row label="r4" value="4">None at all</row>
+    </radio>
+
+    <suspend/>
+
+    <radio 
+    label="S_Omni_ShoppingPlan"
+    cardrating:lrg_maxwidth="120px"
+    cardrating:navigation="0"
+    cardrating:progress="0"
+    randomize="0"
+    shuffle="rows"
+    uses="cardrating.1">
+      <title>Thinking about the <b>[pipe: Category]</b> category, and the different occasions when you shop it, would you say your shopping is more planned or impromptu?  </title>
+      <row label="r1">Regular stock-up</row>
+      <row label="r2">Ad-hoc, immediate need, top-up</row>
+      <row label="r3">Exploration or just browsing</row>
+      <row label="r4">For a special occasion</row>
+      <col label="c1" value="1">Mostly planned</col>
+      <col label="c2" value="2">Somewhat planned, somewhat impromptu</col>
+      <col label="c3" value="3">Mostly impromptu</col>
+      <style name="question.after"><![CDATA[
+<script>
+/*Card rating*/
+
+ if($ (".sq-cardrating-button").length){
+    	$ ("#btn_continue").hide();
+    }
+	
+	var qn = ${jsexport()}; //returns json object of the question
+    console.log(qn.rows) //loads question variables into a console tool
+	var num_attr = qn.rows.length
+	console.log(num_attr);
+	var iteration = 1	
+	
+	 $ (document).on('click', '.sq-cardrating-buttons', function() {
+      		if(iteration == num_attr){
+      			$ ("#btn_continue").click();
+      		}
+       		iteration++;
+      	})
+	</script>
+]]></style>
+    </radio>
+
+    <suspend/>
+  </block>
+
+  <number 
+   label="resp_id"
+   size="6"
+   where="execute,survey,report">
+    <title>Respondent ID</title>
+    <exec>
+try:
+	resp_id.val = Resp.val
+	print record
+except NameError:
+	resp_id.val = record
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <autofill label="Brand" randomize="0" where="execute,survey,report">
+    <title>Test Brand</title>
+    <row label="r1" autofill="True"><strong>Charmin</strong></row>
+  </autofill>
+
+  <autofill label="Price" randomize="0" where="execute,survey,report">
+    <title>Test Brand Price</title>
+    <row label="r1" autofill="True"><strong>$X.XX</strong></row>
+  </autofill>
+</block>
+
+<suspend/>
+
+<block label="AgreementBlock" builder:title="Agree">
+  <suspend/>
+
+  <note>THIS QUESTION SHOULD BE LEFT IN TO ENSURE QUALITY OF INTERVIEWING AND THAT IT'S NOT A BOT TAKING THE SURVEY</note>
+  <autofill label="Red_Herring_Activity_TRAP" randomize="0" where="execute,survey,report">
+    <title>Red_Herring_3_TRAP</title>
+    <row label="r1" autofill="False">Reading books</row>
+    <row label="r2" autofill="False">Fishing</row>
+    <row label="r3" autofill="False">Baking</row>
+    <row label="r4" autofill="False">Golfing</row>
+    <row label="r5" autofill="False">Painting</row>
+    <row label="r6" autofill="False">Jogging</row>
+    <row label="r7" autofill="False">Camping</row>
+    <row label="r8" autofill="False">Shopping</row>
+    <row label="r9" autofill="False">Sewing</row>
+    <row label="r10" autofill="False">Photography</row>
+    <row label="r11" autofill="True">Gardening</row>
+    <row label="r12" autofill="False">Bowling</row>
+  </autofill>
+
+  <suspend/>
+
+  <block label="RedHerring_Block" builder:title="RedHerring_Block_">
+    <checkbox 
+    label="Red_Herring_Activity"
+    atleast="1"
+    shuffle="rows">
+      <title><p>During this survey you will be asked questions with detailed instructions and it is important that you read them closely and answer honestly so we may understand you better.<br /><br />This question is a test to see how well you’re able to read the question text and <br />instructions. <br /><br />From the list below, please select <strong>only</strong> "[pipe: Red_Herring_Activity_TRAP]" and do not select any other responses.</p></title>
+      <row label="trap">[pipe: Red_Herring_Activity_TRAP]</row>
+      <row label="r2" cond="False">Dining</row>
+      <row label="r3" cond="False">Picnics</row>
+      <row label="r4" cond="False">Hiking</row>
+      <row label="r5" cond="False">Watching movies</row>
+      <row label="r6" cond="False">Video games</row>
+      <row label="r7" cond="False">Crafts</row>
+      <row label="r8" cond="False">Concerts</row>
+      <row label="r9" cond="False">Visit museums</row>
+      <row label="r10" cond="False">Karaoke</row>
+      <row label="r11" cond="False">Road trips</row>
+      <row label="r12" cond="False">Kayaking</row>
+      <row label="r13" cond="False">Skiing</row>
+      <row label="r14" cond="False">Bike riding</row>
+      <row label="r15" cond="True">Dancing</row>
+      <row label="r16" cond="False">Astronomy</row>
+      <row label="r17" cond="True">Traveling</row>
+      <row label="r18" cond="False">Pottery</row>
+      <row label="r19" cond="True">Horseback riding</row>
+      <row label="r20" cond="False">Yoga</row>
+      <row label="r21" cond="True">Puzzles</row>
+      <row label="r22" cond="False">Archery</row>
+      <row label="r23" cond="False">Swimming</row>
+      <row label="r24" cond="True">Sports</row>
+      <row label="r25" cond="False">Board games</row>
+      <row label="r26" cond="False">Card games</row>
+      <row label="r27" cond="False">Knitting</row>
+      <row label="r28" cond="False">Walking</row>
+      <row label="r29" cond="False">Music</row>
+      <row label="r30" cond="False">Television</row>
+    </checkbox>
+
+    <suspend/>
+
+    <term label="te2" cond="(Red_Herring_Activity.count&gt;1 or not(Red_Herring_Activity.trap)) and not(gv.isSST())">Activity (Red Herring)</term>
+  </block>
+
+  <suspend/>
+
+  <radio 
+   label="RedHerringCheck"
+   cond="False"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   uses="atm1d.9">
+    <title>Which of the following is not a color?</title>
+    <row label="r1">Red</row>
+    <row label="r2">Yellow</row>
+    <row label="r3">Blue</row>
+    <row label="r4">New York</row>
+    <row label="r5">Orange</row>
+  </radio>
+
+  <suspend/>
+
+  <term label="TERM_RedHerring" cond="not(RedHerringCheck.r4) and False">Failed Red Herring (Not In Use)</term>
+
+  <suspend/>
+
+  <radio 
+   label="Agreement"
+   atm1d:large_buttonAlign="center"
+   atm1d:large_contentAlign="center"
+   atm1d:showInput="0"
+   atm1d:small_buttonAlign="center"
+   atm1d:small_contentAlign="center"
+   randomize="0"
+   uses="atm1d.9">
+    <title><p><strong><span style="color: #0091da;">Respondent Confidentiality Disclosure Agreement (RCDA)<br /></span></strong></p>
+<hr />
+<p><strong><em>Congratulations!<br /></em></strong></p>
+<div align="left">
+<ul>
+<li />Thank you for agreeing to participate in this consumer study on behalf of <strong><span style="color: #0091da;">Behaviorally</span></strong>. Before you can participate in this research, we would like you to understand that it will involve Confidential Information and you must agree to these terms and conditions. If you do not agree, you will not be eligible to participate in this study. By signing this agreement, you agree as follows:
+<li />You will use information or material disclosed to you or which may be available as part of this study only for the purpose of participating in this study, and you will not otherwise use the information or material for your own benefit or the benefit of any third party.
+<li />You agree to keep confidential and not disclose, copy, transmit, or use for any purpose other than your participation in this study any information or material disclosed or made available to you as part of the study, including about products or packaging that may be disclosed to you directly or indirectly by participating in this study. Any disclosure, copying, transmitting or misuse of any information or material in any form (including hard copy and/or electronic/data) whether intentional or unintentional may subject you to disqualification, and any other remedies available to Behaviorally or its study partners in law or equity.
+<li />You agree that Behaviorally (and its partners) will be irreparably harmed and monetary damages may not be adequate compensation if you fail to meet your obligations under this agreement, and that, in addition to other remedies, Behaviorally (or its partners) shall be entitled to seek injunctive relief to prevent any threatened or continued breach. The parties hereby waive any requirements for security for obtaining any provisional relief.
+<li />Each of Behaviorally’s partners is an intended third-party beneficiary of this agreement and each partner may enforce the terms of this agreement.<br /><br /><br />
+</ul>
+</div>
+<p>As further detailed in our privacy policy (<a href="https://www.behaviorally.com/privacy-policy" target="_blank" rel="noopener">https://www.behaviorally.com/privacy-policy</a>), we take reasonable precautions to protect the privacy and security of your information during the market research survey. All information collected as part of this survey is treated in accordance with our online privacy policy and is destroyed 2 months after you have taken this survey. You will be compensated for your time, commitment, and confidential obligation.<br /><br /><strong>Please confirm your acceptance of these terms by checking the agreement below.</strong></p></title>
+    <row label="r1"><b>I hereby acknowledge and agree to the terms.</b></row>
+  </radio>
+
+  <text 
+   label="DateTime"
+   optional="0"
+   randomize="0"
+   size="25"
+   where="report">
+    <title>DateTime</title>
+    <exec>
+from datetime import datetime
+
+cur_time = datetime.now()
+DateTime.val = cur_time.strftime("%m/%d/%Y %H:%M:%S")
+    </exec>
+
+  </text>
+</block>
+
+<suspend/>
+
+<block label="GaborExercise" builder:title="Gabor Exercise">
+  <html label="GGIntro" where="survey">For the next few questions, please focus your attention on the <b>Charmin</b> packaging you see here.</html>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>How likely would you be to buy this [pipe: Brand] product, if it were available for the price you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$30.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG1"
+   cond="Q_GG.r3 or Q_GG.r4 or Q_GG.r5"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$29.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG2"
+   cond="(Q_GG1.r3 or Q_GG1.r4 or Q_GG1.r5)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG1]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$28.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG3"
+   cond="(Q_GG2.r3 or Q_GG2.r4 or Q_GG2.r5)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG2]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$27.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG4"
+   cond="(Q_GG3.r3 or Q_GG3.r4 or Q_GG3.r5) "
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG3]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$26.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG5"
+   cond="(Q_GG4.r3 or Q_GG4.r4 or Q_GG4.r5) "
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG4]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$25.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG6"
+   cond="(Q_GG.r1 or Q_GG.r2)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$31.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG7"
+   cond="(Q_GG6.r1 or Q_GG6.r2)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG6]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$32.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG8"
+   cond="(Q_GG7.r1 or Q_GG7.r2)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG7]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$33.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG9"
+   cond="(Q_GG8.r1 or Q_GG8.r2)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG8]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$34.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="Q_GG10"
+   cond="(Q_GG9.r1 or Q_GG9.r2)"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you <b>[pipe:Q_GG9]</b> this [pipe: Brand] product for the price that was shown. How likely would you be to buy this [pipe: Brand] product, if it were available for the new prices you see below?</title>
+    <comment>[pipe: PH_IMG]<br /><br /><b>$35.00</b></comment>
+    <net labels="r1,r2">T2B</net>
+    <net labels="r4,r5">B2B</net>
+    <row label="r1" value="5">Definitely would buy</row>
+    <row label="r2" value="4">Probably would buy</row>
+    <row label="r3" value="3">Might or might not buy</row>
+    <row label="r4" value="2">Probably would not buy</row>
+    <row label="r5" value="1">Definitely would not buy</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="Final_Price"
+   where="execute,survey,report">
+    <title>The final price/last price shown in the Gabor Granger exercise.</title>
+    <row label="r1" autofill="Q_GG10.any"><b>$35.00</b></row>
+    <row label="r2" autofill="Q_GG9.r3 or Q_GG9.r4 or Q_GG9.r5"><b>$34.00</b></row>
+    <row label="r3" autofill="Q_GG8.r3 or Q_GG8.r4 or Q_GG8.r5"><b>$33.00</b></row>
+    <row label="r4" autofill="Q_GG7.r3 or Q_GG7.r4 or Q_GG7.r5"><b>$32.00</b></row>
+    <row label="r5" autofill="Q_GG6.r3 or Q_GG6.r4 or Q_GG6.r5"><b>$31.00</b></row>
+    <row label="r6"><b>$30.00</b></row>
+    <row label="r7" autofill="Q_GG1.r1 or Q_GG1.r2"><b>$29.00</b></row>
+    <row label="r8" autofill="Q_GG2.r1 or Q_GG2.r2"><b>$28.00</b></row>
+    <row label="r9" autofill="Q_GG3.r1 or Q_GG3.r2"><b>$27.00</b></row>
+    <row label="r10" autofill="Q_GG4.r1 or Q_GG4.r2"><b>$26.00</b></row>
+    <row label="r11" autofill="Q_GG5.any"><b>$25.00</b></row>
+  </checkbox>
+
+  <suspend/>
+</block>
+
+<radio 
+  label="Q_Value"
+  atm1d:showInput="0"
+  atm1d:viewMode="tiled"
+  randomize="0"
+  uses="atm1d.9">
+  <title>Thinking about the prices you saw, which of the following best describes how you feel about this product’s price overall?</title>
+  <comment>[pipe: PH_IMG]</comment>
+  <net labels="r1,r2">T2B</net>
+  <net labels="r4,r5">B2B</net>
+  <row label="r1" value="5">A great deal for the value</row>
+  <row label="r2" value="4">A reasonable price</row>
+  <row label="r3" value="3">Slightly expensive, but acceptable</row>
+  <row label="r4" value="2">Too expensive for what it is</row>
+  <row label="r5" value="1">Im unsure</row>
+</radio>
+
+<suspend/>
+
+<radio 
+  label="Q_Value_Data"
+  where="execute,survey,report">
+  <title>Q_Value Response.</title>
+  <exec>
+if Q_Value.r1: Q_Value_Data.val = 0
+if Q_Value.r2: Q_Value_Data.val = 1
+if Q_Value.r3: Q_Value_Data.val = 2
+if Q_Value.r4: Q_Value_Data.val = 3
+if Q_Value.r5: Q_Value_Data.val = 4
+  </exec>
+
+  <row label="r1" value="5">A great deal for the value</row>
+  <row label="r2" value="4">A reasonable price</row>
+  <row label="r3" value="3">Slightly expensive, but acceptable</row>
+  <row label="r4" value="2">Too expensive for what it is</row>
+  <row label="r5" value="1">Im unsure</row>
+</radio>
+
+<suspend/>
+
+<block label="Class" builder:title="Classification">
+  <html label="Class_Intro" where="survey"><em><b>Now, just a few questions for classification purposes…</b></em></html>
+
+  <suspend/>
+
+  <select 
+   label="S_State"
+   randomize="0">
+    <title>Please select the US state in which you currently live:</title>
+    <choice label="AL">Alabama</choice>
+    <choice label="AK">Alaska</choice>
+    <choice label="AZ">Arizona</choice>
+    <choice label="AR">Arkansas</choice>
+    <choice label="CA">California</choice>
+    <choice label="CO">Colorado</choice>
+    <choice label="CT">Connecticut</choice>
+    <choice label="DE">Delaware</choice>
+    <choice label="DC">District of Columbia</choice>
+    <choice label="FL">Florida</choice>
+    <choice label="GA">Georgia</choice>
+    <choice label="HI">Hawaii</choice>
+    <choice label="ID">Idaho</choice>
+    <choice label="IL">Illinois</choice>
+    <choice label="IN">Indiana</choice>
+    <choice label="IA">Iowa</choice>
+    <choice label="KS">Kansas</choice>
+    <choice label="KY">Kentucky</choice>
+    <choice label="LA">Louisiana</choice>
+    <choice label="ME">Maine</choice>
+    <choice label="MD">Maryland</choice>
+    <choice label="MA">Massachusetts</choice>
+    <choice label="MI">Michigan</choice>
+    <choice label="MN">Minnesota</choice>
+    <choice label="MS">Mississippi</choice>
+    <choice label="MO">Missouri</choice>
+    <choice label="MT">Montana</choice>
+    <choice label="NE">Nebraska</choice>
+    <choice label="NV">Nevada</choice>
+    <choice label="NH">New Hampshire</choice>
+    <choice label="NJ">New Jersey</choice>
+    <choice label="NM">New Mexico</choice>
+    <choice label="NY">New York</choice>
+    <choice label="NC">North Carolina</choice>
+    <choice label="ND">North Dakota</choice>
+    <choice label="OH">Ohio</choice>
+    <choice label="OK">Oklahoma</choice>
+    <choice label="OR">Oregon</choice>
+    <choice label="PA">Pennsylvania</choice>
+    <choice label="RI">Rhode Island</choice>
+    <choice label="SC">South Carolina</choice>
+    <choice label="SD">South Dakota</choice>
+    <choice label="TN">Tennessee</choice>
+    <choice label="TX">Texas</choice>
+    <choice label="UT">Utah</choice>
+    <choice label="VT">Vermont</choice>
+    <choice label="VA">Virginia</choice>
+    <choice label="WA">Washington</choice>
+    <choice label="WV">West Virginia</choice>
+    <choice label="WI">Wisconsin</choice>
+    <choice label="WY">Wyoming</choice>
+  </select>
+
+  <select 
+   label="C_Employment"
+   randomize="0">
+    <title>Which of the following best describes your current employment status?</title>
+    <choice label="ch1">Working full-time</choice>
+    <choice label="ch2">Working part-time</choice>
+    <choice label="ch3">Looking for work, temporarily unemployed</choice>
+    <choice label="ch4">Full-time student</choice>
+    <choice label="ch5">Full-time homemaker</choice>
+    <choice label="ch6">Retired</choice>
+    <choice label="ch7">Not employed</choice>
+    <choice label="ch8">I prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_RELATIONSHIP"
+   randomize="0">
+    <title>What is your relationship status?</title>
+    <choice label="ch1">Single, never married</choice>
+    <choice label="ch2">Married</choice>
+    <choice label="ch3">Separated, divorced, or widowed</choice>
+    <choice label="ch4">Domestic partnership/living with someone</choice>
+    <choice label="ch5">Prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_EDUCATION"
+   randomize="0">
+    <title>What is the highest level of education you have completed?</title>
+    <choice label="ch1">3rd Grade or less</choice>
+    <choice label="ch2">Middle School - Grades 4 - 8</choice>
+    <choice label="ch3">Completed some high school</choice>
+    <choice label="ch4">High school graduate</choice>
+    <choice label="ch5">Other post high school vocational training</choice>
+    <choice label="ch6">Completed some college, but no degree</choice>
+    <choice label="ch7">Associate Degree</choice>
+    <choice label="ch8">College Degree (such as B.A., B.S.)</choice>
+    <choice label="ch9">Completed some graduate, but no degree</choice>
+    <choice label="ch10">Masters degree</choice>
+    <choice label="ch11">Doctorate degree</choice>
+    <choice label="ch12">None of the Above</choice>
+  </select>
+
+  <select 
+   label="STANDARD_INCOME"
+   randomize="0">
+    <title>Please select the range that best represents your total annual household income.</title>
+    <choice label="ch1">Less than $15 000</choice>
+    <choice label="ch2">$15 000 to $19 999</choice>
+    <choice label="ch3">$20 000 to $24 999</choice>
+    <choice label="ch4">$25 000 to $29 999</choice>
+    <choice label="ch5">$30 000 to $34 999</choice>
+    <choice label="ch6">$35 000 to $39 999</choice>
+    <choice label="ch7">$40 000 to $44 999</choice>
+    <choice label="ch8">$45 000 to $49 999</choice>
+    <choice label="ch9">$50 000 to $59 999</choice>
+    <choice label="ch10">$60 000 to $74 999</choice>
+    <choice label="ch11">$75 000 to $84 999</choice>
+    <choice label="ch12">$85 000 to $99 999</choice>
+    <choice label="ch13">$100 000 to $124 999</choice>
+    <choice label="ch14">$125 000 to $149 999</choice>
+    <choice label="ch15">$150 000 to $174 999</choice>
+    <choice label="ch16">$175 000 to $199 999</choice>
+    <choice label="ch17">$200,000 or more</choice>
+    <choice label="ch18">Prefer not to answer</choice>
+  </select>
+</block>
+
+<suspend/>
+
+<note>REMOVE IF NO QUALCONNECTS PlUS</note>
+<suspend/>
+</survey>
