@@ -1,0 +1,12 @@
+ <samplesource list="152">
+    <title>Bilendi &amp; Respondi</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="m"/>
+    <var name="qvc"/>
+    <var name="qvq"/>
+    <var name="qvs"/>
+    <exit cond="terminated" url="https://survey.maximiles.com/static-screenout?p=${qvs}"/>
+    <exit cond="overquota" url="https://survey.maximiles.com/static-quotasfull?p=${qvq}"/>
+    <exit cond="qualified" url="https://survey.maximiles.com/static-complete?p=${qvc}"/>
+  </samplesource>
