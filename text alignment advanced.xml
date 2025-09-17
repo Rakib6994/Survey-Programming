@@ -1,0 +1,46 @@
+<textarea 
+   label="Q_Reason_OE"
+   height="10"
+   optional="0"
+   width="80">
+    <title><span style="font-size: 14pt;">What specifically about this aisle layout made it <strong>[pipe: Q_EaseOfShop lower]</strong> the products you wanted?</span>
+<br /><br />[pipe: SHELF_IMG]</title>
+    <comment><em>Please be as detailed as possible.</em></comment>
+    <style name="page.head"><![CDATA[
+<style type="text/css">
+.comment-text{
+ text-align: center;
+ color: black;
+ padding: 12px;
+ font-family: 'Hind';
+ min-width: 1400px;
+ }
+ .instruction-text {
+  text-align: center !important;
+   min-width: 1400px;
+}
+.survey-body{
+ background-color: transparent;
+ min-width: 1400px;
+}
+.question-text{
+ text-align: center;
+ font-size: 1.7rem !important;
+ min-width: 1400px;
+}
+.question-error-text{
+ text-align: center;
+ min-width: 1400px;
+}
+textarea.input, input[type="text"] {
+  width: auto !important;
+}
+.answers-list {
+  display: table;
+  min-width: 1400px !important;
+}
+</style>
+]]></style>
+  </textarea>
+
+  <suspend/>

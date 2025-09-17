@@ -1,0 +1,389 @@
+<block label="Merged_data">
+<checkbox
+  label="Q_PurchaseDriver_rows"
+  cond="0"
+  where="execute,survey,report">
+  <title>Q_PurchaseDriver Rows.</title>
+  
+    <row label="r1"   >BOOST GLUCOSE CONTROL RICH CHOCOLATE SHAKE 8OZ 12CT</row>
+    <row label="r2"   >BOOST GLUCOSE CONTROL RICH CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r3"   >BOOST GLUCOSE CONTROL MAX RICH CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r4"   >BOOST GLUCOSE CONTROL VERY VANILLA SHAKE 8OZ 12CT</row>
+    <row label="r5"   >BOOST GLUCOSE CONTROL VERY VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r6"   >BOOST GLUCOSE CONTROL CREAMY STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r7"   >BOOST GLUCOSE CONTROL MAX VERY VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r8"   >GLUCERNA 1G TOTAL SUGARS VANILLA SHAKE 4CT</row>
+    <row label="r9"   >GLUCERNA 1G TOTAL SUGARS MILK CHOCOLATE SHAKE 4CT</row>
+    <row label="r10"  >GLUCERNA PROTEIN SHAKE HOMEMADE VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r11"  >GLUCERNA PROTEIN SHAKE RICH CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r12"  >SPLENDA FRENCH VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r13"  >SPLENDA MILK CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r14"  >SPLENDA STRAWBERRY CREAM SHAKE 8OZ 6CT</row>
+    <row label="r15"  >GLUCERNA HUNGER SMART CLASSIC VANILLA SHAKE 10OZ 12CT</row>
+    <row label="r16"  >GLUCERNA HUNGER SMART CLASSIC CHOCOLATE SHAKE 10OZ 12CT</row>
+    <row label="r17"  >GLUCERNA HUNGER SMART CLASSIC VANILLA SHAKE 10OZ 6CT</row>
+    <row label="r18"  >GLUCERNA HUNGER SMART CLASSIC CHOCOLATE SHAKE 10OZ 6CT</row>
+    <row label="r19"  >GLUCERNA HUNGER SMART CLASSIC STRAWBERRY SHAKE 10OZ 6CT</row>
+    <row label="r20"  >GLUCERNA ORIGINAL HOMEMADE VANILLA SHAKE 8OZ 16CT</row>
+    <row label="r21"  >GLUCERNA ORIGINAL RICH CHOCOLATE SHAKE 8OZ 16CT</row>
+    <row label="r22"  >GLUCERNA ORIGINAL HOMEMADE VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r23"  >GLUCERNA ORIGINAL RICH CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r24"  >GLUCERNA ORIGINAL CREAMY STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r25"  >ENSURE ORIGINAL MILK CHOCOLATE SHAKE 8OZ 16CT</row>
+    <row label="r26"  >ENSURE ORIGINALSTRAWBERRY SHAKE 8OZ 16CT</row>
+    <row label="r27"  >ENSURE ORIGINAL MILK CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r28"  >ENSURE ORIGINAL VANILLA SHAKE 8OZ 16CT</row>
+    <row label="r29"  >ENSURE ORIGINAL VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r30"  >ENSURE ORIGINAL DARK CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r31"  >ENSURE ORIGINAL BUTTER PECAN SHAKE 8OZ 6CT</row>
+    <row label="r32"  >ENSURE PLUS VANILLA SHAKE 8OZ 16CT</row>
+    <row label="r33"  >ENSURE PLUS MILK CHOCOLATE SHAKE 8OZ 16CT</row>
+    <row label="r34"  >ENSURE PLUS VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r35"  >ENSURE PLUS MILK CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r36"  >ENSURE PLUS STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r37"  >ENSURE PLUS DARK CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r38"  >ENSURE MAX PROTEIN FRENCH VANILLA SHAKE 11OZ 12CT</row>
+    <row label="r39"  >ENSURE MAX PROTEIN MILK CHOCOLATE SHAKE 11OZ 12CT</row>
+    <row label="r40"  >ENSURE MAX PROTEIN FRENCH VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r41"  >ENSURE MAX PROTEIN MILK CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r42"  >ENSURE MAX PROTEIN CREAMY STRAWBERRY SHAKE 11OZ 4CT</row>
+    <row label="r43"  >ENSURE MAX PROTEIN MILK CHOCOLATE CAFFEINE SHAKE 11OZ 4CT</row>
+    <row label="r44"  >ENSURE MAX PROTEIN CAFÉ MOCHA SHAKE 11OZ 4CT</row>
+    <row label="r45"  >ENSURE PLANT-PASED PROTEIN VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r46"  >ENSURE HIGH PROTEIN VANILLA SHAKE 8OZ 12CT</row>
+    <row label="r47"  >ENSURE HIGH PROTEIN MILK CHOCOLATE SHAKE 8OZ 12CT</row>
+    <row label="r48"  >ENSURE HIGH PROTEIN VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r49"  >ENSURE HIGH PROTEIN MILK CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r50"  >ENSURE HIGH PROTEIN STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r51"  >ENSURE ORIGINAL STRAWBERY SHAKE 8OZ 6CT</row>
+    <row label="r52"  >BOOST ORIGINAL RICH CHOCOLATE SHAKE 8OZ 24CT</row>
+    <row label="r53"  >BOOST ORIGINAL RICH CHOCOLATE SHAKE 8OZ 12CT</row>
+    <row label="r54"  >BOOST ORIGINAL RICH CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r55"  >PRIVATE LABEL ORIGINAL VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r56"  >PRIVATE LABEL ORIGINAL CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r57"  >PRIVATE LABEL ORIGINAL STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r58"  >BOOST ORIGINAL VERY VANILLA SHAKE 8OZ 12CT</row>
+    <row label="r59"  >BOOST ORIGINAL VERY VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r60"  >BOOST ORIGINALCREAMY STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r61"  >ENSURE PLUS BUTTER PECAN SHAKE 8OZ 6CT</row>
+    <row label="r62"  >PRIVATE LABEL PLUS VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r63"  >PRIVATE LABEL PLUS CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r64"  >BOOST PLUS VERY VANILLA SHAKE 8OZ 12CT</row>
+    <row label="r65"  >BOOST PLUS VERY VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r66"  >BOOST PLUS RICH CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r67"  >ENSURE PLANT-PASED PROTEIN CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r68"  >ENSURE COMPLETE VANILLA SHAKE 10OZ 4CT</row>
+    <row label="r69"  >ENSURE COMPLETE MILK CHOCOLATE SHAKE 10OZ 4CT</row>
+    <row label="r70"  >ENSURE COMPLETE STRAWBERRY SHAKE 10OZ 4CT</row>
+    <row label="r71"  >PRIVATE LABEL MAX PROTEIN VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r72"  >PRIVATE LABEL MAX PROTEIN CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r73"  >BOOST HIGH PROTEIN RICH CHOCOLATE SHAKE 8OZ 12CT</row>
+    <row label="r74"  >BOOST HIGH PROTEIN RICH CHOCOLATE SHAKE 8OZ 6CT</row>
+    <row label="r75"  >ENSURE MIXED FRUIT CLEAR DRINK 10OZ 4CT</row>
+    <row label="r76"  >BOOST ADVANCED CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r77"  >BOOST MAX PROTEIN RICH CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r78"  >BOOST MAX PROTEIN VERY VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r79"  >BOOST HIGH PROTEIN VERY VANILLA SHAKE 8OZ 12CT</row>
+    <row label="r80"  >BOOST HIGH PROTEIN VERY VANILLA SHAKE 8OZ 6CT</row>
+    <row label="r81"  >BOOST HIGH PROTEIN CREAMY STRAWBERRY SHAKE 8OZ 6CT</row>
+    <row label="r82"  >SLIM FAST HIGH PROTEIN CREAMY CHOCOLATE SHAKE 11OZ 8CT</row>
+    <row label="r83"  >SLIM FAST HIGH PROTEIN CREAMY CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r84"  >SLIM FAST ORIGINAL CREAMY MILK CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r85"  >SLIM FAST 20G PROTEIN HIGH PROTEIN VANILLA CREAM SHAKE 11OZ 8CT</row>
+    <row label="r86"  >SLIM FAST HIGH PROTEIN VANILLA CREAM SHAKE 11OZ 4CT</row>
+    <row label="r87"  >SLIM FAST HIGH PROTEIN STRAWBERRIES &amp; CREAM SHAKE 11OZ 4CT</row>
+    <row label="r88"  >SLIM FAST 20G PROTEIN ORIGINAL FRENCH VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r89"  >ATKINS STRONG VANILLA 11OZ 4CT</row>
+    <row label="r90"  >ATKINS STRONG MILK CHOCOLATE 11OZ 4CT</row>
+    <row label="r91"  >ATKINS STRONG CHOCOLATE PEANUT BUTTER 11OZ 4CT</row>
+    <row label="r92"  >ATKINS CREAMY VANILLA SHAKE 11OZ 8CT</row>
+    <row label="r93"  >ATKINS 23G PROTEIN VANILLA CREAM SHAKE 16.9OZ 4CT</row>
+    <row label="r94"  >ATKINS 23G PROTEIN CHOCOLATE SHAKE 16.9OZ 4CT</row>
+    <row label="r95"  >ATKINS CREAMY VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r96"  >ATKINS MILK CHOCOLATE DELIGHT SHAKE 11OZ 4CT</row>
+    <row label="r97"  >ATKINS STRAWBERRY SHAKE 11OZ 4CT</row>
+    <row label="r98"  >ATKINS STRAWBERRY SHAKE 11OZ 4CT</row>
+    <row label="r99"  >ATKINS MILK CHOCOLATE DELIGHT SHAKE 11OZ 8CT</row>
+    <row label="r100" >ATKINS CREAMY CARAMEL SHAKE 11OZ 4CT</row>
+    <row label="r101" >ATKINS ICED COFFEE MOCHA LATTE SHAKE 11OZ 4CT</row>
+    <row label="r102" >ATKINS ICED COFFEE CAFÉ CARAMEL SHAKE 11OZ 4CT</row>
+    <row label="r103" >SOYLENT COMPLETE MEAL VANILLA SHAKE 4CT</row>
+    <row label="r104" >SOYLENT COMPLETE MEAL CHOCOLATE SHAKE 4CT</row>
+    <row label="r105" >SOYLENT COMPLETE PROTEIN VANILLA SHAKE 4CT</row>
+    <row label="r106" >SOYLENT COMPLETE PROTEIN CHOCOLATE SHAKE 4CT</row>
+    <row label="r107" >ORGAIN 20G PROTEIN CREAMY CHOCOLATE SHAKE 11OZ 12CT</row>
+    <row label="r108" >ORGAIN 20G PROTEIN CREAMY CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r109" >ORGAIN 30G PROTEIN CREAMY VANILLA BEAN SHAKE 11OZ 4CT</row>
+    <row label="r110" >ORGAIN 30G PROTEIN CREAMY CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r111" >ORGAIN 20G PROTEIN CREAMY VANILLA BEAN SHAKE 11OZ 12CT</row>
+    <row label="r112" >ORGAIN 20G PROTEIN CREAMY VANILLA BEAN SHAKE 11OZ 4CT</row>
+    <row label="r113" >ORGAIN 16G PROTEIN ORGANIC VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r114" >ORGAIN 16G PROTEIN ORGANIC CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r115" >PREMIER PROTEIN 30G PROTEIN CHOCOLATE SHAKE 11OZ 12CT</row>
+    <row label="r116" >PREMIER PROTEIN 30G PROTEIN CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r117" >PREMIER PROTEIN 30G PROTEIN CARAMEL SHAKE 11OZ 4CT</row>
+    <row label="r118" >PREMIER PROTEIN 30G PROTEIN VANILLA SHAKE 11OZ 12CT</row>
+    <row label="r119" >PREMIER PROTEIN 30G PROTEIN VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r120" >PREMIER PROTEIN 30G PROTEIN STRAWBERRY SHAKE 11OZ 4CT</row>
+    <row label="r121" >QUEST 30G PROTEIN CHOCOLATE SHAKE 11OZ 12CT</row>
+    <row label="r122" >QUEST 30G PROTEIN CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r123" >QUEST 30G PROTEIN SALTED CARAMEL SHAKE 11OZ 4CT</row>
+    <row label="r124" >QUEST 30G PROTEIN VANILLA SHAKE 11OZ 12CT</row>
+    <row label="r125" >QUEST 30G PROTEIN VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r126" >QUEST 30G PROTEIN COFFEE SHAKE 11OZ 4CT</row>
+    <row label="r127" >FAIRLIFE 30G PROTEIN VANILLA SHAKE 11.5OZ 4CT</row>
+    <row label="r128" >FAIRLIFE 30G PROTEIN CHOCOLATE SHAKE 11.5OZ 4CT</row>
+    <row label="r129" >CORE POWER 24G PROTEIN VANILLA SHAKE 8OZ 4CT</row>
+    <row label="r130" >CORE POWER 24G PROTEIN CHOCOLATE SHAKE 8OZ 4CT</row>
+    <row label="r131" >OWYN 20G PROTEIN VANILLA SHAKE 11.15OZ 4CT</row>
+    <row label="r132" >OWYN 20G PROTEIN DARK CHOCOLATE SHAKE 11.15OZ 4CT</row>
+    <row label="r133" >OWYN 20G PROTEIN COOKIES &amp; CREAMLESS SHAKE 11.15OZ 4CT</row>
+    <row label="r134" >OWYN 20G PROTEIN COMPLETE VANILLA SHAKE 11.15OZ 4CT</row>
+    <row label="r135" >OWYN 20G PROTEIN COMPLETE CHOCOLATE SHAKE 11.15OZ 4CT</row>
+    <row label="r136" >OIKOS 30G PROTEIN VANILLA SHAKE 4CT</row>
+    <row label="r137" >OIKOS 30G PROTEIN CHOCOLATE SHAKE 4CT</row>
+    <row label="r138" >PURE PROTEIN 30G PROTEIN VANILLA MILKSHAKE 4CT</row>
+    <row label="r139" >PURE PROTEIN 30G PROTEIN RICH CHOCOLATE SHAKE 4CT</row>
+    <row label="r140" >PURE PROTEIN 30G PROTEIN STRAWBERRY MILKSHAKE 4CT</row>
+    <row label="r141" >QUEST 45G PROTEIN VANILLA MILKSHAKE 14OZ 4CT</row>
+    <row label="r142" >QUEST 45G PROTEIN CHOCOLATE MILKSHAKE 14OZ 4CT</row>
+    <row label="r143" >QUEST 45G PROTEIN STRAWBERRY MILKSHAKE 14OZ 4CT</row>
+    <row label="r144" >OPTIMUM NUTRITION 24G PROTEIN GOLD STANDARD VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r145" >OPTIMUM NUTRITION 24G PROTEIN GOLD STANDARD CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r146" >CORE POWER 42G PROTEIN CHOCOLATE SHAKE 11.5OZ 10CT</row>
+    <row label="r147" >CORE POWER 42G PROTEIN ELITE VANILLA SHAKE 14OZ</row>
+    <row label="r148" >CORE POWER 42G PROTEIN ELITE CHOCOLATE SHAKE 14OZ</row>
+    <row label="r149" >OWYN 32G PLANT PROTEIN CHOCOLATE SHAKE 11.15OZ 4CT</row>
+    <row label="r150" >OWYN 32G PLANT PROTEIN VANILLA SHAKE 11.15OZ 4CT</row>
+    <row label="r151" >MUSCLE MILK 25G PROTEIN VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r152" >MUSCLE MILK 25G PROTEIN CHOCOLATE SHAKE 11OZ 4CT</row>
+    <row label="r153" >NEPRO HOMEMADE VANILLA SHAKE 8OZ 4CT</row>
+    <row label="r154" >JUVEN NUTRITION POWDER FOR WOUND HEALING ORANGE 1.2OZ 8CT</row>
+    <row label="r155" >JUVEN NUTRITION POWDER FOR WOUND HEALING FRUIT PUNCH 1.2OZ 8CT</row>
+    <row label="r156" >KATE FARMS VANILLA SHAKE 11OZ 4CT</row>
+    <row label="r157" >KATE FARMS CHOCOLATE SHAKE 11OZ 4CT</row>
+</checkbox>
+<suspend/>
+
+<suspend/>
+
+ <checkbox 
+     label="Q_PurchaseDriver_Combined"
+     onLoad="copy('Q_PurchaseDriver_rows', rows=True)"
+     where="execute,survey,report">
+        <title>Please select from the following statements, the reason(s) you decided to purchase the below product during this shopping trip.</title>
+<virtual>
+   
+label=[Q_PurchaseDriver_Lr1,Q_PurchaseDriver_Lr2,Q_PurchaseDriver_Lr3,Q_PurchaseDriver_Lr4,Q_PurchaseDriver_Lr5,Q_PurchaseDriver_Lr6,Q_PurchaseDriver_Lr7,Q_PurchaseDriver_Lr8,Q_PurchaseDriver_Lr9,Q_PurchaseDriver_Lr10,Q_PurchaseDriver_Lr11,Q_PurchaseDriver_Lr12,Q_PurchaseDriver_Lr13,Q_PurchaseDriver_Lr14,Q_PurchaseDriver_Lr15,Q_PurchaseDriver_Lr16,Q_PurchaseDriver_Lr17,Q_PurchaseDriver_Lr18,Q_PurchaseDriver_Lr19,Q_PurchaseDriver_Lr20,Q_PurchaseDriver_Lr21,Q_PurchaseDriver_Lr22,Q_PurchaseDriver_Lr23,Q_PurchaseDriver_Lr24,Q_PurchaseDriver_Lr25,Q_PurchaseDriver_Lr26,Q_PurchaseDriver_Lr27,Q_PurchaseDriver_Lr28,Q_PurchaseDriver_Lr29,Q_PurchaseDriver_Lr30,Q_PurchaseDriver_Lr31,Q_PurchaseDriver_Lr32,Q_PurchaseDriver_Lr33,Q_PurchaseDriver_Lr34,Q_PurchaseDriver_Lr35,Q_PurchaseDriver_Lr36,Q_PurchaseDriver_Lr37,Q_PurchaseDriver_Lr38,Q_PurchaseDriver_Lr39,Q_PurchaseDriver_Lr40,Q_PurchaseDriver_Lr41,Q_PurchaseDriver_Lr42,Q_PurchaseDriver_Lr43,Q_PurchaseDriver_Lr44,Q_PurchaseDriver_Lr45,Q_PurchaseDriver_Lr46,Q_PurchaseDriver_Lr47,Q_PurchaseDriver_Lr48,Q_PurchaseDriver_Lr49,Q_PurchaseDriver_Lr50,Q_PurchaseDriver_Lr51,Q_PurchaseDriver_Lr52,Q_PurchaseDriver_Lr53,Q_PurchaseDriver_Lr54,Q_PurchaseDriver_Lr55,Q_PurchaseDriver_Lr56,Q_PurchaseDriver_Lr57,Q_PurchaseDriver_Lr58,Q_PurchaseDriver_Lr59,Q_PurchaseDriver_Lr60,Q_PurchaseDriver_Lr61,Q_PurchaseDriver_Lr62,Q_PurchaseDriver_Lr63,Q_PurchaseDriver_Lr64,Q_PurchaseDriver_Lr65,Q_PurchaseDriver_Lr66,Q_PurchaseDriver_Lr67,Q_PurchaseDriver_Lr68,Q_PurchaseDriver_Lr69,Q_PurchaseDriver_Lr70,Q_PurchaseDriver_Lr71,Q_PurchaseDriver_Lr72,Q_PurchaseDriver_Lr73,Q_PurchaseDriver_Lr74,Q_PurchaseDriver_Lr75,Q_PurchaseDriver_Lr76,Q_PurchaseDriver_Lr77,Q_PurchaseDriver_Lr78,Q_PurchaseDriver_Lr79,Q_PurchaseDriver_Lr80,Q_PurchaseDriver_Lr81,Q_PurchaseDriver_Lr82,Q_PurchaseDriver_Lr83,Q_PurchaseDriver_Lr84,Q_PurchaseDriver_Lr85,Q_PurchaseDriver_Lr86,Q_PurchaseDriver_Lr87,Q_PurchaseDriver_Lr88,Q_PurchaseDriver_Lr89,Q_PurchaseDriver_Lr90,Q_PurchaseDriver_Lr91,Q_PurchaseDriver_Lr92,Q_PurchaseDriver_Lr93,Q_PurchaseDriver_Lr94,Q_PurchaseDriver_Lr95,Q_PurchaseDriver_Lr96,Q_PurchaseDriver_Lr97,Q_PurchaseDriver_Lr98,Q_PurchaseDriver_Lr99,Q_PurchaseDriver_Lr100,Q_PurchaseDriver_Lr101,Q_PurchaseDriver_Lr102,Q_PurchaseDriver_Lr103,Q_PurchaseDriver_Lr104,Q_PurchaseDriver_Lr105,Q_PurchaseDriver_Lr106,Q_PurchaseDriver_Lr107,Q_PurchaseDriver_Lr108,Q_PurchaseDriver_Lr109,Q_PurchaseDriver_Lr110,Q_PurchaseDriver_Lr111,Q_PurchaseDriver_Lr112,Q_PurchaseDriver_Lr113,Q_PurchaseDriver_Lr114,Q_PurchaseDriver_Lr115,Q_PurchaseDriver_Lr116,Q_PurchaseDriver_Lr117,Q_PurchaseDriver_Lr118,Q_PurchaseDriver_Lr119,Q_PurchaseDriver_Lr120,Q_PurchaseDriver_Lr121,Q_PurchaseDriver_Lr122,Q_PurchaseDriver_Lr123,Q_PurchaseDriver_Lr124,Q_PurchaseDriver_Lr125,Q_PurchaseDriver_Lr126,Q_PurchaseDriver_Lr127,Q_PurchaseDriver_Lr128,Q_PurchaseDriver_Lr129,Q_PurchaseDriver_Lr130,Q_PurchaseDriver_Lr131,Q_PurchaseDriver_Lr132,Q_PurchaseDriver_Lr133,Q_PurchaseDriver_Lr134,Q_PurchaseDriver_Lr135,Q_PurchaseDriver_Lr136,Q_PurchaseDriver_Lr137,Q_PurchaseDriver_Lr138,Q_PurchaseDriver_Lr139,Q_PurchaseDriver_Lr140,Q_PurchaseDriver_Lr141,Q_PurchaseDriver_Lr142,Q_PurchaseDriver_Lr143,Q_PurchaseDriver_Lr144,Q_PurchaseDriver_Lr145,Q_PurchaseDriver_Lr146,Q_PurchaseDriver_Lr147,Q_PurchaseDriver_Lr148,Q_PurchaseDriver_Lr149,Q_PurchaseDriver_Lr150,Q_PurchaseDriver_Lr151,Q_PurchaseDriver_Lr152,Q_PurchaseDriver_Lr153,Q_PurchaseDriver_Lr154,Q_PurchaseDriver_Lr155,Q_PurchaseDriver_Lr156,Q_PurchaseDriver_Lr157]
+ind=0 
+for y in label:
+   ind= label.index(y)
+   if y.r1: Q_PurchaseDriver_Combined.rows[ind].c1.val=1
+   if y.r2: Q_PurchaseDriver_Combined.rows[ind].c2.val=1
+   if y.r3: Q_PurchaseDriver_Combined.rows[ind].c3.val=1
+   if y.r4: Q_PurchaseDriver_Combined.rows[ind].c4.val=1
+   if y.r5: Q_PurchaseDriver_Combined.rows[ind].c5.val=1
+   if y.r6: Q_PurchaseDriver_Combined.rows[ind].c6.val=1
+   if y.r7: Q_PurchaseDriver_Combined.rows[ind].c7.val=1
+   if y.r8: Q_PurchaseDriver_Combined.rows[ind].c8.val=1
+   if y.r9: Q_PurchaseDriver_Combined.rows[ind].c9.val=1
+   if y.r10: Q_PurchaseDriver_Combined.rows[ind].c10.val=1
+   if y.r11: Q_PurchaseDriver_Combined.rows[ind].c11.val=1
+   if y.r12: Q_PurchaseDriver_Combined.rows[ind].c12.val=1
+   if y.r13: Q_PurchaseDriver_Combined.rows[ind].c13.val=1
+   if y.r14: Q_PurchaseDriver_Combined.rows[ind].c14.val=1
+   if y.r15: Q_PurchaseDriver_Combined.rows[ind].c15.val=1
+   if y.r16: Q_PurchaseDriver_Combined.rows[ind].c16.val=1
+   if y.r17: Q_PurchaseDriver_Combined.rows[ind].c17.val=1
+   if y.r18: Q_PurchaseDriver_Combined.rows[ind].c18.val=1
+   if y.r19: Q_PurchaseDriver_Combined.rows[ind].c19.val=1
+
+</virtual>      
+        <col label="c1">I like the packaging of this product</col>
+        <col label="c2">It provides the benefits I am looking for</col>
+        <col label="c3">It has the right pack size/quantity</col>
+        <col label="c4">I trust the brand/company that makes it</col>
+        <col label="c5">The price is attractive/fits my budget</col>
+        <col label="c6">Healthcare provider recommended it</col>
+        <col label="c7">Family/friends recommended it</col>
+        <col label="c8">Social media influencer or celebrity recommended it</col>
+        <col label="c9">It has good ratings/reviews</col>
+        <col label="c10">It is organic</col>
+        <col label="c11">It is plant-based</col>
+        <col label="c12">It is the product form I need/prefer</col>
+        <col label="c13">It is sustainably sourced/produced</col>
+        <col label="c14">It has my preferred flavor</col>
+        <col label="c15">The packaging was more noticeable than other products</col>
+        <col label="c16">It is a brand I normally buy</col>
+        <col label="c17">I wanted to try something unique/different</col>
+        <col label="c18">It has specific ingredients I am looking for (i.e. fiber, non-dairy), please specify</col>
+        <col label="c19">Other (Please Specify)</col>
+
+      </checkbox>
+
+<suspend/>
+      <checkbox 
+     label="Q_PurchaseDriver2_Combined"
+     onLoad="copy('Q_PurchaseDriver_rows', rows=True)"
+     where="execute,survey,report">
+        <title>Please select from the following statements, the reason(s) you decided to purchase the below product during this shopping trip.</title>
+<virtual>
+   
+label=[Q_PurchaseDriver2_Lr1,Q_PurchaseDriver2_Lr2,Q_PurchaseDriver2_Lr3,Q_PurchaseDriver2_Lr4,Q_PurchaseDriver2_Lr5,Q_PurchaseDriver2_Lr6,Q_PurchaseDriver2_Lr7,Q_PurchaseDriver2_Lr8,Q_PurchaseDriver2_Lr9,Q_PurchaseDriver2_Lr10,Q_PurchaseDriver2_Lr11,Q_PurchaseDriver2_Lr12,Q_PurchaseDriver2_Lr13,Q_PurchaseDriver2_Lr14,Q_PurchaseDriver2_Lr15,Q_PurchaseDriver2_Lr16,Q_PurchaseDriver2_Lr17,Q_PurchaseDriver2_Lr18,Q_PurchaseDriver2_Lr19,Q_PurchaseDriver2_Lr20,Q_PurchaseDriver2_Lr21,Q_PurchaseDriver2_Lr22,Q_PurchaseDriver2_Lr23,Q_PurchaseDriver2_Lr24,Q_PurchaseDriver2_Lr25,Q_PurchaseDriver2_Lr26,Q_PurchaseDriver2_Lr27,Q_PurchaseDriver2_Lr28,Q_PurchaseDriver2_Lr29,Q_PurchaseDriver2_Lr30,Q_PurchaseDriver2_Lr31,Q_PurchaseDriver2_Lr32,Q_PurchaseDriver2_Lr33,Q_PurchaseDriver2_Lr34,Q_PurchaseDriver2_Lr35,Q_PurchaseDriver2_Lr36,Q_PurchaseDriver2_Lr37,Q_PurchaseDriver2_Lr38,Q_PurchaseDriver2_Lr39,Q_PurchaseDriver2_Lr40,Q_PurchaseDriver2_Lr41,Q_PurchaseDriver2_Lr42,Q_PurchaseDriver2_Lr43,Q_PurchaseDriver2_Lr44,Q_PurchaseDriver2_Lr45,Q_PurchaseDriver2_Lr46,Q_PurchaseDriver2_Lr47,Q_PurchaseDriver2_Lr48,Q_PurchaseDriver2_Lr49,Q_PurchaseDriver2_Lr50,Q_PurchaseDriver2_Lr51,Q_PurchaseDriver2_Lr52,Q_PurchaseDriver2_Lr53,Q_PurchaseDriver2_Lr54,Q_PurchaseDriver2_Lr55,Q_PurchaseDriver2_Lr56,Q_PurchaseDriver2_Lr57,Q_PurchaseDriver2_Lr58,Q_PurchaseDriver2_Lr59,Q_PurchaseDriver2_Lr60,Q_PurchaseDriver2_Lr61,Q_PurchaseDriver2_Lr62,Q_PurchaseDriver2_Lr63,Q_PurchaseDriver2_Lr64,Q_PurchaseDriver2_Lr65,Q_PurchaseDriver2_Lr66,Q_PurchaseDriver2_Lr67,Q_PurchaseDriver2_Lr68,Q_PurchaseDriver2_Lr69,Q_PurchaseDriver2_Lr70,Q_PurchaseDriver2_Lr71,Q_PurchaseDriver2_Lr72,Q_PurchaseDriver2_Lr73,Q_PurchaseDriver2_Lr74,Q_PurchaseDriver2_Lr75,Q_PurchaseDriver2_Lr76,Q_PurchaseDriver2_Lr77,Q_PurchaseDriver2_Lr78,Q_PurchaseDriver2_Lr79,Q_PurchaseDriver2_Lr80,Q_PurchaseDriver2_Lr81,Q_PurchaseDriver2_Lr82,Q_PurchaseDriver2_Lr83,Q_PurchaseDriver2_Lr84,Q_PurchaseDriver2_Lr85,Q_PurchaseDriver2_Lr86,Q_PurchaseDriver2_Lr87,Q_PurchaseDriver2_Lr88,Q_PurchaseDriver2_Lr89,Q_PurchaseDriver2_Lr90,Q_PurchaseDriver2_Lr91,Q_PurchaseDriver2_Lr92,Q_PurchaseDriver2_Lr93,Q_PurchaseDriver2_Lr94,Q_PurchaseDriver2_Lr95,Q_PurchaseDriver2_Lr96,Q_PurchaseDriver2_Lr97,Q_PurchaseDriver2_Lr98,Q_PurchaseDriver2_Lr99,Q_PurchaseDriver2_Lr100,Q_PurchaseDriver2_Lr101,Q_PurchaseDriver2_Lr102,Q_PurchaseDriver2_Lr103,Q_PurchaseDriver2_Lr104,Q_PurchaseDriver2_Lr105,Q_PurchaseDriver2_Lr106,Q_PurchaseDriver2_Lr107,Q_PurchaseDriver2_Lr108,Q_PurchaseDriver2_Lr109,Q_PurchaseDriver2_Lr110,Q_PurchaseDriver2_Lr111,Q_PurchaseDriver2_Lr112,Q_PurchaseDriver2_Lr113,Q_PurchaseDriver2_Lr114,Q_PurchaseDriver2_Lr115,Q_PurchaseDriver2_Lr116,Q_PurchaseDriver2_Lr117,Q_PurchaseDriver2_Lr118,Q_PurchaseDriver2_Lr119,Q_PurchaseDriver2_Lr120,Q_PurchaseDriver2_Lr121,Q_PurchaseDriver2_Lr122,Q_PurchaseDriver2_Lr123,Q_PurchaseDriver2_Lr124,Q_PurchaseDriver2_Lr125,Q_PurchaseDriver2_Lr126,Q_PurchaseDriver2_Lr127,Q_PurchaseDriver2_Lr128,Q_PurchaseDriver2_Lr129,Q_PurchaseDriver2_Lr130,Q_PurchaseDriver2_Lr131,Q_PurchaseDriver2_Lr132,Q_PurchaseDriver2_Lr133,Q_PurchaseDriver2_Lr134,Q_PurchaseDriver2_Lr135,Q_PurchaseDriver2_Lr136,Q_PurchaseDriver2_Lr137,Q_PurchaseDriver2_Lr138,Q_PurchaseDriver2_Lr139,Q_PurchaseDriver2_Lr140,Q_PurchaseDriver2_Lr141,Q_PurchaseDriver2_Lr142,Q_PurchaseDriver2_Lr143,Q_PurchaseDriver2_Lr144,Q_PurchaseDriver2_Lr145,Q_PurchaseDriver2_Lr146,Q_PurchaseDriver2_Lr147,Q_PurchaseDriver2_Lr148,Q_PurchaseDriver2_Lr149,Q_PurchaseDriver2_Lr150,Q_PurchaseDriver2_Lr151,Q_PurchaseDriver2_Lr152,Q_PurchaseDriver2_Lr153,Q_PurchaseDriver2_Lr154,Q_PurchaseDriver2_Lr155,Q_PurchaseDriver2_Lr156,Q_PurchaseDriver2_Lr157]
+ind=0 
+for y in label:
+   ind= label.index(y)
+   if y.r1: Q_PurchaseDriver2_Combined.rows[ind].c1.val=1
+   if y.r2: Q_PurchaseDriver2_Combined.rows[ind].c2.val=1
+   if y.r3: Q_PurchaseDriver2_Combined.rows[ind].c3.val=1
+   if y.r4: Q_PurchaseDriver2_Combined.rows[ind].c4.val=1
+   if y.r5: Q_PurchaseDriver2_Combined.rows[ind].c5.val=1
+   if y.r6: Q_PurchaseDriver2_Combined.rows[ind].c6.val=1
+   if y.r7: Q_PurchaseDriver2_Combined.rows[ind].c7.val=1
+   if y.r8: Q_PurchaseDriver2_Combined.rows[ind].c8.val=1
+   if y.r9: Q_PurchaseDriver2_Combined.rows[ind].c9.val=1
+   if y.r10: Q_PurchaseDriver2_Combined.rows[ind].c10.val=1
+   if y.r11: Q_PurchaseDriver2_Combined.rows[ind].c11.val=1
+   if y.r12: Q_PurchaseDriver2_Combined.rows[ind].c12.val=1
+   if y.r13: Q_PurchaseDriver2_Combined.rows[ind].c13.val=1
+   if y.r14: Q_PurchaseDriver2_Combined.rows[ind].c14.val=1
+   if y.r15: Q_PurchaseDriver2_Combined.rows[ind].c15.val=1
+   if y.r16: Q_PurchaseDriver2_Combined.rows[ind].c16.val=1
+   if y.r17: Q_PurchaseDriver2_Combined.rows[ind].c17.val=1
+   if y.r18: Q_PurchaseDriver2_Combined.rows[ind].c18.val=1
+   if y.r19: Q_PurchaseDriver2_Combined.rows[ind].c19.val=1
+
+</virtual>      
+        <col label="c1">I like the packaging of this product</col>
+        <col label="c2">It provides the benefits I am looking for</col>
+        <col label="c3">It has the right pack size/quantity</col>
+        <col label="c4">I trust the brand/company that makes it</col>
+        <col label="c5">The price is attractive/fits my budget</col>
+        <col label="c6">Healthcare provider recommended it</col>
+        <col label="c7">Family/friends recommended it</col>
+        <col label="c8">Social media influencer or celebrity recommended it</col>
+        <col label="c9">It has good ratings/reviews</col>
+        <col label="c10">It is organic</col>
+        <col label="c11">It is plant-based</col>
+        <col label="c12">It is the product form I need/prefer</col>
+        <col label="c13">It is sustainably sourced/produced</col>
+        <col label="c14">It has my preferred flavor</col>
+        <col label="c15">The packaging was more noticeable than other products</col>
+        <col label="c16">It is a brand I normally buy</col>
+        <col label="c17">I wanted to try something unique/different</col>
+        <col label="c18">It has specific ingredients I am looking for (i.e. fiber, non-dairy), please specify</col>
+        <col label="c19">Other (Please Specify)</col>
+
+      </checkbox>
+
+<suspend/>
+ <checkbox 
+     label="Q_PurchaseBarrier_Combined"
+     onLoad="copy('Q_PurchaseDriver_rows', rows=True)"
+     where="execute,survey,report">
+        <title>Please select from the following statements, the reason(s) you decided to purchase the below product during this shopping trip.</title>
+<virtual>
+   
+label=[Q_PurchaseBarrier_Lr1,Q_PurchaseBarrier_Lr2,Q_PurchaseBarrier_Lr3,Q_PurchaseBarrier_Lr4,Q_PurchaseBarrier_Lr5,Q_PurchaseBarrier_Lr6,Q_PurchaseBarrier_Lr7,Q_PurchaseBarrier_Lr8,Q_PurchaseBarrier_Lr9,Q_PurchaseBarrier_Lr10,Q_PurchaseBarrier_Lr11,Q_PurchaseBarrier_Lr12,Q_PurchaseBarrier_Lr13,Q_PurchaseBarrier_Lr14,Q_PurchaseBarrier_Lr15,Q_PurchaseBarrier_Lr16,Q_PurchaseBarrier_Lr17,Q_PurchaseBarrier_Lr18,Q_PurchaseBarrier_Lr19,Q_PurchaseBarrier_Lr20,Q_PurchaseBarrier_Lr21,Q_PurchaseBarrier_Lr22,Q_PurchaseBarrier_Lr23,Q_PurchaseBarrier_Lr24,Q_PurchaseBarrier_Lr25,Q_PurchaseBarrier_Lr26,Q_PurchaseBarrier_Lr27,Q_PurchaseBarrier_Lr28,Q_PurchaseBarrier_Lr29,Q_PurchaseBarrier_Lr30,Q_PurchaseBarrier_Lr31,Q_PurchaseBarrier_Lr32,Q_PurchaseBarrier_Lr33,Q_PurchaseBarrier_Lr34,Q_PurchaseBarrier_Lr35,Q_PurchaseBarrier_Lr36,Q_PurchaseBarrier_Lr37,Q_PurchaseBarrier_Lr38,Q_PurchaseBarrier_Lr39,Q_PurchaseBarrier_Lr40,Q_PurchaseBarrier_Lr41,Q_PurchaseBarrier_Lr42,Q_PurchaseBarrier_Lr43,Q_PurchaseBarrier_Lr44,Q_PurchaseBarrier_Lr45,Q_PurchaseBarrier_Lr46,Q_PurchaseBarrier_Lr47,Q_PurchaseBarrier_Lr48,Q_PurchaseBarrier_Lr49,Q_PurchaseBarrier_Lr50,Q_PurchaseBarrier_Lr51,Q_PurchaseBarrier_Lr52,Q_PurchaseBarrier_Lr53,Q_PurchaseBarrier_Lr54,Q_PurchaseBarrier_Lr55,Q_PurchaseBarrier_Lr56,Q_PurchaseBarrier_Lr57,Q_PurchaseBarrier_Lr58,Q_PurchaseBarrier_Lr59,Q_PurchaseBarrier_Lr60,Q_PurchaseBarrier_Lr61,Q_PurchaseBarrier_Lr62,Q_PurchaseBarrier_Lr63,Q_PurchaseBarrier_Lr64,Q_PurchaseBarrier_Lr65,Q_PurchaseBarrier_Lr66,Q_PurchaseBarrier_Lr67,Q_PurchaseBarrier_Lr68,Q_PurchaseBarrier_Lr69,Q_PurchaseBarrier_Lr70,Q_PurchaseBarrier_Lr71,Q_PurchaseBarrier_Lr72,Q_PurchaseBarrier_Lr73,Q_PurchaseBarrier_Lr74,Q_PurchaseBarrier_Lr75,Q_PurchaseBarrier_Lr76,Q_PurchaseBarrier_Lr77,Q_PurchaseBarrier_Lr78,Q_PurchaseBarrier_Lr79,Q_PurchaseBarrier_Lr80,Q_PurchaseBarrier_Lr81,Q_PurchaseBarrier_Lr82,Q_PurchaseBarrier_Lr83,Q_PurchaseBarrier_Lr84,Q_PurchaseBarrier_Lr85,Q_PurchaseBarrier_Lr86,Q_PurchaseBarrier_Lr87,Q_PurchaseBarrier_Lr88,Q_PurchaseBarrier_Lr89,Q_PurchaseBarrier_Lr90,Q_PurchaseBarrier_Lr91,Q_PurchaseBarrier_Lr92,Q_PurchaseBarrier_Lr93,Q_PurchaseBarrier_Lr94,Q_PurchaseBarrier_Lr95,Q_PurchaseBarrier_Lr96,Q_PurchaseBarrier_Lr97,Q_PurchaseBarrier_Lr98,Q_PurchaseBarrier_Lr99,Q_PurchaseBarrier_Lr100,Q_PurchaseBarrier_Lr101,Q_PurchaseBarrier_Lr102,Q_PurchaseBarrier_Lr103,Q_PurchaseBarrier_Lr104,Q_PurchaseBarrier_Lr105,Q_PurchaseBarrier_Lr106,Q_PurchaseBarrier_Lr107,Q_PurchaseBarrier_Lr108,Q_PurchaseBarrier_Lr109,Q_PurchaseBarrier_Lr110,Q_PurchaseBarrier_Lr111,Q_PurchaseBarrier_Lr112,Q_PurchaseBarrier_Lr113,Q_PurchaseBarrier_Lr114,Q_PurchaseBarrier_Lr115,Q_PurchaseBarrier_Lr116,Q_PurchaseBarrier_Lr117,Q_PurchaseBarrier_Lr118,Q_PurchaseBarrier_Lr119,Q_PurchaseBarrier_Lr120,Q_PurchaseBarrier_Lr121,Q_PurchaseBarrier_Lr122,Q_PurchaseBarrier_Lr123,Q_PurchaseBarrier_Lr124,Q_PurchaseBarrier_Lr125,Q_PurchaseBarrier_Lr126,Q_PurchaseBarrier_Lr127,Q_PurchaseBarrier_Lr128,Q_PurchaseBarrier_Lr129,Q_PurchaseBarrier_Lr130,Q_PurchaseBarrier_Lr131,Q_PurchaseBarrier_Lr132,Q_PurchaseBarrier_Lr133,Q_PurchaseBarrier_Lr134,Q_PurchaseBarrier_Lr135,Q_PurchaseBarrier_Lr136,Q_PurchaseBarrier_Lr137,Q_PurchaseBarrier_Lr138,Q_PurchaseBarrier_Lr139,Q_PurchaseBarrier_Lr140,Q_PurchaseBarrier_Lr141,Q_PurchaseBarrier_Lr142,Q_PurchaseBarrier_Lr143,Q_PurchaseBarrier_Lr144,Q_PurchaseBarrier_Lr145,Q_PurchaseBarrier_Lr146,Q_PurchaseBarrier_Lr147,Q_PurchaseBarrier_Lr148,Q_PurchaseBarrier_Lr149,Q_PurchaseBarrier_Lr150,Q_PurchaseBarrier_Lr151,Q_PurchaseBarrier_Lr152,Q_PurchaseBarrier_Lr153,Q_PurchaseBarrier_Lr154,Q_PurchaseBarrier_Lr155,Q_PurchaseBarrier_Lr156,Q_PurchaseBarrier_Lr157]
+ind=0 
+for y in label:
+   ind= label.index(y)
+   if y.r1: Q_PurchaseBarrier_Combined.rows[ind].c1.val=1
+   if y.r2: Q_PurchaseBarrier_Combined.rows[ind].c2.val=1
+   if y.r3: Q_PurchaseBarrier_Combined.rows[ind].c3.val=1
+   if y.r4: Q_PurchaseBarrier_Combined.rows[ind].c4.val=1
+   if y.r5: Q_PurchaseBarrier_Combined.rows[ind].c5.val=1
+   if y.r6: Q_PurchaseBarrier_Combined.rows[ind].c6.val=1
+   if y.r7: Q_PurchaseBarrier_Combined.rows[ind].c7.val=1
+   if y.r8: Q_PurchaseBarrier_Combined.rows[ind].c8.val=1
+   if y.r9: Q_PurchaseBarrier_Combined.rows[ind].c9.val=1
+   if y.r10: Q_PurchaseBarrier_Combined.rows[ind].c10.val=1
+   if y.r11: Q_PurchaseBarrier_Combined.rows[ind].c11.val=1
+   if y.r12: Q_PurchaseBarrier_Combined.rows[ind].c12.val=1
+   if y.r13: Q_PurchaseBarrier_Combined.rows[ind].c13.val=1
+   if y.r14: Q_PurchaseBarrier_Combined.rows[ind].c14.val=1
+   if y.r15: Q_PurchaseBarrier_Combined.rows[ind].c15.val=1
+   if y.r16: Q_PurchaseBarrier_Combined.rows[ind].c16.val=1
+   if y.r17: Q_PurchaseBarrier_Combined.rows[ind].c17.val=1
+   if y.r18: Q_PurchaseBarrier_Combined.rows[ind].c18.val=1
+   
+
+</virtual>      
+        
+        <col label="c1">I do not like the packaging</col>
+        <col label="c2">It does not provide the benefits I was looking for</col>
+        <col label="c3">I could not find the right pack size/quantity</col>
+        <col label="c4">I do not trust the brand/company that makes it</col>
+        <col label="c5">The price is not attractive/does not fit my budget</col>
+        <col label="c6">Healthcare provider didn't recommend it</col>
+        <col label="c7">Family/friends did not recommend it</col>
+        <col label="c8">Social media influencer or celebrity didn't recommend it</col>
+        <col label="c9">It is not organic</col>
+        <col label="c10">It is not plant-based</col>
+        <col label="c11">I could not find the form I need/prefer</col>
+        <col label="c12">It is not sustainably sourced/productd</col>
+        <col label="c13">It does not have my preferred flavor</col>
+        <col label="c14">I have tried it before and didn't like the taste</col>
+        <col label="c15">I thought it was a different product</col>
+        <col label="c16">I could not compare this product with other products given the location where it was placed</col>
+        <col label="c17">I have my preferred brand and did not want to switch</col>
+        <col label="c18">Other (Please Specify)</col>
+      </checkbox>
+
+<suspend/>
+ <checkbox 
+     label="Q_PurchaseBarrier2_Combined"
+     onLoad="copy('Q_PurchaseDriver_rows', rows=True)"
+     where="execute,survey,report">
+        <title>Please select from the following statements, the reason(s) you decided to purchase the below product during this shopping trip.</title>
+<virtual>
+   
+label=[Q_PurchaseBarrier2_Lr1,Q_PurchaseBarrier2_Lr2,Q_PurchaseBarrier2_Lr3,Q_PurchaseBarrier2_Lr4,Q_PurchaseBarrier2_Lr5,Q_PurchaseBarrier2_Lr6,Q_PurchaseBarrier2_Lr7,Q_PurchaseBarrier2_Lr8,Q_PurchaseBarrier2_Lr9,Q_PurchaseBarrier2_Lr10,Q_PurchaseBarrier2_Lr11,Q_PurchaseBarrier2_Lr12,Q_PurchaseBarrier2_Lr13,Q_PurchaseBarrier2_Lr14,Q_PurchaseBarrier2_Lr15,Q_PurchaseBarrier2_Lr16,Q_PurchaseBarrier2_Lr17,Q_PurchaseBarrier2_Lr18,Q_PurchaseBarrier2_Lr19,Q_PurchaseBarrier2_Lr20,Q_PurchaseBarrier2_Lr21,Q_PurchaseBarrier2_Lr22,Q_PurchaseBarrier2_Lr23,Q_PurchaseBarrier2_Lr24,Q_PurchaseBarrier2_Lr25,Q_PurchaseBarrier2_Lr26,Q_PurchaseBarrier2_Lr27,Q_PurchaseBarrier2_Lr28,Q_PurchaseBarrier2_Lr29,Q_PurchaseBarrier2_Lr30,Q_PurchaseBarrier2_Lr31,Q_PurchaseBarrier2_Lr32,Q_PurchaseBarrier2_Lr33,Q_PurchaseBarrier2_Lr34,Q_PurchaseBarrier2_Lr35,Q_PurchaseBarrier2_Lr36,Q_PurchaseBarrier2_Lr37,Q_PurchaseBarrier2_Lr38,Q_PurchaseBarrier2_Lr39,Q_PurchaseBarrier2_Lr40,Q_PurchaseBarrier2_Lr41,Q_PurchaseBarrier2_Lr42,Q_PurchaseBarrier2_Lr43,Q_PurchaseBarrier2_Lr44,Q_PurchaseBarrier2_Lr45,Q_PurchaseBarrier2_Lr46,Q_PurchaseBarrier2_Lr47,Q_PurchaseBarrier2_Lr48,Q_PurchaseBarrier2_Lr49,Q_PurchaseBarrier2_Lr50,Q_PurchaseBarrier2_Lr51,Q_PurchaseBarrier2_Lr52,Q_PurchaseBarrier2_Lr53,Q_PurchaseBarrier2_Lr54,Q_PurchaseBarrier2_Lr55,Q_PurchaseBarrier2_Lr56,Q_PurchaseBarrier2_Lr57,Q_PurchaseBarrier2_Lr58,Q_PurchaseBarrier2_Lr59,Q_PurchaseBarrier2_Lr60,Q_PurchaseBarrier2_Lr61,Q_PurchaseBarrier2_Lr62,Q_PurchaseBarrier2_Lr63,Q_PurchaseBarrier2_Lr64,Q_PurchaseBarrier2_Lr65,Q_PurchaseBarrier2_Lr66,Q_PurchaseBarrier2_Lr67,Q_PurchaseBarrier2_Lr68,Q_PurchaseBarrier2_Lr69,Q_PurchaseBarrier2_Lr70,Q_PurchaseBarrier2_Lr71,Q_PurchaseBarrier2_Lr72,Q_PurchaseBarrier2_Lr73,Q_PurchaseBarrier2_Lr74,Q_PurchaseBarrier2_Lr75,Q_PurchaseBarrier2_Lr76,Q_PurchaseBarrier2_Lr77,Q_PurchaseBarrier2_Lr78,Q_PurchaseBarrier2_Lr79,Q_PurchaseBarrier2_Lr80,Q_PurchaseBarrier2_Lr81,Q_PurchaseBarrier2_Lr82,Q_PurchaseBarrier2_Lr83,Q_PurchaseBarrier2_Lr84,Q_PurchaseBarrier2_Lr85,Q_PurchaseBarrier2_Lr86,Q_PurchaseBarrier2_Lr87,Q_PurchaseBarrier2_Lr88,Q_PurchaseBarrier2_Lr89,Q_PurchaseBarrier2_Lr90,Q_PurchaseBarrier2_Lr91,Q_PurchaseBarrier2_Lr92,Q_PurchaseBarrier2_Lr93,Q_PurchaseBarrier2_Lr94,Q_PurchaseBarrier2_Lr95,Q_PurchaseBarrier2_Lr96,Q_PurchaseBarrier2_Lr97,Q_PurchaseBarrier2_Lr98,Q_PurchaseBarrier2_Lr99,Q_PurchaseBarrier2_Lr100,Q_PurchaseBarrier2_Lr101,Q_PurchaseBarrier2_Lr102,Q_PurchaseBarrier2_Lr103,Q_PurchaseBarrier2_Lr104,Q_PurchaseBarrier2_Lr105,Q_PurchaseBarrier2_Lr106,Q_PurchaseBarrier2_Lr107,Q_PurchaseBarrier2_Lr108,Q_PurchaseBarrier2_Lr109,Q_PurchaseBarrier2_Lr110,Q_PurchaseBarrier2_Lr111,Q_PurchaseBarrier2_Lr112,Q_PurchaseBarrier2_Lr113,Q_PurchaseBarrier2_Lr114,Q_PurchaseBarrier2_Lr115,Q_PurchaseBarrier2_Lr116,Q_PurchaseBarrier2_Lr117,Q_PurchaseBarrier2_Lr118,Q_PurchaseBarrier2_Lr119,Q_PurchaseBarrier2_Lr120,Q_PurchaseBarrier2_Lr121,Q_PurchaseBarrier2_Lr122,Q_PurchaseBarrier2_Lr123,Q_PurchaseBarrier2_Lr124,Q_PurchaseBarrier2_Lr125,Q_PurchaseBarrier2_Lr126,Q_PurchaseBarrier2_Lr127,Q_PurchaseBarrier2_Lr128,Q_PurchaseBarrier2_Lr129,Q_PurchaseBarrier2_Lr130,Q_PurchaseBarrier2_Lr131,Q_PurchaseBarrier2_Lr132,Q_PurchaseBarrier2_Lr133,Q_PurchaseBarrier2_Lr134,Q_PurchaseBarrier2_Lr135,Q_PurchaseBarrier2_Lr136,Q_PurchaseBarrier2_Lr137,Q_PurchaseBarrier2_Lr138,Q_PurchaseBarrier2_Lr139,Q_PurchaseBarrier2_Lr140,Q_PurchaseBarrier2_Lr141,Q_PurchaseBarrier2_Lr142,Q_PurchaseBarrier2_Lr143,Q_PurchaseBarrier2_Lr144,Q_PurchaseBarrier2_Lr145,Q_PurchaseBarrier2_Lr146,Q_PurchaseBarrier2_Lr147,Q_PurchaseBarrier2_Lr148,Q_PurchaseBarrier2_Lr149,Q_PurchaseBarrier2_Lr150,Q_PurchaseBarrier2_Lr151,Q_PurchaseBarrier2_Lr152,Q_PurchaseBarrier2_Lr153,Q_PurchaseBarrier2_Lr154,Q_PurchaseBarrier2_Lr155,Q_PurchaseBarrier2_Lr156,Q_PurchaseBarrier2_Lr157]
+ind=0 
+for y in label:
+   ind= label.index(y)
+   if y.r1: Q_PurchaseBarrier2_Combined.rows[ind].c1.val=1
+   if y.r2: Q_PurchaseBarrier2_Combined.rows[ind].c2.val=1
+   if y.r3: Q_PurchaseBarrier2_Combined.rows[ind].c3.val=1
+   if y.r4: Q_PurchaseBarrier2_Combined.rows[ind].c4.val=1
+   if y.r5: Q_PurchaseBarrier2_Combined.rows[ind].c5.val=1
+   if y.r6: Q_PurchaseBarrier2_Combined.rows[ind].c6.val=1
+   if y.r7: Q_PurchaseBarrier2_Combined.rows[ind].c7.val=1
+   if y.r8: Q_PurchaseBarrier2_Combined.rows[ind].c8.val=1
+   if y.r9: Q_PurchaseBarrier2_Combined.rows[ind].c9.val=1
+   if y.r10: Q_PurchaseBarrier2_Combined.rows[ind].c10.val=1
+   if y.r11: Q_PurchaseBarrier2_Combined.rows[ind].c11.val=1
+   if y.r12: Q_PurchaseBarrier2_Combined.rows[ind].c12.val=1
+   if y.r13: Q_PurchaseBarrier2_Combined.rows[ind].c13.val=1
+   if y.r14: Q_PurchaseBarrier2_Combined.rows[ind].c14.val=1
+   if y.r15: Q_PurchaseBarrier2_Combined.rows[ind].c15.val=1
+   if y.r16: Q_PurchaseBarrier2_Combined.rows[ind].c16.val=1
+   if y.r17: Q_PurchaseBarrier2_Combined.rows[ind].c17.val=1
+   if y.r18: Q_PurchaseBarrier2_Combined.rows[ind].c18.val=1
+   
+
+</virtual>      
+        
+        <col label="c1">I do not like the packaging</col>
+        <col label="c2">It does not provide the benefits I was looking for</col>
+        <col label="c3">I could not find the right pack size/quantity</col>
+        <col label="c4">I do not trust the brand/company that makes it</col>
+        <col label="c5">The price is not attractive/does not fit my budget</col>
+        <col label="c6">Healthcare provider didn't recommend it</col>
+        <col label="c7">Family/friends did not recommend it</col>
+        <col label="c8">Social media influencer or celebrity didn't recommend it</col>
+        <col label="c9">It is not organic</col>
+        <col label="c10">It is not plant-based</col>
+        <col label="c11">I could not find the form I need/prefer</col>
+        <col label="c12">It is not sustainably sourced/productd</col>
+        <col label="c13">It does not have my preferred flavor</col>
+        <col label="c14">I have tried it before and didn't like the taste</col>
+        <col label="c15">I thought it was a different product</col>
+        <col label="c16">I could not compare this product with other products given the location where it was placed</col>
+        <col label="c17">I have my preferred brand and did not want to switch</col>
+        <col label="c18">Other (Please Specify)</col>
+      </checkbox>
+
+<suspend/>
+
+</block>

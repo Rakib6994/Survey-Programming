@@ -1,0 +1,2363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey 
+  alt="999. FF5_DemoLink3_Template"
+  atm1d:showInput="1"
+  autosave="0"
+  browserDupes=""
+  builder:wizardCompleted="1"
+  builderCompatible="1"
+  compat="153"
+  delphi="1"
+  extraVariables="source,record,ipAddress,decLang,list,userAgent"
+  featurephoneNotAllowedMessage="The device you are using is not allowed to take this survey."
+  fir="on"
+  html:showNumber="0"
+  mobile="compat"
+  mobileDevices="smartphone,tablet,desktop"
+  name="Survey"
+  secure="1"
+  setup="term,decLang,quota,time"
+  ss:disableBackButton="1"
+  ss:enableNavigation="0"
+  ss:hideProgressBar="0"
+  ss:listDisplay="1"
+  ss:logoAlt=""
+  ss:logoFile=""
+  ss:logoPosition=""
+  state="testing"
+  theme="user/11939/frozen-theme-victoria-55">
+
+<res label="continuebtn">NEXT</res>
+<res label="Q8_0"><b>Poor</b></res>
+<res label="Q8_5"><b>Acceptable</b></res>
+<res label="Q8_10"><b>Excellent</b></res>
+<res label="Q11_0"><b>Not at all Likely</b></res>
+<res label="Q11_5"><b>Neutral</b></res>
+<res label="Q11_10"><b>Extremely Likely</b></res>
+<res label="A82oa">Please enter specify</res>
+<res label="resNo">No answer</res>
+<samplesources default="0">
+  <samplesource list="0">
+    <title>Open Survey</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <exit cond="terminated and hasMarker('journey')" url="http://paralleldata.decipherinc.com/survey/selfserve/202d/171100"/>
+    <exit cond="terminated">Thank you for taking our survey.</exit>
+    <exit cond="qualified">Thank you for taking our survey. Your efforts are greatly appreciated!</exit>
+    <exit cond="overquota">Thank you for taking our survey.</exit>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+<style name="global.page.head"><![CDATA[
+<script type="text/javascript">			
+	$ (function() {		
+		$ (window).on("load",function(){	
+			$ ("input[type='text']").attr("autocomplete","off")
+		})	
+  });			
+	</script>
+]]></style>
+<suspend/>
+
+<style name="respview.client.css"><![CDATA[
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>			
+<style type="text/css">			
+.InfoClass {			
+  text-align:center;			
+  font-weight:bold;			
+  font-size:3.4em;			
+  text-decoration: underline;			
+  text-decoration-color: #d80303;			
+}			
+.question {			
+  border-bottom: 1px solid #d80303;			
+  padding-bottom: 10px;			
+			
+}			
+			
+.instruction-text {			
+  font-style:italic;			
+  padding-left: 10px;			
+}			
+.strtbtn {			
+  border: 10px double #d80303;			
+//  #BFBFBF;			
+  border-radius: 50%;			
+  font-size:25px;			
+  font-weight:bold;			
+  background: #F2F2F2;			
+  color: #d80303;			
+  width:120px;			
+  height:120px;			
+  padding:5px;			
+  position:relative;			
+}			
+.strtbtn:hover, .strtbtn:focus {			
+  border: 10px double #F2F2F2;			
+  background: #000;			
+}			
+			
+.wrap {			
+  text-align: center;			
+  position: relative;			
+}			
+.wrap:before {			
+  content: '';			
+  position: absolute;			
+  top: 50%;			
+  left: 0;			
+  border-top: 1px solid #d80303;			
+  width: 100%;			
+  transform: translateY(-50%);			
+}  			
+			
+.sq-atm1d .sq-atm1d-button{			
+  font-size:1.2em;			
+}			
+.sq-atm1d-open .oe {			
+    height: 25px;			
+}			
+.sq-atm1d-large .sq-atm1d-button {      			
+    max-height: 44px ;			
+    min-width: 150px ;			
+}			
+.sq-atm1d-button.sq-atm1d-open  {     			
+    max-height: 60px ;			
+    min-width: 150px ;			
+}			
+.sq-atm1d-horizontal .sq-atm1d-button {			
+     max-height: 50px ;			
+}			
+.survey-error {			
+  background: #f2f2f2;			
+  color:#ba0000;			
+  border: 1px solid #ba0000;			
+}			
+.survey-body, .page-header, .footer, .sq-atm1d-widget {			
+  max-width: 1000px;			
+}			
+			
+			
+/*--------------------instant feedback-----------------------------*/			
+.table-Quota {			
+    /* top-right-buttom-left */			
+    border-color: black black black blue;			
+    border-width: 1px 0px 1px 0px;			
+    border-style: solid dashed solid dotted;			
+    text-align: left;			
+    font-size: 15px;			
+}			
+.table-Quota-tr-head {			
+    background-color: #f2f2f2;			
+}			
+.table-Quota-td {			
+    width: 20%			
+}			
+.table-Quota-td-blank {			
+    width: 20px			
+}			
+.table-Quota-td-green {			
+    color: #2eb82e;			
+}			
+.table-Quota-td-red {			
+    color: #e60000;			
+}			
+.table-Quota-td-left {			
+    text-align: left !important;			
+}			
+/*--------------------instant feedback-----------------------------*/			
+			
+			
+			
+  </style>
+]]></style>
+<style label="QNumstyle" arg:mlen="2" name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""} <input type="text" name="$(name)" id="$(name)" value="$(value)" maxLength="$(mlen)" size="$(size)" onkeypress="return isNumberKey(event)" style="height:40px; font-size:16px;border-radius:10px;text-align:center;" class="text"/> ${row.styles.ss.postText or this.styles.ss.postText or ""}			
+<script>			
+function isNumberKey(evt)			
+{			
+       var charCode = (evt.which) ? evt.which : event.keyCode			
+       if (charCode > 31 && (charCode < 48 || charCode > 57))			
+               return false;			
+			
+       return true;			
+}			
+</script>
+]]></style>
+<style label="hideElements" name="question.element"><![CDATA[
+\@if this.groups			
+      \@if col.group and row.group			
+        <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""} $(this.label)_$(col.group.label) 			
+        $(this.label)_$(row.group.label)" class="element $(extraClasses) $(col.group.styles.ss.groupClassNames) 			
+        $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>			
+        </td>			
+      \@else			
+        \@if col.group			
+          <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""} $(this.label)_$(col.group.label)"			
+          class="element $(extraClasses) $(col.group.styles.ss.groupClassNames) $(col.styles.ss.colClassNames) 			
+          $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>			
+          </td>			
+        \@else			
+          \@if row.group			
+            <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""} 			
+            $(this.label)_$(row.group.label)" class="element $(extraClasses) $(row.group.styles.ss.groupClassNames)			
+            $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>			
+            </td>			
+          \@else			
+            <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""}" class="element 			
+            $(extraClasses) $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  			
+            $(extra)>			
+            </td>			
+          \@endif			
+        \@endif			
+      \@endif			
+    \@else			
+      <td headers="${ec.this.label + "_" + ec.col.label if ec.col.label else ""}" class="element $(extraClasses) 			
+      $(col.styles.ss.colClassNames) $(row.styles.ss.rowClassNames) survey-q-grid-cell"  $(extra)>			
+      </td>			
+    \@endif
+]]></style>
+<style name="survey.respview.footer"><![CDATA[
+<div class="survey-footer">			
+      <div class="footer survey-footer-text">			
+      </div>			
+  </div>
+]]></style>
+<style name="button.continue" with="SInfo"><![CDATA[
+<div class="wrap">			
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="START" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>			
+</div>
+]]></style>
+<style name="button.continue"><![CDATA[
+<input type="submit" name="continue" id="btn_continue" class="button continue nextbtn" value="${res.continuebtn}" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>
+]]></style>
+<style name="button.finish"><![CDATA[
+<div class="wrap">			
+<input type="submit" name="continue" id="btn_continue" class="strtbtn" value="SUBMIT" onClick="var i = document.createElement('input');i.setAttribute('type', 'hidden');i.setAttribute('value', '1');i.setAttribute('name', '__has_javascript');document.forms.primary.appendChild(i);"/>			
+</div>
+]]></style>
+<suspend/>
+
+<pipe label="WNote" capture="">
+  <case label="r1" cond="(gv.request.device.isSmartphone())">Hello!</case>
+  <case label="r2" cond="1">Welcome!</case></pipe>
+<html label="cm1" where="survey"><strong>Welcome to the online survey demo link.</strong><br /><br /><strong>Please select the question styles you would like to explore.</strong></html>
+
+<checkbox 
+  label="Qskip5"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip,Qskip1,Qskip2,Qskip3,Qskip4"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><strong>Generic Screens</strong></title>
+  <row label="r1"><b>Start Page</b></row>
+  <row label="r2"><b>Honest Pledge</b></row>
+  <row label="r3"><b>Info Page</b></row>
+  <row label="r4"><b>Age, Gender, Postcode</b></row>
+  <row label="r5"><b>End Page</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip1,Qskip2,Qskip3,Qskip4"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><p></p>			
+<p><b>Standard Questions</b></p></title>
+  <style name="page.head"><![CDATA[
+<style>			
+.sq-atm1d-large .sq-atm1d-button {			
+    max-height: 60px ;			
+    min-width: 220px ;			
+    max-width: 220px ;			
+}			
+</style>
+]]></style>
+  <row label="r1"><b>Classic Radio</b></row>
+  <row label="r2"><b>Classic Checkbox</b></row>
+  <row label="r3"><b>Classic Open Text Area/ Number</b></row>
+  <row label="r4"><b>Classic Dropdown</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip1"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip,Qskip2,Qskip3,Qskip4,Qskip5"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><strong>Dynamic&amp;nbsp;Questions</strong></title>
+  <row label="r1"><b>Button Radio</b></row>
+  <row label="r2"><b>Button Checkbox</b></row>
+  <row label="r3"><b>Dynamic Image Checkbox</b></row>
+  <row label="r4"><b>Carousel - Single</b></row>
+  <row label="r5"><b>Carousel - Checkbox</b></row>
+  <row label="r6"><b>Button Rating</b></row>
+  <row label="r7"><b>Star Rating</b></row>
+  <row label="r8"><b>Rating Scale</b></row>
+  <row label="r9"><b>One Row at a Time</b></row>
+  <row label="r10"><b>Rank Sort</b></row>
+  <row label="r11"><b>Slider</b></row>
+  <row label="r12"><b>Left-Right Grid</b><br />Bi-polar</row>
+  <row label="r13"><b>Auto Sum</b></row>
+  <row label="r14"><b>Date Picker (NOT WORK)</b></row>
+  <row label="r15"><b>Slider with color changing</b></row>
+  <row label="r001"><b>Ranking OE (NOT WORK)</b></row>
+  <row label="r002"><b>Ranking</b></row>
+  <row label="r003"><b>MOTION WHEEL (NOT WORK)</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip2"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip,Qskip1,Qskip3,Qskip4,Qskip5"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><strong>Advance Dynamic&amp;nbsp;Questions</strong></title>
+  <row label="r1"><b>Text Highlighter</b></row>
+  <row label="r2" cond="not(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())"><b>Image Map</b></row>
+  <row label="r3" cond="not(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())"><b>Page Turner</b></row>
+  <row label="r4"><b>Hot Spot (NOT WORK)</b></row>
+  <row label="r5"><b>Auto Complete Text Question</b></row>
+  <row label="r6"><b>MaxDiff</b></row>
+  <row label="r7" cond="0"><b>_Ranking</b></row>
+  <row label="r8"><b>Instant Feedback</b></row>
+  <row label="r9"><b>The journey question type</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip3"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip,Qskip1,Qskip2,Qskip4,Qskip5"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><strong>Images/ Video</strong></title>
+  <row label="r22"><b>Image Ad</b></row>
+  <row label="r27"><b>Timer Ad</b></row>
+  <row label="r20"><b>File Upload</b></row>
+  <row label="r21"><b>Video Player</b></row>
+  <row label="r37"><b>Video Capture</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip20423"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip,Qskip1,Qskip2,Qskip4,Qskip5,Qskip3"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><strong>Drag and drop</strong></title>
+  <row label="r423"><b>Single response Drag and drop - show (NOT WORK)</b></row>
+  <row label="r424"><b>Single response Drag and drop - close (NOT WORK)</b></row>
+  <row label="r425"><b>Multi response Drag and drop - show (NOT WORK)</b></row>
+  <row label="r426"><b>Single response click to select Left Right (NOT WORK)</b></row>
+  <row label="r427"><b>Multi response click to select Left Right (NOT WORK)</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip4"
+  atm1d:viewMode="tiled"
+  keepWith="Qskip,Qskip1,Qskip2,Qskip3,Qskip5"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title>&amp;nbsp;</title>
+  <row label="r99" randomize="0"><b>All</b></row>
+</checkbox>
+
+<checkbox 
+  label="Qskip200601"
+  atm1d:viewMode="tiled"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><strong>2020 June added</strong></title>
+  <row label="r601"><b>Verification (NOT WORK)</b></row>
+  <row label="r602"><b>Free group - open (NOT WORK)</b></row>
+  <row label="r603"><b>Free group - close (NOT WORK)</b></row>
+  <row label="r501"><b>Rate small logos (NOT WORK)</b></row>
+  <row label="r502"><b>Black ball (NOT WORK)</b></row>
+  <row label="r503"><b>Black ball - value (NOT WORK)</b></row>
+  <row label="r504"><b>MR one row one time (NOT WORK)</b></row>
+  <row label="r505"><b>Swipe Left and Right</b></row>
+</checkbox>
+
+<suspend/>
+
+<exec>
+if Qskip4.r99:			
+ for itr in range(len(Qskip.rows)):			
+  Qskip.rows[itr].val=1;			
+ for itr in range(len(Qskip1.rows)):			
+  Qskip1.rows[itr].val=1;			
+ for itr in range(len(Qskip2.rows)):			
+  Qskip2.rows[itr].val=1;			
+ for itr in range(len(Qskip3.rows)):			
+  Qskip3.rows[itr].val=1;			
+ for itr in range(len(Qskip5.rows)):			
+  Qskip5.rows[itr].val=1;
+</exec>
+
+<suspend/>
+
+<html label="SInfo" cond="(Qskip5.r1)" where="survey"><div style="text-align: center;" class="InfoClass">[pipe:WNote]</div><br /><br /><b>Thank you for participating in this survey. All information collected in this survey will be kept completely confidential and anonymous.</b></html>
+
+<suspend/>
+
+<radio 
+  label="S0"
+  cond="(Qskip5.r2)"
+  atm1d:large_buttonAlign="center"
+  atm1d:small_buttonAlign="center"
+  ss:listDisplay="1"
+  uses="atm1d.11">
+  <title><div style="font-size:2em;border-bottom:1px solid #d80303">We believe in research</div><br />We want to remind you the company sponsoring this relies on the results to make key business decisions. Therefore, it's very important that you provide considered and accurate responses.<br /><br />You'll notice some simple questions unrelated to the survey topic, they're part of our quality controls, to ensure you're paying attention.<br /><br />If a participant fails these questions, the survey may be treated as invalid. And you may not get full incentives. <br /><br />Are you happy to co-operate with these quality controls and to answer this survey accurately?</title>
+  <comment>Please select one response only.</comment>
+  <row label="r1">Yes</row>
+  <row label="r2">No</row>
+</radio>
+
+<suspend/>
+
+<html label="SInfox2" cond="(Qskip5.r3)" where="survey"><div style="font-size:2em;border-bottom:1px solid #d80303;"><i style="font-size:50px" class="fa-icon-info-circle" aria-hidden="true"> </i></div><br />Thank you for helping with our survey.<br /><br />We would like to remind you that there are no right or wrong answers - it's your own thoughts and opinions that matter. Any comments you make will not be linked to you personally, but will be reported as a group. Please take your time in completing this questionnaire thoroughly. For most questions, you will only need to click in a tick box with your mouse. Other questions will require you to type in a response or a value.<br /><br />Now, I would like to ask you about...</html>
+
+<suspend/>
+
+<block label="b1" cond="(Qskip5.r4)" builder:title="Age Gender Postcode">
+  <number 
+   label="S2"
+   keepWith="S3,S4"
+   optional="0"
+   randomize="0"
+   size="3"
+   verify="range(1,99)">
+    <title>Please type in your age in years:</title>
+    <comment>Please enter a whole number</comment>
+    <style arg:mlen="2" copy="QNumstyle" name="el.text"/>
+  </number>
+
+  <radio 
+   label="S3"
+   keepWith="S2,S4"
+   randomize="0"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title>Are you...?</title>
+    <comment>Please select one</comment>
+    <row label="r1">Male</row>
+    <row label="r2">Female</row>
+  </radio>
+
+  <text 
+   label="S4"
+   fwidth="1024"
+   keepWith="S2,S3"
+   optional="0"
+   randomize="0"
+   size="5"
+   verify="len(3,4)">
+    <title>Please type in your postcode:</title>
+    <res label="sys_lenAtLeast">Please enter a valid postcode.</res>
+    <res label="sys_lenExactly">Please enter a valid postcode.</res>
+    <style arg:mlen="4" copy="QNumstyle" name="el.text"/>
+  </text>
+
+  <html label="postalindex" source="postal.html">Test HTML page To begin, we have just a few general questions.</html>
+
+  <text 
+   label="postcode"
+   keepWith="postalindex"
+   size="40"
+   ss:questionClassNames="postcode">
+    <title>Please enter your postal code.</title>
+  </text>
+</block>
+
+<suspend/>
+
+<block label="b2" cond="(Qskip5.r5)" builder:title="FF5 End Page">
+  <radio 
+   label="BEFOREFINAL"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title>Based on the results of this survey, we might be interested in conducting further research. Would you be interested in participating and us contacting you?</title>
+    <comment>Select one</comment>
+    <row label="r1" value="1">Yes, I am happy to be contacted via email</row>
+    <row label="r2" value="2">No, I’m not interested</row>
+  </radio>
+
+  <suspend/>
+
+  <html label="Finalx0" where="survey"><div style="text-align:center;"><span style="font-size:3em;">Thank you for your valued opinion!</span></div></html>
+
+  <select 
+   label="Finalx1"
+   keepWith="Finalx0,Finalx3"
+   optional="1"
+   randomize="0"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>What was your overall experience of the survey?</title>
+    <comment>Drag the slider to a point on the scale.</comment>
+    <choice label="ch1"><i style="font-size: 30px;" class="material-icons">sentiment_very_dissatisfied</i><br />Terrible</choice>
+    <choice label="ch2"><i style="font-size: 30px;" class="material-icons">sentiment_dissatisfied</i><br />Bad</choice>
+    <choice label="ch3"><i style="font-size: 30px;" class="material-icons">sentiment_neutral</i><br />Okay</choice>
+    <choice label="ch4"><i style="font-size: 30px;" class="material-icons">sentiment_satisfied</i><br />Good</choice>
+    <choice label="ch5"><i style="font-size:30px" class="fa-icon-smile-o"> </i><br />Great</choice>
+  </select>
+
+  <textarea 
+   label="Finalx3"
+   height="5"
+   keepWith="Finalx0,Finalx1"
+   randomize="0"
+   ss:legendColWidth="250px"
+   ss:listDisplay="0"
+   width="70">
+    <title>We’re really keen to <b>improve</b> our surveys, please let us know how we could have improved this survey for you?</title>
+    <comment>Any feedback you give will be most helpful!</comment>
+    <style name="page.head"><![CDATA[
+<style>			
+.grid.grid-table-mode.grid-multi-col .colCount-1 .element, .clearColWidths .grid.grid-table-mode .colCount-1 .element {			
+  border-left:none;			
+  border-right: 1px solid #d9d9d9;			
+  background: #f2f2f2;			
+}			
+.grid.grid-table-mode .cell {			
+  border-right:none;			
+  background: #f2f2f2;			
+}			
+</style>
+]]></style>
+  </textarea>
+</block>
+
+<suspend/>
+
+<block label="b2BV2" cond="(Qskip5.r5)" builder:title="FF5 End Page">
+  <html label="Finalx0V2" where="survey"><div style="text-align:center;"><span style="font-size:3em;">That’s the end of the Survey!</span></div></html>
+
+  <select 
+   label="Finalx1V2"
+   keepWith="Finalx0V2,Finalx3V2"
+   optional="1"
+   randomize="0"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title>What was your overall experience of the survey?</title>
+    <comment>Drag the slider to a point on the scale.</comment>
+    <choice label="ch1"><i style="font-size: 30px;" class="material-icons">sentiment_very_dissatisfied</i><br />Terrible</choice>
+    <choice label="ch2"><i style="font-size: 30px;" class="material-icons">sentiment_dissatisfied</i><br />Bad</choice>
+    <choice label="ch3"><i style="font-size: 30px;" class="material-icons">sentiment_neutral</i><br />Okay</choice>
+    <choice label="ch4"><i style="font-size: 30px;" class="material-icons">sentiment_satisfied</i><br />Good</choice>
+    <choice label="ch5"><i style="font-size:30px" class="fa-icon-smile-o"> </i><br />Great</choice>
+  </select>
+
+  <textarea 
+   label="Finalx3V2"
+   height="5"
+   keepWith="Finalx0V2,Finalx1V2"
+   randomize="0"
+   ss:legendColWidth="250px"
+   ss:listDisplay="0"
+   width="70">
+    <title>We’re really keen to <b>improve</b> our surveys, please let us know how we could have improved this survey for you?</title>
+    <comment>Any feedback you give will be most helpful!</comment>
+    <style name="page.head"><![CDATA[
+<style>			
+.grid.grid-table-mode.grid-multi-col .colCount-1 .element, .clearColWidths .grid.grid-table-mode .colCount-1 .element {			
+  border-left:none;			
+  border-right: 1px solid #d9d9d9;			
+  background: #f2f2f2;			
+}			
+.grid.grid-table-mode .cell {			
+  border-right:none;			
+  background: #f2f2f2;			
+}			
+</style>
+]]></style>
+  </textarea>
+</block>
+
+<suspend/>
+
+<block label="block1" cond="Qskip.r1">
+  <radio 
+   label="Q1"
+   optional="1"
+   randomize="0">
+    <title><b>Classic - Vertical Radio<br /><br />Overall, how satisfied are you with this brand?</b></title>
+    <comment>Select one</comment>
+    <row label="r5" value="5">Extremely satisfied</row>
+    <row label="r4" value="4">Very satisfied</row>
+    <row label="r3" value="3">Somewhat satisfied</row>
+    <row label="r2" value="2">Not very satisfied</row>
+    <row label="r1" value="1">Not at all satisfied</row>
+  </radio>
+
+  <radio 
+   label="Q2"
+   optional="1"
+   randomize="0">
+    <title><b>Classic - Horizontal Radio (Support PC)<br /><br />How likely are you to recommend this brand to a friend or family member?</b></title>
+    <comment>Select one</comment>
+    <row label="r1"/>
+    <col label="c0" value="0">Not at all likely<br />0</col>
+    <col label="c1" value="1">1</col>
+    <col label="c2" value="2">2</col>
+    <col label="c3" value="3">3</col>
+    <col label="c4" value="4">4</col>
+    <col label="c5" value="5">5</col>
+    <col label="c6" value="6">6</col>
+    <col label="c7" value="7">7</col>
+    <col label="c8" value="8">8</col>
+    <col label="c9" value="9">9</col>
+    <col label="c10" value="10">Extremely likely<br />10</col>
+  </radio>
+
+  <radio 
+   label="Q3"
+   optional="1"
+   randomize="0"
+   surveyDisplay="desktop">
+    <title><b>Classic - Radio Grid<br /><br />Rate your level of satisfaction with this brand for each of the following areas:</b></title>
+    <comment>Select one for each row</comment>
+    <row label="r1">Reliability</row>
+    <row label="r2">Value for the money</row>
+    <row label="r3">Performance speed</row>
+    <row label="r4">Responsiveness</row>
+    <row label="r5">Level of security</row>
+    <row label="r6">Ease of use</row>
+    <col label="c5" value="5">Not at all<br />satisfied</col>
+    <col label="c4" value="4">Not very<br />satisfied</col>
+    <col label="c3" value="3">Somewhat<br />satisfied</col>
+    <col label="c2" value="2">Very<br />satisfied</col>
+    <col label="c1" value="1">Extremely<br />satisfied</col>
+  </radio>
+</block>
+
+<suspend/>
+
+<block label="block2" cond="Qskip.r2">
+  <checkbox 
+   label="Q4"
+   randomize="0">
+    <title><b>Classic Checkbox - Vertical<br /><br />Which of the following movies have you watched in 2013?</b></title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Gravity</row>
+    <row label="r2">Frozen</row>
+    <row label="r3">Rush</row>
+    <row label="r4" exclusive="1"><i>None of above</i></row>
+  </checkbox>
+
+  <checkbox 
+   label="Q5"
+   randomize="0">
+    <title><b>Classic Checkbox - Horizontal  (Support PC)<br /><br />Which of the following movies have you watched in 2013?</b></title>
+    <comment>Select all that apply</comment>
+    <col label="c1">Gravity</col>
+    <col label="c2">Frozen</col>
+    <col label="c3">Rush</col>
+    <col label="c4" exclusive="1"><i>None of above</i></col>
+  </checkbox>
+
+  <checkbox 
+   label="Q6"
+   optional="1"
+   randomize="0">
+    <title><b>Classic Checkbox - Multiple answers</b><br /><br />Please select which fruits you eat with each meal.</title>
+    <comment>Select all that apply</comment>
+    <style cond="0" cols="c1,c3" copy="hideElements" name="question.element" rows="r6"/>
+    <row label="r1">Apples</row>
+    <row label="r2">Bananas</row>
+    <row label="r3">Pears</row>
+    <row label="r4">Oranges</row>
+    <row label="r5">Grapefruits</row>
+    <noanswer label="r6">I don't eat fruit with my meals</noanswer>
+    <col label="c1">Breakfast</col>
+    <col label="c2">Lunch</col>
+    <col label="c3">Dinner</col>
+  </checkbox>
+</block>
+
+<suspend/>
+
+<block label="block3" cond="Qskip.r3">
+  <number 
+   label="Q7"
+   randomize="0"
+   size="2"
+   verify="range(0,99)">
+    <title><b>Classic - Number (Restricted to enter 2 digits and only numbers)<br /><br />What is your age?</b></title>
+    <comment>Please enter a whole number</comment>
+    <style arg:mlen="2" copy="QNumstyle" name="el.text"/>
+  </number>
+
+  <text 
+   label="Q7a"
+   size="40"
+   ss:listDisplay="1"
+   uses="multicol.7">
+    <title><b>Classic Open</b><br /><br />What other brands of <b>Bottled Water</b> are you aware of?<br />Please name all brands that you can remember.</title>
+    <comment>Type in answer below</comment>
+    <row label="r1" optional="1"/>
+    <row label="r2" optional="1"/>
+    <row label="r3" optional="1"/>
+    <row label="r4" optional="1"/>
+    <row label="r5" optional="1"/>
+    <row label="r6" optional="1"/>
+    <row label="r7" optional="1"/>
+    <row label="r8" optional="1"/>
+    <row label="r9" optional="1"/>
+    <row label="r10" optional="1"/>
+  </text>
+
+  <textarea 
+   label="Q8"
+   randomize="0">
+    <title><b>Classic - Text Area<br /><br />Do you have any additional comments about your experience with this brand?</b></title>
+    <comment>Please be as specific as possible</comment>
+  </textarea>
+</block>
+
+<suspend/>
+
+<block label="block4" cond="Qskip.r4">
+  <select 
+   label="Q9"
+   optional="1"
+   randomize="0">
+    <title><p><strong>Classic - Drop-Down</strong></p>			
+<p><br /><strong>In what state do you live?</strong></p></title>
+    <comment>Select one</comment>
+    <choice label="ch1">Alabama</choice>
+    <choice label="ch2">Alaska</choice>
+    <choice label="ch3">Arizona</choice>
+    <choice label="ch4">Arkansas</choice>
+    <choice label="ch5">California</choice>
+    <choice label="ch6">Colorado</choice>
+    <choice label="ch7">Connecticut</choice>
+    <choice label="ch8">Delaware</choice>
+    <choice label="ch9">Florida</choice>
+    <choice label="ch10">Georgia</choice>
+    <choice label="ch11">Hawaii</choice>
+    <choice label="ch12">Idaho</choice>
+    <choice label="ch13">Illinois</choice>
+    <choice label="ch14">Indiana</choice>
+    <choice label="ch15">Iowa</choice>
+    <choice label="ch16">Kansas</choice>
+    <choice label="ch17">Kentucky</choice>
+    <choice label="ch18">Louisiana</choice>
+    <choice label="ch19">Maine</choice>
+    <choice label="ch20">Maryland</choice>
+    <choice label="ch21">Massachusetts</choice>
+    <choice label="ch22">Michigan</choice>
+    <choice label="ch23">Minnesota</choice>
+    <choice label="ch24">Mississippi</choice>
+    <choice label="ch25">Missouri</choice>
+    <choice label="ch26">Montana</choice>
+    <choice label="ch27">Nebraska</choice>
+    <choice label="ch28">Nevada</choice>
+    <choice label="ch29">New Hampshire</choice>
+    <choice label="ch30">New Jersey</choice>
+    <choice label="ch31">New Mexico</choice>
+    <choice label="ch32">New York</choice>
+    <choice label="ch33">North Carolina</choice>
+    <choice label="ch34">North Dakota</choice>
+    <choice label="ch35">Ohio</choice>
+    <choice label="ch36">Oklahoma</choice>
+    <choice label="ch37">Oregon</choice>
+    <choice label="ch38">Pennsylvania</choice>
+    <choice label="ch39">Rhode Island</choice>
+    <choice label="ch40">South Carolina</choice>
+    <choice label="ch41">South Dakota</choice>
+    <choice label="ch42">Tennessee</choice>
+    <choice label="ch43">Texas</choice>
+    <choice label="ch44">Utah</choice>
+    <choice label="ch45">Vermont</choice>
+    <choice label="ch46">Virginia</choice>
+    <choice label="ch47">Washington</choice>
+    <choice label="ch48">West Virginia</choice>
+    <choice label="ch49">Wisconsin</choice>
+    <choice label="ch50">Wyoming</choice>
+  </select>
+
+  <select 
+   label="Q10"
+   fir="off"
+   optional="1">
+    <title><b>Classic Dropdown&amp;nbsp;- Single Answer</b><br /><br />How would you rate each of the following brands?</title>
+    <comment>Select one for each</comment>
+    <row label="r1">Brand 1</row>
+    <row label="r2">Brand 2</row>
+    <row label="r3">Brand 3</row>
+    <row label="r4">Brand 4</row>
+    <row label="r5">Brand 5</row>
+    <choice label="c1" value="1">Dislike a lot</choice>
+    <choice label="c2" value="2">Dislike a little</choice>
+    <choice label="c3" value="3">Neither like nor dislike</choice>
+    <choice label="c4" value="4">Like a little</choice>
+    <choice label="c5" value="5">Like a lot</choice>
+  </select>
+
+  <suspend/>
+</block>
+
+<block label="block7">
+  <radio 
+   label="Q11x1"
+   cond="Qskip1.r1"
+   optional="1"
+   randomize="0"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title><b>Button Radio - Vertical<br /><br />Please select your favourite movie from the list below.</b></title>
+    <comment>Select one</comment>
+    <row label="r1">Gravity</row>
+    <row label="r2">Frozen</row>
+    <row label="r3">Rush</row>
+    <row label="r4" exclusive="1"><i>None of above</i></row>
+  </radio>
+
+  <radio 
+   label="Q11x2"
+   cond="Qskip1.r1"
+   atm1d:viewMode="horizontal"
+   optional="1"
+   randomize="0"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title><b>Button Radio - Horizontal  (Support PC)<br /><br />Please select your favourite movie from the list below.</b></title>
+    <comment>Select one</comment>
+    <row label="r1">Gravity</row>
+    <row label="r2">Frozen</row>
+    <row label="r3">Rush</row>
+    <row label="r4" exclusive="1"><i>None of above</i></row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q12"
+   cond="Qskip1.r2"
+   randomize="0"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title><b>Button Checkbox - Vertical<br /><br />Which of the following movies have you watched in 2013?</b></title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Gravity</row>
+    <row label="r2">Frozen</row>
+    <row label="r3">Rush</row>
+    <row label="r4" exclusive="1"><i>None of above</i></row>
+  </checkbox>
+
+  <checkbox 
+   label="Q13"
+   cond="Qskip1.r2"
+   atm1d:viewMode="horizontal"
+   randomize="0"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title><b>Button Checkbox - Horizontal  (Support PC)<br /><br />Which of the following movies have you watched in 2013?</b></title>
+    <comment>Select all that apply</comment>
+    <row label="r1">Gravity</row>
+    <row label="r2">Frozen</row>
+    <row label="r3">Rush</row>
+    <row label="r4" exclusive="1"><i>None of above</i></row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q28"
+   cond="Qskip1.r3"
+   atleast="1"
+   atm1d:large_maxHeight="100%"
+   atm1d:viewMode="tiled"
+   fir="off"
+   shuffle="rows"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title><b>Dynamic Image Checkbox</b><br /><br />Which of these fruits do you like?</title>
+    <comment>Please select all that apply</comment>
+    <row label="r1"><img class="survey_image survey-image-original fit" src="/survey/selfserve/6a7/220828/apple.png" alt="apple.png" title="apple.png" /></row>
+    <row label="r2"><img class="survey_image survey-image-original fit" src="/survey/selfserve/6a7/220828/cherry.png" alt="cherry.png" title="cherry.png" /></row>
+    <row label="r3"><img class="survey_image survey-image-original fit" src="/survey/selfserve/6a7/220828/banana.png" alt="banana.png" title="banana.png" /></row>
+    <row label="r4"><img class="survey_image survey-image-original fit" src="/survey/selfserve/6a7/220828/mango.png" alt="mango.png" title="mango.png" /></row>
+    <row label="r5"><img class="survey_image survey-image-original fit" src="/survey/selfserve/6a7/220828/pineapple.png" alt="pineapple.png" title="pineapple.png" /></row>
+    <row label="r6"><img class="survey_image survey-image-original fit" src="/survey/selfserve/6a7/220828/grapes.png" alt="grapes.png" title="grapes.png" /></row>
+    <row label="r99" exclusive="1" randomize="0"><strong>Do not like fruits</strong></row>
+  </checkbox>
+
+  <suspend/>
+
+  <radio 
+   label="Q18"
+   cond="Qskip1.r4"
+   cardsort:bucketCSS="margin:0px;"
+   cardsort:cardCSS="background: white; color: #000F14;border:1px solid #000;width:300px;max-width:95% !important;"
+   cardsort:completionHTML="You have finished rating this question. Please click on the &amp;#34;Next&amp;#34; button below."
+   cardsort:displayCounter="0"
+   optional="1"
+   uses="cardsort.6">
+    <title><b>Carousel (Single Select)<br /><br />Rate your cable service in each of the following areas:</b></title>
+    <style name="page.head"><![CDATA[
+<style type="text/css">			
+			
+.sq-cardsort-desktop .sq-cardsort-bucket {			
+  max-width:180px;			
+}			
+			
+   </style>
+]]></style>
+    <row label="r1">Reliability</row>
+    <row label="r2">Value for the money</row>
+    <row label="r3">Customer support</row>
+    <row label="r4">Picture quality</row>
+    <row label="r5">Channel selection</row>
+    <col label="c5" value="5">Not at all satisfied</col>
+    <col label="c4" value="4">Not very satisfied</col>
+    <col label="c3" value="3">Somewhat satisfied</col>
+    <col label="c2" value="2">Very satisfied</col>
+    <col label="c1" value="1">Extremely satisfied</col>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="Q19"
+   cond="Qskip1.r5"
+   cardsort:bucketCSS="margin:0px;"
+   cardsort:cardCSS="background: white; color: #000F14;border:1px solid #000;width:300px;max-width:95%;"
+   cardsort:completionHTML="You have finished rating this question. Please click on the &amp;#34;Next&amp;#34; button below."
+   cardsort:displayCounter="0"
+   cardsort:displayNavigation="1"
+   uses="cardsort.6">
+    <title><b>Carousel (Multi Select)<br /><br />Select the brands which provide cable services in the following areas:</b></title>
+    <row label="r1">Reliability</row>
+    <row label="r2">Value for the money</row>
+    <row label="r3">Customer support</row>
+    <row label="r4">Picture quality</row>
+    <row label="r5">Channel selection</row>
+    <col label="c5">Brand 1</col>
+    <col label="c4">Brand 2</col>
+    <col label="c3">Brand 3</col>
+    <col label="c2">Brand 4</col>
+    <col label="c1">Brand 5</col>
+  </checkbox>
+
+  <suspend/>
+
+  <number 
+   label="Q14"
+   cond="Qskip1.r6"
+   atmrating:leftLegend="${res.Q8_0}"
+   atmrating:rightLegend="${res.Q8_10}"
+   ignoreValues="99"
+   randomize="0"
+   size="10"
+   uses="atmrating.5"
+   verify="range(0,10)">
+    <title><br /><br /><b>Button Rating - Single Row<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+    <comment>Select an answer</comment>
+    <row label="r1">&amp;nbsp;</row>
+  </number>
+
+  <number 
+   label="Q15"
+   cond="Qskip1.r6"
+   atmrating:leftLegend="${res.Q8_0}"
+   atmrating:midLegend="${res.Q8_5}"
+   atmrating:rightLegend="${res.Q8_10}"
+   ignoreValues="99"
+   size="10"
+   uses="atmrating.5"
+   verify="range(0,10)">
+    <title><b>Button Rating - Multiple Rows<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+    <comment>Select an answer for each</comment>
+    <row label="r1">Friendliness</row>
+    <row label="r2">Ability to answer your questions</row>
+    <row label="r3">Quality of service</row>
+  </number>
+
+  <suspend/>
+
+  <select 
+   label="Q16"
+   cond="Qskip1.r7"
+   optional="1"
+   uses="starrating.5">
+    <title><br /><b>Star Rating - Single Row<br /><br />How would you rate the customer service representative?</b></title>
+    <choice label="ch1">Hated It</choice>
+    <choice label="ch2">Didn't Like It</choice>
+    <choice label="ch3">It was OK</choice>
+    <choice label="ch4">Liked It</choice>
+    <choice label="ch5">Loved It</choice>
+  </select>
+
+  <select 
+   label="Q17"
+   cond="Qskip1.r7"
+   optional="1"
+   uses="starrating.5">
+    <title><br /><b>Star Rating - Multiple Rows<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+    <row label="r1">Friendliness</row>
+    <row label="r2">Ability to answer your questions</row>
+    <row label="r3">Quality of service</row>
+    <choice label="ch1">Hated It</choice>
+    <choice label="ch2">Didn't Like It</choice>
+    <choice label="ch3">It was OK</choice>
+    <choice label="ch4">Liked It</choice>
+    <choice label="ch5">Loved It</choice>
+  </select>
+</block>
+
+<suspend/>
+
+<radio 
+  label="Q26"
+  cond="Qskip1.r8"
+  grouping="rows"
+  optional="1"
+  uses="ratingscale.5">
+  <title><br /><b>Rating Scale<br /><br />How would you rate the customer service representative in the following areas:</b></title>
+  <row label="r1">Friendliness</row>
+  <row label="r2">Ability to answer your questions</row>
+  <row label="r3">Quality of service</row>
+  <col label="c1">Hated It</col>
+  <col label="c2">Didn't Like It</col>
+  <col label="c3">It was OK</col>
+  <col label="c4">Liked It</col>
+  <col label="c5">Loved It</col>
+</radio>
+
+<suspend/>
+
+<block label="block9" cond="Qskip1.r9">
+  <radio 
+   label="Q20"
+   optional="1"
+   uses="onerowatatime.3">
+    <title><b>Radio Grid - One Row at a Time<br /><br />In the last 24 hours, which fruit did you have?</b></title>
+    <row label="r1">Apple</row>
+    <row label="r2">Banana</row>
+    <row label="r3">Pear</row>
+    <row label="r4">Watermelon</row>
+    <col label="c2" value="2">Yes</col>
+    <col label="c1" value="1">No</col>
+  </radio>
+
+  <suspend/>
+</block>
+
+<block label="block10" cond="Qskip1.r10" randomizeChildren="1">
+  <select 
+   label="Q21"
+   minRanks="0"
+   optional="1"
+   shuffle="rows"
+   unique="none,cols"
+   uses="ranksort.4">
+    <title><b>Rank Sort<br /><br />Please rank the following wireless service providers in order of your preference. For example, the most appealing provider is ranked 1<sup>st</sup> and the least appealing is ranked last.</b></title>
+    <choice label="ch1">Rank 1<sup>st</sup></choice>
+    <choice label="ch2">Rank 2<sup>nd</sup></choice>
+    <choice label="ch3">Rank 3<sup>rd</sup></choice>
+    <choice label="ch4">Rank 4<sup>th</sup></choice>
+    <row label="r1">Provider 1</row>
+    <row label="r2">Provider 2</row>
+    <row label="r3">Provider 3</row>
+    <row label="r4">Provider 4</row>
+    <noanswer label="n1"><b>Prefer not to say</b></noanswer>
+  </select>
+
+  <suspend/>
+</block>
+
+<block label="block11" cond="Qskip1.r11">
+  <number 
+   label="Q22"
+   ignoreValues="99"
+   size="10"
+   slidernumber:leftLegend="${res.Q11_0}"
+   slidernumber:midLegend="${res.Q11_5}"
+   slidernumber:rightLegend="${res.Q11_10}"
+   uses="slidernumber.5"
+   verify="range(0,10)">
+    <title><b>Slider - Legends in Left, Right, and Center<br /><br />How likely are you to recommend this smartphone to a friend or family member?</b></title>
+    <row label="r1">&amp;nbsp;</row>
+  </number>
+
+  <select 
+   label="Q23"
+   optional="1"
+   ss:questionClassNames="sq-sliderpoints"
+   uses="sliderpoints.3">
+    <title><b>Slider with Don't know Option<br /><br />Would you say this design is different from other vehicles currently available? </b></title>
+    <comment>Drag the slider to a point on the scale.</comment>
+    <choice label="ch0" value="0">0<br /><b>Not at all different</b></choice>
+    <choice label="ch1" value="1">1</choice>
+    <choice label="ch2" value="2">2</choice>
+    <choice label="ch3" value="3">3</choice>
+    <choice label="ch4" value="4">4</choice>
+    <choice label="ch5" value="5">5</choice>
+    <choice label="ch6" value="6">6</choice>
+    <choice label="ch7" value="7">7</choice>
+    <choice label="ch8" value="8">8</choice>
+    <choice label="ch9" value="9">9</choice>
+    <choice label="ch10" value="10">10<br /><b>Extremely different</b></choice>
+    <choice label="ch99" sliderpoints:OO="1" value="99"><b>Don't know</b></choice>
+  </select>
+
+  <suspend/>
+</block>
+
+<radio 
+  label="Q_LeftRightGrid"
+  cond="Qskip1.r12"
+  grouping="rows"
+  optional="1"
+  rowLegend="both"
+  uses="leftright.1">
+  <title>Left-Right grid Question (Support PCs)<br />Please select the word that describes your personality best.</title>
+  <comment>Select one for each.</comment>
+  <row label="r1" rightLegend="Unmotivated">Ambitious</row>
+  <row label="r2" rightLegend="Rebellious">Co-operative</row>
+  <row label="r3" rightLegend="Indecisive">Determined</row>
+  <row label="r4" rightLegend="Stubborn">Felxible</row>
+  <col label="c1">1</col>
+  <col label="c2">2</col>
+  <col label="c3">3</col>
+  <col label="c4">4</col>
+  <col label="c5">5</col>
+</radio>
+
+<suspend/>
+
+<number 
+  label="Q_AutoSum"
+  cond="Qskip1.r13"
+  autosum:postText="%"
+  size="3"
+  uses="autosum.5">
+  <title><b>Auto Sum<br /><br /></b>Please distribute percentage in order of importance of these products.</title>
+  <comment>Please enter whole number.</comment>
+  <row label="r1">Product 1</row>
+  <row label="r2">Product 2</row>
+  <row label="r3">Product 3</row>
+  <row label="r4">Product 4</row>
+  <row label="r5">Product 5</row>
+</number>
+
+<suspend/>
+
+<number 
+  label="Q001_sliderCol"
+  cond="Qskip1.r15"
+  ignoreValues="999"
+  optional="0"
+  size="10"
+  slidernumber:showValue="Do Not Show Value"
+  uses="slidernumber.5"
+  verify="range(0,10)">
+  <title>asd</title>
+  <comment>Drag the slider to a point on the scale.</comment>
+  <style name="page.head"><![CDATA[
+<script type="text/javascript" src="https://paralleldata.decipherinc.com/survey/selfserve/202d/g052/170700/slider_color_change_main.js"></script>			
+    <script>			
+      //s			
+    </script>
+]]></style>
+</number>
+
+<select 
+  label="Q1_TH"
+  cond="Qskip2.r1"
+  hottext:atleast="0"
+  optional="1"
+  uses="hottext.3">
+  <title><b><br />TEXT HIGHLIGHTER<br /><br />How do you feel about the following statement?</b></title>
+  <comment>Please make a selection.</comment>
+  <choice label="ch1">Like</choice>
+  <choice label="ch2">Neutral</choice>
+  <choice label="ch3">Dislike</choice>
+  <row label="r1" translateable="0">It</row>
+  <row label="r2" translateable="0">was</row>
+  <row label="r3" translateable="0">pretty</row>
+  <row label="r4" translateable="0">devastating5</row>
+  <row label="r5" translateable="0">because</row>
+  <row label="r6" translateable="0">other</row>
+  <row label="r7" translateable="0">children</row>
+  <row label="r8" translateable="0">constantly</row>
+  <row label="r9" translateable="0">made</row>
+  <row label="r10" translateable="0">fun</row>
+  <row label="r11" translateable="0">of</row>
+  <row label="r12" translateable="0">her,</row>
+  <row label="r13" translateable="0">and</row>
+  <row label="r14" translateable="0">sadly,</row>
+  <row label="r15" translateable="0">even</row>
+  <row label="r16" translateable="0">a</row>
+  <row label="r17" translateable="0">teacher</row>
+  <row label="r18" translateable="0">teased</row>
+  <row label="r19" translateable="0">her.</row>
+  <row label="r20" translateable="0">When</row>
+  <row label="r21" translateable="0">the</row>
+  <row label="r22" translateable="0">tics</row>
+  <row label="r23" translateable="0">were</row>
+  <row label="r24" translateable="0">especially</row>
+  <row label="r25" translateable="0">bad,</row>
+  <row label="r26" translateable="0">Kendall</row>
+  <row label="r27" translateable="0">had</row>
+  <row label="r28" translateable="0">to</row>
+  <row label="r29" translateable="0">wear</row>
+  <row label="r30" translateable="0">a</row>
+  <row label="r31" translateable="0">neck</row>
+  <row label="r32" translateable="0">brace6.</row>
+  <row label="r33" translateable="0">She</row>
+  <row label="r34" translateable="0">only</row>
+  <row label="r35" translateable="0">had</row>
+  <row label="r36" translateable="0">one</row>
+  <row label="r37" translateable="0">or</row>
+  <row label="r38" translateable="0">two</row>
+  <row label="r39" translateable="0">friends,</row>
+  <row label="r40" translateable="0">but</row>
+  <row label="r41" translateable="0">that</row>
+  <row label="r42" translateable="0">was</row>
+  <row label="r43" translateable="0">okay</row>
+  <row label="r44" translateable="0">because</row>
+  <row label="r45" translateable="0">they</row>
+  <row label="r46" translateable="0">were</row>
+  <row label="r47" translateable="0">--</row>
+  <row label="r48" translateable="0">and</row>
+  <row label="r49" translateable="0">continue</row>
+  <row label="r50" translateable="0">to</row>
+  <row label="r51" translateable="0">be</row>
+  <row label="r52" translateable="0">--</row>
+  <row label="r53" translateable="0">real,</row>
+  <row label="r54" translateable="0">the</row>
+  <row label="r55" translateable="0">kind</row>
+  <row label="r56" translateable="0">who</row>
+  <row label="r57" translateable="0">stick</row>
+  <row label="r58" translateable="0">by</row>
+  <row label="r59" translateable="0">her,</row>
+  <row label="r60" translateable="0">no</row>
+  <row label="r61" translateable="0">matter</row>
+  <row label="r62" translateable="0">what.</row>
+  <row label="r63" translateable="0">Through</row>
+  <row label="r64" translateable="0">all</row>
+  <row label="r65" translateable="0">this,</row>
+  <row label="r66" translateable="0">Kendall</row>
+  <row label="r67" translateable="0">continued</row>
+  <row label="r68" translateable="0">to</row>
+  <row label="r69" translateable="0">sing</row>
+  <row label="r70" translateable="0">and</row>
+  <row label="r71" translateable="0">entertain.</row>
+  <row label="r72" translateable="0">Remarkably7,</row>
+  <row label="r73" translateable="0">her</row>
+  <row label="r74" translateable="0">tics</row>
+  <row label="r75" translateable="0">disappeared</row>
+  <row label="r76" translateable="0">when</row>
+  <row label="r77" translateable="0">she</row>
+  <row label="r78" translateable="0">sang.</row>
+</select>
+
+<suspend/>
+
+<select 
+  label="Ranking_1"
+  cond="Qskip1.r002"
+  minRanks="1"
+  optional="1"
+  ranksort:bucketCSS="height: 85px;"
+  ranksort:cardCSS="height: 85px;"
+  ranksort:cardDroppedCSS=" height: 85px;"
+  ranksort:cardHoverCSS="height: 85px;"
+  ranksort:mobile_cardCSS="height: auto;"
+  ranksort:showBucketNumber="0"
+  shuffle="rows"
+  unique="none,cols"
+  uses="ranksort.4">
+  <title>And what were your top three reasons for visiting IKEA?</title>
+  <comment>Please select up to three responses</comment>
+  <style name="page.head"><![CDATA[
+<style type="text/css">			
+\@if device.desktop			
+#question_B2 .sq-ranksort-container .sq-ranksort-cards .sq-ranksort-card {			
+    background-color: #ffffff;			
+    border-color: #000000 !important;			
+    color: #000000;			
+    height: auto;			
+    border: 2px solid #cc0000;			
+    text-align: center;			
+}			
+			
+#survey .sq-ranksort-container .sq-ranksort-icon-rank {			
+    position: absolute;			
+    top: 0px;			
+    left: 0px;			
+    width: 25px;			
+    height: 25px;			
+    font-size: 18px;			
+    background-color: #f80;			
+    border: 1px solid #f80;			
+    color: #fff;			
+    -webkit-border-radius: 22px;			
+    -moz-border-radius: 22px;			
+    border-radius: 22px;			
+    display: block;			
+    text-align: center;			
+}			
+			
+#survey .sq-ranksort-container .sq-ranksort-cards .sq-ranksort-card, #survey .sq-ranksort-container .sq-ranksort-buckets .sq-ranksort-card {			
+    font-size: 14px !important;			
+}			
+			
+#survey .sq-ranksort-container .sq-ranksort-cards {			
+    padding: 1px;			
+}			
+#survey .sq-ranksort-container .sq-ranksort-numbers {			
+    / padding: 10px 0px 10px 40px; /			
+    margin-left: 10px;			
+    width: 1px;			
+}			
+			
+#survey .sq-ranksort-container .sq-ranksort-buckets-container {			
+    float: left;			
+    padding-left: 80px;			
+}			
+			
+#survey .sq-ranksort-container .sq-ranksort-buckets {			
+    width: 270px;			
+    padding-left: 25px;			
+}			
+			
+			
+#question_B2 .sq-ranksort-container .sq-ranksort-cards {			
+    width: 800px;			
+}			
+			
+#survey .sq-ranksort-container .sq-ranksort-buckets .sq-ranksort-bucket {			
+    margin: 2px;			
+}			
+\@endif			
+			
+\@if device.smartphone			
+#question_B2 .sq-ranksort-container .sq-ranksort-cards .sq-ranksort-card {			
+    border-color: #000000 !important;			
+}			
+			
+\@endif			
+</style>
+]]></style>
+  <group label="g1" where="none">EASE/CONVENIENCE</group>
+  <group label="g2" where="none">PRODUCTS / RANGE</group>
+  <group label="g3" where="none">DESIGN/STYLING</group>
+  <group label="g4" where="none">EXPERIENCE</group>
+  <group label="g5" where="none">PRICING</group>
+  <row label="r1" groups="g1">Their stores are easy to navigate, I can easily find what I'm after</row>
+  <row label="r2" groups="g1">My local store is easy to get to</row>
+  <row label="r3" groups="g2">Their products last/are durable</row>
+  <row label="r4" groups="g3">They are always bringing out new designs</row>
+  <row label="r5" groups="g4">They have reliable delivery</row>
+  <row label="r6" groups="g5">They have products that are affordable but look good</row>
+  <choice label="ch1">1</choice>
+  <choice label="ch2">2</choice>
+  <choice label="ch3">3</choice>
+  <choice label="ch4">4</choice>
+  <choice label="ch5">5</choice>
+  <choice label="ch6">6</choice>
+</select>
+
+<suspend/>
+
+<textarea 
+  label="QImgMap"
+  cond="Qskip2.r2 and not(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())"
+  height="10"
+  imgmap:image="imageMap.png"
+  randomize="0"
+  ss:questionClassNames="sq-imgmap"
+  uses="imgmap.4"
+  width="50">
+  <title><b>Image Map Question</b><br />Please use your mouse to map the areas you think are positive, Neutral or Negative using the specified color.</title>
+  <col label="c1" cond="1">Positive</col>
+  <col label="c2" cond="1">Neutral</col>
+  <col label="c3" cond="1">Negative</col>
+</textarea>
+
+<suspend/>
+
+<number 
+  label="QPageTurner"
+  cond="Qskip2.r3 and not(gv.request.device.isSmartphone() or gv.request.device.isFeaturephone() or gv.request.device.isTablet())"
+  grouping="cols"
+  pageturner:height="400"
+  pageturner:width="500"
+  randomize="0"
+  size="10"
+  ss:questionClassNames="sq-pageturner"
+  uses="pageturner.4">
+  <title><b>Page Turner Question</b></title>
+  <row label="r1" alt="Page 1"><img src="[rel Page1.jpg]" /></row>
+  <row label="r2" alt="Page 2"><img src="[rel Page2.jpg]" /></row>
+  <row label="r3" alt="Page 3"><img src="[rel Page3.jpg]" /></row>
+</number>
+
+<suspend/>
+
+<exec when="started">
+#optional if watermarking is needed			
+p.watermark = ""			
+p.watermarkPosition = ""			
+p.watermarkColor = ""
+</exec>
+
+<text 
+  label="Q_AutoFill"
+  cond="Qskip2.r5"
+  randomize="0"
+  size="75">
+  <title><b><br />Auto Complete Text Question:<br /><br />Where do you live?</b></title>
+  <style name="el.text"><![CDATA[
+${row.styles.ss.preText or this.styles.ss.preText or ""}			
+  <input type="text" name="$(name)" id="$(name)" value="$(value)" size="$(size)" class="auto1"/> 			
+${row.styles.ss.postText or this.styles.ss.postText or ""}			
+<script type="text/javascript">			
+$ (".auto1").autocomplete({			
+source: ["Los Angeles","San Francisco","New York","Boston","Chicago","Atlanta","Washington DC","Dallas/Ft Worth","Houston","Philadelphia","Toronto","Calgary","Edmonton","Montreal","Vancouver","Other"]			
+  });			
+</script>
+]]></style>
+  <row label="r1"/>
+</text>
+
+<suspend/>
+
+<block label="b3" cond="(Qskip2.r6)" builder:title="Max-Diff">
+  <note>MaxDiff Indices Template --Start--</note>
+  <exec when="init">
+def setupMaxDiffFile(fname, fileDelimiter="\t"):			
+    try:			
+        f = open("%s/%s" % (gv.survey.path, fname))			
+        mdObj = [ line.strip("\r\n").split(fileDelimiter) for line in f.readlines() ]			
+        d = dict( ("v%s_t%s" % (row[0], row[1]), row[2:]) for row in mdObj )			
+    except IOError:			
+        d = {}			
+    return d			
+			
+def setupMaxDiffItemsI(d, vt, question):			
+    item_index = dict( (r.o.label.strip("item"), r.index) for r in question.rows )			
+			
+    items = d[vt]			
+			
+    for r in question.rows:			
+        if r.o.label.strip("item") not in items:			
+            r.disabled = True			
+			
+    question.rows.order = [ item_index[i] for i in items ]			
+			
+    print "*****STAFF ONLY*****"			
+    print "Version_Task: %s" % vt			
+    for i in range(len(items)):			
+        print "Item %s: %s" % (i+1,items[i])
+  </exec>
+
+  <exec when="init">
+Q24_md = setupMaxDiffFile("design.dat")
+  </exec>
+
+  <quota label="quota2" overquota="noqual" sheet="Q24_MaxDiff"/>
+
+  <number 
+   label="Q24_Version"
+   randomize="0"
+   size="3"
+   verify="range(1,10)"
+   where="execute,survey,report">
+    <title>Q24 - MaxDiff Version</title>
+    <exec>
+			
+print p.markers			
+for x in p.markers:			
+    if "/Q24_MaxDiff/ver_" in x:			
+        Q24_Version.val = int(x.split("_")[-1])			
+        break
+    </exec>
+
+  </number>
+
+  <suspend/>
+
+  <exec>
+p.startTime = timeSpent()
+  </exec>
+
+  <loop label="Q24_md_loop" vars="task">
+    <title>Q24 - MaxDiff Loop</title>
+    <block label="Q24_md_block" randomize="1">
+      <radio 
+     label="Q24_[loopvar: task]"
+     adim="cols"
+     grouping="cols"
+     optional="1"
+     shuffle="rows"
+     ss:questionClassNames="Q24_maxdiff"
+     unique="1">
+        <title>Please select most and least important attribute from list below.</title>
+        <comment>Please select one<br />			
+<p style="text-align: center;">[MDcount] of 12</p></comment>
+        <exec>
+			
+setupMaxDiffItemsI( Q24_md, "v%d_t%d" % (Q24_Version.val, [loopvar: task]), Q24_[loopvar: task])			
+p.MDcount = str(Q24_md_loop_expanded.order.index([loopvar: task]-1)+1)
+        </exec>
+
+        <col label="best">Most Important</col>
+        <col label="worst">Least Important</col>
+        <row label="item1">Traditional</row>
+        <row label="item2">Innovative</row>
+        <row label="item3">Steady</row>
+        <row label="item4">Fast-paced</row>
+        <row label="item5">Technology-oriented</row>
+        <row label="item6">Community-focused</row>
+        <row label="item7">Industry leader</row>
+        <row label="item8">Expert</row>
+        <row label="item9">Consultative</row>
+        <row label="item10">Customer-focused</row>
+        <row label="item11">Revenue-focused</row>
+        <row label="item12">Proactive</row>
+        <style mode="before" name="question.header"><![CDATA[
+<style type="text/css">			
+    .Q24_maxdiff tr.maxdiff-header-legend {			
+        background-color: transparent;			
+        border-bottom: 2px solid #d9d9d9;			
+    }			
+    .Q24_maxdiff tr.maxdiff-header-legend th.legend {			
+        background-color: transparent;			
+        border: none;			
+    }			
+    .Q24_maxdiff tr.maxdiff-row td.element {			
+        border-left: none;			
+        border-right: none;			
+        border-top: none;			
+        border-bottom: 1px solid #d9d9d9;			
+        text-align: center;			
+    }			
+    .Q24_maxdiff tr.maxdiff-row th.row-legend {			
+        background-color: transparent;			
+        border-left: none;			
+        border-right: none;			
+        border-top: none;			
+        border-bottom: 1px solid #d9d9d9;			
+        text-align: center;			
+    }			
+    </style>
+]]></style>
+        <style name="question.top-legend"><![CDATA[
+\@if ec.simpleList			
+    $(legends)			
+\@else			
+    <$(tag) class="maxdiff-header-legend row row-col-legends row-col-legends-top ${"mobile-top-row-legend " if mobileOnly else ""}${"GtTenColumns " if ec.colCount > 10 else ""}colCount-$(colCount)">			
+        ${"%s%s" % (legends.split("</th>")[0],"</th>")}			
+       $(left)			
+        ${"%s%s" % (legends.split("</th>")[1],"</th>")}			
+    </$(tag)>			
+    \@if not simple			
+  </tbody>			
+  <tbody>			
+    \@endif			
+\@endif
+]]></style>
+        <style name="question.row"><![CDATA[
+\@if ec.simpleList			
+    $(elements)			
+\@else			
+    <$(tag) class="maxdiff-row row row-elements $(style) colCount-$(colCount)">			
+        ${"%s%s" % (elements.split("</td>")[0],"</td>")}			
+        $(left)			
+        ${"%s%s" % (elements.split("</td>")[1],"</td>")}			
+    </$(tag)>			
+\@endif
+]]></style>
+      </radio>
+    </block>
+
+    <looprow label="1">
+      <loopvar name="task">1</loopvar>
+    </looprow>
+
+    <looprow label="2">
+      <loopvar name="task">2</loopvar>
+    </looprow>
+
+    <looprow label="3">
+      <loopvar name="task">3</loopvar>
+    </looprow>
+
+    <looprow label="4">
+      <loopvar name="task">4</loopvar>
+    </looprow>
+
+    <looprow label="5">
+      <loopvar name="task">5</loopvar>
+    </looprow>
+
+    <looprow label="6">
+      <loopvar name="task">6</loopvar>
+    </looprow>
+
+    <looprow label="7">
+      <loopvar name="task">7</loopvar>
+    </looprow>
+
+    <looprow label="8">
+      <loopvar name="task">8</loopvar>
+    </looprow>
+
+    <looprow label="9">
+      <loopvar name="task">9</loopvar>
+    </looprow>
+
+    <looprow label="10">
+      <loopvar name="task">10</loopvar>
+    </looprow>
+
+    <looprow label="11">
+      <loopvar name="task">11</loopvar>
+    </looprow>
+
+    <looprow label="12">
+      <loopvar name="task">12</loopvar>
+    </looprow>
+  </loop>
+
+  <float 
+   label="Q24_Timer"
+   randomize="0"
+   where="execute,survey,report">
+    <title>Q1 - MaxDiff Timer (Minutes)</title>
+    <exec>
+			
+Q24_Timer.val = (timeSpent() - p.startTime) / 60.0
+    </exec>
+
+  </float>
+
+  <note>MaxDiff Indices Template --End--</note></block>
+
+<suspend/>
+
+<html label="Q_Image" cond="Qskip3.r22" where="survey">Please review the image.<br /><br /><div align="center"><img src="[rel Image.png]" /></div></html>
+
+<suspend/>
+
+<checkbox 
+  label="Q29"
+  cond="Qskip3.r27"
+  optional="1"
+  ss:questionClassNames="sq-timertest"
+  uses="timertest.3">
+  <title><strong>Timer Ad Test</strong><br />Take a look at the advertisement. You will be automatically redirected when the timer reaches 0.<br /></title>
+  <comment>After 10 seconds, you will automatically be advanced.<br /><div align="center"><img src="[rel Image.png]" /></div></comment>
+</checkbox>
+
+<suspend/>
+
+<image label="upload_file" cond="Qskip3.r20" style="photo">
+  <title><b><br />File upload question.<br /><br />Upload a file and please provide a brief description of the file.</b></title>
+  <row label="r1" open="1" openOptional="1" openSize="40">Description:</row>
+</image>
+
+<suspend/>
+
+<text 
+  label="Video"
+  cond="(Qskip3.r21)"
+  keepWith="Q19"
+  optional="0"
+  size="25"
+  uses="videoplayer.3"
+  videoplayer:account_id="2280166212001"
+  videoplayer:player_id="6321078997112">
+  <title><strong>Video Player : Please see video below.</strong></title>
+</text>
+
+<radio 
+  label="Q19a"
+  cond="0 and (Qskip3.r21)"
+  keepWith="Video"
+  optional="1">
+  <title>What did you see in the video?</title>
+  <comment>Select one</comment>
+  <row label="r1">Watermelon</row>
+  <row label="r2">Aeroplane</row>
+  <row label="r3">Car</row>
+  <row label="r4">Can't see anything</row>
+</radio>
+
+<suspend/>
+
+<block label="b4" cond="(Qskip3.r37)" builder:title="VideoCapture Element Block">
+  <html label="VidInfox1" cond="(Qskip3.r37)" where="survey">You may be asked to provide a video answer (for an additional incentive of $5 if applicable) to one or more of the questions in this survey, if possible, please complete it on a device with a webcam or built-in camera. Remember that you do not have to participate immediately – feel free to complete this survey at a better time, or when you're in a better location to record a video.</html>
+
+  <suspend/>
+
+  <html label="VidInfox2" cond="(Qskip3.r37)" where="survey"><b>Video opt-in</b><br /><br />We <b>Fiftyfive5</b> (FIFTY-FIVE FIVE PTY. LTD, ABN 87 142 679 221) are interested in hearing what consumers think about (insert question topic) and would like to ask if you are open to sharing your comments via a video response.<br /><br />We find that we are able to get richer feedback when participants speak aloud their thoughts, rather than typing them into a text box. The video you record will not be used beyond this study and will be stored anonymously and will not be shared in any public domain.<br /><br /><b>Communication</b><br /><br />Your participation in this video section is voluntary. If you do respond your Video Response must:-<br /><br />			
+<ul><li />respond fully to the questionnaire			
+<li />not violate any third party's intellectual property rights			
+<li />not be unlawful, offensive, threatening, libellous, defamatory, obscene or otherwise objectionable. For example nudity or semi nudity is likely to be considered obscene.			
+<li />not be recorded in an inappropriate setting such as for example a toilet.			
+<li />contain at least 15 seconds of recorded speech			
+<li />ensure your face is clearly visible			
+<li />ensure there are no audio or visual issues</ul><br /><br />			
+<b>How will my video be used?</b><br /><br />			
+By recording and submitting a Video Response, you are agreeing to it being used for the purposes stated below. Your Video Response, or parts of it, may be used by Clients or Fiftyfive5 and/or its appointed subcontractors for:<br /><br />			
+<ul><li />market research and consumer insight purposes			
+<li />monitoring the quality of responses			
+<li />processing data for the above purposes.</ul><br /><br />			
+<b>Storage &amp; Retention</b><br /><br />			
+Personal Information that Fiftyfive5 may collect from you is routinely de-identified and/or destroyed. However, until that occurs, you have the right to access any information we hold about you.  You may also request at any time to have any information we hold about you de-identified or destroyed. Your personal information will be stored on servers located within Australia.<br /><br />			
+<b>Privacy Policy</b><br /><br />			
+Our Privacy Policy is available <a href="https://fiftyfive5.com/privacy-policy" target="_blank">here</a> and contains further details regarding how you can access or correct any personal information we hold about you, how you can make a privacy related complaint, how that complaint will be dealt with and the extent to which your information may be disclosed to overseas recipients.</html>
+
+  <radio 
+   label="VidPrivacy"
+   cond="(Qskip3.r37)"
+   keepWith="VidInfox2"
+   randomize="0"
+   ss:listDisplay="1"
+   uses="atm1d.11">
+    <title>If you agree, please provide your consent below:</title>
+    <comment>Please select one</comment>
+    <row label="r1">I agree to share my video</row>
+    <row label="r2">I do not agree to share my video</row>
+  </radio>
+
+  <suspend/>
+
+  <textarea 
+   label="C1"
+   cond="(VidPrivacy.r1)"
+   height="10"
+   randomize="0"
+   uses="videocapture.1"
+   width="50">
+    <title>Please record or upload an existing video</title>
+    <noanswer label="na_C1">NA</noanswer>
+  </textarea>
+</block>
+
+<suspend/>
+
+<block label="block_instant_feedback_" cond="(Qskip2.r8)" builder:title="instant feedback from quota">
+  <html label="Section_B_instant_" cond="1" where="survey">The next four questions are designed to understand how much you understand about superannuation. 			
+<br /><br />			
+To help us get an accurate snapshot please answer each question based on your current understanding, without referring to any external websites or materials. At the end, we'll tell you how many you got right... and how your responses compare to the rest of our customers who have already taken the survey!</html>
+
+  <suspend/>
+
+  <radio 
+   label="B1_text"
+   cond="0">
+    <title>text pipe in</title>
+    <row label="r1"><div>10%</div></row>
+    <row label="r2"><div>15%</div></row>
+    <row label="r3"><div>20%</div></row>
+    <row label="r4"><div>25%</div></row>
+    <row label="r5"><div>30%</div></row>
+    <row label="r6"><div>35%</div></row>
+    <row label="r7"><div>Unsure</div></row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="B2_text"
+   cond="0">
+    <title>text pipe in</title>
+    <row label="r1"><div>$5,000</div></row>
+    <row label="r2"><div>$10,000</div></row>
+    <row label="r3"><div>$15,000</div></row>
+    <row label="r4"><div>$20,000</div></row>
+    <row label="r5"><div>$25,000</div></row>
+    <row label="r6"><div>$30,000</div></row>
+    <row label="r7"><div>Unsure</div></row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="B3_text"
+   cond="0">
+    <title>text pipe in</title>
+    <row label="r1"><div>$50,000</div></row>
+    <row label="r2"><div>$100,000</div></row>
+    <row label="r3"><div>$150,000</div></row>
+    <row label="r4"><div>$200,000</div></row>
+    <row label="r5"><div>$250,000</div></row>
+    <row label="r6"><div>$300,000</div></row>
+    <row label="r7"><div>$350,000</div></row>
+    <row label="r8"><div>Unsure</div></row>
+  </radio>
+
+  <suspend/>
+
+  <radio 
+   label="B4_text"
+   cond="0">
+    <title>text pipe in</title>
+    <row label="r1"><div>7.5%</div></row>
+    <row label="r2"><div>8.5%</div></row>
+    <row label="r3"><div>9.5%</div></row>
+    <row label="r4"><div>10.5%</div></row>
+    <row label="r5"><div>11.5%</div></row>
+    <row label="r6"><div>12.5%</div></row>
+    <row label="r7"><div>Unsure</div></row>
+  </radio>
+
+  <suspend/>
+
+  <exec>
+# array-----			
+p.bArr=[]
+  </exec>
+
+  <suspend/>
+
+  <exec>
+def pushtoOrder(no,arr):			
+  v = no			
+  if v in arr:			
+    print "already in---"			
+  else:			
+    arr.append(v)			
+    print "arr is: ",arr
+  </exec>
+
+  <suspend/>
+
+  <block label="B_Section" randomizeChildren="1">
+    <block label="b1_Block" randomize="1">
+      <radio 
+     label="B1"
+     atm1d:large_buttonAlign="Center"
+     atm1d:small_buttonAlign="Center"
+     ss:listDisplay="1"
+     uses="atm1d.11">
+        <title>Before tax (concessional) payments that you or your employer might make into your superannuation fund are taxed at...?</title>
+        <comment>Please select one answer </comment>
+        <exec>
+			
+pushtoOrder(0, p.bArr)
+        </exec>
+
+        <row label="r1"><div style="text-align:center;">10%</div></row>
+        <row label="r2"><div style="text-align:center;">15%</div></row>
+        <row label="r3"><div style="text-align:center;">20%</div></row>
+        <row label="r4"><div style="text-align:center;">25%</div></row>
+        <row label="r5"><div style="text-align:center;">30%</div></row>
+        <row label="r6"><div style="text-align:center;">35%</div></row>
+        <row label="r7"><div style="text-align:center;">Unsure</div></row>
+      </radio>
+
+      <suspend/>
+    </block>
+
+    <block label="b2_Block" randomize="1">
+      <radio 
+     label="B2"
+     atm1d:large_buttonAlign="Center"
+     atm1d:small_buttonAlign="Center"
+     ss:listDisplay="1"
+     uses="atm1d.11">
+        <title>The annual limit for concessionally taxed payments into your superannuation fund is...?</title>
+        <comment>Please select one answer </comment>
+        <exec>
+			
+pushtoOrder(1, p.bArr)
+        </exec>
+
+        <row label="r1"><div style="text-align:center;">$5,000</div></row>
+        <row label="r2"><div style="text-align:center;">$10,000</div></row>
+        <row label="r3"><div style="text-align:center;">$15,000</div></row>
+        <row label="r4"><div style="text-align:center;">$20,000</div></row>
+        <row label="r5"><div style="text-align:center;">$25,000</div></row>
+        <row label="r6"><div style="text-align:center;">$30,000</div></row>
+        <row label="r7"><div style="text-align:center;">Unsure</div></row>
+      </radio>
+
+      <suspend/>
+    </block>
+
+    <block label="b3_Block" randomize="1">
+      <radio 
+     label="B3"
+     atm1d:large_buttonAlign="Center"
+     atm1d:small_buttonAlign="Center"
+     ss:listDisplay="1"
+     uses="atm1d.11">
+        <title>The three-year limit for after-tax (non-concessional) payments into your superannuation fund is...?</title>
+        <comment>Please select one answer </comment>
+        <exec>
+			
+pushtoOrder(2, p.bArr)
+        </exec>
+
+        <row label="r1"><div style="text-align:center;">$50,000</div></row>
+        <row label="r2"><div style="text-align:center;">$100,000</div></row>
+        <row label="r3"><div style="text-align:center;">$150,000</div></row>
+        <row label="r4"><div style="text-align:center;">$200,000</div></row>
+        <row label="r5"><div style="text-align:center;">$250,000</div></row>
+        <row label="r6"><div style="text-align:center;">$300,000</div></row>
+        <row label="r7"><div style="text-align:center;">$350,000</div></row>
+        <row label="r8"><div style="text-align:center;">Unsure</div></row>
+      </radio>
+
+      <suspend/>
+    </block>
+
+    <block label="b4_Block" randomize="1">
+      <radio 
+     label="B4"
+     atm1d:large_buttonAlign="Center"
+     atm1d:small_buttonAlign="Center"
+     ss:listDisplay="1"
+     uses="atm1d.11">
+        <title>The current Superannuation Guarantee rate (that is, the rate of contribution your employer is legislated to pay) is...?</title>
+        <comment>Please select one answer </comment>
+        <exec>
+			
+pushtoOrder(3, p.bArr)
+        </exec>
+
+        <row label="r1"><div style="text-align:center;">7.5%</div></row>
+        <row label="r2"><div style="text-align:center;">8.5%</div></row>
+        <row label="r3"><div style="text-align:center;">9.5%</div></row>
+        <row label="r4"><div style="text-align:center;">10.5%</div></row>
+        <row label="r5"><div style="text-align:center;">11.5%</div></row>
+        <row label="r6"><div style="text-align:center;">12.5%</div></row>
+        <row label="r7"><div style="text-align:center;">Unsure</div></row>
+      </radio>
+
+      <suspend/>
+    </block>
+  </block>
+
+  <exec>
+#-------------------------------			
+print "p.bArr is: ",p.bArr			
+#---Section B respondent answers logic------------------------------------------			
+if B1.r2:			
+  B1_yes.val = 0			
+  p.B1class="table-Quota-td-green"			
+else:			
+  B1_yes.val = 1			
+  p.B1class="table-Quota-td-red"			
+#------------------------------------			
+if B2.r5:			
+  B2_yes.val = 0			
+  p.B2class="table-Quota-td-green"			
+else:			
+  B2_yes.val = 1			
+  p.B2class="table-Quota-td-red"			
+#------------------------------------			
+if B3.r6:			
+  B3_yes.val = 0			
+  p.B3class="table-Quota-td-green"			
+else:			
+  B3_yes.val = 1			
+  p.B3class="table-Quota-td-red"			
+#------------------------------------			
+if B4.r3:			
+  B4_yes.val = 0			
+  p.B4class="table-Quota-td-green"			
+else:			
+  B4_yes.val = 1			
+  p.B4class="table-Quota-td-red"			
+#------------------------------------
+  </exec>
+
+  <suspend/>
+
+  <radio 
+   label="B1_yes"
+   cond="(not gv.isSST()) and (list=='0')">
+    <title>Hiddenquestion to show if respondent had question right</title>
+    <row label="r1">yes - B1 r2 15%</row>
+    <row label="r2">wrong - others</row>
+  </radio>
+
+  <radio 
+   label="B2_yes"
+   cond="(not gv.isSST()) and (list=='0')">
+    <title>Hiddenquestion to show if respondent had question right</title>
+    <row label="r1">yes - B2 r5 25,000</row>
+    <row label="r2">wrong - others</row>
+  </radio>
+
+  <radio 
+   label="B3_yes"
+   cond="(not gv.isSST()) and (list=='0')">
+    <title>Hiddenquestion to show if respondent had question right</title>
+    <row label="r1">yes - B3 r6 300,000</row>
+    <row label="r2">wrong - others</row>
+  </radio>
+
+  <radio 
+   label="B4_yes"
+   cond="(not gv.isSST()) and (list=='0')">
+    <title>Hiddenquestion to show if respondent had question right</title>
+    <row label="r1">yes - B4 r3 9.5%</row>
+    <row label="r2">wrong - others</row>
+  </radio>
+
+  <suspend/>
+
+  <exec cond="1">
+#-----calculate percentage-------------------------------------------			
+total01 = getMarker('/Bans/TT')			
+print "total: ", total01			
+p.btotal = total01			
+if total01 ge 1:			
+  #------------------------------------------------			
+  b1_current = getMarker('/Bans/B1_yesR1')			
+  b1_percent = float(b1_current) / total01 * 100 			
+  p.b1NO = "{:10.0f}".format(b1_percent)			
+			
+  #------------------------------------------------			
+  b2_current = getMarker('/Bans/B2_yesR1')			
+  b2_percent = float(b2_current) / total01 * 100 			
+  p.b2NO = "{:10.0f}".format(b2_percent)			
+  			
+  #------------------------------------------------			
+  b3_current = getMarker('/Bans/B3_yesR1')			
+  b3_percent = float(b3_current) / total01 * 100 			
+  p.b3NO = "{:10.0f}".format(b3_percent)			
+			
+  #------------------------------------------------			
+  b4_current = getMarker('/Bans/B4_yesR1')			
+  b4_percent = float(b4_current) / total01 * 100 			
+  p.b4NO = "{:10.0f}".format(b4_percent)			
+else:			
+  b1_current=0			
+  b2_current=0			
+  b3_current=0			
+  b4_current=0			
+  p.b1NO=0			
+  p.b2NO=0			
+  p.b3NO=0			
+  p.b4NO=0			
+			
+#------------------------------------------------			
+print " B1: ", b1_current , " B2: ", b2_current , " B3: ", b3_current , " B4: ", b4_current			
+#------------------------------------------------			
+print "| ", p.b1NO,"| ", p.b2NO,"| ", p.b3NO,"| ", p.b4NO			
+#------------------------------------------------			
+p.bcorrectCount = 0			
+ques=[B1_yes, B2_yes, B3_yes, B4_yes]			
+for x in ques:			
+  if x.val == 0:			
+    p.bcorrectCount = p.bcorrectCount + 1			
+B_percent.val = p.bcorrectCount			
+#------------------------------------------------			
+per01 = getMarker('/Bans/B_percentR1')			
+per02 = getMarker('/Bans/B_percentR2')			
+per03 = getMarker('/Bans/B_percentR3')			
+per04 = getMarker('/Bans/B_percentR4')			
+per05 = getMarker('/Bans/B_percentR5')			
+perTotal = (0*per01) + (25*per02) + (50*per03) + (75*per04) + (100*per05)			
+if total01 ge 1:			
+  p.bAver = "{:10.0f}".format( float(perTotal) / total01 )			
+else:			
+  p.bAver = 0			
+print "Survey average: ", p.bAver			
+print "order: ", B_Section.order			
+			
+arr000=[per01,per02,per03,per04,per05]			
+print "overrall status:", arr000			
+no_large = 0			
+p.BoutText = "0 out of 4"			
+for ind, x in enumerate(arr000):			
+  if no_large le x:			
+    no_large = x			
+    p.BoutText = str(ind) + " out of 4"			
+print "out of text: ",p.BoutText			
+			
+#------------------------------------------------			
+print p.bArr
+  </exec>
+
+  <suspend/>
+
+  <radio 
+   label="B_text"
+   cond="0">
+    <title>hidden question for pipe in text</title>
+    <row label="r1"><tr class="table-Quota">			
+        <td>Before tax (concessional) payments are taxed at...<br /><br /></td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>15%</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="${p.B1class} table-Quota-td-left">${B1_text.rows[B1.val].text}</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>${p.b1NO}%</td>			
+     </tr></row>
+    <row label="r2"><tr class="table-Quota">			
+        <td>The annual limit for concessionally taxed payments is...<br /><br /></td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>$25,000</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="${p.B2class} table-Quota-td-left">${B2_text.rows[B2.val].text}</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>${p.b2NO}%</td>			
+     </tr></row>
+    <row label="r3"><tr class="table-Quota">			
+        <td>The three-year limit for after-tax (non-concessional) payments is...<br /><br /></td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>$300,000</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="${p.B3class} table-Quota-td-left">${B3_text.rows[B3.val].text}</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>${p.b3NO}%</td>			
+     </tr></row>
+    <row label="r4"><tr class="table-Quota">			
+        <td>The current Superannuation Guarantee rate is...<br /><br /></td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>9.5%</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="${p.B4class} table-Quota-td-left">${B4_text.rows[B4.val].text}</td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td>${p.b4NO}%</td>			
+     </tr></row>
+  </radio>
+
+  <suspend/>
+
+  <html label="B4_result" cond="1" where="survey">Thanks for answering those questions. 			
+<br /><br />			
+You got <b>${p.bcorrectCount}</b> out of 4 questions correct. Most people got <b>${p.BoutText}</b> questions correct. 			
+<br /><br />			
+With regard to your individual answers:			
+<br /><br />			
+     <table style="width:100%;margin:0 auto;" class="tab">			
+     <tr class="table-Quota-tr-head table-Quota">			
+        <td> </td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="table-Quota-td"><b>Correct response</b></td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="table-Quota-td"><b>You answered</b></td>			
+        <td class="table-Quota-td-blank"> </td>			
+        <td class="table-Quota-td"><b>% of customers who have gotten this correct</b></td>			
+     </tr>			
+     ${B_text.rows[p.bArr[0]].text}			
+     ${B_text.rows[p.bArr[1]].text}			
+     ${B_text.rows[p.bArr[2]].text}			
+     ${B_text.rows[p.bArr[3]].text}			
+     </table></html>
+
+  <suspend/>
+
+  <radio 
+   label="B_percent"
+   cond="0">
+    <title>Hidden question to recrod percentage</title>
+    <row label="r1">0</row>
+    <row label="r2">25</row>
+    <row label="r3">50</row>
+    <row label="r4">75</row>
+    <row label="r5">100</row>
+  </radio>
+
+  <suspend/>
+
+  <quota label="quota3" cond="1" overquota="noqual" sheet="Bans"/>
+
+  <suspend/>
+</block>
+
+<suspend/>
+
+<term label="skip2" cond="(Qskip2.r9)" markers="journey">skip to The journey question type</term>
+
+<html label="infoend" cond="not Qskip4.r99 and 0" where="survey"><b>Please click the Continue button to go back to the index page.</b></html>
+
+<suspend/>
+
+<block label="b5_Block" cond="Qskip200601.r505">
+  <checkbox 
+   label="Sub_ranges2"
+   shuffle="rows"
+   where="execute,survey,report">
+    <title>Q1a elements</title>
+    <row label="r1" autofill="1">Tegel Red Hexagon</row>
+    <row label="r2" autofill="1">Tegel T</row>
+    <row label="r3" autofill="1">Inghams</row>
+    <row label="r4" autofill="1">Beehive</row>
+    <row label="r5" autofill="1">Hellers</row>
+    <row label="r6" autofill="1">Rangitikei</row>
+    <row label="r7" autofill="1">Sealord</row>
+    <row label="r8" autofill="1">Waitoa</row>
+  </checkbox>
+
+  <suspend/>
+
+  <exec>
+arrOrder1=[];			
+for itr in range(len(Sub_ranges2.rows.order)):			
+  if  Sub_ranges2.rows[Sub_ranges2.rows.order[itr].index].val:			
+   arrOrder1.append(Sub_ranges2.rows[Sub_ranges2.rows.order[itr].index].label)			
+			
+for itr in range(len(arrOrder1)):			
+  eval("looporder2." + str(arrOrder1[itr])).val = itr + 1			
+print arrOrder1;
+  </exec>
+
+  <number 
+   label="looporder2"
+   size="10"
+   where="execute,survey,report">
+    <title>Q1a order.</title>
+    <row label="r1">Tegel Red Hexagon</row>
+    <row label="r2">Tegel T</row>
+    <row label="r3">Inghams</row>
+    <row label="r4">Beehive</row>
+    <row label="r5">Hellers</row>
+    <row label="r6">Rangitikei</row>
+    <row label="r7">Sealord</row>
+    <row label="r8">Waitoa</row>
+  </number>
+
+  <suspend/>
+
+  <radio 
+   label="Q1A"
+   shuffle="rows"
+   shuffleBy="Sub_ranges2">
+    <title>Swipe left for “I recognise this” <br />Swipe right for “I do not recognise this”</title>
+    <style mode="before" name="survey.question.answers.start"><![CDATA[
+<link rel="stylesheet" type="text/css" href="/survey/${gv.survey.path}/swipelr.css" />			
+      <script type="text/javascript" src="/s/support/jquery-ui-touch-punch.min.js"></script>			
+      <script type="text/javascript" src="/survey/${gv.survey.path}/swipelr.js"></script>			
+      <div downcount="0" downtime="3" control ck txt savetime="1" class="swipelr label_${this.label} ${this.getName().lower()}">			
+			
+      \@if this.styles.ss.enableNavigation			
+        <back>BACK</back>			
+      \@endif			
+      <next>NEXT</next> 			
+			
+      <div class="loadding-open"></div>			
+			
+      <div class="swipelr-other dn">			
+          <em class="iconfont icon-right-arrow" con="0"></em>			
+          <p>			
+              <s class="ind">1</s>			
+              /			
+              <s class="end"></s>			
+          </p>			
+          <em class="iconfont icon-right-arrow"></em>			
+      </div>			
+			
+      <div class="swipelr-body swipelr-${this.label}">			
+          <div class="swipelr-list">			
+              \@for swipelrR in ec.enabledRows			
+              <div class="swipelr-block-item swipelr-block-${swipelrR.label or "q1"}">			
+                  ${swipelrR.text}			
+              </div>      			
+              \@end			
+          </div>			
+          <div class="swipelr-block" drag>			
+			
+          </div>			
+			
+          <div class="swipelr-slider">			
+        \@for swipelrC in ec.enabledCols 			
+              <div class="swipelr-slider-item swipelr-slider-${swipelrC.label or 'tips'}">			
+                  ${swipelrC.text}    			
+              </div>			
+              \@end			
+          </div>			
+      </div>
+]]></style>
+    <style name="page.head"><![CDATA[
+<style>			
+\@if device.smartphone			
+.logo {			
+    display: none;			
+}			
+.question-text{			
+  font-size: 1.1rem !important;			
+}			
+.swipelr-slider-item p {			
+  font-size: 1.1rem !important;			
+}			
+.survey-header {			
+    min-height: 0.5em !important;			
+}			
+.question {			
+    padding: 2px 0 !important;			
+}			
+.swipelr-slider-item p {			
+    padding-top: 50px !important;			
+}			
+.swipelr-slider-item:nth-of-type(1) p{			
+    text-align: left !important;			
+}			
+.swipelr-slider-item:nth-of-type(2) p{			
+    text-align: right !important;			
+}			
+.swipelr-block {			
+    border: 0px solid #ddd !important;			
+    background-color: transparent !important;			
+}			
+\@endif			
+</style>
+]]></style>
+    <row label="r1"><img src="[rel apple.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r2"><img src="[rel banana.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r3"><img src="[rel cherry.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r4"><img src="[rel grapes.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r5"><img src="[rel mango.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r6"><img src="[rel pear.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r7"><img src="[rel pineapple.png]" title="" height="350" alt="" constrain="true" /></row>
+    <row label="r8"><img src="[rel strawberry.png]" title="" height="350" alt="" constrain="true" /></row>
+    <col label="c2"><b>I recognise this</b></col>
+    <col label="c1"><b>I do not recognise this</b></col>
+  </radio>
+
+  <text 
+   label="Q1timeA"
+   randomize="0">
+    <title>Record Q1a time spend</title>
+    <row label="r1">Tegel Red Hexagon</row>
+    <row label="r2">Tegel T</row>
+    <row label="r3">Inghams</row>
+    <row label="r4">Beehive</row>
+    <row label="r5">Hellers</row>
+    <row label="r6">Rangitikei</row>
+    <row label="r7">Sealord</row>
+    <row label="r8">Waitoa</row>
+  </text>
+</block>
+
+<suspend/>
+
+<exec>
+if not Qskip4.r99:			
+ for itr in range(len(Q18.rows)):			
+  Q18.rows[itr].val=None			
+ for itr in range(len(Qskip.rows)):			
+  Qskip.rows[itr].val=None;			
+ for itr in range(len(Qskip1.rows)):			
+  Qskip1.rows[itr].val=None;			
+ for itr in range(len(Qskip2.rows)):			
+  Qskip2.rows[itr].val=None;			
+ for itr in range(len(Qskip3.rows)):			
+  Qskip3.rows[itr].val=None;			
+ for itr in range(len(Qskip5.rows)):			
+  Qskip5.rows[itr].val=None;
+</exec>
+
+<html label="PETERUSE" where="survey">Stop for reveiw only</html>
+
+<goto cond="1" target="Qskip"/>
+
+<suspend/>
+</survey>

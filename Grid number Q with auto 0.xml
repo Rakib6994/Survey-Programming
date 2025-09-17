@@ -1,0 +1,28 @@
+ <number 
+   label="Q_HouseholdMembers"
+   optional="0"
+   ss:colWidth="50px"
+   ss:listDisplay="0"
+   verify="range(0,99)"
+   size="2">
+    <title>Including yourself, how many people in each age group currently live in your household?</title>
+    <comment>Enter a number for each row.</comment>
+  <exec>
+for eachRow in Q_HouseholdMembers.rows:
+    eachRow.val = eachRow.ival
+  </exec>
+
+    <row label="r1">Newborn to 12 months old</row>
+    <row label="r2">13 months old to 2 years old</row>
+    <row label="r3">3 to 6 years old</row>
+    <row label="r4">7 to 12 years old</row>
+    <row label="r5">13 to 17 years old</row>
+    <row label="r6">18 to 24 years old</row>
+    <row label="r7">25 or older</row>
+  </number>
+
+  <suspend/>
+  
+   <term label="TERM_Q_HouseholdMembers" cond="Q_HouseholdMembers.r1.val lt 1">Q_HouseholdMembers</term>
+
+  <suspend/>
