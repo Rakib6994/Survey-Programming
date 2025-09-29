@@ -1,0 +1,219 @@
+<block label="Class" builder:title="Classification">
+  <html label="Class_Intro" where="survey"><em><b>Now, just a few questions for classification purposes…</b></em></html>
+
+  <suspend/>
+
+  <radio 
+   label="S_STORE"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Where do you typically buy <b>laundry scent booster products</b>?</title>
+    <comment>Select one response.</comment>
+    <row label="r1">At a physical store only (like a pharmacy, grocery store or mass merchandiser)</row>
+    <row label="r2">Online Only</row>
+    <row label="r3">Mostly online and occasionally at a physical store</row>
+    <row label="r4">Mostly at a physical store and occasionally online</row>
+    <row label="r5">Both online and at a physical store equally</row>
+  </radio>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_DEVICES"
+   cond="not(S_STORE.r1)"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you bought <b>laundry scent booster products</b> online, what devices do you use to shop for <b>laundry scent booster products</b> online?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Desktop Computer</row>
+    <row label="r2">Laptop</row>
+    <row label="r3">Mobile Phone / Smartphone</row>
+    <row label="r4">Smartwatch</row>
+    <row label="r5">Tablet</row>
+    <row label="r6">Voice (Alexa, Google Home, etc.)</row>
+    <row label="r7">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_ONLINE_STORES"
+   cond="not(S_STORE.r1)"
+   atleast="1"
+   atm1d:large_maxWidth="300px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you bought <b>laundry scent booster products</b> online, where specifically?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Amazon App</row>
+    <row label="r2">Amazon Website (Amazon.com)</row>
+    <row label="r3">Amazon Fresh App</row>
+    <row label="r4">Amazon Fresh Website (amazon.com/AmazonFresh)</row>
+    <row label="r5">Instacart App</row>
+    <row label="r6">Instacart Website (instacart.com)</row>
+    <row label="r7">Target App</row>
+    <row label="r8">Target Website (Target.com)</row>
+    <row label="r9">Walmart Grocery App</row>
+    <row label="r10">Walmart Grocery Website (grocery.walmart.com)</row>
+    <row label="r11">Walmart App</row>
+    <row label="r12">Walmart Website (walmart.com)</row>
+    <row label="r13">Other – Other Grocery Store App</row>
+    <row label="r14">Other – Other Grocery Store Website</row>
+    <row label="r15" open="1" openSize="25" randomize="0">Other (Specify:)</row>
+  </checkbox>
+
+  <suspend/>
+
+  <checkbox 
+   label="C_DELIVERY"
+   cond="not(S_STORE.r1)"
+   atleast="1"
+   atm1d:large_maxWidth="200px"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>You mentioned you bought <b>laundry scent booster products</b> online, how do you usually get the <b>laundry scent booster products</b> after you buy it?</title>
+    <comment>Select all that apply.</comment>
+    <row label="r1">Buy online and pick up at the store</row>
+    <row label="r2">Buy online and get it delivered to my home</row>
+    <row label="r3">Buy online and get it delivered to my work</row>
+    <row label="r4">Buy online and get it delivered to a locker or place where I can pick it up</row>
+    <row label="r5">Other</row>
+  </checkbox>
+
+  <suspend/>
+
+  <select 
+   label="S_State"
+   randomize="0">
+    <title>Please select the US state in which you currently live:</title>
+    <choice label="AL">Alabama</choice>
+    <choice label="AK">Alaska</choice>
+    <choice label="AZ">Arizona</choice>
+    <choice label="AR">Arkansas</choice>
+    <choice label="CA">California</choice>
+    <choice label="CO">Colorado</choice>
+    <choice label="CT">Connecticut</choice>
+    <choice label="DE">Delaware</choice>
+    <choice label="DC">District of Columbia</choice>
+    <choice label="FL">Florida</choice>
+    <choice label="GA">Georgia</choice>
+    <choice label="HI">Hawaii</choice>
+    <choice label="ID">Idaho</choice>
+    <choice label="IL">Illinois</choice>
+    <choice label="IN">Indiana</choice>
+    <choice label="IA">Iowa</choice>
+    <choice label="KS">Kansas</choice>
+    <choice label="KY">Kentucky</choice>
+    <choice label="LA">Louisiana</choice>
+    <choice label="ME">Maine</choice>
+    <choice label="MD">Maryland</choice>
+    <choice label="MA">Massachusetts</choice>
+    <choice label="MI">Michigan</choice>
+    <choice label="MN">Minnesota</choice>
+    <choice label="MS">Mississippi</choice>
+    <choice label="MO">Missouri</choice>
+    <choice label="MT">Montana</choice>
+    <choice label="NE">Nebraska</choice>
+    <choice label="NV">Nevada</choice>
+    <choice label="NH">New Hampshire</choice>
+    <choice label="NJ">New Jersey</choice>
+    <choice label="NM">New Mexico</choice>
+    <choice label="NY">New York</choice>
+    <choice label="NC">North Carolina</choice>
+    <choice label="ND">North Dakota</choice>
+    <choice label="OH">Ohio</choice>
+    <choice label="OK">Oklahoma</choice>
+    <choice label="OR">Oregon</choice>
+    <choice label="PA">Pennsylvania</choice>
+    <choice label="RI">Rhode Island</choice>
+    <choice label="SC">South Carolina</choice>
+    <choice label="SD">South Dakota</choice>
+    <choice label="TN">Tennessee</choice>
+    <choice label="TX">Texas</choice>
+    <choice label="UT">Utah</choice>
+    <choice label="VT">Vermont</choice>
+    <choice label="VA">Virginia</choice>
+    <choice label="WA">Washington</choice>
+    <choice label="WV">West Virginia</choice>
+    <choice label="WI">Wisconsin</choice>
+    <choice label="WY">Wyoming</choice>
+  </select>
+
+  <select 
+   label="C_Employment"
+   randomize="0">
+    <title>Which of the following best describes your current employment status?</title>
+    <choice label="ch1">Working full-time</choice>
+    <choice label="ch2">Working part-time</choice>
+    <choice label="ch3">Looking for work, temporarily unemployed</choice>
+    <choice label="ch4">Full-time student</choice>
+    <choice label="ch5">Full-time homemaker</choice>
+    <choice label="ch6">Retired</choice>
+    <choice label="ch7">Not employed</choice>
+    <choice label="ch8">I prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_RELATIONSHIP"
+   randomize="0">
+    <title>What is your relationship status?</title>
+    <choice label="ch1">Single, never married</choice>
+    <choice label="ch2">Married</choice>
+    <choice label="ch3">Separated, divorced, or widowed</choice>
+    <choice label="ch4">Domestic partnership/living with someone</choice>
+    <choice label="ch5">Prefer not to answer</choice>
+  </select>
+
+  <select 
+   label="STANDARD_EDUCATION"
+   randomize="0">
+    <title>What is the highest level of education you have completed?</title>
+    <choice label="ch1">3rd Grade or less</choice>
+    <choice label="ch2">Middle School - Grades 4 - 8</choice>
+    <choice label="ch3">Completed some high school</choice>
+    <choice label="ch4">High school graduate</choice>
+    <choice label="ch5">Other post high school vocational training</choice>
+    <choice label="ch6">Completed some college, but no degree</choice>
+    <choice label="ch7">Associate Degree</choice>
+    <choice label="ch8">College Degree (such as B.A., B.S.)</choice>
+    <choice label="ch9">Completed some graduate, but no degree</choice>
+    <choice label="ch10">Masters degree</choice>
+    <choice label="ch11">Doctorate degree</choice>
+    <choice label="ch12">None of the Above</choice>
+  </select>
+
+  <select 
+   label="STANDARD_INCOME"
+   randomize="0">
+    <title>Please select the range that best represents your total annual household income.</title>
+    <choice label="ch1">Less than $15 000</choice>
+    <choice label="ch2">$15 000 to $19 999</choice>
+    <choice label="ch3">$20 000 to $24 999</choice>
+    <choice label="ch4">$25 000 to $29 999</choice>
+    <choice label="ch5">$30 000 to $34 999</choice>
+    <choice label="ch6">$35 000 to $39 999</choice>
+    <choice label="ch7">$40 000 to $44 999</choice>
+    <choice label="ch8">$45 000 to $49 999</choice>
+    <choice label="ch9">$50 000 to $59 999</choice>
+    <choice label="ch10">$60 000 to $74 999</choice>
+    <choice label="ch11">$75 000 to $84 999</choice>
+    <choice label="ch12">$85 000 to $99 999</choice>
+    <choice label="ch13">$100 000 to $124 999</choice>
+    <choice label="ch14">$125 000 to $149 999</choice>
+    <choice label="ch15">$150 000 to $174 999</choice>
+    <choice label="ch16">$175 000 to $199 999</choice>
+    <choice label="ch17">$200,000 or more</choice>
+    <choice label="ch18">Prefer not to answer</choice>
+  </select>
+</block>

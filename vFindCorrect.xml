@@ -1,0 +1,16 @@
+    <radio 
+    label="vFindCorrect"
+    randomize="0"
+    where="execute,survey,report">
+      <title><b>Correct Product Found?</b></title>
+      <exec>
+if (Phase.r1 and F1.c1.r1.val &gt;0) or (Phase.r2 and F1.c1.r2.val &gt;0) or (Phase.r3 and F1.c1.r3.val &gt;0):  vFindCorrect.val = 0
+else:           vFindCorrect.val = 1
+      </exec>
+
+      <row label="r1">Correct</row>
+      <row label="r2">Incorrect</row>
+    </radio>
+  </block>
+
+  <suspend/>
