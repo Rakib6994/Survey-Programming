@@ -1,0 +1,44 @@
+<radio 
+   label="Location"
+   atm1d:showInput="0"
+   atm1d:viewMode="tiled"
+   randomize="0"
+   uses="atm1d.9">
+    <title>Sample Source (web) / Location (web to clt)</title>
+    <row label="US166" cond="list=='3'" value="592487365">Torfac (previously Wise Works)</row>
+    <row label="US167" cond="list=='2'" value="592490403">Sago</row>
+    <row label="US168" cond="list=='134'" value="592492875">ProdegeMR</row>
+    <row label="GB020" cond="list=='4'" value="592494244">Oi Research- Online Interactive Research Limited</row>
+    <row label="US169" cond="list=='6'" value="592501253">Rakuten Insight</row>
+    <row label="JP007" cond="list=='11'" value="595359464">Samplenomics Ltd.</row>
+    <row label="JP005" cond="list=='104'" value="598593847">Lightspeed GMI Singapore Pte Ltd</row>
+    <row label="JP006" cond="list=='10'" value="598598077">Kantar (Lightspeed)</row>
+    <row label="CN023" cond="list=='101'" value="598600541">Dynata OUS</row>
+    <row label="US193" cond="list=='15'" value="825661970">Pure Spectrum ()</row>
+    <row label="US202" cond="list=='136'" value="997663881">DISQO ()</row>
+    <row label="US198" cond="list=='20'" value="951868734">GMO Research ()</row>
+    <row label="IN020" cond="list=='138'" value="1157891571">Philomath Research</row>
+    <row label="US213" cond="list=='24'" value="1314418229">SampleGurus</row>
+    <row label="RU007" cond="list=='25'" value="833513838">OMI (Online Market Intelligence)</row>
+    <row label="IN021" cond="list=='26'" value="1422500825">Orchidea Research ()</row>
+    <row label="US220" cond="list=='141'" value="7535526">Cint</row>
+    <row label="IN200" cond="list=='150'" value="7535529">Cognitive Intelligence</row>
+    <row label="GB030" cond="list=='152'" value="1244">Bilendi &amp; Respondi ()</row>
+    <row label="US215" cond="list=='153'" value="69019">Veritolytics</row>
+    <row label="US230" cond="list=='154'" value="30846">Paradigm Sample</row>
+    <row label="US234" cond="list=='160'" value="30816">Question Lab</row>
+    <row label="US235" cond="list=='170'" value="30816">Innovior Research</row>
+    <row label="XK002" cond="list=='156'" value="3086">Data Diggers</row>
+    <row label="US237" cond="list=='175'" value="30867">Walr</row>
+    <row label="US238" cond="list=='190'" value="10867">Mirats</row>
+    <row label="GB032" cond="list=='180'" value="131516">Panel Base</row>
+    <row label="GB033" cond="list=='195'" value="131000">Pure Profile</row>
+    <row label="CN051" cond="list=='151'" value="1312">Baishulai</row>
+    <row label="GB035" cond="list=='200'" value="3084">OI Research - Mindforce</row>
+    <row label="GB060" cond="list=='625'" value="39184">IRB</row>
+    <row label="US250" cond="list=='630'" value="48122">Dash</row>
+    <row label="US260" cond="list=='640'" value="39314">TestSet</row>
+    <row label="US212" cond="list=='27'" value="4822">Borderless Access</row>
+  </radio>
+ 
+  <suspend/>
