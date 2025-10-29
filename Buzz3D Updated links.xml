@@ -1,0 +1,11 @@
+Shopping:
+<suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AI250-Shelf[pipe: Phase]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ai250?"/>
+
+Findability:
+<suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AI250-Shelf[pipe: Phase]&amp;findability=1&amp;find=[pipe: Finda]&amp;showinstructions=1&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ai250?"/>
+
+Scenario 1:
+<suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AI250-Shelf[pipe: Phase]&amp;scenario=1&amp;find=[pipe:proposition1Text]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ai250?"/>
+
+Scenario 2:
+<suspend sst="0" url="https://buzz3d.com/BuzzWebViewer/_BEH2/Buzz3DStore7_DLOnDemand.html?trial=AI250-Shelf[pipe: Phase]&amp;scenario=2&amp;find=[pipe:proposition2Text]&amp;id=${uuid}&amp;url=https://emea.focusvision.com/survey/selfserve/1da7/ai250?"/>

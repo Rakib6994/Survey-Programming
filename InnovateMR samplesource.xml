@@ -1,0 +1,29 @@
+============================================AG989===================================================================
+
+  <samplesource list="103">
+    <title>InnovateMR</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tk" unique="1"/>
+    <exit cond="terminated" url="https://edgeapi.innovatemr.net/surveyDone?sc=2&amp;tk=${tk}"/>
+    <exit cond="overquota" url="https://edgeapi.innovatemr.net/surveyDone?sc=3&amp;tk=${tk}"/>
+    <exit cond="qualified" url="https://edgeapi.innovatemr.net/surveyDone?sc=1&amp;ejid=v4Grka9P&amp;tk=${tk}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
+
+============================================AH802==================================================================
+
+  <samplesource list="103">
+    <title>InnovateMR</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="tk" unique="1"/>
+    <exit cond="terminated" url="https://edgeapi.innovatemr.net/surveyDone?sc=2&amp;tk=${tk}"/>
+    <exit cond="overquota" url="https://edgeapi.innovatemr.net/surveyDone?sc=3&amp;tk=${tk}"/>
+    <exit cond="qualified" url="https://edgeapi.innovatemr.net/surveyDone?sc=1&amp;ejid=vBEXdBoP&amp;tk=${tk}"/>
+  </samplesource>
+</samplesources>
+
+<suspend/>
