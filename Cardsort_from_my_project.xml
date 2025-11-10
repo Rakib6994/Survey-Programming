@@ -1,3 +1,5 @@
+cardsort:cardMaxWidth="500"
+
 <radio 
   label="A2"
   cardsort:animationDuration="200"
