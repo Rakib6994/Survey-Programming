@@ -1,0 +1,9 @@
+  <samplesource list="3">
+    <title>Torfac - (Formerly Wise Works)</title>
+    <invalid>You are missing information in the URL. Please verify the URL with the original invite.</invalid>
+    <completed>It seems you have already entered this survey.</completed>
+    <var name="resp" unique="1"/>
+    <exit cond="terminated" url="https://samplicity.wisesample.com/return/curlhandler.php?token=6d76e7ebbcb8ade97921f9ec17eb9246&amp;e=r&amp;resp=${resp}"/>
+    <exit cond="overquota" url="https://samplicity.wisesample.com/return/curlhandler.php?token=1559f7958e0f5af94b38fced7e08d178&amp;e=f&amp;resp=${resp}"/>
+    <exit cond="qualified" url="https://pollrouting.com/response/TrFc23119a656ace85b1e2fa19a6ce634e72c81/hf6uvk48n84jms7mhgrshafoxx7vu9.php?lvb=v&amp;ct=jNWCZ1WOhQaR&amp;resp=${resp}"/>
+  </samplesource>

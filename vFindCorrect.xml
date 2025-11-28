@@ -14,3 +14,24 @@ else:           vFindCorrect.val = 1
   </block>
 
   <suspend/>
+
+
+
+
+
+
+    <radio 
+   label="vFindCorrect"
+   randomize="0"
+   where="execute,survey,report">
+    <title><b>Correct Product Found?</b></title>
+    <exec>
+if F1.c1.r1.val &gt;0:  vFindCorrect.val = 0
+else: vFindCorrect.val = 1
+    </exec>
+
+    <row label="r1">Correct</row>
+    <row label="r2">Incorrect</row>
+  </radio>
+
+  <suspend/>
