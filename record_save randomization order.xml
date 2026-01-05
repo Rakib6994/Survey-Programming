@@ -1,0 +1,189 @@
+<block label="b10" builder:title="New Block" randomizeChildren="1">
+<block label="b1" builder:title="Design D" randomize="1">
+<html label="cm55" where="survey"><span style="font-size: 18pt;">On the next screen you’ll to see Design “D” </span></html>
+ 
+      <suspend/>
+ 
+      <html label="cm11" where="survey"><img src="/survey/selfserve/6a7/251019/Design_D_1.jpg" alt="Design_D_1.jpg" class="survey_image survey-image-original fit" title="Design_D_1.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm12" where="survey"><img src="/survey/selfserve/6a7/251019/Design_D_2.jpg" alt="Design_D_2.jpg" class="survey_image survey-image-original fit" title="Design_D_2.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm13" where="survey"><img src="/survey/selfserve/6a7/251019/Design_D_3.jpg" alt="Design_D_3.jpg" class="survey_image survey-image-original fit" title="Design_D_3.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm14" where="survey"><img src="/survey/selfserve/6a7/251019/Design_D_4.jpg" alt="Design_D_4.jpg" class="survey_image survey-image-original fit" title="Design_D_4.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm15" where="survey"><img src="/survey/selfserve/6a7/251019/Design_D_5.jpg" alt="Design_D_5.jpg" class="survey_image survey-image-original fit" title="Design_D_5.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm16" where="survey"><img src="/survey/selfserve/6a7/251019/Design_D_6.jpg" alt="Design_D_6.jpg" class="survey_image survey-image-original fit" title="Design_D_6.jpg" /></html>
+</block>
+ 
+    <suspend/>
+ 
+    <number 
+
+    label="vB1_Order"
+
+    size="1">
+<title>
+
+    Order of B1 Shown
+</title>
+<virtual>
+
+assignRandomOrder('b1', 'children')
+</virtual>
+ 
+      <row label="cm55">cm55</row>
+<row label="cm11">cm11</row>
+<row label="cm12">cm12</row>
+<row label="cm13">cm13</row>
+<row label="cm14">cm14</row>
+<row label="cm15">cm15</row>
+<row label="cm16">cm16</row>
+</number>
+ 
+    <suspend/>
+ 
+    <block label="b2" builder:title="Design G" randomize="1">
+<html label="cm56" where="survey"><span style="font-size: 18pt;">On the next screen you’re going to see Design “G”</span></html>
+ 
+      <suspend/>
+ 
+      <html label="cm17" where="survey"><img src="/survey/selfserve/6a7/251019/Design_G_1.jpg" alt="Design_G_1.jpg" class="survey_image survey-image-original fit" title="Design_G_1.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm18" where="survey"><img src="/survey/selfserve/6a7/251019/Design_G_2.jpg" alt="Design_G_2.jpg" class="survey_image survey-image-original fit" title="Design_G_2.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm19" where="survey"><img src="/survey/selfserve/6a7/251019/Design_G_3.jpg" alt="Design_G_3.jpg" class="survey_image survey-image-original fit" title="Design_G_3.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm20" where="survey"><img src="/survey/selfserve/6a7/251019/Design_G_4.jpg" alt="Design_G_4.jpg" class="survey_image survey-image-original fit" title="Design_G_4.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm21" where="survey"><img src="/survey/selfserve/6a7/251019/Design_G_5.jpg" alt="Design_G_5.jpg" class="survey_image survey-image-original fit" title="Design_G_5.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm22" where="survey"><img src="/survey/selfserve/6a7/251019/Design_G_6.jpg" alt="Design_G_6.jpg" class="survey_image survey-image-original fit" title="Design_G_6.jpg" /></html>
+</block>
+ 
+    <suspend/>
+ 
+    <number 
+
+    label="vB2_Order"
+
+    size="1">
+<title>
+
+    Order of B2 Shown
+</title>
+<virtual>
+
+assignRandomOrder('b2', 'children')
+</virtual>
+ 
+      <row label="cm56">cm56</row>
+<row label="cm17">cm17</row>
+<row label="cm18">cm18</row>
+<row label="cm19">cm19</row>
+<row label="cm20">cm20</row>
+<row label="cm21">cm21</row>
+<row label="cm22">cm22</row>
+</number>
+ 
+    <suspend/>
+ 
+    <block label="b3" builder:title="Design P" randomize="1">
+<html label="cm57" where="survey"><span style="font-size: 18pt;">On the next screen you’re going to see Design “P”</span></html>
+ 
+      <suspend/>
+ 
+      <html label="cm23" where="survey"><img src="/survey/selfserve/6a7/251019/Design_P_1.jpg" alt="Design_P_1.jpg" class="survey_image survey-image-original fit" title="Design_P_1.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm24" where="survey"><img src="/survey/selfserve/6a7/251019/Design_P_2.jpg" alt="Design_P_2.jpg" class="survey_image survey-image-original fit" title="Design_P_2.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm25" where="survey"><img src="/survey/selfserve/6a7/251019/Design_P_3.jpg" alt="Design_P_3.jpg" class="survey_image survey-image-original fit" title="Design_P_3.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm26" where="survey"><img src="/survey/selfserve/6a7/251019/Design_P_4.jpg" alt="Design_P_4.jpg" class="survey_image survey-image-original fit" title="Design_P_4.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm27" where="survey"><img src="/survey/selfserve/6a7/251019/Design_P_5.jpg" alt="Design_P_5.jpg" class="survey_image survey-image-original fit" title="Design_P_5.jpg" /></html>
+ 
+      <suspend/>
+ 
+      <html label="cm28" where="survey"><img src="/survey/selfserve/6a7/251019/Design_P_6.jpg" alt="Design_P_6.jpg" class="survey_image survey-image-original fit" title="Design_P_6.jpg" /></html>
+</block>
+ 
+    <suspend/>
+ 
+    <number 
+
+    label="vB3_Order"
+
+    size="1">
+<title>
+
+    Order of B3 Shown
+</title>
+<virtual>
+
+assignRandomOrder('b3', 'children')
+</virtual>
+ 
+      <row label="cm57">cm57</row>
+<row label="cm23">cm23</row>
+<row label="cm24">cm24</row>
+<row label="cm25">cm25</row>
+<row label="cm26">cm26</row>
+<row label="cm27">cm27</row>
+<row label="cm28">cm28</row>
+</number>
+ 
+    <suspend/>
+</block>
+ 
+  <number 
+
+   label="vBlock_Order"
+
+   size="1">
+<title>
+
+    Order of Brands Shown
+</title>
+<virtual>
+
+assignRandomOrder('b10', 'children')
+</virtual>
+ 
+    <row label="b1">Block 1</row>
+<row label="b2">Block 2</row>
+<row label="b3">Block 3</row>
+</number>
+ 
+  <suspend/>
+
+ 

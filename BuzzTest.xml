@@ -1,0 +1,41 @@
+    <logic label="api_buzz_shop1" api:data="apiRequest_shop1.unsafe_val" api:method="POST" api:url="https://stgapi-merlin.behaviorally.com/get_buzz_data" uses="api.1">
+      <title>API Integration for Buzz Data from Dropbox</title></logic>
+    <exec>
+if api_buzz_shop1.status == 200:
+	data_shop1 = api_buzz_shop1.r.get('data')
+	if data_shop1:
+		
+		question_shop1 = data_shop1['question']
+		row_arr_shop1 = data_shop1['row']
+		quantity_arr_shop1 = data_shop1['quantity']
+		order_arr_shop1 = data_shop1['order']
+		time_arr_shop1 = data_shop1['time']
+		
+		if 'vFindTimeSeconds' in data_shop1:
+			vFindTimeSeconds.val = data_shop1['vFindTimeSeconds']
+		
+		for i in range(len(row_arr_shop1)):
+			eval(question_shop1 + ".c1." + row_arr_shop1[i]).val = quantity_arr_shop1[i]
+			eval(question_shop1 + ".c2." + row_arr_shop1[i]).val = order_arr_shop1[i]
+			eval(question_shop1 + ".c3." + row_arr_shop1[i]).val = time_arr_shop1[i]
+			
+			
+		print(question_shop1)
+		
+	print(data_shop1)   
+    
+print(api_buzz_shop1.status)
+    </exec>
+
+    <suspend/>
+  </block>
+
+  <checkbox 
+   label="BuzzTest"
+   cond="0"
+   where="execute,survey,report">
+    <title>Buzz Test!</title>
+    <row label="r1">Test1</row>
+  </checkbox>
+
+  <suspend/>

@@ -1,0 +1,6 @@
+# 1000 uuid in A col, 30 in G. It shows which matches with the 30 among the 1000.
+
+=IF(COUNTIF($G$2:$G$31, A2)>0, "MATCH", "0")
+
+# If A1 matches B1
+=IF(A1=B1, "Match", "No Match")

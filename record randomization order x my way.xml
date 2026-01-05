@@ -1,0 +1,51 @@
+<block label="Block_X" randomizeChildren="1">
+  <block label="Block_A" randomize="1">
+    <checkbox 
+    label="DummyA"
+    shuffle="rows"
+    where="execute,survey,report">
+      <title>Dummy Row Order.</title>
+      <row label="r1">A</row>
+      <row label="r2">B</row>
+    </checkbox>
+
+    <suspend/>
+  </block>
+
+
+  <block label="Block_B" randomize="1">
+    <checkbox 
+    label="DummyB"
+    shuffle="rows"
+    where="execute,survey,report">
+      <title>Dummy Row Order.</title>
+      <row label="r1">A</row>
+      <row label="r2">B</row>
+    </checkbox>
+
+    <suspend/>
+  </block>
+</block>
+
+
+<suspend/>
+<exec>
+if Block_X.order == [0,1]: A_first.r1.val = 1
+if Block_X.order == [1,0]: B_first.r1.val = 1
+</exec> 
+
+<suspend/>
+<checkbox 
+  label="A_first"
+  where="execute,survey,report">
+  <title>Block Randomization Order.</title>
+  <row label="r1">A</row>
+</checkbox>
+<checkbox 
+  label="B_first"
+  where="execute,survey,report">
+  <title>Block Randomization Order.</title>
+  <row label="r1">B</row>
+</checkbox>
+
+<suspend/>
